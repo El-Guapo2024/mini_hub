@@ -38,6 +38,14 @@ sealed class Answer {
 
   /// The canonical answer, as LaTeX, for revealing after a wrong attempt.
   String get display;
+
+  /// Symbols the on-screen keyboard must offer for this answer to be typable
+  /// at all. Empty for everything except complex answers.
+  List<String> get inputVariables => const [];
+
+  /// Shown under the input when the grading rule isn't obvious from the
+  /// prompt — a student can't tell an estimation problem from an exact one.
+  String? get inputHint => null;
 }
 
 /// A single value. Comparison is relative, not exact: a student who enters
@@ -102,6 +110,9 @@ class ApproxAnswer extends Answer {
   String get display => '${_trim(low)} \\text{ to } ${_trim(high)}';
 
   @override
+  String? get inputHint => 'Estimate — a range of answers is accepted';
+
+  @override
   Map<String, dynamic> toJson() => {'type': 'approx', 'low': low, 'high': high};
 }
 
@@ -127,6 +138,12 @@ class ComplexAnswer extends Answer {
     return (parsed.$1 - real).abs() <= _tolerance &&
         (parsed.$2 - imaginary).abs() <= _tolerance;
   }
+
+  @override
+  List<String> get inputVariables => const ['i'];
+
+  @override
+  String? get inputHint => 'Answer in the form a+bi';
 
   @override
   String get display {

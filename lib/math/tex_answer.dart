@@ -46,7 +46,12 @@ String expandMixedNumbers(String tex) {
   return result;
 }
 
-final _imaginaryUnit = RegExp(r'(?:\\mathrm\{i\}|\\imath|i)$');
+final _imaginaryUnit = RegExp(r'i$');
+
+/// `math_keyboard` emits a declared variable as `\mathrm{i}`, so the unit has
+/// to be folded to a bare `i` *before* braces are stripped — otherwise
+/// `\mathrm{i}` collapses to `\mathrmi` and the `\mathrm` reads as a coefficient.
+final _imaginaryForms = RegExp(r'\\(?:mathrm|text|mathit)\s*\{\s*i\s*\}|\\imath');
 
 /// Splits a complex answer into `(real, imaginary)`, or null if the input is
 /// not a well-formed complex number.
@@ -55,7 +60,9 @@ final _imaginaryUnit = RegExp(r'(?:\\mathrm\{i\}|\\imath|i)$');
 /// unit, so `16+16i` parses as a variable expression and evaluates to nothing.
 /// Accepts `16+16i`, `16-16i`, `16i`, `16`, and a bare `i`.
 (double, double)? parseComplexTex(String tex) {
-  var s = tex.replaceAll(RegExp(r'\s|\\,|\\;|\\!|\{|\}'), '');
+  var s = tex
+      .replaceAll(_imaginaryForms, 'i')
+      .replaceAll(RegExp(r'\s|\\,|\\;|\\!|\{|\}'), '');
   if (s.isEmpty) return null;
 
   // Split into terms at every top-level sign, keeping the sign with its term.

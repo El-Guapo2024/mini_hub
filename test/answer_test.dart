@@ -45,6 +45,26 @@ void main() {
       expect(a.accepts('50804'), isFalse);
       expect(a.accepts('60000'), isFalse);
     });
+
+    test('tells the student it is graded on a range', () {
+      const a = ApproxAnswer(low: 1, high: 2);
+      expect(a.inputHint, isNotNull);
+      expect(a.inputVariables, isEmpty);
+    });
+  });
+
+  group('input configuration', () {
+    test('only complex answers need a symbol on the keyboard', () {
+      expect(const NumericAnswer(value: 5).inputVariables, isEmpty);
+      expect(
+        const ComplexAnswer(real: 16, imaginary: 16).inputVariables,
+        ['i'],
+      );
+    });
+
+    test('a plain numeric answer needs no hint', () {
+      expect(const NumericAnswer(value: 5).inputHint, isNull);
+    });
   });
 
   group('ComplexAnswer', () {
@@ -79,6 +99,14 @@ void main() {
       expect(parseComplexTex('5'), (5.0, 0.0));
       expect(parseComplexTex('5i'), (0.0, 5.0));
       expect(parseComplexTex('2-3i'), (2.0, -3.0));
+    });
+
+    test('accepts the form math_keyboard actually emits', () {
+      // A declared variable comes back as \mathrm{i}, not a bare i.
+      expect(parseComplexTex(r'16+16\mathrm{i}'), (16.0, 16.0));
+      expect(parseComplexTex(r'\mathrm{i}'), (0.0, 1.0));
+      expect(parseComplexTex(r'-\mathrm{i}'), (0.0, -1.0));
+      expect(parseComplexTex(r'2-3\imath'), (2.0, -3.0));
     });
 
     test('returns null for nonsense', () {

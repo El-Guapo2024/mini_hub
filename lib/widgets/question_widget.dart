@@ -51,6 +51,32 @@ class _QuestionWidgetState extends State<QuestionWidget> {
     null => null,
   };
 
+  /// The grading rule before an attempt, the correct answer after a wrong one.
+  Widget? get _footer {
+    final answer = widget.question.answer;
+    if (_result == _Result.wrong) {
+      return Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          const Text(
+            'Answer: ',
+            style: TextStyle(color: Colors.white54, fontSize: 12),
+          ),
+          Math.tex(
+            answer.display,
+            textStyle: const TextStyle(fontSize: 13, color: Colors.white70),
+          ),
+        ],
+      );
+    }
+    final hint = answer.inputHint;
+    if (hint == null || _result != null) return null;
+    return Text(
+      hint,
+      style: const TextStyle(color: Colors.white38, fontSize: 12),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -83,7 +109,9 @@ class _QuestionWidgetState extends State<QuestionWidget> {
                   child: MathField(
                     controller: _controller,
                     keyboardType: MathKeyboardType.expression,
-                    variables: const [],
+                    // Complex answers put `i` on the keyboard; without it the
+                    // student has no way to enter one at all.
+                    variables: widget.question.answer.inputVariables,
                     onSubmitted: _check,
                     onChanged: _clearResult,
                     decoration: InputDecoration(
@@ -115,6 +143,10 @@ class _QuestionWidgetState extends State<QuestionWidget> {
                   ),
                 ),
               ),
+              if (_footer != null) ...[
+                const SizedBox(height: 8),
+                _footer!,
+              ],
             ],
           ),
         ),

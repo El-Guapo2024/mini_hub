@@ -1,0 +1,10 @@
+[
+  {
+    "id": "math",
+    "path": "assets/content/math/"
+  },
+  {
+    "id": "number_sense",
+    "path": "assets/content/number_sense/"
+  }
+]

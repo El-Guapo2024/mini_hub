@@ -1,0 +1,10277 @@
+{
+ "1.2.1": {
+  "1": {
+   "answer": 594,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 50616,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 18,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 3927,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 25,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 35631,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 0.275,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 4884,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 34,
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 9657,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 26,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 792,
+   "type": "numeric"
+  },
+  "20": {
+   "answer": 5883,
+   "type": "numeric"
+  },
+  "21": {
+   "answer": 27,
+   "type": "numeric"
+  },
+  "22": {
+   "answer": 203,
+   "type": "numeric"
+  },
+  "23": {
+   "answer": 2178,
+   "type": "numeric"
+  },
+  "24": {
+   "answer": 27,
+   "type": "numeric"
+  },
+  "25": {
+   "answer": 4551,
+   "type": "numeric"
+  },
+  "26": {
+   "answer": 3885,
+   "type": "numeric"
+  },
+  "27": {
+   "answer": 38295,
+   "type": "numeric"
+  },
+  "28": {
+   "answer": 222333,
+   "type": "numeric"
+  },
+  "29": {
+   "answer": 1155,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 418,
+   "type": "numeric"
+  },
+  "30": {
+   "answer": 14641,
+   "type": "numeric"
+  },
+  "31": {
+   "answer": 36663,
+   "type": "numeric"
+  },
+  "32": {
+   "answer": 704,
+   "type": "numeric"
+  },
+  "33": {
+   "answer": 333,
+   "type": "numeric"
+  },
+  "34": {
+   "answer": 22.077,
+   "type": "numeric"
+  },
+  "35": {
+   "answer": 2.42,
+   "type": "numeric",
+   "unit": "%"
+  },
+  "36": {
+   "answer": 1573,
+   "type": "numeric"
+  },
+  "37": {
+   "answer": 252,
+   "type": "numeric"
+  },
+  "38": {
+   "answer": 22066,
+   "type": "numeric"
+  },
+  "39": {
+   "answer": 14641,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 5082,
+   "type": "numeric"
+  },
+  "40": {
+   "answer": 1452,
+   "type": "numeric"
+  },
+  "41": {
+   "answer": 858,
+   "type": "numeric"
+  },
+  "42": {
+   "answer": 2662,
+   "type": "numeric"
+  },
+  "43": {
+   "answer": 2420,
+   "type": "numeric"
+  },
+  "44": {
+   "answer": 2310,
+   "type": "numeric"
+  },
+  "45": {
+   "answer": 23,
+   "type": "numeric"
+  },
+  "46": {
+   "answer": 13794,
+   "type": "numeric"
+  },
+  "47": {
+   "answer": 12100,
+   "type": "numeric"
+  },
+  "48": {
+   "answer": 1815,
+   "type": "numeric"
+  },
+  "49": {
+   "high": 717.0,
+   "low": 648.0,
+   "type": "approx"
+  },
+  "5": {
+   "answer": 814,
+   "type": "numeric"
+  },
+  "50": {
+   "answer": 182,
+   "type": "numeric"
+  },
+  "51": {
+   "answer": 6776,
+   "type": "numeric"
+  },
+  "52": {
+   "high": 34465.0,
+   "low": 31181.0,
+   "type": "approx"
+  },
+  "53": {
+   "answer": 14641,
+   "type": "numeric"
+  },
+  "54": {
+   "answer": 23,
+   "type": "numeric"
+  },
+  "55": {
+   "answer": 6006,
+   "type": "numeric"
+  },
+  "56": {
+   "answer": 136653,
+   "type": "numeric"
+  },
+  "57": {
+   "answer": 2310,
+   "type": "numeric"
+  },
+  "58": {
+   "answer": 15004,
+   "type": "numeric"
+  },
+  "59": {
+   "high": 83853.0,
+   "low": 75897.0,
+   "type": "approx"
+  },
+  "6": {
+   "answer": 726,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 2.53,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 572,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 2706,
+   "type": "numeric"
+  }
+ },
+ "1.2.10": {
+  "1": {
+   "answer": 7224,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 3025,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 9984,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 7225,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 1225,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 5625,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 4225,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 1225,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 441,
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 4225,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 2025,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 3021,
+   "type": "numeric"
+  },
+  "20": {
+   "answer": 7225,
+   "type": "numeric"
+  },
+  "21": {
+   "answer": 3025,
+   "type": "numeric"
+  },
+  "22": {
+   "answer": 1064,
+   "type": "numeric"
+  },
+  "23": {
+   "answer": 2000,
+   "type": "numeric"
+  },
+  "24": {
+   "answer": 5625,
+   "type": "numeric"
+  },
+  "25": {
+   "answer": 4842,
+   "type": "numeric"
+  },
+  "26": {
+   "answer": 900,
+   "type": "numeric"
+  },
+  "27": {
+   "answer": 5625,
+   "type": "numeric"
+  },
+  "28": {
+   "answer": 5625,
+   "type": "numeric"
+  },
+  "29": {
+   "answer": 3025,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 2496,
+   "type": "numeric"
+  },
+  "30": {
+   "answer": 9975,
+   "type": "numeric"
+  },
+  "31": {
+   "answer": 4200,
+   "type": "numeric"
+  },
+  "32": {
+   "answer": 936,
+   "type": "numeric"
+  },
+  "33": {
+   "answer": 7200,
+   "type": "numeric"
+  },
+  "34": {
+   "answer": 625,
+   "type": "numeric"
+  },
+  "35": {
+   "answer": 1073,
+   "type": "numeric"
+  },
+  "36": {
+   "answer": -7200,
+   "type": "numeric"
+  },
+  "37": {
+   "answer": 9856,
+   "type": "numeric"
+  },
+  "38": {
+   "high": 5245.0,
+   "low": 4745.0,
+   "type": "approx"
+  },
+  "39": {
+   "high": 4440.0,
+   "low": 4016.0,
+   "type": "approx"
+  },
+  "4": {
+   "answer": 3596,
+   "type": "numeric"
+  },
+  "40": {
+   "high": 10285.0,
+   "low": 9305.0,
+   "type": "approx"
+  },
+  "41": {
+   "high": 3355.0,
+   "low": 3035.0,
+   "type": "approx"
+  },
+  "42": {
+   "high": 29036.0,
+   "low": 26270.0,
+   "type": "approx"
+  },
+  "43": {
+   "high": 111716.0,
+   "low": 101076.0,
+   "type": "approx"
+  },
+  "44": {
+   "answer": 14400,
+   "type": "numeric"
+  },
+  "45": {
+   "high": 68673.0,
+   "low": 62132.0,
+   "type": "approx"
+  },
+  "46": {
+   "high": 1573085.0,
+   "low": 1423267.0,
+   "type": "approx"
+  },
+  "5": {
+   "answer": 48.96,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 7216,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 864,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 63.84,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 24.91,
+   "type": "numeric"
+  }
+ },
+ "1.2.11": {
+  "1": {
+   "answer": 1462,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 2268,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 1008,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 1612,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 736,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 403,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 252,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 1944,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 976,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 765,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 574,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 1458,
+   "type": "numeric"
+  }
+ },
+ "1.2.2": {
+  "1": {
+   "answer": 124634,
+   "type": "numeric"
+  },
+  "10": {
+   "high": 2652.0,
+   "low": 2398.0,
+   "type": "approx"
+  },
+  "2": {
+   "answer": 2363.4,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 37269,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 345,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 222,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 24846,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 15.15,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 448844,
+   "type": "numeric"
+  },
+  "9": {
+   "high": 16014.0,
+   "low": 14488.0,
+   "type": "approx"
+  }
+ },
+ "1.2.3": {
+  "1": {
+   "answer": 6000,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 101,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 0.44,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 80800,
+   "type": "numeric"
+  },
+  "13": {
+   "high": 417.0,
+   "low": 376.0,
+   "type": "approx"
+  },
+  "14": {
+   "answer": 0.24,
+   "display": "\\frac{6}{25}",
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 5225,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 850,
+   "type": "numeric"
+  },
+  "17": {
+   "high": 1400.0,
+   "low": 1265.0,
+   "type": "approx"
+  },
+  "18": {
+   "answer": 85.6,
+   "type": "numeric",
+   "unit": "%"
+  },
+  "19": {
+   "answer": 16.16,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 10800,
+   "type": "numeric"
+  },
+  "20": {
+   "answer": 7575,
+   "type": "numeric"
+  },
+  "21": {
+   "high": 417.0,
+   "low": 376.0,
+   "type": "approx"
+  },
+  "22": {
+   "answer": 0.28,
+   "display": "\\frac{7}{25}",
+   "type": "numeric"
+  },
+  "23": {
+   "answer": 80.24,
+   "type": "numeric"
+  },
+  "24": {
+   "answer": 7675,
+   "type": "numeric"
+  },
+  "25": {
+   "answer": 1280,
+   "type": "numeric"
+  },
+  "26": {
+   "high": 205.0,
+   "low": 185.0,
+   "type": "approx"
+  },
+  "27": {
+   "answer": 50075,
+   "type": "numeric"
+  },
+  "28": {
+   "answer": 4125,
+   "type": "numeric"
+  },
+  "29": {
+   "answer": 6600,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 6.5,
+   "type": "numeric"
+  },
+  "30": {
+   "answer": 4950,
+   "type": "numeric"
+  },
+  "31": {
+   "high": 16405200.0,
+   "low": 14842800.0,
+   "type": "approx"
+  },
+  "4": {
+   "answer": 3700,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 825,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 2.56,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 3675,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 10450,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 24.64,
+   "type": "numeric"
+  }
+ },
+ "1.2.4": {
+  "1": {
+   "answer": 3600,
+   "type": "numeric"
+  },
+  "10": {
+   "high": 796.0,
+   "low": 719.0,
+   "type": "approx"
+  },
+  "11": {
+   "answer": 1.28,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 19800,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 64,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 54000,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 72.6,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 4800,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 0.88,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 6300,
+   "type": "numeric"
+  },
+  "5": {
+   "high": 620.0,
+   "low": 560.0,
+   "type": "approx"
+  },
+  "6": {
+   "answer": 2100,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 1800,
+   "type": "numeric"
+  },
+  "8": {
+   "high": 11609825.0,
+   "low": 10504127.0,
+   "type": "approx"
+  },
+  "9": {
+   "answer": 0.64,
+   "type": "numeric"
+  }
+ },
+ "1.2.5": {
+  "1": {
+   "answer": 40000,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 6000,
+   "type": "numeric"
+  },
+  "11": {
+   "high": 154.0,
+   "low": 139.0,
+   "type": "approx"
+  },
+  "12": {
+   "high": 5107.0,
+   "low": 4620.0,
+   "type": "approx"
+  },
+  "13": {
+   "high": 4330.0,
+   "low": 3917.0,
+   "type": "approx"
+  },
+  "14": {
+   "high": 425250.0,
+   "low": 384750.0,
+   "type": "approx"
+  },
+  "15": {
+   "answer": 153000,
+   "type": "numeric"
+  },
+  "16": {
+   "high": 341.0,
+   "low": 307.0,
+   "type": "approx"
+  },
+  "17": {
+   "answer": 121,
+   "type": "numeric"
+  },
+  "18": {
+   "high": 660582.0,
+   "low": 597668.0,
+   "type": "approx"
+  },
+  "19": {
+   "high": 9899991.0,
+   "low": 8957133.0,
+   "type": "approx"
+  },
+  "2": {
+   "high": 209992.0,
+   "low": 189992.0,
+   "type": "approx"
+  },
+  "20": {
+   "high": 126.0,
+   "low": 114.0,
+   "type": "approx"
+  },
+  "21": {
+   "answer": 183000,
+   "type": "numeric"
+  },
+  "22": {
+   "high": 8223549.0,
+   "low": 7440353.0,
+   "type": "approx"
+  },
+  "23": {
+   "high": 1395.0,
+   "low": 1261.0,
+   "type": "approx"
+  },
+  "24": {
+   "high": 714.0,
+   "low": 646.0,
+   "type": "approx"
+  },
+  "25": {
+   "high": 25153.0,
+   "low": 22757.0,
+   "type": "approx"
+  },
+  "26": {
+   "answer": 210000,
+   "type": "numeric"
+  },
+  "27": {
+   "high": 3715.0,
+   "low": 3360.0,
+   "type": "approx"
+  },
+  "28": {
+   "answer": 9300,
+   "type": "numeric"
+  },
+  "29": {
+   "high": 384299616.0,
+   "low": 347699652.0,
+   "type": "approx"
+  },
+  "3": {
+   "answer": 1.104,
+   "type": "numeric"
+  },
+  "30": {
+   "answer": 0.02,
+   "type": "numeric"
+  },
+  "31": {
+   "high": 6457630.0,
+   "low": 5842616.0,
+   "type": "approx"
+  },
+  "32": {
+   "high": 2233.0,
+   "low": 2020.0,
+   "type": "approx"
+  },
+  "33": {
+   "high": 3900.0,
+   "low": 3528.0,
+   "type": "approx"
+  },
+  "34": {
+   "high": 356.0,
+   "low": 321.0,
+   "type": "approx"
+  },
+  "35": {
+   "high": 525000.0,
+   "low": 474999.0,
+   "type": "approx"
+  },
+  "36": {
+   "high": 1140.0,
+   "low": 1030.0,
+   "type": "approx"
+  },
+  "37": {
+   "high": 362.0,
+   "low": 326.0,
+   "type": "approx"
+  },
+  "38": {
+   "high": 1743.0,
+   "low": 1576.0,
+   "type": "approx"
+  },
+  "39": {
+   "high": 510000.0,
+   "low": 461428.0,
+   "type": "approx"
+  },
+  "4": {
+   "high": 471.0,
+   "low": 425.0,
+   "type": "approx"
+  },
+  "40": {
+   "high": 42267.0,
+   "low": 38240.0,
+   "type": "approx"
+  },
+  "41": {
+   "high": 201242.0,
+   "low": 182076.0,
+   "type": "approx"
+  },
+  "42": {
+   "answer": 60.25,
+   "type": "numeric"
+  },
+  "43": {
+   "high": 656250.0,
+   "low": 593749.0,
+   "type": "approx"
+  },
+  "44": {
+   "high": 721.0,
+   "low": 652.0,
+   "type": "approx"
+  },
+  "45": {
+   "high": 857518.0,
+   "low": 775848.0,
+   "type": "approx"
+  },
+  "46": {
+   "high": 1168.0,
+   "low": 1056.0,
+   "type": "approx"
+  },
+  "47": {
+   "high": 2492.0,
+   "low": 2253.0,
+   "type": "approx"
+  },
+  "48": {
+   "high": 103625.0,
+   "low": 93755.0,
+   "type": "approx"
+  },
+  "49": {
+   "high": 4757.0,
+   "low": 4303.0,
+   "type": "approx"
+  },
+  "5": {
+   "high": 2324.0,
+   "low": 2102.0,
+   "type": "approx"
+  },
+  "50": {
+   "high": 498000.0,
+   "low": 450570.0,
+   "type": "approx"
+  },
+  "51": {
+   "high": 93000.0,
+   "low": 84142.0,
+   "type": "approx"
+  },
+  "52": {
+   "high": 646.0,
+   "low": 583.0,
+   "type": "approx"
+  },
+  "53": {
+   "high": 64286.0,
+   "low": 58163.0,
+   "type": "approx"
+  },
+  "54": {
+   "high": 8340376.0,
+   "low": 7546054.0,
+   "type": "approx"
+  },
+  "55": {
+   "high": 734662.0,
+   "low": 664694.0,
+   "type": "approx"
+  },
+  "56": {
+   "high": 1818.0,
+   "low": 1644.0,
+   "type": "approx"
+  },
+  "57": {
+   "answer": 40625,
+   "type": "numeric"
+  },
+  "58": {
+   "high": 109500.0,
+   "low": 99071.0,
+   "type": "approx"
+  },
+  "59": {
+   "high": 256500.0,
+   "low": 232071.0,
+   "type": "approx"
+  },
+  "6": {
+   "high": 1166.0,
+   "low": 1054.0,
+   "type": "approx"
+  },
+  "60": {
+   "high": 125437637.0,
+   "low": 113491195.0,
+   "type": "approx"
+  },
+  "61": {
+   "high": 20399980.0,
+   "low": 18457124.0,
+   "type": "approx"
+  },
+  "62": {
+   "high": 535286.0,
+   "low": 484306.0,
+   "type": "approx"
+  },
+  "63": {
+   "high": 7340957.0,
+   "low": 6641817.0,
+   "type": "approx"
+  },
+  "64": {
+   "high": 28.0,
+   "low": 24.0,
+   "type": "approx"
+  },
+  "65": {
+   "high": 39375.0,
+   "low": 35624.0,
+   "type": "approx"
+  },
+  "66": {
+   "high": 52348.0,
+   "low": 47362.0,
+   "type": "approx"
+  },
+  "67": {
+   "high": 5834.0,
+   "low": 5277.0,
+   "type": "approx"
+  },
+  "68": {
+   "high": 132.0,
+   "low": 118.0,
+   "type": "approx"
+  },
+  "69": {
+   "high": 8986.0,
+   "low": 8130.0,
+   "type": "approx"
+  },
+  "7": {
+   "answer": 200000,
+   "type": "numeric"
+  },
+  "70": {
+   "high": 7000.0,
+   "low": 6332.0,
+   "type": "approx"
+  },
+  "71": {
+   "high": 59910.0,
+   "low": 54204.0,
+   "type": "approx"
+  },
+  "72": {
+   "high": 263.0,
+   "low": 237.0,
+   "type": "approx"
+  },
+  "73": {
+   "high": 56154.0,
+   "low": 50805.0,
+   "type": "approx"
+  },
+  "74": {
+   "high": 16332.0,
+   "low": 14776.0,
+   "type": "approx"
+  },
+  "75": {
+   "high": 13622.0,
+   "low": 12324.0,
+   "type": "approx"
+  },
+  "76": {
+   "high": 221233.0,
+   "low": 200163.0,
+   "type": "approx"
+  },
+  "77": {
+   "high": 639.0,
+   "low": 577.0,
+   "type": "approx"
+  },
+  "78": {
+   "high": 24157.0,
+   "low": 21855.0,
+   "type": "approx"
+  },
+  "79": {
+   "high": 700.0,
+   "low": 632.0,
+   "type": "approx"
+  },
+  "8": {
+   "high": 7326.0,
+   "low": 6628.0,
+   "type": "approx"
+  },
+  "80": {
+   "high": 670.0,
+   "low": 605.0,
+   "type": "approx"
+  },
+  "81": {
+   "high": 1283.0,
+   "low": 1159.0,
+   "type": "approx"
+  },
+  "82": {
+   "high": 3502.0,
+   "low": 3167.0,
+   "type": "approx"
+  },
+  "83": {
+   "high": 155.0,
+   "low": 139.0,
+   "type": "approx"
+  },
+  "84": {
+   "high": 129362.0,
+   "low": 117040.0,
+   "type": "approx"
+  },
+  "9": {
+   "high": 213150.0,
+   "low": 192850.0,
+   "type": "approx"
+  }
+ },
+ "1.2.6": {
+  "1": {
+   "answer": 7.8,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 2016,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 378,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 4410,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 22.5,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 4140,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 1.5,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 10.56,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 700,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 72,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 96,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 720,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 2842,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 4368,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 840,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 4368,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 3.6,
+   "type": "numeric"
+  }
+ },
+ "1.2.7": {
+  "1": {
+   "answer": 8633,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 8924,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 10712,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 10506,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 8556,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 11342,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 8633,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 9212,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 8554,
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 8918,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 987042,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 9312,
+   "type": "numeric"
+  },
+  "20": {
+   "answer": 9888,
+   "type": "numeric"
+  },
+  "21": {
+   "answer": 9579,
+   "type": "numeric"
+  },
+  "22": {
+   "answer": 980099,
+   "type": "numeric"
+  },
+  "23": {
+   "answer": 1013036,
+   "type": "numeric"
+  },
+  "24": {
+   "answer": 10379,
+   "type": "numeric"
+  },
+  "25": {
+   "answer": 9672,
+   "type": "numeric"
+  },
+  "26": {
+   "answer": 9888,
+   "type": "numeric"
+  },
+  "27": {
+   "answer": 982081,
+   "type": "numeric"
+  },
+  "28": {
+   "answer": 10088,
+   "type": "numeric"
+  },
+  "29": {
+   "answer": 1011024,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 11227,
+   "type": "numeric"
+  },
+  "30": {
+   "high": 19964.0,
+   "low": 18062.0,
+   "type": "approx"
+  },
+  "31": {
+   "answer": 12996,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 9021,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 11021,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 8277,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 11016,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 11663,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 8544,
+   "type": "numeric"
+  }
+ },
+ "1.2.8": {
+  "1": {
+   "answer": 6.25,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 1.225,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 625,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 13225,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 3025,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": -24.75,
+   "type": "numeric"
+  },
+  "7": {
+   "high": 21773.0,
+   "low": 19699.0,
+   "type": "approx"
+  },
+  "8": {
+   "answer": 255025,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 14,
+   "type": "numeric"
+  }
+ },
+ "1.2.9": {
+  "1": {
+   "answer": 3364,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 260100,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 2209,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 2809,
+   "type": "numeric"
+  },
+  "5": {
+   "high": 123480.0,
+   "low": 111720.0,
+   "type": "approx"
+  },
+  "6": {
+   "answer": 3136,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 3481,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 1681,
+   "type": "numeric"
+  }
+ },
+ "1.3.1": {
+  "1": {
+   "answer": 40804,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 166464,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 362404,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 91809,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 826281,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 161604,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 499849,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 34013,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 644809,
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 163216,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 262144,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 164836,
+   "type": "numeric"
+  },
+  "20": {
+   "answer": 37942,
+   "type": "numeric"
+  },
+  "21": {
+   "answer": 374544,
+   "type": "numeric"
+  },
+  "22": {
+   "answer": 96942,
+   "type": "numeric"
+  },
+  "23": {
+   "answer": 509796,
+   "type": "numeric"
+  },
+  "24": {
+   "answer": 49374,
+   "type": "numeric"
+  },
+  "25": {
+   "answer": 23632,
+   "type": "numeric"
+  },
+  "26": {
+   "answer": 67196,
+   "type": "numeric"
+  },
+  "27": {
+   "answer": 24969,
+   "type": "numeric"
+  },
+  "28": {
+   "answer": 49731,
+   "type": "numeric"
+  },
+  "29": {
+   "answer": 46144,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 253009,
+   "type": "numeric"
+  },
+  "30": {
+   "answer": 204020,
+   "type": "numeric"
+  },
+  "31": {
+   "answer": 35143,
+   "type": "numeric"
+  },
+  "32": {
+   "answer": 15004,
+   "type": "numeric"
+  },
+  "33": {
+   "answer": 842724,
+   "type": "numeric"
+  },
+  "34": {
+   "answer": 38688,
+   "type": "numeric"
+  },
+  "35": {
+   "answer": 37942,
+   "type": "numeric"
+  },
+  "36": {
+   "answer": 274576,
+   "type": "numeric"
+  },
+  "37": {
+   "answer": 41363,
+   "type": "numeric"
+  },
+  "38": {
+   "answer": 19881,
+   "type": "numeric"
+  },
+  "39": {
+   "answer": 108332,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 368449,
+   "type": "numeric"
+  },
+  "40": {
+   "answer": 25864,
+   "type": "numeric"
+  },
+  "41": {
+   "answer": 144288144,
+   "type": "numeric"
+  },
+  "42": {
+   "answer": 444889,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 43264,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 93636,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 259081,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 646416,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 495616,
+   "type": "numeric"
+  }
+ },
+ "1.3.10": {
+  "1": {
+   "high": 2823.0,
+   "low": 2553.0,
+   "type": "approx"
+  },
+  "10": {
+   "high": 689967.0,
+   "low": 624255.0,
+   "type": "approx"
+  },
+  "11": {
+   "high": 108225.0,
+   "low": 97917.0,
+   "type": "approx"
+  },
+  "12": {
+   "high": 841060.0,
+   "low": 760958.0,
+   "type": "approx"
+  },
+  "13": {
+   "high": 34269.0,
+   "low": 31005.0,
+   "type": "approx"
+  },
+  "14": {
+   "high": 10801.0,
+   "low": 9771.0,
+   "type": "approx"
+  },
+  "15": {
+   "high": 89028.0,
+   "low": 80548.0,
+   "type": "approx"
+  },
+  "16": {
+   "high": 72457.0,
+   "low": 65555.0,
+   "type": "approx"
+  },
+  "17": {
+   "high": 67083.0,
+   "low": 60693.0,
+   "type": "approx"
+  },
+  "18": {
+   "high": 67158.0,
+   "low": 60762.0,
+   "type": "approx"
+  },
+  "19": {
+   "high": 2265.0,
+   "low": 2048.0,
+   "type": "approx"
+  },
+  "2": {
+   "high": 28026.0,
+   "low": 25356.0,
+   "type": "approx"
+  },
+  "20": {
+   "high": 95256.0,
+   "low": 86184.0,
+   "type": "approx"
+  },
+  "21": {
+   "high": 174174.0,
+   "low": 157586.0,
+   "type": "approx"
+  },
+  "22": {
+   "high": 8316.0,
+   "low": 7524.0,
+   "type": "approx"
+  },
+  "23": {
+   "high": 37700.0,
+   "low": 34108.0,
+   "type": "approx"
+  },
+  "24": {
+   "high": 578592.0,
+   "low": 523488.0,
+   "type": "approx"
+  },
+  "25": {
+   "high": 28224.0,
+   "low": 25536.0,
+   "type": "approx"
+  },
+  "26": {
+   "high": 329868.0,
+   "low": 298452.0,
+   "type": "approx"
+  },
+  "27": {
+   "high": 288084.0,
+   "low": 260646.0,
+   "type": "approx"
+  },
+  "28": {
+   "high": 1924.0,
+   "low": 1740.0,
+   "type": "approx"
+  },
+  "29": {
+   "high": 9127.0,
+   "low": 8257.0,
+   "type": "approx"
+  },
+  "3": {
+   "high": 3481.0,
+   "low": 3149.0,
+   "type": "approx"
+  },
+  "30": {
+   "high": 6332.0,
+   "low": 5728.0,
+   "type": "approx"
+  },
+  "31": {
+   "high": 31236.0,
+   "low": 28260.0,
+   "type": "approx"
+  },
+  "32": {
+   "high": 3883.0,
+   "low": 3513.0,
+   "type": "approx"
+  },
+  "33": {
+   "high": 59062500.0,
+   "low": 53437500.0,
+   "type": "approx"
+  },
+  "34": {
+   "high": 28350.0,
+   "low": 25650.0,
+   "type": "approx"
+  },
+  "35": {
+   "high": 105000.0,
+   "low": 95000.0,
+   "type": "approx"
+  },
+  "36": {
+   "high": 525099.0,
+   "low": 475089.0,
+   "type": "approx"
+  },
+  "37": {
+   "high": 4322.0,
+   "low": 3910.0,
+   "type": "approx"
+  },
+  "38": {
+   "high": 166114.0,
+   "low": 150292.0,
+   "type": "approx"
+  },
+  "39": {
+   "answer": 2592,
+   "type": "numeric"
+  },
+  "4": {
+   "high": 6586.0,
+   "low": 5958.0,
+   "type": "approx"
+  },
+  "40": {
+   "high": 3766.0,
+   "low": 3406.0,
+   "type": "approx"
+  },
+  "5": {
+   "high": 118041.0,
+   "low": 106799.0,
+   "type": "approx"
+  },
+  "6": {
+   "high": 37700.0,
+   "low": 34108.0,
+   "type": "approx"
+  },
+  "7": {
+   "high": 43545.0,
+   "low": 39398.0,
+   "type": "approx"
+  },
+  "8": {
+   "high": 139755.0,
+   "low": 126445.0,
+   "type": "approx"
+  },
+  "9": {
+   "high": 16170.0,
+   "low": 14630.0,
+   "type": "approx"
+  }
+ },
+ "1.3.2": {
+  "1": {
+   "answer": 640,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 380,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 12030,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 441,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 960,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 5100,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 660,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 490,
+   "type": "numeric"
+  },
+  "18": {
+   "answer": -10030,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 384,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 810,
+   "type": "numeric"
+  },
+  "20": {
+   "answer": 14.4,
+   "type": "numeric"
+  },
+  "21": {
+   "answer": 196,
+   "type": "numeric"
+  },
+  "22": {
+   "answer": 1024,
+   "type": "numeric"
+  },
+  "23": {
+   "answer": 330,
+   "type": "numeric"
+  },
+  "24": {
+   "answer": 484,
+   "type": "numeric"
+  },
+  "25": {
+   "answer": 2450,
+   "type": "numeric"
+  },
+  "26": {
+   "answer": 870,
+   "type": "numeric"
+  },
+  "27": {
+   "answer": 256,
+   "type": "numeric"
+  },
+  "28": {
+   "answer": 3540,
+   "type": "numeric"
+  },
+  "29": {
+   "answer": -196,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 450,
+   "type": "numeric"
+  },
+  "30": {
+   "answer": 289,
+   "type": "numeric"
+  },
+  "31": {
+   "answer": -289,
+   "type": "numeric"
+  },
+  "32": {
+   "answer": 1080,
+   "type": "numeric"
+  },
+  "33": {
+   "answer": 4830,
+   "type": "numeric"
+  },
+  "34": {
+   "answer": 2002,
+   "type": "numeric"
+  },
+  "35": {
+   "answer": 1210,
+   "type": "numeric"
+  },
+  "36": {
+   "answer": 2160,
+   "type": "numeric"
+  },
+  "37": {
+   "answer": 6320,
+   "type": "numeric"
+  },
+  "38": {
+   "answer": 1188,
+   "type": "numeric"
+  },
+  "39": {
+   "answer": 363,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "40": {
+   "answer": 14280,
+   "type": "numeric"
+  },
+  "41": {
+   "answer": 1560,
+   "type": "numeric"
+  },
+  "42": {
+   "answer": -324,
+   "type": "numeric"
+  },
+  "43": {
+   "answer": 3300,
+   "type": "numeric"
+  },
+  "44": {
+   "answer": 9900,
+   "type": "numeric"
+  },
+  "45": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "46": {
+   "answer": -1210,
+   "type": "numeric"
+  },
+  "47": {
+   "answer": 2775,
+   "type": "numeric"
+  },
+  "48": {
+   "answer": 540,
+   "type": "numeric"
+  },
+  "49": {
+   "answer": 576,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 1210,
+   "type": "numeric"
+  },
+  "50": {
+   "answer": 16770,
+   "type": "numeric"
+  },
+  "51": {
+   "answer": 910,
+   "type": "numeric"
+  },
+  "52": {
+   "high": 2019.0,
+   "low": 1825.0,
+   "type": "approx"
+  },
+  "53": {
+   "answer": 3300,
+   "type": "numeric"
+  },
+  "54": {
+   "answer": 720,
+   "type": "numeric"
+  },
+  "55": {
+   "high": 13384.0,
+   "low": 12108.0,
+   "type": "approx"
+  },
+  "56": {
+   "high": 10032.0,
+   "low": 9076.0,
+   "type": "approx"
+  },
+  "57": {
+   "answer": 1056,
+   "type": "numeric"
+  },
+  "58": {
+   "answer": 11990,
+   "type": "numeric"
+  },
+  "59": {
+   "high": 8859.0,
+   "low": 8015.0,
+   "type": "approx"
+  },
+  "6": {
+   "answer": -660,
+   "type": "numeric"
+  },
+  "60": {
+   "answer": 672,
+   "type": "numeric"
+  },
+  "61": {
+   "high": 2266.0,
+   "low": 2050.0,
+   "type": "approx"
+  },
+  "62": {
+   "answer": 1584,
+   "type": "numeric"
+  },
+  "63": {
+   "high": 5194.0,
+   "low": 4698.0,
+   "type": "approx"
+  },
+  "64": {
+   "answer": 2250,
+   "type": "numeric"
+  },
+  "65": {
+   "answer": 4662,
+   "type": "numeric"
+  },
+  "66": {
+   "answer": -588,
+   "type": "numeric"
+  },
+  "67": {
+   "high": 10518.0,
+   "low": 9516.0,
+   "type": "approx"
+  },
+  "68": {
+   "answer": 2100,
+   "type": "numeric"
+  },
+  "69": {
+   "answer": 3774,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 16.9,
+   "type": "numeric"
+  },
+  "70": {
+   "high": 4045.0,
+   "low": 3659.0,
+   "type": "approx"
+  },
+  "8": {
+   "answer": 10020,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 1280,
+   "type": "numeric"
+  }
+ },
+ "1.3.3": {
+  "1": {
+   "answer": 2521,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 313,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 481,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 1301,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 3281,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 12961,
+   "type": "numeric"
+  }
+ },
+ "1.3.4": {
+  "1": {
+   "answer": 462,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 3760,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 6380,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 120,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 2280,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 3360,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 128,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 1680,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 880,
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 450,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 550,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 1920,
+   "type": "numeric"
+  },
+  "20": {
+   "answer": 128,
+   "type": "numeric"
+  },
+  "21": {
+   "answer": 5300,
+   "type": "numeric"
+  },
+  "22": {
+   "answer": 2300,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 380,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 128,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 160,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 124,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 1920,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 12960,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 550,
+   "type": "numeric"
+  }
+ },
+ "1.3.5": {
+  "1": {
+   "answer": 9090,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 505,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 5353,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 6868,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 4141,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 4545,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 6161,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 5858,
+   "type": "numeric"
+  }
+ },
+ "1.3.6": {
+  "1": {
+   "answer": 145,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 193,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 153,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 107,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": -172,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 11.2,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": -5.07,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 254,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 540,
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 218,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 300,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 140,
+   "type": "numeric"
+  },
+  "20": {
+   "answer": -30,
+   "type": "numeric"
+  },
+  "21": {
+   "answer": -94,
+   "type": "numeric"
+  },
+  "22": {
+   "answer": 525,
+   "type": "numeric"
+  },
+  "23": {
+   "answer": 326,
+   "type": "numeric"
+  },
+  "24": {
+   "answer": 321,
+   "type": "numeric"
+  },
+  "25": {
+   "answer": 170,
+   "type": "numeric"
+  },
+  "26": {
+   "answer": 438,
+   "type": "numeric"
+  },
+  "27": {
+   "answer": -363,
+   "type": "numeric"
+  },
+  "28": {
+   "answer": 302,
+   "type": "numeric"
+  },
+  "29": {
+   "answer": 720,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": -115,
+   "type": "numeric"
+  },
+  "30": {
+   "answer": 218,
+   "type": "numeric"
+  },
+  "31": {
+   "answer": -1560,
+   "type": "numeric"
+  },
+  "32": {
+   "answer": -70,
+   "type": "numeric"
+  },
+  "33": {
+   "answer": -170,
+   "type": "numeric"
+  },
+  "34": {
+   "answer": 288,
+   "type": "numeric"
+  },
+  "35": {
+   "answer": 105,
+   "type": "numeric"
+  },
+  "36": {
+   "answer": 18,
+   "type": "numeric"
+  },
+  "37": {
+   "answer": 78,
+   "type": "numeric"
+  },
+  "38": {
+   "answer": -238,
+   "type": "numeric"
+  },
+  "39": {
+   "answer": -900,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 133,
+   "type": "numeric"
+  },
+  "40": {
+   "answer": 168,
+   "type": "numeric"
+  },
+  "41": {
+   "answer": 1014,
+   "type": "numeric"
+  },
+  "42": {
+   "answer": -1540,
+   "type": "numeric"
+  },
+  "43": {
+   "answer": -616,
+   "type": "numeric"
+  },
+  "44": {
+   "answer": 715,
+   "type": "numeric"
+  },
+  "45": {
+   "answer": -272,
+   "type": "numeric"
+  },
+  "46": {
+   "answer": 672,
+   "type": "numeric"
+  },
+  "47": {
+   "answer": 894,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 272,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": -109,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 264,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 175,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": -97,
+   "type": "numeric"
+  }
+ },
+ "1.3.7": {
+  "1": {
+   "answer": 1575,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 4275,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 2275,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 4675,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 2925,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 2975,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 6175,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 5225,
+   "type": "numeric"
+  }
+ },
+ "1.3.8": {
+  "1": {
+   "answer": 35.0625,
+   "display": "35\\frac{1}{16}",
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 53.04,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 40.44444444444444,
+   "display": "40\\frac{4}{9}",
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 101.0204081632653,
+   "display": "101\\frac{1}{49}",
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 53.04,
+   "display": "53\\frac{1}{25}",
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 131.04,
+   "display": "131\\frac{1}{25}",
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 29.16,
+   "display": "29\\frac{4}{25}",
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 131.015625,
+   "display": "131\\frac{1}{64}",
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 138.66666666666666,
+   "display": "138\\frac{2}{3}",
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 131,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 64.44444444444444,
+   "display": "64\\frac{4}{9}",
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 72.22222222222223,
+   "display": "72\\frac{2}{9}",
+   "type": "numeric"
+  },
+  "20": {
+   "answer": 160.44444444444446,
+   "display": "160\\frac{4}{9}",
+   "type": "numeric"
+  },
+  "21": {
+   "answer": 351.0204081632653,
+   "display": "351\\frac{1}{49}",
+   "type": "numeric"
+  },
+  "22": {
+   "answer": 9,
+   "type": "numeric"
+  },
+  "23": {
+   "answer": 9.03,
+   "type": "numeric"
+  },
+  "24": {
+   "answer": 41,
+   "type": "numeric"
+  },
+  "25": {
+   "answer": 44.44444444444444,
+   "display": "44\\frac{4}{9}",
+   "type": "numeric"
+  },
+  "26": {
+   "answer": 79.04,
+   "type": "numeric"
+  },
+  "27": {
+   "answer": 21.466666666666665,
+   "display": "21\\frac{7}{15}",
+   "type": "numeric"
+  },
+  "28": {
+   "answer": 5,
+   "type": "numeric"
+  },
+  "29": {
+   "answer": 5.7,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 12.16,
+   "display": "12\\frac{4}{25}",
+   "type": "numeric"
+  },
+  "30": {
+   "answer": 12.96,
+   "display": "12\\frac{24}{25}",
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 29.166666666666668,
+   "display": "29\\frac{1}{6}",
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 101.0625,
+   "display": "101\\frac{1}{16}",
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 139.02777777777777,
+   "display": "139\\frac{1}{36}",
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 75.02777777777777,
+   "display": "75\\frac{1}{36}",
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 245.0082644628099,
+   "display": "245\\frac{1}{121}",
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 137.16,
+   "display": "137\\frac{4}{25}",
+   "type": "numeric"
+  }
+ },
+ "1.3.9": {
+  "1": {
+   "answer": 8.642857142857142,
+   "display": "8\\frac{9}{14}",
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 23.5625,
+   "display": "23\\frac{9}{16}",
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 13.941176470588236,
+   "display": "13\\frac{16}{17}",
+   "type": "numeric"
+  },
+  "12": {
+   "answer": -0.9285714285714286,
+   "display": "-\\frac{13}{14}",
+   "type": "numeric"
+  },
+  "13": {
+   "answer": -0.9444444444444444,
+   "display": "-\\frac{17}{18}",
+   "type": "numeric"
+  },
+  "14": {
+   "answer": -2.64,
+   "display": "-2\\frac{16}{25}",
+   "type": "numeric"
+  },
+  "15": {
+   "answer": -2.4705882352941178,
+   "display": "-2\\frac{8}{17}",
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 30.761904761904763,
+   "display": "30\\frac{16}{21}",
+   "type": "numeric"
+  },
+  "17": {
+   "answer": -2.4375,
+   "display": "-2\\frac{7}{16}",
+   "type": "numeric"
+  },
+  "18": {
+   "answer": -0.9166666666666666,
+   "display": "-\\frac{11}{12}",
+   "type": "numeric"
+  },
+  "19": {
+   "answer": -3.7333333333333334,
+   "display": "-3\\frac{11}{15}",
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 19.36,
+   "display": "19\\frac{9}{25}",
+   "type": "numeric"
+  },
+  "20": {
+   "answer": -2.4705882352941178,
+   "display": "-2\\frac{8}{17}",
+   "type": "numeric"
+  },
+  "21": {
+   "answer": -1.7647058823529411,
+   "display": "-1\\frac{13}{17}",
+   "type": "numeric"
+  },
+  "22": {
+   "answer": 67.23684210526316,
+   "display": "67\\frac{9}{38}",
+   "type": "numeric"
+  },
+  "23": {
+   "answer": -1.7333333333333334,
+   "display": "-1\\frac{11}{15}",
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 15.695652173913043,
+   "display": "15\\frac{16}{23}",
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 22.78125,
+   "display": "22\\frac{25}{32}",
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 13.473684210526315,
+   "display": "13\\frac{9}{19}",
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 24.735294117647058,
+   "display": "24\\frac{25}{34}",
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 28.264705882352942,
+   "display": "28\\frac{9}{34}",
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 8.529411764705882,
+   "display": "8\\frac{9}{17}",
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 11.642857142857142,
+   "display": "11\\frac{9}{14}",
+   "type": "numeric"
+  }
+ },
+ "1.4.1": {
+  "1": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 5,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 4,
+   "type": "numeric"
+  }
+ },
+ "1.4.2": {
+  "1": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 5,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 7,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 8,
+   "type": "numeric"
+  }
+ },
+ "1.4.3": {
+  "1": {
+   "answer": 8,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 5,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 9,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 9,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 8,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 5,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 7,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 4,
+   "type": "numeric"
+  }
+ },
+ "1.4.4": {
+  "1": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 6,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 7,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 6,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 6,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 6,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 7,
+   "type": "numeric"
+  }
+ },
+ "1.4.5": {
+  "1": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 5,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 5,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "20": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "21": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "22": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "23": {
+   "answer": 6,
+   "type": "numeric"
+  },
+  "24": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "25": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "26": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "27": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "28": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 4,
+   "type": "numeric"
+  }
+ },
+ "1.4.6": {
+  "1": {
+   "answer": 39.333333333333336,
+   "display": "39\\frac{1}{3}",
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 55.888888888888886,
+   "display": "55\\frac{8}{9}",
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 222.55555555555554,
+   "display": "222\\frac{5}{9}",
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 35.666666666666664,
+   "display": "35\\frac{2}{3}",
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 50.666666666666664,
+   "display": "50\\frac{2}{3}",
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 137.11111111111111,
+   "display": "137\\frac{1}{9}",
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 1371.6666666666667,
+   "display": "1371\\frac{2}{3}",
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 55,
+   "type": "numeric"
+  }
+ },
+ "1.4.7": {
+  "1": {
+   "answer": 2.5,
+   "type": "numeric",
+   "unit": "%"
+  },
+  "10": {
+   "answer": 40,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 27.5,
+   "type": "numeric",
+   "unit": "%"
+  },
+  "12": {
+   "answer": 0.045,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 18,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 0.025,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 435,
+   "type": "numeric",
+   "unit": "%"
+  },
+  "16": {
+   "answer": 6.25,
+   "type": "numeric",
+   "unit": "%"
+  },
+  "17": {
+   "answer": 0.275,
+   "display": "\\frac{11}{40}",
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 0.32,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 8,
+   "type": "numeric",
+   "unit": "%"
+  },
+  "2": {
+   "answer": 7.5,
+   "type": "numeric",
+   "unit": "%"
+  },
+  "20": {
+   "answer": 0.0081,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 17.5,
+   "type": "numeric",
+   "unit": "%"
+  },
+  "4": {
+   "answer": 52.5,
+   "type": "numeric",
+   "unit": "%"
+  },
+  "5": {
+   "answer": 1.075,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 0.075,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 1.25,
+   "display": "1\\frac{1}{4}",
+   "type": "numeric",
+   "unit": "%"
+  },
+  "8": {
+   "answer": 20,
+   "type": "numeric",
+   "unit": "%"
+  },
+  "9": {
+   "answer": 17.5,
+   "type": "numeric",
+   "unit": "%"
+  }
+ },
+ "1.5.1": {
+  "1": {
+   "answer": 198,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": -4995,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": -396,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 1998,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 495,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 99,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 2997,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": -3996,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": -999,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": -198,
+   "type": "numeric"
+  }
+ },
+ "1.5.2": {
+  "1": {
+   "answer": -1.1666666666666667,
+   "display": "-1\\frac{1}{6}",
+   "type": "numeric"
+  },
+  "10": {
+   "answer": -7.071428571428571,
+   "display": "-7\\frac{1}{14}",
+   "type": "numeric"
+  },
+  "11": {
+   "answer": -3.1666666666666665,
+   "display": "-3\\frac{1}{6}",
+   "type": "numeric"
+  },
+  "12": {
+   "answer": -1.8333333333333335,
+   "display": "-1\\frac{5}{6}",
+   "type": "numeric"
+  },
+  "13": {
+   "answer": -8.083333333333334,
+   "display": "-8\\frac{1}{12}",
+   "type": "numeric"
+  },
+  "14": {
+   "answer": -6.083333333333333,
+   "display": "-6\\frac{1}{12}",
+   "type": "numeric"
+  },
+  "15": {
+   "answer": -4.5,
+   "display": "-4\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "16": {
+   "answer": -1.6,
+   "display": "-1\\frac{3}{5}",
+   "type": "numeric"
+  },
+  "2": {
+   "answer": -1.9333333333333333,
+   "display": "-1\\frac{14}{15}",
+   "type": "numeric"
+  },
+  "3": {
+   "answer": -2,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": -1.85,
+   "display": "-1\\frac{17}{20}",
+   "type": "numeric"
+  },
+  "5": {
+   "answer": -1.5714285714285714,
+   "display": "-1\\frac{4}{7}",
+   "type": "numeric"
+  },
+  "6": {
+   "answer": -0.875,
+   "display": "-\\frac{7}{8}",
+   "type": "numeric"
+  },
+  "7": {
+   "answer": -4.125,
+   "display": "-4\\frac{1}{8}",
+   "type": "numeric"
+  },
+  "8": {
+   "answer": -5.1,
+   "display": "-5\\frac{1}{10}",
+   "type": "numeric"
+  },
+  "9": {
+   "answer": -1.8888888888888888,
+   "display": "-1\\frac{8}{9}",
+   "type": "numeric"
+  }
+ },
+ "1.5.3": {
+  "1": {
+   "answer": 0.19047619047619047,
+   "display": "\\frac{4}{21}",
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 0.041666666666666664,
+   "display": "\\frac{1}{24}",
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 0.075,
+   "display": "\\frac{3}{40}",
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 1.1666666666666667,
+   "display": "1\\frac{1}{6}",
+   "type": "numeric"
+  }
+ },
+ "1.5.4": {
+  "1": {
+   "answer": 2.0064102564102564,
+   "display": "2\\frac{1}{156}",
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": -0.8857142857142857,
+   "display": "-\\frac{31}{35}",
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 1.0156862745098039,
+   "display": "1\\frac{4}{255}",
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 1.096969696969697,
+   "display": "1\\frac{16}{165}",
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 1.027972027972028,
+   "display": "1\\frac{4}{143}",
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 1.0047619047619047,
+   "display": "1\\frac{1}{210}",
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 3.0064102564102564,
+   "display": "3\\frac{1}{156}",
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 1.0571428571428572,
+   "display": "1\\frac{2}{35}",
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 1.0075757575757576,
+   "display": "1\\frac{1}{132}",
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 2.033333333333333,
+   "display": "2\\frac{1}{30}",
+   "type": "numeric"
+  },
+  "20": {
+   "answer": 0.1484848484848485,
+   "display": "\\frac{49}{330}",
+   "type": "numeric"
+  },
+  "21": {
+   "answer": -0.9415584415584416,
+   "display": "-\\frac{145}{154}",
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 2.056140350877193,
+   "display": "2\\frac{16}{285}",
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 0.26666666666666666,
+   "display": "\\frac{4}{15}",
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 1.1142857142857143,
+   "display": "1\\frac{4}{35}",
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 1.027972027972028,
+   "display": "1\\frac{4}{143}",
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 1.3956043956043955,
+   "display": "1\\frac{36}{91}",
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 0.03333333333333333,
+   "display": "\\frac{1}{30}",
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 1.0205128205128204,
+   "display": "1\\frac{4}{195}",
+   "type": "numeric"
+  }
+ },
+ "1.5.5": {
+  "1": {
+   "answer": 0.051587301587301584,
+   "display": "\\frac{13}{252}",
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 0.01888888888888889,
+   "display": "\\frac{17}{900}",
+   "type": "numeric"
+  },
+  "11": {
+   "answer": -0.022839506172839506,
+   "display": "-\\frac{37}{1620}",
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 0.03353658536585366,
+   "display": "\\frac{11}{328}",
+   "type": "numeric"
+  },
+  "13": {
+   "answer": -0.05057471264367816,
+   "display": "-\\frac{22}{435}",
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 0.039634146341463415,
+   "display": "\\frac{13}{328}",
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 0.05105105105105105,
+   "display": "\\frac{17}{333}",
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 0.04242424242424243,
+   "display": "\\frac{7}{165}",
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 0.03443877551020408,
+   "display": "\\frac{27}{784}",
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 0.014157973174366617,
+   "display": "\\frac{19}{1342}",
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 0.024553571428571428,
+   "display": "\\frac{11}{448}",
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 0.04433497536945813,
+   "display": "\\frac{9}{203}",
+   "type": "numeric"
+  },
+  "20": {
+   "answer": -0.026570048309178744,
+   "display": "-\\frac{11}{414}",
+   "type": "numeric"
+  },
+  "21": {
+   "answer": 0.03353658536585366,
+   "display": "\\frac{11}{328}",
+   "type": "numeric"
+  },
+  "22": {
+   "answer": 0.018386108273748723,
+   "display": "\\frac{18}{979}",
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 0.032692307692307694,
+   "display": "\\frac{17}{520}",
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 0.024043715846994537,
+   "display": "\\frac{22}{915}",
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 0.03838383838383838,
+   "display": "\\frac{19}{495}",
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 0.014157973174366617,
+   "display": "\\frac{19}{1342}",
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 0.018835616438356163,
+   "display": "\\frac{11}{584}",
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 0.020930232558139535,
+   "display": "\\frac{9}{430}",
+   "type": "numeric"
+  },
+  "9": {
+   "answer": -0.2619047619047619,
+   "display": "-\\frac{11}{42}",
+   "type": "numeric"
+  }
+ },
+ "2.1.1": {
+  "1": {
+   "answer": 784,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 361,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 324,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 5.76,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 529,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 1024,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 484,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 196,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 441,
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 576,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 9.61,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 10.24,
+   "type": "numeric"
+  },
+  "20": {
+   "answer": 7.29,
+   "type": "numeric"
+  },
+  "21": {
+   "answer": 784,
+   "type": "numeric"
+  },
+  "22": {
+   "answer": 1156,
+   "type": "numeric"
+  },
+  "23": {
+   "answer": 676,
+   "type": "numeric"
+  },
+  "24": {
+   "answer": 289,
+   "type": "numeric"
+  },
+  "25": {
+   "answer": 1089,
+   "type": "numeric"
+  },
+  "26": {
+   "answer": -27,
+   "type": "numeric"
+  },
+  "27": {
+   "high": 1075.0,
+   "low": 972.0,
+   "type": "approx"
+  },
+  "28": {
+   "high": 412.0,
+   "low": 372.0,
+   "type": "approx"
+  },
+  "29": {
+   "answer": -224,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 841,
+   "type": "numeric"
+  },
+  "30": {
+   "answer": 0.324,
+   "type": "numeric"
+  },
+  "31": {
+   "high": 16078.0,
+   "low": 14546.0,
+   "type": "approx"
+  },
+  "32": {
+   "high": 8349.0,
+   "low": 7553.0,
+   "type": "approx"
+  },
+  "33": {
+   "high": 40337.0,
+   "low": 36495.0,
+   "type": "approx"
+  },
+  "34": {
+   "high": 420.0,
+   "low": 379.0,
+   "type": "approx"
+  },
+  "35": {
+   "high": 31200.0,
+   "low": 28227.0,
+   "type": "approx"
+  },
+  "36": {
+   "high": 29990.0,
+   "low": 27132.0,
+   "type": "approx"
+  },
+  "37": {
+   "high": 10057.0,
+   "low": 9098.0,
+   "type": "approx"
+  },
+  "38": {
+   "high": 14553.0,
+   "low": 13166.0,
+   "type": "approx"
+  },
+  "39": {
+   "high": 87698.0,
+   "low": 79344.0,
+   "type": "approx"
+  },
+  "4": {
+   "answer": 256,
+   "type": "numeric"
+  },
+  "40": {
+   "high": 267.0,
+   "low": 241.0,
+   "type": "approx"
+  },
+  "41": {
+   "high": 549.0,
+   "low": 496.0,
+   "type": "approx"
+  },
+  "42": {
+   "high": 1078.0,
+   "low": 975.0,
+   "type": "approx"
+  },
+  "43": {
+   "high": 204206.0,
+   "low": 184756.0,
+   "type": "approx"
+  },
+  "5": {
+   "answer": 961,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 4.84,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 1156,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 289,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 529,
+   "type": "numeric"
+  }
+ },
+ "2.1.10": {
+  "1": {
+   "answer": 81,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 1.3333333333333333,
+   "display": "1\\frac{1}{3}",
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 1.5,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 36,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 3456,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 500,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 1728,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 81,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 27,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 9,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 5184,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 2.5,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 10000,
+   "type": "numeric"
+  }
+ },
+ "2.1.11": {
+  "1": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 6,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 50,
+   "type": "numeric",
+   "unit": "%"
+  },
+  "13": {
+   "answer": 400,
+   "type": "numeric",
+   "unit": "%"
+  },
+  "14": {
+   "answer": 37.5,
+   "type": "numeric",
+   "unit": "%"
+  },
+  "15": {
+   "answer": 225,
+   "type": "numeric",
+   "unit": "%"
+  },
+  "16": {
+   "answer": 400,
+   "type": "numeric",
+   "unit": "%"
+  },
+  "17": {
+   "answer": 11,
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 600,
+   "type": "numeric",
+   "unit": "%"
+  },
+  "19": {
+   "answer": 37.5,
+   "type": "numeric",
+   "unit": "%"
+  },
+  "2": {
+   "answer": 32,
+   "type": "numeric"
+  },
+  "20": {
+   "answer": 1155,
+   "type": "numeric"
+  },
+  "21": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "22": {
+   "answer": 1.75,
+   "type": "numeric"
+  },
+  "23": {
+   "answer": 5,
+   "type": "numeric"
+  },
+  "24": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "25": {
+   "answer": 2.5,
+   "type": "numeric"
+  },
+  "26": {
+   "answer": 112,
+   "type": "numeric"
+  },
+  "27": {
+   "answer": 0.125,
+   "display": "\\frac{1}{8}",
+   "type": "numeric"
+  },
+  "28": {
+   "answer": 231,
+   "type": "numeric"
+  },
+  "29": {
+   "answer": 63,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 48,
+   "type": "numeric"
+  },
+  "30": {
+   "answer": 12,
+   "type": "numeric"
+  },
+  "31": {
+   "answer": 147,
+   "type": "numeric"
+  },
+  "32": {
+   "answer": 128,
+   "type": "numeric"
+  },
+  "33": {
+   "answer": 320,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 693,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 154,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 308,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 96,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 16,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 0.375,
+   "display": "\\frac{3}{8}",
+   "type": "numeric"
+  }
+ },
+ "2.1.12": {
+  "1": {
+   "answer": 77,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": -40,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 37,
+   "type": "numeric"
+  }
+ },
+ "2.1.2": {
+  "1": {
+   "answer": 12,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 13,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": -9,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 512,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 3375,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 1728,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 1.25,
+   "display": "\\frac{5}{4}",
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 2197,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 343,
+   "type": "numeric"
+  },
+  "18": {
+   "answer": -11,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 216,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 1331,
+   "type": "numeric"
+  },
+  "20": {
+   "answer": 3375,
+   "type": "numeric"
+  },
+  "21": {
+   "high": 1828.0,
+   "low": 1653.0,
+   "type": "approx"
+  },
+  "22": {
+   "answer": 0.5,
+   "display": "\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "23": {
+   "answer": 370,
+   "type": "numeric"
+  },
+  "24": {
+   "answer": -2,
+   "type": "numeric"
+  },
+  "25": {
+   "answer": 1.2,
+   "type": "numeric"
+  },
+  "26": {
+   "answer": 64000,
+   "type": "numeric"
+  },
+  "27": {
+   "answer": 1331,
+   "type": "numeric"
+  },
+  "28": {
+   "answer": 1.1,
+   "type": "numeric"
+  },
+  "29": {
+   "high": 765356.0,
+   "low": 692464.0,
+   "type": "approx"
+  },
+  "3": {
+   "answer": 2744,
+   "type": "numeric"
+  },
+  "30": {
+   "answer": 0.9,
+   "type": "numeric"
+  },
+  "31": {
+   "high": 1860140.0,
+   "low": 1682982.0,
+   "type": "approx"
+  },
+  "32": {
+   "answer": -54,
+   "type": "numeric"
+  },
+  "33": {
+   "answer": 0.5,
+   "display": "\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "34": {
+   "answer": 225,
+   "type": "numeric"
+  },
+  "35": {
+   "answer": -217,
+   "type": "numeric"
+  },
+  "36": {
+   "high": 186855.0,
+   "low": 169059.0,
+   "type": "approx"
+  },
+  "37": {
+   "answer": 343000,
+   "type": "numeric"
+  },
+  "38": {
+   "high": 1814374.0,
+   "low": 1641486.0,
+   "type": "approx"
+  },
+  "39": {
+   "high": 2950349.0,
+   "low": 2669363.0,
+   "type": "approx"
+  },
+  "4": {
+   "answer": -7,
+   "type": "numeric"
+  },
+  "40": {
+   "answer": 4096,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 1728,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 4096,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 1331,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": -1728,
+   "type": "numeric"
+  }
+ },
+ "2.1.3": {
+  "1": {
+   "answer": 160,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": -26,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 81,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 3200000,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 729,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 0.04,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 4000,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 2560000,
+   "type": "numeric"
+  },
+  "17": {
+   "high": 3584.0,
+   "low": 3242.0,
+   "type": "approx"
+  },
+  "18": {
+   "answer": 40000,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 7,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": -83,
+   "type": "numeric"
+  },
+  "20": {
+   "answer": -144,
+   "type": "numeric"
+  },
+  "21": {
+   "answer": 0.081,
+   "type": "numeric"
+  },
+  "22": {
+   "answer": 288,
+   "type": "numeric"
+  },
+  "23": {
+   "answer": 29,
+   "type": "numeric"
+  },
+  "24": {
+   "high": 69.0,
+   "low": 61.0,
+   "type": "approx"
+  },
+  "25": {
+   "answer": 2.5,
+   "type": "numeric"
+  },
+  "26": {
+   "answer": 64000,
+   "type": "numeric"
+  },
+  "27": {
+   "answer": 512000,
+   "type": "numeric"
+  },
+  "28": {
+   "answer": 648000,
+   "type": "numeric"
+  },
+  "29": {
+   "answer": 98000,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 32,
+   "type": "numeric"
+  },
+  "30": {
+   "answer": 14400,
+   "type": "numeric"
+  },
+  "31": {
+   "answer": 21600,
+   "type": "numeric"
+  },
+  "32": {
+   "answer": 2025000,
+   "type": "numeric"
+  },
+  "33": {
+   "answer": 2500,
+   "type": "numeric"
+  },
+  "34": {
+   "answer": 64800,
+   "type": "numeric"
+  },
+  "35": {
+   "answer": 8100000,
+   "type": "numeric"
+  },
+  "36": {
+   "answer": 144000,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 243,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": -61,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 160,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 98,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 40,
+   "type": "numeric"
+  }
+ },
+ "2.1.4": {
+  "1": {
+   "answer": 0.125,
+   "display": "\\frac{1}{8}",
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 6.25,
+   "type": "numeric",
+   "unit": "%"
+  },
+  "11": {
+   "answer": -0.875,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 275,
+   "type": "numeric",
+   "unit": "%"
+  },
+  "13": {
+   "answer": 0.5555555555555556,
+   "display": "\\frac{5}{9}",
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 0.6666666666666666,
+   "display": "\\frac{2}{3}",
+   "type": "numeric"
+  },
+  "15": {
+   "answer": -0.9411764705882353,
+   "display": "-\\frac{16}{17}",
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 0.46,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": -0.8888888888888888,
+   "display": "-\\frac{8}{9}",
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 0.375,
+   "display": "\\frac{3}{8}",
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 0.8,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 220,
+   "type": "numeric",
+   "unit": "%"
+  },
+  "20": {
+   "answer": 42.857142857142854,
+   "display": "42\\frac{6}{7}",
+   "type": "numeric",
+   "unit": "%"
+  },
+  "21": {
+   "answer": 77.77777777777777,
+   "display": "77\\frac{7}{9}",
+   "type": "numeric",
+   "unit": "%"
+  },
+  "22": {
+   "answer": 0.5,
+   "display": "\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "23": {
+   "answer": 0.56,
+   "type": "numeric"
+  },
+  "24": {
+   "answer": 0.8181818181818182,
+   "display": "\\frac{9}{11}",
+   "type": "numeric"
+  },
+  "25": {
+   "answer": 1.3333333333333333,
+   "display": "\\frac{4}{3}",
+   "type": "numeric"
+  },
+  "26": {
+   "answer": 43.75,
+   "type": "numeric",
+   "unit": "%"
+  },
+  "27": {
+   "answer": 176,
+   "type": "numeric"
+  },
+  "28": {
+   "answer": 28.571428571428573,
+   "display": "28\\frac{4}{7}",
+   "type": "numeric",
+   "unit": "%"
+  },
+  "29": {
+   "answer": -0.375,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 0.56,
+   "type": "numeric"
+  },
+  "30": {
+   "answer": -1.3333333333333333,
+   "display": "-\\frac{4}{3}",
+   "type": "numeric"
+  },
+  "31": {
+   "answer": 7.142857142857143,
+   "display": "7\\frac{1}{7}",
+   "type": "numeric",
+   "unit": "%"
+  },
+  "32": {
+   "answer": 0.4375,
+   "display": "\\frac{7}{16}",
+   "type": "numeric"
+  },
+  "33": {
+   "answer": 15,
+   "type": "numeric"
+  },
+  "34": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "35": {
+   "answer": -0.27,
+   "type": "numeric"
+  },
+  "36": {
+   "answer": 121,
+   "type": "numeric"
+  },
+  "37": {
+   "answer": -0.3888888888888889,
+   "display": "-\\frac{7}{18}",
+   "type": "numeric"
+  },
+  "38": {
+   "answer": 31.25,
+   "type": "numeric",
+   "unit": "%"
+  },
+  "39": {
+   "answer": 1331,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 0.625,
+   "display": "\\frac{5}{8}",
+   "type": "numeric"
+  },
+  "40": {
+   "answer": 0.21428571428571427,
+   "display": "\\frac{3}{14}",
+   "type": "numeric"
+  },
+  "41": {
+   "answer": 8,
+   "type": "numeric"
+  },
+  "42": {
+   "answer": 10.8,
+   "display": "10\\frac{4}{5}",
+   "type": "numeric"
+  },
+  "43": {
+   "answer": 21.428571428571427,
+   "display": "21\\frac{3}{7}",
+   "type": "numeric",
+   "unit": "%"
+  },
+  "44": {
+   "answer": 0.35714285714285715,
+   "display": "\\frac{5}{14}",
+   "type": "numeric"
+  },
+  "45": {
+   "answer": 6,
+   "type": "numeric"
+  },
+  "46": {
+   "answer": 0.7857142857142857,
+   "display": "\\frac{11}{14}",
+   "type": "numeric"
+  },
+  "47": {
+   "answer": 10021,
+   "type": "numeric"
+  },
+  "48": {
+   "answer": 8.333333333333334,
+   "display": "8\\frac{1}{3}",
+   "type": "numeric",
+   "unit": "%"
+  },
+  "49": {
+   "answer": 78.57142857142857,
+   "display": "78\\frac{4}{7}",
+   "type": "numeric",
+   "unit": "%"
+  },
+  "5": {
+   "answer": 2.125,
+   "type": "numeric"
+  },
+  "50": {
+   "answer": 800,
+   "type": "numeric"
+  },
+  "51": {
+   "answer": 1331,
+   "type": "numeric"
+  },
+  "52": {
+   "answer": 80.33333333333333,
+   "display": "80\\frac{1}{3}",
+   "type": "numeric"
+  },
+  "53": {
+   "answer": 135,
+   "type": "numeric"
+  },
+  "54": {
+   "answer": 0.6428571428571429,
+   "display": "\\frac{9}{14}",
+   "type": "numeric"
+  },
+  "55": {
+   "answer": 13.31,
+   "type": "numeric"
+  },
+  "56": {
+   "answer": 187.5,
+   "display": "187\\frac{1}{2}",
+   "type": "numeric",
+   "unit": "%"
+  },
+  "57": {
+   "answer": 0.0625,
+   "display": "\\frac{1}{16}",
+   "type": "numeric"
+  },
+  "58": {
+   "answer": 121.42857142857143,
+   "display": "121\\frac{3}{7}",
+   "type": "numeric",
+   "unit": "%"
+  },
+  "59": {
+   "answer": 0.42857142857142855,
+   "display": "\\frac{3}{7}",
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "60": {
+   "answer": 0.0375,
+   "display": "\\frac{3}{80}",
+   "type": "numeric"
+  },
+  "61": {
+   "answer": 0.011,
+   "display": "\\frac{11}{1000}",
+   "type": "numeric"
+  },
+  "62": {
+   "answer": 0.9285714285714286,
+   "display": "\\frac{13}{14}",
+   "type": "numeric"
+  },
+  "63": {
+   "answer": 0.07142857142857142,
+   "display": "\\frac{1}{14}",
+   "type": "numeric"
+  },
+  "64": {
+   "answer": 2400,
+   "type": "numeric"
+  },
+  "65": {
+   "answer": 0.06875,
+   "type": "numeric"
+  },
+  "66": {
+   "answer": 92.85714285714286,
+   "display": "92\\frac{6}{7}",
+   "type": "numeric",
+   "unit": "%"
+  },
+  "67": {
+   "answer": 0.03076923076923077,
+   "display": "\\frac{2}{65}",
+   "type": "numeric"
+  },
+  "68": {
+   "answer": 107.14285714285714,
+   "display": "107\\frac{1}{7}",
+   "type": "numeric",
+   "unit": "%"
+  },
+  "69": {
+   "answer": 0.21428571428571427,
+   "display": "\\frac{3}{14}",
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 60,
+   "type": "numeric",
+   "unit": "%"
+  },
+  "8": {
+   "answer": 0.125,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 0.81,
+   "type": "numeric"
+  }
+ },
+ "2.1.5": {
+  "1": {
+   "answer": 12012,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 29,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 60,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 36036,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 7,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 1073,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 30030,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 70070,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 999,
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 55055,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 75075,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 54,
+   "type": "numeric"
+  },
+  "20": {
+   "answer": 153153,
+   "type": "numeric"
+  },
+  "21": {
+   "answer": 10010,
+   "type": "numeric"
+  },
+  "22": {
+   "answer": 18018,
+   "type": "numeric"
+  },
+  "23": {
+   "answer": 7070.7,
+   "type": "numeric"
+  },
+  "24": {
+   "answer": 121.121,
+   "type": "numeric"
+  },
+  "25": {
+   "answer": 35035,
+   "type": "numeric"
+  },
+  "26": {
+   "answer": 909.09,
+   "type": "numeric"
+  },
+  "27": {
+   "answer": 505505,
+   "type": "numeric"
+  },
+  "28": {
+   "answer": 9009,
+   "type": "numeric"
+  },
+  "29": {
+   "answer": 1111.11,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 505.05,
+   "type": "numeric"
+  },
+  "30": {
+   "answer": 303303,
+   "type": "numeric"
+  },
+  "31": {
+   "answer": 5005,
+   "type": "numeric"
+  },
+  "32": {
+   "answer": 28.77777777777778,
+   "display": "28\\frac{7}{9}",
+   "type": "numeric"
+  },
+  "33": {
+   "answer": 7007,
+   "type": "numeric"
+  },
+  "34": {
+   "answer": 36,
+   "type": "numeric"
+  },
+  "35": {
+   "high": 788.0,
+   "low": 712.0,
+   "type": "approx"
+  },
+  "36": {
+   "answer": 0.3333333333333333,
+   "display": "\\frac{1}{3}",
+   "type": "numeric"
+  },
+  "37": {
+   "answer": 6006,
+   "type": "numeric"
+  },
+  "38": {
+   "answer": 49,
+   "type": "numeric"
+  },
+  "39": {
+   "answer": 13,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 25025,
+   "type": "numeric"
+  },
+  "40": {
+   "answer": 48,
+   "type": "numeric"
+  },
+  "41": {
+   "answer": 10010,
+   "type": "numeric"
+  },
+  "42": {
+   "answer": 96,
+   "type": "numeric"
+  },
+  "43": {
+   "answer": 256,
+   "type": "numeric"
+  },
+  "44": {
+   "answer": 11011,
+   "type": "numeric"
+  },
+  "45": {
+   "answer": 9009,
+   "type": "numeric"
+  },
+  "46": {
+   "answer": 36036,
+   "type": "numeric"
+  },
+  "47": {
+   "answer": 7007,
+   "type": "numeric"
+  },
+  "48": {
+   "answer": 60,
+   "type": "numeric"
+  },
+  "49": {
+   "answer": 8.222222222222221,
+   "display": "8\\frac{2}{9}",
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 70707,
+   "type": "numeric"
+  },
+  "50": {
+   "answer": 9009,
+   "type": "numeric"
+  },
+  "51": {
+   "answer": 90,
+   "type": "numeric"
+  },
+  "52": {
+   "answer": 16.444444444444443,
+   "display": "16\\frac{4}{9}",
+   "type": "numeric"
+  },
+  "53": {
+   "answer": 11011,
+   "type": "numeric"
+  },
+  "54": {
+   "answer": 96,
+   "type": "numeric"
+  },
+  "55": {
+   "answer": 24.666666666666668,
+   "display": "24\\frac{2}{3}",
+   "type": "numeric"
+  },
+  "56": {
+   "answer": 147,
+   "type": "numeric"
+  },
+  "57": {
+   "answer": 32.888888888888886,
+   "display": "32\\frac{8}{9}",
+   "type": "numeric"
+  },
+  "58": {
+   "answer": 81,
+   "type": "numeric"
+  },
+  "59": {
+   "answer": 74,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 37,
+   "type": "numeric"
+  },
+  "60": {
+   "answer": 789.3333333333334,
+   "display": "789\\frac{1}{3}",
+   "type": "numeric"
+  },
+  "61": {
+   "answer": 37,
+   "type": "numeric"
+  },
+  "62": {
+   "answer": 13013,
+   "type": "numeric"
+  },
+  "63": {
+   "answer": 324,
+   "type": "numeric"
+  },
+  "64": {
+   "answer": 185,
+   "type": "numeric"
+  },
+  "65": {
+   "answer": 175,
+   "type": "numeric"
+  },
+  "66": {
+   "answer": 9009,
+   "type": "numeric"
+  },
+  "67": {
+   "answer": 15015,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 20020,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 15015,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 27027,
+   "type": "numeric"
+  }
+ },
+ "2.1.6": {
+  "1": {
+   "answer": 2042,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 2222,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": -89,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 2100,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 999,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 534,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 2017,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 2007,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 1664,
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 1666,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 1364,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 44,
+   "type": "numeric"
+  },
+  "20": {
+   "answer": 2006,
+   "type": "numeric"
+  },
+  "21": {
+   "answer": 556,
+   "type": "numeric"
+  },
+  "22": {
+   "answer": 505,
+   "type": "numeric"
+  },
+  "23": {
+   "answer": 1530,
+   "type": "numeric"
+  },
+  "24": {
+   "answer": 66.88888888888889,
+   "display": "66\\frac{8}{9}",
+   "type": "numeric"
+  },
+  "25": {
+   "answer": 34,
+   "type": "numeric"
+  },
+  "26": {
+   "answer": 2005,
+   "type": "numeric"
+  },
+  "27": {
+   "answer": 20,
+   "type": "numeric"
+  },
+  "28": {
+   "answer": 401,
+   "type": "numeric"
+  },
+  "29": {
+   "answer": 2997,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 2003,
+   "type": "numeric"
+  },
+  "30": {
+   "answer": 11011,
+   "type": "numeric"
+  },
+  "31": {
+   "answer": 50175,
+   "type": "numeric"
+  },
+  "32": {
+   "answer": 84,
+   "type": "numeric"
+  },
+  "33": {
+   "answer": 22066,
+   "type": "numeric"
+  },
+  "34": {
+   "answer": 10.1,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 199,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 1666,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 444,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 277,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 1459,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 999,
+   "type": "numeric"
+  }
+ },
+ "2.1.7": {
+  "1": {
+   "answer": 20,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 20,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 20,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 16,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 12,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 6,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 20,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 6,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 12,
+   "type": "numeric"
+  }
+ },
+ "2.1.8": {
+  "1": {
+   "high": 205.0,
+   "low": 185.0,
+   "type": "approx"
+  },
+  "10": {
+   "high": 734.0,
+   "low": 664.0,
+   "type": "approx"
+  },
+  "11": {
+   "high": 17005.0,
+   "low": 15384.0,
+   "type": "approx"
+  },
+  "12": {
+   "high": 1350.0,
+   "low": 1221.0,
+   "type": "approx"
+  },
+  "13": {
+   "high": 5585.0,
+   "low": 5052.0,
+   "type": "approx"
+  },
+  "14": {
+   "high": 546.0,
+   "low": 493.0,
+   "type": "approx"
+  },
+  "15": {
+   "high": 51218.0,
+   "low": 46339.0,
+   "type": "approx"
+  },
+  "16": {
+   "high": 581.0,
+   "low": 524.0,
+   "type": "approx"
+  },
+  "2": {
+   "high": 756.0,
+   "low": 683.0,
+   "type": "approx"
+  },
+  "3": {
+   "high": 58.0,
+   "low": 51.0,
+   "type": "approx"
+  },
+  "4": {
+   "high": 322.0,
+   "low": 290.0,
+   "type": "approx"
+  },
+  "5": {
+   "high": 5585.0,
+   "low": 5052.0,
+   "type": "approx"
+  },
+  "6": {
+   "high": 379.0,
+   "low": 342.0,
+   "type": "approx"
+  },
+  "7": {
+   "high": 1778.0,
+   "low": 1608.0,
+   "type": "approx"
+  },
+  "8": {
+   "high": 8285.0,
+   "low": 7495.0,
+   "type": "approx"
+  },
+  "9": {
+   "high": 1100.0,
+   "low": 995.0,
+   "type": "approx"
+  }
+ },
+ "2.1.9": {
+  "1": {
+   "answer": 22,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 3520,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 30,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 10,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 44,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 0.5,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 2160,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 8,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 66,
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 22.5,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 11,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 126,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 4.5,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 240,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 132,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 220,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 440,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 1760,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 81,
+   "type": "numeric"
+  }
+ },
+ "2.2.1": {
+  "1": {
+   "answer": 132,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 132,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 81,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 506,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 1.5,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 441,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 396,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 255,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "18": {
+   "answer": -1.125,
+   "display": "-1\\frac{1}{8}",
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 143,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 231,
+   "type": "numeric"
+  },
+  "20": {
+   "answer": 0.8,
+   "display": "\\frac{4}{5}",
+   "type": "numeric"
+  },
+  "21": {
+   "answer": 117,
+   "type": "numeric"
+  },
+  "22": {
+   "answer": 5.333333333333333,
+   "display": "5\\frac{1}{3}",
+   "type": "numeric"
+  },
+  "23": {
+   "answer": 2.5,
+   "type": "numeric"
+  },
+  "24": {
+   "answer": 108,
+   "type": "numeric"
+  },
+  "25": {
+   "answer": 462,
+   "type": "numeric"
+  },
+  "26": {
+   "answer": -13,
+   "type": "numeric"
+  },
+  "27": {
+   "answer": 264,
+   "type": "numeric"
+  },
+  "28": {
+   "answer": 528,
+   "type": "numeric"
+  },
+  "29": {
+   "answer": 4.166666666666667,
+   "display": "4\\frac{1}{6}",
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 169,
+   "type": "numeric"
+  },
+  "30": {
+   "answer": 98,
+   "type": "numeric"
+  },
+  "31": {
+   "answer": 126,
+   "type": "numeric"
+  },
+  "32": {
+   "answer": 207,
+   "type": "numeric"
+  },
+  "33": {
+   "answer": 91,
+   "type": "numeric"
+  },
+  "34": {
+   "answer": 6.25,
+   "display": "6\\frac{1}{4}",
+   "type": "numeric"
+  },
+  "35": {
+   "answer": 2.6666666666666665,
+   "display": "2\\frac{2}{3}",
+   "type": "numeric"
+  },
+  "36": {
+   "answer": 255,
+   "type": "numeric"
+  },
+  "37": {
+   "answer": 147,
+   "type": "numeric"
+  },
+  "38": {
+   "answer": 98,
+   "type": "numeric"
+  },
+  "39": {
+   "answer": 1150,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 123,
+   "type": "numeric"
+  },
+  "40": {
+   "answer": 16,
+   "type": "numeric"
+  },
+  "41": {
+   "answer": 264,
+   "type": "numeric"
+  },
+  "42": {
+   "high": 464.0,
+   "low": 418.0,
+   "type": "approx"
+  },
+  "43": {
+   "answer": 396,
+   "type": "numeric"
+  },
+  "44": {
+   "answer": 242,
+   "type": "numeric"
+  },
+  "45": {
+   "answer": 81,
+   "type": "numeric"
+  },
+  "46": {
+   "answer": 6,
+   "type": "numeric"
+  },
+  "47": {
+   "answer": 294,
+   "type": "numeric"
+  },
+  "48": {
+   "answer": 726,
+   "type": "numeric"
+  },
+  "49": {
+   "answer": 161,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 18,
+   "type": "numeric"
+  },
+  "50": {
+   "answer": 273,
+   "type": "numeric"
+  },
+  "51": {
+   "answer": 168,
+   "type": "numeric"
+  },
+  "52": {
+   "answer": 528,
+   "type": "numeric"
+  },
+  "53": {
+   "answer": 37,
+   "type": "numeric"
+  },
+  "54": {
+   "answer": 3.2,
+   "type": "numeric"
+  },
+  "55": {
+   "high": 198687.0,
+   "low": 179763.0,
+   "type": "approx"
+  },
+  "56": {
+   "high": 4574.0,
+   "low": 4138.0,
+   "type": "approx"
+  },
+  "57": {
+   "answer": 11,
+   "type": "numeric"
+  },
+  "58": {
+   "answer": 135,
+   "type": "numeric"
+  },
+  "59": {
+   "answer": 1.5,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 240,
+   "type": "numeric"
+  },
+  "60": {
+   "answer": 9.333333333333334,
+   "display": "9\\frac{1}{3}",
+   "type": "numeric"
+  },
+  "61": {
+   "answer": 80,
+   "type": "numeric"
+  },
+  "62": {
+   "answer": 4.8,
+   "type": "numeric"
+  },
+  "63": {
+   "answer": 77,
+   "type": "numeric"
+  },
+  "64": {
+   "high": 8696.0,
+   "low": 7866.0,
+   "type": "approx"
+  },
+  "65": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "66": {
+   "answer": 16,
+   "type": "numeric"
+  },
+  "67": {
+   "high": 28587.0,
+   "low": 25863.0,
+   "type": "approx"
+  },
+  "68": {
+   "high": 1361.0,
+   "low": 1231.0,
+   "type": "approx"
+  },
+  "7": {
+   "answer": 100,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 0.4,
+   "display": "\\frac{2}{5}",
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 96,
+   "type": "numeric"
+  }
+ },
+ "2.2.10": {
+  "1": {
+   "answer": 60,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 56,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 36,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 6,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 24,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 0.008333333333333333,
+   "display": "\\frac{1}{120}",
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 6,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 12,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 720,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 10,
+   "type": "numeric"
+  },
+  "20": {
+   "answer": 0.16666666666666666,
+   "display": "\\frac{1}{6}",
+   "type": "numeric"
+  },
+  "21": {
+   "answer": 10,
+   "type": "numeric"
+  },
+  "22": {
+   "answer": 200,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 20,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 35,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 840,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 30,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 28,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 10,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 336,
+   "type": "numeric"
+  }
+ },
+ "2.2.11": {
+  "1": {
+   "answer": -0.5,
+   "display": "-\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 0.3333333333333333,
+   "display": "\\frac{1}{3}",
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 112.5,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 36,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": -1,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 0.5,
+   "display": "\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "18": {
+   "answer": -2,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": -2,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 2.6666666666666665,
+   "display": "\\frac{8}{3}",
+   "type": "numeric"
+  },
+  "20": {
+   "answer": -1,
+   "type": "numeric"
+  },
+  "21": {
+   "answer": 108,
+   "type": "numeric"
+  },
+  "22": {
+   "answer": -1,
+   "type": "numeric"
+  },
+  "23": {
+   "answer": -1,
+   "type": "numeric"
+  },
+  "24": {
+   "answer": 45,
+   "type": "numeric"
+  },
+  "25": {
+   "answer": 1.5555555555555556,
+   "display": "\\frac{14}{9}",
+   "type": "numeric"
+  },
+  "26": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "27": {
+   "answer": 12,
+   "type": "numeric"
+  },
+  "28": {
+   "answer": -1,
+   "type": "numeric"
+  },
+  "29": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "30": {
+   "answer": 15,
+   "type": "numeric"
+  },
+  "31": {
+   "answer": -4,
+   "type": "numeric"
+  },
+  "32": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "33": {
+   "answer": 225,
+   "type": "numeric"
+  },
+  "34": {
+   "raw": "1sqrt()",
+   "type": "unparsed"
+  },
+  "35": {
+   "answer": 1.0,
+   "display": "\\frac{2}{2}",
+   "type": "numeric"
+  },
+  "36": {
+   "answer": -1,
+   "type": "numeric"
+  },
+  "37": {
+   "answer": -1,
+   "type": "numeric"
+  },
+  "38": {
+   "answer": 1.5,
+   "display": "\\frac{3}{2}",
+   "type": "numeric"
+  },
+  "39": {
+   "answer": -1,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "40": {
+   "answer": 0.5,
+   "display": "\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "41": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "42": {
+   "answer": -0.3333333333333333,
+   "display": "-\\frac{1}{3}",
+   "type": "numeric"
+  },
+  "43": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "44": {
+   "answer": -0.3333333333333333,
+   "display": "-\\frac{1}{3}",
+   "type": "numeric"
+  },
+  "45": {
+   "answer": -0.75,
+   "display": "-\\frac{3}{4}",
+   "type": "numeric"
+  },
+  "46": {
+   "answer": -0.5,
+   "display": "-\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "47": {
+   "answer": 45,
+   "type": "numeric"
+  },
+  "48": {
+   "answer": 0.5,
+   "display": "\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "49": {
+   "answer": -0.75,
+   "display": "-\\frac{3}{4}",
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 0.5,
+   "display": "\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "50": {
+   "answer": 0.25,
+   "display": "\\frac{1}{4}",
+   "type": "numeric"
+  },
+  "51": {
+   "answer": 1.2,
+   "display": "\\frac{6}{5}",
+   "type": "numeric"
+  },
+  "52": {
+   "answer": 0.25,
+   "display": "\\frac{1}{4}",
+   "type": "numeric"
+  },
+  "53": {
+   "answer": 0.3333333333333333,
+   "display": "\\frac{1}{3}",
+   "type": "numeric"
+  },
+  "54": {
+   "answer": 0.25,
+   "display": "\\frac{1}{4}",
+   "type": "numeric"
+  },
+  "55": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "56": {
+   "answer": 0.5,
+   "display": "\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "57": {
+   "answer": -0.75,
+   "display": "-\\frac{3}{4}",
+   "type": "numeric"
+  },
+  "58": {
+   "answer": -0.25,
+   "display": "-\\frac{1}{4}",
+   "type": "numeric"
+  },
+  "59": {
+   "answer": 3.5,
+   "display": "3\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "6": {
+   "answer": -10,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": -0.5,
+   "display": "-\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "8": {
+   "answer": -1,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 10,
+   "type": "numeric"
+  }
+ },
+ "2.2.12": {
+  "1": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 0.5,
+   "display": "\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "11": {
+   "answer": -0.25,
+   "display": "-\\frac{1}{4}",
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 308,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": -0.5,
+   "display": "-\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 0.5,
+   "display": "\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 0.25,
+   "display": "\\frac{1}{4}",
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 0.5,
+   "display": "\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 0.5,
+   "display": "\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 0.28,
+   "display": "\\frac{7}{25}",
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 0.5,
+   "display": "\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 0.5,
+   "display": "\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "20": {
+   "answer": 0.25,
+   "display": "\\frac{1}{4}",
+   "type": "numeric"
+  },
+  "21": {
+   "answer": -0.5,
+   "display": "-\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "22": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "23": {
+   "answer": -0.5,
+   "display": "-\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "24": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "25": {
+   "answer": 0.5,
+   "display": "\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "26": {
+   "answer": -0.5,
+   "display": "-\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "27": {
+   "answer": -2,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 0.5,
+   "display": "\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "4": {
+   "answer": -0.5,
+   "display": "-\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 0.75,
+   "display": "\\frac{3}{4}",
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 68,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 0.75,
+   "display": "\\frac{3}{4}",
+   "type": "numeric"
+  },
+  "8": {
+   "answer": -0.5,
+   "display": "-\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 3,
+   "type": "numeric"
+  }
+ },
+ "2.2.13": {
+  "1": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 0.5,
+   "display": "\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 31.41592653589793,
+   "display": "10\\pi",
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 5,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 8,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": -3,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 5,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": -2,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 0.16666666666666666,
+   "display": "\\frac{1}{6}",
+   "type": "numeric"
+  }
+ },
+ "2.2.14": {
+  "1": {
+   "answer": -9,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": -5,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 1.25,
+   "display": "1\\frac{1}{4}",
+   "type": "numeric"
+  }
+ },
+ "2.2.15": {
+  "1": {
+   "answer": -2,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": -0.041666666666666664,
+   "display": "-\\frac{1}{24}",
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 0.6666666666666666,
+   "display": "\\frac{2}{3}",
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 4.123105625617661,
+   "display": "1\\sqrt{17}",
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 1.3333333333333333,
+   "display": "\\frac{4}{3}",
+   "type": "numeric"
+  },
+  "6": {
+   "answer": -0.3333333333333333,
+   "display": "-\\frac{1}{3}",
+   "type": "numeric"
+  }
+ },
+ "2.2.2": {
+  "1": {
+   "answer": 750,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 304,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 372,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 114,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 88,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 6,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 196,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 143,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 319,
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 693,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 748,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 372,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 514,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 660,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 804,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 610,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 893,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 534,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 284,
+   "type": "numeric"
+  }
+ },
+ "2.2.3": {
+  "1": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 124,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 36,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 56,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 20,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 42,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 5,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 15,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 192,
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 78,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 42,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 9,
+   "type": "numeric"
+  },
+  "20": {
+   "answer": 8,
+   "type": "numeric"
+  },
+  "21": {
+   "answer": 56,
+   "type": "numeric"
+  },
+  "22": {
+   "answer": 70,
+   "type": "numeric"
+  },
+  "23": {
+   "answer": 7,
+   "type": "numeric"
+  },
+  "24": {
+   "answer": 55,
+   "type": "numeric"
+  },
+  "25": {
+   "answer": 385,
+   "type": "numeric"
+  },
+  "26": {
+   "answer": 24,
+   "type": "numeric"
+  },
+  "27": {
+   "answer": 24,
+   "type": "numeric"
+  },
+  "28": {
+   "answer": 39,
+   "type": "numeric"
+  },
+  "29": {
+   "answer": 54,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 96,
+   "type": "numeric"
+  },
+  "30": {
+   "answer": 35,
+   "type": "numeric"
+  },
+  "31": {
+   "answer": 160,
+   "type": "numeric"
+  },
+  "32": {
+   "answer": 7,
+   "type": "numeric"
+  },
+  "33": {
+   "answer": 24,
+   "type": "numeric"
+  },
+  "34": {
+   "answer": 7,
+   "type": "numeric"
+  },
+  "35": {
+   "answer": 35,
+   "type": "numeric"
+  },
+  "36": {
+   "answer": 124,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 10,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 10,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 8,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 12,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 9,
+   "type": "numeric"
+  }
+ },
+ "2.2.4": {
+  "1": {
+   "answer": 5,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 9,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 5,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 27,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 20,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 35,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 14,
+   "type": "numeric"
+  }
+ },
+ "2.2.5": {
+  "1": {
+   "answer": 140,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 108,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 45,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 1080,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 120,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 1440,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 133,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 540,
+   "type": "numeric"
+  }
+ },
+ "2.2.6": {
+  "1": {
+   "answer": 70,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 66,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 78,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 66,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 36,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 18,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 40,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 35,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 176,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 276,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 112,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 35,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 51,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 45,
+   "type": "numeric"
+  }
+ },
+ "2.2.7": {
+  "1": {
+   "answer": 9,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 6,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 7,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 6,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 9,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 8,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 84,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 84,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 40,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 26,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 15,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 6,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 8,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 33,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 5,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 15,
+   "type": "numeric"
+  }
+ },
+ "2.2.8": {
+  "1": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 6,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 3.4641016151377544,
+   "display": "2\\sqrt{3}",
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 12,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 18,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 9,
+   "type": "numeric"
+  }
+ },
+ "2.2.9": {
+  "1": {
+   "answer": 726,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 452.3893421169302,
+   "display": "144\\pi",
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 27,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 96,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 64,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 216,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 512,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 1728,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 224,
+   "type": "numeric"
+  }
+ },
+ "3.1.1": {
+  "1": {
+   "answer": 7,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 364,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 6,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 18,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 108,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 324,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 102,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 216,
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 84,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 432,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 320,
+   "type": "numeric"
+  },
+  "20": {
+   "answer": 420,
+   "type": "numeric"
+  },
+  "21": {
+   "answer": 11,
+   "type": "numeric"
+  },
+  "22": {
+   "answer": 144,
+   "type": "numeric"
+  },
+  "23": {
+   "answer": 17,
+   "type": "numeric"
+  },
+  "24": {
+   "answer": -260,
+   "type": "numeric"
+  },
+  "25": {
+   "answer": 160,
+   "type": "numeric"
+  },
+  "26": {
+   "answer": 420,
+   "type": "numeric"
+  },
+  "27": {
+   "answer": 180,
+   "type": "numeric"
+  },
+  "28": {
+   "answer": 42,
+   "type": "numeric"
+  },
+  "29": {
+   "answer": 288,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 108,
+   "type": "numeric"
+  },
+  "30": {
+   "answer": 108,
+   "type": "numeric"
+  },
+  "31": {
+   "answer": 22,
+   "type": "numeric"
+  },
+  "32": {
+   "answer": 693,
+   "type": "numeric"
+  },
+  "33": {
+   "answer": 96,
+   "type": "numeric"
+  },
+  "34": {
+   "answer": 201,
+   "type": "numeric"
+  },
+  "35": {
+   "answer": 336,
+   "type": "numeric"
+  },
+  "36": {
+   "answer": 63,
+   "type": "numeric"
+  },
+  "37": {
+   "answer": 144,
+   "type": "numeric"
+  },
+  "38": {
+   "answer": -76,
+   "type": "numeric"
+  },
+  "39": {
+   "answer": 14,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 24,
+   "type": "numeric"
+  },
+  "40": {
+   "answer": 720,
+   "type": "numeric"
+  },
+  "41": {
+   "answer": 360,
+   "type": "numeric"
+  },
+  "42": {
+   "answer": 168,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 9,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 315,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 12,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 285,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 13,
+   "type": "numeric"
+  }
+ },
+ "3.1.10": {
+  "1": {
+   "answer": 15,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": -44,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 31,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 9,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 15,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 53,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": -7,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": -7,
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 50,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": -41,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 61,
+   "type": "numeric"
+  },
+  "20": {
+   "answer": 7,
+   "type": "numeric"
+  },
+  "21": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "22": {
+   "answer": 41,
+   "type": "numeric"
+  },
+  "23": {
+   "answer": 3721,
+   "type": "numeric"
+  },
+  "24": {
+   "answer": -243,
+   "type": "numeric"
+  },
+  "25": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "26": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "27": {
+   "raw": "16 + 16 i",
+   "type": "unparsed"
+  },
+  "28": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "29": {
+   "answer": 0.9230769230769231,
+   "display": "\\frac{12}{13}",
+   "type": "numeric"
+  },
+  "3": {
+   "answer": -6,
+   "type": "numeric"
+  },
+  "30": {
+   "answer": -64,
+   "type": "numeric"
+  },
+  "31": {
+   "answer": 0.2,
+   "display": "\\frac{1}{5}",
+   "type": "numeric"
+  },
+  "32": {
+   "answer": 625,
+   "type": "numeric"
+  },
+  "33": {
+   "answer": 0.9230769230769231,
+   "display": "\\frac{12}{13}",
+   "type": "numeric"
+  },
+  "34": {
+   "answer": 169,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 24,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 54,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 48,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 1.5,
+   "display": "\\frac{3}{2}",
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 25,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 1600,
+   "type": "numeric"
+  }
+ },
+ "3.1.11": {
+  "1": {
+   "answer": -1.3333333333333333,
+   "display": "-\\frac{4}{3}",
+   "type": "numeric"
+  },
+  "10": {
+   "answer": -4,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": -1,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": -5,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": -0.6666666666666666,
+   "display": "-\\frac{2}{3}",
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 2.3333333333333335,
+   "display": "\\frac{7}{3}",
+   "type": "numeric"
+  },
+  "18": {
+   "answer": -2,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 2.5,
+   "type": "numeric"
+  },
+  "20": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "21": {
+   "answer": -1,
+   "type": "numeric"
+  },
+  "22": {
+   "answer": 7,
+   "type": "numeric"
+  },
+  "23": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "24": {
+   "answer": 7,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 0.3333333333333333,
+   "display": "\\frac{1}{3}",
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": -2.3333333333333335,
+   "display": "-\\frac{7}{3}",
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 0.6666666666666666,
+   "display": "\\frac{2}{3}",
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 3.5,
+   "display": "3\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "9": {
+   "answer": -3,
+   "type": "numeric"
+  }
+ },
+ "3.1.12": {
+  "1": {
+   "answer": 17,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 398,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 101,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 46,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 513,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 511,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 45,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 0.25,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 120,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 65,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 91,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 217,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 720,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 26,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 256,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 110,
+   "type": "numeric"
+  }
+ },
+ "3.1.13": {
+  "1": {
+   "answer": 0.08333333333333333,
+   "display": "\\frac{1}{12}",
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 1.125,
+   "display": "\\frac{9}{8}",
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 0.3333333333333333,
+   "display": "\\frac{1}{3}",
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 0.2413793103448276,
+   "display": "\\frac{7}{29}",
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 1.25,
+   "display": "\\frac{5}{4}",
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 0.625,
+   "display": "\\frac{5}{8}",
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 0.6,
+   "display": "\\frac{3}{5}",
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 0.04,
+   "display": "\\frac{1}{25}",
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 1.25,
+   "display": "\\frac{5}{4}",
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 0.6,
+   "display": "\\frac{3}{5}",
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 1.5,
+   "display": "\\frac{3}{2}",
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 0.05555555555555555,
+   "display": "\\frac{1}{18}",
+   "type": "numeric"
+  },
+  "20": {
+   "answer": 0.05555555555555555,
+   "display": "\\frac{1}{18}",
+   "type": "numeric"
+  },
+  "21": {
+   "answer": 0.16666666666666666,
+   "display": "\\frac{1}{6}",
+   "type": "numeric"
+  },
+  "22": {
+   "answer": 0.2,
+   "display": "\\frac{1}{5}",
+   "type": "numeric"
+  },
+  "23": {
+   "answer": 0.38461538461538464,
+   "display": "\\frac{5}{13}",
+   "type": "numeric"
+  },
+  "24": {
+   "answer": 0.25,
+   "display": "\\frac{1}{4}",
+   "type": "numeric"
+  },
+  "25": {
+   "answer": 0.19444444444444445,
+   "display": "\\frac{7}{36}",
+   "type": "numeric"
+  },
+  "26": {
+   "answer": 0.5,
+   "display": "\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "27": {
+   "answer": 0.3333333333333333,
+   "display": "\\frac{1}{3}",
+   "type": "numeric"
+  },
+  "28": {
+   "answer": 0.8333333333333334,
+   "display": "\\frac{5}{6}",
+   "type": "numeric"
+  },
+  "29": {
+   "answer": 0.75,
+   "display": "\\frac{3}{4}",
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 0.16666666666666666,
+   "display": "\\frac{1}{6}",
+   "type": "numeric"
+  },
+  "30": {
+   "answer": 0.2,
+   "display": "\\frac{1}{5}",
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 0.14285714285714285,
+   "display": "\\frac{1}{7}",
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 0.6923076923076923,
+   "display": "\\frac{9}{13}",
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 0.8,
+   "display": "\\frac{4}{5}",
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 0.65,
+   "display": "\\frac{13}{20}",
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 0.004629629629629629,
+   "display": "\\frac{1}{216}",
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 0.375,
+   "display": "\\frac{3}{8}",
+   "type": "numeric"
+  }
+ },
+ "3.1.14": {
+  "1": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 5,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 8,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 7,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 5,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 6,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 254,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 15,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 32,
+   "type": "numeric"
+  },
+  "20": {
+   "answer": 15,
+   "type": "numeric"
+  },
+  "21": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 16,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 5,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 5,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 4,
+   "type": "numeric"
+  }
+ },
+ "3.1.3": {
+  "1": {
+   "answer": -64,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 96,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 128,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 9,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 96,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 1458,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 2500,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": -2,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": -3456,
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 16,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 16000,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 1728,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 8,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 64,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 32,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 16,
+   "type": "numeric"
+  }
+ },
+ "3.1.4": {
+  "1": {
+   "answer": 1.5,
+   "display": "\\frac{3}{2}",
+   "type": "numeric"
+  },
+  "10": {
+   "answer": -0.6666666666666666,
+   "display": "-\\frac{2}{3}",
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 2.5,
+   "display": "\\frac{5}{2}",
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 0.6,
+   "display": "\\frac{3}{5}",
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 0.16666666666666666,
+   "display": "\\frac{1}{6}",
+   "type": "numeric"
+  },
+  "15": {
+   "answer": -3,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": -2,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": -0.25,
+   "display": "-\\frac{1}{4}",
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 7,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 9,
+   "type": "numeric"
+  },
+  "20": {
+   "answer": -36,
+   "type": "numeric"
+  },
+  "21": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "22": {
+   "answer": -0.75,
+   "display": "-\\frac{3}{4}",
+   "type": "numeric"
+  },
+  "23": {
+   "answer": -0.25,
+   "display": "-\\frac{1}{4}",
+   "type": "numeric"
+  },
+  "24": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "25": {
+   "answer": -4,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 0.6666666666666666,
+   "display": "\\frac{2}{3}",
+   "type": "numeric"
+  },
+  "4": {
+   "answer": -7,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": -0.75,
+   "display": "-\\frac{3}{4}",
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": -0.6,
+   "display": "-\\frac{3}{5}",
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 0.25,
+   "display": "\\frac{1}{4}",
+   "type": "numeric"
+  }
+ },
+ "3.1.5": {
+  "1": {
+   "answer": 9,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 9,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 6,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 7,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": -1,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": -1,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 6,
+   "type": "numeric"
+  }
+ },
+ "3.1.6": {
+  "1": {
+   "answer": 1224,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 324,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 216,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 2.6666666666666665,
+   "display": "2\\frac{2}{3}",
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 1.3333333333333333,
+   "display": "\\frac{4}{3}",
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": -6,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 343,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 13,
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 144,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 630.9,
+   "type": "numeric"
+  },
+  "20": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "21": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "22": {
+   "answer": 25,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 0.125,
+   "display": "\\frac{1}{8}",
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 0.2857142857142857,
+   "display": "\\frac{2}{7}",
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 0.015625,
+   "display": "\\frac{1}{64}",
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 289,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 29.2,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 2.5,
+   "type": "numeric"
+  }
+ },
+ "3.1.7": {
+  "1": {
+   "answer": 0.1111111111111111,
+   "display": "\\frac{1}{9}",
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 2.6666666666666665,
+   "display": "\\frac{8}{3}",
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 6,
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 5,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "20": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "21": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "22": {
+   "answer": 1.5,
+   "display": "1\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "23": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "24": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "25": {
+   "answer": -0.5,
+   "type": "numeric"
+  },
+  "26": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "27": {
+   "answer": 0.75,
+   "display": "\\frac{3}{4}",
+   "type": "numeric"
+  },
+  "28": {
+   "answer": 243,
+   "type": "numeric"
+  },
+  "29": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "30": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "31": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "32": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "33": {
+   "answer": 1.5,
+   "display": "\\frac{3}{2}",
+   "type": "numeric"
+  },
+  "34": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "35": {
+   "answer": -1.5,
+   "type": "numeric"
+  },
+  "36": {
+   "answer": 22,
+   "type": "numeric"
+  },
+  "37": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "38": {
+   "answer": 8,
+   "type": "numeric"
+  },
+  "39": {
+   "answer": 5,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 6,
+   "type": "numeric"
+  },
+  "40": {
+   "high": 876.0,
+   "low": 791.0,
+   "type": "approx"
+  },
+  "41": {
+   "answer": 0.5,
+   "type": "numeric"
+  },
+  "42": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "43": {
+   "answer": 8,
+   "type": "numeric"
+  },
+  "44": {
+   "answer": 0.0625,
+   "display": "\\frac{1}{16}",
+   "type": "numeric"
+  },
+  "45": {
+   "answer": 9,
+   "type": "numeric"
+  },
+  "46": {
+   "answer": 12,
+   "type": "numeric"
+  },
+  "47": {
+   "answer": 8,
+   "type": "numeric"
+  },
+  "48": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "49": {
+   "answer": 16,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": -3,
+   "type": "numeric"
+  },
+  "50": {
+   "answer": 0.3333333333333333,
+   "display": "\\frac{1}{3}",
+   "type": "numeric"
+  },
+  "51": {
+   "answer": 0.5,
+   "display": "\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 1.3333333333333333,
+   "display": "\\frac{4}{3}",
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 9,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 7,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": -3,
+   "type": "numeric"
+  }
+ },
+ "3.1.8": {
+  "1": {
+   "answer": 45,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 0.75,
+   "display": "\\frac{3}{4}",
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 0.6666666666666666,
+   "display": "\\frac{2}{3}",
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 40,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 60,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 66,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 78,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 36,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 28,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 22,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 48,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 36,
+   "type": "numeric"
+  }
+ },
+ "3.1.9": {
+  "1": {
+   "high": 131.0,
+   "low": 117.0,
+   "type": "approx"
+  },
+  "10": {
+   "high": 981.0,
+   "low": 887.0,
+   "type": "approx"
+  },
+  "11": {
+   "high": 549.0,
+   "low": 496.0,
+   "type": "approx"
+  },
+  "12": {
+   "high": 207.0,
+   "low": 186.0,
+   "type": "approx"
+  },
+  "13": {
+   "high": 189.0,
+   "low": 170.0,
+   "type": "approx"
+  },
+  "14": {
+   "high": 142.0,
+   "low": 128.0,
+   "type": "approx"
+  },
+  "15": {
+   "high": 167.0,
+   "low": 150.0,
+   "type": "approx"
+  },
+  "16": {
+   "high": 541.0,
+   "low": 489.0,
+   "type": "approx"
+  },
+  "17": {
+   "high": 301.0,
+   "low": 271.0,
+   "type": "approx"
+  },
+  "18": {
+   "high": 539.0,
+   "low": 486.0,
+   "type": "approx"
+  },
+  "19": {
+   "high": 919.0,
+   "low": 831.0,
+   "type": "approx"
+  },
+  "2": {
+   "answer": 94,
+   "type": "numeric"
+  },
+  "20": {
+   "high": 299.0,
+   "low": 270.0,
+   "type": "approx"
+  },
+  "21": {
+   "high": 328.0,
+   "low": 296.0,
+   "type": "approx"
+  },
+  "22": {
+   "high": 309.0,
+   "low": 279.0,
+   "type": "approx"
+  },
+  "23": {
+   "high": 8043.0,
+   "low": 7276.0,
+   "type": "approx"
+  },
+  "24": {
+   "high": 221297.0,
+   "low": 200220.0,
+   "type": "approx"
+  },
+  "25": {
+   "high": 29397.0,
+   "low": 26596.0,
+   "type": "approx"
+  },
+  "26": {
+   "high": 217917.0,
+   "low": 197162.0,
+   "type": "approx"
+  },
+  "27": {
+   "high": 241.0,
+   "low": 217.0,
+   "type": "approx"
+  },
+  "28": {
+   "high": 68932.0,
+   "low": 62366.0,
+   "type": "approx"
+  },
+  "29": {
+   "high": 1392.0,
+   "low": 1258.0,
+   "type": "approx"
+  },
+  "3": {
+   "high": 161.0,
+   "low": 145.0,
+   "type": "approx"
+  },
+  "4": {
+   "high": 191.0,
+   "low": 172.0,
+   "type": "approx"
+  },
+  "5": {
+   "high": 2686.0,
+   "low": 2430.0,
+   "type": "approx"
+  },
+  "6": {
+   "answer": 87,
+   "type": "numeric"
+  },
+  "7": {
+   "high": 2618.0,
+   "low": 2368.0,
+   "type": "approx"
+  },
+  "8": {
+   "high": 438.0,
+   "low": 395.0,
+   "type": "approx"
+  },
+  "9": {
+   "high": 2661.0,
+   "low": 2407.0,
+   "type": "approx"
+  }
+ },
+ "3.2.1": {
+  "1": {
+   "answer": 57,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 1210,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 110,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 21,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 404,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 234,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 1414,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 27,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 202,
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 3210,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 2300,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 1230,
+   "type": "numeric"
+  },
+  "20": {
+   "answer": 333,
+   "type": "numeric"
+  },
+  "21": {
+   "answer": 50,
+   "type": "numeric"
+  },
+  "22": {
+   "answer": 72,
+   "type": "numeric"
+  },
+  "23": {
+   "answer": 10101,
+   "type": "numeric"
+  },
+  "24": {
+   "answer": 1101,
+   "type": "numeric"
+  },
+  "25": {
+   "answer": 1355,
+   "type": "numeric"
+  },
+  "26": {
+   "answer": 9,
+   "type": "numeric"
+  },
+  "27": {
+   "answer": 443,
+   "type": "numeric"
+  },
+  "28": {
+   "answer": 102,
+   "type": "numeric"
+  },
+  "29": {
+   "answer": 1101,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 254,
+   "type": "numeric"
+  },
+  "30": {
+   "answer": 1011,
+   "type": "numeric"
+  },
+  "31": {
+   "answer": 2220,
+   "type": "numeric"
+  },
+  "32": {
+   "answer": 140,
+   "type": "numeric"
+  },
+  "33": {
+   "answer": 104,
+   "type": "numeric"
+  },
+  "34": {
+   "answer": 69,
+   "type": "numeric"
+  },
+  "35": {
+   "answer": 10101,
+   "type": "numeric"
+  },
+  "36": {
+   "answer": 1323,
+   "type": "numeric"
+  },
+  "37": {
+   "answer": 1331,
+   "type": "numeric"
+  },
+  "38": {
+   "answer": 1414,
+   "type": "numeric"
+  },
+  "39": {
+   "answer": 1234,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 103,
+   "type": "numeric"
+  },
+  "40": {
+   "answer": 2332,
+   "type": "numeric"
+  },
+  "41": {
+   "answer": 5,
+   "type": "numeric"
+  },
+  "42": {
+   "answer": 32,
+   "type": "numeric"
+  },
+  "43": {
+   "answer": 100,
+   "type": "numeric"
+  },
+  "44": {
+   "answer": 38,
+   "type": "numeric"
+  },
+  "45": {
+   "answer": 25,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 102,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 312,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 1010,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 11000,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 1010,
+   "type": "numeric"
+  }
+ },
+ "3.2.2": {
+  "1": {
+   "answer": 0.68,
+   "display": "\\frac{17}{25}",
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 0.9722222222222222,
+   "display": "\\frac{35}{36}",
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 0.992,
+   "display": "\\frac{124}{125}",
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 0.96,
+   "display": "\\frac{24}{25}",
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 0.36,
+   "display": "\\frac{9}{25}",
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 0.21,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 0.55,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 0.33,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 0.74,
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 0.21,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 0.42,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 0.76,
+   "display": "\\frac{19}{25}",
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 0.1661807580174927,
+   "display": "\\frac{57}{343}",
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 0.9375,
+   "display": "\\frac{15}{16}",
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 0.552,
+   "display": "\\frac{69}{125}",
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 0.5625,
+   "display": "\\frac{9}{16}",
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 0.5833333333333334,
+   "display": "\\frac{7}{12}",
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 0.5416666666666666,
+   "display": "\\frac{13}{24}",
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 0.416,
+   "display": "\\frac{52}{125}",
+   "type": "numeric"
+  }
+ },
+ "3.2.3": {
+  "1": {
+   "answer": 120,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 22,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": -44,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 606,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 33,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 31,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 1102,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 210,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 121,
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 143,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 143,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 340,
+   "type": "numeric"
+  },
+  "20": {
+   "answer": 220,
+   "type": "numeric"
+  },
+  "21": {
+   "answer": 24,
+   "type": "numeric"
+  },
+  "22": {
+   "answer": 30,
+   "type": "numeric"
+  },
+  "23": {
+   "answer": 22,
+   "type": "numeric"
+  },
+  "24": {
+   "answer": 142,
+   "type": "numeric"
+  },
+  "25": {
+   "answer": 21,
+   "type": "numeric"
+  },
+  "26": {
+   "answer": 104,
+   "type": "numeric"
+  },
+  "27": {
+   "answer": 1221,
+   "type": "numeric"
+  },
+  "28": {
+   "answer": 44,
+   "type": "numeric"
+  },
+  "29": {
+   "answer": 1331,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 10,
+   "type": "numeric"
+  },
+  "30": {
+   "answer": 31,
+   "type": "numeric"
+  },
+  "31": {
+   "answer": 64,
+   "type": "numeric"
+  },
+  "32": {
+   "answer": 1221,
+   "type": "numeric"
+  },
+  "33": {
+   "answer": 121,
+   "type": "numeric"
+  },
+  "34": {
+   "answer": 231,
+   "type": "numeric"
+  },
+  "35": {
+   "answer": 330,
+   "type": "numeric"
+  },
+  "36": {
+   "answer": 222,
+   "type": "numeric"
+  },
+  "37": {
+   "answer": 124,
+   "type": "numeric"
+  },
+  "38": {
+   "answer": 1331,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 341,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 115,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 181,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 12,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 35,
+   "type": "numeric"
+  }
+ },
+ "3.2.4": {
+  "1": {
+   "answer": 1120,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 100011010,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 110110,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 33,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 23,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 11011,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 123,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 1122,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 133,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 11011,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 78,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 11100101,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 11011,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 223,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 101101,
+   "type": "numeric"
+  }
+ },
+ "3.2.6": {
+  "1": {
+   "answer": 0.8333333333333334,
+   "display": "\\frac{5}{6}",
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 0.8571428571428571,
+   "display": "\\frac{6}{7}",
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 0.875,
+   "display": "\\frac{7}{8}",
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 0.25,
+   "display": "\\frac{1}{4}",
+   "type": "numeric"
+  }
+ },
+ "3.3.2": {
+  "1": {
+   "answer": 0.2727272727272727,
+   "display": "\\frac{3}{11}",
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 0.23123123123123124,
+   "display": "\\frac{77}{333}",
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 0.3033033033033033,
+   "display": "\\frac{101}{333}",
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 0.0990990990990991,
+   "display": "\\frac{11}{111}",
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 0.41414141414141414,
+   "display": "\\frac{41}{99}",
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 0.21212121212121213,
+   "display": "\\frac{7}{33}",
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 0.8181818181818182,
+   "display": "\\frac{9}{11}",
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 0.36363636363636365,
+   "display": "\\frac{4}{11}",
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 0.020202020202020204,
+   "display": "\\frac{2}{99}",
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 0.7272727272727273,
+   "display": "\\frac{8}{11}",
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 0.15151515151515152,
+   "display": "\\frac{5}{33}",
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 0.3083083083083083,
+   "display": "\\frac{308}{999}",
+   "type": "numeric"
+  }
+ },
+ "3.3.3": {
+  "1": {
+   "answer": 0.23333333333333334,
+   "display": "\\frac{7}{30}",
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 0.32222222222222224,
+   "display": "\\frac{29}{90}",
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 0.2111111111111111,
+   "display": "\\frac{19}{90}",
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 0.32222222222222224,
+   "display": "\\frac{29}{90}",
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 0.012222222222222223,
+   "display": "\\frac{11}{900}",
+   "type": "numeric"
+  }
+ },
+ "3.3.4": {
+  "1": {
+   "answer": 0.21313131313131314,
+   "display": "\\frac{211}{990}",
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 0.21414141414141413,
+   "display": "\\frac{106}{495}",
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 0.12323232323232323,
+   "display": "\\frac{61}{495}",
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 0.12323232323232323,
+   "display": "\\frac{61}{495}",
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 0.2313131313131313,
+   "display": "\\frac{229}{990}",
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 0.305668016194332,
+   "display": "\\frac{151}{494}",
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 0.20505050505050504,
+   "display": "\\frac{203}{990}",
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 0.31414141414141417,
+   "display": "\\frac{311}{990}",
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 0.2717171717171717,
+   "display": "\\frac{269}{990}",
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 0.23535353535353534,
+   "display": "\\frac{233}{990}",
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 0.047474747474747475,
+   "display": "\\frac{47}{990}",
+   "type": "numeric"
+  }
+ },
+ "3.4": {
+  "1": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 9,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 5,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 2,
+   "type": "numeric"
+  }
+ },
+ "3.5.1": {
+  "1": {
+   "answer": 719,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 5039,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 40319,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": -117,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 152,
+   "type": "numeric"
+  }
+ },
+ "3.5.2": {
+  "1": {
+   "answer": 8.142857142857142,
+   "display": "8\\frac{1}{7}",
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 120,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": -718,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 32,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 15,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 25,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 35,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": -80,
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 48,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": -9,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 10.11111111111111,
+   "display": "10\\frac{1}{9}",
+   "type": "numeric"
+  },
+  "20": {
+   "answer": 60,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 6.833333333333333,
+   "display": "6\\frac{5}{6}",
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 10.9,
+   "display": "10\\frac{9}{10}",
+   "type": "numeric"
+  },
+  "5": {
+   "answer": -100,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 600,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 0.06666666666666667,
+   "display": "\\frac{1}{15}",
+   "type": "numeric"
+  },
+  "8": {
+   "answer": -12,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": -113,
+   "type": "numeric"
+  }
+ },
+ "3.5.3": {
+  "1": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 6,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 6,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 0,
+   "type": "numeric"
+  }
+ },
+ "3.6.1": {
+  "1": {
+   "answer": 0.42857142857142855,
+   "display": "\\frac{3}{7}",
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 27,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 4.5,
+   "display": "\\frac{9}{2}",
+   "type": "numeric"
+  }
+ },
+ "3.6.2": {
+  "1": {
+   "answer": -11,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 18,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": -15,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 14,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 172,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 19,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 6,
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 18,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": -7,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "20": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "21": {
+   "answer": 24,
+   "type": "numeric"
+  },
+  "22": {
+   "answer": 54,
+   "type": "numeric"
+  },
+  "23": {
+   "answer": -68,
+   "type": "numeric"
+  },
+  "24": {
+   "answer": 54,
+   "type": "numeric"
+  },
+  "25": {
+   "answer": 24,
+   "type": "numeric"
+  },
+  "26": {
+   "answer": -224,
+   "type": "numeric"
+  },
+  "27": {
+   "answer": 84,
+   "type": "numeric"
+  },
+  "28": {
+   "answer": -2,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 5,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 78,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": -8,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 24,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 252,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": -32,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": -48,
+   "type": "numeric"
+  }
+ },
+ "3.6.3": {
+  "1": {
+   "answer": 8.666666666666666,
+   "display": "8\\frac{2}{3}",
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 1.5,
+   "display": "\\frac{3}{2}",
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 8.666666666666666,
+   "display": "8\\frac{2}{3}",
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 6,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 0.6666666666666666,
+   "display": "\\frac{2}{3}",
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 0.3333333333333333,
+   "display": "\\frac{1}{3}",
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 0.6666666666666666,
+   "display": "\\frac{2}{3}",
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 5.333333333333333,
+   "display": "5\\frac{1}{3}",
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 6,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 9,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 6,
+   "type": "numeric"
+  },
+  "20": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "21": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "22": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "23": {
+   "answer": -3,
+   "type": "numeric"
+  },
+  "24": {
+   "answer": 12,
+   "type": "numeric"
+  },
+  "25": {
+   "answer": 0.6,
+   "display": "\\frac{3}{5}",
+   "type": "numeric"
+  },
+  "26": {
+   "answer": 84,
+   "type": "numeric"
+  },
+  "27": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "28": {
+   "answer": 0.6666666666666666,
+   "display": "\\frac{2}{3}",
+   "type": "numeric"
+  },
+  "29": {
+   "answer": 0.75,
+   "display": "\\frac{3}{4}",
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 15,
+   "type": "numeric"
+  },
+  "30": {
+   "answer": 9,
+   "type": "numeric"
+  },
+  "31": {
+   "answer": 3.6,
+   "display": "\\frac{18}{5}",
+   "type": "numeric"
+  },
+  "32": {
+   "answer": 3.75,
+   "display": "3\\frac{3}{4}",
+   "type": "numeric"
+  },
+  "33": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "34": {
+   "answer": 6,
+   "type": "numeric"
+  },
+  "35": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "36": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "37": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "38": {
+   "answer": 1.5,
+   "display": "1\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "39": {
+   "answer": 6,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 18,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 0.5714285714285714,
+   "display": "\\frac{4}{7}",
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 4.666666666666667,
+   "display": "4\\frac{2}{3}",
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 12,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 2,
+   "type": "numeric"
+  }
+ },
+ "4.1.1": {
+  "1": {
+   "answer": 5338,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 15352,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 6099,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 4270,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 12054,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 10665,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 4913,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 9801,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 7296,
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 13518,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 3456,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 13013,
+   "type": "numeric"
+  },
+  "20": {
+   "answer": 23115,
+   "type": "numeric"
+  },
+  "21": {
+   "answer": 32895,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 6868,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 4316,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 10706,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 1456,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 5083,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 5535,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 7161,
+   "type": "numeric"
+  }
+ },
+ "4.1.2": {
+  "1": {
+   "answer": 65932,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 826281,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 39483,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 93636,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 45066,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 77665,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 41616,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 166464,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 179568,
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 49731,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 31161,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 43264,
+   "type": "numeric"
+  },
+  "20": {
+   "answer": 27772,
+   "type": "numeric"
+  },
+  "21": {
+   "answer": 38688,
+   "type": "numeric"
+  },
+  "22": {
+   "answer": 37942,
+   "type": "numeric"
+  },
+  "23": {
+   "answer": 46144,
+   "type": "numeric"
+  },
+  "24": {
+   "answer": 37023,
+   "type": "numeric"
+  },
+  "25": {
+   "answer": 108332,
+   "type": "numeric"
+  },
+  "26": {
+   "answer": 17365,
+   "type": "numeric"
+  },
+  "27": {
+   "answer": 70503,
+   "type": "numeric"
+  },
+  "28": {
+   "answer": 16074,
+   "type": "numeric"
+  },
+  "29": {
+   "answer": 36693,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 163216,
+   "type": "numeric"
+  },
+  "30": {
+   "answer": 32680,
+   "type": "numeric"
+  },
+  "31": {
+   "answer": 28248,
+   "type": "numeric"
+  },
+  "32": {
+   "answer": 20520,
+   "type": "numeric"
+  },
+  "33": {
+   "answer": 179568,
+   "type": "numeric"
+  },
+  "34": {
+   "answer": 26964,
+   "type": "numeric"
+  },
+  "35": {
+   "answer": 129480,
+   "type": "numeric"
+  },
+  "36": {
+   "answer": 69015,
+   "type": "numeric"
+  },
+  "37": {
+   "answer": 35482,
+   "type": "numeric"
+  },
+  "38": {
+   "answer": 134550,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 40382,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 499849,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 29213,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 161604,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 646416,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 49374,
+   "type": "numeric"
+  }
+ },
+ "4.1.3": {
+  "1": {
+   "answer": 5609,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 13216,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 2024,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 4224,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 38016,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 13209,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 112221,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 50609,
+   "type": "numeric"
+  }
+ },
+ "4.1.5": {
+  "1": {
+   "answer": 10.25,
+   "display": "10\\frac{1}{4}",
+   "type": "numeric"
+  },
+  "10": {
+   "answer": -2.4705882352941178,
+   "display": "-2\\frac{8}{17}",
+   "type": "numeric"
+  },
+  "11": {
+   "answer": -2.4375,
+   "display": "-2\\frac{7}{16}",
+   "type": "numeric"
+  },
+  "12": {
+   "answer": -1.7647058823529411,
+   "display": "-1\\frac{13}{17}",
+   "type": "numeric"
+  },
+  "13": {
+   "answer": -2.4705882352941178,
+   "display": "-2\\frac{8}{17}",
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 12.133333333333333,
+   "display": "12\\frac{2}{15}",
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 17.1,
+   "display": "17\\frac{1}{10}",
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 11.142857142857142,
+   "display": "11\\frac{1}{7}",
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 25.071428571428573,
+   "display": "25\\frac{1}{14}",
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 10.153846153846153,
+   "display": "10\\frac{2}{13}",
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 9.058823529411764,
+   "display": "9\\frac{1}{17}",
+   "type": "numeric"
+  },
+  "8": {
+   "answer": -0.9285714285714286,
+   "display": "-\\frac{13}{14}",
+   "type": "numeric"
+  },
+  "9": {
+   "answer": -0.9444444444444444,
+   "display": "-\\frac{17}{18}",
+   "type": "numeric"
+  }
+ },
+ "4.1.6": {
+  "1": {
+   "answer": 2450,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 6320,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 3540,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 4830,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 600,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 9900,
+   "type": "numeric"
+  }
+ },
+ "4.2.1": {
+  "1": {
+   "answer": 3.75,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 480,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 176,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 0.25,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 40,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 120,
+   "type": "numeric"
+  },
+  "7": {
+   "high": 3477.0,
+   "low": 3147.0,
+   "type": "approx"
+  }
+ },
+ "4.2.3": {
+  "1": {
+   "answer": 3.5,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 16,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 5.4,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 5,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 16,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 14,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 18,
+   "type": "numeric"
+  }
+ },
+ "4.2.4": {
+  "1": {
+   "high": 194.0,
+   "low": 176.0,
+   "type": "approx"
+  },
+  "2": {
+   "answer": 7,
+   "type": "numeric"
+  }
+ },
+ "4.3.1": {
+  "1": {
+   "answer": 122,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 133,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 548,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 318,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 480,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 909,
+   "type": "numeric"
+  }
+ },
+ "4.3.2": {
+  "1": {
+   "answer": 207,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 460,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 88,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 748,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 693,
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 162,
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 660,
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 750,
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 517,
+   "type": "numeric"
+  },
+  "18": {
+   "answer": 407,
+   "type": "numeric"
+  },
+  "19": {
+   "answer": 608,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 304,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 195,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 284,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 304,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 514,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 550,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 372,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 114,
+   "type": "numeric"
+  }
+ },
+ "4.3.4": {
+  "1": {
+   "answer": 79,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 104,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 271,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 273,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 200,
+   "type": "numeric"
+  }
+ },
+ "4.4.1": {
+  "1": {
+   "answer": 0.02197802197802198,
+   "display": "\\frac{2}{91}",
+   "type": "numeric"
+  },
+  "2": {
+   "answer": -0.01904761904761905,
+   "display": "-\\frac{2}{105}",
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 0.0041797283176593526,
+   "display": "\\frac{4}{957}",
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 0.00404040404040404,
+   "display": "\\frac{2}{495}",
+   "type": "numeric"
+  },
+  "5": {
+   "answer": -0.01006036217303823,
+   "display": "-\\frac{5}{497}",
+   "type": "numeric"
+  },
+  "6": {
+   "answer": -0.004761904761904762,
+   "display": "-\\frac{1}{210}",
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 0.002551020408163265,
+   "display": "\\frac{1}{392}",
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 0.000321285140562249,
+   "display": "\\frac{2}{6225}",
+   "type": "numeric"
+  }
+ },
+ "4.4.2": {
+  "1": {
+   "answer": -2,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": -10,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": -8,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 38,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 44,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 10,
+   "type": "numeric"
+  }
+ },
+ "4.4.3": {
+  "1": {
+   "answer": 0.6666666666666666,
+   "display": "\\frac{2}{3}",
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 0.6,
+   "display": "\\frac{3}{5}",
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 0.7142857142857143,
+   "display": "\\frac{5}{7}",
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 0.38095238095238093,
+   "display": "\\frac{8}{21}",
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 0.3333333333333333,
+   "display": "\\frac{1}{3}",
+   "type": "numeric"
+  }
+ },
+ "4.4.4": {
+  "1": {
+   "answer": 5.833333333333333,
+   "display": "5\\frac{5}{6}",
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 3.1578947368421053,
+   "display": "3\\frac{3}{19}",
+   "type": "numeric"
+  },
+  "3": {
+   "answer": -1.5,
+   "display": "-1\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "4": {
+   "answer": -1.6153846153846154,
+   "display": "-1\\frac{8}{13}",
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 2.769230769230769,
+   "display": "2\\frac{10}{13}",
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 3.6,
+   "display": "3\\frac{3}{5}",
+   "type": "numeric"
+  },
+  "7": {
+   "answer": -4,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 1.1428571428571428,
+   "display": "1\\frac{1}{7}",
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 12,
+   "type": "numeric"
+  }
+ },
+ "4.4.5": {
+  "1": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 1.4,
+   "display": "1\\frac{2}{5}",
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 1.8,
+   "display": "1\\frac{4}{5}",
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 0.15384615384615385,
+   "display": "\\frac{2}{13}",
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 0.2,
+   "display": "\\frac{1}{5}",
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 0.2,
+   "display": "\\frac{1}{5}",
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 0.4,
+   "display": "\\frac{2}{5}",
+   "type": "numeric"
+  }
+ },
+ "4.4.6": {
+  "1": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 1.4,
+   "display": "\\frac{7}{5}",
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 0.5384615384615384,
+   "display": "\\frac{7}{13}",
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 0.6,
+   "display": "\\frac{3}{5}",
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 1.75,
+   "display": "\\frac{7}{4}",
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 7,
+   "type": "numeric"
+  }
+ },
+ "4.5.1": {
+  "1": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 70,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 35,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 10,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 15,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 6,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 10,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 10,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 15,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 15,
+   "type": "numeric"
+  }
+ },
+ "4.5.2": {
+  "1": {
+   "answer": 1777,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 2888,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 393,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 3777,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 1888,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 4777,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 2444,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 3444,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 21515,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 424,
+   "type": "numeric"
+  }
+ },
+ "4.5.3": {
+  "1": {
+   "answer": 0.5714285714285714,
+   "display": "\\frac{4}{7}",
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 0.23214285714285715,
+   "display": "\\frac{13}{56}",
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 0.5,
+   "display": "\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 0.5238095238095238,
+   "display": "\\frac{11}{21}",
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 0.5416666666666666,
+   "display": "\\frac{13}{24}",
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 0.9285714285714286,
+   "display": "\\frac{13}{14}",
+   "type": "numeric"
+  },
+  "15": {
+   "answer": 0.6071428571428571,
+   "display": "\\frac{17}{28}",
+   "type": "numeric"
+  },
+  "16": {
+   "answer": 0.3333333333333333,
+   "display": "\\frac{1}{3}",
+   "type": "numeric"
+  },
+  "17": {
+   "answer": 0.3,
+   "display": "\\frac{3}{10}",
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 0.5,
+   "display": "\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 0.42857142857142855,
+   "display": "\\frac{3}{7}",
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 0.6666666666666666,
+   "display": "\\frac{2}{3}",
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 0.875,
+   "display": "\\frac{7}{8}",
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 0.6666666666666666,
+   "display": "\\frac{2}{3}",
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 0.6333333333333333,
+   "display": "\\frac{19}{30}",
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 0.625,
+   "display": "\\frac{5}{8}",
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 0.47619047619047616,
+   "display": "\\frac{10}{21}",
+   "type": "numeric"
+  }
+ },
+ "4.5.4": {
+  "1": {
+   "answer": 0.5714285714285714,
+   "display": "\\frac{4}{7}",
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 0.21428571428571427,
+   "display": "\\frac{15}{70}",
+   "type": "numeric"
+  },
+  "11": {
+   "answer": 0.5166666666666667,
+   "display": "\\frac{31}{60}",
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 0.5227272727272727,
+   "display": "\\frac{23}{44}",
+   "type": "numeric"
+  },
+  "13": {
+   "answer": 0.3333333333333333,
+   "display": "\\frac{1}{3}",
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 0.21428571428571427,
+   "display": "\\frac{3}{14}",
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 0.5,
+   "display": "\\frac{1}{2}",
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 0.42857142857142855,
+   "display": "\\frac{3}{7}",
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 0.6666666666666666,
+   "display": "\\frac{2}{3}",
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 0.875,
+   "display": "\\frac{7}{8}",
+   "type": "numeric"
+  },
+  "6": {
+   "answer": 0.6666666666666666,
+   "display": "\\frac{2}{3}",
+   "type": "numeric"
+  },
+  "7": {
+   "answer": 0.62,
+   "display": "\\frac{31}{50}",
+   "type": "numeric"
+  },
+  "8": {
+   "answer": 0.6142857142857143,
+   "display": "\\frac{43}{70}",
+   "type": "numeric"
+  },
+  "9": {
+   "answer": 0.43333333333333335,
+   "display": "\\frac{13}{30}",
+   "type": "numeric"
+  }
+ },
+ "4.5.5": {
+  "1": {
+   "answer": 8,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 6,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 1,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": 1,
+   "type": "numeric"
+  }
+ },
+ "4.5.6": {
+  "1": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "10": {
+   "answer": 2,
+   "type": "numeric"
+  },
+  "11": {
+   "answer": -1,
+   "type": "numeric"
+  },
+  "12": {
+   "answer": 6,
+   "type": "numeric"
+  },
+  "13": {
+   "answer": -1.3333333333333333,
+   "display": "-\\frac{4}{3}",
+   "type": "numeric"
+  },
+  "14": {
+   "answer": 4,
+   "type": "numeric"
+  },
+  "2": {
+   "answer": 3,
+   "type": "numeric"
+  },
+  "3": {
+   "answer": 0,
+   "type": "numeric"
+  },
+  "4": {
+   "answer": -2,
+   "type": "numeric"
+  },
+  "5": {
+   "answer": -4,
+   "type": "numeric"
+  },
+  "6": {
+   "answer": -4,
+   "type": "numeric"
+  },
+  "7": {
+   "answer": -6,
+   "type": "numeric"
+  },
+  "8": {
+   "answer": -4,
+   "type": "numeric"
+  },
+  "9": {
+   "answer": -4,
+   "type": "numeric"
+  }
+ }
+}

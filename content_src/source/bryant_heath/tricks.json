@@ -1,0 +1,949 @@
+[
+  {
+    "trick_id": "1.2.1",
+    "slug": "multiplying_by_11_trick",
+    "name": "multiplying by 11 trick",
+    "pdf": "121_multiplying_by_11_trick.pdf",
+    "catsoop_path": "number_sense/part_1/chapter_1_2/section_1_2_1/content.catsoop"
+  },
+  {
+    "trick_id": "1.2.2",
+    "slug": "multiplying_by_101_trick",
+    "name": "multiplying by 101 trick",
+    "pdf": "122_multiplying_by_101_trick.pdf",
+    "catsoop_path": "number_sense/part_1/chapter_1_2/section_1_2_2/content.catsoop"
+  },
+  {
+    "trick_id": "1.2.3",
+    "slug": "multiplying_by_25_trick",
+    "name": "multiplying by 25 trick",
+    "pdf": "123_multiplying_by_25_trick.pdf",
+    "catsoop_path": "number_sense/part_1/chapter_1_2/section_1_2_3/content.catsoop"
+  },
+  {
+    "trick_id": "1.2.4",
+    "slug": "multiplying_by_75_trick",
+    "name": "multiplying by 75 trick",
+    "pdf": "124_multiplying_by_75_trick.pdf",
+    "catsoop_path": "number_sense/part_1/chapter_1_2/section_1_2_4/content.catsoop"
+  },
+  {
+    "trick_id": "1.2.5",
+    "slug": "multiplying_by_any_fraction_of_100_1000_etc",
+    "name": "multiplying by any fraction of 100 1000 etc",
+    "pdf": "125_multiplying_by_any_fraction_of_100_1000_etc.pdf",
+    "catsoop_path": "number_sense/part_1/chapter_1_2/section_1_2_5/content.catsoop"
+  },
+  {
+    "trick_id": "1.2.6",
+    "slug": "double_and_half_trick",
+    "name": "double and half trick",
+    "pdf": "126_double_and_half_trick.pdf",
+    "catsoop_path": "number_sense/part_1/chapter_1_2/section_1_2_6/content.catsoop"
+  },
+  {
+    "trick_id": "1.2.7",
+    "slug": "multiplying_two_numbers_near_100",
+    "name": "multiplying two numbers near 100",
+    "pdf": "127_multiplying_two_numbers_near_100.pdf",
+    "catsoop_path": "number_sense/part_1/chapter_1_2/section_1_2_7/content.catsoop"
+  },
+  {
+    "trick_id": "1.2.8",
+    "slug": "squares_ending_in_5_trick",
+    "name": "squares ending in 5 trick",
+    "pdf": "128_squares_ending_in_5_trick.pdf",
+    "catsoop_path": "number_sense/part_1/chapter_1_2/section_1_2_8/content.catsoop"
+  },
+  {
+    "trick_id": "1.2.9",
+    "slug": "squares_from_41_59",
+    "name": "squares from 41 59",
+    "pdf": "129_squares_from_41_59.pdf",
+    "catsoop_path": "number_sense/part_1/chapter_1_2/section_1_2_9/content.catsoop"
+  },
+  {
+    "trick_id": "1.2.10",
+    "slug": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "name": "multiplying two numbers equidistant from a third number",
+    "pdf": "1210_multiplying_two_numbers_equidistant_from_a_third_number.pdf",
+    "catsoop_path": "number_sense/part_1/chapter_1_2/section_1_2_10/content.catsoop"
+  },
+  {
+    "trick_id": "1.2.11",
+    "slug": "multiplying_reverses",
+    "name": "multiplying reverses",
+    "pdf": "1211_multiplying_reverses.pdf",
+    "catsoop_path": "number_sense/part_1/chapter_1_2/section_1_2_11/content.catsoop"
+  },
+  {
+    "trick_id": "1.3.1",
+    "slug": "extending_foiling",
+    "name": "extending foiling",
+    "pdf": "131_extending_foiling.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "1.3.2",
+    "slug": "factoring_of_numerical_problems",
+    "name": "factoring of numerical problems",
+    "pdf": "132_factoring_of_numerical_problems.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "1.3.3",
+    "slug": "sum_of_consecutive_squares",
+    "name": "sum of consecutive squares",
+    "pdf": "133_sum_of_consecutive_squares.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "1.3.4",
+    "slug": "sum_of_squares_factoring_method",
+    "name": "sum of squares factoring method",
+    "pdf": "134_sum_of_squares_factoring_method.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "1.3.5",
+    "slug": "sum_of_squares_special_case",
+    "name": "sum of squares special case",
+    "pdf": "135_sum_of_squares_special_case.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "1.3.6",
+    "slug": "difference_of_squares",
+    "name": "difference of squares",
+    "pdf": "136_difference_of_squares.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "1.3.7",
+    "slug": "multiplying_two_numbers_ending_in_5",
+    "name": "multiplying two numbers ending in 5",
+    "pdf": "137_multiplying_two_numbers_ending_in_5.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "1.3.8",
+    "slug": "multiplying_mixed_numbers",
+    "name": "multiplying mixed numbers",
+    "pdf": "138_multiplying_mixed_numbers.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "1.3.9",
+    "slug": "a_times_a/b_trick",
+    "name": "a times a/b trick",
+    "pdf": null,
+    "catsoop_path": null,
+    "source": "bryant_heath"
+  },
+  {
+    "trick_id": "1.3.10",
+    "slug": "combination_of_tricks",
+    "name": "combination of tricks",
+    "pdf": "1310_combination_of_tricks.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "1.4.1",
+    "slug": "finding_a_remainder_when_dividing_by_4_8_etc",
+    "name": "finding a remainder when dividing by 4 8 etc",
+    "pdf": "141_finding_a_remainder_when_dividing_by_4_8_etc.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "1.4.2",
+    "slug": "finding_a_remainder_when_dividing_by_3_9_etc",
+    "name": "finding a remainder when dividing by 3 9 etc",
+    "pdf": "142_finding_a_remainder_when_dividing_by_3_9_etc.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "1.4.3",
+    "slug": "finding_a_remainder_when_dividing_by_11",
+    "name": "finding a remainder when dividing by 11",
+    "pdf": "143_finding_a_remainder_when_dividing_by_11.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "1.4.4",
+    "slug": "finding_remainders_of_other_integers",
+    "name": "finding remainders of other integers",
+    "pdf": "144_finding_remainders_of_other_integers.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "1.4.5",
+    "slug": "remainders_of_expressions",
+    "name": "remainders of expressions",
+    "pdf": "145_remainders_of_expressions.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "1.4.6",
+    "slug": "dividing_by_9_trick",
+    "name": "dividing by 9 trick",
+    "pdf": "146_dividing_by_9_trick.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "1.4.7",
+    "slug": "converting_a_and_b_etc_to_decimals",
+    "name": "converting a and b etc to decimals",
+    "pdf": "147_converting_a_and_b_etc_to_decimals.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "1.5.1",
+    "slug": "subtracting_reverses",
+    "name": "subtracting reverses",
+    "pdf": "151_subtracting_reverses.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "1.5.2",
+    "slug": "switching_numbers_and_negating_on_subtraction",
+    "name": "switching numbers and negating on subtraction",
+    "pdf": "152_switching_numbers_and_negating_on_subtraction.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "1.5.3",
+    "slug": "telescoping_sum_a_over_b_times_b_plus_1",
+    "name": "telescoping sum a over b times b plus 1",
+    "pdf": null,
+    "catsoop_path": null,
+    "source": "bryant_heath"
+  },
+  {
+    "trick_id": "1.5.4",
+    "slug": "a_over_b_plus_b_over_a_trick",
+    "name": "a over b plus b over a trick",
+    "pdf": null,
+    "catsoop_path": null,
+    "source": "bryant_heath"
+  },
+  {
+    "trick_id": "1.5.5",
+    "slug": "a_over_b_minus_na_minus_1_over_nb_plus_1",
+    "name": "a over b minus na minus 1 over nb plus 1",
+    "pdf": null,
+    "catsoop_path": null,
+    "source": "bryant_heath"
+  },
+  {
+    "trick_id": "2.1.1",
+    "slug": "squares",
+    "name": "squares",
+    "pdf": "211_squares.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "2.1.2",
+    "slug": "cubes",
+    "name": "cubes",
+    "pdf": "212_cubes.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "2.1.3",
+    "slug": "powers_of_235",
+    "name": "powers of 235",
+    "pdf": "213_powers_of_235.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "2.1.4",
+    "slug": "important_fractions",
+    "name": "important fractions",
+    "pdf": "214_important_fractions.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "2.1.5",
+    "slug": "special_integers",
+    "name": "special integers",
+    "pdf": "215_special_integers.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "2.1.6",
+    "slug": "roman_numerals",
+    "name": "roman numerals",
+    "pdf": "216_roman_numerals.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "2.1.7",
+    "slug": "platonic_solids_and_eulers_formula",
+    "name": "platonic solids and eulers formula",
+    "pdf": "217_platonic_solids_and_eulers_formula.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "2.1.8",
+    "slug": "pi_and_e_approximations",
+    "name": "pi and e approximations",
+    "pdf": null,
+    "catsoop_path": null,
+    "source": "bryant_heath"
+  },
+  {
+    "trick_id": "2.1.9",
+    "slug": "distance_and_velocity_conversions",
+    "name": "distance and velocity conversions",
+    "pdf": "219_distance_and_velocity_conversions.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "2.1.10",
+    "slug": "conversion_between_distance_area_volume",
+    "name": "conversion between distance area volume",
+    "pdf": "2110_conversion_between_distance_area_volume.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "2.1.11",
+    "slug": "fluid_and_weight_conversions",
+    "name": "fluid and weight conversions",
+    "pdf": "2111_fluid_and_weight_conversions.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "2.1.12",
+    "slug": "celsius_to_fahrenheit_conversions",
+    "name": "celsius to fahrenheit conversions",
+    "pdf": "2112_celsius_to_fahrenheit_conversions.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "2.2.1",
+    "slug": "sum_of_series",
+    "name": "sum of series",
+    "pdf": "221_sum_of_series.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "2.2.2",
+    "slug": "fibonacci_numbers",
+    "name": "fibonacci numbers",
+    "pdf": "222_fibonacci_numbers.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "2.2.3",
+    "slug": "integral_divisors",
+    "name": "integral divisors",
+    "pdf": "223_integral_divisors.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "2.2.4",
+    "slug": "number_of_diagonals_of_a_polygon",
+    "name": "number of diagonals of a polygon",
+    "pdf": "224_number_of_diagonals_of_a_polygon.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "2.2.5",
+    "slug": "exteriorinterior_angles",
+    "name": "exteriorinterior angles",
+    "pdf": "225_exteriorinterior_angles.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "2.2.6",
+    "slug": "triangular_pentagonal_etc_numbers",
+    "name": "triangular pentagonal etc numbers",
+    "pdf": "226_triangular_pentagonal_etc_numbers.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "2.2.7",
+    "slug": "finding_sides_of_a_triangle",
+    "name": "finding sides of a triangle",
+    "pdf": "227_finding_sides_of_a_triangle.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "2.2.8",
+    "slug": "equilateral_triangle_formulas",
+    "name": "equilateral triangle formulas",
+    "pdf": "228_equilateral_triangle_formulas.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "2.2.9",
+    "slug": "formulas_of_solids",
+    "name": "formulas of solids",
+    "pdf": "229_formulas_of_solids.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "2.2.10",
+    "slug": "combinations_and_permutations",
+    "name": "combinations and permutations",
+    "pdf": "2210_combinations_and_permutations.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "2.2.11",
+    "slug": "trigonometric_values",
+    "name": "trigonometric values",
+    "pdf": "2211_trigonometric_values.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "2.2.12",
+    "slug": "trigonometric_formulas",
+    "name": "trigonometric formulas",
+    "pdf": "2212_trigonometric_formulas.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "2.2.13",
+    "slug": "graphs_of_sinescosines",
+    "name": "graphs of sinescosines",
+    "pdf": "2213_graphs_of_sinescosines.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "2.2.14",
+    "slug": "vertex_of_a_parabola",
+    "name": "vertex of a parabola",
+    "pdf": "2214_vertex_of_a_parabola.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "2.2.15",
+    "slug": "discriminant_and_roots",
+    "name": "discriminant and roots",
+    "pdf": "2215_discriminant_and_roots.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "3.1.1",
+    "slug": "gcd_and_lcm",
+    "name": "gcd and lcm",
+    "pdf": "311_gcd_and_lcm.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "3.1.2",
+    "slug": "perfect_abundant_and_deficient_numbers",
+    "name": "perfect abundant and deficient numbers",
+    "pdf": "312_perfect_abundant_and_deficient_numbers.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "3.1.3",
+    "slug": "sum_and_product_of_coefficients_in_binomial_expansion",
+    "name": "sum and product of coefficients in binomial expansion",
+    "pdf": "313_sum_and_product_of_coefficients_in_binomial_expansion.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "3.1.4",
+    "slug": "sumproduct_of_the_roots",
+    "name": "sumproduct of the roots",
+    "pdf": "314_sumproduct_of_the_roots.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "3.1.5",
+    "slug": "finding_units_digit_of_xn",
+    "name": "finding units digit of xn",
+    "pdf": "315_finding_units_digit_of_xn.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "3.1.6",
+    "slug": "exponent_rules",
+    "name": "exponent rules",
+    "pdf": "316_exponent_rules.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "3.1.7",
+    "slug": "log_rules",
+    "name": "log rules",
+    "pdf": "317_log_rules.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "3.1.8",
+    "slug": "square_root_problems",
+    "name": "square root problems",
+    "pdf": "318_square_root_problems.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "3.1.9",
+    "slug": "finding_approximations_of_square_roots",
+    "name": "finding approximations of square roots",
+    "pdf": "319_finding_approximations_of_square_roots.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "3.1.10",
+    "slug": "complex_numbers",
+    "name": "complex numbers",
+    "pdf": "3110_complex_numbers.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "3.1.11",
+    "slug": "function_inverses",
+    "name": "function inverses",
+    "pdf": "3111_function_inverses.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "3.1.12",
+    "slug": "patterns",
+    "name": "patterns",
+    "pdf": "3112_patterns.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "3.1.13",
+    "slug": "probability_and_odds",
+    "name": "probability and odds",
+    "pdf": "3113_probability_and_odds.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "3.1.14",
+    "slug": "sets",
+    "name": "sets",
+    "pdf": "3114_sets.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "3.2.1",
+    "slug": "converting_integers",
+    "name": "converting integers",
+    "pdf": "321_converting_integers.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "3.2.2",
+    "slug": "converting_decimals",
+    "name": "converting decimals",
+    "pdf": "322_converting_decimals.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "3.2.3",
+    "slug": "performing_operations",
+    "name": "performing operations",
+    "pdf": "323_performing_operations.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "3.2.4",
+    "slug": "changing_between_bases_special_case",
+    "name": "changing between bases special case",
+    "pdf": "324_changing_between_bases_special_case.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "3.2.5",
+    "slug": "changing_bases_sum_of_powers",
+    "name": "changing bases sum of powers",
+    "pdf": "325_changing_bases_sum_of_powers.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "3.2.6",
+    "slug": "changing_bases_miscellaneous_topics",
+    "name": "changing bases miscellaneous topics",
+    "pdf": "326_changing_bases_miscellaneous_topics.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "3.3.1",
+    "slug": "in_the_form_aaaaa",
+    "name": "in the form aaaaa",
+    "pdf": "331_in_the_form_aaaaa.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "3.3.2",
+    "slug": "in_the_form_ababa",
+    "name": "in the form ababa",
+    "pdf": "332_in_the_form_ababa.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "3.3.3",
+    "slug": "in_the_form_abbbb",
+    "name": "in the form abbbb",
+    "pdf": "333_in_the_form_abbbb.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "3.3.4",
+    "slug": "in_the_form_abcbcbc",
+    "name": "in the form abcbcbc",
+    "pdf": "334_in_the_form_abcbcbc.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "3.4.0",
+    "slug": "modular_arithmetic_general",
+    "name": "modular arithmetic general",
+    "pdf": null,
+    "catsoop_path": null,
+    "source": "bryant_heath"
+  },
+  {
+    "trick_id": "3.5.1",
+    "slug": "sum_of_n_times_n_factorial",
+    "name": "sum of n times n factorial",
+    "pdf": null,
+    "catsoop_path": null,
+    "source": "bryant_heath"
+  },
+  {
+    "trick_id": "3.5.2",
+    "slug": "a_factorial_plus_or_minus_b_factorial_over_c_factorial",
+    "name": "a factorial plus or minus b factorial over c factorial",
+    "pdf": null,
+    "catsoop_path": null,
+    "source": "bryant_heath"
+  },
+  {
+    "trick_id": "3.5.3",
+    "slug": "wilsons_theorem",
+    "name": "wilsons theorem",
+    "pdf": "353_wilsons_theorem.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "3.6.1",
+    "slug": "limits",
+    "name": "limits",
+    "pdf": "361_limits.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "3.6.2",
+    "slug": "derivatives",
+    "name": "derivatives",
+    "pdf": "362_derivatives.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "3.6.3",
+    "slug": "integration",
+    "name": "integration",
+    "pdf": "363_integration.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "3.6.4",
+    "slug": "integration",
+    "name": "integration",
+    "pdf": "364_integration.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "4.1.1",
+    "slug": "multiplying_three_digit_number_by_two_digit_number",
+    "name": "multiplying three digit number by two digit number",
+    "pdf": "411_multiplying_three_digit_number_by_two_digit_number.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "4.1.2",
+    "slug": "multiplying_three_digit_number_by_three_digit_number",
+    "name": "multiplying three digit number by three digit number",
+    "pdf": "412_multiplying_three_digit_number_by_three_digit_number.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "4.1.3",
+    "slug": "multiplying_two_numbers_whose_units_add_to_10_and_the_rest_is_the_same",
+    "name": "multiplying two numbers whose units add to 10 and the rest is the same",
+    "pdf": "413_multiplying_two_numbers_whose_units_add_to_10_and_the_rest_is_the_same.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "4.1.4",
+    "slug": "binomial_approximation",
+    "name": "binomial approximation",
+    "pdf": "414_binomial_approximation.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "4.1.5",
+    "slug": "multiplying_by_fraction_close_to_1",
+    "name": "multiplying by fraction close to 1",
+    "pdf": "415_multiplying_by_fraction_close_to_1.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "4.1.6",
+    "slug": "n_squared_plus_n_equals_n_plus_1_squared_minus_n_plus_1",
+    "name": "n squared plus n equals n plus 1 squared minus n plus 1",
+    "pdf": null,
+    "catsoop_path": null,
+    "source": "bryant_heath"
+  },
+  {
+    "trick_id": "4.2.1",
+    "slug": "conversions_part_2",
+    "name": "conversions part 2",
+    "pdf": "421_conversions_part_2.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "4.2.2",
+    "slug": "exotic_definitions_of_numbers",
+    "name": "exotic definitions of numbers",
+    "pdf": "422_exotic_definitions_of_numbers.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "4.2.3",
+    "slug": "square_root_of_small_integers",
+    "name": "square root of small integers",
+    "pdf": "423_square_root_of_small_integers.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "4.2.4",
+    "slug": "approximations_using_phi",
+    "name": "approximations using phi",
+    "pdf": "424_approximations_using_phi.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "4.2.5",
+    "slug": "standard_fibonacci_numbers",
+    "name": "standard fibonacci numbers",
+    "pdf": "425_standard_fibonacci_numbers.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "4.3.1",
+    "slug": "adding_consecutive_terms_of_arbitrary_fibonacci_sequence_method_1",
+    "name": "adding consecutive terms of arbitrary fibonacci sequence method 1",
+    "pdf": "431_adding_consecutive_terms_of_arbitrary_fibonacci_sequence_method_1.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "4.3.2",
+    "slug": "adding_consecutive_terms_of_arbitrary_fibonacci_sequence_method_2",
+    "name": "adding consecutive terms of arbitrary fibonacci sequence method 2",
+    "pdf": "432_adding_consecutive_terms_of_arbitrary_fibonacci_sequence_method_2.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "4.3.3",
+    "slug": "adding_odd_of_even_terms_of_arbitrary_fibonacci_sequence",
+    "name": "adding odd of even terms of arbitrary fibonacci sequence",
+    "pdf": "433_adding_odd_of_even_terms_of_arbitrary_fibonacci_sequence.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "4.3.4",
+    "slug": "sum_of_the_squares_of_arbitrary_fibonacci_sequence",
+    "name": "sum of the squares of arbitrary fibonacci sequence",
+    "pdf": "434_sum_of_the_squares_of_arbitrary_fibonacci_sequence.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "4.4.1",
+    "slug": "a_over_b_minus_na_minus_1_over_nb_minus_1",
+    "name": "a over b minus na minus 1 over nb minus 1",
+    "pdf": null,
+    "catsoop_path": null,
+    "source": "bryant_heath"
+  },
+  {
+    "trick_id": "4.4.2",
+    "slug": "factorizations",
+    "name": "factorizations",
+    "pdf": "442_factorizations.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "4.4.3",
+    "slug": "sum_of_the_reciprocals_of_triangular_numbers",
+    "name": "sum of the reciprocals of triangular numbers",
+    "pdf": "443_sum_of_the_reciprocals_of_triangular_numbers.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "4.4.4",
+    "slug": "geometric_and_harmonic_means",
+    "name": "geometric and harmonic means",
+    "pdf": "444_geometric_and_harmonic_means.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "4.4.5",
+    "slug": "distance_between_a_point_and_a_line",
+    "name": "distance between a point and a line",
+    "pdf": "445_distance_between_a_point_and_a_line.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "4.4.6",
+    "slug": "distance_between_two_parallel_lines",
+    "name": "distance between two parallel lines",
+    "pdf": "446_distance_between_two_parallel_lines.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "4.5.1",
+    "slug": "more_on_sets",
+    "name": "more on sets",
+    "pdf": "451_more_on_sets.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "4.5.2",
+    "slug": "repeating_decimals_in_reverse",
+    "name": "repeating decimals in reverse",
+    "pdf": "452_repeating_decimals_in_reverse.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "4.5.3",
+    "slug": "repeating_decimals_in_other_bases_convert_to_base_10",
+    "name": "repeating decimals in other bases convert to base 10",
+    "pdf": "453_repeating_decimals_in_other_bases_convert_to_base_10.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "4.5.4",
+    "slug": "repeating_decimals_in_other_bases_keeping_same_base",
+    "name": "repeating decimals in other bases keeping same base",
+    "pdf": "454_repeating_decimals_in_other_bases_keeping_same_base.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "4.5.5",
+    "slug": "remainders_with_and",
+    "name": "remainders with and",
+    "pdf": "455_remainders_with_and.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "4.5.6",
+    "slug": "minimal_and_maximum_value_of_expressions",
+    "name": "minimal and maximum value of expressions",
+    "pdf": "456_minimal_and_maximum_value_of_expressions.pdf",
+    "catsoop_path": null
+  },
+  {
+    "trick_id": "5.1.1",
+    "slug": "plain_arithmetic",
+    "name": "plain arithmetic",
+    "pdf": null,
+    "catsoop_path": null,
+    "source": "beyond"
+  },
+  {
+    "trick_id": "5.1.2",
+    "slug": "order_of_operations",
+    "name": "order of operations",
+    "pdf": null,
+    "catsoop_path": null,
+    "source": "beyond"
+  },
+  {
+    "trick_id": "5.1.3",
+    "slug": "estimation_general",
+    "name": "estimation general",
+    "pdf": null,
+    "catsoop_path": null,
+    "source": "beyond"
+  },
+  {
+    "trick_id": "5.2.1",
+    "slug": "polynomial_evaluation_horners_method",
+    "name": "polynomial evaluation horners method",
+    "pdf": null,
+    "catsoop_path": null,
+    "source": "beyond"
+  },
+  {
+    "trick_id": "5.2.2",
+    "slug": "systems_of_equations",
+    "name": "systems of equations",
+    "pdf": null,
+    "catsoop_path": null,
+    "source": "beyond"
+  },
+  {
+    "trick_id": "5.2.3",
+    "slug": "proportions_and_ratios",
+    "name": "proportions and ratios",
+    "pdf": null,
+    "catsoop_path": null,
+    "source": "beyond"
+  },
+  {
+    "trick_id": "5.2.4",
+    "slug": "function_composition",
+    "name": "function composition",
+    "pdf": null,
+    "catsoop_path": null,
+    "source": "beyond"
+  },
+  {
+    "trick_id": "5.2.5",
+    "slug": "domain_and_range",
+    "name": "domain and range",
+    "pdf": null,
+    "catsoop_path": null,
+    "source": "beyond"
+  },
+  {
+    "trick_id": "5.3.1",
+    "slug": "reflection_across_a_line",
+    "name": "reflection across a line",
+    "pdf": null,
+    "catsoop_path": null,
+    "source": "beyond"
+  },
+  {
+    "trick_id": "5.4.1",
+    "slug": "matrix_determinants",
+    "name": "matrix determinants",
+    "pdf": null,
+    "catsoop_path": null,
+    "source": "beyond"
+  },
+  {
+    "trick_id": "5.5.1",
+    "slug": "writing_numbers_in_digits_place_value",
+    "name": "writing numbers in digits place value",
+    "pdf": null,
+    "catsoop_path": null,
+    "source": "beyond"
+  },
+  {
+    "trick_id": "5.6.1",
+    "slug": "statistics_median_mode_mean",
+    "name": "statistics median mode mean",
+    "pdf": null,
+    "catsoop_path": null,
+    "source": "beyond"
+  },
+  {
+    "trick_id": "5.6.2",
+    "slug": "plane_geometry_area_formulas",
+    "name": "plane geometry area formulas",
+    "pdf": null,
+    "catsoop_path": null,
+    "source": "beyond"
+  }
+]

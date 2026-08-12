@@ -1,0 +1,224 @@
+name: mini_hub
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.1
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  yaml: ^3.1.2
+  json_annotation: ^4.12.0
+  math_keyboard: ^0.3.0
+  flutter_math_fork: ^0.7.2
+  flutter_markdown_plus: ^1.0.3
+  flutter_markdown_plus_latex: ^1.0.0
+  markdown: ^7.3.1
+  math_expressions: ^2.7.0
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^6.0.0
+  build_runner: ^2.4.13
+  json_serializable: ^6.9.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/mock/
+    - assets/content/math/
+    - assets/content/math/arithmetic_basics/
+    - assets/content/number_sense/
+    - assets/content/number_sense/introduction_foiling_liofing_when_multiplying/
+    - assets/content/number_sense/multiplying_by_11_trick/
+    - assets/content/number_sense/multiplying_by_101_trick/
+    - assets/content/number_sense/multiplying_by_25_trick/
+    - assets/content/number_sense/multiplying_by_75_trick/
+    - assets/content/number_sense/multiplying_by_any_fraction_of_100_1000_etc/
+    - assets/content/number_sense/double_and_half_trick/
+    - assets/content/number_sense/multiplying_two_numbers_near_100/
+    - assets/content/number_sense/squares_ending_in_5_trick/
+    - assets/content/number_sense/squares_from_41_59/
+    - assets/content/number_sense/multiplying_two_numbers_equidistant_from_a_third_number/
+    - assets/content/number_sense/multiplying_reverses/
+    - assets/content/number_sense/extending_foiling/
+    - assets/content/number_sense/factoring_of_numerical_problems/
+    - assets/content/number_sense/sum_of_consecutive_squares/
+    - assets/content/number_sense/sum_of_squares_factoring_method/
+    - assets/content/number_sense/sum_of_squares_special_case/
+    - assets/content/number_sense/difference_of_squares/
+    - assets/content/number_sense/multiplying_two_numbers_ending_in_5/
+    - assets/content/number_sense/multiplying_mixed_numbers/
+    - assets/content/number_sense/a_times_a_b_trick/
+    - assets/content/number_sense/combination_of_tricks/
+    - assets/content/number_sense/finding_a_remainder_when_dividing_by_4_8_etc/
+    - assets/content/number_sense/finding_a_remainder_when_dividing_by_3_9_etc/
+    - assets/content/number_sense/finding_a_remainder_when_dividing_by_11/
+    - assets/content/number_sense/finding_remainders_of_other_integers/
+    - assets/content/number_sense/remainders_of_expressions/
+    - assets/content/number_sense/dividing_by_9_trick/
+    - assets/content/number_sense/converting_a_and_b_etc_to_decimals/
+    - assets/content/number_sense/subtracting_reverses/
+    - assets/content/number_sense/switching_numbers_and_negating_on_subtraction/
+    - assets/content/number_sense/telescoping_sum_a_over_b_times_b_plus_1/
+    - assets/content/number_sense/a_over_b_plus_b_over_a_trick/
+    - assets/content/number_sense/a_over_b_minus_na_minus_1_over_nb_plus_1/
+    - assets/content/number_sense/squares/
+    - assets/content/number_sense/cubes/
+    - assets/content/number_sense/powers_of_235/
+    - assets/content/number_sense/important_fractions/
+    - assets/content/number_sense/special_integers/
+    - assets/content/number_sense/roman_numerals/
+    - assets/content/number_sense/platonic_solids_and_eulers_formula/
+    - assets/content/number_sense/pi_and_e_approximations/
+    - assets/content/number_sense/distance_and_velocity_conversions/
+    - assets/content/number_sense/conversion_between_distance_area_volume/
+    - assets/content/number_sense/fluid_and_weight_conversions/
+    - assets/content/number_sense/celsius_to_fahrenheit_conversions/
+    - assets/content/number_sense/sum_of_series/
+    - assets/content/number_sense/fibonacci_numbers/
+    - assets/content/number_sense/integral_divisors/
+    - assets/content/number_sense/number_of_diagonals_of_a_polygon/
+    - assets/content/number_sense/exteriorinterior_angles/
+    - assets/content/number_sense/triangular_pentagonal_etc_numbers/
+    - assets/content/number_sense/finding_sides_of_a_triangle/
+    - assets/content/number_sense/equilateral_triangle_formulas/
+    - assets/content/number_sense/formulas_of_solids/
+    - assets/content/number_sense/combinations_and_permutations/
+    - assets/content/number_sense/trigonometric_values/
+    - assets/content/number_sense/trigonometric_formulas/
+    - assets/content/number_sense/graphs_of_sinescosines/
+    - assets/content/number_sense/vertex_of_a_parabola/
+    - assets/content/number_sense/discriminant_and_roots/
+    - assets/content/number_sense/gcd_and_lcm/
+    - assets/content/number_sense/perfect_abundant_and_deficient_numbers/
+    - assets/content/number_sense/sum_and_product_of_coefficients_in_binomial_expansion/
+    - assets/content/number_sense/sumproduct_of_the_roots/
+    - assets/content/number_sense/finding_units_digit_of_xn/
+    - assets/content/number_sense/exponent_rules/
+    - assets/content/number_sense/log_rules/
+    - assets/content/number_sense/square_root_problems/
+    - assets/content/number_sense/finding_approximations_of_square_roots/
+    - assets/content/number_sense/complex_numbers/
+    - assets/content/number_sense/function_inverses/
+    - assets/content/number_sense/patterns/
+    - assets/content/number_sense/probability_and_odds/
+    - assets/content/number_sense/sets/
+    - assets/content/number_sense/converting_integers/
+    - assets/content/number_sense/converting_decimals/
+    - assets/content/number_sense/performing_operations/
+    - assets/content/number_sense/changing_between_bases_special_case/
+    - assets/content/number_sense/changing_bases_sum_of_powers/
+    - assets/content/number_sense/changing_bases_miscellaneous_topics/
+    - assets/content/number_sense/repeating_decimals/
+    - assets/content/number_sense/in_the_form_aaaaa/
+    - assets/content/number_sense/in_the_form_ababa/
+    - assets/content/number_sense/in_the_form_abbbb/
+    - assets/content/number_sense/in_the_form_abcbcbc/
+    - assets/content/number_sense/modular_arithmetic_basic/
+    - assets/content/number_sense/sum_of_n_times_n_factorial/
+    - assets/content/number_sense/a_factorial_plus_or_minus_b_factorial_over_c_factorial/
+    - assets/content/number_sense/wilsons_theorem/
+    - assets/content/number_sense/limits/
+    - assets/content/number_sense/derivatives/
+    - assets/content/number_sense/integration/
+    - assets/content/number_sense/multiplying_three_digit_number_by_two_digit_number/
+    - assets/content/number_sense/multiplying_three_digit_number_by_three_digit_number/
+    - assets/content/number_sense/multiplying_two_numbers_whose_units_add_to_10_and_the_rest_is_the_same/
+    - assets/content/number_sense/multiplying_by_fraction_close_to_1/
+    - assets/content/number_sense/n_squared_plus_n_equals_n_plus_1_squared_minus_n_plus_1/
+    - assets/content/number_sense/conversions_part_2/
+    - assets/content/number_sense/exotic_definitions_of_numbers/
+    - assets/content/number_sense/square_root_of_small_integers/
+    - assets/content/number_sense/approximations_using_phi/
+    - assets/content/number_sense/standard_fibonacci_numbers/
+    - assets/content/number_sense/adding_consecutive_terms_of_arbitrary_fibonacci_sequence_method_1/
+    - assets/content/number_sense/adding_consecutive_terms_of_arbitrary_fibonacci_sequence_method_2/
+    - assets/content/number_sense/adding_odd_of_even_terms_of_arbitrary_fibonacci_sequence/
+    - assets/content/number_sense/sum_of_the_squares_of_arbitrary_fibonacci_sequence/
+    - assets/content/number_sense/a_over_b_minus_na_minus_1_over_nb_minus_1/
+    - assets/content/number_sense/factorizations/
+    - assets/content/number_sense/sum_of_the_reciprocals_of_triangular_numbers/
+    - assets/content/number_sense/geometric_and_harmonic_means/
+    - assets/content/number_sense/distance_between_a_point_and_a_line/
+    - assets/content/number_sense/distance_between_two_parallel_lines/
+    - assets/content/number_sense/more_on_sets/
+    - assets/content/number_sense/repeating_decimals_in_reverse/
+    - assets/content/number_sense/repeating_decimals_in_other_bases_convert_to_base_10/
+    - assets/content/number_sense/repeating_decimals_in_other_bases_keeping_same_base/
+    - assets/content/number_sense/remainders_with_and/
+    - assets/content/number_sense/minimal_and_maximum_value_of_expressions/
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+
+  # To add assets to your application, add an assets section, like this:
+  # assets:
+  #   - images/a_dot_burr.jpeg
+  #   - images/a_dot_ham.jpeg
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/to/resolution-aware-images
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/to/asset-from-package
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/to/font-from-package

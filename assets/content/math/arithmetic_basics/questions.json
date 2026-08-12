@@ -1,0 +1,14 @@
+[
+  { "id": "q1", "type": "numerical", "prompt": "7 + 5 = ?", "answer": 12 },
+  { "id": "q2", "type": "numerical", "prompt": "\\frac{3}{4} + \\frac{1}{2} = ?", "answer": 1.25 },
+  { "id": "q3", "type": "numerical", "prompt": "2\\frac{1}{2} \\times \\frac{4}{5} = ?", "answer": 2 },
+  { "id": "q4", "type": "numerical", "prompt": "1\\frac{1}{3} + 2\\frac{1}{6} = ?", "answer": 3.5 },
+  { "id": "q5", "type": "numerical", "prompt": "\\sqrt{144} + 3^2 = ?", "answer": 21 },
+  { "id": "q6", "type": "numerical", "prompt": "5 - 12 = ?", "answer": -7 },
+  { "id": "q7", "type": "numerical", "prompt": "\\sum_{i=1}^{4} i^2 = ?", "answer": 30 },
+  { "id": "q8", "type": "numerical", "prompt": "\\int_0^1 3x^2 \\, dx = ?", "answer": 1 },
+  { "id": "q9", "type": "numerical", "prompt": "\\det\\begin{pmatrix} 2 & 3 \\\\ 1 & 4 \\end{pmatrix} = ?", "answer": 5 },
+  { "id": "q10", "type": "numerical", "prompt": "\\frac{-b}{2a} \\text{ where } b = 6,\\ a = -3", "answer": 1 },
+  { "id": "q11", "type": "numerical", "prompt": "\\lim_{x \\to 0} \\frac{\\sin 3x}{x} = ?", "answer": 3 },
+  { "id": "q12", "type": "numerical", "prompt": "\\left(\\frac{2}{3}\\right)^{-2} \\times \\frac{4}{9} = ?", "answer": 1 }
+]

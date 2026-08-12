@@ -1,0 +1,3944 @@
+{
+ "1.2.1": {
+  "35": {
+   "status": "confirmed",
+   "value": 242.0
+  }
+ },
+ "1.2.2": {
+  "7": {
+   "status": "confirmed",
+   "value": 15.15
+  }
+ },
+ "1.2.5": {
+  "68": {
+   "status": "confirmed",
+   "value": 124.995
+  },
+  "73": {
+   "status": "disputed",
+   "value": 5343.18
+  },
+  "75": {
+   "status": "disputed",
+   "value": 129.7008
+  },
+  "78": {
+   "status": "disputed",
+   "value": 230.0625
+  }
+ },
+ "1.2.6": {
+  "13": {
+   "status": "confirmed",
+   "value": 22.5
+  }
+ },
+ "1.3.6": {
+  "35": {
+   "status": "confirmed",
+   "value": 105.0
+  }
+ },
+ "1.4.1": {
+  "7": {
+   "status": "confirmed",
+   "value": 4.0
+  }
+ },
+ "1.4.2": {
+  "6": {
+   "status": "confirmed",
+   "value": 8.0
+  }
+ },
+ "1.4.3": {
+  "10": {
+   "status": "confirmed",
+   "value": 4.0
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 5.0
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 7.0
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 4.0
+  }
+ },
+ "1.4.4": {
+  "11": {
+   "status": "confirmed",
+   "value": 6.0
+  },
+  "12": {
+   "status": "confirmed",
+   "value": 7.0
+  },
+  "15": {
+   "status": "confirmed",
+   "value": 6.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 6.0
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 6.0
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 7.0
+  }
+ },
+ "1.4.5": {
+  "1": {
+   "status": "confirmed",
+   "value": 1.0
+  },
+  "10": {
+   "status": "confirmed",
+   "value": 1.0
+  },
+  "11": {
+   "status": "confirmed",
+   "value": 2.0
+  },
+  "12": {
+   "status": "confirmed",
+   "value": 5.0
+  },
+  "13": {
+   "status": "confirmed",
+   "value": 2.0
+  },
+  "14": {
+   "status": "confirmed",
+   "value": 2.0
+  },
+  "15": {
+   "status": "confirmed",
+   "value": 2.0
+  },
+  "16": {
+   "status": "confirmed",
+   "value": 3.0
+  },
+  "17": {
+   "status": "confirmed",
+   "value": 3.0
+  },
+  "18": {
+   "status": "confirmed",
+   "value": 0.0
+  },
+  "19": {
+   "status": "confirmed",
+   "value": 5.0
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 3.0
+  },
+  "20": {
+   "status": "confirmed",
+   "value": 2.0
+  },
+  "21": {
+   "status": "confirmed",
+   "value": 4.0
+  },
+  "22": {
+   "status": "confirmed",
+   "value": 3.0
+  },
+  "23": {
+   "status": "confirmed",
+   "value": 6.0
+  },
+  "24": {
+   "status": "confirmed",
+   "value": 2.0
+  },
+  "25": {
+   "status": "confirmed",
+   "value": 3.0
+  },
+  "26": {
+   "status": "confirmed",
+   "value": 2.0
+  },
+  "27": {
+   "status": "confirmed",
+   "value": 2.0
+  },
+  "28": {
+   "status": "confirmed",
+   "value": 2.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 0.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 2.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 2.0
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 2.0
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 4.0
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 0.0
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 4.0
+  }
+ },
+ "1.4.7": {
+  "10": {
+   "status": "confirmed",
+   "value": 40.0
+  },
+  "12": {
+   "status": "confirmed",
+   "value": 0.045
+  },
+  "13": {
+   "status": "confirmed",
+   "value": 18.0
+  },
+  "14": {
+   "status": "confirmed",
+   "value": 0.025
+  },
+  "17": {
+   "status": "confirmed",
+   "value": 0.275
+  },
+  "18": {
+   "status": "confirmed",
+   "value": 0.32
+  },
+  "20": {
+   "status": "confirmed",
+   "value": 0.0081
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 0.075
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 1.25
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 20.0
+  }
+ },
+ "2.1.1": {
+  "11": {
+   "status": "disputed",
+   "value": 5.76
+  },
+  "17": {
+   "status": "disputed",
+   "value": 9.61
+  },
+  "18": {
+   "status": "disputed",
+   "value": 7.29
+  },
+  "23": {
+   "status": "disputed",
+   "value": -27.0
+  },
+  "27": {
+   "status": "disputed",
+   "value": 0.324
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 4.84
+  }
+ },
+ "2.1.10": {
+  "1": {
+   "status": "confirmed",
+   "value": 81.0
+  },
+  "15": {
+   "status": "confirmed",
+   "value": 500.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 3.0
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 10000.0
+  }
+ },
+ "2.1.11": {
+  "14": {
+   "status": "confirmed",
+   "value": 37.5
+  },
+  "17": {
+   "status": "confirmed",
+   "value": 11.0
+  },
+  "20": {
+   "status": "confirmed",
+   "value": 1155.0
+  },
+  "28": {
+   "status": "confirmed",
+   "value": 231.0
+  },
+  "29": {
+   "status": "confirmed",
+   "value": 63.0
+  },
+  "31": {
+   "status": "confirmed",
+   "value": 147.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 693.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 154.0
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 308.0
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 16.0
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 37.5
+  }
+ },
+ "2.1.12": {
+  "1": {
+   "status": "confirmed",
+   "value": 77.0
+  },
+  "2": {
+   "status": "confirmed",
+   "value": -40.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 37.0
+  }
+ },
+ "2.1.2": {
+  "11": {
+   "status": "confirmed",
+   "value": -9.0
+  },
+  "23": {
+   "status": "confirmed",
+   "value": 370.0
+  },
+  "24": {
+   "status": "confirmed",
+   "value": -2.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": -7.0
+  }
+ },
+ "2.1.3": {
+  "11": {
+   "status": "confirmed",
+   "value": 81.0
+  },
+  "14": {
+   "status": "confirmed",
+   "value": 0.04
+  },
+  "19": {
+   "status": "confirmed",
+   "value": 7.0
+  },
+  "21": {
+   "status": "confirmed",
+   "value": 0.081
+  },
+  "23": {
+   "status": "confirmed",
+   "value": 29.0
+  },
+  "25": {
+   "status": "confirmed",
+   "value": 2.5
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 243.0
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 3.0
+  }
+ },
+ "2.1.4": {
+  "1": {
+   "status": "confirmed",
+   "value": 0.125
+  },
+  "15": {
+   "status": "confirmed",
+   "value": -0.941176
+  },
+  "18": {
+   "status": "confirmed",
+   "value": 0.375
+  },
+  "26": {
+   "status": "confirmed",
+   "value": 43.75
+  },
+  "33": {
+   "status": "confirmed",
+   "value": 15.0
+  },
+  "34": {
+   "status": "confirmed",
+   "value": 3.0
+  },
+  "38": {
+   "status": "confirmed",
+   "value": 31.25
+  },
+  "40": {
+   "status": "confirmed",
+   "value": 0.214286
+  },
+  "43": {
+   "status": "confirmed",
+   "value": 21.428571
+  },
+  "44": {
+   "status": "confirmed",
+   "value": 0.357143
+  },
+  "46": {
+   "status": "confirmed",
+   "value": 0.785714
+  },
+  "48": {
+   "status": "confirmed",
+   "value": 8.333333
+  },
+  "49": {
+   "status": "confirmed",
+   "value": 78.571429
+  },
+  "52": {
+   "status": "confirmed",
+   "value": 80.333333
+  },
+  "54": {
+   "status": "confirmed",
+   "value": 0.642857
+  },
+  "56": {
+   "status": "confirmed",
+   "value": 187.5
+  },
+  "57": {
+   "status": "confirmed",
+   "value": 0.0625
+  },
+  "58": {
+   "status": "confirmed",
+   "value": 121.428571
+  },
+  "59": {
+   "status": "confirmed",
+   "value": 0.428571
+  },
+  "60": {
+   "status": "confirmed",
+   "value": 0.0375
+  },
+  "61": {
+   "status": "confirmed",
+   "value": 0.011
+  },
+  "62": {
+   "status": "confirmed",
+   "value": 0.928571
+  },
+  "63": {
+   "status": "confirmed",
+   "value": 0.071429
+  },
+  "65": {
+   "status": "confirmed",
+   "value": 0.06875
+  },
+  "66": {
+   "status": "confirmed",
+   "value": 92.857143
+  },
+  "67": {
+   "status": "confirmed",
+   "value": 0.030769
+  },
+  "68": {
+   "status": "confirmed",
+   "value": 107.142857
+  },
+  "69": {
+   "status": "confirmed",
+   "value": 0.214286
+  }
+ },
+ "2.1.5": {
+  "65": {
+   "status": "confirmed",
+   "value": 175.0
+  }
+ },
+ "2.1.6": {
+  "24": {
+   "status": "confirmed",
+   "value": 66.888889
+  },
+  "25": {
+   "status": "confirmed",
+   "value": 34.0
+  },
+  "26": {
+   "status": "confirmed",
+   "value": 2005.0
+  },
+  "27": {
+   "status": "confirmed",
+   "value": 20.0
+  },
+  "28": {
+   "status": "confirmed",
+   "value": 401.0
+  },
+  "29": {
+   "status": "confirmed",
+   "value": 2997.0
+  },
+  "30": {
+   "status": "confirmed",
+   "value": 11011.0
+  },
+  "31": {
+   "status": "confirmed",
+   "value": 50175.0
+  },
+  "32": {
+   "status": "confirmed",
+   "value": 84.0
+  },
+  "33": {
+   "status": "confirmed",
+   "value": 22066.0
+  },
+  "34": {
+   "status": "confirmed",
+   "value": 10.1
+  }
+ },
+ "2.1.7": {
+  "1": {
+   "status": "confirmed",
+   "value": 20.0
+  },
+  "10": {
+   "status": "confirmed",
+   "value": 20.0
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 20.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 16.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 4.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 12.0
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 6.0
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 20.0
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 6.0
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 12.0
+  }
+ },
+ "2.1.8": {
+  "10": {
+   "status": "confirmed",
+   "value": 699.885448
+  },
+  "11": {
+   "status": "confirmed",
+   "value": 16194.532013
+  },
+  "12": {
+   "status": "confirmed",
+   "value": 1285.474363
+  },
+  "13": {
+   "status": "confirmed",
+   "value": 5318.356167
+  },
+  "14": {
+   "status": "confirmed",
+   "value": 519.720466
+  },
+  "15": {
+   "status": "confirmed",
+   "value": 48778.907555
+  },
+  "16": {
+   "status": "confirmed",
+   "value": 552.557129
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 719.761238
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 54.59815
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 5318.356167
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 360.617835
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 1692.885346
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 1047.615624
+  }
+ },
+ "2.1.9": {
+  "10": {
+   "status": "confirmed",
+   "value": 3520.0
+  },
+  "13": {
+   "status": "confirmed",
+   "value": 44.0
+  },
+  "15": {
+   "status": "confirmed",
+   "value": 2160.0
+  },
+  "16": {
+   "status": "confirmed",
+   "value": 8.0
+  },
+  "17": {
+   "status": "confirmed",
+   "value": 66.0
+  },
+  "18": {
+   "status": "confirmed",
+   "value": 22.5
+  },
+  "19": {
+   "status": "confirmed",
+   "value": 11.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 4.5
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 240.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 132.0
+  }
+ },
+ "2.2.1": {
+  "14": {
+   "status": "confirmed",
+   "value": 441.0
+  },
+  "18": {
+   "status": "confirmed",
+   "value": -1.125
+  },
+  "26": {
+   "status": "confirmed",
+   "value": -13.0
+  },
+  "30": {
+   "status": "confirmed",
+   "value": 98.0
+  },
+  "39": {
+   "status": "confirmed",
+   "value": 1150.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 123.0
+  },
+  "42": {
+   "status": "confirmed",
+   "value": 441.0
+  },
+  "53": {
+   "status": "confirmed",
+   "value": 37.0
+  },
+  "55": {
+   "status": "confirmed",
+   "value": 189225.0
+  },
+  "56": {
+   "status": "confirmed",
+   "value": 4356.0
+  },
+  "57": {
+   "status": "confirmed",
+   "value": 11.0
+  },
+  "59": {
+   "status": "confirmed",
+   "value": 1.5
+  },
+  "62": {
+   "status": "confirmed",
+   "value": 4.8
+  },
+  "64": {
+   "status": "confirmed",
+   "value": 8281.0
+  },
+  "67": {
+   "status": "confirmed",
+   "value": 27225.0
+  },
+  "68": {
+   "status": "confirmed",
+   "value": 1296.0
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 0.4
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 96.0
+  }
+ },
+ "2.2.11": {
+  "1": {
+   "status": "confirmed",
+   "value": -0.5
+  },
+  "10": {
+   "status": "confirmed",
+   "value": 0.333333
+  },
+  "13": {
+   "status": "confirmed",
+   "value": 0.0
+  },
+  "14": {
+   "status": "confirmed",
+   "value": -1.0
+  },
+  "16": {
+   "status": "confirmed",
+   "value": 0.5
+  },
+  "17": {
+   "status": "confirmed",
+   "value": 1.0
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 2.666667
+  },
+  "24": {
+   "status": "confirmed",
+   "value": 45.0
+  },
+  "25": {
+   "status": "confirmed",
+   "value": 1.555556
+  },
+  "27": {
+   "status": "confirmed",
+   "value": 12.0
+  },
+  "30": {
+   "status": "confirmed",
+   "value": 15.0
+  },
+  "31": {
+   "status": "confirmed",
+   "value": -4.0
+  },
+  "35": {
+   "status": "confirmed",
+   "value": 0.707107
+  },
+  "38": {
+   "status": "confirmed",
+   "value": 1.5
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 1.0
+  },
+  "41": {
+   "status": "confirmed",
+   "value": 0.0
+  },
+  "42": {
+   "status": "confirmed",
+   "value": -0.333333
+  },
+  "44": {
+   "status": "confirmed",
+   "value": -0.333333
+  },
+  "47": {
+   "status": "confirmed",
+   "value": 45.0
+  },
+  "51": {
+   "status": "confirmed",
+   "value": 1.2
+  },
+  "55": {
+   "status": "confirmed",
+   "value": 4.0
+  },
+  "56": {
+   "status": "confirmed",
+   "value": 0.5
+  },
+  "57": {
+   "status": "confirmed",
+   "value": -0.75
+  },
+  "59": {
+   "status": "confirmed",
+   "value": 3.5
+  },
+  "6": {
+   "status": "confirmed",
+   "value": -10.0
+  }
+ },
+ "2.2.12": {
+  "1": {
+   "status": "confirmed",
+   "value": 1.0
+  },
+  "11": {
+   "status": "confirmed",
+   "value": -0.25
+  },
+  "12": {
+   "status": "confirmed",
+   "value": 308.0
+  },
+  "13": {
+   "status": "confirmed",
+   "value": -0.5
+  },
+  "16": {
+   "status": "confirmed",
+   "value": 0.5
+  },
+  "18": {
+   "status": "confirmed",
+   "value": 0.28
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 0.5
+  },
+  "20": {
+   "status": "confirmed",
+   "value": 0.25
+  },
+  "21": {
+   "status": "confirmed",
+   "value": -0.5
+  },
+  "23": {
+   "status": "confirmed",
+   "value": -0.5
+  },
+  "25": {
+   "status": "confirmed",
+   "value": 0.5
+  },
+  "27": {
+   "status": "confirmed",
+   "value": -2.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 0.5
+  },
+  "4": {
+   "status": "confirmed",
+   "value": -0.5
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 68.0
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 0.75
+  },
+  "8": {
+   "status": "confirmed",
+   "value": -0.5
+  }
+ },
+ "2.2.13": {
+  "1": {
+   "status": "confirmed",
+   "value": 4.0
+  },
+  "10": {
+   "status": "confirmed",
+   "value": 0.5
+  },
+  "11": {
+   "status": "confirmed",
+   "value": 31.415927
+  },
+  "12": {
+   "status": "confirmed",
+   "value": 2.0
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 5.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 2.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 3.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 8.0
+  },
+  "6": {
+   "status": "confirmed",
+   "value": -3.0
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 5.0
+  },
+  "8": {
+   "status": "confirmed",
+   "value": -2.0
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 0.16666667
+  }
+ },
+ "2.2.14": {
+  "1": {
+   "status": "confirmed",
+   "value": -9.0
+  },
+  "2": {
+   "status": "confirmed",
+   "value": -5.0
+  },
+  "3": {
+   "status": "disputed",
+   "value": -0.5
+  }
+ },
+ "2.2.15": {
+  "1": {
+   "status": "confirmed",
+   "value": -2.0
+  },
+  "2": {
+   "status": "confirmed",
+   "value": -0.04166667
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 0.66666667
+  },
+  "4": {
+   "status": "disputed",
+   "value": 17.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 1.33333333
+  },
+  "6": {
+   "status": "confirmed",
+   "value": -0.33333333
+  }
+ },
+ "2.2.2": {
+  "1": {
+   "status": "confirmed",
+   "value": 750.0
+  },
+  "10": {
+   "status": "confirmed",
+   "value": 304.0
+  },
+  "11": {
+   "status": "confirmed",
+   "value": 372.0
+  },
+  "12": {
+   "status": "confirmed",
+   "value": 114.0
+  },
+  "13": {
+   "status": "confirmed",
+   "value": 88.0
+  },
+  "14": {
+   "status": "confirmed",
+   "value": 6.0
+  },
+  "15": {
+   "status": "confirmed",
+   "value": 196.0
+  },
+  "16": {
+   "status": "confirmed",
+   "value": 143.0
+  },
+  "17": {
+   "status": "confirmed",
+   "value": 319.0
+  },
+  "18": {
+   "status": "confirmed",
+   "value": 693.0
+  },
+  "19": {
+   "status": "confirmed",
+   "value": 748.0
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 372.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 514.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 660.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 804.0
+  },
+  "6": {
+   "status": "disputed",
+   "value": 608.0
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 893.0
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 534.0
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 284.0
+  }
+ },
+ "2.2.3": {
+  "10": {
+   "status": "confirmed",
+   "value": 124.0
+  },
+  "11": {
+   "status": "confirmed",
+   "value": 36.0
+  },
+  "12": {
+   "status": "confirmed",
+   "value": 56.0
+  },
+  "13": {
+   "status": "confirmed",
+   "value": 20.0
+  },
+  "14": {
+   "status": "confirmed",
+   "value": 42.0
+  },
+  "15": {
+   "status": "confirmed",
+   "value": 5.0
+  },
+  "16": {
+   "status": "confirmed",
+   "value": 15.0
+  },
+  "17": {
+   "status": "confirmed",
+   "value": 192.0
+  },
+  "18": {
+   "status": "confirmed",
+   "value": 78.0
+  },
+  "19": {
+   "status": "confirmed",
+   "value": 42.0
+  },
+  "20": {
+   "status": "confirmed",
+   "value": 8.0
+  },
+  "21": {
+   "status": "confirmed",
+   "value": 56.0
+  },
+  "22": {
+   "status": "confirmed",
+   "value": 70.0
+  },
+  "23": {
+   "status": "confirmed",
+   "value": 7.0
+  },
+  "24": {
+   "status": "confirmed",
+   "value": 55.0
+  },
+  "25": {
+   "status": "confirmed",
+   "value": 385.0
+  },
+  "26": {
+   "status": "confirmed",
+   "value": 24.0
+  },
+  "27": {
+   "status": "confirmed",
+   "value": 24.0
+  },
+  "28": {
+   "status": "disputed",
+   "value": 21.0
+  },
+  "29": {
+   "status": "confirmed",
+   "value": 54.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 96.0
+  },
+  "30": {
+   "status": "confirmed",
+   "value": 35.0
+  },
+  "31": {
+   "status": "confirmed",
+   "value": 160.0
+  },
+  "32": {
+   "status": "disputed",
+   "value": 8.0
+  },
+  "33": {
+   "status": "confirmed",
+   "value": 24.0
+  },
+  "34": {
+   "status": "disputed",
+   "value": 8.0
+  },
+  "35": {
+   "status": "confirmed",
+   "value": 35.0
+  },
+  "36": {
+   "status": "confirmed",
+   "value": 124.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 4.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 10.0
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 10.0
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 8.0
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 12.0
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 9.0
+  }
+ },
+ "2.2.4": {
+  "1": {
+   "status": "confirmed",
+   "value": 5.0
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 9.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 5.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 27.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 20.0
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 35.0
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 2.0
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 14.0
+  }
+ },
+ "2.2.5": {
+  "1": {
+   "status": "confirmed",
+   "value": 140.0
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 108.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 45.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 1080.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 120.0
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 1440.0
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 133.0
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 540.0
+  }
+ },
+ "2.2.6": {
+  "1": {
+   "status": "confirmed",
+   "value": 70.0
+  },
+  "10": {
+   "status": "confirmed",
+   "value": 66.0
+  },
+  "11": {
+   "status": "confirmed",
+   "value": 78.0
+  },
+  "12": {
+   "status": "confirmed",
+   "value": 66.0
+  },
+  "13": {
+   "status": "confirmed",
+   "value": 36.0
+  },
+  "14": {
+   "status": "confirmed",
+   "value": 18.0
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 40.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 35.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 176.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 276.0
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 112.0
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 35.0
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 51.0
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 45.0
+  }
+ },
+ "2.2.7": {
+  "1": {
+   "status": "confirmed",
+   "value": 9.0
+  },
+  "10": {
+   "status": "confirmed",
+   "value": 6.0
+  },
+  "11": {
+   "status": "confirmed",
+   "value": 7.0
+  },
+  "12": {
+   "status": "confirmed",
+   "value": 6.0
+  },
+  "13": {
+   "status": "confirmed",
+   "value": 9.0
+  },
+  "14": {
+   "status": "confirmed",
+   "value": 8.0
+  },
+  "15": {
+   "status": "confirmed",
+   "value": 84.0
+  },
+  "16": {
+   "status": "confirmed",
+   "value": 84.0
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 40.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 26.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 15.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 6.0
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 8.0
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 33.0
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 5.0
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 15.0
+  }
+ },
+ "2.2.8": {
+  "1": {
+   "status": "confirmed",
+   "value": 3.0
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 6.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 3.4641016151377544
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 12.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 4.0
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 18.0
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 3.0
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 9.0
+  }
+ },
+ "2.2.9": {
+  "1": {
+   "status": "confirmed",
+   "value": 726.0
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 452.3893421169302
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 27.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 96.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 64.0
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 216.0
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 512.0
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 1728.0
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 224.0
+  }
+ },
+ "3.1.1": {
+  "26": {
+   "status": "confirmed",
+   "value": 420.0
+  },
+  "32": {
+   "status": "confirmed",
+   "value": 693.0
+  },
+  "40": {
+   "status": "confirmed",
+   "value": 720.0
+  }
+ },
+ "3.1.10": {
+  "1": {
+   "status": "confirmed",
+   "value": 15.0
+  },
+  "10": {
+   "status": "confirmed",
+   "value": 1.0
+  },
+  "11": {
+   "status": "confirmed",
+   "value": -44.0
+  },
+  "12": {
+   "status": "confirmed",
+   "value": 31.0
+  },
+  "13": {
+   "status": "confirmed",
+   "value": 9.0
+  },
+  "14": {
+   "status": "confirmed",
+   "value": 15.0
+  },
+  "15": {
+   "status": "confirmed",
+   "value": 53.0
+  },
+  "16": {
+   "status": "confirmed",
+   "value": -7.0
+  },
+  "17": {
+   "status": "confirmed",
+   "value": -7.0
+  },
+  "18": {
+   "status": "confirmed",
+   "value": 50.0
+  },
+  "19": {
+   "status": "confirmed",
+   "value": -41.0
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 61.0
+  },
+  "20": {
+   "status": "confirmed",
+   "value": 7.0
+  },
+  "21": {
+   "status": "confirmed",
+   "value": 0.0
+  },
+  "22": {
+   "status": "confirmed",
+   "value": 41.0
+  },
+  "23": {
+   "status": "confirmed",
+   "value": 3721.0
+  },
+  "24": {
+   "status": "confirmed",
+   "value": -243.0
+  },
+  "25": {
+   "status": "confirmed",
+   "value": 4.0
+  },
+  "26": {
+   "status": "confirmed",
+   "value": 0.0
+  },
+  "28": {
+   "status": "confirmed",
+   "value": 1.0
+  },
+  "29": {
+   "status": "confirmed",
+   "value": 0.9230769230769231
+  },
+  "3": {
+   "status": "confirmed",
+   "value": -6.0
+  },
+  "30": {
+   "status": "confirmed",
+   "value": -64.0
+  },
+  "31": {
+   "status": "confirmed",
+   "value": 0.20000000000000007
+  },
+  "32": {
+   "status": "confirmed",
+   "value": 625.0
+  },
+  "33": {
+   "status": "confirmed",
+   "value": 0.9230769230769231
+  },
+  "34": {
+   "status": "confirmed",
+   "value": 169.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 24.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 54.0
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 48.0
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 1.5
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 25.0
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 1600.0
+  }
+ },
+ "3.1.11": {
+  "1": {
+   "status": "confirmed",
+   "value": -1.3333333333333333
+  },
+  "10": {
+   "status": "confirmed",
+   "value": -4.0
+  },
+  "11": {
+   "status": "confirmed",
+   "value": 1.0
+  },
+  "12": {
+   "status": "confirmed",
+   "value": -1.0
+  },
+  "13": {
+   "status": "confirmed",
+   "value": 1.0
+  },
+  "14": {
+   "status": "confirmed",
+   "value": -5.0
+  },
+  "15": {
+   "status": "confirmed",
+   "value": -0.6666667
+  },
+  "16": {
+   "status": "confirmed",
+   "value": 1.0
+  },
+  "17": {
+   "status": "confirmed",
+   "value": 2.3333333
+  },
+  "18": {
+   "status": "confirmed",
+   "value": -2.0
+  },
+  "19": {
+   "status": "confirmed",
+   "value": 0.0
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 2.5
+  },
+  "20": {
+   "status": "confirmed",
+   "value": 2.0
+  },
+  "21": {
+   "status": "confirmed",
+   "value": -1.0
+  },
+  "22": {
+   "status": "confirmed",
+   "value": 7.0
+  },
+  "23": {
+   "status": "confirmed",
+   "value": 1.0
+  },
+  "24": {
+   "status": "confirmed",
+   "value": 7.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 0.3333333333333333
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 3.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": -2.3333333333333335
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 0.6666666666666666
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 1.0
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 3.5
+  },
+  "9": {
+   "status": "confirmed",
+   "value": -3.0
+  }
+ },
+ "3.1.12": {
+  "1": {
+   "status": "disputed",
+   "value": 17.5
+  },
+  "10": {
+   "status": "confirmed",
+   "value": 398.0
+  },
+  "11": {
+   "status": "confirmed",
+   "value": 101.0
+  },
+  "12": {
+   "status": "confirmed",
+   "value": 46.0
+  },
+  "13": {
+   "status": "confirmed",
+   "value": 513.0
+  },
+  "14": {
+   "status": "confirmed",
+   "value": 511.0
+  },
+  "15": {
+   "status": "confirmed",
+   "value": 45.0
+  },
+  "16": {
+   "status": "confirmed",
+   "value": 0.25
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 120.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 65.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 91.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 217.0
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 720.0
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 26.0
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 256.0
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 110.0
+  }
+ },
+ "3.1.13": {
+  "1": {
+   "status": "confirmed",
+   "value": 0.0833333
+  },
+  "10": {
+   "status": "confirmed",
+   "value": 1.125
+  },
+  "11": {
+   "status": "confirmed",
+   "value": 0.3333333
+  },
+  "12": {
+   "status": "confirmed",
+   "value": 0.2413793
+  },
+  "13": {
+   "status": "confirmed",
+   "value": 1.25
+  },
+  "14": {
+   "status": "confirmed",
+   "value": 0.625
+  },
+  "15": {
+   "status": "confirmed",
+   "value": 0.6
+  },
+  "16": {
+   "status": "confirmed",
+   "value": 0.04
+  },
+  "17": {
+   "status": "confirmed",
+   "value": 1.25
+  },
+  "18": {
+   "status": "confirmed",
+   "value": 0.6
+  },
+  "19": {
+   "status": "confirmed",
+   "value": 1.5
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 0.0555556
+  },
+  "20": {
+   "status": "confirmed",
+   "value": 0.0555556
+  },
+  "21": {
+   "status": "confirmed",
+   "value": 0.1666667
+  },
+  "22": {
+   "status": "confirmed",
+   "value": 0.2
+  },
+  "23": {
+   "status": "confirmed",
+   "value": 0.3846154
+  },
+  "24": {
+   "status": "confirmed",
+   "value": 0.25
+  },
+  "25": {
+   "status": "confirmed",
+   "value": 0.1944444
+  },
+  "26": {
+   "status": "confirmed",
+   "value": 0.5
+  },
+  "27": {
+   "status": "confirmed",
+   "value": 0.3333333
+  },
+  "28": {
+   "status": "confirmed",
+   "value": 0.833333
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 0.1666667
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 0.1428571
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 0.6923077
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 0.8
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 0.65
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 0.0046296
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 0.375
+  }
+ },
+ "3.1.14": {
+  "1": {
+   "status": "confirmed",
+   "value": 4.0
+  },
+  "10": {
+   "status": "confirmed",
+   "value": 5.0
+  },
+  "11": {
+   "status": "confirmed",
+   "value": 4.0
+  },
+  "12": {
+   "status": "confirmed",
+   "value": 2.0
+  },
+  "13": {
+   "status": "confirmed",
+   "value": 8.0
+  },
+  "14": {
+   "status": "confirmed",
+   "value": 7.0
+  },
+  "15": {
+   "status": "confirmed",
+   "value": 5.0
+  },
+  "16": {
+   "status": "confirmed",
+   "value": 6.0
+  },
+  "17": {
+   "status": "confirmed",
+   "value": 4.0
+  },
+  "18": {
+   "status": "confirmed",
+   "value": 254.0
+  },
+  "19": {
+   "status": "confirmed",
+   "value": 15.0
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 32.0
+  },
+  "20": {
+   "status": "confirmed",
+   "value": 15.0
+  },
+  "21": {
+   "status": "confirmed",
+   "value": 1.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 16.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 5.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 1.0
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 3.0
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 4.0
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 5.0
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 4.0
+  }
+ },
+ "3.1.3": {
+  "1": {
+   "status": "confirmed",
+   "value": -64.0
+  },
+  "10": {
+   "status": "confirmed",
+   "value": 96.0
+  },
+  "11": {
+   "status": "confirmed",
+   "value": 128.0
+  },
+  "12": {
+   "status": "confirmed",
+   "value": 9.0
+  },
+  "13": {
+   "status": "confirmed",
+   "value": 96.0
+  },
+  "14": {
+   "status": "confirmed",
+   "value": 1458.0
+  },
+  "15": {
+   "status": "confirmed",
+   "value": 2500.0
+  },
+  "16": {
+   "status": "confirmed",
+   "value": -2.0
+  },
+  "17": {
+   "status": "confirmed",
+   "value": -3456.0
+  },
+  "18": {
+   "status": "confirmed",
+   "value": 16.0
+  },
+  "19": {
+   "status": "confirmed",
+   "value": 16000.0
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 1728.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 0.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 8.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 64.0
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 4.0
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 32.0
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 0.0
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 16.0
+  }
+ },
+ "3.1.4": {
+  "1": {
+   "status": "confirmed",
+   "value": 1.5
+  },
+  "10": {
+   "status": "confirmed",
+   "value": -0.666667
+  },
+  "11": {
+   "status": "confirmed",
+   "value": 0.0
+  },
+  "12": {
+   "status": "confirmed",
+   "value": 2.5
+  },
+  "13": {
+   "status": "confirmed",
+   "value": 0.6
+  },
+  "14": {
+   "status": "confirmed",
+   "value": 0.166667
+  },
+  "15": {
+   "status": "confirmed",
+   "value": -3.0
+  },
+  "16": {
+   "status": "confirmed",
+   "value": -2.0
+  },
+  "17": {
+   "status": "confirmed",
+   "value": -0.25
+  },
+  "18": {
+   "status": "confirmed",
+   "value": 2.0
+  },
+  "19": {
+   "status": "confirmed",
+   "value": 7.0
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 9.0
+  },
+  "20": {
+   "status": "confirmed",
+   "value": -36.0
+  },
+  "21": {
+   "status": "confirmed",
+   "value": 3.0
+  },
+  "22": {
+   "status": "confirmed",
+   "value": -0.75
+  },
+  "23": {
+   "status": "confirmed",
+   "value": -0.25
+  },
+  "24": {
+   "status": "confirmed",
+   "value": 0.0
+  },
+  "25": {
+   "status": "confirmed",
+   "value": -4.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 0.666667
+  },
+  "4": {
+   "status": "confirmed",
+   "value": -7.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 0.0
+  },
+  "6": {
+   "status": "confirmed",
+   "value": -0.75
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 3.0
+  },
+  "8": {
+   "status": "confirmed",
+   "value": -0.6
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 0.25
+  }
+ },
+ "3.1.5": {
+  "1": {
+   "status": "confirmed",
+   "value": 9.0
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 9.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 6.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 3.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 3.0
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 7.0
+  },
+  "7": {
+   "status": "confirmed",
+   "value": -1.0
+  },
+  "8": {
+   "status": "confirmed",
+   "value": -1.0
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 6.0
+  }
+ },
+ "3.1.6": {
+  "1": {
+   "status": "confirmed",
+   "value": 1224.0
+  },
+  "10": {
+   "status": "confirmed",
+   "value": 324.0
+  },
+  "11": {
+   "status": "confirmed",
+   "value": 216.0
+  },
+  "12": {
+   "status": "confirmed",
+   "value": 2.6666666666666665
+  },
+  "13": {
+   "status": "confirmed",
+   "value": 1.3333333333333333
+  },
+  "14": {
+   "status": "confirmed",
+   "value": 0.0
+  },
+  "15": {
+   "status": "confirmed",
+   "value": -6.0
+  },
+  "16": {
+   "status": "confirmed",
+   "value": 343.0
+  },
+  "17": {
+   "status": "confirmed",
+   "value": 13.0
+  },
+  "18": {
+   "status": "confirmed",
+   "value": 4.0
+  },
+  "19": {
+   "status": "confirmed",
+   "value": 144.0
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 630.9
+  },
+  "20": {
+   "status": "confirmed",
+   "value": 2.0
+  },
+  "21": {
+   "status": "confirmed",
+   "value": 0.0
+  },
+  "22": {
+   "status": "confirmed",
+   "value": 25.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 0.125
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 2.0
+  },
+  "42": {
+   "status": "unverified",
+   "value": 2.0
+  },
+  "43": {
+   "status": "unverified",
+   "value": 8.0
+  },
+  "44": {
+   "status": "unverified",
+   "value": 0.0625
+  },
+  "45": {
+   "status": "unverified",
+   "value": 9.0
+  },
+  "46": {
+   "status": "unverified",
+   "value": 12.0
+  },
+  "47": {
+   "status": "unverified",
+   "value": 8.0
+  },
+  "48": {
+   "status": "unverified",
+   "value": 1.0
+  },
+  "49": {
+   "status": "unverified",
+   "value": 16.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 0.2857142857142857
+  },
+  "50": {
+   "status": "unverified",
+   "value": 0.3333333333333333
+  },
+  "51": {
+   "status": "unverified",
+   "value": 0.5
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 0.015625
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 289.0
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 29.2
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 2.5
+  }
+ },
+ "3.1.7": {
+  "1": {
+   "status": "confirmed",
+   "value": 0.1111111111111111
+  },
+  "10": {
+   "status": "confirmed",
+   "value": 1.0
+  },
+  "18": {
+   "status": "confirmed",
+   "value": 2.0
+  },
+  "19": {
+   "status": "confirmed",
+   "value": 5.0
+  },
+  "20": {
+   "status": "confirmed",
+   "value": 3.0
+  },
+  "21": {
+   "status": "confirmed",
+   "value": 3.0
+  },
+  "22": {
+   "status": "confirmed",
+   "value": 1.5
+  },
+  "23": {
+   "status": "confirmed",
+   "value": 2.0
+  },
+  "24": {
+   "status": "confirmed",
+   "value": 1.0
+  },
+  "25": {
+   "status": "confirmed",
+   "value": -0.5
+  },
+  "26": {
+   "status": "confirmed",
+   "value": 0.0
+  },
+  "27": {
+   "status": "confirmed",
+   "value": 0.75
+  },
+  "28": {
+   "status": "confirmed",
+   "value": 243.0
+  },
+  "29": {
+   "status": "confirmed",
+   "value": 1.0
+  },
+  "30": {
+   "status": "confirmed",
+   "value": 4.0
+  },
+  "31": {
+   "status": "confirmed",
+   "value": 2.0
+  },
+  "32": {
+   "status": "confirmed",
+   "value": 0.0
+  },
+  "33": {
+   "status": "confirmed",
+   "value": 1.5
+  },
+  "34": {
+   "status": "confirmed",
+   "value": 0.0
+  },
+  "35": {
+   "status": "confirmed",
+   "value": -1.5
+  },
+  "36": {
+   "status": "confirmed",
+   "value": 22.0
+  },
+  "37": {
+   "status": "confirmed",
+   "value": 0.0
+  },
+  "38": {
+   "status": "confirmed",
+   "value": 8.0
+  },
+  "39": {
+   "status": "confirmed",
+   "value": 5.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 6.0
+  },
+  "41": {
+   "status": "confirmed",
+   "value": 0.5
+  },
+  "5": {
+   "status": "confirmed",
+   "value": -3.0
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 9.0
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 7.0
+  },
+  "9": {
+   "status": "confirmed",
+   "value": -3.0
+  }
+ },
+ "3.2.1": {
+  "10": {
+   "status": "confirmed",
+   "value": 1210.0
+  },
+  "11": {
+   "status": "confirmed",
+   "value": 110.0
+  },
+  "12": {
+   "status": "confirmed",
+   "value": 21.0
+  },
+  "13": {
+   "status": "confirmed",
+   "value": 404.0
+  },
+  "14": {
+   "status": "confirmed",
+   "value": 234.0
+  },
+  "15": {
+   "status": "confirmed",
+   "value": 1414.0
+  },
+  "17": {
+   "status": "confirmed",
+   "value": 202.0
+  },
+  "18": {
+   "status": "confirmed",
+   "value": 3210.0
+  },
+  "19": {
+   "status": "confirmed",
+   "value": 2300.0
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 1230.0
+  },
+  "20": {
+   "status": "confirmed",
+   "value": 333.0
+  },
+  "23": {
+   "status": "confirmed",
+   "value": 10101.0
+  },
+  "24": {
+   "status": "confirmed",
+   "value": 1101.0
+  },
+  "25": {
+   "status": "confirmed",
+   "value": 1355.0
+  },
+  "26": {
+   "status": "confirmed",
+   "value": 9.0
+  },
+  "27": {
+   "status": "confirmed",
+   "value": 443.0
+  },
+  "28": {
+   "status": "confirmed",
+   "value": 102.0
+  },
+  "29": {
+   "status": "confirmed",
+   "value": 1101.0
+  },
+  "30": {
+   "status": "confirmed",
+   "value": 1011.0
+  },
+  "31": {
+   "status": "confirmed",
+   "value": 2220.0
+  },
+  "32": {
+   "status": "confirmed",
+   "value": 140.0
+  },
+  "33": {
+   "status": "confirmed",
+   "value": 104.0
+  },
+  "35": {
+   "status": "confirmed",
+   "value": 10101.0
+  },
+  "36": {
+   "status": "confirmed",
+   "value": 1323.0
+  },
+  "37": {
+   "status": "confirmed",
+   "value": 1331.0
+  },
+  "38": {
+   "status": "confirmed",
+   "value": 1414.0
+  },
+  "39": {
+   "status": "confirmed",
+   "value": 1234.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 103.0
+  },
+  "40": {
+   "status": "confirmed",
+   "value": 2332.0
+  },
+  "41": {
+   "status": "confirmed",
+   "value": 5.0
+  },
+  "42": {
+   "status": "confirmed",
+   "value": 32.0
+  },
+  "43": {
+   "status": "confirmed",
+   "value": 100.0
+  },
+  "44": {
+   "status": "confirmed",
+   "value": 38.0
+  },
+  "45": {
+   "status": "confirmed",
+   "value": 25.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 102.0
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 312.0
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 1010.0
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 11000.0
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 1010.0
+  }
+ },
+ "3.2.2": {
+  "14": {
+   "status": "confirmed",
+   "value": 0.21
+  },
+  "15": {
+   "status": "confirmed",
+   "value": 0.55
+  },
+  "16": {
+   "status": "confirmed",
+   "value": 0.33
+  },
+  "17": {
+   "status": "confirmed",
+   "value": 0.74
+  },
+  "18": {
+   "status": "confirmed",
+   "value": 0.21
+  },
+  "19": {
+   "status": "confirmed",
+   "value": 0.42
+  }
+ },
+ "3.2.3": {
+  "1": {
+   "status": "confirmed",
+   "value": 120.0
+  },
+  "10": {
+   "status": "confirmed",
+   "value": 22.0
+  },
+  "11": {
+   "status": "confirmed",
+   "value": -44.0
+  },
+  "12": {
+   "status": "confirmed",
+   "value": 606.0
+  },
+  "13": {
+   "status": "confirmed",
+   "value": 33.0
+  },
+  "14": {
+   "status": "confirmed",
+   "value": 31.0
+  },
+  "15": {
+   "status": "confirmed",
+   "value": 1102.0
+  },
+  "16": {
+   "status": "confirmed",
+   "value": 210.0
+  },
+  "17": {
+   "status": "confirmed",
+   "value": 121.0
+  },
+  "18": {
+   "status": "confirmed",
+   "value": 143.0
+  },
+  "19": {
+   "status": "confirmed",
+   "value": 143.0
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 340.0
+  },
+  "20": {
+   "status": "confirmed",
+   "value": 220.0
+  },
+  "21": {
+   "status": "confirmed",
+   "value": 24.0
+  },
+  "22": {
+   "status": "confirmed",
+   "value": 30.0
+  },
+  "23": {
+   "status": "confirmed",
+   "value": 22.0
+  },
+  "24": {
+   "status": "confirmed",
+   "value": 142.0
+  },
+  "25": {
+   "status": "confirmed",
+   "value": 21.0
+  },
+  "26": {
+   "status": "confirmed",
+   "value": 104.0
+  },
+  "27": {
+   "status": "confirmed",
+   "value": 1221.0
+  },
+  "28": {
+   "status": "confirmed",
+   "value": 44.0
+  },
+  "29": {
+   "status": "confirmed",
+   "value": 1331.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 10.0
+  },
+  "30": {
+   "status": "confirmed",
+   "value": 31.0
+  },
+  "31": {
+   "status": "confirmed",
+   "value": 64.0
+  },
+  "32": {
+   "status": "confirmed",
+   "value": 1221.0
+  },
+  "33": {
+   "status": "confirmed",
+   "value": 121.0
+  },
+  "34": {
+   "status": "confirmed",
+   "value": 231.0
+  },
+  "35": {
+   "status": "confirmed",
+   "value": 330.0
+  },
+  "36": {
+   "status": "confirmed",
+   "value": 222.0
+  },
+  "37": {
+   "status": "confirmed",
+   "value": 124.0
+  },
+  "38": {
+   "status": "confirmed",
+   "value": 1331.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 341.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 4.0
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 115.0
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 181.0
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 12.0
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 35.0
+  }
+ },
+ "3.2.4": {
+  "1": {
+   "status": "confirmed",
+   "value": 1120.0
+  },
+  "10": {
+   "status": "confirmed",
+   "value": 100011010.0
+  },
+  "11": {
+   "status": "confirmed",
+   "value": 110110.0
+  },
+  "12": {
+   "status": "confirmed",
+   "value": 33.0
+  },
+  "13": {
+   "status": "confirmed",
+   "value": 23.0
+  },
+  "14": {
+   "status": "confirmed",
+   "value": 11011.0
+  },
+  "15": {
+   "status": "confirmed",
+   "value": 123.0
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 1122.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 133.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 11011.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 78.0
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 11100101.0
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 11011.0
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 223.0
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 101101.0
+  }
+ },
+ "3.2.6": {
+  "1": {
+   "status": "confirmed",
+   "value": 0.833333
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 3.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 0.857143
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 0.875
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 0.25
+  }
+ },
+ "3.3.2": {
+  "1": {
+   "status": "confirmed",
+   "value": 0.2727272727272727
+  },
+  "10": {
+   "status": "confirmed",
+   "value": 0.23123123123123124
+  },
+  "11": {
+   "status": "confirmed",
+   "value": 0.3033033033033033
+  },
+  "12": {
+   "status": "confirmed",
+   "value": 0.0990990990990991
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 0.41414141414141414
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 0.21212121212121213
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 0.8181818181818182
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 0.36363636363636365
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 0.020202020202020204
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 0.7272727272727273
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 0.15151515151515152
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 0.3083083083083083
+  }
+ },
+ "3.3.3": {
+  "1": {
+   "status": "confirmed",
+   "value": 0.23333333333333334
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 0.32222222222222224
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 0.2111111111111111
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 0.32222222222222224
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 0.012222222222222223
+  }
+ },
+ "3.3.4": {
+  "1": {
+   "status": "confirmed",
+   "value": 0.21313131313131314
+  },
+  "10": {
+   "status": "disputed",
+   "value": 0.24141414141414141
+  },
+  "11": {
+   "status": "confirmed",
+   "value": 0.12323232323232323
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 0.12323232323232323
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 0.2313131313131313
+  },
+  "4": {
+   "status": "disputed",
+   "value": 0.30505050505050507
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 0.20505050505050504
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 0.31414141414141417
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 0.2717171717171717
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 0.23535353535353534
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 0.047474747474747475
+  }
+ },
+ "3.4": {
+  "1": {
+   "status": "confirmed",
+   "value": 3.0
+  },
+  "10": {
+   "status": "confirmed",
+   "value": 4.0
+  },
+  "11": {
+   "status": "confirmed",
+   "value": 2.0
+  },
+  "12": {
+   "status": "confirmed",
+   "value": 1.0
+  },
+  "13": {
+   "status": "confirmed",
+   "value": 3.0
+  },
+  "14": {
+   "status": "confirmed",
+   "value": 9.0
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 4.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 1.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 4.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 2.0
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 3.0
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 1.0
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 5.0
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 2.0
+  }
+ },
+ "3.5.1": {
+  "2": {
+   "status": "confirmed",
+   "value": 5039.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 40319.0
+  }
+ },
+ "3.5.3": {
+  "1": {
+   "status": "confirmed",
+   "value": 0.0
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 6.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 1.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 6.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 3.0
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 0.0
+  }
+ },
+ "3.6.1": {
+  "1": {
+   "status": "confirmed",
+   "value": 0.42857142857142855
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 2.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 4.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 3.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 3.0
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 27.0
+  },
+  "7": {
+   "status": "disputed",
+   "value": -3.0
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 4.5
+  }
+ },
+ "3.6.2": {
+  "1": {
+   "status": "confirmed",
+   "value": -11.0
+  },
+  "10": {
+   "status": "confirmed",
+   "value": 18.0
+  },
+  "11": {
+   "status": "confirmed",
+   "value": 2.0
+  },
+  "12": {
+   "status": "confirmed",
+   "value": -15.0
+  },
+  "13": {
+   "status": "confirmed",
+   "value": 14.0
+  },
+  "14": {
+   "status": "confirmed",
+   "value": 4.0
+  },
+  "15": {
+   "status": "confirmed",
+   "value": 172.0
+  },
+  "16": {
+   "status": "confirmed",
+   "value": 19.0
+  },
+  "17": {
+   "status": "confirmed",
+   "value": 6.0
+  },
+  "18": {
+   "status": "confirmed",
+   "value": 18.0
+  },
+  "19": {
+   "status": "confirmed",
+   "value": -7.0
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 2.0
+  },
+  "20": {
+   "status": "confirmed",
+   "value": 1.0
+  },
+  "21": {
+   "status": "confirmed",
+   "value": 24.0
+  },
+  "22": {
+   "status": "confirmed",
+   "value": 54.0
+  },
+  "23": {
+   "status": "confirmed",
+   "value": -68.0
+  },
+  "24": {
+   "status": "confirmed",
+   "value": 54.0
+  },
+  "25": {
+   "status": "confirmed",
+   "value": 24.0
+  },
+  "26": {
+   "status": "confirmed",
+   "value": -224.0
+  },
+  "27": {
+   "status": "confirmed",
+   "value": 84.0
+  },
+  "28": {
+   "status": "confirmed",
+   "value": -2.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 5.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 78.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": -8.0
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 24.0
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 252.0
+  },
+  "8": {
+   "status": "confirmed",
+   "value": -32.0
+  },
+  "9": {
+   "status": "confirmed",
+   "value": -48.0
+  }
+ },
+ "3.6.3": {
+  "10": {
+   "status": "confirmed",
+   "value": 0.0
+  },
+  "20": {
+   "status": "confirmed",
+   "value": 2.0
+  },
+  "23": {
+   "status": "confirmed",
+   "value": -3.0
+  },
+  "31": {
+   "status": "confirmed",
+   "value": 3.6
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 2.0
+  }
+ },
+ "4.1.3": {
+  "4": {
+   "status": "confirmed",
+   "value": 4224.0
+  }
+ },
+ "4.1.5": {
+  "1": {
+   "status": "confirmed",
+   "value": 10.25
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 12.133333333333333
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 17.1
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 11.142857142857142
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 25.071428571428573
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 10.153846153846153
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 9.058823529411764
+  }
+ },
+ "4.2.1": {
+  "1": {
+   "status": "confirmed",
+   "value": 3.75
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 176.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 0.25
+  }
+ },
+ "4.2.3": {
+  "1": {
+   "status": "confirmed",
+   "value": 3.5
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 16.0
+  },
+  "3": {
+   "status": "disputed",
+   "value": 5.3
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 0.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 5.0
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 16.0
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 0.0
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 14.0
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 18.0
+  }
+ },
+ "4.2.4": {
+  "1": {
+   "status": "confirmed",
+   "value": 185.0450344023476
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 7.0
+  }
+ },
+ "4.3.1": {
+  "1": {
+   "status": "confirmed",
+   "value": 122.0
+  },
+  "2": {
+   "status": "disputed",
+   "value": 143.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 548.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 318.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 480.0
+  }
+ },
+ "4.3.2": {
+  "1": {
+   "status": "confirmed",
+   "value": 207.0
+  },
+  "10": {
+   "status": "confirmed",
+   "value": 460.0
+  },
+  "11": {
+   "status": "confirmed",
+   "value": 88.0
+  },
+  "12": {
+   "status": "confirmed",
+   "value": 748.0
+  },
+  "13": {
+   "status": "confirmed",
+   "value": 693.0
+  },
+  "14": {
+   "status": "disputed",
+   "value": 264.0
+  },
+  "15": {
+   "status": "confirmed",
+   "value": 660.0
+  },
+  "16": {
+   "status": "confirmed",
+   "value": 750.0
+  },
+  "17": {
+   "status": "confirmed",
+   "value": 517.0
+  },
+  "18": {
+   "status": "confirmed",
+   "value": 407.0
+  },
+  "19": {
+   "status": "confirmed",
+   "value": 608.0
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 304.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 195.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 284.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 304.0
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 514.0
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 550.0
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 372.0
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 114.0
+  }
+ },
+ "4.4.2": {
+  "1": {
+   "status": "confirmed",
+   "value": -2.0
+  },
+  "2": {
+   "status": "confirmed",
+   "value": -10.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": -8.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 38.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 44.0
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 10.0
+  }
+ },
+ "4.4.4": {
+  "1": {
+   "status": "confirmed",
+   "value": 5.833333333333333
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 3.1578947368421053
+  },
+  "3": {
+   "status": "confirmed",
+   "value": -1.5
+  },
+  "4": {
+   "status": "confirmed",
+   "value": -1.6153846153846154
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 2.769230769230769
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 3.6
+  },
+  "7": {
+   "status": "confirmed",
+   "value": -4.0
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 1.1428571428571428
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 12.0
+  }
+ },
+ "4.4.5": {
+  "1": {
+   "status": "confirmed",
+   "value": 1.0
+  },
+  "2": {
+   "status": "disputed",
+   "value": 1.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 1.8
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 0.15384615384615385
+  },
+  "5": {
+   "status": "disputed",
+   "value": 0.4
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 1.0
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 0.2
+  },
+  "8": {
+   "status": "disputed",
+   "value": 2.0
+  }
+ },
+ "4.4.6": {
+  "1": {
+   "status": "confirmed",
+   "value": 1.0
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 1.4
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 0.5384615384615384
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 2.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 0.6
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 1.0
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 1.75
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 7.0
+  }
+ },
+ "4.5.1": {
+  "1": {
+   "status": "confirmed",
+   "value": 3.0
+  },
+  "10": {
+   "status": "confirmed",
+   "value": 70.0
+  },
+  "11": {
+   "status": "confirmed",
+   "value": 35.0
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 10.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 4.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 15.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 6.0
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 10.0
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 10.0
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 15.0
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 15.0
+  }
+ },
+ "4.5.2": {
+  "1": {
+   "status": "confirmed",
+   "value": 1777.0
+  },
+  "10": {
+   "status": "confirmed",
+   "value": 2888.0
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 393.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 3777.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 1888.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 4777.0
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 2444.0
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 3444.0
+  },
+  "8": {
+   "status": "disputed",
+   "value": 2151.0
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 424.0
+  }
+ },
+ "4.5.3": {
+  "1": {
+   "status": "confirmed",
+   "value": 0.571429
+  },
+  "10": {
+   "status": "confirmed",
+   "value": 0.232143
+  },
+  "11": {
+   "status": "confirmed",
+   "value": 0.5
+  },
+  "12": {
+   "status": "confirmed",
+   "value": 0.52381
+  },
+  "13": {
+   "status": "confirmed",
+   "value": 0.541667
+  },
+  "14": {
+   "status": "confirmed",
+   "value": 0.928571
+  },
+  "15": {
+   "status": "confirmed",
+   "value": 0.607143
+  },
+  "16": {
+   "status": "disputed",
+   "value": 0.333871
+  },
+  "17": {
+   "status": "confirmed",
+   "value": 0.3
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 0.5
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 0.428571
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 0.666667
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 0.875
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 0.666667
+  },
+  "7": {
+   "status": "confirmed",
+   "value": 0.633333
+  },
+  "8": {
+   "status": "confirmed",
+   "value": 0.625
+  },
+  "9": {
+   "status": "confirmed",
+   "value": 0.47619
+  }
+ },
+ "4.5.4": {
+  "1": {
+   "status": "confirmed",
+   "value": 0.571429
+  },
+  "10": {
+   "status": "disputed",
+   "value": 0.232143
+  },
+  "11": {
+   "status": "disputed",
+   "value": 0.52381
+  },
+  "12": {
+   "status": "disputed",
+   "value": 0.541667
+  },
+  "13": {
+   "status": "disputed",
+   "value": 0.333871
+  },
+  "14": {
+   "status": "disputed",
+   "value": 0.3
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 0.5
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 0.428571
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 0.666667
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 0.875
+  },
+  "6": {
+   "status": "confirmed",
+   "value": 0.666667
+  },
+  "7": {
+   "status": "disputed",
+   "value": 0.633333
+  },
+  "8": {
+   "status": "disputed",
+   "value": 0.625
+  },
+  "9": {
+   "status": "disputed",
+   "value": 0.47619
+  }
+ },
+ "4.5.5": {
+  "1": {
+   "status": "confirmed",
+   "value": 8.0
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 6.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 1.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": 3.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": 1.0
+  }
+ },
+ "4.5.6": {
+  "1": {
+   "status": "confirmed",
+   "value": 2.0
+  },
+  "10": {
+   "status": "confirmed",
+   "value": 2.0
+  },
+  "11": {
+   "status": "confirmed",
+   "value": -1.0
+  },
+  "12": {
+   "status": "confirmed",
+   "value": 6.0
+  },
+  "13": {
+   "status": "disputed",
+   "value": -1.33333
+  },
+  "14": {
+   "status": "confirmed",
+   "value": 4.0
+  },
+  "2": {
+   "status": "confirmed",
+   "value": 3.0
+  },
+  "3": {
+   "status": "confirmed",
+   "value": 0.0
+  },
+  "4": {
+   "status": "confirmed",
+   "value": -2.0
+  },
+  "5": {
+   "status": "confirmed",
+   "value": -4.0
+  },
+  "6": {
+   "status": "confirmed",
+   "value": -4.0
+  },
+  "7": {
+   "status": "confirmed",
+   "value": -6.0
+  },
+  "8": {
+   "status": "confirmed",
+   "value": -4.0
+  },
+  "9": {
+   "status": "confirmed",
+   "value": -4.0
+  }
+ }
+}

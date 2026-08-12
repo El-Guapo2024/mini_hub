@@ -90,8 +90,11 @@ class NumericAnswer extends Answer {
   };
 }
 
-/// An estimation problem, marked `(*)` in the manual. The book prints an
-/// accepted band rather than a value, and anything inside it is correct.
+/// An estimation problem, marked `(*)` in the manual, which states the rule as
+/// "±5% accuracy is needed". The book prints the resulting band rather than a
+/// value, but rounds the bounds to whole numbers — so on small answers the
+/// printed band drifts off the rule in both directions (24–28 around 26 is
+/// ±7.7%, while 176–194 around 185 is only ±4.9%).
 class ApproxAnswer extends Answer {
   const ApproxAnswer({required this.low, required this.high});
 
@@ -100,17 +103,26 @@ class ApproxAnswer extends Answer {
 
   double get midpoint => (low + high) / 2;
 
+  /// The stated rule, ±5% of the exact answer.
+  static const _rule = 0.05;
+
   @override
   bool accepts(String tex) {
     final entered = evaluateTex(tex);
-    return entered != null && entered >= low && entered <= high;
+    if (entered == null) return false;
+    // Whichever is kinder: the printed band, or the rule the manual states.
+    // A student exactly 5% off must never be marked wrong because the book
+    // rounded a bound inward.
+    if (entered >= low && entered <= high) return true;
+    final slack = midpoint.abs() * _rule;
+    return (entered - midpoint).abs() <= slack;
   }
 
   @override
   String get display => '${_trim(low)} \\text{ to } ${_trim(high)}';
 
   @override
-  String? get inputHint => 'Estimate — a range of answers is accepted';
+  String? get inputHint => 'Estimate — within ±5% counts';
 
   @override
   Map<String, dynamic> toJson() => {'type': 'approx', 'low': low, 'high': high};

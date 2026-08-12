@@ -42,8 +42,27 @@ void main() {
       expect(a.accepts('53480'), isTrue);
       expect(a.accepts('50805'), isTrue, reason: 'the bounds are inclusive');
       expect(a.accepts('56154'), isTrue);
-      expect(a.accepts('50804'), isFalse);
+      expect(a.accepts('50804'), isFalse, reason: 'outside the rule as well');
       expect(a.accepts('60000'), isFalse);
+    });
+
+    test('honours the ±5% rule when the printed band rounded inward', () {
+      // The manual prints 176-194 for an answer of 185 — only ±4.9%, because
+      // the bounds were rounded to integers. 5% off is 175.75, and the manual
+      // states ±5% is what's required, so it must be accepted.
+      const a = ApproxAnswer(low: 176, high: 194);
+      expect(a.accepts('175.8'), isTrue);
+      expect(a.accepts('194.2'), isTrue);
+      expect(a.accepts('174'), isFalse);
+    });
+
+    test('keeps a printed band that is wider than the rule', () {
+      // 24-28 around 26 is ±7.7%; the book is more generous than its own rule
+      // here and the student gets the benefit.
+      const a = ApproxAnswer(low: 24, high: 28);
+      expect(a.accepts('24'), isTrue);
+      expect(a.accepts('28'), isTrue);
+      expect(a.accepts('23'), isFalse);
     });
 
     test('tells the student it is graded on a range', () {

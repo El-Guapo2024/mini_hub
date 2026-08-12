@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_math_fork/flutter_math.dart';
 import 'package:math_keyboard/math_keyboard.dart';
 
-import '../math/tex_answer.dart';
 import '../models/question.dart';
 
 const _surface = Color(0xFF121212);
@@ -32,9 +31,7 @@ class _QuestionWidgetState extends State<QuestionWidget> {
   }
 
   void _check(String tex) {
-    final value = evaluateTex(tex);
-    final correct =
-        value != null && (value - widget.question.answer).abs() < 1e-9;
+    final correct = widget.question.answer.accepts(tex);
     setState(() => _result = correct ? _Result.correct : _Result.wrong);
   }
 

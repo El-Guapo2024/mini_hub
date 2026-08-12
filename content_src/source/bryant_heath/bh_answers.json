@@ -1068,8 +1068,8 @@
    "type": "approx"
   },
   "73": {
-   "high": 56154.0,
-   "low": 50805.0,
+   "high": 56154,
+   "low": 50805,
    "type": "approx"
   },
   "74": {
@@ -1078,8 +1078,8 @@
    "type": "approx"
   },
   "75": {
-   "high": 13622.0,
-   "low": 12324.0,
+   "high": 13622,
+   "low": 12324,
    "type": "approx"
   },
   "76": {
@@ -1093,8 +1093,8 @@
    "type": "approx"
   },
   "78": {
-   "high": 24157.0,
-   "low": 21855.0,
+   "high": 24157,
+   "low": 21855,
    "type": "approx"
   },
   "79": {
@@ -3480,189 +3480,217 @@
  "2.1.1": {
   "1": {
    "answer": 784,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "numeric"
   },
   "10": {
-   "answer": 361,
+   "answer": 324,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "numeric"
   },
   "11": {
-   "answer": 324,
+   "answer": 5.76,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "numeric"
   },
   "12": {
-   "answer": 5.76,
+   "answer": 529,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "numeric"
   },
   "13": {
-   "answer": 529,
+   "answer": 1024,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "numeric"
   },
   "14": {
-   "answer": 1024,
+   "answer": 196,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "numeric"
   },
   "15": {
-   "answer": 484,
+   "answer": 441,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "numeric"
   },
   "16": {
-   "answer": 196,
+   "answer": 576,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "numeric"
   },
   "17": {
-   "answer": 441,
+   "answer": 9.61,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "numeric"
   },
   "18": {
-   "answer": 576,
+   "answer": 7.29,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "numeric"
   },
   "19": {
-   "answer": 9.61,
+   "answer": 1156,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "numeric"
   },
   "2": {
    "answer": 10.24,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "numeric"
   },
   "20": {
-   "answer": 7.29,
+   "answer": 676,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "numeric"
   },
   "21": {
-   "answer": 784,
+   "answer": 289,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "numeric"
   },
   "22": {
-   "answer": 1156,
+   "answer": 1089,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "numeric"
   },
   "23": {
-   "answer": 676,
+   "answer": -27,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "numeric"
   },
   "24": {
-   "answer": 289,
-   "type": "numeric"
+   "high": 1075.0,
+   "low": 972.0,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
+   "type": "approx"
   },
   "25": {
-   "answer": 1089,
-   "type": "numeric"
+   "high": 412.0,
+   "low": 372.0,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
+   "type": "approx"
   },
   "26": {
-   "answer": -27,
+   "answer": -224,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "numeric"
   },
   "27": {
-   "high": 1075.0,
-   "low": 972.0,
-   "type": "approx"
+   "answer": 0.324,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
+   "type": "numeric"
   },
   "28": {
-   "high": 412.0,
-   "low": 372.0,
+   "high": 16078.0,
+   "low": 14546.0,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "approx"
   },
   "29": {
-   "answer": -224,
-   "type": "numeric"
+   "high": 8349.0,
+   "low": 7553.0,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
+   "type": "approx"
   },
   "3": {
    "answer": 841,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "numeric"
   },
   "30": {
-   "answer": 0.324,
-   "type": "numeric"
+   "high": 40337.0,
+   "low": 36495.0,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
+   "type": "approx"
   },
   "31": {
-   "high": 16078.0,
-   "low": 14546.0,
+   "high": 420.0,
+   "low": 379.0,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "approx"
   },
   "32": {
-   "high": 8349.0,
-   "low": 7553.0,
+   "high": 31200.0,
+   "low": 28227.0,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "approx"
   },
   "33": {
-   "high": 40337.0,
-   "low": 36495.0,
+   "high": 29990.0,
+   "low": 27132.0,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "approx"
   },
   "34": {
-   "high": 420.0,
-   "low": 379.0,
+   "high": 10057.0,
+   "low": 9098.0,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "approx"
   },
   "35": {
-   "high": 31200.0,
-   "low": 28227.0,
+   "high": 14553.0,
+   "low": 13166.0,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "approx"
   },
   "36": {
-   "high": 29990.0,
-   "low": 27132.0,
+   "high": 87698.0,
+   "low": 79344.0,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "approx"
   },
   "37": {
-   "high": 10057.0,
-   "low": 9098.0,
+   "high": 267.0,
+   "low": 241.0,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "approx"
   },
   "38": {
-   "high": 14553.0,
-   "low": 13166.0,
+   "high": 549.0,
+   "low": 496.0,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "approx"
   },
   "39": {
-   "high": 87698.0,
-   "low": 79344.0,
+   "high": 1078.0,
+   "low": 975.0,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "approx"
   },
   "4": {
    "answer": 256,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "numeric"
   },
   "40": {
-   "high": 267.0,
-   "low": 241.0,
-   "type": "approx"
-  },
-  "41": {
-   "high": 549.0,
-   "low": 496.0,
-   "type": "approx"
-  },
-  "42": {
-   "high": 1078.0,
-   "low": 975.0,
-   "type": "approx"
-  },
-  "43": {
    "high": 204206.0,
    "low": 184756.0,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "approx"
   },
   "5": {
    "answer": 961,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "numeric"
   },
   "6": {
    "answer": 4.84,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "numeric"
   },
   "7": {
    "answer": 1156,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "numeric"
   },
   "8": {
    "answer": 289,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "numeric"
   },
   "9": {
    "answer": 529,
+   "note": "realigned: the printed key inserts spurious entries at positions 10, 15 and 21, displacing the rest",
    "type": "numeric"
   }
  },
@@ -5993,8 +6021,9 @@
    "type": "numeric"
   },
   "3": {
-   "answer": 1.25,
-   "display": "1\\frac{1}{4}",
+   "answer": -0.5,
+   "corrected": true,
+   "note": "axis of symmetry of 2-x-x^2; key prints 1.25",
    "type": "numeric"
   }
  },
@@ -6014,8 +6043,9 @@
    "type": "numeric"
   },
   "4": {
-   "answer": 4.123105625617661,
-   "display": "1\\sqrt{17}",
+   "answer": 17.0,
+   "corrected": true,
+   "note": "discriminant; key prints sqrt(17) instead",
    "type": "numeric"
   },
   "5": {
@@ -6091,7 +6121,9 @@
    "type": "numeric"
   },
   "6": {
-   "answer": 610,
+   "answer": 608.0,
+   "corrected": true,
+   "note": "Fibonacci sum; key prints 610",
    "type": "numeric"
   },
   "7": {
@@ -6189,7 +6221,9 @@
    "type": "numeric"
   },
   "28": {
-   "answer": 39,
+   "answer": 21.0,
+   "corrected": true,
+   "note": "proper divisors of 18 exclude 18; key prints 39",
    "type": "numeric"
   },
   "29": {
@@ -6209,7 +6243,7 @@
    "type": "numeric"
   },
   "32": {
-   "answer": 7,
+   "answer": 7.0,
    "type": "numeric"
   },
   "33": {
@@ -6217,7 +6251,7 @@
    "type": "numeric"
   },
   "34": {
-   "answer": 7,
+   "answer": 7.0,
    "type": "numeric"
   },
   "35": {
@@ -6938,7 +6972,7 @@
  },
  "3.1.12": {
   "1": {
-   "answer": 17,
+   "answer": 17.0,
    "type": "numeric"
   },
   "10": {
@@ -8590,7 +8624,8 @@
   },
   "10": {
    "answer": 0.21414141414141413,
-   "display": "\\frac{106}{495}",
+   "corrected": true,
+   "note": "prompt re-read from source; repeating block is 14, not 41",
    "type": "numeric"
   },
   "11": {
@@ -8609,8 +8644,9 @@
    "type": "numeric"
   },
   "4": {
-   "answer": 0.305668016194332,
-   "display": "\\frac{151}{494}",
+   "answer": 0.30505050505050507,
+   "corrected": true,
+   "note": "key prints denominator 494, a typo for 495",
    "type": "numeric"
   },
   "5": {
@@ -8859,7 +8895,9 @@
    "type": "numeric"
   },
   "7": {
-   "answer": 0,
+   "answer": -3.0,
+   "corrected": true,
+   "note": "limit is -3; key prints 0",
    "type": "numeric"
   },
   "8": {
@@ -9563,7 +9601,9 @@
    "type": "numeric"
   },
   "3": {
-   "answer": 5.4,
+   "answer": 5.3,
+   "corrected": true,
+   "note": "asks to truncate; key rounds to 5.4",
    "type": "numeric"
   },
   "4": {
@@ -9608,7 +9648,9 @@
    "type": "numeric"
   },
   "2": {
-   "answer": 133,
+   "answer": 143.0,
+   "corrected": true,
+   "note": "Fibonacci sum; key prints 133",
    "type": "numeric"
   },
   "3": {
@@ -9650,7 +9692,9 @@
    "type": "numeric"
   },
   "14": {
-   "answer": 162,
+   "answer": 264.0,
+   "corrected": true,
+   "note": "Fibonacci-like sum; key prints 162",
    "type": "numeric"
   },
   "15": {
@@ -9874,8 +9918,9 @@
    "type": "numeric"
   },
   "2": {
-   "answer": 1.4,
-   "display": "1\\frac{2}{5}",
+   "answer": 1.0,
+   "corrected": true,
+   "note": "point-to-line distance; key prints 1.4",
    "type": "numeric"
   },
   "3": {
@@ -9889,8 +9934,9 @@
    "type": "numeric"
   },
   "5": {
-   "answer": 0.2,
-   "display": "\\frac{1}{5}",
+   "answer": 0.4,
+   "corrected": true,
+   "note": "point-to-line distance; key prints 0.2",
    "type": "numeric"
   },
   "6": {
@@ -9903,8 +9949,9 @@
    "type": "numeric"
   },
   "8": {
-   "answer": 0.4,
-   "display": "\\frac{2}{5}",
+   "answer": 2.0,
+   "corrected": true,
+   "note": "point-to-line distance; key prints 0.4",
    "type": "numeric"
   }
  },
@@ -10026,7 +10073,9 @@
    "type": "numeric"
   },
   "8": {
-   "answer": 21515,
+   "answer": 2151.0,
+   "corrected": true,
+   "note": "asks for four digits; key prints five (21515)",
    "type": "numeric"
   },
   "9": {
@@ -10124,17 +10173,20 @@
  "4.5.4": {
   "1": {
    "answer": 0.5714285714285714,
-   "display": "\\frac{4}{7}",
+   "base": 8,
+   "display": "\\frac{4}{7}_{8}",
    "type": "numeric"
   },
   "10": {
-   "answer": 0.21428571428571427,
-   "display": "\\frac{15}{70}",
+   "answer": 0.23214285714285715,
+   "base": 8,
+   "display": "\\frac{15}{70}_{8}",
    "type": "numeric"
   },
   "11": {
-   "answer": 0.5166666666666667,
-   "display": "\\frac{31}{60}",
+   "answer": 0.5238095238095238,
+   "base": 7,
+   "display": "\\frac{31}{60}_{7}",
    "type": "numeric"
   },
   "12": {
@@ -10148,28 +10200,33 @@
    "type": "numeric"
   },
   "14": {
-   "answer": 0.21428571428571427,
-   "display": "\\frac{3}{14}",
+   "answer": 0.3,
+   "base": 6,
+   "display": "\\frac{3}{14}_{6}",
    "type": "numeric"
   },
   "2": {
    "answer": 0.5,
-   "display": "\\frac{1}{2}",
+   "base": 9,
+   "display": "\\frac{1}{2}_{9}",
    "type": "numeric"
   },
   "3": {
    "answer": 0.42857142857142855,
-   "display": "\\frac{3}{7}",
+   "base": 8,
+   "display": "\\frac{3}{7}_{8}",
    "type": "numeric"
   },
   "4": {
    "answer": 0.6666666666666666,
-   "display": "\\frac{2}{3}",
+   "base": 7,
+   "display": "\\frac{2}{3}_{7}",
    "type": "numeric"
   },
   "5": {
    "answer": 0.875,
-   "display": "\\frac{7}{8}",
+   "base": 9,
+   "display": "\\frac{7}{8}_{9}",
    "type": "numeric"
   },
   "6": {
@@ -10178,18 +10235,21 @@
    "type": "numeric"
   },
   "7": {
-   "answer": 0.62,
-   "display": "\\frac{31}{50}",
+   "answer": 0.6333333333333333,
+   "base": 6,
+   "display": "\\frac{31}{50}_{6}",
    "type": "numeric"
   },
   "8": {
-   "answer": 0.6142857142857143,
-   "display": "\\frac{43}{70}",
+   "answer": 0.625,
+   "base": 8,
+   "display": "\\frac{43}{70}_{8}",
    "type": "numeric"
   },
   "9": {
-   "answer": 0.43333333333333335,
-   "display": "\\frac{13}{30}",
+   "answer": 0.47619047619047616,
+   "base": 7,
+   "display": "\\frac{13}{30}_{7}",
    "type": "numeric"
   }
  },

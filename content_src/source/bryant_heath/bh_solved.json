@@ -255,23 +255,23 @@
  },
  "2.1.1": {
   "11": {
-   "status": "disputed",
+   "status": "confirmed",
    "value": 5.76
   },
   "17": {
-   "status": "disputed",
+   "status": "confirmed",
    "value": 9.61
   },
   "18": {
-   "status": "disputed",
+   "status": "confirmed",
    "value": 7.29
   },
   "23": {
-   "status": "disputed",
+   "status": "confirmed",
    "value": -27.0
   },
   "27": {
-   "status": "disputed",
+   "status": "confirmed",
    "value": 0.324
   },
   "6": {
@@ -1019,7 +1019,7 @@
    "value": -5.0
   },
   "3": {
-   "status": "disputed",
+   "status": "confirmed",
    "value": -0.5
   }
  },
@@ -1037,7 +1037,7 @@
    "value": 0.66666667
   },
   "4": {
-   "status": "disputed",
+   "status": "confirmed",
    "value": 17.0
   },
   "5": {
@@ -1111,7 +1111,7 @@
    "value": 804.0
   },
   "6": {
-   "status": "disputed",
+   "status": "confirmed",
    "value": 608.0
   },
   "7": {
@@ -1201,7 +1201,7 @@
    "value": 24.0
   },
   "28": {
-   "status": "disputed",
+   "status": "confirmed",
    "value": 21.0
   },
   "29": {
@@ -3027,7 +3027,7 @@
    "value": 0.2313131313131313
   },
   "4": {
-   "status": "disputed",
+   "status": "confirmed",
    "value": 0.30505050505050507
   },
   "5": {
@@ -3171,7 +3171,7 @@
    "value": 27.0
   },
   "7": {
-   "status": "disputed",
+   "status": "confirmed",
    "value": -3.0
   },
   "8": {
@@ -3375,7 +3375,7 @@
    "value": 16.0
   },
   "3": {
-   "status": "disputed",
+   "status": "confirmed",
    "value": 5.3
   },
   "4": {
@@ -3419,7 +3419,7 @@
    "value": 122.0
   },
   "2": {
-   "status": "disputed",
+   "status": "confirmed",
    "value": 143.0
   },
   "3": {
@@ -3457,7 +3457,7 @@
    "value": 693.0
   },
   "14": {
-   "status": "disputed",
+   "status": "confirmed",
    "value": 264.0
   },
   "15": {
@@ -3583,7 +3583,7 @@
    "value": 1.0
   },
   "2": {
-   "status": "disputed",
+   "status": "confirmed",
    "value": 1.0
   },
   "3": {
@@ -3595,7 +3595,7 @@
    "value": 0.15384615384615385
   },
   "5": {
-   "status": "disputed",
+   "status": "confirmed",
    "value": 0.4
   },
   "6": {
@@ -3607,7 +3607,7 @@
    "value": 0.2
   },
   "8": {
-   "status": "disputed",
+   "status": "confirmed",
    "value": 2.0
   }
  },
@@ -3725,7 +3725,7 @@
    "value": 3444.0
   },
   "8": {
-   "status": "disputed",
+   "status": "confirmed",
    "value": 2151.0
   },
   "9": {
@@ -3809,11 +3809,11 @@
    "value": 0.571429
   },
   "10": {
-   "status": "disputed",
+   "status": "confirmed",
    "value": 0.232143
   },
   "11": {
-   "status": "disputed",
+   "status": "confirmed",
    "value": 0.52381
   },
   "12": {
@@ -3825,7 +3825,7 @@
    "value": 0.333871
   },
   "14": {
-   "status": "disputed",
+   "status": "confirmed",
    "value": 0.3
   },
   "2": {
@@ -3849,15 +3849,15 @@
    "value": 0.666667
   },
   "7": {
-   "status": "disputed",
+   "status": "confirmed",
    "value": 0.633333
   },
   "8": {
-   "status": "disputed",
+   "status": "confirmed",
    "value": 0.625
   },
   "9": {
-   "status": "disputed",
+   "status": "confirmed",
    "value": 0.47619
   }
  },
@@ -3901,7 +3901,7 @@
    "value": 6.0
   },
   "13": {
-   "status": "disputed",
+   "status": "confirmed",
    "value": -1.33333
   },
   "14": {

@@ -15,7 +15,19 @@ from collections import Counter
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from verify_all import agrees  # noqa: E402
+from verify_all import agrees as strict_agrees  # noqa: E402
+
+
+def agrees(v, a):
+    """Like the solver check, but tolerant of the 6-significant-figure answers
+    the reasoning pass was asked for — 1.33333 and 4/3 are the same answer."""
+    r = strict_agrees(v, a)
+    if r:
+        return r
+    t = a.get('answer')
+    if t is None or r is None:
+        return r
+    return abs(v - t) <= max(1e-9, abs(t) * 1e-5)
 
 SRC = Path(__file__).resolve().parent.parent / 'content_src/source/bryant_heath'
 SOLVE = Path('/private/tmp/claude-501/-Users-juanantonioluera'

@@ -19,12 +19,8 @@ class Attempt {
     String? id,
   }) : id = id ?? _newId(questionId, at);
 
-  /// Unique and assigned once, at the moment the answer is graded.
-  ///
-  /// This is what makes syncing tractable later: merging two devices is a union
-  /// keyed on this id, with no conflict to resolve, because an attempt is an
-  /// immutable record of something that happened rather than a value anyone
-  /// edits. The same attempt arriving twice is dropped; nothing is overwritten.
+  /// Unique and assigned once, at the moment the answer is graded, so the same
+  /// attempt can never be counted twice — after a restored backup, say.
   final String id;
 
   final String questionId;
@@ -170,34 +166,6 @@ class AttemptStore {
     );
     await tmp.rename(_file.path);
   }
-
-  /// Folds in attempts from somewhere else — a second device, a restored
-  /// backup, a server — and returns how many were new.
-  ///
-  /// This is the whole reconciliation story, and it is a union rather than a
-  /// merge because the log only ever grows and no row is ever edited. Two
-  /// devices practising offline cannot conflict: each produced attempts the
-  /// other lacks, and the answer is simply both. Every statistic is recomputed
-  /// from the merged rows afterwards, so none of them can drift out of step
-  /// with the history they claim to summarise.
-  ///
-  /// Merging aggregates instead — a stored streak, a stored average — is what
-  /// makes this hard. Two devices each holding "streak: 4" have no way to say
-  /// whether the truth is 4 or 8.
-  Future<int> mergeFrom(Iterable<Attempt> incoming) async {
-    final known = _attempts.map((a) => a.id).toSet();
-    final fresh = incoming.where((a) => known.add(a.id)).toList();
-    if (fresh.isEmpty) return 0;
-    _attempts.addAll(fresh);
-    _attempts.sort((a, b) => a.at.compareTo(b.at));
-    await _flush();
-    return fresh.length;
-  }
-
-  /// Attempts recorded after [since], for sending upstream. The caller keeps
-  /// the high-water mark; the store stays ignorant of where anything syncs to.
-  List<Attempt> since(DateTime since) =>
-      _attempts.where((a) => a.at.isAfter(since)).toList();
 
   Future<void> clear() async {
     _attempts.clear();

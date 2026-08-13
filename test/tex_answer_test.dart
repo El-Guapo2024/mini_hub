@@ -4,8 +4,10 @@ import 'package:mini_hub/math/tex_answer.dart';
 void main() {
   test('expands mixed numbers', () {
     expect(expandMixedNumbers(r'2\frac{1}{2}'), r'(2+\frac{1}{2})');
-    expect(expandMixedNumbers(r'1\frac{1}{3}+2\frac{1}{6}'),
-        r'(1+\frac{1}{3})+(2+\frac{1}{6})');
+    expect(
+      expandMixedNumbers(r'1\frac{1}{3}+2\frac{1}{6}'),
+      r'(1+\frac{1}{3})+(2+\frac{1}{6})',
+    );
   });
 
   test('leaves plain fractions alone', () {
@@ -13,8 +15,10 @@ void main() {
   });
 
   test('handles nested fractions', () {
-    expect(expandMixedNumbers(r'2\frac{\frac{1}{2}}{3}'),
-        r'(2+\frac{\frac{1}{2}}{3})');
+    expect(
+      expandMixedNumbers(r'2\frac{\frac{1}{2}}{3}'),
+      r'(2+\frac{\frac{1}{2}}{3})',
+    );
   });
 
   test('evaluates equivalent notations', () {

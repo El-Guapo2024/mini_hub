@@ -15,6 +15,7 @@ int latexBlocks(String source) {
       }
     }
   }
+
   walk(doc.parseLines(source.split('\n')));
   return count;
 }

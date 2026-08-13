@@ -9,10 +9,7 @@ import 'package:markdown/markdown.dart' as md;
 /// LatexBlockSyntax and silently renders as literal text.
 int latexBlocks(String source) {
   final doc = md.Document(
-    extensionSet: md.ExtensionSet(
-      [LatexBlockSyntax()],
-      [LatexInlineSyntax()],
-    ),
+    extensionSet: md.ExtensionSet([LatexBlockSyntax()], [LatexInlineSyntax()]),
   );
   var count = 0;
   void walk(List<md.Node> nodes) {
@@ -51,9 +48,21 @@ void main() {
       if (RegExp(r'\$\$[^\n]').hasMatch(src)) sameLine.add(name);
     }
 
-    expect(withMath, greaterThan(50), reason: 'expected many lessons to use display math');
-    expect(broken, isEmpty, reason: 'lessons whose display math renders as raw text: $broken');
-    expect(sameLine, isEmpty, reason: 'lessons with same-line \$\$ delimiters: $sameLine');
+    expect(
+      withMath,
+      greaterThan(50),
+      reason: 'expected many lessons to use display math',
+    );
+    expect(
+      broken,
+      isEmpty,
+      reason: 'lessons whose display math renders as raw text: $broken',
+    );
+    expect(
+      sameLine,
+      isEmpty,
+      reason: 'lessons with same-line \$\$ delimiters: $sameLine',
+    );
   });
 
   test('no topic title contains LaTeX', () {
@@ -63,12 +72,22 @@ void main() {
         .listSync()
         .whereType<Directory>()
         .map((d) => File('${d.path}/topic.yml'))
-        .where((f) => f.existsSync() && f.readAsStringSync().split('\n')
-            .any((l) => l.startsWith('title:') && l.contains(r'$')))
+        .where(
+          (f) =>
+              f.existsSync() &&
+              f
+                  .readAsStringSync()
+                  .split('\n')
+                  .any((l) => l.startsWith('title:') && l.contains(r'$')),
+        )
         .map((f) => f.parent.path.split('/').last)
         .toList();
 
-    expect(withMath, isEmpty, reason: 'topics whose title renders as raw LaTeX: $withMath');
+    expect(
+      withMath,
+      isEmpty,
+      reason: 'topics whose title renders as raw LaTeX: $withMath',
+    );
   });
 
   test('no lesson uses a markdown table', () {
@@ -79,8 +98,11 @@ void main() {
         .listSync()
         .whereType<Directory>()
         .map((d) => File('${d.path}/lesson.md'))
-        .where((f) => f.existsSync() &&
-            f.readAsStringSync().split('\n').any((l) => l.startsWith('|')))
+        .where(
+          (f) =>
+              f.existsSync() &&
+              f.readAsStringSync().split('\n').any((l) => l.startsWith('|')),
+        )
         .map((f) => f.parent.path.split('/').last)
         .toList();
 

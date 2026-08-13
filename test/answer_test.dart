@@ -65,10 +65,9 @@ void main() {
   group('input configuration', () {
     test('only complex answers need a symbol on the keyboard', () {
       expect(const NumericAnswer(value: 5).inputVariables, isEmpty);
-      expect(
-        const ComplexAnswer(real: 16, imaginary: 16).inputVariables,
-        ['i'],
-      );
+      expect(const ComplexAnswer(real: 16, imaginary: 16).inputVariables, [
+        'i',
+      ]);
     });
 
     test('a plain numeric answer needs no hint', () {
@@ -94,10 +93,7 @@ void main() {
 
     test('display round-trips', () {
       expect(a.display, '16+16i');
-      expect(
-        const ComplexAnswer(real: 3, imaginary: -4).display,
-        '3-4i',
-      );
+      expect(const ComplexAnswer(real: 3, imaginary: -4).display, '3-4i');
     });
   });
 

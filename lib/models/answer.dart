@@ -91,10 +91,10 @@ class NumericAnswer extends Answer {
 }
 
 /// An estimation problem, marked `(*)` in the manual, which states the rule as
-/// "±5% accuracy is needed". The book prints the resulting band rather than a
-/// value, but rounds the bounds to whole numbers — so on small answers the
-/// printed band drifts off the rule in both directions (24–28 around 26 is
-/// ±7.7%, while 176–194 around 185 is only ±4.9%).
+/// "±5% accuracy is needed" and then prints the resulting band per question.
+/// Grading uses the printed bounds verbatim, so a student is marked exactly as
+/// the answer key would mark them — including where the book rounded the bounds
+/// to whole numbers and landed slightly off its own rule.
 class ApproxAnswer extends Answer {
   const ApproxAnswer({required this.low, required this.high});
 
@@ -103,19 +103,10 @@ class ApproxAnswer extends Answer {
 
   double get midpoint => (low + high) / 2;
 
-  /// The stated rule, ±5% of the exact answer.
-  static const _rule = 0.05;
-
   @override
   bool accepts(String tex) {
     final entered = evaluateTex(tex);
-    if (entered == null) return false;
-    // Whichever is kinder: the printed band, or the rule the manual states.
-    // A student exactly 5% off must never be marked wrong because the book
-    // rounded a bound inward.
-    if (entered >= low && entered <= high) return true;
-    final slack = midpoint.abs() * _rule;
-    return (entered - midpoint).abs() <= slack;
+    return entered != null && entered >= low && entered <= high;
   }
 
   @override

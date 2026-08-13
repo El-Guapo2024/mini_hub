@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
+import 'dart:math';
 
 import 'package:path_provider/path_provider.dart';
 
@@ -7,7 +8,7 @@ import 'package:path_provider/path_provider.dart';
 /// rows, so nothing aggregated is ever stored — a rolling average that turns
 /// out to be defined wrong is a recompute, not a migration.
 class Attempt {
-  const Attempt({
+  Attempt({
     required this.questionId,
     required this.topic,
     required this.type,
@@ -15,7 +16,16 @@ class Attempt {
     required this.at,
     this.given,
     this.elapsedMs,
-  });
+    String? id,
+  }) : id = id ?? _newId(questionId, at);
+
+  /// Unique and assigned once, at the moment the answer is graded.
+  ///
+  /// This is what makes syncing tractable later: merging two devices is a union
+  /// keyed on this id, with no conflict to resolve, because an attempt is an
+  /// immutable record of something that happened rather than a value anyone
+  /// edits. The same attempt arriving twice is dropped; nothing is overwritten.
+  final String id;
 
   final String questionId;
   final String topic;
@@ -30,7 +40,12 @@ class Attempt {
   final String? given;
   final int? elapsedMs;
 
+  static String _newId(String questionId, DateTime at) =>
+      '$questionId.${at.toUtc().microsecondsSinceEpoch}.'
+      '${Random().nextInt(1 << 32).toRadixString(36)}';
+
   factory Attempt.fromJson(Map<String, dynamic> json) => Attempt(
+    id: json['id'] as String?,
     questionId: json['q'] as String,
     topic: json['t'] as String,
     type: json['k'] as String? ?? 'numerical',
@@ -43,6 +58,7 @@ class Attempt {
   // Keys are terse because this file grows one entry per answered question and
   // is read in full on launch.
   Map<String, dynamic> toJson() => {
+    'id': id,
     'q': questionId,
     't': topic,
     'k': type,
@@ -154,6 +170,34 @@ class AttemptStore {
     );
     await tmp.rename(_file.path);
   }
+
+  /// Folds in attempts from somewhere else — a second device, a restored
+  /// backup, a server — and returns how many were new.
+  ///
+  /// This is the whole reconciliation story, and it is a union rather than a
+  /// merge because the log only ever grows and no row is ever edited. Two
+  /// devices practising offline cannot conflict: each produced attempts the
+  /// other lacks, and the answer is simply both. Every statistic is recomputed
+  /// from the merged rows afterwards, so none of them can drift out of step
+  /// with the history they claim to summarise.
+  ///
+  /// Merging aggregates instead — a stored streak, a stored average — is what
+  /// makes this hard. Two devices each holding "streak: 4" have no way to say
+  /// whether the truth is 4 or 8.
+  Future<int> mergeFrom(Iterable<Attempt> incoming) async {
+    final known = _attempts.map((a) => a.id).toSet();
+    final fresh = incoming.where((a) => known.add(a.id)).toList();
+    if (fresh.isEmpty) return 0;
+    _attempts.addAll(fresh);
+    _attempts.sort((a, b) => a.at.compareTo(b.at));
+    await _flush();
+    return fresh.length;
+  }
+
+  /// Attempts recorded after [since], for sending upstream. The caller keeps
+  /// the high-water mark; the store stays ignorant of where anything syncs to.
+  List<Attempt> since(DateTime since) =>
+      _attempts.where((a) => a.at.isAfter(since)).toList();
 
   Future<void> clear() async {
     _attempts.clear();

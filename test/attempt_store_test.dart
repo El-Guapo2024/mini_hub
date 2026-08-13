@@ -169,6 +169,83 @@ void main() {
     expect(byType['approx'], 0.0, reason: 'weak across both topics');
   });
 
+  group('reconciliation', () {
+    test('merging two devices is a union, and stats recompute', () async {
+      final phone = await AttemptStore.openAt(file);
+      await phone.record(at('squares', correct: false, when: day0));
+
+      final tablet = [
+        at(
+          'squares',
+          correct: true,
+          when: day0.add(const Duration(hours: 1)),
+          id: 'bh.1.2.1.q2',
+        ),
+        at(
+          'cubes',
+          correct: true,
+          when: day0.add(const Duration(hours: 2)),
+          id: 'bh.1.2.1.q3',
+        ),
+      ];
+
+      expect(await phone.mergeFrom(tablet), 2);
+      expect(phone.all.length, 3);
+      // The merged history, not the local one, is what the stats describe.
+      expect(phone.statsFor('squares').attempts, 2);
+      expect(phone.statsFor('squares').accuracy, 0.5);
+      expect(phone.statsByTopic().keys, unorderedEquals(['squares', 'cubes']));
+    });
+
+    test('merging the same attempts twice changes nothing', () async {
+      final store = await AttemptStore.openAt(file);
+      await store.record(at('squares', correct: true, when: day0));
+
+      final copy = store.all.toList();
+      expect(await store.mergeFrom(copy), 0);
+      expect(await store.mergeFrom(copy), 0);
+      expect(store.all.length, 1);
+    });
+
+    test('merged rows survive a reopen in timestamp order', () async {
+      final store = await AttemptStore.openAt(file);
+      await store.record(
+        at('squares', correct: true, when: day0.add(const Duration(hours: 5))),
+      );
+      await store.mergeFrom([at('squares', correct: false, when: day0)]);
+
+      final reopened = await AttemptStore.openAt(file);
+      expect(reopened.all.length, 2);
+      expect(reopened.all.first.at, day0, reason: 'sorted by when it happened');
+      // The older attempt merged in must not break the streak, since the most
+      // recent answer is still the correct one.
+      expect(reopened.statsFor('squares').streak, 1);
+    });
+
+    test('an id is stable across a save and reload', () async {
+      final store = await AttemptStore.openAt(file);
+      await store.record(at('squares', correct: true, when: day0));
+      final id = store.all.single.id;
+
+      final reopened = await AttemptStore.openAt(file);
+      expect(reopened.all.single.id, id);
+      // So a round trip through the file cannot duplicate an attempt.
+      expect(await store.mergeFrom(reopened.all), 0);
+    });
+
+    test('since() reports only what is new to the caller', () async {
+      final store = await AttemptStore.openAt(file);
+      await store.record(at('squares', correct: true, when: day0));
+      await store.record(
+        at('cubes', correct: true, when: day0.add(const Duration(days: 2))),
+      );
+
+      final mark = day0.add(const Duration(days: 1));
+      expect(store.since(mark).map((a) => a.topic), ['cubes']);
+      expect(store.since(day0.subtract(const Duration(days: 1))).length, 2);
+    });
+  });
+
   test('stats group across every topic at once', () async {
     final store = await AttemptStore.openAt(file);
     await store.record(at('squares', correct: true, when: day0));

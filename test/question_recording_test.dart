@@ -8,14 +8,20 @@ import 'package:mini_hub/data/attempt_store.dart';
 import 'package:mini_hub/models/answer.dart';
 import 'package:mini_hub/models/question.dart';
 import 'package:mini_hub/widgets/question_widget.dart';
+import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 
 void main() {
   late Directory dir;
   late AttemptStore store;
 
+  setUpAll(() {
+    sqfliteFfiInit();
+    databaseFactory = databaseFactoryFfi;
+  });
+
   setUp(() async {
     dir = Directory.systemTemp.createTempSync('recording_test');
-    store = await AttemptStore.openAt(File('${dir.path}/attempts.jsonl'));
+    store = await AttemptStore.openAt('${dir.path}/attempts.db');
   });
 
   tearDown(() => dir.deleteSync(recursive: true));

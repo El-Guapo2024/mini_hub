@@ -1,8 +1,7 @@
-import 'dart:convert';
-import 'dart:io';
 import 'dart:math';
 
 import 'package:path_provider/path_provider.dart';
+import 'package:sqflite/sqflite.dart';
 
 /// One graded response. Everything the statistics need is derived from these
 /// rows, so nothing aggregated is ever stored — a rolling average that turns
@@ -40,28 +39,27 @@ class Attempt {
       '$questionId.${at.toUtc().microsecondsSinceEpoch}.'
       '${Random().nextInt(1 << 32).toRadixString(36)}';
 
-  factory Attempt.fromJson(Map<String, dynamic> json) => Attempt(
-    id: json['id'] as String?,
-    questionId: json['q'] as String,
-    topic: json['t'] as String,
-    type: json['k'] as String? ?? 'numerical',
-    correct: json['c'] as bool,
-    at: DateTime.fromMillisecondsSinceEpoch(json['at'] as int, isUtc: true),
-    given: json['g'] as String?,
-    elapsedMs: json['ms'] as int?,
+  factory Attempt.fromRow(Map<String, Object?> row) => Attempt(
+    id: row['id'] as String,
+    questionId: row['question_id'] as String,
+    topic: row['topic'] as String,
+    type: row['type'] as String,
+    // SQLite has no boolean type.
+    correct: (row['correct'] as int) == 1,
+    at: DateTime.fromMillisecondsSinceEpoch(row['at'] as int, isUtc: true),
+    given: row['given_tex'] as String?,
+    elapsedMs: row['elapsed_ms'] as int?,
   );
 
-  // Keys are terse because this file grows one entry per answered question and
-  // is read in full on launch.
-  Map<String, dynamic> toJson() => {
+  Map<String, Object?> toRow() => {
     'id': id,
-    'q': questionId,
-    't': topic,
-    'k': type,
-    'c': correct,
+    'question_id': questionId,
+    'topic': topic,
+    'type': type,
+    'correct': correct ? 1 : 0,
     'at': at.toUtc().millisecondsSinceEpoch,
-    if (given != null) 'g': given,
-    if (elapsedMs != null) 'ms': elapsedMs,
+    'given_tex': given,
+    'elapsed_ms': elapsedMs,
   };
 }
 
@@ -106,31 +104,25 @@ class TopicStats {
       attempts == 0 ? 1 : (1 - recent) * 0.6 + freshness(now) * 0.4;
 }
 
-/// An append-only log of attempts, one JSON object per line.
+/// An append-only log of attempts, stored in SQLite.
 ///
-/// Deliberately not SQLite. The log is a few hundred KB even after a year of
-/// daily practice, it is only ever appended to and read whole, and there is no
-/// query a database would answer faster than a loop over a list. SQLite would
-/// add a schema, migrations and an async open for no gain at this size.
+/// SQLite earns its place here for durability rather than speed: at this size no
+/// query needs an index, but every write is a transaction, so a process killed
+/// mid-write leaves the log intact instead of truncated. Hand-rolling that over
+/// a text file means owning the failure modes yourself.
 ///
-/// One object per line rather than one JSON array, for two reasons: recording an
-/// answer appends a single line instead of re-encoding the entire history, and a
-/// write cut short by the process dying costs the last line rather than the
-/// whole file.
+/// Rows are never updated or deleted in normal use. The statistics below all
+/// derive from them, so nothing aggregated is stored and redefining a figure is
+/// a recompute rather than a migration.
 class AttemptStore {
-  AttemptStore._(this._file, this._attempts, this.skippedRows);
+  AttemptStore._(this._db, this._attempts);
 
-  final File _file;
+  final Database _db;
+
+  /// The whole log, held in memory. It is read in full for every statistic and
+  /// is small enough to keep — a year of daily practice is a few thousand rows.
+  /// SQLite is the durable copy, not the query engine.
   final List<Attempt> _attempts;
-
-  /// Lines that could not be read back, from a torn write or a hand-edited
-  /// file. Surfaced rather than hidden so a bug here can't pass for a student
-  /// who simply hasn't practised.
-  final int skippedRows;
-
-  /// Serializes writes. [record] is called from the UI without awaiting, so two
-  /// quick answers can otherwise overlap mid-append and interleave their bytes.
-  Future<void> _writes = Future.value();
 
   /// Attempts counted by [TopicStats.recent].
   static const rollingWindow = 10;
@@ -138,66 +130,61 @@ class AttemptStore {
   /// Days after which a lesson counts as fully stale.
   static const staleAfterDays = 30;
 
+  static const _table = 'attempts';
+
   static Future<AttemptStore> open() async {
     final dir = await getApplicationDocumentsDirectory();
-    return openAt(File('${dir.path}/attempts.jsonl'));
+    return openAt('${dir.path}/attempts.db');
   }
 
-  /// Opens a store backed by a specific file. Used by tests, which have no
-  /// platform channels and so cannot ask for the documents directory.
-  static Future<AttemptStore> openAt(File file) async {
-    final attempts = <Attempt>[];
-    var skipped = 0;
+  /// Opens a store at a specific path. Tests use this with an ffi factory,
+  /// having no platform channels to reach the documents directory.
+  static Future<AttemptStore> openAt(String path) async {
+    final db = await openDatabase(
+      path,
+      version: 1,
+      onCreate: (db, _) async {
+        // `id` is the primary key, so the same attempt can never land twice.
+        await db.execute('''
+          CREATE TABLE $_table (
+            id TEXT PRIMARY KEY,
+            question_id TEXT NOT NULL,
+            topic TEXT NOT NULL,
+            type TEXT NOT NULL,
+            correct INTEGER NOT NULL,
+            at INTEGER NOT NULL,
+            given_tex TEXT,
+            elapsed_ms INTEGER
+          )
+        ''');
+        await db.execute('CREATE INDEX idx_topic ON $_table (topic)');
+      },
+    );
 
-    if (file.existsSync()) {
-      for (final line in const LineSplitter().convert(
-        await file.readAsString(),
-      )) {
-        if (line.trim().isEmpty) continue;
-        try {
-          attempts.add(
-            Attempt.fromJson(jsonDecode(line) as Map<String, dynamic>),
-          );
-        } on Object {
-          // One unreadable line must not cost the rest of the history, and must
-          // never stop the app from starting. Anything malformed is dropped:
-          // a bad row is not worth a crash on launch.
-          skipped++;
-        }
-      }
-      attempts.sort((a, b) => a.at.compareTo(b.at));
-    }
-    return AttemptStore._(file, attempts, skipped);
+    final rows = await db.query(_table, orderBy: 'at ASC');
+    return AttemptStore._(db, rows.map(Attempt.fromRow).toList());
   }
 
   List<Attempt> get all => List.unmodifiable(_attempts);
 
-  /// Appends an attempt. The returned future completes once it is on disk;
-  /// callers in the UI may safely ignore it, since the in-memory list is
-  /// updated first and writes are ordered.
-  Future<void> record(Attempt attempt) {
+  /// Records an attempt. The returned future completes once it is committed;
+  /// callers in the UI may ignore it, since the in-memory list updates first.
+  Future<void> record(Attempt attempt) async {
     _attempts.add(attempt);
-    return _enqueue(
-      () => _file.writeAsString(
-        '${jsonEncode(attempt.toJson())}\n',
-        mode: FileMode.append,
-        flush: true,
-      ),
+    await _db.insert(
+      _table,
+      attempt.toRow(),
+      // Replaying the same attempt is a no-op rather than an error.
+      conflictAlgorithm: ConflictAlgorithm.ignore,
     );
   }
 
-  Future<void> clear() {
+  Future<void> clear() async {
     _attempts.clear();
-    return _enqueue(() => _file.writeAsString('', flush: true));
+    await _db.delete(_table);
   }
 
-  /// Runs [write] after every write already queued, whether or not those
-  /// succeeded — one failed append must not wedge the queue forever.
-  Future<void> _enqueue(Future<void> Function() write) {
-    final next = _writes.then((_) => write(), onError: (_) => write());
-    _writes = next.catchError((_) {});
-    return next;
-  }
+  Future<void> close() => _db.close();
 
   TopicStats statsFor(String topic) {
     final rows = _attempts.where((a) => a.topic == topic).toList();

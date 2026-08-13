@@ -106,18 +106,31 @@ class TopicStats {
       attempts == 0 ? 1 : (1 - recent) * 0.6 + freshness(now) * 0.4;
 }
 
-/// An append-only log of attempts, persisted as one JSON file.
+/// An append-only log of attempts, one JSON object per line.
 ///
-/// Deliberately not SQLite. The whole log is a few hundred KB even after a year
-/// of daily practice, it is only ever appended to and read whole, and there are
-/// no queries a database would answer faster than a loop over a list. SQLite
-/// would add a schema, migrations and an async open for no gain at this size.
-/// If sync across devices ever lands, that is the moment to revisit it.
+/// Deliberately not SQLite. The log is a few hundred KB even after a year of
+/// daily practice, it is only ever appended to and read whole, and there is no
+/// query a database would answer faster than a loop over a list. SQLite would
+/// add a schema, migrations and an async open for no gain at this size.
+///
+/// One object per line rather than one JSON array, for two reasons: recording an
+/// answer appends a single line instead of re-encoding the entire history, and a
+/// write cut short by the process dying costs the last line rather than the
+/// whole file.
 class AttemptStore {
-  AttemptStore._(this._file, this._attempts);
+  AttemptStore._(this._file, this._attempts, this.skippedRows);
 
   final File _file;
   final List<Attempt> _attempts;
+
+  /// Lines that could not be read back, from a torn write or a hand-edited
+  /// file. Surfaced rather than hidden so a bug here can't pass for a student
+  /// who simply hasn't practised.
+  final int skippedRows;
+
+  /// Serializes writes. [record] is called from the UI without awaiting, so two
+  /// quick answers can otherwise overlap mid-append and interleave their bytes.
+  Future<void> _writes = Future.value();
 
   /// Attempts counted by [TopicStats.recent].
   static const rollingWindow = 10;
@@ -127,49 +140,63 @@ class AttemptStore {
 
   static Future<AttemptStore> open() async {
     final dir = await getApplicationDocumentsDirectory();
-    return openAt(File('${dir.path}/attempts.json'));
+    return openAt(File('${dir.path}/attempts.jsonl'));
   }
 
   /// Opens a store backed by a specific file. Used by tests, which have no
   /// platform channels and so cannot ask for the documents directory.
   static Future<AttemptStore> openAt(File file) async {
     final attempts = <Attempt>[];
+    var skipped = 0;
+
     if (file.existsSync()) {
-      try {
-        final decoded = jsonDecode(await file.readAsString()) as List<dynamic>;
-        for (final row in decoded) {
-          attempts.add(Attempt.fromJson(row as Map<String, dynamic>));
+      for (final line in const LineSplitter().convert(
+        await file.readAsString(),
+      )) {
+        if (line.trim().isEmpty) continue;
+        try {
+          attempts.add(
+            Attempt.fromJson(jsonDecode(line) as Map<String, dynamic>),
+          );
+        } on Object {
+          // One unreadable line must not cost the rest of the history, and must
+          // never stop the app from starting. Anything malformed is dropped:
+          // a bad row is not worth a crash on launch.
+          skipped++;
         }
-      } on FormatException {
-        // A truncated write (killed mid-save) must not brick practice. Losing
-        // history is bad; refusing to launch is worse.
-        attempts.clear();
       }
+      attempts.sort((a, b) => a.at.compareTo(b.at));
     }
-    return AttemptStore._(file, attempts);
+    return AttemptStore._(file, attempts, skipped);
   }
 
   List<Attempt> get all => List.unmodifiable(_attempts);
 
-  Future<void> record(Attempt attempt) async {
+  /// Appends an attempt. The returned future completes once it is on disk;
+  /// callers in the UI may safely ignore it, since the in-memory list is
+  /// updated first and writes are ordered.
+  Future<void> record(Attempt attempt) {
     _attempts.add(attempt);
-    await _flush();
-  }
-
-  Future<void> _flush() async {
-    // Write beside the target and rename, so an interrupted write cannot leave
-    // a half-written log where the real one was.
-    final tmp = File('${_file.path}.tmp');
-    await tmp.writeAsString(
-      jsonEncode(_attempts.map((a) => a.toJson()).toList()),
-      flush: true,
+    return _enqueue(
+      () => _file.writeAsString(
+        '${jsonEncode(attempt.toJson())}\n',
+        mode: FileMode.append,
+        flush: true,
+      ),
     );
-    await tmp.rename(_file.path);
   }
 
-  Future<void> clear() async {
+  Future<void> clear() {
     _attempts.clear();
-    await _flush();
+    return _enqueue(() => _file.writeAsString('', flush: true));
+  }
+
+  /// Runs [write] after every write already queued, whether or not those
+  /// succeeded — one failed append must not wedge the queue forever.
+  Future<void> _enqueue(Future<void> Function() write) {
+    final next = _writes.then((_) => write(), onError: (_) => write());
+    _writes = next.catchError((_) {});
+    return next;
   }
 
   TopicStats statsFor(String topic) {

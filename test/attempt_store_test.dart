@@ -9,7 +9,7 @@ void main() {
 
   setUp(() {
     dir = Directory.systemTemp.createTempSync('attempts_test');
-    file = File('${dir.path}/attempts.json');
+    file = File('${dir.path}/attempts.jsonl');
   });
 
   tearDown(() => dir.deleteSync(recursive: true));
@@ -49,14 +49,65 @@ void main() {
     expect(reopened.all.first.at, day0);
   });
 
-  test('a corrupt file loses history instead of blocking launch', () async {
-    // A write killed halfway must not leave the app unable to start.
-    file.writeAsStringSync('[{"q":"a","t":"squares",');
+  test('a torn final line costs one attempt, not the history', () async {
+    final store = await AttemptStore.openAt(file);
+    await store.record(at('squares', correct: true, when: day0));
+    await store.record(
+      at('cubes', correct: true, when: day0.add(const Duration(hours: 1))),
+    );
+    // Simulate the process dying mid-append.
+    file.writeAsStringSync('{"id":"x","q":"a","t":"sq', mode: FileMode.append);
+
+    final reopened = await AttemptStore.openAt(file);
+    expect(reopened.all.length, 2, reason: 'the intact lines still load');
+    expect(reopened.skippedRows, 1);
+  });
+
+  test('a garbage file does not stop the app from starting', () async {
+    file.writeAsStringSync('not json at all\n{"also":"wrong"}\n');
     final store = await AttemptStore.openAt(file);
     expect(store.all, isEmpty);
+    expect(store.skippedRows, 2);
 
+    // And it recovers: new attempts append and read back.
     await store.record(at('squares', correct: true, when: day0));
     expect((await AttemptStore.openAt(file)).all.length, 1);
+  });
+
+  test('blank lines are ignored rather than counted as damage', () async {
+    file.writeAsStringSync('\n\n');
+    final store = await AttemptStore.openAt(file);
+    expect(store.all, isEmpty);
+    expect(store.skippedRows, 0);
+  });
+
+  test('concurrent records do not interleave on disk', () async {
+    // record() is called from the UI without awaiting, so a fast student can
+    // have two writes in flight at once.
+    final store = await AttemptStore.openAt(file);
+    await Future.wait([
+      for (var i = 0; i < 25; i++)
+        store.record(
+          at('squares', correct: true, when: day0.add(Duration(seconds: i))),
+        ),
+    ]);
+
+    final reopened = await AttemptStore.openAt(file);
+    expect(reopened.all.length, 25);
+    expect(
+      reopened.skippedRows,
+      0,
+      reason: 'no line was torn by another write',
+    );
+  });
+
+  test('clear empties the file as well as the list', () async {
+    final store = await AttemptStore.openAt(file);
+    await store.record(at('squares', correct: true, when: day0));
+    await store.clear();
+
+    expect(store.all, isEmpty);
+    expect((await AttemptStore.openAt(file)).all, isEmpty);
   });
 
   group('TopicStats', () {

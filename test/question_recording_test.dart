@@ -15,7 +15,7 @@ void main() {
 
   setUp(() async {
     dir = Directory.systemTemp.createTempSync('recording_test');
-    store = await AttemptStore.openAt(File('${dir.path}/attempts.json'));
+    store = await AttemptStore.openAt(File('${dir.path}/attempts.jsonl'));
   });
 
   tearDown(() => dir.deleteSync(recursive: true));

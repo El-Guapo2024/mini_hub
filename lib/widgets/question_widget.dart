@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_math_fork/flutter_math.dart';
 import 'package:math_keyboard/math_keyboard.dart';
 
+import '../data/attempt_scope.dart';
+import '../data/attempt_store.dart';
 import '../models/question.dart';
 
 const _surface = Color(0xFF121212);
@@ -24,6 +26,15 @@ class _QuestionWidgetState extends State<QuestionWidget> {
   final _controller = MathFieldEditingController();
   _Result? _result;
 
+  /// Starts at the first keystroke, not at build: a question sitting on screen
+  /// while the student reads the lesson above it isn't time spent solving.
+  DateTime? _startedAt;
+
+  /// Number sense is a timed event, so an answer taken to the minute is not
+  /// really an answer. Anki caps review time the same way, to stop a card left
+  /// open overnight from wrecking the statistics.
+  static const _maxElapsed = Duration(minutes: 1);
+
   @override
   void dispose() {
     _controller.dispose();
@@ -33,9 +44,36 @@ class _QuestionWidgetState extends State<QuestionWidget> {
   void _check(String tex) {
     final correct = widget.question.answer.accepts(tex);
     setState(() => _result = correct ? _Result.correct : _Result.wrong);
+    _record(tex, correct);
+    _startedAt = null;
+  }
+
+  void _record(String tex, bool correct) {
+    final store = AttemptScope.maybeOf(context);
+    // No scope means nothing to record to — a test, or a question previewed
+    // outside the app. Grading still works; it just isn't remembered.
+    if (store == null) return;
+
+    final started = _startedAt;
+    final elapsed = started == null ? null : DateTime.now().difference(started);
+
+    store.record(
+      Attempt(
+        questionId: widget.question.id,
+        topic: widget.question.topic ?? 'unknown',
+        type: widget.question.type,
+        correct: correct,
+        at: DateTime.now().toUtc(),
+        given: tex,
+        elapsedMs: elapsed == null || elapsed > _maxElapsed
+            ? null
+            : elapsed.inMilliseconds,
+      ),
+    );
   }
 
   void _clearResult(String _) {
+    _startedAt ??= DateTime.now();
     if (_result != null) setState(() => _result = null);
   }
 
@@ -143,10 +181,7 @@ class _QuestionWidgetState extends State<QuestionWidget> {
                   ),
                 ),
               ),
-              if (_footer != null) ...[
-                const SizedBox(height: 8),
-                _footer!,
-              ],
+              if (_footer != null) ...[const SizedBox(height: 8), _footer!],
             ],
           ),
         ),

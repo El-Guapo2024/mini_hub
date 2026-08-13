@@ -28,8 +28,9 @@ String expandMixedNumbers(String tex) {
     final start = from + match.start;
     final fracArgs = from + match.end;
     final numeratorEnd = _afterMatchingBrace(result, fracArgs);
-    final denominatorEnd =
-        numeratorEnd == -1 ? -1 : _afterMatchingBrace(result, numeratorEnd);
+    final denominatorEnd = numeratorEnd == -1
+        ? -1
+        : _afterMatchingBrace(result, numeratorEnd);
 
     if (denominatorEnd == -1) {
       from = fracArgs;
@@ -51,7 +52,9 @@ final _imaginaryUnit = RegExp(r'i$');
 /// `math_keyboard` emits a declared variable as `\mathrm{i}`, so the unit has
 /// to be folded to a bare `i` *before* braces are stripped — otherwise
 /// `\mathrm{i}` collapses to `\mathrmi` and the `\mathrm` reads as a coefficient.
-final _imaginaryForms = RegExp(r'\\(?:mathrm|text|mathit)\s*\{\s*i\s*\}|\\imath');
+final _imaginaryForms = RegExp(
+  r'\\(?:mathrm|text|mathit)\s*\{\s*i\s*\}|\\imath',
+);
 
 /// Splits a complex answer into `(real, imaginary)`, or null if the input is
 /// not a well-formed complex number.

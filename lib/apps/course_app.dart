@@ -68,7 +68,9 @@ class _StemaArenaScreenState extends State<StemaArenaScreen> {
         children: courses.map((course) {
           return Card(
             color: Colors.grey.shade900,
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+            ),
             child: InkWell(
               borderRadius: BorderRadius.circular(20),
               onTap: () {
@@ -84,7 +86,10 @@ class _StemaArenaScreenState extends State<StemaArenaScreen> {
                 children: [
                   Icon(Icons.functions, size: 48, color: Colors.teal.shade400),
                   const SizedBox(height: 8),
-                  Text(course.title, style: const TextStyle(color: Colors.white)),
+                  Text(
+                    course.title,
+                    style: const TextStyle(color: Colors.white),
+                  ),
                 ],
               ),
             ),

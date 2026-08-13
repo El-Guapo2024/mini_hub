@@ -13,9 +13,9 @@ class QuestionView extends StatelessWidget {
     return switch (question.type) {
       'numerical' => QuestionWidget(question: question),
       _ => Text(
-          'unsupported question type: ${question.type}',
-          style: const TextStyle(color: Colors.redAccent),
-        ),
+        'unsupported question type: ${question.type}',
+        style: const TextStyle(color: Colors.redAccent),
+      ),
     };
   }
 }

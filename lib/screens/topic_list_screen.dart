@@ -26,7 +26,9 @@ class _TopicListScreenState extends State<TopicListScreen> {
   Future<void> loadData() async {
     final result = <Topic>[];
     for (final topicId in widget.course.topicIds) {
-      result.add(await topicLoader.load('${widget.course.folderPath}/$topicId'));
+      result.add(
+        await topicLoader.load('${widget.course.folderPath}/$topicId'),
+      );
     }
     setState(() {
       topics = result;
@@ -50,7 +52,9 @@ class _TopicListScreenState extends State<TopicListScreen> {
           return Card(
             color: Colors.grey.shade900,
             margin: const EdgeInsets.only(bottom: 12),
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+            ),
             child: ListTile(
               contentPadding: const EdgeInsets.all(16),
               leading: CircleAvatar(
@@ -59,13 +63,18 @@ class _TopicListScreenState extends State<TopicListScreen> {
               ),
               title: Text(
                 topic.title,
-                style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               trailing: const Icon(Icons.chevron_right, color: Colors.white54),
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => TopicScreen(topic: topic)),
+                  MaterialPageRoute(
+                    builder: (context) => TopicScreen(topic: topic),
+                  ),
                 );
               },
             ),

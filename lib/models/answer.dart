@@ -165,7 +165,6 @@ class ComplexAnswer extends Answer {
 }
 
 /// Renders a double without a trailing `.0` on whole numbers.
-String _trim(double v) =>
-    v == v.roundToDouble() && v.abs() < 1e15
+String _trim(double v) => v == v.roundToDouble() && v.abs() < 1e15
     ? v.toInt().toString()
     : v.toString();

@@ -1,3 +1,5 @@
+import 'ids.dart';
+
 /// A course, and where on disk it lives.
 ///
 /// Serialization is hand-written: the folder path is not in the file, it is
@@ -17,7 +19,7 @@ class Course {
   final String icon;
 
   /// Slugs of the topics this course offers, in the order they are taught.
-  final List<String> topicIds;
+  final List<TopicId> topicIds;
 
   /// The directory the course was loaded from, with no trailing slash. Every
   /// topic path is built from it.
@@ -28,9 +30,12 @@ class Course {
         id: json['id'] as String,
         title: json['title'] as String,
         icon: json['icon'] as String,
-        topicIds: (json['topics'] as List<dynamic>).cast<String>(),
+        topicIds: [
+          for (final id in json['topics'] as List<dynamic>)
+            TopicId(id as String),
+        ],
         folderPath: folderPath,
       );
 
-  String pathFor(String topicId) => '$folderPath/$topicId';
+  String pathFor(TopicId topicId) => '$folderPath/${topicId.value}';
 }

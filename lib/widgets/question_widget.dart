@@ -61,9 +61,9 @@ class _QuestionWidgetState extends State<QuestionWidget> {
         correct: correct,
         at: DateTime.now().toUtc(),
         given: tex,
-        elapsedMs: elapsed == null || elapsed > AppConfig.current.maxAnswerTime
+        elapsed: elapsed == null || elapsed > AppConfig.current.maxAnswerTime
             ? null
-            : elapsed.inMilliseconds,
+            : elapsed,
       ),
     );
   }

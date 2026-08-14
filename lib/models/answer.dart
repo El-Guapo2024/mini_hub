@@ -1,4 +1,5 @@
 import '../math/tex_answer.dart';
+import 'fraction.dart';
 
 /// How a question is answered. Recorded on every attempt, so the names are
 /// stored data: renaming one splits a question's history in two.
@@ -34,8 +35,7 @@ sealed class Answer {
         );
       case QuestionType.fraction:
         return FractionAnswer(
-          numerator: json['num'] as int,
-          denominator: json['den'] as int,
+          value: Fraction(json['num'] as int, json['den'] as int),
           reduced: json['reduced'] as bool? ?? true,
           display: json['display'] as String?,
         );
@@ -210,83 +210,45 @@ class ComplexAnswer extends Answer {
 /// problem set prints `35\frac{1}{16}` and `53.04` side by side.
 class FractionAnswer extends Answer {
   const FractionAnswer({
-    required this.numerator,
-    required this.denominator,
+    required this.value,
     this.reduced = true,
     String? display,
   }) : _display = display;
+
+  /// The answer, held improper: `35\frac{1}{16}` is 561/16, so a mixed number
+  /// and its improper form are the same answer. The whole-number part is not
+  /// what the form rule is about.
+  final Fraction value;
 
   /// Whether lowest terms are required. A course with another convention sets
   /// it false; one that does not care about form uses [NumericAnswer]. It lives
   /// on the question so the shared input box needs no course-specific rules.
   final bool reduced;
 
-  /// Held as an improper fraction in lowest terms, so `35\frac{1}{16}` is
-  /// 561/16. That makes a mixed number and its improper form the same answer,
-  /// which is the intent: the whole-number part is not what the rule is about.
-  final int numerator;
-  final int denominator;
-
   final String? _display;
-
-  static final _mixed = RegExp(r'^(-?\d+)\\d?frac\{(\d+)\}\{(\d+)\}$');
-  static final _plain = RegExp(r'^(-?)\\d?frac\{(\d+)\}\{(\d+)\}$');
 
   @override
   QuestionType get kind => QuestionType.fraction;
 
   @override
   bool accepts(String tex) {
-    final s = tex.replaceAll(_decoration, '');
-    if (s.isEmpty) return false;
-
-    final mixed = _mixed.firstMatch(s);
-    if (mixed != null) {
-      final whole = int.parse(mixed[1]!);
-      final part = int.parse(mixed[2]!);
-      final over = int.parse(mixed[3]!);
-      if (over == 0 || (reduced && !_isReduced(part, over))) return false;
-      // The fractional part of a negative mixed number is subtracted, not added.
-      final magnitude = whole.abs() * over + part;
-      final improper = whole.isNegative ? -magnitude : magnitude;
-      return _equals(improper, over);
-    }
-
-    final plain = _plain.firstMatch(s);
-    if (plain != null) {
-      final over = int.parse(plain[3]!);
-      final top = int.parse(plain[2]!) * (plain[1] == '-' ? -1 : 1);
-      if (over == 0 || (reduced && !_isReduced(top, over))) return false;
-      return _equals(top, over);
-    }
-
-    // A whole number is a fraction with denominator 1, and is the right form
-    // when the answer happens to be whole.
-    final whole = int.tryParse(s);
-    if (whole != null) return _equals(whole, 1);
-
-    // Anything else — a decimal, an unevaluated expression — is not the form
-    // the question asked for, whatever it evaluates to.
-    return false;
+    final entered = Fraction.parseTex(tex.replaceAll(_decoration, ''));
+    if (entered == null) return false;
+    if (reduced && !entered.isReduced) return false;
+    return entered == value;
   }
-
-  bool _equals(int top, int over) => top * denominator == numerator * over;
-
-  static bool _isReduced(int a, int b) => _gcd(a.abs(), b.abs()) == 1;
-
-  static int _gcd(int a, int b) => b == 0 ? a : _gcd(b, a % b);
 
   @override
   String? get inputHint => reduced ? 'Reduce the fraction' : null;
 
   @override
-  String get display => _display ?? '\\frac{$numerator}{$denominator}';
+  String get display => _display ?? value.toString();
 
   @override
   Map<String, dynamic> toJson() => {
     'type': kind.name,
-    'num': numerator,
-    'den': denominator,
+    'num': value.numerator,
+    'den': value.denominator,
     if (!reduced) 'reduced': false,
     if (_display != null) 'display': _display,
   };

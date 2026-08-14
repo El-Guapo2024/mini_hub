@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_markdown_plus/flutter_markdown_plus.dart';
 import 'package:flutter_markdown_plus_latex/flutter_markdown_plus_latex.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:mini_hub/models/fraction.dart';
+import 'package:mini_hub/models/ids.dart';
 import 'package:markdown/markdown.dart' as md;
 import 'package:math_keyboard/math_keyboard.dart';
 import 'package:mini_hub/markdown/question_markdown.dart';
@@ -66,7 +68,7 @@ void main() {
       QuestionType.numeric: NumericAnswer(value: 4),
       QuestionType.estimate: ApproxAnswer(low: 1, high: 2),
       QuestionType.complex: ComplexAnswer(real: 16, imaginary: 16),
-      QuestionType.fraction: FractionAnswer(numerator: 1, denominator: 2),
+      QuestionType.fraction: FractionAnswer(value: Fraction(1, 2)),
       QuestionType.base: BaseAnswer(value: 16, base: 8),
     };
     expect(types.keys, containsAll(QuestionType.values));
@@ -78,9 +80,9 @@ void main() {
             body: MathKeyboardViewInsets(
               child: QuestionView(
                 question: Question(
-                  id: 'q',
+                  id: const QuestionId('q'),
                   prompt: '2+2=',
-                  topic: 'squares',
+                  topic: const TopicId('squares'),
                   answer: entry.value,
                 ),
               ),

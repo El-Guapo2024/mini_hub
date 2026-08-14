@@ -1,4 +1,5 @@
 import 'answer.dart';
+import 'ids.dart';
 
 /// One question from the bank.
 ///
@@ -15,7 +16,7 @@ class Question {
 
   /// Stable, provenance-derived: `bh.<section>.q<n>`. Statistics rows key off
   /// this, so it must survive re-extraction of the source PDF.
-  final String id;
+  final QuestionId id;
 
   /// How the question is answered. Attempts record it, so progress can be read
   /// per shape. It is the answer's own classification, not a second field that
@@ -29,22 +30,22 @@ class Question {
 
   /// Slug of the lesson this question belongs to. Required, because an attempt
   /// without one cannot be counted towards any lesson's progress.
-  final String topic;
+  final TopicId topic;
 
   factory Question.fromJson(Map<String, dynamic> json) {
     final answer = Answer.fromJson(json['answer'] as Map<String, dynamic>);
     return Question(
-      id: json['id'] as String,
+      id: QuestionId(json['id'] as String),
       prompt: json['prompt'] as String,
       answer: answer,
-      topic: json['topic'] as String,
+      topic: TopicId(json['topic'] as String),
     );
   }
 
   Map<String, dynamic> toJson() => {
-    'id': id,
+    'id': id.value,
     'prompt': prompt,
-    'topic': topic,
+    'topic': topic.value,
     'answer': answer.toJson(),
   };
 }

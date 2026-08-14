@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:mini_hub/models/ids.dart';
 import 'package:mini_hub/data/attempt_store.dart';
 import 'package:mini_hub/models/answer.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
@@ -31,8 +32,8 @@ void main() {
     QuestionType type = QuestionType.numeric,
     String id = 'bh.1.2.1.q1',
   }) => Attempt(
-    questionId: id,
-    topic: topic,
+    questionId: QuestionId(id),
+    topic: TopicId(topic),
     type: type,
     correct: correct,
     at: when,
@@ -43,8 +44,8 @@ void main() {
   test('an empty store reports no progress rather than throwing', () async {
     final store = await AttemptStore.openAt(file);
     expect(store.all, isEmpty);
-    expect(store.progressFor('squares').count, 0);
-    expect(store.isDone('bh.1.2.1.q1'), isFalse);
+    expect(store.progressFor(const TopicId('squares')).count, 0);
+    expect(store.isDone(const QuestionId('bh.1.2.1.q1')), isFalse);
   });
 
   test('attempts survive a reopen', () async {
@@ -54,8 +55,8 @@ void main() {
 
     final reopened = await AttemptStore.openAt(file);
     expect(reopened.all.length, 2);
-    expect(reopened.progressFor('squares').count, 1);
-    expect(reopened.progressFor('cubes').count, 0);
+    expect(reopened.progressFor(const TopicId('squares')).count, 1);
+    expect(reopened.progressFor(const TopicId('cubes')).count, 0);
     expect(reopened.all.first.at, day0);
   });
 
@@ -85,12 +86,12 @@ void main() {
   test('a question is done once it has ever been right', () async {
     final store = await AttemptStore.openAt(file);
     await store.record(at('squares', correct: false, when: day0));
-    expect(store.isDone('bh.1.2.1.q1'), isFalse);
+    expect(store.isDone(const QuestionId('bh.1.2.1.q1')), isFalse);
 
     await store.record(
       at('squares', correct: true, when: day0.add(const Duration(hours: 1))),
     );
-    expect(store.isDone('bh.1.2.1.q1'), isTrue);
+    expect(store.isDone(const QuestionId('bh.1.2.1.q1')), isTrue);
   });
 
   test('getting it wrong later does not undo done', () async {
@@ -102,7 +103,7 @@ void main() {
       at('squares', correct: false, when: day0.add(const Duration(hours: 1))),
     );
 
-    expect(store.isDone('bh.1.2.1.q1'), isTrue);
+    expect(store.isDone(const QuestionId('bh.1.2.1.q1')), isTrue);
   });
 
   test(
@@ -118,9 +119,12 @@ void main() {
         at('squares', correct: true, when: day0, id: 'bh.1.2.1.q2'),
       );
 
-      final progress = store.progressFor('squares');
+      final progress = store.progressFor(const TopicId('squares'));
       expect(progress.count, 2);
-      expect(progress.done, {'bh.1.2.1.q1', 'bh.1.2.1.q2'});
+      expect(progress.done, {
+        const QuestionId('bh.1.2.1.q1'),
+        const QuestionId('bh.1.2.1.q2'),
+      });
     },
   );
 
@@ -131,8 +135,12 @@ void main() {
       at('cubes', correct: true, when: day0, id: 'bh.1.2.1.q2'),
     );
 
-    expect(store.progressFor('squares').done, {'bh.1.2.1.q1'});
-    expect(store.progressFor('cubes').done, {'bh.1.2.1.q2'});
+    expect(store.progressFor(const TopicId('squares')).done, {
+      const QuestionId('bh.1.2.1.q1'),
+    });
+    expect(store.progressFor(const TopicId('cubes')).done, {
+      const QuestionId('bh.1.2.1.q2'),
+    });
   });
 
   test('an id is stable across a save and reload', () async {

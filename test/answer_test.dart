@@ -1,4 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:mini_hub/models/fraction.dart';
+import 'package:mini_hub/models/ids.dart';
 import 'package:mini_hub/math/tex_answer.dart';
 import 'package:mini_hub/models/answer.dart';
 import 'package:mini_hub/models/question.dart';
@@ -99,7 +101,7 @@ void main() {
 
   group('FractionAnswer', () {
     // 6/25, printed by the manual as a plain fraction.
-    const sixth = FractionAnswer(numerator: 6, denominator: 25);
+    const sixth = FractionAnswer(value: Fraction(6, 25));
 
     test('requires the reduced form, not merely the right value', () {
       expect(sixth.accepts(r'\frac{6}{25}'), isTrue);
@@ -123,8 +125,7 @@ void main() {
     group('mixed numbers', () {
       // 35 1/16, held as the improper 561/16.
       const mixed = FractionAnswer(
-        numerator: 561,
-        denominator: 16,
+        value: Fraction(561, 16),
         display: r'35\frac{1}{16}',
       );
 
@@ -144,14 +145,14 @@ void main() {
     });
 
     test('handles negatives, subtracting the fractional part', () {
-      const negative = FractionAnswer(numerator: -7, denominator: 2);
+      const negative = FractionAnswer(value: Fraction(-7, 2));
       expect(negative.accepts(r'-3\frac{1}{2}'), isTrue);
       expect(negative.accepts(r'-\frac{7}{2}'), isTrue);
       expect(negative.accepts(r'\frac{7}{2}'), isFalse);
     });
 
     test('accepts a whole number when the answer is whole', () {
-      const four = FractionAnswer(numerator: 4, denominator: 1);
+      const four = FractionAnswer(value: Fraction(4, 1));
       expect(four.accepts('4'), isTrue);
       expect(four.accepts(r'\frac{4}{1}'), isTrue);
       expect(four.accepts('5'), isFalse);
@@ -174,11 +175,7 @@ void main() {
       // The reduction rule belongs to number sense, not to the input box. Any
       // other course reusing the same widget sets its own marking rules on the
       // question, and the widget never knows the difference.
-      const lenient = FractionAnswer(
-        numerator: 6,
-        denominator: 25,
-        reduced: false,
-      );
+      const lenient = FractionAnswer(value: Fraction(6, 25), reduced: false);
 
       test('accepts an unreduced fraction', () {
         expect(lenient.accepts(r'\frac{12}{50}'), isTrue);
@@ -328,7 +325,11 @@ void main() {
       });
       final again = Question.fromJson(q.toJson());
       expect(again.answer.accepts('16+16i'), isTrue);
-      expect(again.type, QuestionType.complex, reason: 'derived from the answer');
+      expect(
+        again.type,
+        QuestionType.complex,
+        reason: 'derived from the answer',
+      );
       expect(again.topic, 'complex_numbers');
     });
   });

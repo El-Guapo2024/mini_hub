@@ -7,6 +7,7 @@ import 'package:math_keyboard/math_keyboard.dart';
 import '../data/lesson_loader.dart';
 import '../data/question_pool_loader.dart';
 import '../markdown/question_markdown.dart';
+import '../models/ids.dart';
 import '../models/question.dart';
 import '../models/topic.dart';
 
@@ -23,7 +24,7 @@ class _TopicScreenState extends State<TopicScreen> {
   final LessonLoader lessonLoader = LessonLoader();
   final QuestionPoolLoader questionLoader = QuestionPoolLoader();
   String lessonMarkdown = '';
-  Map<String, Question> questionPool = {};
+  Map<QuestionId, Question> questionPool = {};
 
   @override
   void initState() {

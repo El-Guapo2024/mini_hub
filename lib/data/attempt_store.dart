@@ -5,6 +5,7 @@ import 'package:sqflite/sqflite.dart';
 
 import '../config.dart';
 import '../models/answer.dart';
+import '../models/ids.dart';
 
 /// One graded response. The log is the only thing stored; what the app shows
 /// is derived from it, so changing what progress means is a recompute rather
@@ -17,7 +18,7 @@ class Attempt {
     required this.correct,
     required this.at,
     this.given,
-    this.elapsedMs,
+    this.elapsed,
     String? id,
   }) : id = id ?? _newId(questionId, at);
 
@@ -25,8 +26,8 @@ class Attempt {
   /// attempt can never be counted twice — after a restored backup, say.
   final String id;
 
-  final String questionId;
-  final String topic;
+  final QuestionId questionId;
+  final TopicId topic;
 
   /// The question's shape. Stored by name, so the enum's names are stored
   /// data: renaming a case splits a question's history in two.
@@ -37,33 +38,39 @@ class Attempt {
   /// What the student actually entered, as LaTeX. Kept for reviewing wrong
   /// answers — a consistent near-miss means something different from a guess.
   final String? given;
-  final int? elapsedMs;
 
-  static String _newId(String questionId, DateTime at) =>
-      '$questionId.${at.toUtc().microsecondsSinceEpoch}.'
+  /// How long the answer took, or null if it took longer than
+  /// [AppConfig.maxAnswerTime] — a question left open is not a slow answer.
+  final Duration? elapsed;
+
+  static String _newId(QuestionId questionId, DateTime at) =>
+      '${questionId.value}.${at.toUtc().microsecondsSinceEpoch}.'
       '${Random().nextInt(1 << 32).toRadixString(36)}';
 
   factory Attempt.fromRow(Map<String, Object?> row) => Attempt(
     id: row['id'] as String,
-    questionId: row['question_id'] as String,
-    topic: row['topic'] as String,
+    questionId: QuestionId(row['question_id'] as String),
+    topic: TopicId(row['topic'] as String),
     type: QuestionType.values.byName(row['type'] as String),
     // SQLite has no boolean type.
     correct: (row['correct'] as int) == 1,
     at: DateTime.fromMillisecondsSinceEpoch(row['at'] as int, isUtc: true),
     given: row['given_tex'] as String?,
-    elapsedMs: row['elapsed_ms'] as int?,
+    elapsed: switch (row['elapsed_ms'] as int?) {
+      final ms? => Duration(milliseconds: ms),
+      null => null,
+    },
   );
 
   Map<String, Object?> toRow() => {
     'id': id,
-    'question_id': questionId,
-    'topic': topic,
+    'question_id': questionId.value,
+    'topic': topic.value,
     'type': type.name,
     'correct': correct ? 1 : 0,
     'at': at.toUtc().millisecondsSinceEpoch,
     'given_tex': given,
-    'elapsed_ms': elapsedMs,
+    'elapsed_ms': elapsed?.inMilliseconds,
   };
 }
 
@@ -71,11 +78,11 @@ class Attempt {
 class TopicProgress {
   const TopicProgress({required this.topic, required this.done});
 
-  final String topic;
+  final TopicId topic;
 
   /// Ids of the questions answered correctly at least once. A question is done
   /// or it is not; how many tries it took is in the log if it is ever wanted.
-  final Set<String> done;
+  final Set<QuestionId> done;
 
   int get count => done.length;
 }
@@ -151,10 +158,10 @@ class AttemptStore {
   Future<void> close() => _db.close();
 
   /// Whether this question has ever been answered correctly.
-  bool isDone(String questionId) =>
+  bool isDone(QuestionId questionId) =>
       _attempts.any((a) => a.questionId == questionId && a.correct);
 
-  TopicProgress progressFor(String topic) => TopicProgress(
+  TopicProgress progressFor(TopicId topic) => TopicProgress(
     topic: topic,
     done: {
       for (final a in _attempts)

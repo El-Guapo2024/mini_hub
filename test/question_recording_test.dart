@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:mini_hub/models/ids.dart';
 import 'package:math_keyboard/math_keyboard.dart';
 import 'package:mini_hub/data/attempt_scope.dart';
 import 'package:mini_hub/data/attempt_store.dart';
@@ -27,10 +28,10 @@ void main() {
   tearDown(() => dir.deleteSync(recursive: true));
 
   const question = Question(
-    id: 'bh.1.2.1.q1',
+    id: QuestionId('bh.1.2.1.q1'),
     prompt: '2+2=',
     answer: NumericAnswer(value: 4),
-    topic: 'multiplying_by_11_trick',
+    topic: TopicId('multiplying_by_11_trick'),
   );
 
   Future<void> pumpQuestion(WidgetTester tester, {AttemptStore? store}) async {
@@ -68,11 +69,14 @@ void main() {
 
     expect(store.all.length, 1);
     final logged = store.all.single;
-    expect(logged.questionId, 'bh.1.2.1.q1');
-    expect(logged.topic, 'multiplying_by_11_trick');
+    expect(logged.questionId, const QuestionId('bh.1.2.1.q1'));
+    expect(logged.topic, const TopicId('multiplying_by_11_trick'));
     expect(logged.type, QuestionType.numeric);
     expect(logged.correct, isTrue);
-    expect(store.progressFor('multiplying_by_11_trick').count, 1);
+    expect(
+      store.progressFor(const TopicId('multiplying_by_11_trick')).count,
+      1,
+    );
   });
 
   testWidgets('a wrong answer is recorded with what was typed', (tester) async {
@@ -81,7 +85,10 @@ void main() {
 
     expect(store.all.single.correct, isFalse);
     expect(store.all.single.given, isNotEmpty);
-    expect(store.progressFor('multiplying_by_11_trick').count, 0);
+    expect(
+      store.progressFor(const TopicId('multiplying_by_11_trick')).count,
+      0,
+    );
   });
 
   testWidgets('grading still works with no store to record to', (tester) async {

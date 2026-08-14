@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_markdown_plus/flutter_markdown_plus.dart';
 import 'package:markdown/markdown.dart' as md;
 
+import '../models/ids.dart';
 import '../models/question.dart';
 import '../widgets/question_view.dart';
 
@@ -24,7 +25,7 @@ class QuestionBlockSyntax extends md.BlockSyntax {
 class QuestionElementBuilder extends MarkdownElementBuilder {
   QuestionElementBuilder({required this.pool});
 
-  final Map<String, Question> pool;
+  final Map<QuestionId, Question> pool;
 
   @override
   Widget visitElementAfterWithContext(
@@ -33,14 +34,14 @@ class QuestionElementBuilder extends MarkdownElementBuilder {
     TextStyle? preferredStyle,
     TextStyle? parentStyle,
   ) {
-    final id = element.textContent;
+    final id = QuestionId(element.textContent);
     final question = pool[id];
 
     if (question == null) {
       return Padding(
         padding: const EdgeInsets.symmetric(vertical: 8),
         child: Text(
-          'missing question: $id',
+          'missing question: ${id.value}',
           style: const TextStyle(color: Colors.redAccent),
         ),
       );
@@ -48,7 +49,7 @@ class QuestionElementBuilder extends MarkdownElementBuilder {
 
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 16),
-      child: QuestionView(key: ValueKey(id), question: question),
+      child: QuestionView(key: ValueKey(id.value), question: question),
     );
   }
 }

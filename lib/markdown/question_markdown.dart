@@ -7,7 +7,8 @@ import '../widgets/question_view.dart';
 
 class QuestionBlockSyntax extends md.BlockSyntax {
   @override
-  RegExp get pattern => RegExp(r'^\[\[question:([\w-]+)\s*\]\]\s*$');
+  // Dots are part of the id: they are provenance, as in `bh.1.2.1.q1`.
+  RegExp get pattern => RegExp(r'^\[\[question:([\w.\-]+)\s*\]\]\s*$');
 
   @override
   md.Node parse(md.BlockParser parser) {

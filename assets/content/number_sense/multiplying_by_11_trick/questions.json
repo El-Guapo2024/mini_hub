@@ -1,0 +1,596 @@
+[
+  {
+    "id": "bh.1.2.1.q1",
+    "type": "numeric",
+    "prompt": "11 \\times 54 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 594,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q2",
+    "type": "numeric",
+    "prompt": "11 \\times 72 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 792,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q3",
+    "type": "numeric",
+    "prompt": "11 \\times 38 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 418,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q4",
+    "type": "numeric",
+    "prompt": "462 \\times 11 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 5082,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q5",
+    "type": "numeric",
+    "prompt": "11 \\times 74 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 814,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q6",
+    "type": "numeric",
+    "prompt": "66 \\times 11 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 726,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q7",
+    "type": "numeric",
+    "prompt": "1.1 \\times 2.3 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 2.53,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q8",
+    "type": "numeric",
+    "prompt": "52 \\times 11 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 572,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q9",
+    "type": "numeric",
+    "prompt": "246 \\times 11 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 2706,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q10",
+    "type": "numeric",
+    "prompt": "111 \\times 456 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 50616,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q11",
+    "type": "numeric",
+    "prompt": "198 \\div 11 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 18,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q12",
+    "type": "numeric",
+    "prompt": "357 \\times 11 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 3927,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q13",
+    "type": "numeric",
+    "prompt": "275 \\div 11 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 25,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q14",
+    "type": "numeric",
+    "prompt": "321 \\times 111 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 35631,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q15",
+    "type": "numeric",
+    "prompt": "1.1 \\times .25 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 0.275,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q16",
+    "type": "numeric",
+    "prompt": "111 \\times 44 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 4884,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q17",
+    "type": "numeric",
+    "prompt": "374 \\div 11 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 34,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q18",
+    "type": "numeric",
+    "prompt": "87 \\times 111 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 9657,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q19",
+    "type": "numeric",
+    "prompt": "286 \\div 11 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 26,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q20",
+    "type": "numeric",
+    "prompt": "111 \\times 53 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 5883,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q21",
+    "type": "numeric",
+    "prompt": "297 \\div 11 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 27,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q22",
+    "type": "numeric",
+    "prompt": "2233 \\div 11 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 203,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q23",
+    "type": "numeric",
+    "prompt": "198 \\times 11 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 2178,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q24",
+    "type": "numeric",
+    "prompt": "297 \\div 11 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 27,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q25",
+    "type": "numeric",
+    "prompt": "111 \\times 41 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 4551,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q26",
+    "type": "numeric",
+    "prompt": "111 \\times 35 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 3885,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q27",
+    "type": "numeric",
+    "prompt": "111 \\times 345 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 38295,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q28",
+    "type": "numeric",
+    "prompt": "2003 \\times 111 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 222333,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q29",
+    "type": "numeric",
+    "prompt": "3 \\times 5 \\times 7 \\times 11 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 1155,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q30",
+    "type": "numeric",
+    "prompt": "121 \\times 121 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 14641,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q31",
+    "type": "numeric",
+    "prompt": "33 \\times 1111 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 36663,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q32",
+    "type": "numeric",
+    "prompt": "22 \\times 32 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 704,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q33",
+    "type": "numeric",
+    "prompt": "36963 \\div 111 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 333,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q34",
+    "type": "numeric",
+    "prompt": "20.07 \\times 1.1 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 22.077,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q35",
+    "type": "numeric",
+    "prompt": "11\\% \\text{ of } 22 = \\text{____\\% (dec.)}",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 2.42,
+      "type": "numeric",
+      "unit": "%"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q36",
+    "type": "numeric",
+    "prompt": "13 \\times 121 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 1573,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q37",
+    "type": "numeric",
+    "prompt": "27972 \\div 111 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 252,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q38",
+    "type": "numeric",
+    "prompt": "2006 \\times 11 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 22066,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q39",
+    "type": "numeric",
+    "prompt": "11^{4} =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 14641,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q40",
+    "type": "numeric",
+    "prompt": "33 \\times 44 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 1452,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q41",
+    "type": "numeric",
+    "prompt": "2 \\times 3 \\times 11 \\times 13 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 858,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q42",
+    "type": "numeric",
+    "prompt": "121 \\times 22 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 2662,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q43",
+    "type": "numeric",
+    "prompt": "44 \\times 55 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 2420,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q44",
+    "type": "numeric",
+    "prompt": "2 \\times 3 \\times 5 \\times 7 \\times 11 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 2310,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q45",
+    "type": "numeric",
+    "prompt": "2553 \\div 111 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 23,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q46",
+    "type": "numeric",
+    "prompt": "114 \\times 121 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 13794,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q47",
+    "type": "numeric",
+    "prompt": "44 \\times 25 \\times 11 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 12100,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q48",
+    "type": "numeric",
+    "prompt": "55 \\times 33 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 1815,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q49",
+    "type": "estimate",
+    "prompt": "(*) 32 \\times 64 \\times 16 \\div 48 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "high": 717.0,
+      "low": 648.0,
+      "type": "approx"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q50",
+    "type": "numeric",
+    "prompt": "2002 \\div 11 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 182,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q51",
+    "type": "numeric",
+    "prompt": "77 \\times 88 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 6776,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q52",
+    "type": "estimate",
+    "prompt": "(*) 44.4 \\times 33.3 \\times 22.2 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "high": 34465.0,
+      "low": 31181.0,
+      "type": "approx"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q53",
+    "type": "numeric",
+    "prompt": "11 \\times 11 \\times 11 \\times 11 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 14641,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q54",
+    "type": "numeric",
+    "prompt": "25553 \\div 1111 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 23,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q55",
+    "type": "numeric",
+    "prompt": "11 \\times 13 \\times 42 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 6006,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q56",
+    "type": "numeric",
+    "prompt": "1111 \\times 123 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 136653,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q57",
+    "type": "numeric",
+    "prompt": "11 \\times 7 \\times 5 \\times 3 \\times 2 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 2310,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q58",
+    "type": "numeric",
+    "prompt": "121 \\times 124 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "answer": 15004,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.1.q59",
+    "type": "estimate",
+    "prompt": "(*) 33 \\times 44 \\times 55 =",
+    "topic": "multiplying_by_11_trick",
+    "answer": {
+      "high": 83853.0,
+      "low": 75897.0,
+      "type": "approx"
+    }
+  }
+]

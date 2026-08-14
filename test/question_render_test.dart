@@ -1,0 +1,98 @@
+import 'dart:convert';
+import 'dart:io';
+
+import 'package:flutter/material.dart';
+import 'package:flutter_markdown_plus/flutter_markdown_plus.dart';
+import 'package:flutter_markdown_plus_latex/flutter_markdown_plus_latex.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:markdown/markdown.dart' as md;
+import 'package:math_keyboard/math_keyboard.dart';
+import 'package:mini_hub/markdown/question_markdown.dart';
+import 'package:mini_hub/models/answer.dart';
+import 'package:mini_hub/models/question.dart';
+import 'package:mini_hub/widgets/question_view.dart';
+
+/// Renders a real generated lesson the way TopicScreen does, so a tag that fails
+/// to match, or a question type the view rejects, fails here rather than on a
+/// device.
+void main() {
+  testWidgets('a generated lesson renders its questions', (tester) async {
+    await tester.binding.setSurfaceSize(const Size(393, 852));
+    const dir = 'assets/content/number_sense/multiplying_by_11_trick';
+
+    final questions =
+        (jsonDecode(File('$dir/questions.json').readAsStringSync())
+                as List<dynamic>)
+            .map((q) => Question.fromJson(q as Map<String, dynamic>))
+            .toList();
+    final pool = {for (final q in questions) q.id: q};
+
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Scaffold(
+          body: MathKeyboardViewInsets(
+            child: SingleChildScrollView(
+              child: MarkdownBody(
+                data: File('$dir/lesson.md').readAsStringSync(),
+                extensionSet: md.ExtensionSet(
+                  [LatexBlockSyntax(), QuestionBlockSyntax()],
+                  [LatexInlineSyntax()],
+                ),
+                builders: {
+                  'latex': LatexElementBuilder(),
+                  'question': QuestionElementBuilder(pool: pool),
+                },
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+    await tester.pump();
+
+    expect(tester.takeException(), isNull);
+    // Every tag became a question rather than literal text or an error.
+    expect(find.byType(QuestionView), findsNWidgets(questions.length));
+    expect(find.textContaining('missing question'), findsNothing);
+    expect(find.textContaining('[[question:'), findsNothing);
+    expect(find.textContaining('unsupported question type'), findsNothing);
+  });
+
+  testWidgets('every answer type in the bank renders', (tester) async {
+    // The view switches on type, so a type the generator emits but the view has
+    // not been taught about shows an error instead of a question.
+    const types = {
+      'numeric': NumericAnswer(value: 4),
+      'estimate': ApproxAnswer(low: 1, high: 2),
+      'complex': ComplexAnswer(real: 16, imaginary: 16),
+      'base': BaseAnswer(value: 16, base: 8),
+    };
+
+    for (final entry in types.entries) {
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Scaffold(
+            body: MathKeyboardViewInsets(
+              child: QuestionView(
+                question: Question(
+                  id: 'q',
+                  type: entry.key,
+                  prompt: '2+2=',
+                  answer: entry.value,
+                ),
+              ),
+            ),
+          ),
+        ),
+      );
+      await tester.pump();
+
+      expect(
+        find.textContaining('unsupported'),
+        findsNothing,
+        reason: '${entry.key} is emitted by the generator',
+      );
+      expect(find.byType(MathField), findsOneWidget);
+    }
+  });
+}

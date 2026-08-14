@@ -130,9 +130,16 @@ class _QuestionWidgetState extends State<QuestionWidget> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Math.tex(
-                widget.question.prompt,
-                textStyle: const TextStyle(fontSize: 24, color: Colors.white),
+              // Rendered math does not wrap, and real prompts run wider than a
+              // phone — `(*) 32 \times 64 \times 16 \div 48 =` overflows a
+              // 393pt screen. Scrolling the prompt keeps it readable instead of
+              // clipping the right-hand side, which would hide the operator.
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Math.tex(
+                  widget.question.prompt,
+                  textStyle: const TextStyle(fontSize: 24, color: Colors.white),
+                ),
               ),
               const SizedBox(height: 20),
               SizedBox(

@@ -97,6 +97,58 @@ void main() {
     });
   });
 
+  group('BaseAnswer', () {
+    // 15/70 in base 8 is 13/56 = 0.2321…, the manual's answer to 0.1666…₈.
+    const a = BaseAnswer(
+      value: 13 / 56,
+      base: 8,
+      display: r'\frac{15}{70}_{8}',
+    );
+
+    test('reads the digits in the question\'s base', () {
+      expect(a.accepts(r'\frac{15}{70}'), isTrue);
+      expect(a.accepts(r'\frac{15}{70}  '), isTrue);
+    });
+
+    test('rejects the base-10 reading of the same digits', () {
+      // The whole point: 15/70 in base 10 is 0.214, a different number, and it
+      // is what the plain evaluator would have computed.
+      expect(a.accepts('0.2142857142857143'), isFalse);
+      expect(
+        const BaseAnswer(value: 15 / 70, base: 8).accepts(r'\frac{15}{70}'),
+        isFalse,
+      );
+    });
+
+    test('rejects digits that do not exist in the base', () {
+      // 8 is not a base-8 digit, so this is a typo rather than a number.
+      expect(a.accepts(r'\frac{18}{70}'), isFalse);
+    });
+
+    test('accepts a whole number', () {
+      const twenty = BaseAnswer(value: 16, base: 8);
+      expect(twenty.accepts('20'), isTrue, reason: '20 base 8 is 16');
+      expect(twenty.accepts('16'), isFalse);
+    });
+
+    test('rejects malformed input rather than throwing', () {
+      expect(a.accepts(''), isFalse);
+      expect(a.accepts(r'\frac{15}{0}'), isFalse);
+      expect(a.accepts('15 + 70'), isFalse);
+    });
+
+    test('names the base, which the prompt may not', () {
+      expect(a.inputHint, contains('8'));
+      expect(a.display, r'\frac{15}{70}_{8}');
+    });
+
+    test('round-trips through JSON', () {
+      final again = Answer.fromJson(a.toJson());
+      expect(again, isA<BaseAnswer>());
+      expect(again.accepts(r'\frac{15}{70}'), isTrue);
+    });
+  });
+
   group('parseComplexTex', () {
     test('handles bare and implicit coefficients', () {
       expect(parseComplexTex('i'), (0.0, 1.0));
@@ -154,14 +206,15 @@ void main() {
     test('round-trips through JSON', () {
       final q = Question.fromJson({
         'id': 'bh.3.1.10.q27',
-        'type': 'numerical',
+        'type': 'complex',
         'prompt': r'(1+i)^{9} =',
+        'topic': 'complex_numbers',
         'answer': {'type': 'complex', 'real': 16, 'imag': 16},
-        'derived': true,
       });
       final again = Question.fromJson(q.toJson());
       expect(again.answer.accepts('16+16i'), isTrue);
-      expect(again.derived, isTrue);
+      expect(again.type, 'complex');
+      expect(again.topic, 'complex_numbers');
     });
   });
 }

@@ -12,15 +12,15 @@ class Question {
     required this.prompt,
     required this.answer,
     this.topic,
-    this.derived = false,
-    this.corrected = false,
   });
 
   /// Stable, provenance-derived: `bh.<section>.q<n>`. Statistics rows key off
   /// this, so it must survive re-extraction of the source PDF.
   final String id;
 
-  /// The question's shape, for filtering and per-type statistics.
+  /// How the question is answered — `numeric`, `estimate`, `complex`, `base` —
+  /// classified when the bank is generated rather than inspected at runtime.
+  /// Attempts record it, so accuracy can be read per type across every topic.
   final String type;
 
   /// The prompt, as LaTeX.
@@ -30,13 +30,6 @@ class Question {
 
   /// Slug of the lesson this question belongs to.
   final String? topic;
-
-  /// True when the manual printed no answer and this one was derived.
-  final bool derived;
-
-  /// True when the answer intentionally differs from what the manual prints,
-  /// because the printed one was verified wrong against the source page.
-  final bool corrected;
 
   factory Question.fromJson(Map<String, dynamic> json) {
     final raw = json['answer'];
@@ -51,8 +44,6 @@ class Question {
       prompt: json['prompt'] as String,
       answer: answer,
       topic: json['topic'] as String?,
-      derived: json['derived'] as bool? ?? false,
-      corrected: json['corrected'] as bool? ?? false,
     );
   }
 
@@ -62,7 +53,5 @@ class Question {
     'prompt': prompt,
     'answer': answer.toJson(),
     if (topic != null) 'topic': topic,
-    if (derived) 'derived': true,
-    if (corrected) 'corrected': true,
   };
 }

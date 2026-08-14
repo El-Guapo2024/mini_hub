@@ -22,6 +22,12 @@ sealed class Answer {
           imaginary: (json['imag'] as num).toDouble(),
           display: json['display'] as String?,
         );
+      case 'base':
+        return BaseAnswer(
+          value: (json['answer'] as num).toDouble(),
+          base: json['base'] as int,
+          display: json['display'] as String?,
+        );
       default:
         return NumericAnswer(
           value: (json['answer'] as num).toDouble(),
@@ -160,6 +166,77 @@ class ComplexAnswer extends Answer {
     'type': 'complex',
     'real': real,
     'imag': imaginary,
+    if (_display != null) 'display': _display,
+  };
+}
+
+/// A value written in another base, e.g. `15/70` in base 8.
+///
+/// The digits mean something different from what [evaluateTex] would read: it
+/// evaluates `\frac{15}{70}` as 15/70 in base 10, or 0.214, where the answer is
+/// 13/56 — 0.232. So the digits are converted out of the question's base first,
+/// and only then compared against the stored decimal value.
+class BaseAnswer extends Answer {
+  const BaseAnswer({required this.value, required this.base, String? display})
+    : _display = display;
+
+  /// The answer's value in base 10, so comparison is ordinary arithmetic.
+  final double value;
+
+  /// The base the student is expected to answer in, 2 to 36.
+  final int base;
+
+  final String? _display;
+
+  static const _tolerance = 1e-9;
+
+  /// A whole number, or a fraction of two whole numbers. Anything else — a
+  /// decimal point, an operator — is not a form these questions ask for.
+  static final _fraction = RegExp(
+    r'^\\d?frac\{([0-9a-zA-Z]+)\}\{([0-9a-zA-Z]+)\}$',
+  );
+  static final _integer = RegExp(r'^[0-9a-zA-Z]+$');
+
+  @override
+  bool accepts(String tex) {
+    final s = tex.replaceAll(RegExp(r'\s|\\,|\\;|\\!|\\left|\\right'), '');
+    if (s.isEmpty) return false;
+
+    final fraction = _fraction.firstMatch(s);
+    if (fraction != null) {
+      final numerator = _digits(fraction[1]!);
+      final denominator = _digits(fraction[2]!);
+      if (numerator == null || denominator == null || denominator == 0) {
+        return false;
+      }
+      return (numerator / denominator - value).abs() <= _tolerance;
+    }
+
+    if (_integer.hasMatch(s)) {
+      final whole = _digits(s);
+      return whole != null && (whole - value).abs() <= _tolerance;
+    }
+    return false;
+  }
+
+  /// Reads [digits] in this answer's base, or null if any digit is invalid for
+  /// it — `8` in base 8 is a typo, not a number.
+  double? _digits(String digits) {
+    final parsed = int.tryParse(digits, radix: base);
+    return parsed?.toDouble();
+  }
+
+  @override
+  String? get inputHint => 'Answer in base $base';
+
+  @override
+  String get display => _display ?? '${_trim(value)}_{$base}';
+
+  @override
+  Map<String, dynamic> toJson() => {
+    'type': 'base',
+    'answer': value,
+    'base': base,
     if (_display != null) 'display': _display,
   };
 }

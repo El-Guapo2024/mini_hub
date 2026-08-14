@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+
+import '../../content/content_repository.dart';
+import '../../content/course.dart';
 import '../hub/app_module.dart';
-import '../models/course.dart';
-import '../config.dart';
-import '../data/course_index_loader.dart';
-import '../data/course_loader.dart';
 import '../screens/topic_list_screen.dart';
 
 class CourseApp implements AppModule {
@@ -30,8 +29,7 @@ class StemaArenaScreen extends StatefulWidget {
 }
 
 class _StemaArenaScreenState extends State<StemaArenaScreen> {
-  final CourseIndexLoader indexLoader = CourseIndexLoader();
-  final CourseLoader courseLoader = CourseLoader();
+  final ContentRepository content = ContentRepository();
   List<Course>? courses;
   Object? error;
 
@@ -43,11 +41,7 @@ class _StemaArenaScreenState extends State<StemaArenaScreen> {
 
   Future<void> loadData() async {
     try {
-      final paths = await indexLoader.load(AppConfig.current.content.indexPath);
-      final result = <Course>[];
-      for (final path in paths) {
-        result.add(await courseLoader.load(path));
-      }
+      final result = await content.courses();
       // The load is asynchronous and the screen can be popped mid-flight.
       if (!mounted) return;
       setState(() => courses = result);

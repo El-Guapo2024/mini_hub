@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../models/answer.dart';
-import '../models/question.dart';
+import '../../content/answer.dart';
+import '../../content/question.dart';
 import 'question_widget.dart';
 
 /// Chooses the input for a question from the shape of its answer.

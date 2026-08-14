@@ -4,12 +4,11 @@ import 'package:flutter_markdown_plus_latex/flutter_markdown_plus_latex.dart';
 import 'package:markdown/markdown.dart' as md;
 import 'package:math_keyboard/math_keyboard.dart';
 
-import '../data/lesson_loader.dart';
-import '../data/question_pool_loader.dart';
-import '../markdown/question_markdown.dart';
-import '../models/ids.dart';
-import '../models/question.dart';
-import '../models/topic.dart';
+import '../../content/content_repository.dart';
+import '../../content/ids.dart';
+import '../../content/question.dart';
+import '../../content/topic.dart';
+import '../widgets/question_markdown.dart';
 
 class TopicScreen extends StatefulWidget {
   final Topic topic;
@@ -21,8 +20,7 @@ class TopicScreen extends StatefulWidget {
 }
 
 class _TopicScreenState extends State<TopicScreen> {
-  final LessonLoader lessonLoader = LessonLoader();
-  final QuestionPoolLoader questionLoader = QuestionPoolLoader();
+  final ContentRepository content = ContentRepository();
   String lessonMarkdown = '';
   Map<QuestionId, Question> questionPool = {};
 
@@ -34,20 +32,15 @@ class _TopicScreenState extends State<TopicScreen> {
   }
 
   Future<void> loadLesson() async {
-    final raw = await lessonLoader.load(widget.topic.lessonPath);
-    setState(() {
-      lessonMarkdown = raw;
-    });
+    final raw = await content.lesson(widget.topic);
+    if (!mounted) return;
+    setState(() => lessonMarkdown = raw);
   }
 
   Future<void> loadQuestions() async {
-    // A topic declares its questions in topic.yml; lesson-only topics list none.
-    if (widget.topic.questionIds.isEmpty) return;
-    final questions = await questionLoader.load(widget.topic.questionsPath);
+    final questions = await content.questions(widget.topic);
     if (!mounted) return;
-    setState(() {
-      questionPool = {for (final q in questions) q.id: q};
-    });
+    setState(() => questionPool = questions);
   }
 
   @override

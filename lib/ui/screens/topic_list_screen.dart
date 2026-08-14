@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import '../models/course.dart';
-import '../models/topic.dart';
-import '../data/topic_loader.dart';
+
+import '../../content/content_repository.dart';
+import '../../content/course.dart';
+import '../../content/topic.dart';
 import 'topic_screen.dart';
 
 class TopicListScreen extends StatefulWidget {
@@ -14,7 +15,7 @@ class TopicListScreen extends StatefulWidget {
 }
 
 class _TopicListScreenState extends State<TopicListScreen> {
-  final TopicLoader topicLoader = TopicLoader();
+  final ContentRepository content = ContentRepository();
   List<Topic> topics = [];
 
   @override
@@ -26,11 +27,10 @@ class _TopicListScreenState extends State<TopicListScreen> {
   Future<void> loadData() async {
     final result = <Topic>[];
     for (final topicId in widget.course.topicIds) {
-      result.add(await topicLoader.load(widget.course.pathFor(topicId)));
+      result.add(await content.topic(widget.course, topicId));
     }
-    setState(() {
-      topics = result;
-    });
+    if (!mounted) return;
+    setState(() => topics = result);
   }
 
   @override

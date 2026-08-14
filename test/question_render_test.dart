@@ -5,14 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_markdown_plus/flutter_markdown_plus.dart';
 import 'package:flutter_markdown_plus_latex/flutter_markdown_plus_latex.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mini_hub/models/fraction.dart';
-import 'package:mini_hub/models/ids.dart';
 import 'package:markdown/markdown.dart' as md;
 import 'package:math_keyboard/math_keyboard.dart';
-import 'package:mini_hub/markdown/question_markdown.dart';
-import 'package:mini_hub/models/answer.dart';
-import 'package:mini_hub/models/question.dart';
-import 'package:mini_hub/widgets/question_view.dart';
+import 'package:mini_hub/content/answer.dart';
+import 'package:mini_hub/content/fraction.dart';
+import 'package:mini_hub/content/ids.dart';
+import 'package:mini_hub/content/question.dart';
+import 'package:mini_hub/ui/widgets/question_markdown.dart';
+import 'package:mini_hub/ui/widgets/question_view.dart';
 
 /// Renders a real generated lesson the way TopicScreen does, so a tag that fails
 /// to match, or a question type the view rejects, fails here rather than on a

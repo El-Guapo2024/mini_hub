@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_markdown_plus/flutter_markdown_plus.dart';
 import 'package:markdown/markdown.dart' as md;
 
-import '../models/ids.dart';
-import '../models/question.dart';
-import '../widgets/question_view.dart';
+import '../../content/ids.dart';
+import '../../content/question.dart';
+import 'question_view.dart';
 
 class QuestionBlockSyntax extends md.BlockSyntax {
   @override

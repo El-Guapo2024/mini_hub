@@ -4,8 +4,8 @@ import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
 
 import '../config.dart';
-import '../models/answer.dart';
-import '../models/ids.dart';
+import '../content/answer.dart';
+import '../content/ids.dart';
 
 /// One graded response. The log is the only thing stored; what the app shows
 /// is derived from it, so changing what progress means is a recompute rather

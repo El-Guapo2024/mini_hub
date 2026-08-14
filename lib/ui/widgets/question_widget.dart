@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_math_fork/flutter_math.dart';
 import 'package:math_keyboard/math_keyboard.dart';
 
-import '../config.dart';
-import '../data/attempt_scope.dart';
-import '../data/attempt_store.dart';
-import '../models/question.dart';
+import '../../config.dart';
+import '../../content/question.dart';
+import '../../progress/attempt_scope.dart';
+import '../../progress/attempt_store.dart';
 
 const _surface = Color(0xFF121212);
 const _accent = Colors.tealAccent;

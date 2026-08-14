@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mini_hub/models/fraction.dart';
+import 'package:mini_hub/content/fraction.dart';
 
 void main() {
   group('parseTex', () {

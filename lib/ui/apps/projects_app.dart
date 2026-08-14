@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../hub/app_module.dart';
 
 class ProjectsApp implements AppModule {

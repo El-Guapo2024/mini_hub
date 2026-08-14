@@ -16,6 +16,20 @@ flutter analyze
 Every setting lives in `lib/config.dart`. Nothing else in `lib` names an asset
 path.
 
+## Layout
+
+```
+lib/
+  config.dart      every setting, and the only place naming an asset path
+  content/         the shipped bank: models, and the repository that reads it
+  progress/        the attempt log, and the scope that delivers it to widgets
+  math/            LaTeX evaluation and complex-number parsing
+  ui/              hub, apps, screens, widgets
+```
+
+The split that matters is `content/` against `progress/`: one is read-only and
+ships with the app, the other is written on the device and never leaves it.
+
 ## How it fits together
 
 **Content is read-only JSON and markdown under `assets/content/`.** One course

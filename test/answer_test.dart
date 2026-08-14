@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mini_hub/models/fraction.dart';
+import 'package:mini_hub/content/answer.dart';
+import 'package:mini_hub/content/fraction.dart';
+import 'package:mini_hub/content/question.dart';
 import 'package:mini_hub/math/tex_answer.dart';
-import 'package:mini_hub/models/answer.dart';
-import 'package:mini_hub/models/question.dart';
 
 void main() {
   group('NumericAnswer', () {

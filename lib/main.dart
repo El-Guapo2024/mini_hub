@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'data/attempt_scope.dart';
-import 'data/attempt_store.dart';
-import 'hub/home.dart';
+import 'progress/attempt_scope.dart';
+import 'progress/attempt_store.dart';
+import 'ui/hub/home.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

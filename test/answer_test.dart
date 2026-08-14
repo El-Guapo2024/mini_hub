@@ -169,6 +169,46 @@ void main() {
       expect(again.accepts(r'\frac{6}{25}'), isTrue);
       expect(again.accepts(r'\frac{12}{50}'), isFalse);
     });
+
+    group('a course with a different convention', () {
+      // The reduction rule belongs to number sense, not to the input box. Any
+      // other course reusing the same widget sets its own marking rules on the
+      // question, and the widget never knows the difference.
+      const lenient = FractionAnswer(
+        numerator: 6,
+        denominator: 25,
+        reduced: false,
+      );
+
+      test('accepts an unreduced fraction', () {
+        expect(lenient.accepts(r'\frac{12}{50}'), isTrue);
+        expect(lenient.accepts(r'\frac{6}{25}'), isTrue);
+        expect(
+          lenient.accepts(r'\frac{7}{25}'),
+          isFalse,
+          reason: 'wrong value',
+        );
+      });
+
+      test('drops the hint that no longer applies', () {
+        expect(lenient.inputHint, isNull);
+        expect(sixth.inputHint, isNotNull);
+      });
+
+      test('survives a round trip, defaulting to strict', () {
+        expect(
+          (Answer.fromJson(lenient.toJson()) as FractionAnswer).reduced,
+          isFalse,
+        );
+        expect(
+          (Answer.fromJson({'type': 'fraction', 'num': 1, 'den': 2})
+                  as FractionAnswer)
+              .reduced,
+          isTrue,
+          reason: 'number sense is the default, so strictness is opt-out',
+        );
+      });
+    });
   });
 
   group('BaseAnswer', () {

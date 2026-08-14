@@ -26,6 +26,7 @@ sealed class Answer {
         return FractionAnswer(
           numerator: json['num'] as int,
           denominator: json['den'] as int,
+          reduced: json['reduced'] as bool? ?? true,
           display: json['display'] as String?,
         );
       case 'base':
@@ -188,8 +189,18 @@ class FractionAnswer extends Answer {
   const FractionAnswer({
     required this.numerator,
     required this.denominator,
+    this.reduced = true,
     String? display,
   }) : _display = display;
+
+  /// Whether lowest terms are required. True for number sense, where an
+  /// unreduced answer is marked wrong. A course with a different convention
+  /// sets it false and gets fraction form without the reduction rule — and one
+  /// that does not care about form at all uses [NumericAnswer] instead.
+  ///
+  /// It lives here rather than in the widget so the same input box serves every
+  /// course: the question carries its own marking rules.
+  final bool reduced;
 
   /// Held as an improper fraction in lowest terms, so `35\frac{1}{16}` is
   /// 561/16. That makes a mixed number and its improper form the same answer,
@@ -214,7 +225,7 @@ class FractionAnswer extends Answer {
       final whole = int.parse(mixed[1]!);
       final part = int.parse(mixed[2]!);
       final over = int.parse(mixed[3]!);
-      if (over == 0 || !_reduced(part, over)) return false;
+      if (over == 0 || (reduced && !_isReduced(part, over))) return false;
       // The fractional part of a negative mixed number is subtracted, not added.
       final magnitude = whole.abs() * over + part;
       final improper = whole.isNegative ? -magnitude : magnitude;
@@ -225,7 +236,7 @@ class FractionAnswer extends Answer {
     if (plain != null) {
       final over = int.parse(plain[3]!);
       final top = int.parse(plain[2]!) * (plain[1] == '-' ? -1 : 1);
-      if (over == 0 || !_reduced(top, over)) return false;
+      if (over == 0 || (reduced && !_isReduced(top, over))) return false;
       return _equals(top, over);
     }
 
@@ -241,12 +252,12 @@ class FractionAnswer extends Answer {
 
   bool _equals(int top, int over) => top * denominator == numerator * over;
 
-  static bool _reduced(int a, int b) => _gcd(a.abs(), b.abs()) == 1;
+  static bool _isReduced(int a, int b) => _gcd(a.abs(), b.abs()) == 1;
 
   static int _gcd(int a, int b) => b == 0 ? a : _gcd(b, a % b);
 
   @override
-  String? get inputHint => 'Reduce the fraction';
+  String? get inputHint => reduced ? 'Reduce the fraction' : null;
 
   @override
   String get display => _display ?? '\\frac{$numerator}{$denominator}';
@@ -256,6 +267,7 @@ class FractionAnswer extends Answer {
     'type': 'fraction',
     'num': numerator,
     'den': denominator,
+    if (!reduced) 'reduced': false,
     if (_display != null) 'display': _display,
   };
 }

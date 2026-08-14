@@ -1,0 +1,122 @@
+[
+  {
+    "id": "q1",
+    "type": "numeric",
+    "prompt": "7 + 5 = ?",
+    "topic": "arithmetic_basics",
+    "answer": {
+      "type": "numeric",
+      "answer": 12
+    }
+  },
+  {
+    "id": "q2",
+    "type": "numeric",
+    "prompt": "\\frac{3}{4} + \\frac{1}{2} = ?",
+    "topic": "arithmetic_basics",
+    "answer": {
+      "type": "numeric",
+      "answer": 1.25
+    }
+  },
+  {
+    "id": "q3",
+    "type": "numeric",
+    "prompt": "2\\frac{1}{2} \\times \\frac{4}{5} = ?",
+    "topic": "arithmetic_basics",
+    "answer": {
+      "type": "numeric",
+      "answer": 2
+    }
+  },
+  {
+    "id": "q4",
+    "type": "numeric",
+    "prompt": "1\\frac{1}{3} + 2\\frac{1}{6} = ?",
+    "topic": "arithmetic_basics",
+    "answer": {
+      "type": "numeric",
+      "answer": 3.5
+    }
+  },
+  {
+    "id": "q5",
+    "type": "numeric",
+    "prompt": "\\sqrt{144} + 3^2 = ?",
+    "topic": "arithmetic_basics",
+    "answer": {
+      "type": "numeric",
+      "answer": 21
+    }
+  },
+  {
+    "id": "q6",
+    "type": "numeric",
+    "prompt": "5 - 12 = ?",
+    "topic": "arithmetic_basics",
+    "answer": {
+      "type": "numeric",
+      "answer": -7
+    }
+  },
+  {
+    "id": "q7",
+    "type": "numeric",
+    "prompt": "\\sum_{i=1}^{4} i^2 = ?",
+    "topic": "arithmetic_basics",
+    "answer": {
+      "type": "numeric",
+      "answer": 30
+    }
+  },
+  {
+    "id": "q8",
+    "type": "numeric",
+    "prompt": "\\int_0^1 3x^2 \\, dx = ?",
+    "topic": "arithmetic_basics",
+    "answer": {
+      "type": "numeric",
+      "answer": 1
+    }
+  },
+  {
+    "id": "q9",
+    "type": "numeric",
+    "prompt": "\\det\\begin{pmatrix} 2 & 3 \\\\ 1 & 4 \\end{pmatrix} = ?",
+    "topic": "arithmetic_basics",
+    "answer": {
+      "type": "numeric",
+      "answer": 5
+    }
+  },
+  {
+    "id": "q10",
+    "type": "numeric",
+    "prompt": "\\frac{-b}{2a} \\text{ where } b = 6,\\ a = -3",
+    "topic": "arithmetic_basics",
+    "answer": {
+      "type": "numeric",
+      "answer": 1
+    }
+  },
+  {
+    "id": "q11",
+    "type": "numeric",
+    "prompt": "\\lim_{x \\to 0} \\frac{\\sin 3x}{x} = ?",
+    "topic": "arithmetic_basics",
+    "answer": {
+      "type": "numeric",
+      "answer": 3
+    }
+  },
+  {
+    "id": "q12",
+    "type": "numeric",
+    "prompt": "\\left(\\frac{2}{3}\\right)^{-2} \\times \\frac{4}{9} = ?",
+    "topic": "arithmetic_basics",
+    "answer": {
+      "type": "numeric",
+      "answer": 1
+    }
+  }
+]

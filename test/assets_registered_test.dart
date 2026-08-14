@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:mini_hub/data/content_source.dart';
 import 'package:yaml/yaml.dart';
 
 /// Every content directory has to be listed in pubspec.yaml by hand, and a
@@ -17,9 +18,11 @@ void main() {
         .toSet();
 
     final missing = <String>[];
-    for (final dir in Directory(
-      'assets/content',
-    ).listSync(recursive: true).whereType<Directory>()) {
+    for (final dir
+        in ['assets/content', 'assets/sample']
+            .map(Directory.new)
+            .expand((d) => d.listSync(recursive: true))
+            .whereType<Directory>()) {
       final path = dir.path.replaceAll(RegExp(r'/$'), '');
       // Only directories holding files need registering; Flutter's asset
       // entries are per-directory and do not recurse.
@@ -41,7 +44,10 @@ void main() {
     final stale = <String>[];
     for (final entry in pubspec['flutter']['assets'] as YamlList) {
       final path = (entry as String).replaceAll(RegExp(r'/$'), '');
-      if (!path.startsWith('assets/content')) continue;
+      if (!path.startsWith('assets/content') &&
+          !path.startsWith('assets/sample')) {
+        continue;
+      }
       if (!Directory(path).existsSync()) stale.add(path);
     }
 
@@ -50,30 +56,34 @@ void main() {
     expect(stale, isEmpty, reason: 'listed in pubspec.yaml but not on disk');
   });
 
-  test('the course index resolves to real courses and topics', () {
-    // A course reaches the student only by being named here, so an index that
-    // has drifted from disk hides finished content with no error anywhere.
-    final index =
-        jsonDecode(File('assets/content/courses.json').readAsStringSync())
-            as List<dynamic>;
-    expect(index, isNotEmpty);
+  // Both are selectable at build time, so a broken sample index is a broken
+  // build for whoever picks it — not a second-class file.
+  for (final source in ContentSource.values) {
+    test('the ${source.name} index resolves to real courses and topics', () {
+      // A course reaches the student only by being named here, so an index
+      // that has drifted from disk hides content with no error anywhere.
+      final index =
+          jsonDecode(File(source.indexPath).readAsStringSync())
+              as List<dynamic>;
+      expect(index, isNotEmpty);
 
-    final missing = <String>[];
-    for (final entry in index.cast<Map<String, dynamic>>()) {
-      final path = (entry['path'] as String).replaceAll(RegExp(r'/$'), '');
-      final file = File('$path/course.yml');
-      if (!file.existsSync()) {
-        missing.add('$path/course.yml');
-        continue;
-      }
-      final course = loadYaml(file.readAsStringSync());
-      for (final topic in course['topics'] as YamlList) {
-        if (!File('$path/$topic/topic.yml').existsSync()) {
-          missing.add('$path/$topic');
+      final missing = <String>[];
+      for (final entry in index.cast<Map<String, dynamic>>()) {
+        final path = (entry['path'] as String).replaceAll(RegExp(r'/$'), '');
+        final file = File('$path/course.yml');
+        if (!file.existsSync()) {
+          missing.add('$path/course.yml');
+          continue;
+        }
+        final course = loadYaml(file.readAsStringSync());
+        for (final topic in course['topics'] as YamlList) {
+          if (!File('$path/$topic/topic.yml').existsSync()) {
+            missing.add('$path/$topic');
+          }
         }
       }
-    }
 
-    expect(missing, isEmpty, reason: 'named in content but absent on disk');
-  });
+      expect(missing, isEmpty, reason: 'named in the index but not on disk');
+    });
+  }
 }

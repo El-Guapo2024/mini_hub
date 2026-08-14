@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../hub/app_module.dart';
 import '../models/course.dart';
+import '../data/content_source.dart';
 import '../data/course_index_loader.dart';
 import '../data/course_loader.dart';
 import '../screens/topic_list_screen.dart';
@@ -29,10 +30,6 @@ class StemaArenaScreen extends StatefulWidget {
 }
 
 class _StemaArenaScreenState extends State<StemaArenaScreen> {
-  /// The one file naming every course that ships. A course absent from it is
-  /// invisible however complete its content is.
-  static const _index = 'assets/content/courses.json';
-
   final CourseIndexLoader indexLoader = CourseIndexLoader();
   final CourseLoader courseLoader = CourseLoader();
   List<Course>? courses;
@@ -46,7 +43,7 @@ class _StemaArenaScreenState extends State<StemaArenaScreen> {
 
   Future<void> loadData() async {
     try {
-      final paths = await indexLoader.load(_index);
+      final paths = await indexLoader.load(ContentSource.current.indexPath);
       final result = <Course>[];
       for (final path in paths) {
         result.add(await courseLoader.load(path));

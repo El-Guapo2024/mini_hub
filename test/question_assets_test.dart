@@ -11,9 +11,10 @@ import 'package:yaml/yaml.dart';
 /// Both render as an error inside an otherwise healthy lesson, which is easy to
 /// ship and easy to miss.
 void main() {
-  final topics = Directory('assets/content')
-      .listSync()
-      .whereType<Directory>()
+  // Both content sources, since either can be the one a build ships.
+  final topics = ['assets/content', 'assets/sample']
+      .map(Directory.new)
+      .expand((root) => root.listSync().whereType<Directory>())
       .expand((course) => course.listSync().whereType<Directory>())
       .where((d) => File('${d.path}/questions.json').existsSync())
       .toList();

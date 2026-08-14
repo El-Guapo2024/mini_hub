@@ -97,6 +97,80 @@ void main() {
     });
   });
 
+  group('FractionAnswer', () {
+    // 6/25, printed by the manual as a plain fraction.
+    const sixth = FractionAnswer(numerator: 6, denominator: 25);
+
+    test('requires the reduced form, not merely the right value', () {
+      expect(sixth.accepts(r'\frac{6}{25}'), isTrue);
+      expect(
+        sixth.accepts(r'\frac{12}{50}'),
+        isFalse,
+        reason: 'same value, not reduced — a real grader marks this wrong',
+      );
+      expect(sixth.accepts(r'\frac{24}{100}'), isFalse);
+    });
+
+    test('rejects a decimal, whatever it evaluates to', () {
+      // The question asked for a fraction; 0.24 is a different answer.
+      expect(sixth.accepts('0.24'), isFalse);
+    });
+
+    test('rejects the wrong value in reduced form', () {
+      expect(sixth.accepts(r'\frac{7}{25}'), isFalse);
+    });
+
+    group('mixed numbers', () {
+      // 35 1/16, held as the improper 561/16.
+      const mixed = FractionAnswer(
+        numerator: 561,
+        denominator: 16,
+        display: r'35\frac{1}{16}',
+      );
+
+      test('accepts either the mixed or the improper form', () {
+        expect(mixed.accepts(r'35\frac{1}{16}'), isTrue);
+        expect(mixed.accepts(r'\frac{561}{16}'), isTrue);
+      });
+
+      test('still requires the fractional part reduced', () {
+        expect(mixed.accepts(r'35\frac{2}{32}'), isFalse);
+        expect(mixed.accepts(r'\frac{1122}{32}'), isFalse);
+      });
+
+      test('rejects a wrong whole part', () {
+        expect(mixed.accepts(r'34\frac{1}{16}'), isFalse);
+      });
+    });
+
+    test('handles negatives, subtracting the fractional part', () {
+      const negative = FractionAnswer(numerator: -7, denominator: 2);
+      expect(negative.accepts(r'-3\frac{1}{2}'), isTrue);
+      expect(negative.accepts(r'-\frac{7}{2}'), isTrue);
+      expect(negative.accepts(r'\frac{7}{2}'), isFalse);
+    });
+
+    test('accepts a whole number when the answer is whole', () {
+      const four = FractionAnswer(numerator: 4, denominator: 1);
+      expect(four.accepts('4'), isTrue);
+      expect(four.accepts(r'\frac{4}{1}'), isTrue);
+      expect(four.accepts('5'), isFalse);
+    });
+
+    test('rejects malformed input rather than throwing', () {
+      expect(sixth.accepts(''), isFalse);
+      expect(sixth.accepts(r'\frac{6}{0}'), isFalse);
+      expect(sixth.accepts(r'\frac{6}'), isFalse);
+    });
+
+    test('round-trips through JSON', () {
+      final again = Answer.fromJson(sixth.toJson());
+      expect(again, isA<FractionAnswer>());
+      expect(again.accepts(r'\frac{6}{25}'), isTrue);
+      expect(again.accepts(r'\frac{12}{50}'), isFalse);
+    });
+  });
+
   group('BaseAnswer', () {
     // 15/70 in base 8 is 13/56 = 0.2321…, the manual's answer to 0.1666…₈.
     const a = BaseAnswer(

@@ -22,6 +22,12 @@ sealed class Answer {
           imaginary: (json['imag'] as num).toDouble(),
           display: json['display'] as String?,
         );
+      case 'fraction':
+        return FractionAnswer(
+          numerator: json['num'] as int,
+          denominator: json['den'] as int,
+          display: json['display'] as String?,
+        );
       case 'base':
         return BaseAnswer(
           value: (json['answer'] as num).toDouble(),
@@ -166,6 +172,90 @@ class ComplexAnswer extends Answer {
     'type': 'complex',
     'real': real,
     'imag': imaginary,
+    if (_display != null) 'display': _display,
+  };
+}
+
+/// An answer the manual prints as a fraction, where the form is part of being
+/// right: number sense expects the fully reduced fraction, so `\frac{2}{4}` is
+/// wrong wherever `\frac{1}{2}` is the answer even though the values match.
+///
+/// Which questions this applies to is read from the manual rather than guessed.
+/// Within a single problem set the book prints `35\frac{1}{16}` for a mixed
+/// number question and `53.04` for a decimal one, so the required form is a
+/// property of the question, and the printed key is what records it.
+class FractionAnswer extends Answer {
+  const FractionAnswer({
+    required this.numerator,
+    required this.denominator,
+    String? display,
+  }) : _display = display;
+
+  /// Held as an improper fraction in lowest terms, so `35\frac{1}{16}` is
+  /// 561/16. That makes a mixed number and its improper form the same answer,
+  /// which is the intent: the whole-number part is not what the rule is about.
+  final int numerator;
+  final int denominator;
+
+  final String? _display;
+
+  double get value => numerator / denominator;
+
+  static final _mixed = RegExp(r'^(-?\d+)\\d?frac\{(\d+)\}\{(\d+)\}$');
+  static final _plain = RegExp(r'^(-?)\\d?frac\{(\d+)\}\{(\d+)\}$');
+
+  @override
+  bool accepts(String tex) {
+    final s = tex.replaceAll(RegExp(r'\s|\\,|\\;|\\!|\\left|\\right|\\!'), '');
+    if (s.isEmpty) return false;
+
+    final mixed = _mixed.firstMatch(s);
+    if (mixed != null) {
+      final whole = int.parse(mixed[1]!);
+      final part = int.parse(mixed[2]!);
+      final over = int.parse(mixed[3]!);
+      if (over == 0 || !_reduced(part, over)) return false;
+      // The fractional part of a negative mixed number is subtracted, not added.
+      final magnitude = whole.abs() * over + part;
+      final improper = whole.isNegative ? -magnitude : magnitude;
+      return _equals(improper, over);
+    }
+
+    final plain = _plain.firstMatch(s);
+    if (plain != null) {
+      final over = int.parse(plain[3]!);
+      final top = int.parse(plain[2]!) * (plain[1] == '-' ? -1 : 1);
+      if (over == 0 || !_reduced(top, over)) return false;
+      return _equals(top, over);
+    }
+
+    // A whole number is a fraction with denominator 1, and is the right form
+    // when the answer happens to be whole.
+    final whole = int.tryParse(s);
+    if (whole != null) return _equals(whole, 1);
+
+    // Anything else — a decimal, an unevaluated expression — is not the form
+    // the question asked for, whatever it evaluates to.
+    return false;
+  }
+
+  bool _equals(int top, int over) => top * denominator == numerator * over;
+
+  static bool _reduced(int a, int b) => _gcd(a.abs(), b.abs()) == 1;
+
+  static int _gcd(int a, int b) => b == 0 ? a : _gcd(b, a % b);
+
+  @override
+  String? get inputHint => 'Reduce the fraction';
+
+  @override
+  String get display => _display ?? '\\frac{$numerator}{$denominator}';
+
+  @override
+  Map<String, dynamic> toJson() => {
+    'type': 'fraction',
+    'num': numerator,
+    'den': denominator,
     if (_display != null) 'display': _display,
   };
 }

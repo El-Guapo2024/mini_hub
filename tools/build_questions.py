@@ -13,6 +13,7 @@ running twice leaves the tree byte-identical.
 """
 
 import json
+from math import gcd
 import os
 import re
 import sys
@@ -29,6 +30,40 @@ PRACTICE_HEADING = "## Practice"
 DROPPED_ANSWER_FIELDS = {"derived", "corrected", "note"}
 
 
+MIXED = re.compile(r"^(-?\d+)\\d?frac\{(\d+)\}\{(\d+)\}$")
+PLAIN = re.compile(r"^(-?)\\d?frac\{(\d+)\}\{(\d+)\}$")
+
+
+def as_fraction(display):
+    """Reads a printed key as an improper fraction in lowest terms, or None.
+
+    The manual records the required answer form in how it prints the key: within
+    one problem set it prints 35\\frac{1}{16} for a mixed number question and
+    53.04 for a decimal one. So the rule is read from the book per question,
+    never assumed for a whole section.
+    """
+    if not display:
+        return None
+    text = display.replace(" ", "")
+
+    mixed = MIXED.match(text)
+    if mixed:
+        whole, part, over = (int(mixed[1]), int(mixed[2]), int(mixed[3]))
+        if over == 0:
+            return None
+        magnitude = abs(whole) * over + part
+        return (-magnitude if whole < 0 else magnitude, over)
+
+    plain = PLAIN.match(text)
+    if plain:
+        over = int(plain[3])
+        if over == 0:
+            return None
+        return (int(plain[2]) * (-1 if plain[1] == "-" else 1), over)
+
+    return None
+
+
 def classify(answer):
     """The question's type, from the shape of its answer.
 
@@ -40,17 +75,43 @@ def classify(answer):
         return "estimate"
     if kind == "numeric" and "base" in answer:
         return "base"
+    if kind == "numeric" and as_fraction(answer.get("display")):
+        return "fraction"
     return kind
 
 
 def build_answer(source):
     """The nested answer object the sealed Answer type reads."""
     answer = {k: v for k, v in source.items() if k not in DROPPED_ANSWER_FIELDS}
+
     # A base-N answer is a numeric one whose digits are read in another base;
     # the app needs it as its own type to grade the digits correctly.
     if answer.get("type") == "numeric" and "base" in answer:
         answer["type"] = "base"
+        return answer
+
+    # A key printed as a fraction demands the reduced fraction, not merely the
+    # right value, so it is stored as a ratio rather than a decimal.
+    fraction = (
+        as_fraction(answer.get("display"))
+        if answer.get("type") == "numeric"
+        else None
+    )
+    if fraction:
+        numerator, denominator = reduce(*fraction)
+        return {
+            "type": "fraction",
+            "num": numerator,
+            "den": denominator,
+            "display": answer["display"],
+        }
+
     return answer
+
+
+def reduce(numerator, denominator):
+    divisor = gcd(abs(numerator), abs(denominator))
+    return numerator // divisor, denominator // divisor
 
 
 def question_number(key):

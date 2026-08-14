@@ -17,6 +17,7 @@ class QuestionView extends StatelessWidget {
       'numeric' ||
       'estimate' ||
       'complex' ||
+      'fraction' ||
       'base' ||
       'numerical' => QuestionWidget(question: question),
       _ => Text(

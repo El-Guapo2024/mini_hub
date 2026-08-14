@@ -34,17 +34,14 @@ enum ContentSource {
 
 /// The app's settings, read once at startup.
 ///
-/// Defaults are overridden at build time, so a demo build or an experiment in
-/// the review tuning needs no edit to a source file:
+/// Defaults are overridden at build time, so a demo build needs no edit to a
+/// source file:
 ///
-///     flutter run --dart-define=CONTENT=sample --dart-define=ROLLING_WINDOW=20
+///     flutter run --dart-define=CONTENT=sample
 class AppConfig {
   const AppConfig({
     this.content = ContentSource.real,
     this.databaseFile = 'attempts.db',
-    this.rollingWindow = 10,
-    this.staleAfterDays = 30,
-    this.weaknessWeight = 0.6,
     this.maxAnswerTime = const Duration(minutes: 1),
   });
 
@@ -56,23 +53,10 @@ class AppConfig {
   /// The attempt log, inside the app's documents directory.
   final String databaseFile;
 
-  /// How many recent attempts a topic's current accuracy is measured over.
-  /// Lifetime accuracy lags for weeks after a student has actually improved.
-  final int rollingWindow;
-
-  /// Days after which a lesson counts as fully stale and is due for review.
-  final int staleAfterDays;
-
-  /// How much review priority is weakness rather than staleness, 0 to 1. At
-  /// 0.6 a weak topic outranks a merely old one, but not forever.
-  final double weaknessWeight;
-
   /// Number sense is a timed event, so an answer taken this long is not really
   /// an answer. Attempts slower than this record no time at all, rather than
   /// letting a question left open overnight wreck the averages.
   final Duration maxAnswerTime;
-
-  double get stalenessWeight => 1 - weaknessWeight;
 
   /// The configuration this build runs with. Read once, at startup, so the
   /// app cannot behave as though two different settings were in force.
@@ -80,16 +64,5 @@ class AppConfig {
     content: ContentSource.byName(
       const String.fromEnvironment('CONTENT', defaultValue: 'real'),
     ),
-    rollingWindow: const int.fromEnvironment(
-      'ROLLING_WINDOW',
-      defaultValue: 10,
-    ),
-    staleAfterDays: const int.fromEnvironment(
-      'STALE_AFTER_DAYS',
-      defaultValue: 30,
-    ),
-    // As a percent, because there is no double.fromEnvironment.
-    weaknessWeight:
-        const int.fromEnvironment('WEAKNESS_PERCENT', defaultValue: 60) / 100,
   );
 }

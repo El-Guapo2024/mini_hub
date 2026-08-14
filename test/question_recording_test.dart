@@ -72,7 +72,7 @@ void main() {
     expect(logged.topic, 'multiplying_by_11_trick');
     expect(logged.type, 'numeric');
     expect(logged.correct, isTrue);
-    expect(store.statsFor('multiplying_by_11_trick').streak, 1);
+    expect(store.progressFor('multiplying_by_11_trick').count, 1);
   });
 
   testWidgets('a wrong answer is recorded with what was typed', (tester) async {
@@ -81,7 +81,7 @@ void main() {
 
     expect(store.all.single.correct, isFalse);
     expect(store.all.single.given, isNotEmpty);
-    expect(store.statsFor('multiplying_by_11_trick').accuracy, 0);
+    expect(store.progressFor('multiplying_by_11_trick').count, 0);
   });
 
   testWidgets('grading still works with no store to record to', (tester) async {

@@ -39,11 +39,11 @@ void main() {
 
   final day0 = DateTime.utc(2026, 1, 1);
 
-  test('an empty store reports no attempts rather than throwing', () async {
+  test('an empty store reports no progress rather than throwing', () async {
     final store = await AttemptStore.openAt(file);
     expect(store.all, isEmpty);
-    expect(store.statsFor('squares').attempts, 0);
-    expect(store.reviewQueue(day0), isEmpty);
+    expect(store.progressFor('squares').count, 0);
+    expect(store.isDone('bh.1.2.1.q1'), isFalse);
   });
 
   test('attempts survive a reopen', () async {
@@ -53,8 +53,8 @@ void main() {
 
     final reopened = await AttemptStore.openAt(file);
     expect(reopened.all.length, 2);
-    expect(reopened.statsFor('squares').correct, 1);
-    expect(reopened.statsFor('cubes').correct, 0);
+    expect(reopened.progressFor('squares').count, 1);
+    expect(reopened.progressFor('cubes').count, 0);
     expect(reopened.all.first.at, day0);
   });
 
@@ -81,114 +81,57 @@ void main() {
     expect((await AttemptStore.openAt(file)).all, isEmpty);
   });
 
-  group('TopicStats', () {
-    test('recent accuracy tracks the last 10, not all time', () async {
-      final store = await AttemptStore.openAt(file);
-      // Ten wrong long ago, then ten right: lifetime says 50%, but the student
-      // has clearly learned it and the recent figure must say so.
-      for (var i = 0; i < 10; i++) {
-        await store.record(
-          at('squares', correct: false, when: day0.add(Duration(minutes: i))),
-        );
-      }
-      for (var i = 0; i < 10; i++) {
-        await store.record(
-          at('squares', correct: true, when: day0.add(Duration(hours: i + 1))),
-        );
-      }
+  test('a question is done once it has ever been right', () async {
+    final store = await AttemptStore.openAt(file);
+    await store.record(at('squares', correct: false, when: day0));
+    expect(store.isDone('bh.1.2.1.q1'), isFalse);
 
-      final stats = store.statsFor('squares');
-      expect(stats.attempts, 20);
-      expect(stats.accuracy, 0.5);
-      expect(stats.recent, 1.0);
-    });
-
-    test('streak counts back from the most recent answer', () async {
-      final store = await AttemptStore.openAt(file);
-      await store.record(at('squares', correct: true, when: day0));
-      await store.record(
-        at('squares', correct: false, when: day0.add(const Duration(hours: 1))),
-      );
-      await store.record(
-        at('squares', correct: true, when: day0.add(const Duration(hours: 2))),
-      );
-      await store.record(
-        at('squares', correct: true, when: day0.add(const Duration(hours: 3))),
-      );
-
-      expect(store.statsFor('squares').streak, 2);
-    });
-
-    test('a wrong answer breaks the streak immediately', () async {
-      final store = await AttemptStore.openAt(file);
-      await store.record(at('squares', correct: true, when: day0));
-      await store.record(
-        at('squares', correct: false, when: day0.add(const Duration(hours: 1))),
-      );
-      expect(store.statsFor('squares').streak, 0);
-    });
-
-    test('freshness runs 0 to 1 over the staleness window', () async {
-      final store = await AttemptStore.openAt(file);
-      await store.record(at('squares', correct: true, when: day0));
-      final stats = store.statsFor('squares');
-
-      expect(stats.freshness(day0), 0);
-      expect(
-        stats.freshness(day0.add(const Duration(days: 15))),
-        closeTo(0.5, 0.01),
-      );
-      expect(stats.freshness(day0.add(const Duration(days: 30))), 1);
-      expect(
-        stats.freshness(day0.add(const Duration(days: 365))),
-        1,
-        reason: 'clamped, so a long-abandoned topic cannot dominate forever',
-      );
-    });
+    await store.record(
+      at('squares', correct: true, when: day0.add(const Duration(hours: 1))),
+    );
+    expect(store.isDone('bh.1.2.1.q1'), isTrue);
   });
 
-  test('the review queue puts weak and stale topics first', () async {
+  test('getting it wrong later does not undo done', () async {
+    // Done means finished, not currently correct. Anything else would make a
+    // lesson's progress go backwards while a student is revising it.
     final store = await AttemptStore.openAt(file);
-    // Practised today, all correct.
+    await store.record(at('squares', correct: true, when: day0));
     await store.record(
-      at(
-        'strong_fresh',
-        correct: true,
-        when: day0.add(const Duration(days: 29)),
-      ),
+      at('squares', correct: false, when: day0.add(const Duration(hours: 1))),
     );
-    // Practised today, all wrong.
-    await store.record(
-      at(
-        'weak_fresh',
-        correct: false,
-        when: day0.add(const Duration(days: 29)),
-      ),
-    );
-    // A month ago, all wrong.
-    await store.record(at('weak_stale', correct: false, when: day0));
 
-    final queue = store.reviewQueue(day0.add(const Duration(days: 30)));
-    expect(queue.map((s) => s.topic), [
-      'weak_stale',
-      'weak_fresh',
-      'strong_fresh',
-    ]);
+    expect(store.isDone('bh.1.2.1.q1'), isTrue);
   });
 
-  test('accuracy breaks down by question type', () async {
-    final store = await AttemptStore.openAt(file);
-    await store.record(
-      at('squares', correct: true, when: day0, type: 'numeric'),
-    );
-    await store.record(
-      at('squares', correct: false, when: day0, type: 'approx'),
-    );
-    await store.record(at('cubes', correct: false, when: day0, type: 'approx'));
+  test(
+    'progress counts each question once, however often it is tried',
+    () async {
+      final store = await AttemptStore.openAt(file);
+      for (var i = 0; i < 3; i++) {
+        await store.record(
+          at('squares', correct: true, when: day0.add(Duration(hours: i))),
+        );
+      }
+      await store.record(
+        at('squares', correct: true, when: day0, id: 'bh.1.2.1.q2'),
+      );
 
-    final byType = store.accuracyByType();
-    expect(byType['numeric'], 1.0);
-    expect(byType['approx'], 0.0, reason: 'weak across both topics');
+      final progress = store.progressFor('squares');
+      expect(progress.count, 2);
+      expect(progress.done, {'bh.1.2.1.q1', 'bh.1.2.1.q2'});
+    },
+  );
+
+  test('progress is per topic', () async {
+    final store = await AttemptStore.openAt(file);
+    await store.record(at('squares', correct: true, when: day0));
+    await store.record(
+      at('cubes', correct: true, when: day0, id: 'bh.1.2.1.q2'),
+    );
+
+    expect(store.progressFor('squares').done, {'bh.1.2.1.q1'});
+    expect(store.progressFor('cubes').done, {'bh.1.2.1.q2'});
   });
 
   test('an id is stable across a save and reload', () async {
@@ -197,16 +140,5 @@ void main() {
     final id = store.all.single.id;
 
     expect((await AttemptStore.openAt(file)).all.single.id, id);
-  });
-
-  test('stats group across every topic at once', () async {
-    final store = await AttemptStore.openAt(file);
-    await store.record(at('squares', correct: true, when: day0));
-    await store.record(at('cubes', correct: false, when: day0));
-
-    final all = store.statsByTopic();
-    expect(all.keys, unorderedEquals(['squares', 'cubes']));
-    expect(all['squares']!.recent, 1.0);
-    expect(all['cubes']!.recent, 0.0);
   });
 }

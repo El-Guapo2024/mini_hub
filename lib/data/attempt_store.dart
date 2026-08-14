@@ -5,8 +5,9 @@ import 'package:sqflite/sqflite.dart';
 
 import '../config.dart';
 
-/// One graded response. Every statistic derives from these rows and nothing
-/// aggregated is stored, so redefining a figure is a recompute, not a migration.
+/// One graded response. The log is the only thing stored; what the app shows
+/// is derived from it, so changing what progress means is a recompute rather
+/// than a migration. More is recorded than is read today for that reason.
 class Attempt {
   Attempt({
     required this.questionId,
@@ -64,45 +65,17 @@ class Attempt {
   };
 }
 
-/// Accuracy and recency for one lesson, derived on demand.
-class TopicStats {
-  const TopicStats({
-    required this.topic,
-    required this.attempts,
-    required this.correct,
-    required this.recent,
-    required this.lastSeen,
-    required this.streak,
-  });
+/// What a student has finished in one lesson.
+class TopicProgress {
+  const TopicProgress({required this.topic, required this.done});
 
   final String topic;
-  final int attempts;
-  final int correct;
 
-  /// Accuracy over the last [AppConfig.rollingWindow] attempts.
-  final double recent;
-  final DateTime? lastSeen;
+  /// Ids of the questions answered correctly at least once. A question is done
+  /// or it is not; how many tries it took is in the log if it is ever wanted.
+  final Set<String> done;
 
-  /// Consecutive correct answers, most recent first.
-  final int streak;
-
-  double get accuracy => attempts == 0 ? 0 : correct / attempts;
-
-  /// How stale this lesson is, 0 (just practised) to 1 (due).
-  double freshness(DateTime now) {
-    if (lastSeen == null) return 1;
-    final days = now.difference(lastSeen!).inMinutes / (60 * 24);
-    final decay = days / AppConfig.current.staleAfterDays;
-    return decay.clamp(0.0, 1.0);
-  }
-
-  /// Higher means more worth practising: weak and stale beats strong and fresh.
-  double priority(DateTime now) {
-    if (attempts == 0) return 1;
-    final config = AppConfig.current;
-    return (1 - recent) * config.weaknessWeight +
-        freshness(now) * config.stalenessWeight;
-  }
+  int get count => done.length;
 }
 
 /// An append-only log of attempts, stored in SQLite.
@@ -176,75 +149,15 @@ class AttemptStore {
 
   Future<void> close() => _db.close();
 
-  TopicStats statsFor(String topic) {
-    final rows = _attempts.where((a) => a.topic == topic).toList();
-    return _statsFrom(topic, rows);
-  }
+  /// Whether this question has ever been answered correctly.
+  bool isDone(String questionId) =>
+      _attempts.any((a) => a.questionId == questionId && a.correct);
 
-  Map<String, TopicStats> statsByTopic() {
-    final grouped = <String, List<Attempt>>{};
-    for (final a in _attempts) {
-      grouped.putIfAbsent(a.topic, () => []).add(a);
-    }
-    return {
-      for (final entry in grouped.entries)
-        entry.key: _statsFrom(entry.key, entry.value),
-    };
-  }
-
-  /// Accuracy per question type, for spotting a shape that is uniformly weak
-  /// regardless of topic — estimation problems, say.
-  Map<String, double> accuracyByType() {
-    final total = <String, int>{};
-    final right = <String, int>{};
-    for (final a in _attempts) {
-      total[a.type] = (total[a.type] ?? 0) + 1;
-      if (a.correct) right[a.type] = (right[a.type] ?? 0) + 1;
-    }
-    return {
-      for (final type in total.keys) type: (right[type] ?? 0) / total[type]!,
-    };
-  }
-
-  /// Weakest and stalest first. Topics never attempted are absent: the caller
-  /// knows the full lesson list, this only knows what has been tried.
-  List<TopicStats> reviewQueue(DateTime now) {
-    final stats = statsByTopic().values.toList();
-    stats.sort((a, b) => b.priority(now).compareTo(a.priority(now)));
-    return stats;
-  }
-
-  static TopicStats _statsFrom(String topic, List<Attempt> rows) {
-    if (rows.isEmpty) {
-      return TopicStats(
-        topic: topic,
-        attempts: 0,
-        correct: 0,
-        recent: 0,
-        lastSeen: null,
-        streak: 0,
-      );
-    }
-    rows.sort((a, b) => a.at.compareTo(b.at));
-
-    final window = rows.length <= AppConfig.current.rollingWindow
-        ? rows
-        : rows.sublist(rows.length - AppConfig.current.rollingWindow);
-    final windowCorrect = window.where((a) => a.correct).length;
-
-    var streak = 0;
-    for (final a in rows.reversed) {
-      if (!a.correct) break;
-      streak++;
-    }
-
-    return TopicStats(
-      topic: topic,
-      attempts: rows.length,
-      correct: rows.where((a) => a.correct).length,
-      recent: windowCorrect / window.length,
-      lastSeen: rows.last.at,
-      streak: streak,
-    );
-  }
+  TopicProgress progressFor(String topic) => TopicProgress(
+    topic: topic,
+    done: {
+      for (final a in _attempts)
+        if (a.topic == topic && a.correct) a.questionId,
+    },
+  );
 }

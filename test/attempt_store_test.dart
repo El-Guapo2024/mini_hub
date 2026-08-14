@@ -27,7 +27,7 @@ void main() {
     String topic, {
     required bool correct,
     required DateTime when,
-    String type = 'numerical',
+    String type = 'numeric',
     String id = 'bh.1.2.1.q1',
   }) => Attempt(
     questionId: id,
@@ -179,7 +179,7 @@ void main() {
   test('accuracy breaks down by question type', () async {
     final store = await AttemptStore.openAt(file);
     await store.record(
-      at('squares', correct: true, when: day0, type: 'numerical'),
+      at('squares', correct: true, when: day0, type: 'numeric'),
     );
     await store.record(
       at('squares', correct: false, when: day0, type: 'approx'),
@@ -187,7 +187,7 @@ void main() {
     await store.record(at('cubes', correct: false, when: day0, type: 'approx'));
 
     final byType = store.accuracyByType();
-    expect(byType['numerical'], 1.0);
+    expect(byType['numeric'], 1.0);
     expect(byType['approx'], 0.0, reason: 'weak across both topics');
   });
 

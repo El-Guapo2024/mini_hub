@@ -287,14 +287,17 @@ void main() {
   });
 
   group('Question deserialization', () {
-    test('reads a bare numeric answer, the pre-existing shape', () {
-      final q = Question.fromJson({
-        'id': 'bh.1.2.1.q1',
-        'prompt': '2+2=',
-        'answer': 4,
-      });
-      expect(q.answer, isA<NumericAnswer>());
-      expect(q.answer.accepts('4'), isTrue);
+    test('rejects an answer type it does not know how to grade', () {
+      // Grading it as numeric would apply the wrong rule and look like it
+      // worked, so the bank fails loudly instead.
+      expect(
+        () => Question.fromJson({
+          'id': 'bh.1.2.1.q1',
+          'prompt': '2+2=',
+          'answer': {'type': 'multiple-choice', 'answer': 4},
+        }),
+        throwsFormatException,
+      );
     });
 
     test('reads each richer answer shape', () {

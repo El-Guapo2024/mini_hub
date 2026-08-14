@@ -34,12 +34,17 @@ sealed class Answer {
           base: json['base'] as int,
           display: json['display'] as String?,
         );
-      default:
+      case 'numeric':
         return NumericAnswer(
           value: (json['answer'] as num).toDouble(),
           display: json['display'] as String?,
           unit: json['unit'] as String?,
         );
+      // Falling back to a numeric answer would grade an unknown type by the
+      // wrong rule and look like it worked. The bank is generated, so an
+      // unrecognised type is a bug in the generator, not a student's input.
+      default:
+        throw FormatException('unknown answer type: ${json['type']}');
     }
   }
 

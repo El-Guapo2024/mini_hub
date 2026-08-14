@@ -32,12 +32,7 @@ class Question {
   final String? topic;
 
   factory Question.fromJson(Map<String, dynamic> json) {
-    final raw = json['answer'];
-    // A bare number is the pre-existing shape; anything richer arrives as a
-    // nested object carrying its own type.
-    final answer = raw is Map<String, dynamic>
-        ? Answer.fromJson(raw)
-        : Answer.fromJson({'type': 'numeric', 'answer': raw});
+    final answer = Answer.fromJson(json['answer'] as Map<String, dynamic>);
     return Question(
       id: json['id'] as String,
       prompt: json['prompt'] as String,

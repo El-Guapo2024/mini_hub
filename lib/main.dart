@@ -6,9 +6,7 @@ import 'hub/home.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // Opened once at launch and read whole. Storage must never be the reason the
-  // app won't start: a malformed log drops the unreadable rows (see
-  // AttemptStore.openAt), and a directory we cannot reach at all costs the
+  // Storage must never be why the app won't start: an unreachable log costs the
   // recording of progress, not the ability to practise.
   AttemptStore? store;
   try {

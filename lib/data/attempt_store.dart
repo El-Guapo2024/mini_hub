@@ -3,9 +3,8 @@ import 'dart:math';
 import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
 
-/// One graded response. Everything the statistics need is derived from these
-/// rows, so nothing aggregated is ever stored — a rolling average that turns
-/// out to be defined wrong is a recompute, not a migration.
+/// One graded response. Every statistic derives from these rows and nothing
+/// aggregated is stored, so redefining a figure is a recompute, not a migration.
 class Attempt {
   Attempt({
     required this.questionId,
@@ -78,9 +77,8 @@ class TopicStats {
   final int attempts;
   final int correct;
 
-  /// Accuracy over the last [AttemptStore.rollingWindow] attempts. This is what
-  /// a student feels as "how am I doing now"; lifetime accuracy lags for weeks
-  /// after they've actually improved.
+  /// Accuracy over the last [AttemptStore.rollingWindow] attempts. Lifetime
+  /// accuracy lags for weeks after a student has actually improved.
   final double recent;
   final DateTime? lastSeen;
 
@@ -89,9 +87,7 @@ class TopicStats {
 
   double get accuracy => attempts == 0 ? 0 : correct / attempts;
 
-  /// How stale this lesson is, 0 (just practised) to 1 (due). Drives review
-  /// ordering: a weak topic untouched for a month should outrank a strong one
-  /// practised yesterday.
+  /// How stale this lesson is, 0 (just practised) to 1 (due).
   double freshness(DateTime now) {
     if (lastSeen == null) return 1;
     final days = now.difference(lastSeen!).inMinutes / (60 * 24);
@@ -106,22 +102,17 @@ class TopicStats {
 
 /// An append-only log of attempts, stored in SQLite.
 ///
-/// SQLite earns its place here for durability rather than speed: at this size no
-/// query needs an index, but every write is a transaction, so a process killed
-/// mid-write leaves the log intact instead of truncated. Hand-rolling that over
-/// a text file means owning the failure modes yourself.
-///
-/// Rows are never updated or deleted in normal use. The statistics below all
-/// derive from them, so nothing aggregated is stored and redefining a figure is
-/// a recompute rather than a migration.
+/// SQLite is here for durability, not speed: at this size no query needs an
+/// index, but every write is a transaction, so a process killed mid-write leaves
+/// the log intact rather than truncated. Rows are never updated or deleted.
 class AttemptStore {
   AttemptStore._(this._db, this._attempts);
 
   final Database _db;
 
-  /// The whole log, held in memory. It is read in full for every statistic and
-  /// is small enough to keep — a year of daily practice is a few thousand rows.
-  /// SQLite is the durable copy, not the query engine.
+  /// The whole log, in memory: every statistic reads it in full, and a year of
+  /// daily practice is a few thousand rows. SQLite is the durable copy here,
+  /// not the query engine.
   final List<Attempt> _attempts;
 
   /// Attempts counted by [TopicStats.recent].
@@ -167,8 +158,8 @@ class AttemptStore {
 
   List<Attempt> get all => List.unmodifiable(_attempts);
 
-  /// Records an attempt. The returned future completes once it is committed;
-  /// callers in the UI may ignore it, since the in-memory list updates first.
+  /// The returned future completes once committed; UI callers may ignore it,
+  /// since the in-memory list updates first.
   Future<void> record(Attempt attempt) async {
     _attempts.add(attempt);
     await _db.insert(
@@ -216,9 +207,8 @@ class AttemptStore {
     };
   }
 
-  /// Topics most worth practising next, weakest and stalest first. Topics with
-  /// no attempts are absent — the caller knows the full lesson list, this only
-  /// knows what has been tried.
+  /// Weakest and stalest first. Topics never attempted are absent: the caller
+  /// knows the full lesson list, this only knows what has been tried.
   List<TopicStats> reviewQueue(DateTime now) {
     final stats = statsByTopic().values.toList();
     stats.sort((a, b) => b.priority(now).compareTo(a.priority(now)));

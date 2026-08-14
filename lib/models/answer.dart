@@ -2,10 +2,9 @@ import '../math/tex_answer.dart';
 
 /// What counts as a correct response to a question.
 ///
-/// A single `num` cannot express what this question bank actually contains:
-/// 219 estimation problems are graded on a range, 37 numeric answers carry a
-/// percent unit that students may enter either way, and one answer is complex.
-/// Each shape grades itself, so the widget never has to branch on a type tag.
+/// Each shape grades itself, so the input widget never branches on a type tag
+/// and a question carries its own marking rules — which differ by course, not
+/// just by question.
 sealed class Answer {
   const Answer();
 
@@ -103,18 +102,14 @@ class NumericAnswer extends Answer {
   };
 }
 
-/// An estimation problem, marked `(*)` in the manual, which states the rule as
-/// "±5% accuracy is needed" and then prints the resulting band per question.
-/// Grading uses the printed bounds verbatim, so a student is marked exactly as
-/// the answer key would mark them — including where the book rounded the bounds
-/// to whole numbers and landed slightly off its own rule.
+/// An estimation problem, marked `(*)` in the manual. Grading uses the printed
+/// band verbatim — including where rounding it to whole numbers left it slightly
+/// off the stated ±5% — so a student is marked exactly as the key marks them.
 class ApproxAnswer extends Answer {
   const ApproxAnswer({required this.low, required this.high});
 
   final double low;
   final double high;
-
-  double get midpoint => (low + high) / 2;
 
   @override
   bool accepts(String tex) {
@@ -177,14 +172,11 @@ class ComplexAnswer extends Answer {
   };
 }
 
-/// An answer the manual prints as a fraction, where the form is part of being
-/// right: number sense expects the fully reduced fraction, so `\frac{2}{4}` is
-/// wrong wherever `\frac{1}{2}` is the answer even though the values match.
+/// An answer where the form is part of being right: number sense wants the
+/// reduced fraction, so `\frac{2}{4}` is wrong where `\frac{1}{2}` is the answer.
 ///
-/// Which questions this applies to is read from the manual rather than guessed.
-/// Within a single problem set the book prints `35\frac{1}{16}` for a mixed
-/// number question and `53.04` for a decimal one, so the required form is a
-/// property of the question, and the printed key is what records it.
+/// Which questions this applies to is read from the manual, not assumed — one
+/// problem set prints `35\frac{1}{16}` and `53.04` side by side.
 class FractionAnswer extends Answer {
   const FractionAnswer({
     required this.numerator,
@@ -193,13 +185,9 @@ class FractionAnswer extends Answer {
     String? display,
   }) : _display = display;
 
-  /// Whether lowest terms are required. True for number sense, where an
-  /// unreduced answer is marked wrong. A course with a different convention
-  /// sets it false and gets fraction form without the reduction rule — and one
-  /// that does not care about form at all uses [NumericAnswer] instead.
-  ///
-  /// It lives here rather than in the widget so the same input box serves every
-  /// course: the question carries its own marking rules.
+  /// Whether lowest terms are required. A course with another convention sets
+  /// it false; one that does not care about form uses [NumericAnswer]. It lives
+  /// on the question so the shared input box needs no course-specific rules.
   final bool reduced;
 
   /// Held as an improper fraction in lowest terms, so `35\frac{1}{16}` is
@@ -209,8 +197,6 @@ class FractionAnswer extends Answer {
   final int denominator;
 
   final String? _display;
-
-  double get value => numerator / denominator;
 
   static final _mixed = RegExp(r'^(-?\d+)\\d?frac\{(\d+)\}\{(\d+)\}$');
   static final _plain = RegExp(r'^(-?)\\d?frac\{(\d+)\}\{(\d+)\}$');
@@ -272,12 +258,9 @@ class FractionAnswer extends Answer {
   };
 }
 
-/// A value written in another base, e.g. `15/70` in base 8.
-///
-/// The digits mean something different from what [evaluateTex] would read: it
-/// evaluates `\frac{15}{70}` as 15/70 in base 10, or 0.214, where the answer is
-/// 13/56 — 0.232. So the digits are converted out of the question's base first,
-/// and only then compared against the stored decimal value.
+/// A value written in another base, e.g. `15/70` in base 8, which is 13/56.
+/// The digits are converted out of the question's base before comparison —
+/// [evaluateTex] would read them as base 10 and mark a right answer wrong.
 class BaseAnswer extends Answer {
   const BaseAnswer({required this.value, required this.base, String? display})
     : _display = display;

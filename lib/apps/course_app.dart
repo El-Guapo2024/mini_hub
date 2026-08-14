@@ -29,9 +29,14 @@ class StemaArenaScreen extends StatefulWidget {
 }
 
 class _StemaArenaScreenState extends State<StemaArenaScreen> {
+  /// The one file naming every course that ships. A course absent from it is
+  /// invisible however complete its content is.
+  static const _index = 'assets/content/courses.json';
+
   final CourseIndexLoader indexLoader = CourseIndexLoader();
   final CourseLoader courseLoader = CourseLoader();
-  List<Course> courses = [];
+  List<Course>? courses;
+  Object? error;
 
   @override
   void initState() {
@@ -40,14 +45,21 @@ class _StemaArenaScreenState extends State<StemaArenaScreen> {
   }
 
   Future<void> loadData() async {
-    final paths = await indexLoader.load('assets/mock/courses.json');
-    final result = <Course>[];
-    for (final path in paths) {
-      result.add(await courseLoader.load(path));
+    try {
+      final paths = await indexLoader.load(_index);
+      final result = <Course>[];
+      for (final path in paths) {
+        result.add(await courseLoader.load(path));
+      }
+      // The load is asynchronous and the screen can be popped mid-flight.
+      if (!mounted) return;
+      setState(() => courses = result);
+    } on Object catch (e) {
+      if (!mounted) return;
+      // An unreadable index used to leave an empty grid and no explanation,
+      // which reads as "there are no courses" rather than "this is broken".
+      setState(() => error = e);
     }
-    setState(() {
-      courses = result;
-    });
   }
 
   @override
@@ -60,42 +72,59 @@ class _StemaArenaScreenState extends State<StemaArenaScreen> {
         title: const Text('Stema Arena'),
         centerTitle: true,
       ),
-      body: GridView.count(
-        crossAxisCount: 2,
-        padding: const EdgeInsets.all(16),
-        mainAxisSpacing: 16,
-        crossAxisSpacing: 16,
-        children: courses.map((course) {
-          return Card(
-            color: Colors.grey.shade900,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
+      body: _body(),
+    );
+  }
+
+  Widget _body() {
+    if (error != null) {
+      return Center(
+        child: Padding(
+          padding: const EdgeInsets.all(24),
+          child: Text(
+            'Could not load the course list.\n$error',
+            textAlign: TextAlign.center,
+            style: const TextStyle(color: Colors.white70),
+          ),
+        ),
+      );
+    }
+    final courses = this.courses;
+    if (courses == null) {
+      return const Center(child: CircularProgressIndicator());
+    }
+    return GridView.count(
+      crossAxisCount: 2,
+      padding: const EdgeInsets.all(16),
+      mainAxisSpacing: 16,
+      crossAxisSpacing: 16,
+      children: courses.map((course) {
+        return Card(
+          color: Colors.grey.shade900,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: InkWell(
+            borderRadius: BorderRadius.circular(20),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => TopicListScreen(course: course),
+                ),
+              );
+            },
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.functions, size: 48, color: Colors.teal.shade400),
+                const SizedBox(height: 8),
+                Text(course.title, style: const TextStyle(color: Colors.white)),
+              ],
             ),
-            child: InkWell(
-              borderRadius: BorderRadius.circular(20),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => TopicListScreen(course: course),
-                  ),
-                );
-              },
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(Icons.functions, size: 48, color: Colors.teal.shade400),
-                  const SizedBox(height: 8),
-                  Text(
-                    course.title,
-                    style: const TextStyle(color: Colors.white),
-                  ),
-                ],
-              ),
-            ),
-          );
-        }).toList(),
-      ),
+          ),
+        );
+      }).toList(),
     );
   }
 }

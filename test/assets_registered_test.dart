@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
@@ -47,5 +48,32 @@ void main() {
     // A renamed folder left behind in pubspec.yaml fails the whole build with
     // a message that names the asset, not the rename that caused it.
     expect(stale, isEmpty, reason: 'listed in pubspec.yaml but not on disk');
+  });
+
+  test('the course index resolves to real courses and topics', () {
+    // A course reaches the student only by being named here, so an index that
+    // has drifted from disk hides finished content with no error anywhere.
+    final index =
+        jsonDecode(File('assets/content/courses.json').readAsStringSync())
+            as List<dynamic>;
+    expect(index, isNotEmpty);
+
+    final missing = <String>[];
+    for (final entry in index.cast<Map<String, dynamic>>()) {
+      final path = (entry['path'] as String).replaceAll(RegExp(r'/$'), '');
+      final file = File('$path/course.yml');
+      if (!file.existsSync()) {
+        missing.add('$path/course.yml');
+        continue;
+      }
+      final course = loadYaml(file.readAsStringSync());
+      for (final topic in course['topics'] as YamlList) {
+        if (!File('$path/$topic/topic.yml').existsSync()) {
+          missing.add('$path/$topic');
+        }
+      }
+    }
+
+    expect(missing, isEmpty, reason: 'named in content but absent on disk');
   });
 }

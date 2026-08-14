@@ -67,9 +67,7 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/mock/
-    - assets/content/math/
-    - assets/content/math/arithmetic_basics/
+    - assets/content/
     - assets/content/number_sense/
     - assets/content/number_sense/introduction_foiling_liofing_when_multiplying/
     - assets/content/number_sense/multiplying_by_11_trick/

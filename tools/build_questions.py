@@ -64,19 +64,14 @@ def as_fraction(display):
     return None
 
 
-def classify(answer):
-    """The question's type, from the answer this generator built for it.
-
-    Mirrors `Answer.kind` in the app, which is the authority; the field is
-    written so the JSON reads on its own, and a test holds the two together.
-    """
-    kind = answer.get("type", "numeric")
-    return "estimate" if kind == "approx" else kind
-
-
 def build_answer(source):
     """The nested answer object the sealed Answer type reads."""
     answer = {k: v for k, v in source.items() if k not in DROPPED_ANSWER_FIELDS}
+
+    # The app names estimation problems for what they are; the source data
+    # named them for how they are graded. One vocabulary, not two.
+    if answer.get("type") == "approx":
+        answer["type"] = "estimate"
 
     # A base-N answer is a numeric one whose digits are read in another base;
     # the app needs it as its own type to grade the digits correctly.
@@ -127,14 +122,12 @@ def write_questions(topic_dir, topic, section, prompts, answers):
         # so skip rather than ship one that can never be got right.
         if answer is None:
             continue
-        built = build_answer(answer)
         questions.append(
             {
                 "id": f"bh.{section}.q{key}",
-                "type": classify(built),
                 "prompt": prompts[key],
                 "topic": topic,
-                "answer": built,
+                "answer": build_answer(answer),
             }
         )
 

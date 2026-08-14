@@ -1,34 +1,34 @@
-import 'package:json_annotation/json_annotation.dart';
-
-part 'topic.g.dart';
-
-@JsonSerializable()
+/// A lesson, and where on disk it lives.
 class Topic {
-  final String id;
-  final String title;
-  final String logo;
-  @JsonKey(name: 'questionIds')
-  final List<String> questionIds;
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  late String lessonPath;
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  late String questionsPath;
-
-  Topic({
+  const Topic({
     required this.id,
     required this.title,
     required this.logo,
     required this.questionIds,
-    this.lessonPath = '',
-    this.questionsPath = '',
+    required this.folderPath,
   });
 
-  factory Topic.fromJson(Map<String, dynamic> json, String folderPath) {
-    final topic = _$TopicFromJson(json);
-    topic.lessonPath = '$folderPath/lesson.md';
-    topic.questionsPath = '$folderPath/questions.json';
-    return topic;
-  }
+  final String id;
+  final String title;
+  final String logo;
 
-  Map<String, dynamic> toJson() => _$TopicToJson(this);
+  /// Ids of this topic's questions. Empty means a lesson with no practice,
+  /// which is a real state: seven topics cover material the manual never set
+  /// problems for.
+  final List<String> questionIds;
+
+  /// The directory the topic was loaded from, with no trailing slash.
+  final String folderPath;
+
+  String get lessonPath => '$folderPath/lesson.md';
+  String get questionsPath => '$folderPath/questions.json';
+
+  factory Topic.fromJson(Map<String, dynamic> json, String folderPath) => Topic(
+    id: json['id'] as String,
+    title: json['title'] as String,
+    logo: json['logo'] as String,
+    questionIds:
+        (json['questionIds'] as List<dynamic>?)?.cast<String>() ?? const [],
+    folderPath: folderPath,
+  );
 }

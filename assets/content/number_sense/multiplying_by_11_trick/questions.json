@@ -1,7 +1,6 @@
 [
   {
     "id": "bh.1.2.1.q1",
-    "type": "numeric",
     "prompt": "11 \\times 54 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -11,7 +10,6 @@
   },
   {
     "id": "bh.1.2.1.q2",
-    "type": "numeric",
     "prompt": "11 \\times 72 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -21,7 +19,6 @@
   },
   {
     "id": "bh.1.2.1.q3",
-    "type": "numeric",
     "prompt": "11 \\times 38 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -31,7 +28,6 @@
   },
   {
     "id": "bh.1.2.1.q4",
-    "type": "numeric",
     "prompt": "462 \\times 11 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -41,7 +37,6 @@
   },
   {
     "id": "bh.1.2.1.q5",
-    "type": "numeric",
     "prompt": "11 \\times 74 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -51,7 +46,6 @@
   },
   {
     "id": "bh.1.2.1.q6",
-    "type": "numeric",
     "prompt": "66 \\times 11 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -61,7 +55,6 @@
   },
   {
     "id": "bh.1.2.1.q7",
-    "type": "numeric",
     "prompt": "1.1 \\times 2.3 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -71,7 +64,6 @@
   },
   {
     "id": "bh.1.2.1.q8",
-    "type": "numeric",
     "prompt": "52 \\times 11 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -81,7 +73,6 @@
   },
   {
     "id": "bh.1.2.1.q9",
-    "type": "numeric",
     "prompt": "246 \\times 11 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -91,7 +82,6 @@
   },
   {
     "id": "bh.1.2.1.q10",
-    "type": "numeric",
     "prompt": "111 \\times 456 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -101,7 +91,6 @@
   },
   {
     "id": "bh.1.2.1.q11",
-    "type": "numeric",
     "prompt": "198 \\div 11 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -111,7 +100,6 @@
   },
   {
     "id": "bh.1.2.1.q12",
-    "type": "numeric",
     "prompt": "357 \\times 11 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -121,7 +109,6 @@
   },
   {
     "id": "bh.1.2.1.q13",
-    "type": "numeric",
     "prompt": "275 \\div 11 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -131,7 +118,6 @@
   },
   {
     "id": "bh.1.2.1.q14",
-    "type": "numeric",
     "prompt": "321 \\times 111 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -141,7 +127,6 @@
   },
   {
     "id": "bh.1.2.1.q15",
-    "type": "numeric",
     "prompt": "1.1 \\times .25 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -151,7 +136,6 @@
   },
   {
     "id": "bh.1.2.1.q16",
-    "type": "numeric",
     "prompt": "111 \\times 44 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -161,7 +145,6 @@
   },
   {
     "id": "bh.1.2.1.q17",
-    "type": "numeric",
     "prompt": "374 \\div 11 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -171,7 +154,6 @@
   },
   {
     "id": "bh.1.2.1.q18",
-    "type": "numeric",
     "prompt": "87 \\times 111 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -181,7 +163,6 @@
   },
   {
     "id": "bh.1.2.1.q19",
-    "type": "numeric",
     "prompt": "286 \\div 11 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -191,7 +172,6 @@
   },
   {
     "id": "bh.1.2.1.q20",
-    "type": "numeric",
     "prompt": "111 \\times 53 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -201,7 +181,6 @@
   },
   {
     "id": "bh.1.2.1.q21",
-    "type": "numeric",
     "prompt": "297 \\div 11 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -211,7 +190,6 @@
   },
   {
     "id": "bh.1.2.1.q22",
-    "type": "numeric",
     "prompt": "2233 \\div 11 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -221,7 +199,6 @@
   },
   {
     "id": "bh.1.2.1.q23",
-    "type": "numeric",
     "prompt": "198 \\times 11 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -231,7 +208,6 @@
   },
   {
     "id": "bh.1.2.1.q24",
-    "type": "numeric",
     "prompt": "297 \\div 11 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -241,7 +217,6 @@
   },
   {
     "id": "bh.1.2.1.q25",
-    "type": "numeric",
     "prompt": "111 \\times 41 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -251,7 +226,6 @@
   },
   {
     "id": "bh.1.2.1.q26",
-    "type": "numeric",
     "prompt": "111 \\times 35 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -261,7 +235,6 @@
   },
   {
     "id": "bh.1.2.1.q27",
-    "type": "numeric",
     "prompt": "111 \\times 345 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -271,7 +244,6 @@
   },
   {
     "id": "bh.1.2.1.q28",
-    "type": "numeric",
     "prompt": "2003 \\times 111 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -281,7 +253,6 @@
   },
   {
     "id": "bh.1.2.1.q29",
-    "type": "numeric",
     "prompt": "3 \\times 5 \\times 7 \\times 11 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -291,7 +262,6 @@
   },
   {
     "id": "bh.1.2.1.q30",
-    "type": "numeric",
     "prompt": "121 \\times 121 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -301,7 +271,6 @@
   },
   {
     "id": "bh.1.2.1.q31",
-    "type": "numeric",
     "prompt": "33 \\times 1111 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -311,7 +280,6 @@
   },
   {
     "id": "bh.1.2.1.q32",
-    "type": "numeric",
     "prompt": "22 \\times 32 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -321,7 +289,6 @@
   },
   {
     "id": "bh.1.2.1.q33",
-    "type": "numeric",
     "prompt": "36963 \\div 111 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -331,7 +298,6 @@
   },
   {
     "id": "bh.1.2.1.q34",
-    "type": "numeric",
     "prompt": "20.07 \\times 1.1 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -341,7 +307,6 @@
   },
   {
     "id": "bh.1.2.1.q35",
-    "type": "numeric",
     "prompt": "11\\% \\text{ of } 22 = \\text{____\\% (dec.)}",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -352,7 +317,6 @@
   },
   {
     "id": "bh.1.2.1.q36",
-    "type": "numeric",
     "prompt": "13 \\times 121 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -362,7 +326,6 @@
   },
   {
     "id": "bh.1.2.1.q37",
-    "type": "numeric",
     "prompt": "27972 \\div 111 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -372,7 +335,6 @@
   },
   {
     "id": "bh.1.2.1.q38",
-    "type": "numeric",
     "prompt": "2006 \\times 11 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -382,7 +344,6 @@
   },
   {
     "id": "bh.1.2.1.q39",
-    "type": "numeric",
     "prompt": "11^{4} =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -392,7 +353,6 @@
   },
   {
     "id": "bh.1.2.1.q40",
-    "type": "numeric",
     "prompt": "33 \\times 44 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -402,7 +362,6 @@
   },
   {
     "id": "bh.1.2.1.q41",
-    "type": "numeric",
     "prompt": "2 \\times 3 \\times 11 \\times 13 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -412,7 +371,6 @@
   },
   {
     "id": "bh.1.2.1.q42",
-    "type": "numeric",
     "prompt": "121 \\times 22 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -422,7 +380,6 @@
   },
   {
     "id": "bh.1.2.1.q43",
-    "type": "numeric",
     "prompt": "44 \\times 55 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -432,7 +389,6 @@
   },
   {
     "id": "bh.1.2.1.q44",
-    "type": "numeric",
     "prompt": "2 \\times 3 \\times 5 \\times 7 \\times 11 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -442,7 +398,6 @@
   },
   {
     "id": "bh.1.2.1.q45",
-    "type": "numeric",
     "prompt": "2553 \\div 111 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -452,7 +407,6 @@
   },
   {
     "id": "bh.1.2.1.q46",
-    "type": "numeric",
     "prompt": "114 \\times 121 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -462,7 +416,6 @@
   },
   {
     "id": "bh.1.2.1.q47",
-    "type": "numeric",
     "prompt": "44 \\times 25 \\times 11 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -472,7 +425,6 @@
   },
   {
     "id": "bh.1.2.1.q48",
-    "type": "numeric",
     "prompt": "55 \\times 33 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -482,18 +434,16 @@
   },
   {
     "id": "bh.1.2.1.q49",
-    "type": "estimate",
     "prompt": "(*) 32 \\times 64 \\times 16 \\div 48 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
       "high": 717.0,
       "low": 648.0,
-      "type": "approx"
+      "type": "estimate"
     }
   },
   {
     "id": "bh.1.2.1.q50",
-    "type": "numeric",
     "prompt": "2002 \\div 11 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -503,7 +453,6 @@
   },
   {
     "id": "bh.1.2.1.q51",
-    "type": "numeric",
     "prompt": "77 \\times 88 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -513,18 +462,16 @@
   },
   {
     "id": "bh.1.2.1.q52",
-    "type": "estimate",
     "prompt": "(*) 44.4 \\times 33.3 \\times 22.2 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
       "high": 34465.0,
       "low": 31181.0,
-      "type": "approx"
+      "type": "estimate"
     }
   },
   {
     "id": "bh.1.2.1.q53",
-    "type": "numeric",
     "prompt": "11 \\times 11 \\times 11 \\times 11 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -534,7 +481,6 @@
   },
   {
     "id": "bh.1.2.1.q54",
-    "type": "numeric",
     "prompt": "25553 \\div 1111 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -544,7 +490,6 @@
   },
   {
     "id": "bh.1.2.1.q55",
-    "type": "numeric",
     "prompt": "11 \\times 13 \\times 42 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -554,7 +499,6 @@
   },
   {
     "id": "bh.1.2.1.q56",
-    "type": "numeric",
     "prompt": "1111 \\times 123 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -564,7 +508,6 @@
   },
   {
     "id": "bh.1.2.1.q57",
-    "type": "numeric",
     "prompt": "11 \\times 7 \\times 5 \\times 3 \\times 2 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -574,7 +517,6 @@
   },
   {
     "id": "bh.1.2.1.q58",
-    "type": "numeric",
     "prompt": "121 \\times 124 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
@@ -584,13 +526,12 @@
   },
   {
     "id": "bh.1.2.1.q59",
-    "type": "estimate",
     "prompt": "(*) 33 \\times 44 \\times 55 =",
     "topic": "multiplying_by_11_trick",
     "answer": {
       "high": 83853.0,
       "low": 75897.0,
-      "type": "approx"
+      "type": "estimate"
     }
   }
 ]

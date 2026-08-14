@@ -28,8 +28,9 @@ enum ContentSource {
   /// The JSON file naming every course this source offers.
   final String indexPath;
 
-  static ContentSource byName(String name) =>
-      values.firstWhere((source) => source.name == name, orElse: () => real);
+  /// Throws on a name that is not a source. A typo in a build flag silently
+  /// serving the real bank is the kind of default that hides itself.
+  static ContentSource byName(String name) => values.byName(name);
 }
 
 /// The app's settings, read once at startup.
@@ -45,9 +46,7 @@ class AppConfig {
     this.maxAnswerTime = const Duration(minutes: 1),
   });
 
-  /// Which bank the build serves. An unrecognised name falls back to the real
-  /// one rather than failing to start: a typo in a build flag should not look
-  /// like the content is missing.
+  /// Which bank the build serves.
   final ContentSource content;
 
   /// The attempt log, inside the app's documents directory.

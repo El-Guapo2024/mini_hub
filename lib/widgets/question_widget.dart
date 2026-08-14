@@ -56,7 +56,7 @@ class _QuestionWidgetState extends State<QuestionWidget> {
     store.record(
       Attempt(
         questionId: widget.question.id,
-        topic: widget.question.topic ?? 'unknown',
+        topic: widget.question.topic,
         type: widget.question.type,
         correct: correct,
         at: DateTime.now().toUtc(),

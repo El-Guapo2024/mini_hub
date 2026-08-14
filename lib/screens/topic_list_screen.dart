@@ -26,9 +26,7 @@ class _TopicListScreenState extends State<TopicListScreen> {
   Future<void> loadData() async {
     final result = <Topic>[];
     for (final topicId in widget.course.topicIds) {
-      result.add(
-        await topicLoader.load('${widget.course.folderPath}/$topicId'),
-      );
+      result.add(await topicLoader.load(widget.course.pathFor(topicId)));
     }
     setState(() {
       topics = result;

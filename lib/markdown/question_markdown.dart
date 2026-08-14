@@ -12,8 +12,10 @@ class QuestionBlockSyntax extends md.BlockSyntax {
 
   @override
   md.Node parse(md.BlockParser parser) {
-    final match = pattern.firstMatch(parser.current.content);
-    final id = match?[1] ?? '';
+    // parse() is only reached on a line the pattern matched, so the group is
+    // there. Defaulting to an empty id would turn a parser bug into a lesson
+    // quietly showing "missing question:" with nothing after it.
+    final id = pattern.firstMatch(parser.current.content)![1]!;
     parser.advance();
     return md.Element.text('question', id);
   }

@@ -63,12 +63,13 @@ void main() {
     // plain strings, so a rename here would silently split a topic's history
     // in two rather than fail to compile.
     const types = {
-      'numeric': NumericAnswer(value: 4),
-      'estimate': ApproxAnswer(low: 1, high: 2),
-      'complex': ComplexAnswer(real: 16, imaginary: 16),
-      'fraction': FractionAnswer(numerator: 1, denominator: 2),
-      'base': BaseAnswer(value: 16, base: 8),
+      QuestionType.numeric: NumericAnswer(value: 4),
+      QuestionType.estimate: ApproxAnswer(low: 1, high: 2),
+      QuestionType.complex: ComplexAnswer(real: 16, imaginary: 16),
+      QuestionType.fraction: FractionAnswer(numerator: 1, denominator: 2),
+      QuestionType.base: BaseAnswer(value: 16, base: 8),
     };
+    expect(types.keys, containsAll(QuestionType.values));
 
     for (final entry in types.entries) {
       await tester.pumpWidget(
@@ -79,6 +80,7 @@ void main() {
                 question: Question(
                   id: 'q',
                   prompt: '2+2=',
+                  topic: 'squares',
                   answer: entry.value,
                 ),
               ),

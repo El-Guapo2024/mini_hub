@@ -304,13 +304,15 @@ void main() {
       final approx = Question.fromJson({
         'id': 'a',
         'prompt': 'p',
-        'answer': {'type': 'approx', 'low': 1, 'high': 2},
+        'topic': 't',
+        'answer': {'type': 'estimate', 'low': 1, 'high': 2},
       });
       expect(approx.answer, isA<ApproxAnswer>());
 
       final complex = Question.fromJson({
         'id': 'b',
         'prompt': r'(1+i)^{9} =',
+        'topic': 't',
         'answer': {'type': 'complex', 'real': 16, 'imag': 16},
       });
       expect(complex.answer, isA<ComplexAnswer>());
@@ -326,7 +328,7 @@ void main() {
       });
       final again = Question.fromJson(q.toJson());
       expect(again.answer.accepts('16+16i'), isTrue);
-      expect(again.type, 'complex', reason: 'derived from the answer');
+      expect(again.type, QuestionType.complex, reason: 'derived from the answer');
       expect(again.topic, 'complex_numbers');
     });
   });

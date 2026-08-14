@@ -1,30 +1,36 @@
-import 'package:json_annotation/json_annotation.dart';
-
-part 'course.g.dart';
-
-@JsonSerializable()
+/// A course, and where on disk it lives.
+///
+/// Serialization is hand-written: the folder path is not in the file, it is
+/// where the file was found, and a generated constructor cannot require what
+/// it cannot read.
 class Course {
-  final String id;
-  final String title;
-  final String icon;
-  @JsonKey(name: 'topics')
-  final List<String> topicIds;
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  late String folderPath;
-
-  Course({
+  const Course({
     required this.id,
     required this.title,
     required this.icon,
     required this.topicIds,
-    this.folderPath = '',
+    required this.folderPath,
   });
 
-  factory Course.fromJson(Map<String, dynamic> json, String folderPath) {
-    final course = _$CourseFromJson(json);
-    course.folderPath = folderPath;
-    return course;
-  }
+  final String id;
+  final String title;
+  final String icon;
 
-  Map<String, dynamic> toJson() => _$CourseToJson(this);
+  /// Slugs of the topics this course offers, in the order they are taught.
+  final List<String> topicIds;
+
+  /// The directory the course was loaded from, with no trailing slash. Every
+  /// topic path is built from it.
+  final String folderPath;
+
+  factory Course.fromJson(Map<String, dynamic> json, String folderPath) =>
+      Course(
+        id: json['id'] as String,
+        title: json['title'] as String,
+        icon: json['icon'] as String,
+        topicIds: (json['topics'] as List<dynamic>).cast<String>(),
+        folderPath: folderPath,
+      );
+
+  String pathFor(String topicId) => '$folderPath/$topicId';
 }

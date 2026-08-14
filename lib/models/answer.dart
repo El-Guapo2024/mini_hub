@@ -1,5 +1,9 @@
 import '../math/tex_answer.dart';
 
+/// How a question is answered. Recorded on every attempt, so the names are
+/// stored data: renaming one splits a question's history in two.
+enum QuestionType { numeric, estimate, complex, fraction, base }
+
 /// What counts as a correct response to a question.
 ///
 /// Each shape grades itself, so the input widget never branches on a type tag
@@ -9,51 +13,52 @@ sealed class Answer {
   const Answer();
 
   factory Answer.fromJson(Map<String, dynamic> json) {
-    switch (json['type'] as String?) {
-      case 'approx':
+    final raw = json['type'];
+    // Falling back to a numeric answer would grade an unknown type by the
+    // wrong rule and look like it worked. The bank is generated, so an
+    // unrecognised type is a bug in the generator, not a student's input.
+    if (raw is! String || !QuestionType.values.any((t) => t.name == raw)) {
+      throw FormatException('unknown answer type: $raw');
+    }
+    switch (QuestionType.values.byName(raw)) {
+      case QuestionType.estimate:
         return ApproxAnswer(
           low: (json['low'] as num).toDouble(),
           high: (json['high'] as num).toDouble(),
         );
-      case 'complex':
+      case QuestionType.complex:
         return ComplexAnswer(
           real: (json['real'] as num).toDouble(),
           imaginary: (json['imag'] as num).toDouble(),
           display: json['display'] as String?,
         );
-      case 'fraction':
+      case QuestionType.fraction:
         return FractionAnswer(
           numerator: json['num'] as int,
           denominator: json['den'] as int,
           reduced: json['reduced'] as bool? ?? true,
           display: json['display'] as String?,
         );
-      case 'base':
+      case QuestionType.base:
         return BaseAnswer(
           value: (json['answer'] as num).toDouble(),
           base: json['base'] as int,
           display: json['display'] as String?,
         );
-      case 'numeric':
+      case QuestionType.numeric:
         return NumericAnswer(
           value: (json['answer'] as num).toDouble(),
           display: json['display'] as String?,
           unit: json['unit'] as String?,
         );
-      // Falling back to a numeric answer would grade an unknown type by the
-      // wrong rule and look like it worked. The bank is generated, so an
-      // unrecognised type is a bug in the generator, not a student's input.
-      default:
-        throw FormatException('unknown answer type: ${json['type']}');
     }
   }
 
   Map<String, dynamic> toJson();
 
-  /// The question's classification, recorded on every attempt so accuracy can
-  /// be read per shape across topics. Derived from the answer rather than
-  /// stored beside it, so the two can never disagree.
-  String get kind;
+  /// The question's classification, recorded on every attempt. Derived from
+  /// the answer rather than stored beside it, so the two cannot disagree.
+  QuestionType get kind;
 
   /// Whether the student's LaTeX input is a correct response.
   bool accepts(String tex);
@@ -88,7 +93,7 @@ class NumericAnswer extends Answer {
   final String? _display;
 
   @override
-  String get kind => 'numeric';
+  QuestionType get kind => QuestionType.numeric;
 
   @override
   bool accepts(String tex) {
@@ -113,7 +118,7 @@ class NumericAnswer extends Answer {
 
   @override
   Map<String, dynamic> toJson() => {
-    'type': 'numeric',
+    'type': kind.name,
     'answer': value,
     if (_display != null) 'display': _display,
     if (unit != null) 'unit': unit,
@@ -130,7 +135,7 @@ class ApproxAnswer extends Answer {
   final double high;
 
   @override
-  String get kind => 'estimate';
+  QuestionType get kind => QuestionType.estimate;
 
   @override
   bool accepts(String tex) {
@@ -145,7 +150,11 @@ class ApproxAnswer extends Answer {
   String? get inputHint => 'Estimate — within ±5% counts';
 
   @override
-  Map<String, dynamic> toJson() => {'type': 'approx', 'low': low, 'high': high};
+  Map<String, dynamic> toJson() => {
+    'type': kind.name,
+    'low': low,
+    'high': high,
+  };
 }
 
 /// A complex answer, e.g. `(1+i)^9 = 16+16i`. The real evaluator cannot grade
@@ -162,7 +171,7 @@ class ComplexAnswer extends Answer {
   final String? _display;
 
   @override
-  String get kind => 'complex';
+  QuestionType get kind => QuestionType.complex;
 
   @override
   bool accepts(String tex) {
@@ -187,7 +196,7 @@ class ComplexAnswer extends Answer {
 
   @override
   Map<String, dynamic> toJson() => {
-    'type': 'complex',
+    'type': kind.name,
     'real': real,
     'imag': imaginary,
     if (_display != null) 'display': _display,
@@ -224,7 +233,7 @@ class FractionAnswer extends Answer {
   static final _plain = RegExp(r'^(-?)\\d?frac\{(\d+)\}\{(\d+)\}$');
 
   @override
-  String get kind => 'fraction';
+  QuestionType get kind => QuestionType.fraction;
 
   @override
   bool accepts(String tex) {
@@ -275,7 +284,7 @@ class FractionAnswer extends Answer {
 
   @override
   Map<String, dynamic> toJson() => {
-    'type': 'fraction',
+    'type': kind.name,
     'num': numerator,
     'den': denominator,
     if (!reduced) 'reduced': false,
@@ -303,7 +312,7 @@ class BaseAnswer extends Answer {
   static const _exact = 1e-9;
 
   @override
-  String get kind => 'base';
+  QuestionType get kind => QuestionType.base;
 
   /// A whole number, or a fraction of two whole numbers. Anything else — a
   /// decimal point, an operator — is not a form these questions ask for.
@@ -349,7 +358,7 @@ class BaseAnswer extends Answer {
 
   @override
   Map<String, dynamic> toJson() => {
-    'type': 'base',
+    'type': kind.name,
     'answer': value,
     'base': base,
     if (_display != null) 'display': _display,

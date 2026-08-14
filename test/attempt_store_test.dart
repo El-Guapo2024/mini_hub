@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mini_hub/data/attempt_store.dart';
+import 'package:mini_hub/models/answer.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 
 void main() {
@@ -27,7 +28,7 @@ void main() {
     String topic, {
     required bool correct,
     required DateTime when,
-    String type = 'numeric',
+    QuestionType type = QuestionType.numeric,
     String id = 'bh.1.2.1.q1',
   }) => Attempt(
     questionId: id,

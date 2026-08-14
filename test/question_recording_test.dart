@@ -70,7 +70,7 @@ void main() {
     final logged = store.all.single;
     expect(logged.questionId, 'bh.1.2.1.q1');
     expect(logged.topic, 'multiplying_by_11_trick');
-    expect(logged.type, 'numeric');
+    expect(logged.type, QuestionType.numeric);
     expect(logged.correct, isTrue);
     expect(store.progressFor('multiplying_by_11_trick').count, 1);
   });

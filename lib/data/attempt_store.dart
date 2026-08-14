@@ -4,6 +4,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
 
 import '../config.dart';
+import '../models/answer.dart';
 
 /// One graded response. The log is the only thing stored; what the app shows
 /// is derived from it, so changing what progress means is a recompute rather
@@ -27,8 +28,9 @@ class Attempt {
   final String questionId;
   final String topic;
 
-  /// The question's shape, so accuracy can be broken down per type.
-  final String type;
+  /// The question's shape. Stored by name, so the enum's names are stored
+  /// data: renaming a case splits a question's history in two.
+  final QuestionType type;
   final bool correct;
   final DateTime at;
 
@@ -45,7 +47,7 @@ class Attempt {
     id: row['id'] as String,
     questionId: row['question_id'] as String,
     topic: row['topic'] as String,
-    type: row['type'] as String,
+    type: QuestionType.values.byName(row['type'] as String),
     // SQLite has no boolean type.
     correct: (row['correct'] as int) == 1,
     at: DateTime.fromMillisecondsSinceEpoch(row['at'] as int, isUtc: true),
@@ -57,7 +59,7 @@ class Attempt {
     'id': id,
     'question_id': questionId,
     'topic': topic,
-    'type': type,
+    'type': type.name,
     'correct': correct ? 1 : 0,
     'at': at.toUtc().millisecondsSinceEpoch,
     'given_tex': given,

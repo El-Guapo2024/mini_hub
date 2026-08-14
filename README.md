@@ -1,16 +1,57 @@
 # mini_hub
 
-A new Flutter project.
+A practice app for UIL academic events, built around the Bryant Heath number
+sense manual. Lessons are markdown; questions are graded on the device and every
+attempt is logged locally. Nothing is sent anywhere.
 
-## Getting Started
+## Running it
 
-This project is a starting point for a Flutter application.
+```sh
+flutter run                                # the shipped question bank
+flutter run --dart-define=CONTENT=sample   # a small stand-in course
+flutter test
+flutter analyze
+```
 
-A few resources to get you started if this is your first Flutter project:
+Every setting lives in `lib/config.dart`. Nothing else in `lib` names an asset
+path.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## How it fits together
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**Content is read-only JSON and markdown under `assets/content/`.** One course
+index names the courses, a course names its topics, a topic carries a lesson and
+a `questions.json`. Nothing writes to it at runtime, so it diffs cleanly in git
+and can be regenerated whole.
+
+**Progress is SQLite under the app's documents directory.** `AttemptStore` is an
+append-only log: one row per graded answer, never updated, never deleted. What
+the app shows is derived from that log rather than stored beside it, so changing
+what progress means is a recompute rather than a migration. Today it means one
+thing — whether a question has ever been answered correctly.
+
+More is recorded than is read: the question type, what the student typed, how
+long it took. That is deliberate, so a scheduler built later has a history to
+work from instead of starting empty.
+
+**Answers grade themselves.** `Answer` is a sealed hierarchy and each shape
+carries its own rule — a band for estimation problems, real and imaginary parts
+for complex ones, lowest terms for fractions where the manual demands them. The
+input widget never asks what kind of question it is showing.
+
+## Regenerating the question bank
+
+```sh
+python3 tools/build_questions.py                 # every topic
+python3 tools/build_questions.py <topic-slug>    # just one
+```
+
+It reads the verified source data in `content_src/`, then writes each topic's
+`questions.json`, its `questionIds`, and the `## Practice` section of its
+lesson. Re-running rewrites those wholesale, so it is safe to run twice.
+
+## Tests worth knowing about
+
+The asset tests are the ones that catch what a device would otherwise catch
+first: a content directory missing from `pubspec.yaml` ships no files at all, a
+question tag pointing at nothing renders as an error mid-lesson, and a course
+absent from the index is invisible however finished it is.

@@ -120,7 +120,6 @@ class AttemptStore {
             elapsed_ms INTEGER
           )
         ''');
-        await db.execute('CREATE INDEX idx_topic ON $_table (topic)');
       },
     );
 

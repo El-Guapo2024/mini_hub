@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_math_fork/flutter_math.dart';
 import 'package:math_keyboard/math_keyboard.dart';
 
+import '../config.dart';
 import '../data/attempt_scope.dart';
 import '../data/attempt_store.dart';
 import '../models/question.dart';
@@ -29,11 +30,6 @@ class _QuestionWidgetState extends State<QuestionWidget> {
   /// Starts at the first keystroke, not at build: a question sitting on screen
   /// while the student reads the lesson above it isn't time spent solving.
   DateTime? _startedAt;
-
-  /// Number sense is a timed event, so an answer taken to the minute is not
-  /// really an answer. Anki caps review time the same way, to stop a card left
-  /// open overnight from wrecking the statistics.
-  static const _maxElapsed = Duration(minutes: 1);
 
   @override
   void dispose() {
@@ -65,7 +61,7 @@ class _QuestionWidgetState extends State<QuestionWidget> {
         correct: correct,
         at: DateTime.now().toUtc(),
         given: tex,
-        elapsedMs: elapsed == null || elapsed > _maxElapsed
+        elapsedMs: elapsed == null || elapsed > AppConfig.current.maxAnswerTime
             ? null
             : elapsed.inMilliseconds,
       ),

@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mini_hub/data/content_source.dart';
+import 'package:mini_hub/config.dart';
 import 'package:yaml/yaml.dart';
 
 /// Every content directory has to be listed in pubspec.yaml by hand, and a

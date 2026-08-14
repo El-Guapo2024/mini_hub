@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../hub/app_module.dart';
 import '../models/course.dart';
-import '../data/content_source.dart';
+import '../config.dart';
 import '../data/course_index_loader.dart';
 import '../data/course_loader.dart';
 import '../screens/topic_list_screen.dart';
@@ -43,7 +43,7 @@ class _StemaArenaScreenState extends State<StemaArenaScreen> {
 
   Future<void> loadData() async {
     try {
-      final paths = await indexLoader.load(ContentSource.current.indexPath);
+      final paths = await indexLoader.load(AppConfig.current.content.indexPath);
       final result = <Course>[];
       for (final path in paths) {
         result.add(await courseLoader.load(path));

@@ -3,6 +3,8 @@ import 'dart:math';
 import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
 
+import '../config.dart';
+
 /// One graded response. Every statistic derives from these rows and nothing
 /// aggregated is stored, so redefining a figure is a recompute, not a migration.
 class Attempt {
@@ -77,8 +79,7 @@ class TopicStats {
   final int attempts;
   final int correct;
 
-  /// Accuracy over the last [AttemptStore.rollingWindow] attempts. Lifetime
-  /// accuracy lags for weeks after a student has actually improved.
+  /// Accuracy over the last [AppConfig.rollingWindow] attempts.
   final double recent;
   final DateTime? lastSeen;
 
@@ -91,13 +92,17 @@ class TopicStats {
   double freshness(DateTime now) {
     if (lastSeen == null) return 1;
     final days = now.difference(lastSeen!).inMinutes / (60 * 24);
-    final decay = days / AttemptStore.staleAfterDays;
+    final decay = days / AppConfig.current.staleAfterDays;
     return decay.clamp(0.0, 1.0);
   }
 
   /// Higher means more worth practising: weak and stale beats strong and fresh.
-  double priority(DateTime now) =>
-      attempts == 0 ? 1 : (1 - recent) * 0.6 + freshness(now) * 0.4;
+  double priority(DateTime now) {
+    if (attempts == 0) return 1;
+    final config = AppConfig.current;
+    return (1 - recent) * config.weaknessWeight +
+        freshness(now) * config.stalenessWeight;
+  }
 }
 
 /// An append-only log of attempts, stored in SQLite.
@@ -115,17 +120,11 @@ class AttemptStore {
   /// not the query engine.
   final List<Attempt> _attempts;
 
-  /// Attempts counted by [TopicStats.recent].
-  static const rollingWindow = 10;
-
-  /// Days after which a lesson counts as fully stale.
-  static const staleAfterDays = 30;
-
   static const _table = 'attempts';
 
   static Future<AttemptStore> open() async {
     final dir = await getApplicationDocumentsDirectory();
-    return openAt('${dir.path}/attempts.db');
+    return openAt('${dir.path}/${AppConfig.current.databaseFile}');
   }
 
   /// Opens a store at a specific path. Tests use this with an ffi factory,
@@ -228,9 +227,9 @@ class AttemptStore {
     }
     rows.sort((a, b) => a.at.compareTo(b.at));
 
-    final window = rows.length <= rollingWindow
+    final window = rows.length <= AppConfig.current.rollingWindow
         ? rows
-        : rows.sublist(rows.length - rollingWindow);
+        : rows.sublist(rows.length - AppConfig.current.rollingWindow);
     final windowCorrect = window.where((a) => a.correct).length;
 
     var streak = 0;

@@ -35,6 +35,9 @@ void main() {
           expect(question.answer, isA<Answer>());
           expect(question.prompt, isNotEmpty);
           expect(question.topic, dir.path.split('/').last);
+          // The generator writes `type` for readability while the app derives
+          // it from the answer. They must agree, or the JSON misleads a reader.
+          expect(row['type'], question.type);
           count++;
         } on Object catch (e) {
           failures.add('${dir.path}: $row\n  $e');

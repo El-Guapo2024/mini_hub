@@ -59,12 +59,14 @@ void main() {
   });
 
   testWidgets('every answer type in the bank renders', (tester) async {
-    // The view switches on type, so a type the generator emits but the view has
-    // not been taught about shows an error instead of a question.
+    // The names attempts are recorded under. They reach the statistics as
+    // plain strings, so a rename here would silently split a topic's history
+    // in two rather than fail to compile.
     const types = {
       'numeric': NumericAnswer(value: 4),
       'estimate': ApproxAnswer(low: 1, high: 2),
       'complex': ComplexAnswer(real: 16, imaginary: 16),
+      'fraction': FractionAnswer(numerator: 1, denominator: 2),
       'base': BaseAnswer(value: 16, base: 8),
     };
 
@@ -76,7 +78,6 @@ void main() {
               child: QuestionView(
                 question: Question(
                   id: 'q',
-                  type: entry.key,
                   prompt: '2+2=',
                   answer: entry.value,
                 ),
@@ -87,11 +88,7 @@ void main() {
       );
       await tester.pump();
 
-      expect(
-        find.textContaining('unsupported'),
-        findsNothing,
-        reason: '${entry.key} is emitted by the generator',
-      );
+      expect(entry.value.kind, entry.key);
       expect(find.byType(MathField), findsOneWidget);
     }
   });

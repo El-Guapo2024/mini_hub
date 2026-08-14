@@ -8,7 +8,6 @@ import 'answer.dart';
 class Question {
   const Question({
     required this.id,
-    required this.type,
     required this.prompt,
     required this.answer,
     this.topic,
@@ -18,10 +17,11 @@ class Question {
   /// this, so it must survive re-extraction of the source PDF.
   final String id;
 
-  /// How the question is answered — `numeric`, `estimate`, `complex`, `base` —
-  /// classified when the bank is generated rather than inspected at runtime.
-  /// Attempts record it, so accuracy can be read per type across every topic.
-  final String type;
+  /// How the question is answered — `numeric`, `estimate`, `complex`,
+  /// `fraction`, `base`. Attempts record it, so accuracy can be read per shape
+  /// across every topic. The generated JSON carries it too, for readability,
+  /// but the answer is the authority: two sources could drift, one cannot.
+  String get type => answer.kind;
 
   /// The prompt, as LaTeX.
   final String prompt;
@@ -40,7 +40,6 @@ class Question {
         : Answer.fromJson({'type': 'numeric', 'answer': raw});
     return Question(
       id: json['id'] as String,
-      type: json['type'] as String? ?? 'numerical',
       prompt: json['prompt'] as String,
       answer: answer,
       topic: json['topic'] as String?,

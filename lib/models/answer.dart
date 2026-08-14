@@ -45,6 +45,11 @@ sealed class Answer {
 
   Map<String, dynamic> toJson();
 
+  /// The question's classification, recorded on every attempt so accuracy can
+  /// be read per shape across topics. Derived from the answer rather than
+  /// stored beside it, so the two can never disagree.
+  String get kind;
+
   /// Whether the student's LaTeX input is a correct response.
   bool accepts(String tex);
 
@@ -60,8 +65,15 @@ sealed class Answer {
   String? get inputHint => null;
 }
 
-/// A single value. Comparison is relative, not exact: a student who enters
-/// `\frac{1}{3}` must match a key stored as 0.3333333333.
+/// Spacing and sizing markup a math keyboard emits around what was typed. It
+/// carries no value, so it is dropped before an input is read as a form.
+final _decoration = RegExp(r'\s|\\,|\\;|\\!|\\left|\\right');
+
+/// The margin within which two computed values count as the same number: a
+/// student entering `\frac{1}{3}` must match a key stored as 0.3333333333.
+const _tolerance = 1e-6;
+
+/// A single value, graded on what it evaluates to rather than how it is written.
 class NumericAnswer extends Answer {
   const NumericAnswer({required this.value, String? display, this.unit})
     : _display = display;
@@ -70,7 +82,8 @@ class NumericAnswer extends Answer {
   final String? unit;
   final String? _display;
 
-  static const _tolerance = 1e-6;
+  @override
+  String get kind => 'numeric';
 
   @override
   bool accepts(String tex) {
@@ -112,6 +125,9 @@ class ApproxAnswer extends Answer {
   final double high;
 
   @override
+  String get kind => 'estimate';
+
+  @override
   bool accepts(String tex) {
     final entered = evaluateTex(tex);
     return entered != null && entered >= low && entered <= high;
@@ -140,7 +156,8 @@ class ComplexAnswer extends Answer {
   final double imaginary;
   final String? _display;
 
-  static const _tolerance = 1e-6;
+  @override
+  String get kind => 'complex';
 
   @override
   bool accepts(String tex) {
@@ -202,8 +219,11 @@ class FractionAnswer extends Answer {
   static final _plain = RegExp(r'^(-?)\\d?frac\{(\d+)\}\{(\d+)\}$');
 
   @override
+  String get kind => 'fraction';
+
+  @override
   bool accepts(String tex) {
-    final s = tex.replaceAll(RegExp(r'\s|\\,|\\;|\\!|\\left|\\right|\\!'), '');
+    final s = tex.replaceAll(_decoration, '');
     if (s.isEmpty) return false;
 
     final mixed = _mixed.firstMatch(s);
@@ -273,7 +293,12 @@ class BaseAnswer extends Answer {
 
   final String? _display;
 
-  static const _tolerance = 1e-9;
+  /// Tighter than the shared one: these keys are stored as a long decimal
+  /// expansion of an exact ratio, so a correct answer matches to many places.
+  static const _exact = 1e-9;
+
+  @override
+  String get kind => 'base';
 
   /// A whole number, or a fraction of two whole numbers. Anything else — a
   /// decimal point, an operator — is not a form these questions ask for.
@@ -284,7 +309,7 @@ class BaseAnswer extends Answer {
 
   @override
   bool accepts(String tex) {
-    final s = tex.replaceAll(RegExp(r'\s|\\,|\\;|\\!|\\left|\\right'), '');
+    final s = tex.replaceAll(_decoration, '');
     if (s.isEmpty) return false;
 
     final fraction = _fraction.firstMatch(s);
@@ -294,12 +319,12 @@ class BaseAnswer extends Answer {
       if (numerator == null || denominator == null || denominator == 0) {
         return false;
       }
-      return (numerator / denominator - value).abs() <= _tolerance;
+      return (numerator / denominator - value).abs() <= _exact;
     }
 
     if (_integer.hasMatch(s)) {
       final whole = _digits(s);
-      return whole != null && (whole - value).abs() <= _tolerance;
+      return whole != null && (whole - value).abs() <= _exact;
     }
     return false;
   }

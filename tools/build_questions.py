@@ -65,19 +65,13 @@ def as_fraction(display):
 
 
 def classify(answer):
-    """The question's type, from the shape of its answer.
+    """The question's type, from the answer this generator built for it.
 
-    Decided here rather than at runtime so that attempts record something
-    meaningful and accuracy can be read per type across every topic.
+    Mirrors `Answer.kind` in the app, which is the authority; the field is
+    written so the JSON reads on its own, and a test holds the two together.
     """
     kind = answer.get("type", "numeric")
-    if kind == "approx":
-        return "estimate"
-    if kind == "numeric" and "base" in answer:
-        return "base"
-    if kind == "numeric" and as_fraction(answer.get("display")):
-        return "fraction"
-    return kind
+    return "estimate" if kind == "approx" else kind
 
 
 def build_answer(source):
@@ -133,13 +127,14 @@ def write_questions(topic_dir, topic, section, prompts, answers):
         # so skip rather than ship one that can never be got right.
         if answer is None:
             continue
+        built = build_answer(answer)
         questions.append(
             {
                 "id": f"bh.{section}.q{key}",
-                "type": classify(answer),
+                "type": classify(built),
                 "prompt": prompts[key],
                 "topic": topic,
-                "answer": build_answer(answer),
+                "answer": built,
             }
         )
 

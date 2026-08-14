@@ -28,7 +28,6 @@ void main() {
 
   const question = Question(
     id: 'bh.1.2.1.q1',
-    type: 'numerical',
     prompt: '2+2=',
     answer: NumericAnswer(value: 4),
     topic: 'multiplying_by_11_trick',
@@ -71,7 +70,7 @@ void main() {
     final logged = store.all.single;
     expect(logged.questionId, 'bh.1.2.1.q1');
     expect(logged.topic, 'multiplying_by_11_trick');
-    expect(logged.type, 'numerical');
+    expect(logged.type, 'numeric');
     expect(logged.correct, isTrue);
     expect(store.statsFor('multiplying_by_11_trick').streak, 1);
   });

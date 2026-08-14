@@ -290,7 +290,6 @@ void main() {
     test('reads a bare numeric answer, the pre-existing shape', () {
       final q = Question.fromJson({
         'id': 'bh.1.2.1.q1',
-        'type': 'numerical',
         'prompt': '2+2=',
         'answer': 4,
       });
@@ -301,7 +300,6 @@ void main() {
     test('reads each richer answer shape', () {
       final approx = Question.fromJson({
         'id': 'a',
-        'type': 'numerical',
         'prompt': 'p',
         'answer': {'type': 'approx', 'low': 1, 'high': 2},
       });
@@ -309,7 +307,6 @@ void main() {
 
       final complex = Question.fromJson({
         'id': 'b',
-        'type': 'numerical',
         'prompt': r'(1+i)^{9} =',
         'answer': {'type': 'complex', 'real': 16, 'imag': 16},
       });
@@ -320,14 +317,13 @@ void main() {
     test('round-trips through JSON', () {
       final q = Question.fromJson({
         'id': 'bh.3.1.10.q27',
-        'type': 'complex',
         'prompt': r'(1+i)^{9} =',
         'topic': 'complex_numbers',
         'answer': {'type': 'complex', 'real': 16, 'imag': 16},
       });
       final again = Question.fromJson(q.toJson());
       expect(again.answer.accepts('16+16i'), isTrue);
-      expect(again.type, 'complex');
+      expect(again.type, 'complex', reason: 'derived from the answer');
       expect(again.topic, 'complex_numbers');
     });
   });

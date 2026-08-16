@@ -102,26 +102,61 @@ class _Lesson extends StatelessWidget {
   }
 }
 
-class _Practice extends StatelessWidget {
+/// One question at a time, like a deck of cards.
+///
+/// A [PageView] rather than a list: only the current card and its neighbour
+/// exist, so a topic with 59 questions never builds 59 math fields, and the
+/// student sees one problem instead of a wall of them.
+class _Practice extends StatefulWidget {
   const _Practice({required this.questions});
 
   final List<Question> questions;
 
   @override
+  State<_Practice> createState() => _PracticeState();
+}
+
+class _PracticeState extends State<_Practice> {
+  int _current = 0;
+
+  @override
   Widget build(BuildContext context) {
+    final questions = widget.questions;
     if (questions.isEmpty) {
       return const _Message('no questions for this topic yet');
     }
-    // Built lazily, so a topic with 59 questions only ever holds the fields
-    // that are on screen.
-    return ListView.separated(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-      itemCount: questions.length,
-      separatorBuilder: (_, _) => const SizedBox(height: 24),
-      itemBuilder: (context, index) {
-        final question = questions[index];
-        return QuestionView(key: ValueKey(question.id.value), question: question);
-      },
+
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 12),
+          child: Text(
+            '${_current + 1} of ${questions.length}',
+            style: const TextStyle(color: Colors.white54),
+          ),
+        ),
+        Expanded(
+          child: PageView.builder(
+            itemCount: questions.length,
+            onPageChanged: (index) => setState(() => _current = index),
+            itemBuilder: (context, index) {
+              final question = questions[index];
+              return SingleChildScrollView(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 20,
+                  vertical: 16,
+                ),
+                // Keyed by id so a card keeps its own answer and result while
+                // the deck is swiped back and forth.
+                child: QuestionView(
+                  key: ValueKey(question.id.value),
+                  question: question,
+                ),
+              );
+            },
+          ),
+        ),
+      ],
     );
   }
 }

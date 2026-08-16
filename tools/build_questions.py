@@ -3,7 +3,7 @@
 
 Reads the prompts and answers that the verification pipeline produced, and for
 each lesson writes `questions.json`, fills in `questionIds` in `topic.yml`, and
-appends a Practice section of `[[question:id]]` tags to `lesson.md`.
+removes any Practice section a previous run left in `lesson.md`.
 
 Re-runnable: every output is rewritten wholesale rather than appended to, so
 running twice leaves the tree byte-identical.
@@ -156,24 +156,25 @@ def write_question_ids(topic_dir, questions):
     open(path, "w").write(text)
 
 
-def write_practice(topic_dir, questions):
-    """Replaces the Practice section of lesson.md, or adds one."""
+def strip_practice(topic_dir):
+    """Removes the Practice section a previous run appended to lesson.md.
+
+    Lessons are prose only; questions live in questions.json and are shown on
+    their own screen. Anchored to a heading at the start of a line and matched
+    to end of file, so prose that merely mentions the word cannot swallow the
+    rest of the lesson.
+    """
     path = os.path.join(topic_dir, "lesson.md")
     if not os.path.isfile(path):
         return
     text = open(path).read()
 
-    # Drop any existing Practice section so re-running cannot stack them up.
-    text = re.sub(
-        rf"\n*{re.escape(PRACTICE_HEADING)}\n.*\Z", "", text, flags=re.S
-    ).rstrip()
-
-    if questions:
-        tags = "\n\n".join(f"[[question:{q['id']}]]" for q in questions)
-        text += f"\n\n{PRACTICE_HEADING}\n\n{tags}\n"
-    else:
-        text += "\n"
-    open(path, "w").write(text)
+    pattern = re.compile(
+        rf"^{re.escape(PRACTICE_HEADING)}[ \t]*\n.*\Z", re.M | re.S
+    )
+    stripped = pattern.sub("", text).rstrip() + "\n"
+    if stripped != text:
+        open(path, "w").write(stripped)
 
 
 def main():
@@ -201,7 +202,7 @@ def main():
             topic_dir, topic, section, prompts[section], answers.get(section, {})
         )
         write_question_ids(topic_dir, questions)
-        write_practice(topic_dir, questions)
+        strip_practice(topic_dir)
 
         written += 1
         total += len(questions)

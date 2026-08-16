@@ -1,10 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_markdown_plus/flutter_markdown_plus.dart';
-import 'package:flutter_markdown_plus_latex/flutter_markdown_plus_latex.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:markdown/markdown.dart' as md;
+import 'package:mini_hub/ui/widgets/lesson_view.dart';
 
 void main() {
   testWidgets('every lesson renders without throwing', (t) async {
@@ -18,19 +16,13 @@ void main() {
       if (!f.existsSync()) continue;
       final name = d.path.split('/').last;
       try {
-        // Mirrors TopicScreen.build: same extension set, same builders.
+        // The widget the screen uses, so a test cannot render a dialect the
+        // app does not ship.
         await t.pumpWidget(
           MaterialApp(
             home: Scaffold(
               body: SingleChildScrollView(
-                child: MarkdownBody(
-                  data: f.readAsStringSync(),
-                  extensionSet: md.ExtensionSet(
-                    [LatexBlockSyntax()],
-                    [LatexInlineSyntax()],
-                  ),
-                  builders: {'latex': LatexElementBuilder()},
-                ),
+                child: LessonView(markdown: f.readAsStringSync()),
               ),
             ),
           ),

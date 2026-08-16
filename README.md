@@ -47,6 +47,15 @@ More is recorded than is read: the question type, what the student typed, how
 long it took. That is deliberate, so a scheduler built later has a history to
 work from instead of starting empty.
 
+**A lesson is prose; practice is a separate screen.** A topic opens on two tabs.
+The lesson is plain markdown with LaTeX and nothing of our own in it, so the
+render path is what the packages already do. Questions are read from
+`questions.json` and built directly into widgets, with no parser between the
+data and the screen. They used to be embedded in lessons through a markdown
+syntax we maintained ourselves; splitting them deleted that syntax, its
+builder, and the whole class of bug where a tag pointed at a question that
+wasn't there.
+
 **Answers grade themselves.** `Answer` is a sealed hierarchy and each shape
 carries its own rule — a band for estimation problems, real and imaginary parts
 for complex ones, lowest terms for fractions where the manual demands them. The
@@ -60,12 +69,12 @@ python3 tools/build_questions.py <topic-slug>    # just one
 ```
 
 It reads the verified source data in `content_src/`, then writes each topic's
-`questions.json`, its `questionIds`, and the `## Practice` section of its
-lesson. Re-running rewrites those wholesale, so it is safe to run twice.
+`questions.json` and its `questionIds`. Re-running rewrites both wholesale, so
+it is safe to run twice.
 
 ## Tests worth knowing about
 
 The asset tests are the ones that catch what a device would otherwise catch
 first: a content directory missing from `pubspec.yaml` ships no files at all, a
-question tag pointing at nothing renders as an error mid-lesson, and a course
-absent from the index is invisible however finished it is.
+question that fails to parse breaks the practice tab, and a course absent from
+the index is invisible however finished it is.

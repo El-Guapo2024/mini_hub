@@ -14,28 +14,4 @@ Integrals: $\int_0^\infty e^{-x^2} \, dx = \frac{\sqrt{\pi}}{2}$
 
 Matrices: $\begin{pmatrix} a & b \\ c & d \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} ax+by \\ cx+dy \end{pmatrix}$
 
-Try a few examples below.
-
-[[question:q1]]
-
-[[question:q2]]
-
-[[question:q3]]
-
-[[question:q4]]
-
-[[question:q5]]
-
-[[question:q6]]
-
-[[question:q7]]
-
-[[question:q8]]
-
-[[question:q9]]
-
-[[question:q10]]
-
-[[question:q11]]
-
-[[question:q12]]
+Try a few examples on the Practice tab.

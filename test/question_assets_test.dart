@@ -53,29 +53,23 @@ void main() {
     expect(count, greaterThan(0));
   });
 
-  test('every question tag in a lesson resolves to a question', () {
-    final tag = RegExp(r'\[\[question:([\w.\-]+)\s*\]\]');
-    final dangling = <String>[];
+  test('no lesson embeds a question', () {
+    // Lessons are prose; questions are shown on the practice tab. Nothing
+    // parses an embedded tag any more, so one left behind by an old generator
+    // run would render as literal text mid-lesson.
+    final leftovers = <String>[];
 
-    for (final dir in topics) {
-      final ids =
-          (jsonDecode(File('${dir.path}/questions.json').readAsStringSync())
-                  as List<dynamic>)
-              .map((q) => (q as Map<String, dynamic>)['id'] as String)
-              .toSet();
-
-      final lesson = File('${dir.path}/lesson.md');
-      if (!lesson.existsSync()) continue;
-      for (final match in tag.allMatches(lesson.readAsStringSync())) {
-        if (!ids.contains(match[1])) dangling.add('${dir.path}: ${match[1]}');
+    for (final lesson in Directory('assets')
+        .listSync(recursive: true)
+        .whereType<File>()
+        .where((f) => f.path.endsWith('lesson.md'))) {
+      final text = lesson.readAsStringSync();
+      if (text.contains('[[question:') || text.contains('## Practice')) {
+        leftovers.add(lesson.path);
       }
     }
 
-    expect(
-      dangling,
-      isEmpty,
-      reason: 'these tags render as "missing question"',
-    );
+    expect(leftovers, isEmpty, reason: 'these render as literal text');
   });
 
   test('questionIds matches the questions file', () {

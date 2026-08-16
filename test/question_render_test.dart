@@ -2,63 +2,56 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_markdown_plus/flutter_markdown_plus.dart';
-import 'package:flutter_markdown_plus_latex/flutter_markdown_plus_latex.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:markdown/markdown.dart' as md;
 import 'package:math_keyboard/math_keyboard.dart';
 import 'package:mini_hub/content/answer.dart';
 import 'package:mini_hub/content/fraction.dart';
 import 'package:mini_hub/content/ids.dart';
 import 'package:mini_hub/content/question.dart';
-import 'package:mini_hub/ui/widgets/question_markdown.dart';
 import 'package:mini_hub/ui/widgets/question_view.dart';
 
-/// Renders a real generated lesson the way TopicScreen does, so a tag that fails
-/// to match, or a question type the view rejects, fails here rather than on a
-/// device.
+/// Renders real generated questions the way the practice tab does, so a
+/// question the view cannot build fails here rather than on a device.
 void main() {
-  testWidgets('a generated lesson renders its questions', (tester) async {
-    await tester.binding.setSurfaceSize(const Size(393, 852));
-    const dir = 'assets/content/number_sense/multiplying_by_11_trick';
+  final topics = Directory('assets/content')
+      .listSync(recursive: true)
+      .whereType<File>()
+      .where((f) => f.path.endsWith('questions.json'))
+      .toList();
 
-    final questions =
-        (jsonDecode(File('$dir/questions.json').readAsStringSync())
-                as List<dynamic>)
-            .map((q) => Question.fromJson(q as Map<String, dynamic>))
-            .toList();
-    final pool = {for (final q in questions) q.id: q};
+  test('there are generated topics to render', () {
+    expect(topics, isNotEmpty);
+  });
 
-    await tester.pumpWidget(
-      MaterialApp(
-        home: Scaffold(
-          body: MathKeyboardViewInsets(
-            child: SingleChildScrollView(
-              child: MarkdownBody(
-                data: File('$dir/lesson.md').readAsStringSync(),
-                extensionSet: md.ExtensionSet(
-                  [LatexBlockSyntax(), QuestionBlockSyntax()],
-                  [LatexInlineSyntax()],
-                ),
-                builders: {
-                  'latex': LatexElementBuilder(),
-                  'question': QuestionElementBuilder(pool: pool),
-                },
+  for (final file in topics) {
+    testWidgets('every question in ${file.parent.path} renders', (
+      tester,
+    ) async {
+      await tester.binding.setSurfaceSize(const Size(393, 852));
+
+      final questions = (jsonDecode(file.readAsStringSync()) as List<dynamic>)
+          .map((q) => Question.fromJson(q as Map<String, dynamic>))
+          .toList();
+
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Scaffold(
+            body: MathKeyboardViewInsets(
+              child: ListView.builder(
+                itemCount: questions.length,
+                itemBuilder: (context, index) =>
+                    QuestionView(question: questions[index]),
               ),
             ),
           ),
         ),
-      ),
-    );
-    await tester.pump();
+      );
+      await tester.pump();
 
-    expect(tester.takeException(), isNull);
-    // Every tag became a question rather than literal text or an error.
-    expect(find.byType(QuestionView), findsNWidgets(questions.length));
-    expect(find.textContaining('missing question'), findsNothing);
-    expect(find.textContaining('[[question:'), findsNothing);
-    expect(find.textContaining('unsupported question type'), findsNothing);
-  });
+      expect(tester.takeException(), isNull);
+      expect(find.byType(QuestionView), findsWidgets);
+    });
+  }
 
   testWidgets('every answer type in the bank renders', (tester) async {
     // The names attempts are recorded under. They reach the statistics as

@@ -79,7 +79,10 @@ class _TopicScreenState extends State<TopicScreen> {
           body: switch ((failure, lesson, questions)) {
             (final Object error, _, _) => _Message('could not load: $error'),
             (_, final String text, final List<Question> pool) => TabBarView(
-              children: [_Lesson(markdown: text), _Practice(questions: pool)],
+              children: [
+                _Lesson(markdown: text),
+                _Practice(questions: pool),
+              ],
             ),
             _ => const Center(child: CircularProgressIndicator()),
           },
@@ -103,6 +106,8 @@ class _Lesson extends StatelessWidget {
   }
 }
 
+const _green = Color(0xFF4CAF50);
+
 /// One question at a time, like a deck of cards.
 ///
 /// A [PageView] rather than a list: only the current card and its neighbour
@@ -121,51 +126,18 @@ class _PracticeState extends State<_Practice> {
   final _pages = PageController();
   int _current = 0;
 
-  /// The questions this session will show, most overdue first, with ones never
-  /// seen ahead of everything.
-  ///
-  /// Fixed when the session starts rather than recomputed as answers land: a
-  /// deck that reordered itself under the student's finger would move the next
-  /// card while they were reaching for it.
-  List<Question> _deck = const [];
-  int _done = 0;
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    _deal();
-  }
-
-  void _deal() {
-    final store = AttemptScope.maybeOf(context);
-    final now = DateTime.now().toUtc();
-
-    // With nowhere to record — a test, or a preview — there is no history to
-    // schedule from, so every question is due.
-    if (store == null) {
-      _deck = widget.questions;
-      _done = 0;
-      return;
-    }
-
-    final due = widget.questions
-        .where((q) => store.reviewOf(q.id).isDue(now))
-        .toList();
-    due.sort((a, b) {
-      final overdue = store.reviewOf(b.id).overdueAt(now);
-      return overdue.compareTo(store.reviewOf(a.id).overdueAt(now));
-    });
-
-    _deck = due;
-    _done = _learned;
-  }
-
   /// How many of the topic's questions have ever been answered correctly.
-  int get _learned {
+  ///
+  /// Read from the log rather than counted as the session goes, so it is the
+  /// same number after a restart as before one.
+  int get _done {
     final store = AttemptScope.maybeOf(context);
     if (store == null) return 0;
     return widget.questions.where((q) => store.isDone(q.id)).length;
   }
+
+  bool _isDone(Question question) =>
+      AttemptScope.maybeOf(context)?.isDone(question.id) ?? false;
 
   @override
   void dispose() {
@@ -174,8 +146,8 @@ class _PracticeState extends State<_Practice> {
   }
 
   void _next() {
-    setState(() => _done = _learned);
-    if (_current >= _deck.length - 1) return;
+    setState(() {});
+    if (_current >= widget.questions.length - 1) return;
     _pages.nextPage(
       duration: const Duration(milliseconds: 300),
       curve: Curves.easeOut,
@@ -189,28 +161,33 @@ class _PracticeState extends State<_Practice> {
       return const _Message('no questions for this topic yet');
     }
 
-    final deck = _deck;
-    if (deck.isEmpty) {
-      return const _Message('nothing due — come back later');
-    }
-
     return Column(
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 12),
-          child: Text(
-            '${_current + 1} of ${deck.length} due   ·   '
-            '$_done of ${questions.length} learned',
-            style: const TextStyle(color: Colors.white54),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              if (_isDone(questions[_current]))
+                const Padding(
+                  padding: EdgeInsets.only(right: 8),
+                  child: Icon(Icons.check_circle, size: 16, color: _green),
+                ),
+              Text(
+                '${_current + 1} of ${questions.length}   ·   '
+                '$_done done',
+                style: const TextStyle(color: Colors.white54),
+              ),
+            ],
           ),
         ),
         Expanded(
           child: PageView.builder(
             controller: _pages,
-            itemCount: deck.length,
+            itemCount: questions.length,
             onPageChanged: (index) => setState(() => _current = index),
             itemBuilder: (context, index) {
-              final question = deck[index];
+              final question = questions[index];
               return SingleChildScrollView(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 20,

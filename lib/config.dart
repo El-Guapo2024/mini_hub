@@ -45,14 +45,6 @@ class AppConfig {
     this.databaseFile = 'attempts.db',
     this.maxAnswerTime = const Duration(minutes: 1),
     this.advanceAfter = const Duration(milliseconds: 700),
-    this.reviewIntervals = const [
-      Duration(minutes: 10),
-      Duration(days: 1),
-      Duration(days: 3),
-      Duration(days: 7),
-      Duration(days: 21),
-      Duration(days: 60),
-    ],
   });
 
   /// Which bank the build serves.
@@ -70,17 +62,6 @@ class AppConfig {
   /// next card. Long enough to register the green, short enough not to be a
   /// wait.
   final Duration advanceAfter;
-
-  /// How long to wait before showing a question again, indexed by how many
-  /// times in a row it has been answered correctly. The first entry is what a
-  /// question gets after a wrong answer, so it comes back within the session;
-  /// each one after that is roughly triple the last, which is the spacing
-  /// every scheduler of this kind converges on.
-  ///
-  /// A question correct more times than there are entries stays on the last
-  /// interval. That is a deliberate ceiling: a question is never retired for
-  /// good, just seen rarely.
-  final List<Duration> reviewIntervals;
 
   /// The configuration this build runs with. Read once, at startup, so the
   /// app cannot behave as though two different settings were in force.

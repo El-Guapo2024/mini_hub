@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_math_fork/flutter_math.dart';
 import 'package:math_keyboard/math_keyboard.dart';
@@ -54,12 +56,18 @@ class _QuestionWidgetState extends State<QuestionWidget> {
   final _controller = MathFieldEditingController();
   _Result? _result;
 
+  /// Held so it can be cancelled: a card answered right and then swiped away
+  /// would otherwise still advance the deck 700ms later, from wherever the
+  /// student had got to by then.
+  Timer? _advancing;
+
   /// Starts at the first keystroke, not at build: a question sitting on screen
   /// while the student reads the lesson above it isn't time spent solving.
   DateTime? _startedAt;
 
   @override
   void dispose() {
+    _advancing?.cancel();
     _controller.dispose();
     super.dispose();
   }
@@ -78,10 +86,10 @@ class _QuestionWidgetState extends State<QuestionWidget> {
   void _advance() {
     final onCorrect = widget.onCorrect;
     if (onCorrect == null) return;
-    Future.delayed(AppConfig.current.advanceAfter, () {
-      // The card can be swiped away, or the screen closed, while we wait.
-      if (mounted) onCorrect();
-    });
+    // Answering twice inside the window — correcting a typo, say — must not
+    // queue two hops.
+    _advancing?.cancel();
+    _advancing = Timer(AppConfig.current.advanceAfter, onCorrect);
   }
 
   void _record(String tex, bool correct) {
@@ -93,18 +101,26 @@ class _QuestionWidgetState extends State<QuestionWidget> {
     final started = _startedAt;
     final elapsed = started == null ? null : DateTime.now().difference(started);
 
-    store.record(
-      Attempt(
-        questionId: widget.question.id,
-        topic: widget.question.topic,
-        type: widget.question.type,
-        correct: correct,
-        at: DateTime.now().toUtc(),
-        given: tex,
-        elapsed: elapsed == null || elapsed > AppConfig.current.maxAnswerTime
-            ? null
-            : elapsed,
-      ),
+    final attempt = Attempt(
+      questionId: widget.question.id,
+      topic: widget.question.topic,
+      type: widget.question.type,
+      correct: correct,
+      at: DateTime.now().toUtc(),
+      given: tex,
+      elapsed: elapsed == null || elapsed > AppConfig.current.maxAnswerTime
+          ? null
+          : elapsed,
+    );
+
+    // Not awaited: grading is already on screen and the write must not hold it
+    // up. A failure is logged rather than thrown — the store has already taken
+    // the attempt back out of memory, so what is shown stays true, and losing
+    // one row is not worth interrupting practice for.
+    unawaited(
+      store.record(attempt).catchError((Object error) {
+        debugPrint('could not record an attempt: $error');
+      }),
     );
   }
 

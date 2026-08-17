@@ -1,58 +1,68 @@
 # content_src
 
-Raw source material for mini_hub lessons. **Nothing here ships in the app** —
-it is not listed in `pubspec.yaml` assets. These are the human-written docs that
-get turned into the bundled topic folders under `assets/content/`.
+Source material for the question bank. **Nothing here ships in the app** — it
+is not listed in `pubspec.yaml` assets. It is the input the generator reads to
+produce the bundled topic folders under `assets/content/`.
 
 ## Flow
 
 ```
-content_src/<course>/<topic>.md   →   assets/content/<course>/<topic>/
-                                        ├── topic.yml
-                                        ├── lesson.md
-                                        └── questions.json
+content_src/source/bryant_heath/       tools/build_questions.py
+  bh_prompts_vlm.json    ─┐                      │
+  bh_answers.json        ─┴──────────────────────┴──→  assets/content/number_sense/<topic>/
+                                                          ├── topic.yml      (questionIds filled in)
+                                                          └── questions.json (written whole)
 ```
 
-One source doc per topic. It holds more than the lesson needs — full
-explanations, worked examples, and a large question bank — so the generated
-`lesson.md` can be tightened without losing the original material.
+`lesson.md` is **not** generated. Lessons are hand-written markdown and the
+generator only strips a stale `## Practice` section if an older run left one.
 
-## Source doc structure
+Run it with:
 
-Each doc uses these `##` sections, in order:
+    python3 tools/build_questions.py                 # every topic
+    python3 tools/build_questions.py <topic-slug>    # just one
 
-| Section | Becomes | Notes |
-| --- | --- | --- |
-| `## Meta` | `topic.yml` | `id`, `title`, `logo` as a yaml block |
-| `## Lesson` | `lesson.md` body | Markdown + `$...$` LaTeX. Place `[[question:<id>]]` where a question should appear inline |
-| `## Questions` | `questions.json` | One `###` block per question |
+It is re-runnable: every output is rewritten wholesale, so running twice leaves
+the tree byte-identical.
 
-### Question blocks
+## How a topic finds its questions
 
+Each `assets/content/number_sense/<topic>/topic.yml` carries a `bh_section`
+naming its section of the manual (`1.2.1`, `2.1.4`, …). That is the only link
+between a topic and its questions; the generator reads it, pulls that section's
+prompts and answers, and writes them out. Seven topics have no matching section
+and stay lesson-only.
+
+## What the generator emits
+
+```json
+{"id": "bh.1.2.1.q1", "prompt": "54 \\times 11 =",
+ "topic": "multiplying_by_11_trick", "answer": {"answer": 594, "type": "numeric"}}
 ```
-### q1
-type: numerical
-prompt: 7 + 5 = ?
-answer: 12
-```
 
-- `id` is the `###` heading and must match the `[[question:qN]]` refs in `## Lesson`.
-- `prompt` is a LaTeX expression — the app renders it with `Math.tex`, so it is
-  **not** wrapped in `$`. Backslashes are written literally here (`\frac{3}{4}`)
-  and get JSON-escaped by the generator.
-- `answer` is a plain number. Answers are compared numerically at `1e-9`
-  tolerance after the learner's TeX input is evaluated, so `1.25` and
-  `\frac{5}{4}` both count as correct — always write the decimal.
-- `type` is `numerical`. It is the only type `question_view.dart` renders today;
-  anything else falls through to "unsupported question type".
+- `prompt` is LaTeX rendered with `Math.tex`, so it is **not** wrapped in `$`.
+- The **answer** carries the type, not the question. `numeric`, `estimate`,
+  `complex`, `fraction`, `base` — each grades differently, and attempts are
+  logged under that name, so renaming one splits a topic's history in two.
+- `derived`, `corrected` and `note` are dropped. Provenance stays here and in
+  git history; a student has no use for "the book prints 39 but is wrong".
 
-## Authoring rules
+## Authoring rules for lessons
 
-- Every `[[question:id]]` in `## Lesson` must have a matching `### id` block. An
-  unmatched ref renders as a red `missing question: <id>` in the app.
-- Answers must be finite reals. `evaluateTex` returns null for anything else,
-  which the app scores as wrong no matter what the learner types.
-- Mixed numbers (`2\frac{1}{2}`) are supported in learner input — `tex_answer.dart`
-  expands them before evaluating — so they are fair game in prompts.
-- Keep prompts to a single expression ending in `= ?`. There is one input field
-  and no partial credit.
+- Lessons are **plain markdown**. There is no custom syntax: a question is
+  never embedded in prose, it lives on the Practice tab. An earlier
+  `[[question:id]]` syntax and its parser were deleted.
+- Display math needs its `$$` **alone on its line**. `$$x = 1$$` spanning
+  several lines never parses and renders as literal source — `lesson_latex_test`
+  fails the build over it.
+- No markdown tables. `MarkdownBody` lays them out at the available width with
+  no horizontal scroll, so on a phone the columns crush together. Wide tabular
+  content belongs in a display-math array, which scrolls sideways.
+- No LaTeX in a topic title. The app bar renders it as plain text.
+
+## The extraction pipeline
+
+The other scripts in `tools/` — `extract_bh_*`, `solve_*`, `verify_*`,
+`reconcile_final`, `apply_adjudications`, and the rest — are the one-time
+pipeline that read the manual and produced the committed `bh_*.json` files.
+They are not run as part of a normal build. Only `build_questions.py` is.

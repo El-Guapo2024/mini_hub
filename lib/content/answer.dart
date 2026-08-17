@@ -98,11 +98,14 @@ class NumericAnswer extends Answer {
     final entered = evaluateTex(tex);
     if (entered == null) return false;
     if (_close(entered, value)) return true;
-    // A percent answer is keyed inconsistently across the manual — 7 in one
-    // set, .07 in another — so accept whichever form the student used.
-    if (unit == '%') {
-      return _close(entered * 100, value) || _close(entered, value * 100);
-    }
+    // Every percent answer in the bank is keyed as the percentage itself —
+    // `\frac{1}{40} = ___%` is 2.5, not 0.025 — but the blank already carries
+    // the % sign, so a student may reasonably write the decimal instead.
+    //
+    // Only that reading is accepted. Also allowing `value * 100` would mean
+    // 250 marked correct for 2.5: an answer a hundred times too large, which
+    // is the mistake this question type exists to catch.
+    if (unit == '%') return _close(entered * 100, value);
     return false;
   }
 
@@ -242,12 +245,13 @@ class BaseAnswer extends Answer {
   @override
   QuestionType get kind => QuestionType.base;
 
-  /// A whole number, or a fraction of two whole numbers. Anything else — a
-  /// decimal point, an operator — is not a form these questions ask for.
+  /// A whole number, or a fraction of two whole numbers, either possibly
+  /// signed. Anything else — a decimal point, an operator — is not a form
+  /// these questions ask for.
   static final _fraction = RegExp(
-    r'^\\d?frac\{([0-9a-zA-Z]+)\}\{([0-9a-zA-Z]+)\}$',
+    r'^(-?)\\d?frac\{([0-9a-zA-Z]+)\}\{([0-9a-zA-Z]+)\}$',
   );
-  static final _integer = RegExp(r'^[0-9a-zA-Z]+$');
+  static final _integer = RegExp(r'^(-?)([0-9a-zA-Z]+)$');
 
   @override
   bool accepts(String tex) {
@@ -256,20 +260,26 @@ class BaseAnswer extends Answer {
 
     final fraction = _fraction.firstMatch(s);
     if (fraction != null) {
-      final numerator = _digits(fraction[1]!);
-      final denominator = _digits(fraction[2]!);
+      final numerator = _digits(fraction[2]!);
+      final denominator = _digits(fraction[3]!);
       if (numerator == null || denominator == null || denominator == 0) {
         return false;
       }
-      return (numerator / denominator - value).abs() <= _exact;
+      return _matches(_signed(fraction[1]!, numerator / denominator));
     }
 
-    if (_integer.hasMatch(s)) {
-      final whole = _digits(s);
-      return whole != null && (whole - value).abs() <= _exact;
+    final integer = _integer.firstMatch(s);
+    if (integer != null) {
+      final whole = _digits(integer[2]!);
+      return whole != null && _matches(_signed(integer[1]!, whole));
     }
     return false;
   }
+
+  bool _matches(double entered) => (entered - value).abs() <= _exact;
+
+  static double _signed(String sign, double magnitude) =>
+      sign == '-' ? -magnitude : magnitude;
 
   /// Reads [digits] in this answer's base, or null if any digit is invalid for
   /// it — `8` in base 8 is a typo, not a number.

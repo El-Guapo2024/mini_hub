@@ -46,3 +46,6 @@ app.*.map.json
 
 # Python tooling
 __pycache__/
+
+# Debug dump from tools/verify_all.py, not part of the build.
+/bh_mismatches.json

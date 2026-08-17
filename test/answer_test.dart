@@ -21,13 +21,24 @@ void main() {
       expect(a.accepts('4.25'), isTrue);
     });
 
-    test('percent answers grade either way round', () {
-      // The manual keys percentages inconsistently — 7 in one set, .07 in
-      // another — so both readings have to be accepted.
+    test('a percent answer takes the percentage or its decimal', () {
+      // Every percent key in the bank is the percentage itself, but the blank
+      // already carries the % sign, so the decimal is a fair reading too.
       const a = NumericAnswer(value: 2.5, unit: '%');
       expect(a.accepts('2.5'), isTrue);
       expect(a.accepts('0.025'), isTrue);
       expect(a.accepts('25'), isFalse);
+    });
+
+    test('a percent answer a hundred times too large is wrong', () {
+      // Accepting `value * 100` as well would have marked this correct, which
+      // is exactly the mistake a percent question is asked to catch.
+      const a = NumericAnswer(value: 2.5, unit: '%');
+      expect(a.accepts('250'), isFalse);
+      expect(
+        const NumericAnswer(value: 60, unit: '%').accepts('6000'),
+        isFalse,
+      );
     });
 
     test('rejects unparsable input rather than throwing', () {
@@ -251,6 +262,17 @@ void main() {
       const twenty = BaseAnswer(value: 16, base: 8);
       expect(twenty.accepts('20'), isTrue, reason: '20 base 8 is 16');
       expect(twenty.accepts('16'), isFalse);
+    });
+
+    test('a negative answer can be given at all', () {
+      // Neither pattern used to allow a leading sign, so a question with a
+      // negative key was unanswerable: nothing a student typed could match.
+      expect(const BaseAnswer(value: -16, base: 8).accepts('-20'), isTrue);
+      expect(
+        const BaseAnswer(value: -13 / 56, base: 8).accepts(r'-\frac{15}{70}'),
+        isTrue,
+      );
+      expect(const BaseAnswer(value: 16, base: 8).accepts('-20'), isFalse);
     });
 
     test('rejects malformed input rather than throwing', () {

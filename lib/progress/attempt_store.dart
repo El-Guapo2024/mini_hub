@@ -138,16 +138,24 @@ class AttemptStore {
 
   List<Attempt> get all => List.unmodifiable(_attempts);
 
-  /// The returned future completes once committed; UI callers may ignore it,
-  /// since the in-memory list updates first.
+  /// Records an attempt, in memory first so the UI can show it immediately.
+  ///
+  /// If the write fails the attempt is taken back out again, rather than
+  /// leaving a green check on screen that a restart would silently undo. The
+  /// returned future completes once committed; UI callers may ignore it.
   Future<void> record(Attempt attempt) async {
     _attempts.add(attempt);
-    await _db.insert(
-      _table,
-      attempt.toRow(),
-      // Replaying the same attempt is a no-op rather than an error.
-      conflictAlgorithm: ConflictAlgorithm.ignore,
-    );
+    try {
+      await _db.insert(
+        _table,
+        attempt.toRow(),
+        // Replaying the same attempt is a no-op rather than an error.
+        conflictAlgorithm: ConflictAlgorithm.ignore,
+      );
+    } on Object {
+      _attempts.remove(attempt);
+      rethrow;
+    }
   }
 
   Future<void> clear() async {

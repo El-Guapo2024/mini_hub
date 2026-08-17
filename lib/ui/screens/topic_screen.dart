@@ -145,9 +145,14 @@ class _PracticeState extends State<_Practice> {
     super.dispose();
   }
 
-  void _next() {
+  /// Moves on from [index], a moment after it was answered right.
+  ///
+  /// The card that asked is named, because a [PageView] keeps its neighbour
+  /// alive: answer one and swipe on before the pause is up, and the card left
+  /// behind would otherwise advance the deck again from wherever you now are.
+  void _advanceFrom(int index) {
     setState(() {});
-    if (_current >= widget.questions.length - 1) return;
+    if (index != _current || _current >= widget.questions.length - 1) return;
     _pages.nextPage(
       duration: const Duration(milliseconds: 300),
       curve: Curves.easeOut,
@@ -197,14 +202,17 @@ class _PracticeState extends State<_Practice> {
             onPageChanged: (index) => setState(() => _current = index),
             itemBuilder: (context, index) {
               final question = questions[index];
-              // Keyed by id so a card keeps its own answer and result while
-              // the deck is swiped back and forth. Given the whole page
-              // rather than a scroll view: the question centres itself in
-              // what it is given, and there is only ever one.
+              // Keyed by id so a recycled slot never shows the previous
+              // card's typed answer or result. Swiping more than one card
+              // away does discard that state — the alternative is keeping all
+              // 59 math fields alive, which is what the PageView avoids.
+              //
+              // Given the whole page rather than a scroll view: the question
+              // centres itself in what it is given, and there is only one.
               return QuestionWidget(
                 key: ValueKey(question.id.value),
                 question: question,
-                onCorrect: _next,
+                onCorrect: () => _advanceFrom(index),
                 rightToLeft: _rightToLeft,
               );
             },

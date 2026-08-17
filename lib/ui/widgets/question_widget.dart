@@ -64,10 +64,6 @@ class _QuestionWidgetState extends State<QuestionWidget> {
   }
 
   void _check(String tex) {
-    // Already right. A submit after the answer submitted itself would log the
-    // same success twice and count it twice.
-    if (_result == _Result.correct) return;
-
     final correct = widget.question.answer.accepts(tex);
     setState(() => _result = correct ? _Result.correct : _Result.wrong);
     _record(tex, correct);
@@ -118,15 +114,6 @@ class _QuestionWidgetState extends State<QuestionWidget> {
   void _onChanged(String tex) {
     _startedAt ??= DateTime.now();
     if (_result != null) setState(() => _result = null);
-
-    // A right answer needs no confirming. Only a correct value submits itself,
-    // so the digits passed through on the way to it are not attempts — a
-    // student typing 594 has not answered 5 and then 59 and got them wrong.
-    if (tex.isNotEmpty && widget.question.answer.accepts(tex)) {
-      _previous = tex;
-      _check(tex);
-      return;
-    }
 
     // Step back over what was just typed, so the next character lands to its
     // left. Moving the cursor does not change the value, so this cannot

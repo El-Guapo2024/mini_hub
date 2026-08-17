@@ -91,53 +91,6 @@ void main() {
     );
   });
 
-  testWidgets('a correct value submits itself, without being submitted', (
-    tester,
-  ) async {
-    await pumpQuestion(tester, store: store);
-    final field = tester.widget<MathField>(find.byType(MathField));
-    // Typed, never submitted.
-    field.onChanged!('4');
-    await tester.pump();
-    await tester.runAsync(() => Future<void>.delayed(Duration.zero));
-
-    expect(store.all.single.correct, isTrue);
-    expect(find.byIcon(Icons.check), findsOneWidget);
-  });
-
-  testWidgets('digits typed on the way to the answer are not attempts', (
-    tester,
-  ) async {
-    const long = Question(
-      id: QuestionId('bh.1.2.1.q2'),
-      prompt: r'54 \times 11 =',
-      answer: NumericAnswer(value: 594),
-      topic: TopicId('multiplying_by_11_trick'),
-    );
-    await tester.pumpWidget(
-      AttemptScope(
-        store: store,
-        child: const MaterialApp(
-          home: Scaffold(
-            body: MathKeyboardViewInsets(child: QuestionWidget(question: long)),
-          ),
-        ),
-      ),
-    );
-    await tester.pump();
-
-    final field = tester.widget<MathField>(find.byType(MathField));
-    for (final partial in ['5', '59', '594']) {
-      field.onChanged!(partial);
-      await tester.pump();
-    }
-    await tester.runAsync(() => Future<void>.delayed(Duration.zero));
-
-    // One attempt, the right one. 5 and 59 were on the way, not answers.
-    expect(store.all.length, 1);
-    expect(store.all.single.correct, isTrue);
-  });
-
   testWidgets('grading still works with no store to record to', (tester) async {
     // A question rendered outside the app must not throw for want of a scope.
     await pumpQuestion(tester);

@@ -5,6 +5,7 @@ import '../../content/course.dart';
 import '../hub/app_module.dart';
 import '../screens/topic_list_screen.dart';
 import '../widgets/screen_state.dart';
+import '../widgets/tile_grid.dart';
 
 class CourseApp implements AppModule {
   @override
@@ -54,13 +55,7 @@ class _StemaArenaScreenState extends State<StemaArenaScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF121212),
-      appBar: AppBar(
-        backgroundColor: Colors.grey.shade900,
-        foregroundColor: Colors.white,
-        title: const Text('Stema Arena'),
-        centerTitle: true,
-      ),
+      appBar: AppBar(title: const Text('Stema Arena')),
       body: _body(),
     );
   }
@@ -71,38 +66,20 @@ class _StemaArenaScreenState extends State<StemaArenaScreen> {
 
     final courses = this.courses;
     if (courses == null) return const ScreenLoading();
-    return GridView.count(
-      crossAxisCount: 2,
-      padding: const EdgeInsets.all(16),
-      mainAxisSpacing: 16,
-      crossAxisSpacing: 16,
-      children: courses.map((course) {
-        return Card(
-          color: Colors.grey.shade900,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20),
-          ),
-          child: InkWell(
-            borderRadius: BorderRadius.circular(20),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => TopicListScreen(course: course),
-                ),
-              );
-            },
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(Icons.functions, size: 48, color: Colors.teal.shade400),
-                const SizedBox(height: 8),
-                Text(course.title, style: const TextStyle(color: Colors.white)),
-              ],
+    return TileGrid(
+      tiles: [
+        for (final course in courses)
+          GridTileEntry(
+            icon: Icons.functions,
+            label: course.title,
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => TopicListScreen(course: course),
+              ),
             ),
           ),
-        );
-      }).toList(),
+      ],
     );
   }
 }

@@ -13,6 +13,7 @@ class Fraction {
   final int denominator;
 
   /// A mixed number, e.g. `35\frac{1}{16}`. The whole part carries the sign.
+  /// The `d` is a literal made optional, so `\dfrac` matches too.
   static final _mixed = RegExp(r'^(-?\d+)\\d?frac\{(\d+)\}\{(\d+)\}$');
 
   /// A plain fraction, e.g. `-\frac{3}{4}`.

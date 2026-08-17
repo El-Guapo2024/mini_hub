@@ -2,14 +2,12 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mini_hub/content/answer.dart';
 import 'package:mini_hub/content/question.dart';
 import 'package:yaml/yaml.dart';
 
-/// Guards the generated bank against the failure that would otherwise only show
-/// up on a device: a question that will not parse, or a tag pointing at nothing.
-/// Both render as an error inside an otherwise healthy lesson, which is easy to
-/// ship and easy to miss.
+/// Guards the generated bank against the failures that would otherwise only
+/// show up on a device: a question that will not parse, a topic whose declared
+/// ids disagree with its file, a duplicate id merging two questions' history.
 void main() {
   // Both content sources, since either can be the one a build ships.
   final topics = ['assets/content', 'assets/sample']
@@ -32,9 +30,9 @@ void main() {
       for (final row in jsonDecode(raw) as List<dynamic>) {
         try {
           final question = Question.fromJson(row as Map<String, dynamic>);
-          // A question whose answer nothing can satisfy is worse than a missing
-          // one: the student cannot tell it is broken.
-          expect(question.answer, isA<Answer>());
+          // A question with nothing to show after a wrong guess is worse than
+          // a missing one: the student cannot tell what they should have said.
+          expect(question.answer.display, isNotEmpty);
           expect(question.prompt, isNotEmpty);
           expect(question.topic, dir.path.split('/').last);
           expect(

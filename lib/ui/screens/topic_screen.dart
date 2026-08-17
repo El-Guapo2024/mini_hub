@@ -7,6 +7,7 @@ import '../../content/topic.dart';
 import '../../progress/attempt_scope.dart';
 import '../widgets/lesson_view.dart';
 import '../widgets/question_widget.dart';
+import '../theme.dart';
 import '../widgets/screen_state.dart';
 
 /// A topic, as two separate things: the lesson to read and the questions to
@@ -61,12 +62,8 @@ class _TopicScreenState extends State<TopicScreen> {
       length: 2,
       child: MathKeyboardViewInsets(
         child: Scaffold(
-          backgroundColor: const Color(0xFF121212),
           appBar: AppBar(
-            backgroundColor: Colors.grey.shade900,
-            foregroundColor: Colors.white,
             title: Text(widget.topic.title),
-            centerTitle: true,
             bottom: const TabBar(
               indicatorColor: Colors.tealAccent,
               labelColor: Colors.white,
@@ -106,8 +103,6 @@ class _Lesson extends StatelessWidget {
     );
   }
 }
-
-const _green = Color(0xFF4CAF50);
 
 /// One question at a time, like a deck of cards.
 ///
@@ -175,7 +170,7 @@ class _PracticeState extends State<_Practice> {
               if (_isDone(questions[_current]))
                 const Padding(
                   padding: EdgeInsets.only(right: 8),
-                  child: Icon(Icons.check_circle, size: 16, color: _green),
+                  child: Icon(Icons.check_circle, size: 16, color: correct),
                 ),
               Text(
                 '${_current + 1} of ${questions.length}   ·   $_done done',

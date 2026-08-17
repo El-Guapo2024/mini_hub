@@ -1,10 +1,11 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:math_keyboard/math_keyboard.dart';
 import 'package:mini_hub/content/answer.dart';
 import 'package:mini_hub/content/ids.dart';
 import 'package:mini_hub/content/question.dart';
 import 'package:mini_hub/ui/widgets/question_widget.dart';
+
+import 'support/pump.dart';
 
 const _question = Question(
   id: QuestionId('bh.1.1.q1'),
@@ -42,19 +43,7 @@ void main() {
     tester,
   ) async {
     for (final rightToLeft in [false, true]) {
-      await tester.pumpWidget(
-        MaterialApp(
-          home: Scaffold(
-            body: MathKeyboardViewInsets(
-              child: QuestionWidget(
-                question: _question,
-                rightToLeft: rightToLeft,
-              ),
-            ),
-          ),
-        ),
-      );
-      await tester.pump();
+      await pumpQuestion(tester, _question, rightToLeft: rightToLeft);
 
       expect(tester.takeException(), isNull);
       expect(find.byType(MathField), findsOneWidget);

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'progress/attempt_scope.dart';
 import 'progress/attempt_store.dart';
 import 'ui/hub/home.dart';
+import 'ui/theme.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -29,10 +30,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final app = MaterialApp(
       title: "Mini Hub",
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal),
-        useMaterial3: true,
-      ),
+      theme: appTheme,
       home: const HubHome(),
     );
     final store = this.store;

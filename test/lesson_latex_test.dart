@@ -1,29 +1,8 @@
 import 'dart:io';
 
-import 'package:flutter_markdown_plus_latex/flutter_markdown_plus_latex.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:markdown/markdown.dart' as md;
 
-/// Counts how many display-math blocks the app's extension set actually parses
-/// out of a lesson. A '$$' that is not alone on its line never matches
-/// LatexBlockSyntax and silently renders as literal text.
-int latexBlocks(String source) {
-  final doc = md.Document(
-    extensionSet: md.ExtensionSet([LatexBlockSyntax()], [LatexInlineSyntax()]),
-  );
-  var count = 0;
-  void walk(List<md.Node> nodes) {
-    for (final n in nodes) {
-      if (n is md.Element) {
-        if (n.tag == 'latex') count++;
-        if (n.children != null) walk(n.children!);
-      }
-    }
-  }
-
-  walk(doc.parseLines(source.split('\n')));
-  return count;
-}
+import 'support/latex.dart';
 
 void main() {
   test('every generated lesson parses its display math', () {

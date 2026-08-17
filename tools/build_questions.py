@@ -30,6 +30,8 @@ PRACTICE_HEADING = "## Practice"
 DROPPED_ANSWER_FIELDS = {"derived", "corrected", "note"}
 
 
+# The "d" after the backslash is a literal, made optional so both \frac and
+# \dfrac match. It is not the \d escape, which the doubled backslash rules out.
 MIXED = re.compile(r"^(-?\d+)\\d?frac\{(\d+)\}\{(\d+)\}$")
 PLAIN = re.compile(r"^(-?)\\d?frac\{(\d+)\}\{(\d+)\}$")
 

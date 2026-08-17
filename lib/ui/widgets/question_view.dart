@@ -10,12 +10,20 @@ import 'question_widget.dart';
 /// type fails to compile here until it has been given an input, instead of
 /// reaching a student as an error message.
 class QuestionView extends StatelessWidget {
-  const QuestionView({super.key, required this.question, this.onCorrect});
+  const QuestionView({
+    super.key,
+    required this.question,
+    this.onCorrect,
+    this.rightToLeft = false,
+  });
 
   final Question question;
 
   /// Passed through to the input: what to do once this one is right.
   final VoidCallback? onCorrect;
+
+  /// Passed through to the input: which end of the answer to type first.
+  final bool rightToLeft;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +34,11 @@ class QuestionView extends StatelessWidget {
       ApproxAnswer() ||
       ComplexAnswer() ||
       FractionAnswer() ||
-      BaseAnswer() => QuestionWidget(question: question, onCorrect: onCorrect),
+      BaseAnswer() => QuestionWidget(
+        question: question,
+        onCorrect: onCorrect,
+        rightToLeft: rightToLeft,
+      ),
     };
   }
 }

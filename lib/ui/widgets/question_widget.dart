@@ -13,10 +13,33 @@ const _wrong = Color(0xFFE57373);
 
 enum _Result { correct, wrong }
 
+/// Whether the cursor should step back over what was just entered.
+///
+/// True only for an insertion: a deletion or a cursor move must be left alone,
+/// or backspacing would walk the cursor the wrong way through the answer.
+bool stepsBack({
+  required bool rightToLeft,
+  required String before,
+  required String after,
+}) => rightToLeft && after.length > before.length;
+
 class QuestionWidget extends StatefulWidget {
-  const QuestionWidget({super.key, required this.question, this.onCorrect});
+  const QuestionWidget({
+    super.key,
+    required this.question,
+    this.onCorrect,
+    this.rightToLeft = false,
+  });
 
   final Question question;
+
+  /// Type the answer from its last digit to its first.
+  ///
+  /// Several of the manual's tricks hand you digits in that order — the 11
+  /// trick gives the ones digit first, then works leftwards — so writing left
+  /// to right means holding the whole answer in your head before entering any
+  /// of it.
+  final bool rightToLeft;
 
   /// Called once the student has had a moment to see they were right. Null
   /// where there is nowhere to go next, which is why it is not required.
@@ -84,9 +107,25 @@ class _QuestionWidgetState extends State<QuestionWidget> {
     );
   }
 
-  void _clearResult(String _) {
+  /// The value as it was at the last change, to tell an insertion from a
+  /// deletion or a cursor move.
+  String _previous = '';
+
+  void _onChanged(String tex) {
     _startedAt ??= DateTime.now();
     if (_result != null) setState(() => _result = null);
+
+    // Step back over what was just typed, so the next character lands to its
+    // left. Moving the cursor does not change the value, so this cannot
+    // trigger itself.
+    if (stepsBack(
+      rightToLeft: widget.rightToLeft,
+      before: _previous,
+      after: tex,
+    )) {
+      _controller.goBack();
+    }
+    _previous = tex;
   }
 
   Color get _borderColor => switch (_result) {
@@ -164,7 +203,7 @@ class _QuestionWidgetState extends State<QuestionWidget> {
               // student has no way to enter one at all.
               variables: widget.question.answer.inputVariables,
               onSubmitted: _check,
-              onChanged: _clearResult,
+              onChanged: _onChanged,
               decoration: InputDecoration(
                 isDense: true,
                 hintText: 'Answer',

@@ -126,6 +126,10 @@ class _PracticeState extends State<_Practice> {
   final _pages = PageController();
   int _current = 0;
 
+  /// Kept here rather than on the card, so choosing it once holds for the
+  /// whole session instead of resetting at every swipe.
+  bool _rightToLeft = false;
+
   /// How many of the topic's questions have ever been answered correctly.
   ///
   /// Read from the log rather than counted as the session goes, so it is the
@@ -164,9 +168,8 @@ class _PracticeState extends State<_Practice> {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 12),
+          padding: const EdgeInsets.only(left: 24, right: 8, top: 4),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               if (_isDone(questions[_current]))
                 const Padding(
@@ -174,9 +177,19 @@ class _PracticeState extends State<_Practice> {
                   child: Icon(Icons.check_circle, size: 16, color: _green),
                 ),
               Text(
-                '${_current + 1} of ${questions.length}   ·   '
-                '$_done done',
+                '${_current + 1} of ${questions.length}   ·   $_done done',
                 style: const TextStyle(color: Colors.white54),
+              ),
+              const Spacer(),
+              // Several tricks give you the ones digit first, so typing from
+              // the right lets the student write digits as they work them out.
+              IconButton(
+                onPressed: () => setState(() => _rightToLeft = !_rightToLeft),
+                icon: const Icon(Icons.swap_horiz, size: 20),
+                color: _rightToLeft ? Colors.tealAccent : Colors.white38,
+                tooltip: _rightToLeft
+                    ? 'Typing right to left'
+                    : 'Typing left to right',
               ),
             ],
           ),
@@ -196,6 +209,7 @@ class _PracticeState extends State<_Practice> {
                 key: ValueKey(question.id.value),
                 question: question,
                 onCorrect: _next,
+                rightToLeft: _rightToLeft,
               );
             },
           ),

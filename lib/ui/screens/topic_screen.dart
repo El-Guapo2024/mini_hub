@@ -188,18 +188,14 @@ class _PracticeState extends State<_Practice> {
             onPageChanged: (index) => setState(() => _current = index),
             itemBuilder: (context, index) {
               final question = questions[index];
-              return SingleChildScrollView(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 20,
-                  vertical: 16,
-                ),
-                // Keyed by id so a card keeps its own answer and result while
-                // the deck is swiped back and forth.
-                child: QuestionView(
-                  key: ValueKey(question.id.value),
-                  question: question,
-                  onCorrect: _next,
-                ),
+              // Keyed by id so a card keeps its own answer and result while
+              // the deck is swiped back and forth. Given the whole page
+              // rather than a scroll view: the question centres itself in
+              // what it is given, and there is only ever one.
+              return QuestionView(
+                key: ValueKey(question.id.value),
+                question: question,
+                onCorrect: _next,
               );
             },
           ),

@@ -37,7 +37,9 @@ void main() {
         MaterialApp(
           home: Scaffold(
             body: MathKeyboardViewInsets(
-              child: ListView.builder(
+              // A PageView, as the practice tab uses: each question is given
+              // the whole page, which is the layout that has to hold up.
+              child: PageView.builder(
                 itemCount: questions.length,
                 itemBuilder: (context, index) =>
                     QuestionView(question: questions[index]),

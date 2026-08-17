@@ -7,7 +7,6 @@ import '../../content/question.dart';
 import '../../progress/attempt_scope.dart';
 import '../../progress/attempt_store.dart';
 
-const _surface = Color(0xFF121212);
 const _accent = Colors.tealAccent;
 const _correct = Color(0xFF4CAF50);
 const _wrong = Color(0xFFE57373);
@@ -130,99 +129,79 @@ class _QuestionWidgetState extends State<QuestionWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      clipBehavior: Clip.none,
-      children: [
-        Container(
-          margin: const EdgeInsets.only(top: 10),
-          padding: const EdgeInsets.fromLTRB(18, 24, 18, 18),
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.white24),
-            borderRadius: BorderRadius.circular(12),
+    // The card is the screen: one question, centred, with room to think. It
+    // used to be a bordered block titled "Question", which made sense when it
+    // sat inside a lesson among prose and needed to announce itself.
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 24),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          // Rendered math does not wrap, and real prompts run wider than a
+          // phone — `(*) 32 \times 64 \times 16 \div 48 =` overflows a
+          // 393pt screen. Scrolling the prompt keeps it readable instead of
+          // clipping the right-hand side, which would hide the operator.
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Math.tex(
+              widget.question.prompt,
+              textStyle: const TextStyle(fontSize: 34, color: Colors.white),
+            ),
           ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              // Rendered math does not wrap, and real prompts run wider than a
-              // phone — `(*) 32 \times 64 \times 16 \div 48 =` overflows a
-              // 393pt screen. Scrolling the prompt keeps it readable instead of
-              // clipping the right-hand side, which would hide the operator.
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Math.tex(
-                  widget.question.prompt,
-                  textStyle: const TextStyle(fontSize: 24, color: Colors.white),
-                ),
+          const SizedBox(height: 40),
+          Theme(
+            data: Theme.of(context).copyWith(
+              colorScheme: Theme.of(context).colorScheme.copyWith(
+                onSurface: Colors.white,
+                secondary: _accent,
               ),
-              const SizedBox(height: 20),
-              SizedBox(
-                width: 200,
-                child: Theme(
-                  data: Theme.of(context).copyWith(
-                    colorScheme: Theme.of(context).colorScheme.copyWith(
-                      onSurface: Colors.white,
-                      secondary: _accent,
-                    ),
-                  ),
-                  child: MathField(
-                    controller: _controller,
-                    keyboardType: MathKeyboardType.expression,
-                    // Complex answers put `i` on the keyboard; without it the
-                    // student has no way to enter one at all.
-                    variables: widget.question.answer.inputVariables,
-                    onSubmitted: _check,
-                    onChanged: _clearResult,
-                    decoration: InputDecoration(
-                      isDense: true,
-                      hintText: 'Answer',
-                      hintStyle: const TextStyle(color: Colors.white38),
-                      suffixIcon: _resultIcon,
-                      suffixIconConstraints: const BoxConstraints(
-                        minWidth: 36,
-                        minHeight: 36,
-                      ),
-                      contentPadding: const EdgeInsets.symmetric(
-                        horizontal: 14,
-                        vertical: 12,
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(8),
-                        borderSide: BorderSide(
-                          color: _result == null
-                              ? Colors.white24
-                              : _borderColor,
-                        ),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(8),
-                        borderSide: BorderSide(color: _borderColor, width: 1.5),
-                      ),
-                    ),
+            ),
+            child: MathField(
+              controller: _controller,
+              keyboardType: MathKeyboardType.expression,
+              // Complex answers put `i` on the keyboard; without it the
+              // student has no way to enter one at all.
+              variables: widget.question.answer.inputVariables,
+              onSubmitted: _check,
+              onChanged: _clearResult,
+              decoration: InputDecoration(
+                isDense: true,
+                hintText: 'Answer',
+                hintStyle: const TextStyle(color: Colors.white38),
+                suffixIcon: _resultIcon,
+                suffixIconConstraints: const BoxConstraints(
+                  minWidth: 36,
+                  minHeight: 36,
+                ),
+                contentPadding: const EdgeInsets.symmetric(
+                  horizontal: 14,
+                  vertical: 12,
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8),
+                  borderSide: BorderSide(
+                    color: _result == null ? Colors.white24 : _borderColor,
                   ),
                 ),
-              ),
-              if (_footer != null) ...[const SizedBox(height: 8), _footer!],
-            ],
-          ),
-        ),
-        Positioned(
-          left: 14,
-          top: 0,
-          child: Container(
-            color: _surface,
-            padding: const EdgeInsets.symmetric(horizontal: 6),
-            child: const Text(
-              'Question',
-              style: TextStyle(
-                color: _accent,
-                fontSize: 12,
-                fontWeight: FontWeight.w600,
-                letterSpacing: 1.0,
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8),
+                  borderSide: BorderSide(color: _borderColor, width: 1.5),
+                ),
               ),
             ),
           ),
-        ),
-      ],
+          // Reserved whether or not there is a footer, so the field does not
+          // jump up the screen the moment an answer is graded.
+          SizedBox(
+            height: 48,
+            child: Padding(
+              padding: const EdgeInsets.only(top: 12),
+              child: _footer ?? const SizedBox.shrink(),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

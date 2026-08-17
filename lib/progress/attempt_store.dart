@@ -6,6 +6,7 @@ import 'package:sqflite/sqflite.dart';
 import '../config.dart';
 import '../content/answer.dart';
 import '../content/ids.dart';
+import 'review.dart';
 
 /// One graded response. The log is the only thing stored; what the app shows
 /// is derived from it, so changing what progress means is a recompute rather
@@ -160,6 +161,13 @@ class AttemptStore {
   /// Whether this question has ever been answered correctly.
   bool isDone(QuestionId questionId) =>
       _attempts.any((a) => a.questionId == questionId && a.correct);
+
+  /// When [questionId] is next due, derived from its attempts.
+  ///
+  /// The log is held oldest first — the query orders by time and new attempts
+  /// are appended — which is the order a streak has to be read in.
+  Review reviewOf(QuestionId questionId) =>
+      Review.of(_attempts.where((a) => a.questionId == questionId));
 
   TopicProgress progressFor(TopicId topic) => TopicProgress(
     topic: topic,

@@ -4,6 +4,7 @@ import 'package:math_keyboard/math_keyboard.dart';
 import '../../content/content_repository.dart';
 import '../../content/question.dart';
 import '../../content/topic.dart';
+import '../../progress/attempt_scope.dart';
 import '../widgets/lesson_view.dart';
 import '../widgets/question_view.dart';
 
@@ -117,7 +118,69 @@ class _Practice extends StatefulWidget {
 }
 
 class _PracticeState extends State<_Practice> {
+  final _pages = PageController();
   int _current = 0;
+
+  /// The questions this session will show, most overdue first, with ones never
+  /// seen ahead of everything.
+  ///
+  /// Fixed when the session starts rather than recomputed as answers land: a
+  /// deck that reordered itself under the student's finger would move the next
+  /// card while they were reaching for it.
+  List<Question> _deck = const [];
+  int _done = 0;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    _deal();
+  }
+
+  void _deal() {
+    final store = AttemptScope.maybeOf(context);
+    final now = DateTime.now().toUtc();
+
+    // With nowhere to record — a test, or a preview — there is no history to
+    // schedule from, so every question is due.
+    if (store == null) {
+      _deck = widget.questions;
+      _done = 0;
+      return;
+    }
+
+    final due = widget.questions
+        .where((q) => store.reviewOf(q.id).isDue(now))
+        .toList();
+    due.sort((a, b) {
+      final overdue = store.reviewOf(b.id).overdueAt(now);
+      return overdue.compareTo(store.reviewOf(a.id).overdueAt(now));
+    });
+
+    _deck = due;
+    _done = _learned;
+  }
+
+  /// How many of the topic's questions have ever been answered correctly.
+  int get _learned {
+    final store = AttemptScope.maybeOf(context);
+    if (store == null) return 0;
+    return widget.questions.where((q) => store.isDone(q.id)).length;
+  }
+
+  @override
+  void dispose() {
+    _pages.dispose();
+    super.dispose();
+  }
+
+  void _next() {
+    setState(() => _done = _learned);
+    if (_current >= _deck.length - 1) return;
+    _pages.nextPage(
+      duration: const Duration(milliseconds: 300),
+      curve: Curves.easeOut,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -126,21 +189,28 @@ class _PracticeState extends State<_Practice> {
       return const _Message('no questions for this topic yet');
     }
 
+    final deck = _deck;
+    if (deck.isEmpty) {
+      return const _Message('nothing due — come back later');
+    }
+
     return Column(
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 12),
           child: Text(
-            '${_current + 1} of ${questions.length}',
+            '${_current + 1} of ${deck.length} due   ·   '
+            '$_done of ${questions.length} learned',
             style: const TextStyle(color: Colors.white54),
           ),
         ),
         Expanded(
           child: PageView.builder(
-            itemCount: questions.length,
+            controller: _pages,
+            itemCount: deck.length,
             onPageChanged: (index) => setState(() => _current = index),
             itemBuilder: (context, index) {
-              final question = questions[index];
+              final question = deck[index];
               return SingleChildScrollView(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 20,
@@ -151,6 +221,7 @@ class _PracticeState extends State<_Practice> {
                 child: QuestionView(
                   key: ValueKey(question.id.value),
                   question: question,
+                  onCorrect: _next,
                 ),
               );
             },

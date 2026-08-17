@@ -15,9 +15,13 @@ const _wrong = Color(0xFFE57373);
 enum _Result { correct, wrong }
 
 class QuestionWidget extends StatefulWidget {
-  const QuestionWidget({super.key, required this.question});
+  const QuestionWidget({super.key, required this.question, this.onCorrect});
 
   final Question question;
+
+  /// Called once the student has had a moment to see they were right. Null
+  /// where there is nowhere to go next, which is why it is not required.
+  final VoidCallback? onCorrect;
 
   @override
   State<QuestionWidget> createState() => _QuestionWidgetState();
@@ -42,6 +46,19 @@ class _QuestionWidgetState extends State<QuestionWidget> {
     setState(() => _result = correct ? _Result.correct : _Result.wrong);
     _record(tex, correct);
     _startedAt = null;
+    if (correct) _advance();
+  }
+
+  /// Moves on, after long enough to read the green. Advancing the instant the
+  /// last digit lands would leave the student unsure what they had just been
+  /// told.
+  void _advance() {
+    final onCorrect = widget.onCorrect;
+    if (onCorrect == null) return;
+    Future.delayed(AppConfig.current.advanceAfter, () {
+      // The card can be swiped away, or the screen closed, while we wait.
+      if (mounted) onCorrect();
+    });
   }
 
   void _record(String tex, bool correct) {

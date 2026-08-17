@@ -4,11 +4,9 @@ import '../../content/content_repository.dart';
 import '../../content/course.dart';
 import '../hub/app_module.dart';
 import '../screens/topic_list_screen.dart';
+import '../widgets/screen_state.dart';
 
 class CourseApp implements AppModule {
-  @override
-  String get id => 'course';
-
   @override
   String get title => 'Stema Arena';
 
@@ -68,22 +66,11 @@ class _StemaArenaScreenState extends State<StemaArenaScreen> {
   }
 
   Widget _body() {
-    if (error != null) {
-      return Center(
-        child: Padding(
-          padding: const EdgeInsets.all(24),
-          child: Text(
-            'Could not load the course list.\n$error',
-            textAlign: TextAlign.center,
-            style: const TextStyle(color: Colors.white70),
-          ),
-        ),
-      );
-    }
+    final error = this.error;
+    if (error != null) return ScreenMessage.failure(error);
+
     final courses = this.courses;
-    if (courses == null) {
-      return const Center(child: CircularProgressIndicator());
-    }
+    if (courses == null) return const ScreenLoading();
     return GridView.count(
       crossAxisCount: 2,
       padding: const EdgeInsets.all(16),

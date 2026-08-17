@@ -59,10 +59,11 @@ void main() {
     // run would render as literal text mid-lesson.
     final leftovers = <String>[];
 
-    for (final lesson in Directory('assets')
-        .listSync(recursive: true)
-        .whereType<File>()
-        .where((f) => f.path.endsWith('lesson.md'))) {
+    for (final lesson
+        in Directory('assets')
+            .listSync(recursive: true)
+            .whereType<File>()
+            .where((f) => f.path.endsWith('lesson.md'))) {
       final text = lesson.readAsStringSync();
       if (text.contains('[[question:') || text.contains('## Practice')) {
         leftovers.add(lesson.path);

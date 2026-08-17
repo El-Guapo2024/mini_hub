@@ -1,16 +1,13 @@
+import 'package:flutter/material.dart';
+
 import '../apps/course_app.dart';
-import '../apps/notes_app.dart';
-import '../apps/physics_leetcode_app.dart';
-import '../apps/physics_tools_app.dart';
-import '../apps/projects_app.dart';
-import '../apps/robotics_app.dart';
 import 'app_module.dart';
 
 final List<AppModule> registry = [
   CourseApp(),
-  RoboticsApp(),
-  PhysicsToolsApp(),
-  PhysicsLeetcodeApp(),
-  NotesApp(),
-  ProjectsApp(),
+  const ComingSoon('Robotics', Icons.smart_toy),
+  const ComingSoon('Physics Tools', Icons.science),
+  const ComingSoon('Physics LeetCode', Icons.functions),
+  const ComingSoon('Notes', Icons.note),
+  const ComingSoon('Projects', Icons.folder),
 ];

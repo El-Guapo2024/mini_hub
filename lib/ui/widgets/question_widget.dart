@@ -3,6 +3,7 @@ import 'package:flutter_math_fork/flutter_math.dart';
 import 'package:math_keyboard/math_keyboard.dart';
 
 import '../../config.dart';
+import '../../content/answer.dart';
 import '../../content/question.dart';
 import '../../progress/attempt_scope.dart';
 import '../../progress/attempt_store.dart';
@@ -167,7 +168,19 @@ class _QuestionWidgetState extends State<QuestionWidget> {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) => switch (widget.question.answer) {
+    // Every answer in the bank is given by typing a value; they differ only in
+    // how that value is graded, which the answer itself decides. Switching on
+    // the sealed Answer means a new shape fails to compile here until it has
+    // been given an input, rather than reaching a student as a wrong one.
+    NumericAnswer() ||
+    ApproxAnswer() ||
+    ComplexAnswer() ||
+    FractionAnswer() ||
+    BaseAnswer() => _typedAnswer(context),
+  };
+
+  Widget _typedAnswer(BuildContext context) {
     // The card is the screen: one question, centred, with room to think. It
     // used to be a bordered block titled "Question", which made sense when it
     // sat inside a lesson among prose and needed to announce itself.

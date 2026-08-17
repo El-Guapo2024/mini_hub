@@ -41,11 +41,4 @@ class Question {
       topic: TopicId(json['topic'] as String),
     );
   }
-
-  Map<String, dynamic> toJson() => {
-    'id': id.value,
-    'prompt': prompt,
-    'topic': topic.value,
-    'answer': answer.toJson(),
-  };
 }

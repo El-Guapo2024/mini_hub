@@ -8,7 +8,7 @@ import 'package:mini_hub/content/answer.dart';
 import 'package:mini_hub/content/fraction.dart';
 import 'package:mini_hub/content/ids.dart';
 import 'package:mini_hub/content/question.dart';
-import 'package:mini_hub/ui/widgets/question_view.dart';
+import 'package:mini_hub/ui/widgets/question_widget.dart';
 
 /// Renders real generated questions the way the practice tab does, so a
 /// question the view cannot build fails here rather than on a device.
@@ -42,7 +42,7 @@ void main() {
               child: PageView.builder(
                 itemCount: questions.length,
                 itemBuilder: (context, index) =>
-                    QuestionView(question: questions[index]),
+                    QuestionWidget(question: questions[index]),
               ),
             ),
           ),
@@ -51,7 +51,7 @@ void main() {
       await tester.pump();
 
       expect(tester.takeException(), isNull);
-      expect(find.byType(QuestionView), findsWidgets);
+      expect(find.byType(QuestionWidget), findsWidgets);
     });
   }
 
@@ -73,7 +73,7 @@ void main() {
         MaterialApp(
           home: Scaffold(
             body: MathKeyboardViewInsets(
-              child: QuestionView(
+              child: QuestionWidget(
                 question: Question(
                   id: const QuestionId('q'),
                   prompt: '2+2=',

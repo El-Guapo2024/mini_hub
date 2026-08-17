@@ -4,6 +4,7 @@ import '../../content/content_repository.dart';
 import '../../content/course.dart';
 import '../../content/topic.dart';
 import '../../progress/attempt_scope.dart';
+import '../widgets/screen_state.dart';
 import 'topic_screen.dart';
 
 class TopicListScreen extends StatefulWidget {
@@ -55,15 +56,7 @@ class _TopicListScreenState extends State<TopicListScreen> {
         title: Text(widget.course.title),
       ),
       body: failure != null
-          ? Center(
-              child: Padding(
-                padding: const EdgeInsets.all(24),
-                child: Text(
-                  'could not load: $failure',
-                  style: const TextStyle(color: Colors.white54),
-                ),
-              ),
-            )
+          ? ScreenMessage.failure(failure!)
           : ListView.builder(
               padding: const EdgeInsets.all(16),
               itemCount: topics.length,

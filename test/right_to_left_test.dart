@@ -4,7 +4,6 @@ import 'package:math_keyboard/math_keyboard.dart';
 import 'package:mini_hub/content/answer.dart';
 import 'package:mini_hub/content/ids.dart';
 import 'package:mini_hub/content/question.dart';
-import 'package:mini_hub/ui/widgets/question_view.dart';
 import 'package:mini_hub/ui/widgets/question_widget.dart';
 
 const _question = Question(
@@ -17,26 +16,17 @@ const _question = Question(
 void main() {
   group('when to step the cursor back', () {
     test('typing right to left steps back over what was entered', () {
-      expect(
-        stepsBack(rightToLeft: true, before: '4', after: '94'),
-        isTrue,
-      );
+      expect(stepsBack(rightToLeft: true, before: '4', after: '94'), isTrue);
     });
 
     test('typing left to right never steps back', () {
-      expect(
-        stepsBack(rightToLeft: false, before: '4', after: '94'),
-        isFalse,
-      );
+      expect(stepsBack(rightToLeft: false, before: '4', after: '94'), isFalse);
     });
 
     test('deleting does not step back, whichever way round', () {
       // Backspace already moves left. Stepping again would walk the cursor
       // through the answer a character at a time for every key pressed.
-      expect(
-        stepsBack(rightToLeft: true, before: '594', after: '59'),
-        isFalse,
-      );
+      expect(stepsBack(rightToLeft: true, before: '594', after: '59'), isFalse);
     });
 
     test('a change that adds nothing does not step back', () {
@@ -56,7 +46,7 @@ void main() {
         MaterialApp(
           home: Scaffold(
             body: MathKeyboardViewInsets(
-              child: QuestionView(
+              child: QuestionWidget(
                 question: _question,
                 rightToLeft: rightToLeft,
               ),

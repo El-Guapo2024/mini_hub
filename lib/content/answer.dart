@@ -54,8 +54,6 @@ sealed class Answer {
     }
   }
 
-  Map<String, dynamic> toJson();
-
   /// The question's classification, recorded on every attempt. Derived from
   /// the answer rather than stored beside it, so the two cannot disagree.
   QuestionType get kind;
@@ -115,14 +113,6 @@ class NumericAnswer extends Answer {
 
   @override
   String get display => _display ?? _trim(value) + (unit ?? '');
-
-  @override
-  Map<String, dynamic> toJson() => {
-    'type': kind.name,
-    'answer': value,
-    if (_display != null) 'display': _display,
-    if (unit != null) 'unit': unit,
-  };
 }
 
 /// An estimation problem, marked `(*)` in the manual. Grading uses the printed
@@ -148,13 +138,6 @@ class ApproxAnswer extends Answer {
 
   @override
   String? get inputHint => 'Estimate — within ±5% counts';
-
-  @override
-  Map<String, dynamic> toJson() => {
-    'type': kind.name,
-    'low': low,
-    'high': high,
-  };
 }
 
 /// A complex answer, e.g. `(1+i)^9 = 16+16i`. The real evaluator cannot grade
@@ -193,14 +176,6 @@ class ComplexAnswer extends Answer {
     final sign = imaginary < 0 ? '-' : '+';
     return '${_trim(real)}$sign${_trim(imaginary.abs())}i';
   }
-
-  @override
-  Map<String, dynamic> toJson() => {
-    'type': kind.name,
-    'real': real,
-    'imag': imaginary,
-    if (_display != null) 'display': _display,
-  };
 }
 
 /// An answer where the form is part of being right: number sense wants the
@@ -243,15 +218,6 @@ class FractionAnswer extends Answer {
 
   @override
   String get display => _display ?? value.toString();
-
-  @override
-  Map<String, dynamic> toJson() => {
-    'type': kind.name,
-    'num': value.numerator,
-    'den': value.denominator,
-    if (!reduced) 'reduced': false,
-    if (_display != null) 'display': _display,
-  };
 }
 
 /// A value written in another base, e.g. `15/70` in base 8, which is 13/56.
@@ -317,14 +283,6 @@ class BaseAnswer extends Answer {
 
   @override
   String get display => _display ?? '${_trim(value)}_{$base}';
-
-  @override
-  Map<String, dynamic> toJson() => {
-    'type': kind.name,
-    'answer': value,
-    'base': base,
-    if (_display != null) 'display': _display,
-  };
 }
 
 /// Renders a double without a trailing `.0` on whole numbers.

@@ -6,7 +6,8 @@ import '../../content/question.dart';
 import '../../content/topic.dart';
 import '../../progress/attempt_scope.dart';
 import '../widgets/lesson_view.dart';
-import '../widgets/question_view.dart';
+import '../widgets/question_widget.dart';
+import '../widgets/screen_state.dart';
 
 /// A topic, as two separate things: the lesson to read and the questions to
 /// practise.
@@ -77,14 +78,14 @@ class _TopicScreenState extends State<TopicScreen> {
             ),
           ),
           body: switch ((failure, lesson, questions)) {
-            (final Object error, _, _) => _Message('could not load: $error'),
+            (final Object error, _, _) => ScreenMessage.failure(error),
             (_, final String text, final List<Question> pool) => TabBarView(
               children: [
                 _Lesson(markdown: text),
                 _Practice(questions: pool),
               ],
             ),
-            _ => const Center(child: CircularProgressIndicator()),
+            _ => const ScreenLoading(),
           },
         ),
       ),
@@ -162,7 +163,7 @@ class _PracticeState extends State<_Practice> {
   Widget build(BuildContext context) {
     final questions = widget.questions;
     if (questions.isEmpty) {
-      return const _Message('no questions for this topic yet');
+      return const ScreenMessage('no questions for this topic yet');
     }
 
     return Column(
@@ -205,7 +206,7 @@ class _PracticeState extends State<_Practice> {
               // the deck is swiped back and forth. Given the whole page
               // rather than a scroll view: the question centres itself in
               // what it is given, and there is only ever one.
-              return QuestionView(
+              return QuestionWidget(
                 key: ValueKey(question.id.value),
                 question: question,
                 onCorrect: _next,
@@ -215,22 +216,6 @@ class _PracticeState extends State<_Practice> {
           ),
         ),
       ],
-    );
-  }
-}
-
-class _Message extends StatelessWidget {
-  const _Message(this.text);
-
-  final String text;
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(24),
-        child: Text(text, style: const TextStyle(color: Colors.white54)),
-      ),
     );
   }
 }

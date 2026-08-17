@@ -163,8 +163,13 @@ void main() {
       expect(sixth.accepts(r'\frac{6}'), isFalse);
     });
 
-    test('round-trips through JSON', () {
-      final again = Answer.fromJson(sixth.toJson());
+    test('reads the shape the generator writes', () {
+      final again = Answer.fromJson({
+        'type': 'fraction',
+        'num': 6,
+        'den': 25,
+        'display': r'\frac{6}{25}',
+      });
       expect(again, isA<FractionAnswer>());
       expect(again.accepts(r'\frac{6}{25}'), isTrue);
       expect(again.accepts(r'\frac{12}{50}'), isFalse);
@@ -191,9 +196,16 @@ void main() {
         expect(sixth.inputHint, isNotNull);
       });
 
-      test('survives a round trip, defaulting to strict', () {
+      test('is opt-in, and strict without it', () {
         expect(
-          (Answer.fromJson(lenient.toJson()) as FractionAnswer).reduced,
+          (Answer.fromJson({
+                    'type': 'fraction',
+                    'num': 6,
+                    'den': 25,
+                    'reduced': false,
+                  })
+                  as FractionAnswer)
+              .reduced,
           isFalse,
         );
         expect(
@@ -252,8 +264,13 @@ void main() {
       expect(a.display, r'\frac{15}{70}_{8}');
     });
 
-    test('round-trips through JSON', () {
-      final again = Answer.fromJson(a.toJson());
+    test('reads the shape the generator writes', () {
+      final again = Answer.fromJson({
+        'type': 'base',
+        'answer': 0.232142857142857,
+        'base': 8,
+        'display': r'\frac{15}{70}_{8}',
+      });
       expect(again, isA<BaseAnswer>());
       expect(again.accepts(r'\frac{15}{70}'), isTrue);
     });
@@ -315,14 +332,13 @@ void main() {
       expect(complex.answer.accepts('16+16i'), isTrue);
     });
 
-    test('round-trips through JSON', () {
-      final q = Question.fromJson({
+    test('derives its type from the answer it was given', () {
+      final again = Question.fromJson({
         'id': 'bh.3.1.10.q27',
         'prompt': r'(1+i)^{9} =',
         'topic': 'complex_numbers',
         'answer': {'type': 'complex', 'real': 16, 'imag': 16},
       });
-      final again = Question.fromJson(q.toJson());
       expect(again.answer.accepts('16+16i'), isTrue);
       expect(
         again.type,

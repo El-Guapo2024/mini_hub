@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:flutter/foundation.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
 
@@ -92,7 +93,12 @@ class TopicProgress {
 /// SQLite is here for durability, not speed: at this size no query needs an
 /// index, but every write is a transaction, so a process killed mid-write leaves
 /// the log intact rather than truncated. Rows are never updated or deleted.
-class AttemptStore {
+/// It is a [ChangeNotifier] so that a widget reading progress through
+/// [AttemptScope] rebuilds when an attempt is recorded. Screens used to refresh
+/// only because they happened to call `setState` for their own reasons, which
+/// left any other widget showing a stale count until it was rebuilt for some
+/// unrelated reason.
+class AttemptStore extends ChangeNotifier {
   AttemptStore._(this._db, this._attempts);
 
   final Database _db;
@@ -104,6 +110,19 @@ class AttemptStore {
 
   static const _table = 'attempts';
 
+  /// Bumping this without adding the matching step to [_migrations] is caught
+  /// at open time rather than becoming a missing-column error later.
+  static const _version = 1;
+
+  /// How to get from schema `n - 1` to schema `n`, keyed by `n`. Empty while
+  /// there has only ever been one schema.
+  ///
+  /// A store that cannot be migrated must not be silently recreated: the log is
+  /// the only copy of a student's progress, and `onCreate` would not run on an
+  /// existing file anyway. Failing here means [open] throws, which `main` already
+  /// treats as "practise without recording" rather than as a failure to start.
+  static const Map<int, String> _migrations = {};
+
   static Future<AttemptStore> open() async {
     final dir = await getApplicationDocumentsDirectory();
     return openAt('${dir.path}/${AppConfig.current.databaseFile}');
@@ -114,7 +133,26 @@ class AttemptStore {
   static Future<AttemptStore> openAt(String path) async {
     final db = await openDatabase(
       path,
-      version: 1,
+      version: _version,
+      onUpgrade: (db, from, to) async {
+        for (var step = from + 1; step <= to; step++) {
+          final migration = _migrations[step];
+          if (migration == null) {
+            throw StateError(
+              'no migration to schema $step: the attempt log on this device is '
+              'at $from and this build expects $to',
+            );
+          }
+          await db.execute(migration);
+        }
+      },
+      // A build older than the file on disk cannot know what the newer schema
+      // added. Refusing is the only safe answer; the alternative sqflite offers
+      // is deleting the log.
+      onDowngrade: (db, from, to) async => throw StateError(
+        'the attempt log on this device is at schema $from, newer than the $to '
+        'this build expects',
+      ),
       onCreate: (db, _) async {
         // `id` is the primary key, so the same attempt can never land twice.
         await db.execute('''
@@ -144,7 +182,14 @@ class AttemptStore {
   /// leaving a green check on screen that a restart would silently undo. The
   /// returned future completes once committed; UI callers may ignore it.
   Future<void> record(Attempt attempt) async {
+    // Replaying an attempt already held is a no-op, matching what the insert
+    // below does with the row. Adding it a second time would leave memory
+    // holding two of what the log holds one of, and a restart would silently
+    // change the count back.
+    if (_attempts.any((a) => a.id == attempt.id)) return;
+
     _attempts.add(attempt);
+    notifyListeners();
     try {
       await _db.insert(
         _table,
@@ -154,16 +199,22 @@ class AttemptStore {
       );
     } on Object {
       _attempts.remove(attempt);
+      notifyListeners();
       rethrow;
     }
   }
 
   Future<void> clear() async {
     _attempts.clear();
+    notifyListeners();
     await _db.delete(_table);
   }
 
-  Future<void> close() => _db.close();
+  /// Closes the database and drops any listeners. The store is unusable after.
+  Future<void> close() async {
+    dispose();
+    await _db.close();
+  }
 
   /// Whether this question has ever been answered correctly.
   bool isDone(QuestionId questionId) =>

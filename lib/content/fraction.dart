@@ -16,8 +16,10 @@ class Fraction {
   /// The `d` is a literal made optional, so `\dfrac` matches too.
   static final _mixed = RegExp(r'^(-?\d+)\\d?frac\{(\d+)\}\{(\d+)\}$');
 
-  /// A plain fraction, e.g. `-\frac{3}{4}`.
-  static final _plain = RegExp(r'^(-?)\\d?frac\{(\d+)\}\{(\d+)\}$');
+  /// A plain fraction, e.g. `-\frac{3}{4}`. The minus may be written before the
+  /// fraction or inside either part — a student editing the numerator field of
+  /// a fraction template types `\frac{-3}{4}`, which is the same number.
+  static final _plain = RegExp(r'^(-?)\\d?frac\{(-?\d+)\}\{(-?\d+)\}$');
 
   /// Reads a fraction written as LaTeX, or null if [tex] is not one.
   ///
@@ -42,7 +44,12 @@ class Fraction {
     if (plain != null) {
       final over = int.parse(plain[3]!);
       if (over == 0) return null;
-      return Fraction(int.parse(plain[2]!) * (plain[1] == '-' ? -1 : 1), over);
+      final magnitude = int.parse(plain[2]!) * (plain[1] == '-' ? -1 : 1);
+      // The sign is carried by the numerator, wherever it was written, so
+      // `\frac{3}{-4}` and `-\frac{3}{4}` are the same fraction.
+      return over.isNegative
+          ? Fraction(-magnitude, -over)
+          : Fraction(magnitude, over);
     }
 
     final whole = int.tryParse(tex);

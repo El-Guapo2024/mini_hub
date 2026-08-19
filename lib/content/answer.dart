@@ -248,8 +248,11 @@ class BaseAnswer extends Answer {
   /// A whole number, or a fraction of two whole numbers, either possibly
   /// signed. Anything else — a decimal point, an operator — is not a form
   /// these questions ask for.
+  /// The minus may sit before the fraction or inside either part, as it may in
+  /// [Fraction.parseTex] — the fraction template puts the cursor in the
+  /// numerator, so that is where a student types it.
   static final _fraction = RegExp(
-    r'^(-?)\\d?frac\{([0-9a-zA-Z]+)\}\{([0-9a-zA-Z]+)\}$',
+    r'^(-?)\\d?frac\{(-?)([0-9a-zA-Z]+)\}\{(-?)([0-9a-zA-Z]+)\}$',
   );
   static final _integer = RegExp(r'^(-?)([0-9a-zA-Z]+)$');
 
@@ -260,12 +263,17 @@ class BaseAnswer extends Answer {
 
     final fraction = _fraction.firstMatch(s);
     if (fraction != null) {
-      final numerator = _digits(fraction[2]!);
-      final denominator = _digits(fraction[3]!);
+      final numerator = _digits(fraction[3]!);
+      final denominator = _digits(fraction[5]!);
       if (numerator == null || denominator == null || denominator == 0) {
         return false;
       }
-      return _matches(_signed(fraction[1]!, numerator / denominator));
+      // Three places may each carry a minus; an even number of them is positive.
+      final minuses = [fraction[1]!, fraction[2]!, fraction[4]!]
+          .where((sign) => sign == '-')
+          .length;
+      final magnitude = numerator / denominator;
+      return _matches(minuses.isOdd ? -magnitude : magnitude);
     }
 
     final integer = _integer.firstMatch(s);

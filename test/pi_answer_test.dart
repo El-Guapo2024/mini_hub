@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:math_keyboard/math_keyboard.dart';
 import 'package:mini_hub/content/answer.dart';
+import 'package:mini_hub/content/fraction.dart';
 import 'package:mini_hub/math/tex_answer.dart';
 
 /// Two questions in the bank print their answer with pi, and pi was the one
@@ -48,6 +49,23 @@ void main() {
   test('only answers written with pi ask for the key', () {
     const plain = NumericAnswer(value: 5);
     expect(plain.inputVariables, isEmpty);
+  });
+
+  test('any answer shape written with pi asks for the key', () {
+    // Decided on the base type, so a shape that starts printing pi is typable
+    // without anyone remembering to override it.
+    const fraction = FractionAnswer(
+      value: Fraction(1, 2),
+      display: r'\frac{\pi}{2}',
+    );
+    expect(fraction.inputVariables, contains(r'\pi'));
+
+    // A complex answer keeps the key it already needed.
+    const complex = ComplexAnswer(real: 0, imaginary: 1, display: r'\pi i');
+    expect(complex.inputVariables, containsAll([r'\pi', 'i']));
+
+    const plainComplex = ComplexAnswer(real: 16, imaginary: 16);
+    expect(plainComplex.inputVariables, ['i']);
   });
 
   test('every pi answer in the bank accepts its own printed form', () {

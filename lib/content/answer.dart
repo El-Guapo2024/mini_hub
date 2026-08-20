@@ -65,8 +65,15 @@ sealed class Answer {
   String get display;
 
   /// Symbols the on-screen keyboard must offer for this answer to be typable
-  /// at all. Empty for everything except complex answers.
-  List<String> get inputVariables => const [];
+  /// at all.
+  ///
+  /// Pi is decided here rather than per subclass, because the question is only
+  /// ever "is the answer written with it" — an answer of any shape that prints
+  /// pi and is not given the key cannot be entered at all. A subclass adding
+  /// its own symbols builds on this rather than replacing it.
+  List<String> get inputVariables => display.contains(r'\pi')
+      ? const [r'\pi']
+      : const [];
 
   /// Shown under the input when the grading rule isn't obvious from the
   /// prompt — a student can't tell an estimation problem from an exact one.
@@ -92,14 +99,6 @@ class NumericAnswer extends Answer {
 
   @override
   QuestionType get kind => QuestionType.numeric;
-
-  /// Pi, where the answer is written with it. The keyboard has no pi key, so
-  /// without this the only way to answer `144\pi` is to type its value to nine
-  /// significant figures — the question is shown, and marked, against an answer
-  /// the student has no way to enter.
-  @override
-  List<String> get inputVariables =>
-      display.contains(r'\pi') ? const [r'\pi'] : const [];
 
   @override
   bool accepts(String tex) {
@@ -175,8 +174,11 @@ class ComplexAnswer extends Answer {
         (parsed.$2 - imaginary).abs() <= _tolerance;
   }
 
+  /// Added to whatever the answer already needs, rather than replacing it: a
+  /// complex answer written with pi needs both keys, and dropping either one
+  /// leaves it unanswerable.
   @override
-  List<String> get inputVariables => const ['i'];
+  List<String> get inputVariables => [...super.inputVariables, 'i'];
 
   @override
   String? get inputHint => 'Answer in the form a+bi';

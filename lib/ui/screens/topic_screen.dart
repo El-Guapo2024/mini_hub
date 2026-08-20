@@ -145,13 +145,20 @@ class _PracticeState extends State<_Practice> {
     super.dispose();
   }
 
+  /// How many times the deck has changed page. Captured when a card is built
+  /// and checked when its pause elapses, so a student who swipes away and back
+  /// inside the pause is not moved on by the answer they gave before leaving —
+  /// they came back to that card deliberately.
+  int _pageChanges = 0;
+
   /// Moves on from [index], a moment after it was answered right.
   ///
   /// The card that asked is named, because a [PageView] keeps its neighbour
   /// alive: answer one and swipe on before the pause is up, and the card left
   /// behind would otherwise advance the deck again from wherever you now are.
-  void _advanceFrom(int index) {
+  void _advanceFrom(int index, int changesWhenAsked) {
     setState(() {});
+    if (changesWhenAsked != _pageChanges) return;
     if (index != _current || _current >= widget.questions.length - 1) return;
     _pages.nextPage(
       duration: const Duration(milliseconds: 300),
@@ -199,9 +206,13 @@ class _PracticeState extends State<_Practice> {
           child: PageView.builder(
             controller: _pages,
             itemCount: questions.length,
-            onPageChanged: (index) => setState(() => _current = index),
+            onPageChanged: (index) => setState(() {
+              _current = index;
+              _pageChanges++;
+            }),
             itemBuilder: (context, index) {
               final question = questions[index];
+              final changesWhenBuilt = _pageChanges;
               // Keyed by id so a recycled slot never shows the previous
               // card's typed answer or result. Swiping more than one card
               // away does discard that state — the alternative is keeping all
@@ -212,7 +223,7 @@ class _PracticeState extends State<_Practice> {
               return QuestionWidget(
                 key: ValueKey(question.id.value),
                 question: question,
-                onCorrect: () => _advanceFrom(index),
+                onCorrect: () => _advanceFrom(index, changesWhenBuilt),
                 rightToLeft: _rightToLeft,
               );
             },

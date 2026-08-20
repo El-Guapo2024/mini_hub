@@ -99,7 +99,9 @@ class TopicProgress {
 /// left any other widget showing a stale count until it was rebuilt for some
 /// unrelated reason.
 class AttemptStore extends ChangeNotifier {
-  AttemptStore._(this._db, this._attempts);
+  AttemptStore._(this._db, this._attempts) {
+    _attempts.forEach(_index);
+  }
 
   final Database _db;
 
@@ -107,6 +109,29 @@ class AttemptStore extends ChangeNotifier {
   /// daily practice is a few thousand rows. SQLite is the durable copy here,
   /// not the query engine.
   final List<Attempt> _attempts;
+
+  /// Which questions have been answered correctly, by topic and overall.
+  ///
+  /// Derived from [_attempts], kept beside it rather than recomputed: the store
+  /// notifies on every recorded attempt, and every mounted tile reads its
+  /// progress in `build`. Scanning the whole log for each of those turned one
+  /// answer into a pass over every attempt ever made, per tile.
+  final Set<QuestionId> _correct = {};
+  final Map<TopicId, Set<QuestionId>> _correctByTopic = {};
+
+  void _index(Attempt attempt) {
+    if (!attempt.correct) return;
+    _correct.add(attempt.questionId);
+    (_correctByTopic[attempt.topic] ??= {}).add(attempt.questionId);
+  }
+
+  /// Rebuilds the derived sets from the log. Cheap enough at this size, and
+  /// only reached when a write failed and its attempt was taken back out.
+  void _reindex() {
+    _correct.clear();
+    _correctByTopic.clear();
+    _attempts.forEach(_index);
+  }
 
   static const _table = 'attempts';
 
@@ -189,6 +214,7 @@ class AttemptStore extends ChangeNotifier {
     if (_attempts.any((a) => a.id == attempt.id)) return;
 
     _attempts.add(attempt);
+    _index(attempt);
     notifyListeners();
     try {
       await _db.insert(
@@ -199,6 +225,7 @@ class AttemptStore extends ChangeNotifier {
       );
     } on Object {
       _attempts.remove(attempt);
+      _reindex();
       notifyListeners();
       rethrow;
     }
@@ -206,6 +233,7 @@ class AttemptStore extends ChangeNotifier {
 
   Future<void> clear() async {
     _attempts.clear();
+    _reindex();
     notifyListeners();
     await _db.delete(_table);
   }
@@ -217,14 +245,10 @@ class AttemptStore extends ChangeNotifier {
   }
 
   /// Whether this question has ever been answered correctly.
-  bool isDone(QuestionId questionId) =>
-      _attempts.any((a) => a.questionId == questionId && a.correct);
+  bool isDone(QuestionId questionId) => _correct.contains(questionId);
 
   TopicProgress progressFor(TopicId topic) => TopicProgress(
     topic: topic,
-    done: {
-      for (final a in _attempts)
-        if (a.topic == topic && a.correct) a.questionId,
-    },
+    done: Set.unmodifiable(_correctByTopic[topic] ?? const {}),
   );
 }

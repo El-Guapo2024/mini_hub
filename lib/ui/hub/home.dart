@@ -22,10 +22,14 @@ class HubHome extends StatelessWidget {
             GridTileEntry(
               icon: app.icon,
               label: app.title,
-              onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => app.build(context)),
-              ),
+              // Guarded so a double tap does not stack the same app twice.
+              onTap: () {
+                if (ModalRoute.of(context)?.isCurrent != true) return;
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => app.build(context)),
+                );
+              },
             ),
         ],
       ),

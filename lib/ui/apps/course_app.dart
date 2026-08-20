@@ -72,12 +72,16 @@ class _StemaArenaScreenState extends State<StemaArenaScreen> {
           GridTileEntry(
             icon: Icons.functions,
             label: course.title,
-            onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => TopicListScreen(course: course),
-              ),
-            ),
+            // Guarded so a double tap does not stack the same course twice.
+            onTap: () {
+              if (ModalRoute.of(context)?.isCurrent != true) return;
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => TopicListScreen(course: course),
+                ),
+              );
+            },
           ),
       ],
     );

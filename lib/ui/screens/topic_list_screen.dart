@@ -55,23 +55,19 @@ class _TopicListScreenState extends State<TopicListScreen> {
           : ListView.builder(
               padding: const EdgeInsets.all(16),
               itemCount: topics.length,
-              itemBuilder: (context, index) => _TopicCard(
-                topic: topics[index],
-                onReturn: () {
-                  // Coming back from practice, the counts have moved.
-                  if (mounted) setState(() {});
-                },
-              ),
+              itemBuilder: (context, index) => _TopicCard(topic: topics[index]),
             ),
     );
   }
 }
 
+/// Reads its own count from the log. It depends on [AttemptScope], so it
+/// rebuilds when an attempt is recorded — the list no longer has to refresh
+/// itself on the way back from practice.
 class _TopicCard extends StatelessWidget {
-  const _TopicCard({required this.topic, required this.onReturn});
+  const _TopicCard({required this.topic});
 
   final Topic topic;
-  final VoidCallback onReturn;
 
   @override
   Widget build(BuildContext context) {
@@ -104,12 +100,15 @@ class _TopicCard extends StatelessWidget {
                 ),
               ),
         trailing: const Icon(Icons.chevron_right, color: Colors.white54),
-        onTap: () async {
-          await Navigator.push(
+        // Only from the visible route: a second tap landing before the push
+        // completes would stack the same topic twice, and the student would
+        // have to press back through both.
+        onTap: () {
+          if (ModalRoute.of(context)?.isCurrent != true) return;
+          Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => TopicScreen(topic: topic)),
           );
-          onReturn();
         },
       ),
     );

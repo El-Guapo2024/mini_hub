@@ -84,6 +84,59 @@ void main() {
     expect(reopened.all.length, 1);
   });
 
+  group('progress is derived, and stays derived', () {
+    test('clearing takes the progress with it', () async {
+      final store = await AttemptStore.openAt(file);
+      addTearDown(store.close);
+
+      await store.record(at('q1'));
+      expect(store.isDone(const QuestionId('q1')), isTrue);
+
+      await store.clear();
+
+      // The kept sets have to be rebuilt here, not just the list emptied.
+      expect(store.isDone(const QuestionId('q1')), isFalse);
+      expect(store.progressFor(const TopicId('adding')).count, 0);
+    });
+
+    test('a wrong answer is not progress', () async {
+      final store = await AttemptStore.openAt(file);
+      addTearDown(store.close);
+
+      await store.record(at('q1', correct: false));
+
+      expect(store.isDone(const QuestionId('q1')), isFalse);
+      expect(store.progressFor(const TopicId('adding')).count, 0);
+
+      await store.record(at('q1'));
+      expect(store.isDone(const QuestionId('q1')), isTrue);
+    });
+
+    test('the same question answered right twice counts once', () async {
+      final store = await AttemptStore.openAt(file);
+      addTearDown(store.close);
+
+      await store.record(at('q1'));
+      await store.record(at('q1'));
+
+      expect(store.all, hasLength(2), reason: 'the log keeps both');
+      expect(store.progressFor(const TopicId('adding')).count, 1);
+    });
+
+    test('what progressFor hands back cannot be written into', () async {
+      final store = await AttemptStore.openAt(file);
+      addTearDown(store.close);
+      await store.record(at('q1'));
+
+      final done = store.progressFor(const TopicId('adding')).done;
+      expect(
+        () => done.add(const QuestionId('q2')),
+        throwsUnsupportedError,
+        reason: 'it is the store\'s own set, not a copy',
+      );
+    });
+  });
+
   test('a listener hears a recorded attempt exactly once', () async {
     final store = await AttemptStore.openAt(file);
     addTearDown(store.close);

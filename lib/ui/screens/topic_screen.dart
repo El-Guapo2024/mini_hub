@@ -180,9 +180,15 @@ class _PracticeState extends State<_Practice> {
           child: Row(
             children: [
               if (_isDone(questions[_current]))
-                const Padding(
+                Padding(
                   padding: EdgeInsets.only(right: 8),
-                  child: Icon(Icons.check_circle, size: 16, color: correct),
+                  // Labelled, because the tick is the only thing that says
+                  // this one has already been answered — read aloud, an
+                  // unlabelled icon says nothing at all.
+                  child: Semantics(
+                    label: 'Answered correctly',
+                    child: Icon(Icons.check_circle, size: 16, color: correct),
+                  ),
                 ),
               Text(
                 '${_current + 1} of ${questions.length}   ·   $_done done',
@@ -191,13 +197,20 @@ class _PracticeState extends State<_Practice> {
               const Spacer(),
               // Several tricks give you the ones digit first, so typing from
               // the right lets the student write digits as they work them out.
-              IconButton(
-                onPressed: () => setState(() => _rightToLeft = !_rightToLeft),
-                icon: const Icon(Icons.swap_horiz, size: 20),
-                color: _rightToLeft ? Colors.tealAccent : Colors.white38,
-                tooltip: _rightToLeft
-                    ? 'Typing right to left'
-                    : 'Typing left to right',
+              // Announced as the switch it is: the tooltip alone says what the
+              // button is called but not which way it is currently set, and
+              // the colour that carries that is no help read aloud.
+              Semantics(
+                toggled: _rightToLeft,
+                label: 'Type right to left',
+                child: IconButton(
+                  onPressed: () => setState(() => _rightToLeft = !_rightToLeft),
+                  icon: const Icon(Icons.swap_horiz, size: 20),
+                  color: _rightToLeft ? Colors.tealAccent : Colors.white54,
+                  tooltip: _rightToLeft
+                      ? 'Typing right to left'
+                      : 'Typing left to right',
+                ),
               ),
             ],
           ),

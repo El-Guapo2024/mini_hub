@@ -273,7 +273,11 @@ class _QuestionWidgetState extends State<QuestionWidget> {
               decoration: InputDecoration(
                 isDense: true,
                 hintText: 'Answer',
-                hintStyle: const TextStyle(color: Colors.white38),
+                // white38 on this background is 3.44:1, under the 4.5:1 a
+                // reader needs at this size. The placeholder is the only
+                // thing in the field before an answer is typed, so it is the
+                // one piece of text that cannot afford to be faint.
+                hintStyle: const TextStyle(color: Colors.white60),
                 suffixIcon: _resultIcon,
                 suffixIconConstraints: const BoxConstraints(
                   minWidth: 36,

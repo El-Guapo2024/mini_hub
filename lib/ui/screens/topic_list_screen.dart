@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../content/content_repository.dart';
 import '../../content/course.dart';
+import '../../content/ids.dart';
 import '../../content/topic.dart';
 import '../../progress/attempt_scope.dart';
 import '../theme.dart';
@@ -61,6 +62,17 @@ class _TopicListScreenState extends State<TopicListScreen> {
   }
 }
 
+/// How many of [questionIds] have been answered correctly.
+///
+/// Counted over the topic's own list rather than taking the log's count for
+/// the topic. The two are read from different places — the list from
+/// topic.yml, the log from whatever was answered — so counting them separately
+/// let a row read "done" while a question the topic declares had never been
+/// answered, and disagree with the header the practice screen shows for that
+/// same topic.
+int doneCount(Iterable<QuestionId> questionIds, Set<QuestionId> answered) =>
+    questionIds.where(answered.contains).length;
+
 /// Reads its own count from the log. It depends on [AttemptScope], so it
 /// rebuilds when an attempt is recorded — the list no longer has to refresh
 /// itself on the way back from practice.
@@ -75,7 +87,10 @@ class _TopicCard extends StatelessWidget {
     // questions.json read per row.
     final total = topic.questionIds.length;
     final store = AttemptScope.maybeOf(context);
-    final done = store?.progressFor(topic.id).count ?? 0;
+    final done = doneCount(
+      topic.questionIds,
+      store?.progressFor(topic.id).done ?? const {},
+    );
     final finished = total > 0 && done == total;
 
     return Card(

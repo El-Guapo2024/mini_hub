@@ -200,16 +200,25 @@ class _PracticeState extends State<_Practice> {
               // Announced as the switch it is: the tooltip alone says what the
               // button is called but not which way it is currently set, and
               // the colour that carries that is no help read aloud.
-              Semantics(
-                toggled: _rightToLeft,
-                label: 'Type right to left',
-                child: IconButton(
-                  onPressed: () => setState(() => _rightToLeft = !_rightToLeft),
-                  icon: const Icon(Icons.swap_horiz, size: 20),
-                  color: _rightToLeft ? Colors.tealAccent : Colors.white54,
-                  tooltip: _rightToLeft
-                      ? 'Typing right to left'
-                      : 'Typing left to right',
+              // One node carrying the name, the state and the tap together.
+              // Without the container it has none of its own and they merge
+              // upwards into a node covering the whole pane, fused with the
+              // counter beside it; without the merge they split, and the
+              // button a reader stops on is the half with no name.
+              MergeSemantics(
+                child: Semantics(
+                  container: true,
+                  toggled: _rightToLeft,
+                  label: 'Type right to left',
+                  child: IconButton(
+                    onPressed: () =>
+                        setState(() => _rightToLeft = !_rightToLeft),
+                    icon: const Icon(Icons.swap_horiz, size: 20),
+                    color: _rightToLeft ? Colors.tealAccent : Colors.white54,
+                    tooltip: _rightToLeft
+                        ? 'Typing right to left'
+                        : 'Typing left to right',
+                  ),
                 ),
               ),
             ],

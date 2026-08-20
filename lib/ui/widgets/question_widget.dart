@@ -216,7 +216,9 @@ class _QuestionWidgetState extends State<QuestionWidget> {
     if (hint == null || _result != null) return null;
     return Text(
       hint,
-      style: const TextStyle(color: Colors.white38, fontSize: 12),
+      // white60 for the same reason as the placeholder: this is the only place
+      // an estimate says it is one, or a fraction says it wants lowest terms.
+      style: const TextStyle(color: Colors.white60, fontSize: 12),
     );
   }
 

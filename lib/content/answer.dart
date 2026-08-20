@@ -93,6 +93,14 @@ class NumericAnswer extends Answer {
   @override
   QuestionType get kind => QuestionType.numeric;
 
+  /// Pi, where the answer is written with it. The keyboard has no pi key, so
+  /// without this the only way to answer `144\pi` is to type its value to nine
+  /// significant figures — the question is shown, and marked, against an answer
+  /// the student has no way to enter.
+  @override
+  List<String> get inputVariables =>
+      display.contains(r'\pi') ? const [r'\pi'] : const [];
+
   @override
   bool accepts(String tex) {
     final entered = evaluateTex(tex);

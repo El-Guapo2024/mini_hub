@@ -11,10 +11,25 @@ final _decoration = RegExp(r'\\,|\\;|\\!|\\left|\\right');
 /// how large they render. The keyboard may emit any of the three.
 final _fractionForms = RegExp(r'\\[dt]frac');
 
+/// Pi in the forms it can arrive in: written out, or emitted by the keyboard as
+/// a declared variable. `TeXParser` has no constant for it and throws on the
+/// command, so an answer naming pi was unparseable and always marked wrong —
+/// including `144\pi`, which is the answer the app itself shows.
+///
+/// The negative lookahead keeps this off any longer command that starts the
+/// same way, so only pi itself is substituted.
+final _pi = RegExp(r'\\mathrm\s*\{\s*\\?pi\s*\}|\\pi(?![a-zA-Z])');
+
+/// Parenthesised so a coefficient still multiplies the whole constant: `144\pi`
+/// has to become `144*(3.14...)`, not `144*3.14...` followed by loose digits.
+const _piValue = '(3.141592653589793)';
+
 /// Strips what does not change the value, so everything downstream — mixed
 /// number expansion, term splitting, evaluation — sees one spelling.
-String _normalize(String tex) =>
-    tex.replaceAll(_decoration, '').replaceAll(_fractionForms, r'\frac');
+String _normalize(String tex) => tex
+    .replaceAll(_decoration, '')
+    .replaceAll(_fractionForms, r'\frac')
+    .replaceAll(_pi, _piValue);
 
 final _mixedNumber = RegExp(r'(\d+)\\frac');
 

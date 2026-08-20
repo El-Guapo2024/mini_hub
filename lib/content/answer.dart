@@ -102,7 +102,7 @@ class NumericAnswer extends Answer {
 
   @override
   bool accepts(String tex) {
-    final entered = evaluateTex(tex);
+    final entered = evaluateTex(_withoutPercent(tex));
     if (entered == null) return false;
     if (_close(entered, value)) return true;
     // Every percent answer in the bank is keyed as the percentage itself —
@@ -121,9 +121,28 @@ class NumericAnswer extends Answer {
     return (a - b).abs() <= _tolerance * scale;
   }
 
+  /// The answer as LaTeX. The unit is escaped, because the display is rendered
+  /// as math and a bare `%` opens a comment there: `220%` drew as `220`, so
+  /// every percent answer revealed itself without its sign.
   @override
-  String get display => _display ?? _trim(value) + (unit ?? '');
+  String get display => _display ?? _trim(value) + _texUnit;
+
+  String get _texUnit => switch (unit) {
+    null => '',
+    '%' => r'\%',
+    final other => other,
+  };
 }
+
+/// A percent sign written either way, and only at the end, where it is the unit
+/// rather than part of the value.
+///
+/// Dropped before the value is read: `TeXParser` cannot evaluate it, so a
+/// student who typed back the `220\%` they were just shown was marked wrong.
+/// What the sign means is already carried by the answer's unit.
+final _trailingPercent = RegExp(r'\s*\\?%\s*$');
+
+String _withoutPercent(String tex) => tex.replaceFirst(_trailingPercent, '');
 
 /// An estimation problem, marked `(*)` in the manual. Grading uses the printed
 /// band verbatim — including where rounding it to whole numbers left it slightly
@@ -261,8 +280,11 @@ class BaseAnswer extends Answer {
   /// The minus may sit before the fraction or inside either part, as it may in
   /// [Fraction.parseTex] — the fraction template puts the cursor in the
   /// numerator, so that is where a student types it.
+  /// `\dfrac` and `\tfrac` differ from `\frac` only in size, and are read as
+  /// the same fraction everywhere else, so they are accepted here too rather
+  /// than leaving base answers the one place a display form changes the verdict.
   static final _fraction = RegExp(
-    r'^(-?)\\d?frac\{(-?)([0-9a-zA-Z]+)\}\{(-?)([0-9a-zA-Z]+)\}$',
+    r'^(-?)\\[dt]?frac\{(-?)([0-9a-zA-Z]+)\}\{(-?)([0-9a-zA-Z]+)\}$',
   );
   static final _integer = RegExp(r'^(-?)([0-9a-zA-Z]+)$');
 

@@ -33,25 +33,43 @@ void main() {
           .map((q) => Question.fromJson(q as Map<String, dynamic>))
           .toList();
 
-      await tester.pumpWidget(
-        MaterialApp(
-          home: Scaffold(
-            body: MathKeyboardViewInsets(
-              // A PageView, as the practice tab uses: each question is given
-              // the whole page, which is the layout that has to hold up.
-              child: PageView.builder(
-                itemCount: questions.length,
-                itemBuilder: (context, index) =>
-                    QuestionWidget(question: questions[index]),
+      // Built one at a time rather than handed to a PageView. The practice tab
+      // uses a PageView, and this test used to as well — but it builds only the
+      // visible page and its neighbour, so a test named for every question was
+      // rendering one of them, and a question the view could not build passed
+      // here and failed on a device.
+      //
+      // Each is given the whole page, which is what the PageView gives it, so
+      // the layout under test is still the real one.
+      var built = 0;
+      for (final question in questions) {
+        await tester.pumpWidget(
+          MaterialApp(
+            home: Scaffold(
+              body: MathKeyboardViewInsets(
+                child: QuestionWidget(
+                  key: ValueKey(question.id.value),
+                  question: question,
+                ),
               ),
             ),
           ),
-        ),
-      );
-      await tester.pump();
+        );
+        await tester.pump();
 
-      expect(tester.takeException(), isNull);
-      expect(find.byType(QuestionWidget), findsWidgets);
+        expect(
+          tester.takeException(),
+          isNull,
+          reason: '${question.id.value} does not render',
+        );
+        built++;
+      }
+
+      expect(
+        built,
+        questions.length,
+        reason: 'every question in the file was rendered',
+      );
     });
   }
 

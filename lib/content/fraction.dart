@@ -57,7 +57,13 @@ class Fraction {
   }
 
   /// Whether this is in lowest terms.
-  bool get isReduced => _gcd(numerator.abs(), denominator.abs()) == 1;
+  ///
+  /// Zero is, however it is written: `\frac{0}{5}` names the same number as
+  /// `0` and cannot be reduced any further, but its gcd with the denominator is
+  /// the denominator, so the general rule would call it unreduced and mark a
+  /// student wrong for writing zero as a fraction.
+  bool get isReduced =>
+      numerator == 0 || _gcd(numerator.abs(), denominator.abs()) == 1;
 
   Fraction get reduced {
     final divisor = _gcd(numerator.abs(), denominator.abs());

@@ -102,7 +102,10 @@ class NumericAnswer extends Answer {
 
   @override
   bool accepts(String tex) {
-    final entered = evaluateTex(_withoutPercent(tex));
+    // Only where the answer is a percentage. Everywhere else the sign changes
+    // what was written — `5%` is a twentieth, not 5 — so dropping it would
+    // accept an answer a hundred times too small.
+    final entered = evaluateTex(unit == '%' ? _withoutPercent(tex) : tex);
     if (entered == null) return false;
     if (_close(entered, value)) return true;
     // Every percent answer in the bank is keyed as the percentage itself —

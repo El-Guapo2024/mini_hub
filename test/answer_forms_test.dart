@@ -27,6 +27,14 @@ void main() {
       expect(answer.accepts('221'), isFalse);
     });
 
+    test('the sign is only dropped where the answer is a percentage', () {
+      // `5%` is a twentieth. An answer of 5 that took it would be accepting
+      // one a hundred times too small.
+      const plain = NumericAnswer(value: 5);
+      expect(plain.accepts('5'), isTrue);
+      expect(plain.accepts('5%'), isFalse);
+    });
+
     test('every percent answer in the bank accepts what it reveals', () {
       var checked = 0;
       for (final file in Directory('assets/content')

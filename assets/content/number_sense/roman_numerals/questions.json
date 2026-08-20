@@ -1,0 +1,310 @@
+[
+  {
+    "id": "bh.2.1.6.q1",
+    "prompt": "MMXLII =",
+    "topic": "roman_numerals",
+    "answer": {
+      "answer": 2042,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.6.q2",
+    "prompt": "XLIV =",
+    "topic": "roman_numerals",
+    "answer": {
+      "answer": 44,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.6.q3",
+    "prompt": "MMIII =",
+    "topic": "roman_numerals",
+    "answer": {
+      "answer": 2003,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.6.q4",
+    "prompt": "CXCIX =",
+    "topic": "roman_numerals",
+    "answer": {
+      "answer": 199,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.6.q5",
+    "prompt": "MDCLXVI =",
+    "topic": "roman_numerals",
+    "answer": {
+      "answer": 1666,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.6.q6",
+    "prompt": "CDXLIV =",
+    "topic": "roman_numerals",
+    "answer": {
+      "answer": 444,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.6.q7",
+    "prompt": "CCLXXVII =",
+    "topic": "roman_numerals",
+    "answer": {
+      "answer": 277,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.6.q8",
+    "prompt": "MCDLIX =",
+    "topic": "roman_numerals",
+    "answer": {
+      "answer": 1459,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.6.q9",
+    "prompt": "CMXCIX =",
+    "topic": "roman_numerals",
+    "answer": {
+      "answer": 999,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.6.q10",
+    "prompt": "MMCCXXII =",
+    "topic": "roman_numerals",
+    "answer": {
+      "answer": 2222,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.6.q11",
+    "prompt": "CXI - CC =",
+    "topic": "roman_numerals",
+    "answer": {
+      "answer": -89,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.6.q12",
+    "prompt": "MD + DC =",
+    "topic": "roman_numerals",
+    "answer": {
+      "answer": 2100,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.6.q13",
+    "prompt": "CM + XC + IX =",
+    "topic": "roman_numerals",
+    "answer": {
+      "answer": 999,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.6.q14",
+    "prompt": "DC - LX - VI =",
+    "topic": "roman_numerals",
+    "answer": {
+      "answer": 534,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.6.q15",
+    "prompt": "XIII + MMIV =",
+    "topic": "roman_numerals",
+    "answer": {
+      "answer": 2017,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.6.q16",
+    "prompt": "MIII + MIV =",
+    "topic": "roman_numerals",
+    "answer": {
+      "answer": 2007,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.6.q17",
+    "prompt": "MC + DL + XIV =",
+    "topic": "roman_numerals",
+    "answer": {
+      "answer": 1664,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.6.q18",
+    "prompt": "MCXI + DLV =",
+    "topic": "roman_numerals",
+    "answer": {
+      "answer": 1666,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.6.q19",
+    "prompt": "MMV - DCXLI =",
+    "topic": "roman_numerals",
+    "answer": {
+      "answer": 1364,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.6.q20",
+    "prompt": "MMLIX - LIII =",
+    "topic": "roman_numerals",
+    "answer": {
+      "answer": 2006,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.6.q21",
+    "prompt": "MCXI - DLV =",
+    "topic": "roman_numerals",
+    "answer": {
+      "answer": 556,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.6.q22",
+    "prompt": "CMIX - CDIV =",
+    "topic": "roman_numerals",
+    "answer": {
+      "answer": 505,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.6.q23",
+    "prompt": "MDXLV - XV =",
+    "topic": "roman_numerals",
+    "answer": {
+      "answer": 1530,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.6.q24",
+    "prompt": "DCII \\div IX =",
+    "topic": "roman_numerals",
+    "answer": {
+      "type": "fraction",
+      "num": 602,
+      "den": 9,
+      "display": "66\\frac{8}{9}"
+    }
+  },
+  {
+    "id": "bh.2.1.6.q25",
+    "prompt": "CCCLXXIV \\div XI =",
+    "topic": "roman_numerals",
+    "answer": {
+      "answer": 34,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.6.q26",
+    "prompt": "CDI \\times V =",
+    "topic": "roman_numerals",
+    "answer": {
+      "answer": 2005,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.6.q27",
+    "prompt": "CCLXXX \\div XIV =",
+    "topic": "roman_numerals",
+    "answer": {
+      "answer": 20,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.6.q28",
+    "prompt": "MMV \\div V =",
+    "topic": "roman_numerals",
+    "answer": {
+      "answer": 401,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.6.q29",
+    "prompt": "XXVII \\times CXI =",
+    "topic": "roman_numerals",
+    "answer": {
+      "answer": 2997,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.6.q30",
+    "prompt": "MI \\times XI =",
+    "topic": "roman_numerals",
+    "answer": {
+      "answer": 11011,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.6.q31",
+    "prompt": "MMVII \\times XXV =",
+    "topic": "roman_numerals",
+    "answer": {
+      "answer": 50175,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.6.q32",
+    "prompt": "MCCLX \\div XV =",
+    "topic": "roman_numerals",
+    "answer": {
+      "answer": 84,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.6.q33",
+    "prompt": "MMVI \\times XI =",
+    "topic": "roman_numerals",
+    "answer": {
+      "answer": 22066,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.6.q34",
+    "prompt": "CDIV \\div XL =",
+    "topic": "roman_numerals",
+    "answer": {
+      "answer": 10.1,
+      "type": "numeric"
+    }
+  }
+]

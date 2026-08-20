@@ -2,4 +2,31 @@ id: trigonometric_formulas
 title: 'Fundamental Trig Identities'
 logo: assets/icons/number_sense.png
 bh_section: '2.2.12'
-questionIds: []
+questionIds:
+  - bh.2.2.12.q1
+  - bh.2.2.12.q2
+  - bh.2.2.12.q3
+  - bh.2.2.12.q4
+  - bh.2.2.12.q5
+  - bh.2.2.12.q6
+  - bh.2.2.12.q7
+  - bh.2.2.12.q8
+  - bh.2.2.12.q9
+  - bh.2.2.12.q10
+  - bh.2.2.12.q11
+  - bh.2.2.12.q12
+  - bh.2.2.12.q13
+  - bh.2.2.12.q14
+  - bh.2.2.12.q15
+  - bh.2.2.12.q16
+  - bh.2.2.12.q17
+  - bh.2.2.12.q18
+  - bh.2.2.12.q19
+  - bh.2.2.12.q20
+  - bh.2.2.12.q21
+  - bh.2.2.12.q22
+  - bh.2.2.12.q23
+  - bh.2.2.12.q24
+  - bh.2.2.12.q25
+  - bh.2.2.12.q26
+  - bh.2.2.12.q27

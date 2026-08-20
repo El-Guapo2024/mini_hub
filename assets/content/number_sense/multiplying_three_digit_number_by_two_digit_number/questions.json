@@ -1,0 +1,191 @@
+[
+  {
+    "id": "bh.4.1.1.q1",
+    "prompt": "314 \\times 17 =",
+    "topic": "multiplying_three_digit_number_by_two_digit_number",
+    "answer": {
+      "answer": 5338,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.1.1.q2",
+    "prompt": "143 \\times 91 =",
+    "topic": "multiplying_three_digit_number_by_two_digit_number",
+    "answer": {
+      "answer": 13013,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.1.1.q3",
+    "prompt": "202 \\times 34 =",
+    "topic": "multiplying_three_digit_number_by_two_digit_number",
+    "answer": {
+      "answer": 6868,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.1.1.q4",
+    "prompt": "13 \\times 332 =",
+    "topic": "multiplying_three_digit_number_by_two_digit_number",
+    "answer": {
+      "answer": 4316,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.1.1.q5",
+    "prompt": "202 \\times 53 =",
+    "topic": "multiplying_three_digit_number_by_two_digit_number",
+    "answer": {
+      "answer": 10706,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.1.1.q6",
+    "prompt": "112 \\times 13 =",
+    "topic": "multiplying_three_digit_number_by_two_digit_number",
+    "answer": {
+      "answer": 1456,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.1.1.q7",
+    "prompt": "221 \\times 23 =",
+    "topic": "multiplying_three_digit_number_by_two_digit_number",
+    "answer": {
+      "answer": 5083,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.1.1.q8",
+    "prompt": "123 \\times 45 =",
+    "topic": "multiplying_three_digit_number_by_two_digit_number",
+    "answer": {
+      "answer": 5535,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.1.1.q9",
+    "prompt": "231 \\times 31 =",
+    "topic": "multiplying_three_digit_number_by_two_digit_number",
+    "answer": {
+      "answer": 7161,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.1.1.q10",
+    "prompt": "202 \\times 76 =",
+    "topic": "multiplying_three_digit_number_by_two_digit_number",
+    "answer": {
+      "answer": 15352,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.1.1.q11",
+    "prompt": "321 \\times 19 =",
+    "topic": "multiplying_three_digit_number_by_two_digit_number",
+    "answer": {
+      "answer": 6099,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.1.1.q12",
+    "prompt": "35 \\times 122 =",
+    "topic": "multiplying_three_digit_number_by_two_digit_number",
+    "answer": {
+      "answer": 4270,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.1.1.q13",
+    "prompt": "123 \\times 98 =",
+    "topic": "multiplying_three_digit_number_by_two_digit_number",
+    "answer": {
+      "answer": 12054,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.1.1.q14",
+    "prompt": "135 \\times 79 =",
+    "topic": "multiplying_three_digit_number_by_two_digit_number",
+    "answer": {
+      "answer": 10665,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.1.1.q15",
+    "prompt": "17 \\times 289 =",
+    "topic": "multiplying_three_digit_number_by_two_digit_number",
+    "answer": {
+      "answer": 4913,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.1.1.q16",
+    "prompt": "121 \\times 81 =",
+    "topic": "multiplying_three_digit_number_by_two_digit_number",
+    "answer": {
+      "answer": 9801,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.1.1.q17",
+    "prompt": "48 \\times 152 =",
+    "topic": "multiplying_three_digit_number_by_two_digit_number",
+    "answer": {
+      "answer": 7296,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.1.1.q18",
+    "prompt": "751 \\times 18 =",
+    "topic": "multiplying_three_digit_number_by_two_digit_number",
+    "answer": {
+      "answer": 13518,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.1.1.q19",
+    "prompt": "16 \\times 216 =",
+    "topic": "multiplying_three_digit_number_by_two_digit_number",
+    "answer": {
+      "answer": 3456,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.1.1.q20",
+    "prompt": "345 \\times 67 =",
+    "topic": "multiplying_three_digit_number_by_two_digit_number",
+    "answer": {
+      "answer": 23115,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.1.1.q21",
+    "prompt": "765 \\times 43 =",
+    "topic": "multiplying_three_digit_number_by_two_digit_number",
+    "answer": {
+      "answer": 32895,
+      "type": "numeric"
+    }
+  }
+]

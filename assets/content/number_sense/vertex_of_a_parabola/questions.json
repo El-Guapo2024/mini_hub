@@ -1,0 +1,29 @@
+[
+  {
+    "id": "bh.2.2.14.q1",
+    "prompt": "The vertex of the parabola y = 2x^{2} + 8x - 1 is (h,k), k =",
+    "topic": "vertex_of_a_parabola",
+    "answer": {
+      "answer": -9,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.14.q2",
+    "prompt": "The vertex of y = x^{2} - 2x - 4 is (h,k), k =",
+    "topic": "vertex_of_a_parabola",
+    "answer": {
+      "answer": -5,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.14.q3",
+    "prompt": "If g(x) = 2 - x - x^{2}, then the axis of symmetry is x =",
+    "topic": "vertex_of_a_parabola",
+    "answer": {
+      "answer": -0.5,
+      "type": "numeric"
+    }
+  }
+]

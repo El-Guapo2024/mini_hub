@@ -1,0 +1,134 @@
+[
+  {
+    "id": "bh.3.3.2.q1",
+    "prompt": ".\\overline{27} =",
+    "topic": "in_the_form_ababa",
+    "answer": {
+      "type": "fraction",
+      "num": 3,
+      "den": 11,
+      "display": "\\frac{3}{11}"
+    }
+  },
+  {
+    "id": "bh.3.3.2.q2",
+    "prompt": ".\\overline{41} =",
+    "topic": "in_the_form_ababa",
+    "answer": {
+      "type": "fraction",
+      "num": 41,
+      "den": 99,
+      "display": "\\frac{41}{99}"
+    }
+  },
+  {
+    "id": "bh.3.3.2.q3",
+    "prompt": ".\\overline{21} =",
+    "topic": "in_the_form_ababa",
+    "answer": {
+      "type": "fraction",
+      "num": 7,
+      "den": 33,
+      "display": "\\frac{7}{33}"
+    }
+  },
+  {
+    "id": "bh.3.3.2.q4",
+    "prompt": ".\\overline{81} =",
+    "topic": "in_the_form_ababa",
+    "answer": {
+      "type": "fraction",
+      "num": 9,
+      "den": 11,
+      "display": "\\frac{9}{11}"
+    }
+  },
+  {
+    "id": "bh.3.3.2.q5",
+    "prompt": ".\\overline{36} =",
+    "topic": "in_the_form_ababa",
+    "answer": {
+      "type": "fraction",
+      "num": 4,
+      "den": 11,
+      "display": "\\frac{4}{11}"
+    }
+  },
+  {
+    "id": "bh.3.3.2.q6",
+    "prompt": ".\\overline{02} =",
+    "topic": "in_the_form_ababa",
+    "answer": {
+      "type": "fraction",
+      "num": 2,
+      "den": 99,
+      "display": "\\frac{2}{99}"
+    }
+  },
+  {
+    "id": "bh.3.3.2.q7",
+    "prompt": ".\\overline{72} =",
+    "topic": "in_the_form_ababa",
+    "answer": {
+      "type": "fraction",
+      "num": 8,
+      "den": 11,
+      "display": "\\frac{8}{11}"
+    }
+  },
+  {
+    "id": "bh.3.3.2.q8",
+    "prompt": ".\\overline{15} =",
+    "topic": "in_the_form_ababa",
+    "answer": {
+      "type": "fraction",
+      "num": 5,
+      "den": 33,
+      "display": "\\frac{5}{33}"
+    }
+  },
+  {
+    "id": "bh.3.3.2.q9",
+    "prompt": ".\\overline{308} =",
+    "topic": "in_the_form_ababa",
+    "answer": {
+      "type": "fraction",
+      "num": 308,
+      "den": 999,
+      "display": "\\frac{308}{999}"
+    }
+  },
+  {
+    "id": "bh.3.3.2.q10",
+    "prompt": ".\\overline{231} =",
+    "topic": "in_the_form_ababa",
+    "answer": {
+      "type": "fraction",
+      "num": 77,
+      "den": 333,
+      "display": "\\frac{77}{333}"
+    }
+  },
+  {
+    "id": "bh.3.3.2.q11",
+    "prompt": ".\\overline{303} =",
+    "topic": "in_the_form_ababa",
+    "answer": {
+      "type": "fraction",
+      "num": 101,
+      "den": 333,
+      "display": "\\frac{101}{333}"
+    }
+  },
+  {
+    "id": "bh.3.3.2.q12",
+    "prompt": ".\\overline{099} =",
+    "topic": "in_the_form_ababa",
+    "answer": {
+      "type": "fraction",
+      "num": 11,
+      "den": 111,
+      "display": "\\frac{11}{111}"
+    }
+  }
+]

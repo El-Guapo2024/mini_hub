@@ -2,4 +2,35 @@ id: multiplying_by_25_trick
 title: 'Multiplying by 25 Trick'
 logo: assets/icons/number_sense.png
 bh_section: '1.2.3'
-questionIds: []
+questionIds:
+  - bh.1.2.3.q1
+  - bh.1.2.3.q2
+  - bh.1.2.3.q3
+  - bh.1.2.3.q4
+  - bh.1.2.3.q5
+  - bh.1.2.3.q6
+  - bh.1.2.3.q7
+  - bh.1.2.3.q8
+  - bh.1.2.3.q9
+  - bh.1.2.3.q10
+  - bh.1.2.3.q11
+  - bh.1.2.3.q12
+  - bh.1.2.3.q13
+  - bh.1.2.3.q14
+  - bh.1.2.3.q15
+  - bh.1.2.3.q16
+  - bh.1.2.3.q17
+  - bh.1.2.3.q18
+  - bh.1.2.3.q19
+  - bh.1.2.3.q20
+  - bh.1.2.3.q21
+  - bh.1.2.3.q22
+  - bh.1.2.3.q23
+  - bh.1.2.3.q24
+  - bh.1.2.3.q25
+  - bh.1.2.3.q26
+  - bh.1.2.3.q27
+  - bh.1.2.3.q28
+  - bh.1.2.3.q29
+  - bh.1.2.3.q30
+  - bh.1.2.3.q31

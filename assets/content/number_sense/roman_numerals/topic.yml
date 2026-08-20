@@ -2,4 +2,38 @@ id: roman_numerals
 title: 'Roman Numerals'
 logo: assets/icons/number_sense.png
 bh_section: '2.1.6'
-questionIds: []
+questionIds:
+  - bh.2.1.6.q1
+  - bh.2.1.6.q2
+  - bh.2.1.6.q3
+  - bh.2.1.6.q4
+  - bh.2.1.6.q5
+  - bh.2.1.6.q6
+  - bh.2.1.6.q7
+  - bh.2.1.6.q8
+  - bh.2.1.6.q9
+  - bh.2.1.6.q10
+  - bh.2.1.6.q11
+  - bh.2.1.6.q12
+  - bh.2.1.6.q13
+  - bh.2.1.6.q14
+  - bh.2.1.6.q15
+  - bh.2.1.6.q16
+  - bh.2.1.6.q17
+  - bh.2.1.6.q18
+  - bh.2.1.6.q19
+  - bh.2.1.6.q20
+  - bh.2.1.6.q21
+  - bh.2.1.6.q22
+  - bh.2.1.6.q23
+  - bh.2.1.6.q24
+  - bh.2.1.6.q25
+  - bh.2.1.6.q26
+  - bh.2.1.6.q27
+  - bh.2.1.6.q28
+  - bh.2.1.6.q29
+  - bh.2.1.6.q30
+  - bh.2.1.6.q31
+  - bh.2.1.6.q32
+  - bh.2.1.6.q33
+  - bh.2.1.6.q34

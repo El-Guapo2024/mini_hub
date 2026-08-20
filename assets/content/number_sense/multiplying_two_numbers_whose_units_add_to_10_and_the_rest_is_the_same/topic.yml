@@ -2,4 +2,12 @@ id: multiplying_two_numbers_whose_units_add_to_10_and_the_rest_is_the_same
 title: 'Multiplying Two Numbers Whose Units Digits Add to 10 and Leading Digits Are the Same'
 logo: assets/icons/number_sense.png
 bh_section: '4.1.3'
-questionIds: []
+questionIds:
+  - bh.4.1.3.q1
+  - bh.4.1.3.q2
+  - bh.4.1.3.q3
+  - bh.4.1.3.q4
+  - bh.4.1.3.q5
+  - bh.4.1.3.q6
+  - bh.4.1.3.q7
+  - bh.4.1.3.q8

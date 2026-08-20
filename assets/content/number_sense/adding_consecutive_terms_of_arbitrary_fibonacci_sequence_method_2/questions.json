@@ -1,0 +1,173 @@
+[
+  {
+    "id": "bh.4.3.2.q1",
+    "prompt": "The sum of the first eight terms of the Fibonacci sequence 2, 5, 7, 12, 19, ... is",
+    "topic": "adding_consecutive_terms_of_arbitrary_fibonacci_sequence_method_2",
+    "answer": {
+      "answer": 207,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.3.2.q2",
+    "prompt": "The sum of the first nine terms of the Fibonacci sequence 1, 5, 6, 11, 17, 28, ... is",
+    "topic": "adding_consecutive_terms_of_arbitrary_fibonacci_sequence_method_2",
+    "answer": {
+      "answer": 304,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.3.2.q3",
+    "prompt": "The sum of the first eight terms of the Fibonacci sequence 3, 4, 7, 11, 18, ... is",
+    "topic": "adding_consecutive_terms_of_arbitrary_fibonacci_sequence_method_2",
+    "answer": {
+      "answer": 195,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.3.2.q4",
+    "prompt": "The sum of the first nine terms of the Fibonacci sequence 2, 4, 6, 10, 16, ... is",
+    "topic": "adding_consecutive_terms_of_arbitrary_fibonacci_sequence_method_2",
+    "answer": {
+      "answer": 284,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.3.2.q5",
+    "prompt": "The sum of the first nine terms of the Fibonacci sequence 1, 5, 6, 11, 17, ... is",
+    "topic": "adding_consecutive_terms_of_arbitrary_fibonacci_sequence_method_2",
+    "answer": {
+      "answer": 304,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.3.2.q6",
+    "prompt": "The sum of the first nine terms of the Fibonacci sequence 4, 7, 11, 18, 29, ... is",
+    "topic": "adding_consecutive_terms_of_arbitrary_fibonacci_sequence_method_2",
+    "answer": {
+      "answer": 514,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.3.2.q7",
+    "prompt": "The sum of the first ten terms of the Fibonacci sequence 2, 5, 7, 12, 19, ... is",
+    "topic": "adding_consecutive_terms_of_arbitrary_fibonacci_sequence_method_2",
+    "answer": {
+      "answer": 550,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.3.2.q8",
+    "prompt": "The sum of the first nine terms of the Fibonacci sequence 3, 5, 8, 13, 21, ... is",
+    "topic": "adding_consecutive_terms_of_arbitrary_fibonacci_sequence_method_2",
+    "answer": {
+      "answer": 372,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.3.2.q9",
+    "prompt": "The sum of the first nine terms of the Fibonacci sequence -3, 4, 1, 5, 6, ... is",
+    "topic": "adding_consecutive_terms_of_arbitrary_fibonacci_sequence_method_2",
+    "answer": {
+      "answer": 114,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.3.2.q10",
+    "prompt": "The sum of the first nine terms of the sequence 4, 6, 10, 16, 26, ... is",
+    "topic": "adding_consecutive_terms_of_arbitrary_fibonacci_sequence_method_2",
+    "answer": {
+      "answer": 460,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.3.2.q11",
+    "prompt": "The sum of the first nine terms of the Fibonacci sequence 1, 1, 2, 3, 5, ... is",
+    "topic": "adding_consecutive_terms_of_arbitrary_fibonacci_sequence_method_2",
+    "answer": {
+      "answer": 88,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.3.2.q12",
+    "prompt": "The sum of the first ten terms of the sequence 4, 6, 10, 16, 26, ... is",
+    "topic": "adding_consecutive_terms_of_arbitrary_fibonacci_sequence_method_2",
+    "answer": {
+      "answer": 748,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.3.2.q13",
+    "prompt": "The sum of the first ten terms of the Fibonacci sequence 3, 6, 9, 15, 24, ... is",
+    "topic": "adding_consecutive_terms_of_arbitrary_fibonacci_sequence_method_2",
+    "answer": {
+      "answer": 693,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.3.2.q14",
+    "prompt": "The sum of the first ten terms of the Fibonacci sequence 0, 3, 3, 6, 9, 15, ... is",
+    "topic": "adding_consecutive_terms_of_arbitrary_fibonacci_sequence_method_2",
+    "answer": {
+      "answer": 264.0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.3.2.q15",
+    "prompt": "The sum of the first ten terms of the Fibonacci sequence 4, 5, 9, 14, 23, ... is",
+    "topic": "adding_consecutive_terms_of_arbitrary_fibonacci_sequence_method_2",
+    "answer": {
+      "answer": 660,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.3.2.q16",
+    "prompt": "The sum of the first eleven terms of the Fibonacci sequence 2, 4, 6, 10, 16, ... is",
+    "topic": "adding_consecutive_terms_of_arbitrary_fibonacci_sequence_method_2",
+    "answer": {
+      "answer": 750,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.3.2.q17",
+    "prompt": "The sum of the first ten terms of the Lucas sequence 3, 4, 7, 11, 18, ... is",
+    "topic": "adding_consecutive_terms_of_arbitrary_fibonacci_sequence_method_2",
+    "answer": {
+      "answer": 517,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.3.2.q18",
+    "prompt": "The sum of the first ten terms of the sequence 1, 4, 5, 9, 14, ... is",
+    "topic": "adding_consecutive_terms_of_arbitrary_fibonacci_sequence_method_2",
+    "answer": {
+      "answer": 407,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.3.2.q19",
+    "prompt": "The sum of the first twelve terms of the Fibonacci sequence 1, 2, 3, 5, 8, ... is",
+    "topic": "adding_consecutive_terms_of_arbitrary_fibonacci_sequence_method_2",
+    "answer": {
+      "answer": 608,
+      "type": "numeric"
+    }
+  }
+]

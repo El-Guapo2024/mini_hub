@@ -1,0 +1,74 @@
+[
+  {
+    "id": "bh.2.2.4.q1",
+    "prompt": "The number of diagonals a 5-sided regular polygon has:",
+    "topic": "number_of_diagonals_of_a_polygon",
+    "answer": {
+      "answer": 5,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.4.q2",
+    "prompt": "If a regular polygon has 27 distinct diagonals, then it has how many sides:",
+    "topic": "number_of_diagonals_of_a_polygon",
+    "answer": {
+      "answer": 9,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.4.q3",
+    "prompt": "A pentagon has how many diagonals:",
+    "topic": "number_of_diagonals_of_a_polygon",
+    "answer": {
+      "answer": 5,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.4.q4",
+    "prompt": "A nonagon has how many diagonals:",
+    "topic": "number_of_diagonals_of_a_polygon",
+    "answer": {
+      "answer": 27,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.4.q5",
+    "prompt": "An octagon has how many diagonals:",
+    "topic": "number_of_diagonals_of_a_polygon",
+    "answer": {
+      "answer": 20,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.4.q6",
+    "prompt": "A decagon has how many diagonals:",
+    "topic": "number_of_diagonals_of_a_polygon",
+    "answer": {
+      "answer": 35,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.4.q7",
+    "prompt": "A rectangle has how many diagonals:",
+    "topic": "number_of_diagonals_of_a_polygon",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.4.q8",
+    "prompt": "A septagon has how many diagonals:",
+    "topic": "number_of_diagonals_of_a_polygon",
+    "answer": {
+      "answer": 14,
+      "type": "numeric"
+    }
+  }
+]

@@ -1,0 +1,146 @@
+[
+  {
+    "id": "bh.3.1.12.q1",
+    "prompt": "Find the next term of 48, 32, 24, 20, 18, ...:",
+    "topic": "patterns",
+    "answer": {
+      "answer": 17.0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.12.q2",
+    "prompt": "Find the next term of 1, 4, 11, 26, 57, ...:",
+    "topic": "patterns",
+    "answer": {
+      "answer": 120,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.12.q3",
+    "prompt": "Find the next term of 1, 8, 21, 40, ...:",
+    "topic": "patterns",
+    "answer": {
+      "answer": 65,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.12.q4",
+    "prompt": "Find the next term of 0, 1, 5, 14, 30, 55, ...:",
+    "topic": "patterns",
+    "answer": {
+      "answer": 91,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.12.q5",
+    "prompt": "Find the next term of: 2, 9, 28, 65, 126, ...:",
+    "topic": "patterns",
+    "answer": {
+      "answer": 217,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.12.q6",
+    "prompt": "The next term of 1, 2, 6, 24, 120, ... is:",
+    "topic": "patterns",
+    "answer": {
+      "answer": 720,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.12.q7",
+    "prompt": "The next term of 2, 2, 4, 6, 10, 16, ... is:",
+    "topic": "patterns",
+    "answer": {
+      "answer": 26,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.12.q8",
+    "prompt": "Find the 9^{th} term of 1, 2, 4, 8, ...:",
+    "topic": "patterns",
+    "answer": {
+      "answer": 256,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.12.q9",
+    "prompt": "Find the 10^{th} term of: 2, 6, 12, 20, 30, ...:",
+    "topic": "patterns",
+    "answer": {
+      "answer": 110,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.12.q10",
+    "prompt": "Find the 100^{th} term of 2, 6, 10, 14, 18, ...:",
+    "topic": "patterns",
+    "answer": {
+      "answer": 398,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.12.q11",
+    "prompt": "The 10^{th} term of 2, 5, 10, 17, 26 ... is:",
+    "topic": "patterns",
+    "answer": {
+      "answer": 101,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.12.q12",
+    "prompt": "The next term of 1, 4, 10, 19, 31, ... is:",
+    "topic": "patterns",
+    "answer": {
+      "answer": 46,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.12.q13",
+    "prompt": "The 8^{th} term of 2, 9, 28, 65, 126, ... is:",
+    "topic": "patterns",
+    "answer": {
+      "answer": 513,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.12.q14",
+    "prompt": "The 8^{th} term of 0, 7, 26, 63, 124, ... is:",
+    "topic": "patterns",
+    "answer": {
+      "answer": 511,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.12.q15",
+    "prompt": "The next term of 1, 5, 6, 11, 17, 28, ... is:",
+    "topic": "patterns",
+    "answer": {
+      "answer": 45,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.12.q16",
+    "prompt": "Find the next term of .0324, .054, .09, .15, ...:",
+    "topic": "patterns",
+    "answer": {
+      "answer": 0.25,
+      "type": "numeric"
+    }
+  }
+]

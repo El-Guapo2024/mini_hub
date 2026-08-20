@@ -2,4 +2,9 @@ id: sum_of_the_squares_of_arbitrary_fibonacci_sequence
 title: 'Sum of Squares of Arbitrary Fibonacci Sequence'
 logo: assets/icons/number_sense.png
 bh_section: '4.3.4'
-questionIds: []
+questionIds:
+  - bh.4.3.4.q1
+  - bh.4.3.4.q2
+  - bh.4.3.4.q3
+  - bh.4.3.4.q4
+  - bh.4.3.4.q5

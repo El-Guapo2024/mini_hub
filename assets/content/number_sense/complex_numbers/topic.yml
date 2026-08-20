@@ -2,4 +2,38 @@ id: complex_numbers
 title: 'Complex Numbers (NEW)'
 logo: assets/icons/number_sense.png
 bh_section: '3.1.10'
-questionIds: []
+questionIds:
+  - bh.3.1.10.q1
+  - bh.3.1.10.q2
+  - bh.3.1.10.q3
+  - bh.3.1.10.q4
+  - bh.3.1.10.q5
+  - bh.3.1.10.q6
+  - bh.3.1.10.q7
+  - bh.3.1.10.q8
+  - bh.3.1.10.q9
+  - bh.3.1.10.q10
+  - bh.3.1.10.q11
+  - bh.3.1.10.q12
+  - bh.3.1.10.q13
+  - bh.3.1.10.q14
+  - bh.3.1.10.q15
+  - bh.3.1.10.q16
+  - bh.3.1.10.q17
+  - bh.3.1.10.q18
+  - bh.3.1.10.q19
+  - bh.3.1.10.q20
+  - bh.3.1.10.q21
+  - bh.3.1.10.q22
+  - bh.3.1.10.q23
+  - bh.3.1.10.q24
+  - bh.3.1.10.q25
+  - bh.3.1.10.q26
+  - bh.3.1.10.q27
+  - bh.3.1.10.q28
+  - bh.3.1.10.q29
+  - bh.3.1.10.q30
+  - bh.3.1.10.q31
+  - bh.3.1.10.q32
+  - bh.3.1.10.q33
+  - bh.3.1.10.q34

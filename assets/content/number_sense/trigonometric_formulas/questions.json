@@ -1,0 +1,285 @@
+[
+  {
+    "id": "bh.2.2.12.q1",
+    "prompt": "\\cos^{2}30° + \\sin^{2}30° =",
+    "topic": "trigonometric_formulas",
+    "answer": {
+      "answer": 1,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.12.q2",
+    "prompt": "\\cos^{2}30° - \\sin^{2}30° =",
+    "topic": "trigonometric_formulas",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 2,
+      "display": "\\frac{1}{2}"
+    }
+  },
+  {
+    "id": "bh.2.2.12.q3",
+    "prompt": "2\\sin15°\\cos15° =",
+    "topic": "trigonometric_formulas",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 2,
+      "display": "\\frac{1}{2}"
+    }
+  },
+  {
+    "id": "bh.2.2.12.q4",
+    "prompt": "2\\sin 30^{\\circ}\\sin 30^{\\circ} - 1 =",
+    "topic": "trigonometric_formulas",
+    "answer": {
+      "type": "fraction",
+      "num": -1,
+      "den": 2,
+      "display": "-\\frac{1}{2}"
+    }
+  },
+  {
+    "id": "bh.2.2.12.q5",
+    "prompt": "1 - \\sin^{2} 30^{\\circ} =",
+    "topic": "trigonometric_formulas",
+    "answer": {
+      "type": "fraction",
+      "num": 3,
+      "den": 4,
+      "display": "\\frac{3}{4}"
+    }
+  },
+  {
+    "id": "bh.2.2.12.q6",
+    "prompt": "\\cos 22^{\\circ} = \\sin\\theta, 0^{\\circ} < \\theta < 90^{\\circ}, \\theta =",
+    "topic": "trigonometric_formulas",
+    "answer": {
+      "answer": 68,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.12.q7",
+    "prompt": "\\left[2\\sin\\frac{\\pi}{3}\\cos\\frac{\\pi}{3}\\right]^{2} =",
+    "topic": "trigonometric_formulas",
+    "answer": {
+      "type": "fraction",
+      "num": 3,
+      "den": 4,
+      "display": "\\frac{3}{4}"
+    }
+  },
+  {
+    "id": "bh.2.2.12.q8",
+    "prompt": "2\\sin 15^{\\circ}\\cos 15^{\\circ} - 1 =",
+    "topic": "trigonometric_formulas",
+    "answer": {
+      "type": "fraction",
+      "num": -1,
+      "den": 2,
+      "display": "-\\frac{1}{2}"
+    }
+  },
+  {
+    "id": "bh.2.2.12.q9",
+    "prompt": "3\\csc^{2} 45^{\\circ} - 3\\cot^{2} 45^{\\circ} =",
+    "topic": "trigonometric_formulas",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.12.q10",
+    "prompt": "\\cos^{2} 30^{\\circ} - \\sin^{2} 30^{\\circ} =",
+    "topic": "trigonometric_formulas",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 2,
+      "display": "\\frac{1}{2}"
+    }
+  },
+  {
+    "id": "bh.2.2.12.q11",
+    "prompt": "\\sin 105^{\\circ}\\cos 105^{\\circ} =",
+    "topic": "trigonometric_formulas",
+    "answer": {
+      "type": "fraction",
+      "num": -1,
+      "den": 4,
+      "display": "-\\frac{1}{4}"
+    }
+  },
+  {
+    "id": "bh.2.2.12.q12",
+    "prompt": "\\sin 38^{\\circ} = \\cos\\theta, 270^{\\circ} < \\theta < 360^{\\circ}, \\theta =",
+    "topic": "trigonometric_formulas",
+    "answer": {
+      "answer": 308,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.12.q13",
+    "prompt": "\\sin 30^{\\circ}\\cos 60^{\\circ} - \\sin 60^{\\circ}\\cos 30^{\\circ} =",
+    "topic": "trigonometric_formulas",
+    "answer": {
+      "type": "fraction",
+      "num": -1,
+      "den": 2,
+      "display": "-\\frac{1}{2}"
+    }
+  },
+  {
+    "id": "bh.2.2.12.q14",
+    "prompt": "2\\cos^{2}\\frac{\\pi}{6} - 1 =",
+    "topic": "trigonometric_formulas",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 2,
+      "display": "\\frac{1}{2}"
+    }
+  },
+  {
+    "id": "bh.2.2.12.q15",
+    "prompt": "(1 - \\sin 60^{\\circ})(1 + \\sin 60^{\\circ}) =",
+    "topic": "trigonometric_formulas",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 4,
+      "display": "\\frac{1}{4}"
+    }
+  },
+  {
+    "id": "bh.2.2.12.q16",
+    "prompt": "2\\sin 15^{\\circ}\\sin 75^{\\circ} =",
+    "topic": "trigonometric_formulas",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 2,
+      "display": "\\frac{1}{2}"
+    }
+  },
+  {
+    "id": "bh.2.2.12.q17",
+    "prompt": "\\left(\\sin\\frac{\\pi}{3} - \\cos\\frac{\\pi}{3}\\right)\\left(\\sin\\frac{\\pi}{3} + \\cos\\frac{\\pi}{3}\\right) =",
+    "topic": "trigonometric_formulas",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 2,
+      "display": "\\frac{1}{2}"
+    }
+  },
+  {
+    "id": "bh.2.2.12.q18",
+    "prompt": "If \\sin(A) = \\frac{3}{5}, then \\cos(2A) =",
+    "topic": "trigonometric_formulas",
+    "answer": {
+      "type": "fraction",
+      "num": 7,
+      "den": 25,
+      "display": "\\frac{7}{25}"
+    }
+  },
+  {
+    "id": "bh.2.2.12.q19",
+    "prompt": "1 - 2\\sin^{2}\\frac{\\pi}{6} =",
+    "topic": "trigonometric_formulas",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 2,
+      "display": "\\frac{1}{2}"
+    }
+  },
+  {
+    "id": "bh.2.2.12.q20",
+    "prompt": "\\cos 75^{\\circ}\\sin 75^{\\circ} =",
+    "topic": "trigonometric_formulas",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 4,
+      "display": "\\frac{1}{4}"
+    }
+  },
+  {
+    "id": "bh.2.2.12.q21",
+    "prompt": "\\sin 15^{\\circ}\\cos 45^{\\circ} - \\sin 45^{\\circ}\\cos 15^{\\circ} =",
+    "topic": "trigonometric_formulas",
+    "answer": {
+      "type": "fraction",
+      "num": -1,
+      "den": 2,
+      "display": "-\\frac{1}{2}"
+    }
+  },
+  {
+    "id": "bh.2.2.12.q22",
+    "prompt": "2 - 4\\sin^{2} 30^{\\circ} =",
+    "topic": "trigonometric_formulas",
+    "answer": {
+      "answer": 1,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.12.q23",
+    "prompt": "\\cos 95^{\\circ}\\cos 25^{\\circ} - \\sin 95^{\\circ}\\sin 25^{\\circ} =",
+    "topic": "trigonometric_formulas",
+    "answer": {
+      "type": "fraction",
+      "num": -1,
+      "den": 2,
+      "display": "-\\frac{1}{2}"
+    }
+  },
+  {
+    "id": "bh.2.2.12.q24",
+    "prompt": "\\sin\\frac{\\pi}{6} + \\cos\\frac{\\pi}{3} =",
+    "topic": "trigonometric_formulas",
+    "answer": {
+      "answer": 1,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.12.q25",
+    "prompt": "\\cos 15^{\\circ}\\sin 45^{\\circ} - \\cos 45^{\\circ}\\sin 15^{\\circ} =",
+    "topic": "trigonometric_formulas",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 2,
+      "display": "\\frac{1}{2}"
+    }
+  },
+  {
+    "id": "bh.2.2.12.q26",
+    "prompt": "\\left(\\sin\\frac{\\pi}{6} - \\cos\\frac{\\pi}{6}\\right)\\left(\\sin\\frac{\\pi}{6} + \\cos\\frac{\\pi}{6}\\right) =",
+    "topic": "trigonometric_formulas",
+    "answer": {
+      "type": "fraction",
+      "num": -1,
+      "den": 2,
+      "display": "-\\frac{1}{2}"
+    }
+  },
+  {
+    "id": "bh.2.2.12.q27",
+    "prompt": "2\\tan^{2}\\theta - 2\\sec^{2}\\theta =",
+    "topic": "trigonometric_formulas",
+    "answer": {
+      "answer": -2,
+      "type": "numeric"
+    }
+  }
+]

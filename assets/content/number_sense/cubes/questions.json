@@ -1,0 +1,374 @@
+[
+  {
+    "id": "bh.2.1.2.q1",
+    "prompt": "\\sqrt[3]{1728} =",
+    "topic": "cubes",
+    "answer": {
+      "answer": 12,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q2",
+    "prompt": "11^{3} =",
+    "topic": "cubes",
+    "answer": {
+      "answer": 1331,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q3",
+    "prompt": "14 \\times 14 \\times 14 =",
+    "topic": "cubes",
+    "answer": {
+      "answer": 2744,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q4",
+    "prompt": "(-343)^{\\frac{1}{3}} =",
+    "topic": "cubes",
+    "answer": {
+      "answer": -7,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q5",
+    "prompt": "12^{3} =",
+    "topic": "cubes",
+    "answer": {
+      "answer": 1728,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q6",
+    "prompt": "16^{3} =",
+    "topic": "cubes",
+    "answer": {
+      "answer": 4096,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q7",
+    "prompt": "\\sqrt[3]{1728} \\div \\sqrt{36} =",
+    "topic": "cubes",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q8",
+    "prompt": "11^{4} \\div 11 =",
+    "topic": "cubes",
+    "answer": {
+      "answer": 1331,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q9",
+    "prompt": "(-12)^{3} =",
+    "topic": "cubes",
+    "answer": {
+      "answer": -1728,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q10",
+    "prompt": "(2197)^{\\frac{1}{3}} =",
+    "topic": "cubes",
+    "answer": {
+      "answer": 13,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q11",
+    "prompt": "(-729)^{\\frac{1}{3}} =",
+    "topic": "cubes",
+    "answer": {
+      "answer": -9,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q12",
+    "prompt": "8^{3} =",
+    "topic": "cubes",
+    "answer": {
+      "answer": 512,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q13",
+    "prompt": "15^{3} =",
+    "topic": "cubes",
+    "answer": {
+      "answer": 3375,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q14",
+    "prompt": "12 \\times 12 \\times 12 =",
+    "topic": "cubes",
+    "answer": {
+      "answer": 1728,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q15",
+    "prompt": "(125 \\div 64)^{\\frac{1}{3}} =",
+    "topic": "cubes",
+    "answer": {
+      "type": "fraction",
+      "num": 5,
+      "den": 4,
+      "display": "\\frac{5}{4}"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q16",
+    "prompt": "13^{3} =",
+    "topic": "cubes",
+    "answer": {
+      "answer": 2197,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q17",
+    "prompt": "7 \\times 7 \\times 7 =",
+    "topic": "cubes",
+    "answer": {
+      "answer": 343,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q18",
+    "prompt": "-1331^{\\frac{1}{3}} =",
+    "topic": "cubes",
+    "answer": {
+      "answer": -11,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q19",
+    "prompt": "6 \\times 6 \\times 6 =",
+    "topic": "cubes",
+    "answer": {
+      "answer": 216,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q20",
+    "prompt": "15 \\times 15 \\times 15 =",
+    "topic": "cubes",
+    "answer": {
+      "answer": 3375,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q21",
+    "prompt": "(*) \\sqrt[3]{1730} \\times 145 =",
+    "topic": "cubes",
+    "answer": {
+      "high": 1828.0,
+      "low": 1653.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q22",
+    "prompt": "(27 \\div 216)^{\\frac{1}{3}}",
+    "topic": "cubes",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 2,
+      "display": "\\frac{1}{2}"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q23",
+    "prompt": "If x = 7 then (x+3)(x^{2}-3x+9) =",
+    "topic": "cubes",
+    "answer": {
+      "answer": 370,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q24",
+    "prompt": "\\sqrt{676} \\div \\sqrt[3]{-2197} =",
+    "topic": "cubes",
+    "answer": {
+      "answer": -2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q25",
+    "prompt": "(1.728)^{\\frac{1}{3}} =",
+    "topic": "cubes",
+    "answer": {
+      "answer": 1.2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q26",
+    "prompt": "8^{3} \\times 5^{3} =",
+    "topic": "cubes",
+    "answer": {
+      "answer": 64000,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q27",
+    "prompt": "11^{5} \\div 121 =",
+    "topic": "cubes",
+    "answer": {
+      "answer": 1331,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q28",
+    "prompt": "\\sqrt[3]{1.331} =",
+    "topic": "cubes",
+    "answer": {
+      "answer": 1.1,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q29",
+    "prompt": "(*) 89 \\times 90 \\times 91 =",
+    "topic": "cubes",
+    "answer": {
+      "high": 765356.0,
+      "low": 692464.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q30",
+    "prompt": "\\sqrt[3]{.729} =",
+    "topic": "cubes",
+    "answer": {
+      "answer": 0.9,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q31",
+    "prompt": "(*) (121)^{3} =",
+    "topic": "cubes",
+    "answer": {
+      "high": 1860140.0,
+      "low": 1682982.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q32",
+    "prompt": "3^{4} - 6^{3} + 9^{2} =",
+    "topic": "cubes",
+    "answer": {
+      "answer": -54,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q33",
+    "prompt": "\\sqrt[3]{1728} \\div \\sqrt{576} =",
+    "topic": "cubes",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 2,
+      "display": "\\frac{1}{2}"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q34",
+    "prompt": "\\sqrt{225} \\times \\sqrt[3]{3375} =",
+    "topic": "cubes",
+    "answer": {
+      "answer": 225,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q35",
+    "prompt": "8^{3} - 9^{3} =",
+    "topic": "cubes",
+    "answer": {
+      "answer": -217,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q36",
+    "prompt": "(*) 13^{3} \\times 3^{4} =",
+    "topic": "cubes",
+    "answer": {
+      "high": 186855.0,
+      "low": 169059.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q37",
+    "prompt": "2^{3} \\times 5^{3} \\times 7^{3} =",
+    "topic": "cubes",
+    "answer": {
+      "answer": 343000,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q38",
+    "prompt": "(*) 119 \\times 120 \\times 121 =",
+    "topic": "cubes",
+    "answer": {
+      "high": 1814374.0,
+      "low": 1641486.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q39",
+    "prompt": "(*) 14^{3} \\times 4^{5} =",
+    "topic": "cubes",
+    "answer": {
+      "high": 2950349.0,
+      "low": 2669363.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.2.1.2.q40",
+    "prompt": "8^{4} =",
+    "topic": "cubes",
+    "answer": {
+      "answer": 4096,
+      "type": "numeric"
+    }
+  }
+]

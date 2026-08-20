@@ -1,0 +1,47 @@
+[
+  {
+    "id": "bh.4.5.5.q1",
+    "prompt": "If \\frac{a}{9} has a remainder of 7 and \\frac{b}{9} has a remainder of 5 then \\frac{ab}{9} has a remainder of",
+    "topic": "remainders_with_and",
+    "answer": {
+      "answer": 8,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.5.q2",
+    "prompt": "If \\frac{a}{8} has a remainder of 2, and \\frac{b}{8} has a remainder of 7, then \\frac{ab}{8} has a remainder of",
+    "topic": "remainders_with_and",
+    "answer": {
+      "answer": 6,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.5.q3",
+    "prompt": "If \\frac{3x}{5} has a remainder of 4 and \\frac{3y}{5} has a remainder of 1 then \\frac{xy}{5} has a remainder of",
+    "topic": "remainders_with_and",
+    "answer": {
+      "answer": 1,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.5.q4",
+    "prompt": "If \\frac{2x}{7} has a remainder of 3 and \\frac{2y}{7} has a remainder of 4, then \\frac{xy}{7} has a remainder of",
+    "topic": "remainders_with_and",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.5.q5",
+    "prompt": "If \\frac{2x}{7} has a remainder of 5 and \\frac{3y}{7} has a remainder of 4, then \\frac{xy}{7} has a remainder of",
+    "topic": "remainders_with_and",
+    "answer": {
+      "answer": 1,
+      "type": "numeric"
+    }
+  }
+]

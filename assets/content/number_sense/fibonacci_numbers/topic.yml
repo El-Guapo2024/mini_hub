@@ -2,4 +2,23 @@ id: fibonacci_numbers
 title: 'Sum of the First n Fibonacci Numbers'
 logo: assets/icons/number_sense.png
 bh_section: '2.2.2'
-questionIds: []
+questionIds:
+  - bh.2.2.2.q1
+  - bh.2.2.2.q2
+  - bh.2.2.2.q3
+  - bh.2.2.2.q4
+  - bh.2.2.2.q5
+  - bh.2.2.2.q6
+  - bh.2.2.2.q7
+  - bh.2.2.2.q8
+  - bh.2.2.2.q9
+  - bh.2.2.2.q10
+  - bh.2.2.2.q11
+  - bh.2.2.2.q12
+  - bh.2.2.2.q13
+  - bh.2.2.2.q14
+  - bh.2.2.2.q15
+  - bh.2.2.2.q16
+  - bh.2.2.2.q17
+  - bh.2.2.2.q18
+  - bh.2.2.2.q19

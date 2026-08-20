@@ -1,0 +1,83 @@
+[
+  {
+    "id": "bh.3.1.5.q1",
+    "prompt": "Find the units digit of 19^{7}:",
+    "topic": "finding_units_digit_of_xn",
+    "answer": {
+      "answer": 9,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.5.q2",
+    "prompt": "Find the units digit of 17^{6}:",
+    "topic": "finding_units_digit_of_xn",
+    "answer": {
+      "answer": 9,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.5.q3",
+    "prompt": "Find the units digit of 8^{8}:",
+    "topic": "finding_units_digit_of_xn",
+    "answer": {
+      "answer": 6,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.5.q4",
+    "prompt": "Find the units digit of 7^{7}:",
+    "topic": "finding_units_digit_of_xn",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.5.q5",
+    "prompt": "Find the units digit of 13^{13}:",
+    "topic": "finding_units_digit_of_xn",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.5.q6",
+    "prompt": "Find the units digit of 17^{5}:",
+    "topic": "finding_units_digit_of_xn",
+    "answer": {
+      "answer": 7,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.5.q7",
+    "prompt": "i^{78} =",
+    "topic": "finding_units_digit_of_xn",
+    "answer": {
+      "answer": -1,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.5.q8",
+    "prompt": "i^{66} =",
+    "topic": "finding_units_digit_of_xn",
+    "answer": {
+      "answer": -1,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.5.q9",
+    "prompt": "Find the units digit of 16^{5}:",
+    "topic": "finding_units_digit_of_xn",
+    "answer": {
+      "answer": 6,
+      "type": "numeric"
+    }
+  }
+]

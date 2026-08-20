@@ -1,0 +1,425 @@
+[
+  {
+    "id": "bh.1.3.6.q1",
+    "prompt": "73^{2} - 72^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": 145,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q2",
+    "prompt": "36^{2} - 34^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": 140,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q3",
+    "prompt": "57^{2} - 58^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": -115,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q4",
+    "prompt": "67^{2} - 66^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": 133,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q5",
+    "prompt": "69^{2} - 67^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": 272,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q6",
+    "prompt": "54^{2} - 55^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": -109,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q7",
+    "prompt": "67^{2} - 65^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": 264,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q8",
+    "prompt": "88^{2} - 87^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": 175,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q9",
+    "prompt": "48^{2} - 49^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": -97,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q10",
+    "prompt": "97^{2} - 96^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": 193,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q11",
+    "prompt": "77^{2} - 76^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": 153,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q12",
+    "prompt": "54^{2} - 53^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": 107,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q13",
+    "prompt": "42^{2} - 44^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": -172,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q14",
+    "prompt": "4.7^{2} - 3.3^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": 11.2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q15",
+    "prompt": "1.3^{2} - 2.6^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": -5.07,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q16",
+    "prompt": "65^{2} - 64^{2} + 63^{2} - 62^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": 254,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q17",
+    "prompt": "24^{2} - 6^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": 540,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q18",
+    "prompt": "56^{2} - 55^{2} + 54^{2} - 53^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": 218,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q19",
+    "prompt": "76^{2} - 74^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": 300,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q20",
+    "prompt": "3.5^{2} - 6.5^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": -30,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q21",
+    "prompt": "22^{2} - 23^{2} + 24^{2} - 25^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": -94,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q22",
+    "prompt": "55^{2} - 50^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": 525,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q23",
+    "prompt": "83^{2} - 82^{2} + 81^{2} - 80^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": 326,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q24",
+    "prompt": "55^{2} - 52^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": 321,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q25",
+    "prompt": "44^{2} - 43^{2} + 42^{2} - 41^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": 170,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q26",
+    "prompt": "111^{2} - 110^{2} + 109^{2} - 108^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": 438,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q27",
+    "prompt": "11^{2} - 22^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": -363,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q28",
+    "prompt": "77^{2} - 76^{2} + 75^{2} - 74^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": 302,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q29",
+    "prompt": "63^{2} - 57^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": 720,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q30",
+    "prompt": "56^{2} - 55^{2} + 54^{2} - 53^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": 218,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q31",
+    "prompt": "59^{2} - 71^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": -1560,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q32",
+    "prompt": "16^{2} - 17^{2} + 18^{2} - 19^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": -70,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q33",
+    "prompt": "41^{2} - 42^{2} + 43^{2} - 44^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": -170,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q34",
+    "prompt": "18^{2} - 6^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": 288,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q35",
+    "prompt": "If x^{2} + 16^{2} = 19^{2}, then x^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": 105,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q36",
+    "prompt": "4.5^{2} - 1.5^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": 18,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q37",
+    "prompt": "21^{2} - 20^{2} + 19^{2} - 18^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": 78,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q38",
+    "prompt": "58^{2} - 59^{2} + 60^{2} - 61^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": -238,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q39",
+    "prompt": "72^{2} - 78^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": -900,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q40",
+    "prompt": "24^{2} - 22^{2} + 20^{2} - 18^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": 168,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q41",
+    "prompt": "89^{2} - 86^{2} + 83^{2} - 80^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": 1014,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q42",
+    "prompt": "48^{2} - 62^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": -1540,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q43",
+    "prompt": "74^{2} - 76^{2} + 78^{2} - 80^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": -616,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q44",
+    "prompt": "38^{2} - 27^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": 715,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q45",
+    "prompt": "31^{2} - 33^{2} + 35^{2} - 37^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": -272,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q46",
+    "prompt": "48^{2} - 44^{2} + 40^{2} - 36^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": 672,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.6.q47",
+    "prompt": "79^{2} - 76^{2} + 73^{2} - 70^{2} =",
+    "topic": "difference_of_squares",
+    "answer": {
+      "answer": 894,
+      "type": "numeric"
+    }
+  }
+]

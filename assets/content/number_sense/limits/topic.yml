@@ -2,4 +2,12 @@ id: limits
 title: 'Calculus (Derivatives/Integrals)'
 logo: assets/icons/number_sense.png
 bh_section: '3.6.1'
-questionIds: []
+questionIds:
+  - bh.3.6.1.q1
+  - bh.3.6.1.q2
+  - bh.3.6.1.q3
+  - bh.3.6.1.q4
+  - bh.3.6.1.q5
+  - bh.3.6.1.q6
+  - bh.3.6.1.q7
+  - bh.3.6.1.q8

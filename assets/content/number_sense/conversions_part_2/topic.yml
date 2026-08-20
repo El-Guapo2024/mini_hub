@@ -2,4 +2,11 @@ id: conversions_part_2
 title: 'Conversions, Part 2'
 logo: assets/icons/number_sense.png
 bh_section: '4.2.1'
-questionIds: []
+questionIds:
+  - bh.4.2.1.q1
+  - bh.4.2.1.q2
+  - bh.4.2.1.q3
+  - bh.4.2.1.q4
+  - bh.4.2.1.q5
+  - bh.4.2.1.q6
+  - bh.4.2.1.q7

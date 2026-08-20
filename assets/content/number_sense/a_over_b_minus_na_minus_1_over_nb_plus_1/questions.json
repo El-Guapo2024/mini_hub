@@ -1,0 +1,244 @@
+[
+  {
+    "id": "bh.1.5.5.q1",
+    "prompt": "\\frac{4}{9} - \\frac{11}{28} =",
+    "topic": "a_over_b_minus_na_minus_1_over_nb_plus_1",
+    "answer": {
+      "type": "fraction",
+      "num": 13,
+      "den": 252,
+      "display": "\\frac{13}{252}"
+    }
+  },
+  {
+    "id": "bh.1.5.5.q2",
+    "prompt": "\\frac{2}{7} - \\frac{7}{29} =",
+    "topic": "a_over_b_minus_na_minus_1_over_nb_plus_1",
+    "answer": {
+      "type": "fraction",
+      "num": 9,
+      "den": 203,
+      "display": "\\frac{9}{203}"
+    }
+  },
+  {
+    "id": "bh.1.5.5.q3",
+    "prompt": "\\frac{4}{13} - \\frac{11}{40} =",
+    "topic": "a_over_b_minus_na_minus_1_over_nb_plus_1",
+    "answer": {
+      "type": "fraction",
+      "num": 17,
+      "den": 520,
+      "display": "\\frac{17}{520}"
+    }
+  },
+  {
+    "id": "bh.1.5.5.q4",
+    "prompt": "\\frac{7}{15} - \\frac{27}{61} =",
+    "topic": "a_over_b_minus_na_minus_1_over_nb_plus_1",
+    "answer": {
+      "type": "fraction",
+      "num": 22,
+      "den": 915,
+      "display": "\\frac{22}{915}"
+    }
+  },
+  {
+    "id": "bh.1.5.5.q5",
+    "prompt": "\\frac{8}{11} - \\frac{31}{45} =",
+    "topic": "a_over_b_minus_na_minus_1_over_nb_plus_1",
+    "answer": {
+      "type": "fraction",
+      "num": 19,
+      "den": 495,
+      "display": "\\frac{19}{495}"
+    }
+  },
+  {
+    "id": "bh.1.5.5.q6",
+    "prompt": "\\frac{8}{11} - \\frac{87}{122} =",
+    "topic": "a_over_b_minus_na_minus_1_over_nb_plus_1",
+    "answer": {
+      "type": "fraction",
+      "num": 19,
+      "den": 1342,
+      "display": "\\frac{19}{1342}"
+    }
+  },
+  {
+    "id": "bh.1.5.5.q7",
+    "prompt": "\\frac{3}{8} - \\frac{26}{73} =",
+    "topic": "a_over_b_minus_na_minus_1_over_nb_plus_1",
+    "answer": {
+      "type": "fraction",
+      "num": 11,
+      "den": 584,
+      "display": "\\frac{11}{584}"
+    }
+  },
+  {
+    "id": "bh.1.5.5.q8",
+    "prompt": "\\frac{4}{5} - \\frac{67}{86} =",
+    "topic": "a_over_b_minus_na_minus_1_over_nb_plus_1",
+    "answer": {
+      "type": "fraction",
+      "num": 9,
+      "den": 430,
+      "display": "\\frac{9}{430}"
+    }
+  },
+  {
+    "id": "bh.1.5.5.q9",
+    "prompt": "\\frac{8}{3} - \\frac{41}{14} =",
+    "topic": "a_over_b_minus_na_minus_1_over_nb_plus_1",
+    "answer": {
+      "type": "fraction",
+      "num": -11,
+      "den": 42,
+      "display": "-\\frac{11}{42}"
+    }
+  },
+  {
+    "id": "bh.1.5.5.q10",
+    "prompt": "\\frac{8}{9} - \\frac{87}{100} =",
+    "topic": "a_over_b_minus_na_minus_1_over_nb_plus_1",
+    "answer": {
+      "type": "fraction",
+      "num": 17,
+      "den": 900,
+      "display": "\\frac{17}{900}"
+    }
+  },
+  {
+    "id": "bh.1.5.5.q11",
+    "prompt": "\\frac{67}{81} - \\frac{17}{20} =",
+    "topic": "a_over_b_minus_na_minus_1_over_nb_plus_1",
+    "answer": {
+      "type": "fraction",
+      "num": -37,
+      "den": 1620,
+      "display": "-\\frac{37}{1620}"
+    }
+  },
+  {
+    "id": "bh.1.5.5.q12",
+    "prompt": "\\frac{3}{8} - \\frac{14}{41} =",
+    "topic": "a_over_b_minus_na_minus_1_over_nb_plus_1",
+    "answer": {
+      "type": "fraction",
+      "num": 11,
+      "den": 328,
+      "display": "\\frac{11}{328}"
+    }
+  },
+  {
+    "id": "bh.1.5.5.q13",
+    "prompt": "\\frac{7}{15} - \\frac{15}{29} =",
+    "topic": "a_over_b_minus_na_minus_1_over_nb_plus_1",
+    "answer": {
+      "type": "fraction",
+      "num": -22,
+      "den": 435,
+      "display": "-\\frac{22}{435}"
+    }
+  },
+  {
+    "id": "bh.1.5.5.q14",
+    "prompt": "\\frac{5}{8} - \\frac{24}{41} =",
+    "topic": "a_over_b_minus_na_minus_1_over_nb_plus_1",
+    "answer": {
+      "type": "fraction",
+      "num": 13,
+      "den": 328,
+      "display": "\\frac{13}{328}"
+    }
+  },
+  {
+    "id": "bh.1.5.5.q15",
+    "prompt": "\\frac{8}{9} - \\frac{31}{37} =",
+    "topic": "a_over_b_minus_na_minus_1_over_nb_plus_1",
+    "answer": {
+      "type": "fraction",
+      "num": 17,
+      "den": 333,
+      "display": "\\frac{17}{333}"
+    }
+  },
+  {
+    "id": "bh.1.5.5.q16",
+    "prompt": "\\frac{10}{11} - \\frac{39}{45} =",
+    "topic": "a_over_b_minus_na_minus_1_over_nb_plus_1",
+    "answer": {
+      "type": "fraction",
+      "num": 7,
+      "den": 165,
+      "display": "\\frac{7}{165}"
+    }
+  },
+  {
+    "id": "bh.1.5.5.q17",
+    "prompt": "\\frac{11}{16} - \\frac{32}{49} =",
+    "topic": "a_over_b_minus_na_minus_1_over_nb_plus_1",
+    "answer": {
+      "type": "fraction",
+      "num": 27,
+      "den": 784,
+      "display": "\\frac{27}{784}"
+    }
+  },
+  {
+    "id": "bh.1.5.5.q18",
+    "prompt": "\\frac{8}{11} - \\frac{87}{122} =",
+    "topic": "a_over_b_minus_na_minus_1_over_nb_plus_1",
+    "answer": {
+      "type": "fraction",
+      "num": 19,
+      "den": 1342,
+      "display": "\\frac{19}{1342}"
+    }
+  },
+  {
+    "id": "bh.1.5.5.q19",
+    "prompt": "\\frac{4}{7} - \\frac{35}{64} =",
+    "topic": "a_over_b_minus_na_minus_1_over_nb_plus_1",
+    "answer": {
+      "type": "fraction",
+      "num": 11,
+      "den": 448,
+      "display": "\\frac{11}{448}"
+    }
+  },
+  {
+    "id": "bh.1.5.5.q20",
+    "prompt": "\\frac{9}{46} - \\frac{2}{9} =",
+    "topic": "a_over_b_minus_na_minus_1_over_nb_plus_1",
+    "answer": {
+      "type": "fraction",
+      "num": -11,
+      "den": 414,
+      "display": "-\\frac{11}{414}"
+    }
+  },
+  {
+    "id": "bh.1.5.5.q21",
+    "prompt": "\\frac{3}{8} - \\frac{14}{41} =",
+    "topic": "a_over_b_minus_na_minus_1_over_nb_plus_1",
+    "answer": {
+      "type": "fraction",
+      "num": 11,
+      "den": 328,
+      "display": "\\frac{11}{328}"
+    }
+  },
+  {
+    "id": "bh.1.5.5.q22",
+    "prompt": "\\frac{7}{11} - \\frac{55}{89} =",
+    "topic": "a_over_b_minus_na_minus_1_over_nb_plus_1",
+    "answer": {
+      "type": "fraction",
+      "num": 18,
+      "den": 979,
+      "display": "\\frac{18}{979}"
+    }
+  }
+]

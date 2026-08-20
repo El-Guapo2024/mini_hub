@@ -2,4 +2,10 @@ id: n_squared_plus_n_equals_n_plus_1_squared_minus_n_plus_1
 title: 'Identity: n² + n = (n+1)² − (n+1)'
 logo: assets/icons/number_sense.png
 bh_section: '4.1.6'
-questionIds: []
+questionIds:
+  - bh.4.1.6.q1
+  - bh.4.1.6.q2
+  - bh.4.1.6.q3
+  - bh.4.1.6.q4
+  - bh.4.1.6.q5
+  - bh.4.1.6.q6

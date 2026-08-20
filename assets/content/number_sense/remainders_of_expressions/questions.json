@@ -1,0 +1,254 @@
+[
+  {
+    "id": "bh.1.4.5.q1",
+    "prompt": "(31 \\times 6 - 17) \\div 8 has a remainder of:",
+    "topic": "remainders_of_expressions",
+    "answer": {
+      "answer": 1,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.5.q2",
+    "prompt": "(34 \\times 27 + 13) \\div 4 has a remainder of:",
+    "topic": "remainders_of_expressions",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.5.q3",
+    "prompt": "(44 \\times 34 - 24) \\div 4 has a remainder of:",
+    "topic": "remainders_of_expressions",
+    "answer": {
+      "answer": 0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.5.q4",
+    "prompt": "(33 + 23 \\times 13) \\div 3 has a remainder of:",
+    "topic": "remainders_of_expressions",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.5.q5",
+    "prompt": "(23 + 33 \\times 43) \\div 4 has a remainder of:",
+    "topic": "remainders_of_expressions",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.5.q6",
+    "prompt": "(24 \\times 34 - 44) \\div 7 has a remainder of:",
+    "topic": "remainders_of_expressions",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.5.q7",
+    "prompt": "(11^{2} + 9 \\times 7) \\div 5 has a remainder of:",
+    "topic": "remainders_of_expressions",
+    "answer": {
+      "answer": 4,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.5.q8",
+    "prompt": "(15 \\times 3 - 6^{2}) \\div 9 has a remainder of:",
+    "topic": "remainders_of_expressions",
+    "answer": {
+      "answer": 0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.5.q9",
+    "prompt": "(12 \\times 9 - 2^{3}) \\div 8 has a remainder of:",
+    "topic": "remainders_of_expressions",
+    "answer": {
+      "answer": 4,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.5.q10",
+    "prompt": "(65 \\times 4 - 3^{2}) \\div 10 has a remainder of:",
+    "topic": "remainders_of_expressions",
+    "answer": {
+      "answer": 1,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.5.q11",
+    "prompt": "(34 \\times 56 - 12) \\div 9 has a remainder of:",
+    "topic": "remainders_of_expressions",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.5.q12",
+    "prompt": "(65 - 4 \\times 3) \\div 6 has a remainder of:",
+    "topic": "remainders_of_expressions",
+    "answer": {
+      "answer": 5,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.5.q13",
+    "prompt": "(34 \\times 56 - 12) \\div 9 has a remainder of:",
+    "topic": "remainders_of_expressions",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.5.q14",
+    "prompt": "(2 \\times 3^{4} + 5^{6}) \\div 7 has a remainder of:",
+    "topic": "remainders_of_expressions",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.5.q15",
+    "prompt": "(23 - 4 \\times 5 + 6) \\div 7 has a remainder of:",
+    "topic": "remainders_of_expressions",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.5.q16",
+    "prompt": "(34 \\times 5 - 6) \\div 7 has a remainder of:",
+    "topic": "remainders_of_expressions",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.5.q17",
+    "prompt": "(1 + 2 - 3 \\times 4^{5}) \\div 6 has a remainder of:",
+    "topic": "remainders_of_expressions",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.5.q18",
+    "prompt": "(8^{2} + 4 \\times 6 - 10) \\div 3 has a remainder of:",
+    "topic": "remainders_of_expressions",
+    "answer": {
+      "answer": 0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.5.q19",
+    "prompt": "(12 \\times 5 + 18 + 15) \\div 8 has a remainder of:",
+    "topic": "remainders_of_expressions",
+    "answer": {
+      "answer": 5,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.5.q20",
+    "prompt": "(7^{3} + 8^{2} - 9^{1}) \\div 6 has a remainder of:",
+    "topic": "remainders_of_expressions",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.5.q21",
+    "prompt": "(20 + 4 \\times 6^{2}) \\div 8 has a remainder of:",
+    "topic": "remainders_of_expressions",
+    "answer": {
+      "answer": 4,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.5.q22",
+    "prompt": "(72 \\times 64 - 83) \\div 7 has a remainder of:",
+    "topic": "remainders_of_expressions",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.5.q23",
+    "prompt": "(15 \\times 30 - 45) \\div 7 has a remainder of:",
+    "topic": "remainders_of_expressions",
+    "answer": {
+      "answer": 6,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.5.q24",
+    "prompt": "(6^{4} \\times 5^{3} - 4^{2}) \\div 3 has a remainder of:",
+    "topic": "remainders_of_expressions",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.5.q25",
+    "prompt": "(2^{4} \\times 3^{6} - 5^{10}) \\div 4 has a remainder of:",
+    "topic": "remainders_of_expressions",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.5.q26",
+    "prompt": "(9^{2} - 7 \\times 5) \\div 4 has a remainder of:",
+    "topic": "remainders_of_expressions",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.5.q27",
+    "prompt": "(8^{2} \\times 6 - 4) \\div 3 has a remainder of:",
+    "topic": "remainders_of_expressions",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.5.q28",
+    "prompt": "(12 \\times 34 - 56) \\div 7 has a remainder of:",
+    "topic": "remainders_of_expressions",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  }
+]

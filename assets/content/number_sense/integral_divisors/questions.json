@@ -1,0 +1,326 @@
+[
+  {
+    "id": "bh.2.2.3.q1",
+    "prompt": "30 has how many positive prime integral divisors:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q2",
+    "prompt": "36 has how many positive integral divisors:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 9,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q3",
+    "prompt": "The sum of the positive integral divisors of 42 is:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 96,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q4",
+    "prompt": "The number of prime factors of 210 is:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 4,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q5",
+    "prompt": "The number of positive integral divisors of 80 is:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 10,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q6",
+    "prompt": "The number of positive integral divisors of 2^{4} \\times 5 is:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 10,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q7",
+    "prompt": "The sum of the distinct prime factors of 75 total:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 8,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q8",
+    "prompt": "The number of positive integral divisors of 96 is:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 12,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q9",
+    "prompt": "(*) The number of positive integral divisors of 100 is:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 9,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q10",
+    "prompt": "The sum of the positive integral divisors 48 is:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 124,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q11",
+    "prompt": "The sum of the proper positive integral divisors of 24 is:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 36,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q12",
+    "prompt": "The sum of the positive integral divisors of 28 is:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 56,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q13",
+    "prompt": "The number of positive integral divisors of 6^{1} \\times 3^{2} \\times 2^{3}:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 20,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q14",
+    "prompt": "The sum of the proper positive integral divisors of 30 is:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 42,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q15",
+    "prompt": "How many positive integral divisors does 81 have:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 5,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q16",
+    "prompt": "How many positive integral divisors does 144 have:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 15,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q17",
+    "prompt": "The sum of the positive integral divisors 3 \\times 5 \\times 7 is:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 192,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q18",
+    "prompt": "The number of positive integral divisors of 6^{5} \\times 4^{3} \\times 2^{1}:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 78,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q19",
+    "prompt": "The sum of the positive integral divisors of 20 is:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 42,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q20",
+    "prompt": "The number of positive integral divisors of 24 is:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 8,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q21",
+    "prompt": "The sum of the positive integral divisors of 28 is:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 56,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q22",
+    "prompt": "The number of positive integral divisors of 2^{3} \\times 3^{4} \\times 4^{5}:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 70,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q23",
+    "prompt": "The number of positive integral divisors of 64 is:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 7,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q24",
+    "prompt": "(*) The sum of the proper positive integral divisors of 36 is:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 55,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q25",
+    "prompt": "The number of positive integral divisors of 2^{4} \\times 3^{6} \\times 5^{10} is:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 385,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q26",
+    "prompt": "The number of positive integral divisors of 5^{3} \\times 3^{2} \\times 2^{1}:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 24,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q27",
+    "prompt": "How many positive integers less than 90 are relatively prime to 90:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 24,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q28",
+    "prompt": "Sum of the proper positive integral divisors of 18 is:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 21.0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q29",
+    "prompt": "The sum of the positive integers less than 18 that are relatively prime to 18:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 54,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q30",
+    "prompt": "The number of positive integral divisors of 12 \\times 3^{3} \\times 2^{4}:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 35,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q31",
+    "prompt": "(*) How many positive integers less than 16 \\times 25 are relatively prime to 16 \\times 25:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 160,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q32",
+    "prompt": "How many integers between 30 and 3 are relatively prime to 30:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 7.0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q33",
+    "prompt": "How many positive integer less than 9 \\times 8 are relatively prime to 9 \\times 8:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 24,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q34",
+    "prompt": "How many integers between 1 and 20 are relatively prime to 20:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 7.0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q35",
+    "prompt": "The number of positive integral divisors of 50 \\times 5^{4} \\times 2^{3}:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 35,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.3.q36",
+    "prompt": "The sum of the positive integral divisors of 48:",
+    "topic": "integral_divisors",
+    "answer": {
+      "answer": 124,
+      "type": "numeric"
+    }
+  }
+]

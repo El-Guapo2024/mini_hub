@@ -1,0 +1,92 @@
+[
+  {
+    "id": "bh.4.5.2.q1",
+    "prompt": "The first four digits of the decimal for \\frac{16}{90} is 0.",
+    "topic": "repeating_decimals_in_reverse",
+    "answer": {
+      "answer": 1777,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.2.q2",
+    "prompt": "The first 3 digits of \\frac{13}{33} is 0.",
+    "topic": "repeating_decimals_in_reverse",
+    "answer": {
+      "answer": 393,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.2.q3",
+    "prompt": "The first four digits of the decimal for \\frac{17}{45} is 0.",
+    "topic": "repeating_decimals_in_reverse",
+    "answer": {
+      "answer": 3777,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.2.q4",
+    "prompt": "The first four digits of the decimal for \\frac{17}{90} is 0.",
+    "topic": "repeating_decimals_in_reverse",
+    "answer": {
+      "answer": 1888,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.2.q5",
+    "prompt": "The first 4 digits of the decimal of \\frac{43}{90} is 0.",
+    "topic": "repeating_decimals_in_reverse",
+    "answer": {
+      "answer": 4777,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.2.q6",
+    "prompt": "The first four digits of the decimal for \\frac{11}{45} is 0.",
+    "topic": "repeating_decimals_in_reverse",
+    "answer": {
+      "answer": 2444,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.2.q7",
+    "prompt": "The first 4 digits of \\frac{31}{90} is 0.",
+    "topic": "repeating_decimals_in_reverse",
+    "answer": {
+      "answer": 3444,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.2.q8",
+    "prompt": "The first four digits of the decimal for \\frac{71}{330} is 0.",
+    "topic": "repeating_decimals_in_reverse",
+    "answer": {
+      "answer": 2151.0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.2.q9",
+    "prompt": "The first 3 digits of the decimal of \\frac{42}{99} is 0.",
+    "topic": "repeating_decimals_in_reverse",
+    "answer": {
+      "answer": 424,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.2.q10",
+    "prompt": "The first 4 digits of \\frac{13}{45} is 0.",
+    "topic": "repeating_decimals_in_reverse",
+    "answer": {
+      "answer": 2888,
+      "type": "numeric"
+    }
+  }
+]

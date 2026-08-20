@@ -1,0 +1,56 @@
+[
+  {
+    "id": "bh.1.4.2.q1",
+    "prompt": "24680 \\div 9 \\text{ has a remainder of:}",
+    "topic": "finding_a_remainder_when_dividing_by_3_9_etc",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.2.q2",
+    "prompt": "6253178 \\div 9 \\text{ has a remainder of:}",
+    "topic": "finding_a_remainder_when_dividing_by_3_9_etc",
+    "answer": {
+      "answer": 5,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.2.q3",
+    "prompt": "2007 \\div 9 \\text{ has a remainder of:}",
+    "topic": "finding_a_remainder_when_dividing_by_3_9_etc",
+    "answer": {
+      "answer": 0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.2.q4",
+    "prompt": "13579 \\div 9 \\text{ has a remainder of:}",
+    "topic": "finding_a_remainder_when_dividing_by_3_9_etc",
+    "answer": {
+      "answer": 7,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.2.q5",
+    "prompt": "2468 \\div 9 \\text{ has a remainder of:}",
+    "topic": "finding_a_remainder_when_dividing_by_3_9_etc",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.2.q6",
+    "prompt": "Find the largest integer k such that 3k7 is divisible by 3:",
+    "topic": "finding_a_remainder_when_dividing_by_3_9_etc",
+    "answer": {
+      "answer": 8,
+      "type": "numeric"
+    }
+  }
+]

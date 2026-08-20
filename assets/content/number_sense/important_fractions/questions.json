@@ -1,0 +1,705 @@
+[
+  {
+    "id": "bh.2.1.4.q1",
+    "prompt": "12\\frac{1}{2}\\% = ___ (frac.)",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 8,
+      "display": "\\frac{1}{8}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q2",
+    "prompt": "\\frac{11}{5} = ___ \\%",
+    "topic": "important_fractions",
+    "answer": {
+      "answer": 220,
+      "type": "numeric",
+      "unit": "%"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q3",
+    "prompt": "Which is larger \\frac{5}{9} or .56?",
+    "topic": "important_fractions",
+    "answer": {
+      "answer": 0.56,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q4",
+    "prompt": "Which is larger \\frac{5}{8} or .622:",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": 5,
+      "den": 8,
+      "display": "\\frac{5}{8}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q5",
+    "prompt": "\\frac{17}{8} = ___ (dec.)",
+    "topic": "important_fractions",
+    "answer": {
+      "answer": 2.125,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q6",
+    "prompt": ".777\\ldots - .333\\ldots + .555\\ldots =",
+    "topic": "important_fractions",
+    "answer": {
+      "answer": 1,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q7",
+    "prompt": "\\frac{3}{5} = ___ \\%",
+    "topic": "important_fractions",
+    "answer": {
+      "answer": 60,
+      "type": "numeric",
+      "unit": "%"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q8",
+    "prompt": "\\frac{1}{8} = ___ (dec.)",
+    "topic": "important_fractions",
+    "answer": {
+      "answer": 0.125,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q9",
+    "prompt": "Which is smaller \\frac{9}{11} or .81?",
+    "topic": "important_fractions",
+    "answer": {
+      "answer": 0.81,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q10",
+    "prompt": "\\frac{1}{16} = ___ \\%",
+    "topic": "important_fractions",
+    "answer": {
+      "answer": 6.25,
+      "type": "numeric",
+      "unit": "%"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q11",
+    "prompt": ".125 - .375 - .625 =",
+    "topic": "important_fractions",
+    "answer": {
+      "answer": -0.875,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q12",
+    "prompt": "\\frac{11}{4} = ___ \\%",
+    "topic": "important_fractions",
+    "answer": {
+      "answer": 275,
+      "type": "numeric",
+      "unit": "%"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q13",
+    "prompt": "Which is larger \\frac{5}{9} or .555 or 55\\%?",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": 5,
+      "den": 9,
+      "display": "\\frac{5}{9}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q14",
+    "prompt": ".1666\\ldots - .333\\ldots + .8333\\ldots =",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": 2,
+      "den": 3,
+      "display": "\\frac{2}{3}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q15",
+    "prompt": "The reciprocal of -1.0625 is:",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": -16,
+      "den": 17,
+      "display": "-\\frac{16}{17}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q16",
+    "prompt": "Which is larger .46 or \\frac{5}{11}?",
+    "topic": "important_fractions",
+    "answer": {
+      "answer": 0.46,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q17",
+    "prompt": ".111\\ldots - .333\\ldots - .666\\ldots =",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": -8,
+      "den": 9,
+      "display": "-\\frac{8}{9}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q18",
+    "prompt": "37.5\\% = ___ (frac.)",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": 3,
+      "den": 8,
+      "display": "\\frac{3}{8}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q19",
+    "prompt": "Which is smaller \\frac{9}{11} or .8?",
+    "topic": "important_fractions",
+    "answer": {
+      "answer": 0.8,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q20",
+    "prompt": "\\frac{3}{7} = ___ \\%",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": 300,
+      "den": 7,
+      "display": "42\\frac{6}{7}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q21",
+    "prompt": "\\frac{7}{9} = ___ \\%",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": 700,
+      "den": 9,
+      "display": "77\\frac{7}{9}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q22",
+    "prompt": ".08333\\ldots + .1666\\ldots + .25 =",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 2,
+      "display": "\\frac{1}{2}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q23",
+    "prompt": "Which is smaller \\frac{7}{11} or .56:",
+    "topic": "important_fractions",
+    "answer": {
+      "answer": 0.56,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q24",
+    "prompt": "Which is larger \\frac{9}{11} or 81\\%?",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": 9,
+      "den": 11,
+      "display": "\\frac{9}{11}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q25",
+    "prompt": ".1666\\ldots + .333\\ldots + .8333\\ldots =",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": 4,
+      "den": 3,
+      "display": "\\frac{4}{3}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q26",
+    "prompt": "\\frac{7}{16} = ___ \\% (dec.)",
+    "topic": "important_fractions",
+    "answer": {
+      "answer": 43.75,
+      "type": "numeric",
+      "unit": "%"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q27",
+    "prompt": "32 \\div .181818\\ldots =",
+    "topic": "important_fractions",
+    "answer": {
+      "answer": 176,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q28",
+    "prompt": "\\frac{2}{7} = ___ \\%",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": 200,
+      "den": 7,
+      "display": "28\\frac{4}{7}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q29",
+    "prompt": "Which is larger -.375 or \\frac{-5}{12}?",
+    "topic": "important_fractions",
+    "answer": {
+      "answer": -0.375,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q30",
+    "prompt": ".333\\ldots - .666\\ldots - .999\\ldots =",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": -4,
+      "den": 3,
+      "display": "-\\frac{4}{3}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q31",
+    "prompt": "\\frac{1}{14} = ___ \\%",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": 50,
+      "den": 7,
+      "display": "7\\frac{1}{7}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q32",
+    "prompt": ".0625 + .125 + .25 =",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": 7,
+      "den": 16,
+      "display": "\\frac{7}{16}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q33",
+    "prompt": "55\\frac{5}{9}\\% of 27 is:",
+    "topic": "important_fractions",
+    "answer": {
+      "answer": 15,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q34",
+    "prompt": "12.5\\% of 24 is:",
+    "topic": "important_fractions",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q35",
+    "prompt": "Which is larger -.27 or \\frac{-2}{7}?",
+    "topic": "important_fractions",
+    "answer": {
+      "answer": -0.27,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q36",
+    "prompt": "55 \\div .454545\\ldots =",
+    "topic": "important_fractions",
+    "answer": {
+      "answer": 121,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q37",
+    "prompt": ".111\\ldots - .1666\\ldots - .333\\ldots =",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": -7,
+      "den": 18,
+      "display": "-\\frac{7}{18}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q38",
+    "prompt": "\\frac{5}{16} = ?\\% (dec.) =",
+    "topic": "important_fractions",
+    "answer": {
+      "answer": 31.25,
+      "type": "numeric",
+      "unit": "%"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q39",
+    "prompt": "363 \\div .272727... =",
+    "topic": "important_fractions",
+    "answer": {
+      "answer": 1331,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q40",
+    "prompt": "21\\frac{3}{7}\\% = (frac.)",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": 3,
+      "den": 14,
+      "display": "\\frac{3}{14}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q41",
+    "prompt": "88 \\times .090909... =",
+    "topic": "important_fractions",
+    "answer": {
+      "answer": 8,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q42",
+    "prompt": "4\\frac{4}{5} \\div .444... =",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": 54,
+      "den": 5,
+      "display": "10\\frac{4}{5}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q43",
+    "prompt": "\\frac{3}{14} = ?\\%",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": 150,
+      "den": 7,
+      "display": "21\\frac{3}{7}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q44",
+    "prompt": "35\\frac{5}{7}\\% = (frac.)",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": 5,
+      "den": 14,
+      "display": "\\frac{5}{14}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q45",
+    "prompt": "72 \\times .083333... =",
+    "topic": "important_fractions",
+    "answer": {
+      "answer": 6,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q46",
+    "prompt": "78\\frac{4}{7}\\% = (frac.)",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": 11,
+      "den": 14,
+      "display": "\\frac{11}{14}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q47",
+    "prompt": "911 \\div .090909... =",
+    "topic": "important_fractions",
+    "answer": {
+      "answer": 10021,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q48",
+    "prompt": "\\frac{1}{12} = ?\\%",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": 25,
+      "den": 3,
+      "display": "8\\frac{1}{3}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q49",
+    "prompt": "\\frac{11}{14} = ?\\%",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": 550,
+      "den": 7,
+      "display": "78\\frac{4}{7}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q50",
+    "prompt": "50 is 6.25\\% of",
+    "topic": "important_fractions",
+    "answer": {
+      "answer": 800,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q51",
+    "prompt": "242 \\div .181818... =",
+    "topic": "important_fractions",
+    "answer": {
+      "answer": 1331,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q52",
+    "prompt": "16\\frac{2}{3}\\% \\times 482 =",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": 241,
+      "den": 3,
+      "display": "80\\frac{1}{3}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q53",
+    "prompt": "75 \\div .5555... =",
+    "topic": "important_fractions",
+    "answer": {
+      "answer": 135,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q54",
+    "prompt": "64\\frac{2}{7}\\% = (frac.)",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": 9,
+      "den": 14,
+      "display": "\\frac{9}{14}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q55",
+    "prompt": "1.21 \\div .09090... =",
+    "topic": "important_fractions",
+    "answer": {
+      "answer": 13.31,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q56",
+    "prompt": "1\\frac{7}{8} = ?\\% (frac.)",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": 375,
+      "den": 2,
+      "display": "187\\frac{1}{2}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q57",
+    "prompt": "6.25\\% = (frac.)",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 16,
+      "display": "\\frac{1}{16}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q58",
+    "prompt": "\\frac{17}{14} = ?\\%",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": 850,
+      "den": 7,
+      "display": "121\\frac{3}{7}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q59",
+    "prompt": "42\\frac{6}{7}\\% = (frac.)",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": 3,
+      "den": 7,
+      "display": "\\frac{3}{7}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q60",
+    "prompt": "3\\frac{3}{4}\\% = (frac.)",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": 3,
+      "den": 80,
+      "display": "\\frac{3}{80}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q61",
+    "prompt": "1\\frac{1}{10}\\% = (frac.)",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": 11,
+      "den": 1000,
+      "display": "\\frac{11}{1000}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q62",
+    "prompt": "92\\frac{6}{7}\\% = (frac.)",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": 13,
+      "den": 14,
+      "display": "\\frac{13}{14}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q63",
+    "prompt": "7\\frac{1}{7}\\% = (frac.)",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 14,
+      "display": "\\frac{1}{14}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q64",
+    "prompt": "75 is 3.125\\% of",
+    "topic": "important_fractions",
+    "answer": {
+      "answer": 2400,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q65",
+    "prompt": "6\\frac{7}{8}\\% = (dec.)",
+    "topic": "important_fractions",
+    "answer": {
+      "answer": 0.06875,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q66",
+    "prompt": "\\frac{13}{14} = ?\\%",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": 650,
+      "den": 7,
+      "display": "92\\frac{6}{7}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q67",
+    "prompt": "3\\frac{1}{13}\\% = (frac.)",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": 2,
+      "den": 65,
+      "display": "\\frac{2}{65}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q68",
+    "prompt": "\\frac{15}{14} = ?\\%",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": 750,
+      "den": 7,
+      "display": "107\\frac{1}{7}"
+    }
+  },
+  {
+    "id": "bh.2.1.4.q69",
+    "prompt": "21\\frac{3}{7}\\% = (frac.)",
+    "topic": "important_fractions",
+    "answer": {
+      "type": "fraction",
+      "num": 3,
+      "den": 14,
+      "display": "\\frac{3}{14}"
+    }
+  }
+]

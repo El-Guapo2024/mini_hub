@@ -1,0 +1,92 @@
+[
+  {
+    "id": "bh.1.5.1.q1",
+    "prompt": "654 - 456 =",
+    "topic": "subtracting_reverses",
+    "answer": {
+      "answer": 198,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.5.1.q2",
+    "prompt": "256 - 652 =",
+    "topic": "subtracting_reverses",
+    "answer": {
+      "answer": -396,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.5.1.q3",
+    "prompt": "4002 - 2004 =",
+    "topic": "subtracting_reverses",
+    "answer": {
+      "answer": 1998,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.5.1.q4",
+    "prompt": "702 - 207 =",
+    "topic": "subtracting_reverses",
+    "answer": {
+      "answer": 495,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.5.1.q5",
+    "prompt": "453 - 354 =",
+    "topic": "subtracting_reverses",
+    "answer": {
+      "answer": 99,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.5.1.q6",
+    "prompt": "5002 - 2005 =",
+    "topic": "subtracting_reverses",
+    "answer": {
+      "answer": 2997,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.5.1.q7",
+    "prompt": "2006 - 6002 =",
+    "topic": "subtracting_reverses",
+    "answer": {
+      "answer": -3996,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.5.1.q8",
+    "prompt": "2003 - 3002 =",
+    "topic": "subtracting_reverses",
+    "answer": {
+      "answer": -999,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.5.1.q9",
+    "prompt": "678 - 876 =",
+    "topic": "subtracting_reverses",
+    "answer": {
+      "answer": -198,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.5.1.q10",
+    "prompt": "2007 - 7002 =",
+    "topic": "subtracting_reverses",
+    "answer": {
+      "answer": -4995,
+      "type": "numeric"
+    }
+  }
+]

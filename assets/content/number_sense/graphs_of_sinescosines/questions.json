@@ -1,0 +1,115 @@
+[
+  {
+    "id": "bh.2.2.13.q1",
+    "prompt": "What is the amplitude of y = 4\\cos(2x) + 1:",
+    "topic": "graphs_of_sinescosines",
+    "answer": {
+      "answer": 4,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.13.q2",
+    "prompt": "The graph of y = 2 - 3\\cos[2(x-5)] has a horizontal displacement of:",
+    "topic": "graphs_of_sinescosines",
+    "answer": {
+      "answer": 5,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.13.q3",
+    "prompt": "The graph of y = 2 - 2\\cos[3(x-5)] has a vertical shift of:",
+    "topic": "graphs_of_sinescosines",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.13.q4",
+    "prompt": "What is the amplitude of y = 2 - 3\\cos[4(x+5)]:",
+    "topic": "graphs_of_sinescosines",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.13.q5",
+    "prompt": "The period of y = 5\\cos\\left[\\frac{1}{4}(x+3\\pi)\\right] + 2 is k\\pi, k =",
+    "topic": "graphs_of_sinescosines",
+    "answer": {
+      "answer": 8,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.13.q6",
+    "prompt": "The phase shift of y = 5\\cos[4(x+3)] - 2 is:",
+    "topic": "graphs_of_sinescosines",
+    "answer": {
+      "answer": -3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.13.q7",
+    "prompt": "The amplitude of y = 2 - 5\\cos[4(x-3)] is:",
+    "topic": "graphs_of_sinescosines",
+    "answer": {
+      "answer": 5,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.13.q8",
+    "prompt": "The vertical displacement of y = 5\\cos[4(x+3)] - 2 is:",
+    "topic": "graphs_of_sinescosines",
+    "answer": {
+      "answer": -2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.13.q9",
+    "prompt": "The phase shift of f(x) = 2\\sin(3x - \\frac{\\pi}{2}) is k\\pi, k =",
+    "topic": "graphs_of_sinescosines",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 6,
+      "display": "\\frac{1}{6}"
+    }
+  },
+  {
+    "id": "bh.2.2.13.q10",
+    "prompt": "The period of y = 2 - 3\\cos(4\\pi x + 2\\pi) is:",
+    "topic": "graphs_of_sinescosines",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 2,
+      "display": "\\frac{1}{2}"
+    }
+  },
+  {
+    "id": "bh.2.2.13.q11",
+    "prompt": "The period of y = 2 + 3\\sin(\\frac{x}{5}) is:",
+    "topic": "graphs_of_sinescosines",
+    "answer": {
+      "answer": 31.41592653589793,
+      "display": "10\\pi",
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.13.q12",
+    "prompt": "The graph of y = 1 - 2\\cos(3x+4) has an amplitude of:",
+    "topic": "graphs_of_sinescosines",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  }
+]

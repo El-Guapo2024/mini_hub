@@ -2,4 +2,13 @@ id: finding_units_digit_of_xn
 title: 'Units Digit Cycle Finding'
 logo: assets/icons/number_sense.png
 bh_section: '3.1.5'
-questionIds: []
+questionIds:
+  - bh.3.1.5.q1
+  - bh.3.1.5.q2
+  - bh.3.1.5.q3
+  - bh.3.1.5.q4
+  - bh.3.1.5.q5
+  - bh.3.1.5.q6
+  - bh.3.1.5.q7
+  - bh.3.1.5.q8
+  - bh.3.1.5.q9

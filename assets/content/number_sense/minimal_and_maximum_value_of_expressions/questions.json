@@ -1,0 +1,130 @@
+[
+  {
+    "id": "bh.4.5.6.q1",
+    "prompt": "The minimum value of f(x) = (x+2)^{2} + 2 is",
+    "topic": "minimal_and_maximum_value_of_expressions",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.6.q2",
+    "prompt": "The minimum value of y = 2x^{2} + 3 is",
+    "topic": "minimal_and_maximum_value_of_expressions",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.6.q3",
+    "prompt": "The minimum value of f(x) = 2x^{2} + 4x + 2 is",
+    "topic": "minimal_and_maximum_value_of_expressions",
+    "answer": {
+      "answer": 0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.6.q4",
+    "prompt": "The minimum value of f(x) = x^{2} - 2 is",
+    "topic": "minimal_and_maximum_value_of_expressions",
+    "answer": {
+      "answer": -2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.6.q5",
+    "prompt": "The minimum value of \\sin(2x) - 3 is",
+    "topic": "minimal_and_maximum_value_of_expressions",
+    "answer": {
+      "answer": -4,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.6.q6",
+    "prompt": "The minimum value of y = x^{2} + 4x is at y =",
+    "topic": "minimal_and_maximum_value_of_expressions",
+    "answer": {
+      "answer": -4,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.6.q7",
+    "prompt": "The minimum value of \\sin(3x) - 5 is",
+    "topic": "minimal_and_maximum_value_of_expressions",
+    "answer": {
+      "answer": -6,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.6.q8",
+    "prompt": "The minimum value of \\sin(2x) - 3 is",
+    "topic": "minimal_and_maximum_value_of_expressions",
+    "answer": {
+      "answer": -4,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.6.q9",
+    "prompt": "The minimum value of y = x^{2} + 2x - 3 is",
+    "topic": "minimal_and_maximum_value_of_expressions",
+    "answer": {
+      "answer": -4,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.6.q10",
+    "prompt": "The horizontal asymptote of y = 4^{x} + 2 is",
+    "topic": "minimal_and_maximum_value_of_expressions",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.6.q11",
+    "prompt": "The maximum value of \\cos(3x) - 2 is",
+    "topic": "minimal_and_maximum_value_of_expressions",
+    "answer": {
+      "answer": -1,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.6.q12",
+    "prompt": "The maximum value of 5 - \\cos(3x) is",
+    "topic": "minimal_and_maximum_value_of_expressions",
+    "answer": {
+      "answer": 6,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.6.q13",
+    "prompt": "The minimum value of y = 3x^{2} + 4x is",
+    "topic": "minimal_and_maximum_value_of_expressions",
+    "answer": {
+      "type": "fraction",
+      "num": -4,
+      "den": 3,
+      "display": "-\\frac{4}{3}"
+    }
+  },
+  {
+    "id": "bh.4.5.6.q14",
+    "prompt": "The range of the function y = -x^{4} + 4 is y \\leq",
+    "topic": "minimal_and_maximum_value_of_expressions",
+    "answer": {
+      "answer": 4,
+      "type": "numeric"
+    }
+  }
+]

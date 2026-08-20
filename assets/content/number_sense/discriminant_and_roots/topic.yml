@@ -2,4 +2,10 @@ id: discriminant_and_roots
 title: 'Discriminant Distinct Roots'
 logo: assets/icons/number_sense.png
 bh_section: '2.2.15'
-questionIds: []
+questionIds:
+  - bh.2.2.15.q1
+  - bh.2.2.15.q2
+  - bh.2.2.15.q3
+  - bh.2.2.15.q4
+  - bh.2.2.15.q5
+  - bh.2.2.15.q6

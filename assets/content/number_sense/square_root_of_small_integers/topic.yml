@@ -2,4 +2,13 @@ id: square_root_of_small_integers
 title: 'Square Root of Small Integers'
 logo: assets/icons/number_sense.png
 bh_section: '4.2.3'
-questionIds: []
+questionIds:
+  - bh.4.2.3.q1
+  - bh.4.2.3.q2
+  - bh.4.2.3.q3
+  - bh.4.2.3.q4
+  - bh.4.2.3.q5
+  - bh.4.2.3.q6
+  - bh.4.2.3.q7
+  - bh.4.2.3.q8
+  - bh.4.2.3.q9

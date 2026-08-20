@@ -1,0 +1,84 @@
+[
+  {
+    "id": "bh.2.2.9.q1",
+    "prompt": "Find the surface area of a cube who's side length is 11 in.:",
+    "topic": "formulas_of_solids",
+    "answer": {
+      "answer": 726,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.9.q2",
+    "prompt": "Find the surface area of a sphere who's radius is 6 in.:",
+    "topic": "formulas_of_solids",
+    "answer": {
+      "answer": 452.3893421169302,
+      "display": "144\\pi",
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.9.q3",
+    "prompt": "If the radius of a sphere is tripled, then the volume is multiplied by:",
+    "topic": "formulas_of_solids",
+    "answer": {
+      "answer": 27,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.9.q4",
+    "prompt": "The total surface area of a cube with an edge of 4 inches is:",
+    "topic": "formulas_of_solids",
+    "answer": {
+      "answer": 96,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.9.q5",
+    "prompt": "A cube has a volume of 512 cm^{2}. The area of the base is:",
+    "topic": "formulas_of_solids",
+    "answer": {
+      "answer": 64,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.9.q6",
+    "prompt": "A cube has a surface area of 216 cm^{2}. The volume of the cube is:",
+    "topic": "formulas_of_solids",
+    "answer": {
+      "answer": 216,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.9.q7",
+    "prompt": "If the total surface area of a cube is 384 cm^{2}, then the volume of the cube is:",
+    "topic": "formulas_of_solids",
+    "answer": {
+      "answer": 512,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.9.q8",
+    "prompt": "Find the volume of a cube with an edge of 12 cm.:",
+    "topic": "formulas_of_solids",
+    "answer": {
+      "answer": 1728,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.9.q9",
+    "prompt": "A tin can has a diameter of 8 and a height of 14. The volume is k\\pi, k =",
+    "topic": "formulas_of_solids",
+    "answer": {
+      "answer": 224,
+      "type": "numeric"
+    }
+  }
+]

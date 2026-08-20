@@ -2,4 +2,23 @@ id: sum_and_product_of_coefficients_in_binomial_expansion
 title: 'Sum of Binomial Coefficients'
 logo: assets/icons/number_sense.png
 bh_section: '3.1.3'
-questionIds: []
+questionIds:
+  - bh.3.1.3.q1
+  - bh.3.1.3.q2
+  - bh.3.1.3.q3
+  - bh.3.1.3.q4
+  - bh.3.1.3.q5
+  - bh.3.1.3.q6
+  - bh.3.1.3.q7
+  - bh.3.1.3.q8
+  - bh.3.1.3.q9
+  - bh.3.1.3.q10
+  - bh.3.1.3.q11
+  - bh.3.1.3.q12
+  - bh.3.1.3.q13
+  - bh.3.1.3.q14
+  - bh.3.1.3.q15
+  - bh.3.1.3.q16
+  - bh.3.1.3.q17
+  - bh.3.1.3.q18
+  - bh.3.1.3.q19

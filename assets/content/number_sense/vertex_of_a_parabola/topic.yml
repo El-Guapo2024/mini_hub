@@ -2,4 +2,7 @@ id: vertex_of_a_parabola
 title: 'Parabola Vertex Formula'
 logo: assets/icons/number_sense.png
 bh_section: '2.2.14'
-questionIds: []
+questionIds:
+  - bh.2.2.14.q1
+  - bh.2.2.14.q2
+  - bh.2.2.14.q3

@@ -1,0 +1,173 @@
+[
+  {
+    "id": "bh.2.1.9.q1",
+    "prompt": "15 miles per hour = ______ feet per second.",
+    "topic": "distance_and_velocity_conversions",
+    "answer": {
+      "answer": 22,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.9.q2",
+    "prompt": "3.5 yards = ______ inches.",
+    "topic": "distance_and_velocity_conversions",
+    "answer": {
+      "answer": 126,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.9.q3",
+    "prompt": ".375 of a foot = ______ in.",
+    "topic": "distance_and_velocity_conversions",
+    "answer": {
+      "answer": 4.5,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.9.q4",
+    "prompt": "48 inches per second = ______ ft/min.",
+    "topic": "distance_and_velocity_conversions",
+    "answer": {
+      "answer": 240,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.9.q5",
+    "prompt": "7.5 mph = ______ inches per second.",
+    "topic": "distance_and_velocity_conversions",
+    "answer": {
+      "answer": 132,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.9.q6",
+    "prompt": "12\\frac{1}{2}\\% of a mile = ______ yards.",
+    "topic": "distance_and_velocity_conversions",
+    "answer": {
+      "answer": 220,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.9.q7",
+    "prompt": "25\\% of a mile = ______ yards.",
+    "topic": "distance_and_velocity_conversions",
+    "answer": {
+      "answer": 440,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.9.q8",
+    "prompt": "\\frac{1}{3} of a mile = ______ feet.",
+    "topic": "distance_and_velocity_conversions",
+    "answer": {
+      "answer": 1760,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.9.q9",
+    "prompt": "\\frac{3}{4} of 3 yards = ______ inches.",
+    "topic": "distance_and_velocity_conversions",
+    "answer": {
+      "answer": 81,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.9.q10",
+    "prompt": "\\frac{2}{3} of a mile = ______ ft.",
+    "topic": "distance_and_velocity_conversions",
+    "answer": {
+      "answer": 3520,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.9.q11",
+    "prompt": "10 feet = ______ yards.",
+    "topic": "distance_and_velocity_conversions",
+    "answer": {
+      "answer": 3.3333333333333335,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.9.q12",
+    "prompt": "83\\frac{1}{3}\\% of a foot = ______ inches.",
+    "topic": "distance_and_velocity_conversions",
+    "answer": {
+      "answer": 10,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.9.q13",
+    "prompt": "30 mph = ______ ft/sec.",
+    "topic": "distance_and_velocity_conversions",
+    "answer": {
+      "answer": 44,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.9.q14",
+    "prompt": "30 feet per minute = ______ feet per second.",
+    "topic": "distance_and_velocity_conversions",
+    "answer": {
+      "answer": 0.5,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.9.q15",
+    "prompt": "36 in/s = ______ inches per minute.",
+    "topic": "distance_and_velocity_conversions",
+    "answer": {
+      "answer": 2160,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.9.q16",
+    "prompt": "480 inches per minute = ______ in/s.",
+    "topic": "distance_and_velocity_conversions",
+    "answer": {
+      "answer": 8,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.9.q17",
+    "prompt": "45 mph = ______ ft/s.",
+    "topic": "distance_and_velocity_conversions",
+    "answer": {
+      "answer": 66,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.9.q18",
+    "prompt": "33 ft/s = ______ mph.",
+    "topic": "distance_and_velocity_conversions",
+    "answer": {
+      "answer": 22.5,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.9.q19",
+    "prompt": "7.5 mph = ______ ft/s.",
+    "topic": "distance_and_velocity_conversions",
+    "answer": {
+      "answer": 11,
+      "type": "numeric"
+    }
+  }
+]

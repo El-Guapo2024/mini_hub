@@ -2,4 +2,12 @@ id: dividing_by_9_trick
 title: 'Dividing by 9 Trick'
 logo: assets/icons/number_sense.png
 bh_section: '1.4.6'
-questionIds: []
+questionIds:
+  - bh.1.4.6.q1
+  - bh.1.4.6.q2
+  - bh.1.4.6.q3
+  - bh.1.4.6.q4
+  - bh.1.4.6.q5
+  - bh.1.4.6.q6
+  - bh.1.4.6.q7
+  - bh.1.4.6.q8

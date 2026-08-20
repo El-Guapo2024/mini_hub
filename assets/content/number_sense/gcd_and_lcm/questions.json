@@ -1,0 +1,380 @@
+[
+  {
+    "id": "bh.3.1.1.q1",
+    "prompt": "The GCF of 35 and 63 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 7,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q2",
+    "prompt": "The LCM of 64 and 20 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 320,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q3",
+    "prompt": "The LCM of 27 and 36 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 108,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q4",
+    "prompt": "The GCF of 48 and 72 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 24,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q5",
+    "prompt": "The GCD of 27 and 36 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 9,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q6",
+    "prompt": "The LCM of 63 and 45 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 315,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q7",
+    "prompt": "The GCD of 132 and 156 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 12,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q8",
+    "prompt": "The LCM of 57 and 95 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 285,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q9",
+    "prompt": "The GCD of 52 and 91 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 13,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q10",
+    "prompt": "The LCM of 52 and 28 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 364,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q11",
+    "prompt": "The GCD of 48 and 54 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 6,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q12",
+    "prompt": "The GCD of 54 and 36 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 18,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q13",
+    "prompt": "The LCM of 27 and 36 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 108,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q14",
+    "prompt": "The LCM of 108 and 81 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 324,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q15",
+    "prompt": "The GCD of 28 and 52 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 4,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q16",
+    "prompt": "The LCM of 51 and 34 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 102,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q17",
+    "prompt": "The LCM of 2^{3} \\times 3^{2} and 2^{2} \\times 3^{3} is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 216,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q18",
+    "prompt": "The LCM of 28 and 42 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 84,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q19",
+    "prompt": "The LCM of 54 and 48 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 432,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q20",
+    "prompt": "The LCM of 84 and 70 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 420,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q21",
+    "prompt": "The GCF of 132 and 187 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 11,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q22",
+    "prompt": "The LCM of 48 and 72 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 144,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q23",
+    "prompt": "The GCF of 51, 68, and 85 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 17,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q24",
+    "prompt": "GCF(24,44) - LCM(24,44) =",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": -260,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q25",
+    "prompt": "The LCM of 16, 20, and 32 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 160,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q26",
+    "prompt": "GCD(15,28) times LCM(15,28) is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 420,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q27",
+    "prompt": "The LCM of 12, 18, and 20 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 180,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q28",
+    "prompt": "The LCM of 14, 21, and 42 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 42,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q29",
+    "prompt": "The LCM of 8, 18, and 32 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 288,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q30",
+    "prompt": "GCD(15,21) + LCM(15,21) =",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 108,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q31",
+    "prompt": "The GCF of 44, 66, and 88 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 22,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q32",
+    "prompt": "The product of the GCF and LCM of 21 and 33 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 693,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q33",
+    "prompt": "The LCM of 16, 32, and 48 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 96,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q34",
+    "prompt": "The GCD(18,33) + LCM(18,33) =",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 201,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q35",
+    "prompt": "The LCM of 14, 28, and 48 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 336,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q36",
+    "prompt": "The LCM(21,84)-GCF(21,84) =",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 63,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q37",
+    "prompt": "The LCM of 24, 36, and 48 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 144,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q38",
+    "prompt": "The GCD(16,20) - LCM(16,20) =",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": -76,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q39",
+    "prompt": "The GCF of 42, 28, and 56 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 14,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q40",
+    "prompt": "The product of the GCF and LCM of 24 and 30 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 720,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q41",
+    "prompt": "The LCM of 36, 24 and 20 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 360,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.1.q42",
+    "prompt": "The LCM of 28, 42, and 56 is:",
+    "topic": "gcd_and_lcm",
+    "answer": {
+      "answer": 168,
+      "type": "numeric"
+    }
+  }
+]

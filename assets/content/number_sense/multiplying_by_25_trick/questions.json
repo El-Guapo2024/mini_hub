@@ -1,0 +1,291 @@
+[
+  {
+    "id": "bh.1.2.3.q1",
+    "prompt": "240 \\times 25 =",
+    "topic": "multiplying_by_25_trick",
+    "answer": {
+      "answer": 6000,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.3.q2",
+    "prompt": "25 \\times 432 =",
+    "topic": "multiplying_by_25_trick",
+    "answer": {
+      "answer": 10800,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.3.q3",
+    "prompt": "2.6 \\times 2.5 =",
+    "topic": "multiplying_by_25_trick",
+    "answer": {
+      "answer": 6.5,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.3.q4",
+    "prompt": "148 \\times 25 =",
+    "topic": "multiplying_by_25_trick",
+    "answer": {
+      "answer": 3700,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.3.q5",
+    "prompt": "25 \\times 33 =",
+    "topic": "multiplying_by_25_trick",
+    "answer": {
+      "answer": 825,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.3.q6",
+    "prompt": "64 \\div 25 =",
+    "topic": "multiplying_by_25_trick",
+    "answer": {
+      "answer": 2.56,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.3.q7",
+    "prompt": "25 \\times 147 =",
+    "topic": "multiplying_by_25_trick",
+    "answer": {
+      "answer": 3675,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.3.q8",
+    "prompt": "418 \\times 25 =",
+    "topic": "multiplying_by_25_trick",
+    "answer": {
+      "answer": 10450,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.3.q9",
+    "prompt": "616 \\div 25 =",
+    "topic": "multiplying_by_25_trick",
+    "answer": {
+      "answer": 24.64,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.3.q10",
+    "prompt": "2.5 \\times 40.4 =",
+    "topic": "multiplying_by_25_trick",
+    "answer": {
+      "answer": 101,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.3.q11",
+    "prompt": "1.1 \\div 2.5 =",
+    "topic": "multiplying_by_25_trick",
+    "answer": {
+      "answer": 0.44,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.3.q12",
+    "prompt": "3232 \\times 25 =",
+    "topic": "multiplying_by_25_trick",
+    "answer": {
+      "answer": 80800,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.3.q13",
+    "prompt": "(*) 97531 \\div 246 =",
+    "topic": "multiplying_by_25_trick",
+    "answer": {
+      "high": 417.0,
+      "low": 376.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.3.q14",
+    "prompt": "Which is smaller: \\frac{6}{25} or .25?",
+    "topic": "multiplying_by_25_trick",
+    "answer": {
+      "type": "fraction",
+      "num": 6,
+      "den": 25,
+      "display": "\\frac{6}{25}"
+    }
+  },
+  {
+    "id": "bh.1.2.3.q15",
+    "prompt": "209 \\times 25 =",
+    "topic": "multiplying_by_25_trick",
+    "answer": {
+      "answer": 5225,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.3.q16",
+    "prompt": "(18 + 16)(9 + 16) =",
+    "topic": "multiplying_by_25_trick",
+    "answer": {
+      "answer": 850,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.3.q17",
+    "prompt": "(*) 334455 \\div 251 =",
+    "topic": "multiplying_by_25_trick",
+    "answer": {
+      "high": 1400.0,
+      "low": 1265.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.3.q18",
+    "prompt": "21.4 is ____ \\% of 25.",
+    "topic": "multiplying_by_25_trick",
+    "answer": {
+      "answer": 85.6,
+      "type": "numeric",
+      "unit": "%"
+    }
+  },
+  {
+    "id": "bh.1.2.3.q19",
+    "prompt": "404 \\div 25 =",
+    "topic": "multiplying_by_25_trick",
+    "answer": {
+      "answer": 16.16,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.3.q20",
+    "prompt": "303 \\times 25 =",
+    "topic": "multiplying_by_25_trick",
+    "answer": {
+      "answer": 7575,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.3.q21",
+    "prompt": "(*) 97531 \\div 246 =",
+    "topic": "multiplying_by_25_trick",
+    "answer": {
+      "high": 417.0,
+      "low": 376.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.3.q22",
+    "prompt": "Which is larger: \\frac{7}{25} or .25?",
+    "topic": "multiplying_by_25_trick",
+    "answer": {
+      "type": "fraction",
+      "num": 7,
+      "den": 25,
+      "display": "\\frac{7}{25}"
+    }
+  },
+  {
+    "id": "bh.1.2.3.q23",
+    "prompt": "2006 \\div 25 =",
+    "topic": "multiplying_by_25_trick",
+    "answer": {
+      "answer": 80.24,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.3.q24",
+    "prompt": "25 \\times 307 =",
+    "topic": "multiplying_by_25_trick",
+    "answer": {
+      "answer": 7675,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.3.q25",
+    "prompt": "32 is 2\\frac{1}{2}\\% of:",
+    "topic": "multiplying_by_25_trick",
+    "answer": {
+      "answer": 1280,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.3.q26",
+    "prompt": "(*) 47985 \\div 246 =",
+    "topic": "multiplying_by_25_trick",
+    "answer": {
+      "high": 205.0,
+      "low": 185.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.3.q27",
+    "prompt": "25 \\times 2003 =",
+    "topic": "multiplying_by_25_trick",
+    "answer": {
+      "answer": 50075,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.3.q28",
+    "prompt": "15 \\times 25 \\times 11 =",
+    "topic": "multiplying_by_25_trick",
+    "answer": {
+      "answer": 4125,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.3.q29",
+    "prompt": "11 \\times 24 \\times 25 =",
+    "topic": "multiplying_by_25_trick",
+    "answer": {
+      "answer": 6600,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.3.q30",
+    "prompt": "11 \\times 18 \\times 25 =",
+    "topic": "multiplying_by_25_trick",
+    "answer": {
+      "answer": 4950,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.3.q31",
+    "prompt": "(*) 248 \\times 250 \\times 252 =",
+    "topic": "multiplying_by_25_trick",
+    "answer": {
+      "high": 16405200.0,
+      "low": 14842800.0,
+      "type": "estimate"
+    }
+  }
+]

@@ -2,4 +2,51 @@ id: difference_of_squares
 title: 'Difference of Squares'
 logo: assets/icons/number_sense.png
 bh_section: '1.3.6'
-questionIds: []
+questionIds:
+  - bh.1.3.6.q1
+  - bh.1.3.6.q2
+  - bh.1.3.6.q3
+  - bh.1.3.6.q4
+  - bh.1.3.6.q5
+  - bh.1.3.6.q6
+  - bh.1.3.6.q7
+  - bh.1.3.6.q8
+  - bh.1.3.6.q9
+  - bh.1.3.6.q10
+  - bh.1.3.6.q11
+  - bh.1.3.6.q12
+  - bh.1.3.6.q13
+  - bh.1.3.6.q14
+  - bh.1.3.6.q15
+  - bh.1.3.6.q16
+  - bh.1.3.6.q17
+  - bh.1.3.6.q18
+  - bh.1.3.6.q19
+  - bh.1.3.6.q20
+  - bh.1.3.6.q21
+  - bh.1.3.6.q22
+  - bh.1.3.6.q23
+  - bh.1.3.6.q24
+  - bh.1.3.6.q25
+  - bh.1.3.6.q26
+  - bh.1.3.6.q27
+  - bh.1.3.6.q28
+  - bh.1.3.6.q29
+  - bh.1.3.6.q30
+  - bh.1.3.6.q31
+  - bh.1.3.6.q32
+  - bh.1.3.6.q33
+  - bh.1.3.6.q34
+  - bh.1.3.6.q35
+  - bh.1.3.6.q36
+  - bh.1.3.6.q37
+  - bh.1.3.6.q38
+  - bh.1.3.6.q39
+  - bh.1.3.6.q40
+  - bh.1.3.6.q41
+  - bh.1.3.6.q42
+  - bh.1.3.6.q43
+  - bh.1.3.6.q44
+  - bh.1.3.6.q45
+  - bh.1.3.6.q46
+  - bh.1.3.6.q47

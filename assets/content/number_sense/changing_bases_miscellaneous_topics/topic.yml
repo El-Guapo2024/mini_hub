@@ -2,4 +2,9 @@ id: changing_bases_miscellaneous_topics
 title: 'Changing Bases: Miscellaneous Topics'
 logo: assets/icons/number_sense.png
 bh_section: '3.2.6'
-questionIds: []
+questionIds:
+  - bh.3.2.6.q1
+  - bh.3.2.6.q2
+  - bh.3.2.6.q3
+  - bh.3.2.6.q4
+  - bh.3.2.6.q5

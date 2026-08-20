@@ -1,0 +1,204 @@
+[
+  {
+    "id": "bh.2.2.10.q1",
+    "prompt": "{}_{5}P_{3} =",
+    "topic": "combinations_and_permutations",
+    "answer": {
+      "answer": 60,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.10.q2",
+    "prompt": "{}_{5}C_{3} =",
+    "topic": "combinations_and_permutations",
+    "answer": {
+      "answer": 10,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.10.q3",
+    "prompt": "{}_{6}C_{3} =",
+    "topic": "combinations_and_permutations",
+    "answer": {
+      "answer": 20,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.10.q4",
+    "prompt": "{}_{7}C_{4} =",
+    "topic": "combinations_and_permutations",
+    "answer": {
+      "answer": 35,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.10.q5",
+    "prompt": "{}_{7}P_{4} =",
+    "topic": "combinations_and_permutations",
+    "answer": {
+      "answer": 840,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.10.q6",
+    "prompt": "{}_{6}P_{2} =",
+    "topic": "combinations_and_permutations",
+    "answer": {
+      "answer": 30,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.10.q7",
+    "prompt": "{}_{8}C_{6} =",
+    "topic": "combinations_and_permutations",
+    "answer": {
+      "answer": 28,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.10.q8",
+    "prompt": "{}_{5}C_{2} =",
+    "topic": "combinations_and_permutations",
+    "answer": {
+      "answer": 10,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.10.q9",
+    "prompt": "{}_{8}P_{3} =",
+    "topic": "combinations_and_permutations",
+    "answer": {
+      "answer": 336,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.10.q10",
+    "prompt": "{}_{8}C_{3} =",
+    "topic": "combinations_and_permutations",
+    "answer": {
+      "answer": 56,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.10.q11",
+    "prompt": "{}_{9}C_{2} =",
+    "topic": "combinations_and_permutations",
+    "answer": {
+      "answer": 36,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.10.q12",
+    "prompt": "{}_{4}P_{2} \\div {}_{4}C_{2} =",
+    "topic": "combinations_and_permutations",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.10.q13",
+    "prompt": "{}_{6}P_{3} \\div {}_{6}C_{3} =",
+    "topic": "combinations_and_permutations",
+    "answer": {
+      "answer": 6,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.10.q14",
+    "prompt": "{}_{7}P_{4} \\div {}_{7}C_{3} =",
+    "topic": "combinations_and_permutations",
+    "answer": {
+      "answer": 24,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.10.q15",
+    "prompt": "{}_{8}C_{5} \\div {}_{8}P_{5} =",
+    "topic": "combinations_and_permutations",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 120,
+      "display": "\\frac{1}{120}"
+    }
+  },
+  {
+    "id": "bh.2.2.10.q16",
+    "prompt": "{}_{9}P_{3} \\div {}_{9}C_{3} =",
+    "topic": "combinations_and_permutations",
+    "answer": {
+      "answer": 6,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.10.q17",
+    "prompt": "{}_{4}P_{3} \\div {}_{3}P_{2} =",
+    "topic": "combinations_and_permutations",
+    "answer": {
+      "answer": 4,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.10.q18",
+    "prompt": "{}_{4}C_{3} \\times {}_{3}C_{2} =",
+    "topic": "combinations_and_permutations",
+    "answer": {
+      "answer": 12,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.10.q19",
+    "prompt": "{}_{5}P_{3} \\times {}_{4}P_{2} =",
+    "topic": "combinations_and_permutations",
+    "answer": {
+      "answer": 720,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.10.q20",
+    "prompt": "{}_{6}C_{3} \\div {}_{6}P_{3} =",
+    "topic": "combinations_and_permutations",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 6,
+      "display": "\\frac{1}{6}"
+    }
+  },
+  {
+    "id": "bh.2.2.10.q21",
+    "prompt": "{}_{6}C_{1} + {}_{4}P_{1} =",
+    "topic": "combinations_and_permutations",
+    "answer": {
+      "answer": 10,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.10.q22",
+    "prompt": "({}_{5}C_{2})({}_{5}P_{2}) =",
+    "topic": "combinations_and_permutations",
+    "answer": {
+      "answer": 200,
+      "type": "numeric"
+    }
+  }
+]

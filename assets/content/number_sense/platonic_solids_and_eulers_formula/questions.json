@@ -1,0 +1,92 @@
+[
+  {
+    "id": "bh.2.1.7.q1",
+    "prompt": "A dodecahedron has ___ vertices.",
+    "topic": "platonic_solids_and_eulers_formula",
+    "answer": {
+      "answer": 20,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.7.q2",
+    "prompt": "An icosahedron has ___ congruent faces.",
+    "topic": "platonic_solids_and_eulers_formula",
+    "answer": {
+      "answer": 20,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.7.q3",
+    "prompt": "The area of the base of a tetrahedron is 4 ft^{2}. The total surface area is ___ ft^{2}.",
+    "topic": "platonic_solids_and_eulers_formula",
+    "answer": {
+      "answer": 16,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.7.q4",
+    "prompt": "A tetrahedron has ___ vertices.",
+    "topic": "platonic_solids_and_eulers_formula",
+    "answer": {
+      "answer": 4,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.7.q5",
+    "prompt": "An octahedron has ___ edges.",
+    "topic": "platonic_solids_and_eulers_formula",
+    "answer": {
+      "answer": 12,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.7.q6",
+    "prompt": "A hexahedron has ___ faces.",
+    "topic": "platonic_solids_and_eulers_formula",
+    "answer": {
+      "answer": 6,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.7.q7",
+    "prompt": "A dodecahedron is a platonic solid with 30 edges and ___ vertices.",
+    "topic": "platonic_solids_and_eulers_formula",
+    "answer": {
+      "answer": 20,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.7.q8",
+    "prompt": "An octahedron has ___ vertices.",
+    "topic": "platonic_solids_and_eulers_formula",
+    "answer": {
+      "answer": 6,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.7.q9",
+    "prompt": "An icosahedron is a platonic solid with 30 edges and ___ vertices.",
+    "topic": "platonic_solids_and_eulers_formula",
+    "answer": {
+      "answer": 12,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.7.q10",
+    "prompt": "A dodecahedron is a platonic solid with 30 edges and ___ vertices.",
+    "topic": "platonic_solids_and_eulers_formula",
+    "answer": {
+      "answer": 20,
+      "type": "numeric"
+    }
+  }
+]

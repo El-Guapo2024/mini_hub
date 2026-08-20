@@ -1,0 +1,140 @@
+[
+  {
+    "id": "bh.1.2.4.q1",
+    "prompt": "48 \\times 75 =",
+    "topic": "multiplying_by_75_trick",
+    "answer": {
+      "answer": 3600,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.4.q2",
+    "prompt": "64 \\times 75 =",
+    "topic": "multiplying_by_75_trick",
+    "answer": {
+      "answer": 4800,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.4.q3",
+    "prompt": "66 \\div 75 =",
+    "topic": "multiplying_by_75_trick",
+    "answer": {
+      "answer": 0.88,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.4.q4",
+    "prompt": "84 \\times 75 =",
+    "topic": "multiplying_by_75_trick",
+    "answer": {
+      "answer": 6300,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.4.q5",
+    "prompt": "(*) 443322 \\div 751 =",
+    "topic": "multiplying_by_75_trick",
+    "answer": {
+      "high": 620.0,
+      "low": 560.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.4.q6",
+    "prompt": "28 \\times 75 =",
+    "topic": "multiplying_by_75_trick",
+    "answer": {
+      "answer": 2100,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.4.q7",
+    "prompt": "75 \\times 24 =",
+    "topic": "multiplying_by_75_trick",
+    "answer": {
+      "answer": 1800,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.4.q8",
+    "prompt": "(*) 7532 \\times 1468",
+    "topic": "multiplying_by_75_trick",
+    "answer": {
+      "high": 11609825.0,
+      "low": 10504127.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.4.q9",
+    "prompt": "48 \\div 75 =",
+    "topic": "multiplying_by_75_trick",
+    "answer": {
+      "answer": 0.64,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.4.q10",
+    "prompt": "(*) 566472 \\div 748 =",
+    "topic": "multiplying_by_75_trick",
+    "answer": {
+      "high": 796.0,
+      "low": 719.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.4.q11",
+    "prompt": "96 \\div 75 =",
+    "topic": "multiplying_by_75_trick",
+    "answer": {
+      "answer": 1.28,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.4.q12",
+    "prompt": "75 \\times 11 \\times 24 =",
+    "topic": "multiplying_by_75_trick",
+    "answer": {
+      "answer": 19800,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.4.q13",
+    "prompt": "4800 \\div 75 =",
+    "topic": "multiplying_by_75_trick",
+    "answer": {
+      "answer": 64,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.4.q14",
+    "prompt": "75 \\times 48 \\times 15 =",
+    "topic": "multiplying_by_75_trick",
+    "answer": {
+      "answer": 54000,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.4.q15",
+    "prompt": "8.8 \\times 7.5 \\times 1.1 =",
+    "topic": "multiplying_by_75_trick",
+    "answer": {
+      "answer": 72.6,
+      "type": "numeric"
+    }
+  }
+]

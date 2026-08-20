@@ -2,4 +2,44 @@ id: cubes
 title: 'Cubes (Memorized)'
 logo: assets/icons/number_sense.png
 bh_section: '2.1.2'
-questionIds: []
+questionIds:
+  - bh.2.1.2.q1
+  - bh.2.1.2.q2
+  - bh.2.1.2.q3
+  - bh.2.1.2.q4
+  - bh.2.1.2.q5
+  - bh.2.1.2.q6
+  - bh.2.1.2.q7
+  - bh.2.1.2.q8
+  - bh.2.1.2.q9
+  - bh.2.1.2.q10
+  - bh.2.1.2.q11
+  - bh.2.1.2.q12
+  - bh.2.1.2.q13
+  - bh.2.1.2.q14
+  - bh.2.1.2.q15
+  - bh.2.1.2.q16
+  - bh.2.1.2.q17
+  - bh.2.1.2.q18
+  - bh.2.1.2.q19
+  - bh.2.1.2.q20
+  - bh.2.1.2.q21
+  - bh.2.1.2.q22
+  - bh.2.1.2.q23
+  - bh.2.1.2.q24
+  - bh.2.1.2.q25
+  - bh.2.1.2.q26
+  - bh.2.1.2.q27
+  - bh.2.1.2.q28
+  - bh.2.1.2.q29
+  - bh.2.1.2.q30
+  - bh.2.1.2.q31
+  - bh.2.1.2.q32
+  - bh.2.1.2.q33
+  - bh.2.1.2.q34
+  - bh.2.1.2.q35
+  - bh.2.1.2.q36
+  - bh.2.1.2.q37
+  - bh.2.1.2.q38
+  - bh.2.1.2.q39
+  - bh.2.1.2.q40

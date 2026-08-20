@@ -1,0 +1,636 @@
+[
+  {
+    "id": "bh.2.2.1.q1",
+    "prompt": "2 + 4 + 6 + 8 + \\cdots + 22 =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 132,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q2",
+    "prompt": "1 + 2 + 3 + 4 + \\cdots + 21 =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 231,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q3",
+    "prompt": "1 + 3 + 5 + 7 + \\cdots + 25 =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 169,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q4",
+    "prompt": "The 25^{th} term of 3, 8, 13, 18, \\cdots:",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 123,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q5",
+    "prompt": "6 + 4 + \\frac{8}{3} + \\frac{16}{9} + \\cdots =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 18,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q6",
+    "prompt": "2 + 4 + 6 + 8 + \\cdots + 30 =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 240,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q7",
+    "prompt": "1 + 3 + 5 + 7 + \\cdots + 19 =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 100,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q8",
+    "prompt": "\\frac{3}{5} - \\frac{3}{10} + \\frac{3}{20} - \\cdots =",
+    "topic": "sum_of_series",
+    "answer": {
+      "type": "fraction",
+      "num": 2,
+      "den": 5,
+      "display": "\\frac{2}{5}"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q9",
+    "prompt": "The 20^{th} term of 1, 6, 11, 16, \\cdots:",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 96,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q10",
+    "prompt": "22 + 20 + 18 + 16 + \\cdots + 2 =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 132,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q11",
+    "prompt": "1 + 3 + 5 + \\cdots + 17 =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 81,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q12",
+    "prompt": "2 + 4 + 6 + \\cdots + 44 =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 506,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q13",
+    "prompt": "1 + \\frac{1}{3} + \\frac{1}{9} + \\frac{1}{27} + \\cdots =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 1.5,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q14",
+    "prompt": "1^{3} + 2^{3} + 3^{3} + \\cdots + 6^{3} =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 441,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q15",
+    "prompt": "6 + 12 + 18 + \\cdots + 66 =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 396,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q16",
+    "prompt": "3 + 5 + 7 + 9 + \\cdots + 31 =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 255,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q17",
+    "prompt": "2 + 1 + \\frac{1}{2} + \\frac{1}{4} + \\cdots =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 4,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q18",
+    "prompt": "-\\frac{3}{2} + \\frac{1}{2} - \\frac{1}{6} + \\frac{1}{18} - \\cdots =",
+    "topic": "sum_of_series",
+    "answer": {
+      "type": "fraction",
+      "num": -9,
+      "den": 8,
+      "display": "-1\\frac{1}{8}"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q19",
+    "prompt": "3 + 5 + 7 + 9 + \\cdots + 23 =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 143,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q20",
+    "prompt": "\\frac{4}{7} + \\frac{8}{49} + \\frac{16}{343} + \\cdots =",
+    "topic": "sum_of_series",
+    "answer": {
+      "type": "fraction",
+      "num": 4,
+      "den": 5,
+      "display": "\\frac{4}{5}"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q21",
+    "prompt": "1 + 4 + 7 + \\cdots + 25 =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 117,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q22",
+    "prompt": "4 + 1 + \\frac{1}{4} + \\frac{1}{16} + \\cdots =",
+    "topic": "sum_of_series",
+    "answer": {
+      "type": "fraction",
+      "num": 16,
+      "den": 3,
+      "display": "5\\frac{1}{3}"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q23",
+    "prompt": "2 + \\frac{2}{5} + \\frac{2}{25} + \\cdots =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 2.5,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q24",
+    "prompt": "3 + 9 + 15 + 21 + \\cdots + 33 =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 108,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q25",
+    "prompt": "7 + 14 + 21 + 28 + \\cdots + 77 =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 462,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q26",
+    "prompt": "The 11^{th} term in the arithmetic sequence 12, 9.5, 7, 4.5 \\cdots is:",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": -13,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q27",
+    "prompt": "4 + 8 + 12 + \\cdots + 44 =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 264,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q28",
+    "prompt": "8 + 16 + 24 + 32 + \\cdots + 88 =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 528,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q29",
+    "prompt": "5^{1} - 5^{0} + 5^{-1} - 5^{-2} + \\cdots =",
+    "topic": "sum_of_series",
+    "answer": {
+      "type": "fraction",
+      "num": 25,
+      "den": 6,
+      "display": "4\\frac{1}{6}"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q30",
+    "prompt": "(x) + (x+2) + (x+4) = 147, then (x) + (x+4) =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 98,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q31",
+    "prompt": "6 + 12 + 18 + 24 + \\cdots + 36 =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 126,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q32",
+    "prompt": "3 + 8 + 13 + 18 + \\cdots + 43 =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 207,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q33",
+    "prompt": "1^{2} + 2^{2} + 3^{2} + 4^{2} + 5^{2} + 6^{2} =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 91,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q34",
+    "prompt": "5 + 1 + \\frac{1}{5} + \\frac{1}{25} + \\cdots =",
+    "topic": "sum_of_series",
+    "answer": {
+      "type": "fraction",
+      "num": 25,
+      "den": 4,
+      "display": "6\\frac{1}{4}"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q35",
+    "prompt": "\\frac{2}{3} + \\frac{1}{2} + \\frac{3}{8} + \\frac{9}{32} + \\cdots =",
+    "topic": "sum_of_series",
+    "answer": {
+      "type": "fraction",
+      "num": 8,
+      "den": 3,
+      "display": "2\\frac{2}{3}"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q36",
+    "prompt": "3 + 5 + 7 + 9 + \\cdots + 31 =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 255,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q37",
+    "prompt": "7 + 14 + 21 + 28 + 35 + 42 =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 147,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q38",
+    "prompt": "8 + 10 + 12 + \\cdots + 20 =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 98,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q39",
+    "prompt": "10 + 15 + 20 + 25 + \\cdots 105 =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 1150,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q40",
+    "prompt": "8 + 4 + 2 + 1 + \\cdots =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 16,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q41",
+    "prompt": "4 + 8 + 12 + 16 + \\cdots + 44 =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 264,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q42",
+    "prompt": "(*) 1^{3} + 2^{3} + 3^{3} + \\cdots + 6^{3} =",
+    "topic": "sum_of_series",
+    "answer": {
+      "high": 464.0,
+      "low": 418.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q43",
+    "prompt": "6 + 12 + 18 + 24 + \\cdots + 66 =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 396,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q44",
+    "prompt": "2 + 6 + 10 + \\cdots + 42 =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 242,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q45",
+    "prompt": "1^{3} - 2^{3} + 3^{3} - 4^{3} + 5^{3} =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 81,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q46",
+    "prompt": "3 + 1\\frac{1}{2} + \\frac{3}{4} + \\cdots =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 6,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q47",
+    "prompt": "14 + 28 + 42 + 56 + 70 + 84 =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 294,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q48",
+    "prompt": "121 + 110 + 99 + \\cdots + 11 =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 726,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q49",
+    "prompt": "2 + 9 + 16 + 23 + \\cdots + 44 =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 161,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q50",
+    "prompt": "13 + 26 + 39 + 52 + 65 + 78 =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 273,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q51",
+    "prompt": "36 + 32 + 28 + \\cdots + 12 =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 168,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q52",
+    "prompt": "88 + 80 + 72 + \\cdots + 8 =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 528,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q53",
+    "prompt": "The sum of 3 consecutive odd integers is 105. The largest integer:",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 37,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q54",
+    "prompt": "4^{1} - 4^{0} + 4^{-1} - 4^{-2} + \\cdots =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 3.2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q55",
+    "prompt": "(*) (1 + 2 + 3 + \\cdots + 29)^{2} =",
+    "topic": "sum_of_series",
+    "answer": {
+      "high": 198687.0,
+      "low": 179763.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q56",
+    "prompt": "(*) 1^{3} + 2^{3} + 3^{3} + \\cdots + 11^{3} =",
+    "topic": "sum_of_series",
+    "answer": {
+      "high": 4574.0,
+      "low": 4138.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q57",
+    "prompt": "\\frac{1}{5} + \\frac{2}{5} + \\frac{3}{5} + \\cdots + 1\\frac{4}{5} + 2 =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 11,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q58",
+    "prompt": "(6^{3} + 4^{3} + 2^{3}) - (5^{3} + 3^{3} + 1^{3}) =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 135,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q59",
+    "prompt": "3 - 1 - \\frac{1}{3} - \\frac{1}{9} - \\frac{1}{27} - \\cdots =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 1.5,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q60",
+    "prompt": "\\frac{1}{3} + \\frac{2}{3} + 1 + 1\\frac{1}{3} + \\cdots + 2\\frac{1}{3} =",
+    "topic": "sum_of_series",
+    "answer": {
+      "type": "fraction",
+      "num": 28,
+      "den": 3,
+      "display": "9\\frac{1}{3}"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q61",
+    "prompt": "3^{3} - 4^{3} - 2^{3} + 5^{3} =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 80,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q62",
+    "prompt": "6 - 1 - \\frac{1}{6} - \\frac{1}{36} - \\cdots =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 4.8,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q63",
+    "prompt": "2 + 5 + 8 + \\cdots + 20 =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 77,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q64",
+    "prompt": "(*) 1^{3} + 2^{3} + 3^{3} + \\cdots + 13^{3} =",
+    "topic": "sum_of_series",
+    "answer": {
+      "high": 8696.0,
+      "low": 7866.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q65",
+    "prompt": "\\frac{3}{4} + \\frac{9}{16} + \\frac{27}{64} + \\cdots =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q66",
+    "prompt": "\\frac{1}{4} + \\frac{3}{4} + \\frac{5}{4} + \\cdots + \\frac{15}{4} =",
+    "topic": "sum_of_series",
+    "answer": {
+      "answer": 16,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q67",
+    "prompt": "(*) (3 + 6 + 9 + \\cdots + 30)^{2} =",
+    "topic": "sum_of_series",
+    "answer": {
+      "high": 28587.0,
+      "low": 25863.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.2.2.1.q68",
+    "prompt": "(*) 1^{3} + 2^{3} + 3^{3} + \\cdots + 8^{3} =",
+    "topic": "sum_of_series",
+    "answer": {
+      "high": 1361.0,
+      "low": 1231.0,
+      "type": "estimate"
+    }
+  }
+]

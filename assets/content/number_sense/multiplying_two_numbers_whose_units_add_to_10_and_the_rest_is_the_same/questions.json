@@ -1,0 +1,74 @@
+[
+  {
+    "id": "bh.4.1.3.q1",
+    "prompt": "71 \\times 79 =",
+    "topic": "multiplying_two_numbers_whose_units_add_to_10_and_the_rest_is_the_same",
+    "answer": {
+      "answer": 5609,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.1.3.q2",
+    "prompt": "112 \\times 118 =",
+    "topic": "multiplying_two_numbers_whose_units_add_to_10_and_the_rest_is_the_same",
+    "answer": {
+      "answer": 13216,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.1.3.q3",
+    "prompt": "44 \\times 46 =",
+    "topic": "multiplying_two_numbers_whose_units_add_to_10_and_the_rest_is_the_same",
+    "answer": {
+      "answer": 2024,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.1.3.q4",
+    "prompt": "What's the area of a rectangle with sides 64 and 66",
+    "topic": "multiplying_two_numbers_whose_units_add_to_10_and_the_rest_is_the_same",
+    "answer": {
+      "answer": 4224,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.1.3.q5",
+    "prompt": "192 \\times 198 =",
+    "topic": "multiplying_two_numbers_whose_units_add_to_10_and_the_rest_is_the_same",
+    "answer": {
+      "answer": 38016,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.1.3.q6",
+    "prompt": "111 \\times 119 =",
+    "topic": "multiplying_two_numbers_whose_units_add_to_10_and_the_rest_is_the_same",
+    "answer": {
+      "answer": 13209,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.1.3.q7",
+    "prompt": "333 \\times 337 =",
+    "topic": "multiplying_two_numbers_whose_units_add_to_10_and_the_rest_is_the_same",
+    "answer": {
+      "answer": 112221,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.1.3.q8",
+    "prompt": "221 \\times 229 =",
+    "topic": "multiplying_two_numbers_whose_units_add_to_10_and_the_rest_is_the_same",
+    "answer": {
+      "answer": 50609,
+      "type": "numeric"
+    }
+  }
+]

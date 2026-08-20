@@ -2,4 +2,16 @@ id: multiplying_reverses
 title: 'Multiplying Reverses'
 logo: assets/icons/number_sense.png
 bh_section: '1.2.11'
-questionIds: []
+questionIds:
+  - bh.1.2.11.q1
+  - bh.1.2.11.q2
+  - bh.1.2.11.q3
+  - bh.1.2.11.q4
+  - bh.1.2.11.q5
+  - bh.1.2.11.q6
+  - bh.1.2.11.q7
+  - bh.1.2.11.q8
+  - bh.1.2.11.q9
+  - bh.1.2.11.q10
+  - bh.1.2.11.q11
+  - bh.1.2.11.q12

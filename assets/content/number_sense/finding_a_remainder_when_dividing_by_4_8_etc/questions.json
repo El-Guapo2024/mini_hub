@@ -1,0 +1,65 @@
+[
+  {
+    "id": "bh.1.4.1.q1",
+    "prompt": "364 \\div 4 \\text{ has what remainder?}",
+    "topic": "finding_a_remainder_when_dividing_by_4_8_etc",
+    "answer": {
+      "answer": 0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.1.q2",
+    "prompt": "1324354 \\div 4 \\text{ has what remainder?}",
+    "topic": "finding_a_remainder_when_dividing_by_4_8_etc",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.1.q3",
+    "prompt": "246531 \\div 8 \\text{ has what remainder?}",
+    "topic": "finding_a_remainder_when_dividing_by_4_8_etc",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.1.q4",
+    "prompt": "81736259 \\div 4 \\text{ has what remainder?}",
+    "topic": "finding_a_remainder_when_dividing_by_4_8_etc",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.1.q5",
+    "prompt": "124680 \\div 8 \\text{ has what remainder?}",
+    "topic": "finding_a_remainder_when_dividing_by_4_8_etc",
+    "answer": {
+      "answer": 0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.1.q6",
+    "prompt": "214365 \\div 8 \\text{ has what remainder?}",
+    "topic": "finding_a_remainder_when_dividing_by_4_8_etc",
+    "answer": {
+      "answer": 5,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.1.q7",
+    "prompt": "Find k so that the five digit number 5318k is divisible by 8:",
+    "topic": "finding_a_remainder_when_dividing_by_4_8_etc",
+    "answer": {
+      "answer": 4,
+      "type": "numeric"
+    }
+  }
+]

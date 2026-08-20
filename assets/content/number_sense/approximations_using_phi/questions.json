@@ -1,0 +1,21 @@
+[
+  {
+    "id": "bh.4.2.4.q1",
+    "prompt": "(*) 3.1\\pi \\times 2.7e \\times 1.6\\phi =",
+    "topic": "approximations_using_phi",
+    "answer": {
+      "high": 194.0,
+      "low": 176.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.4.2.4.q2",
+    "prompt": "The greatest integer function is written as f(x) = [x]. Find [\\pi + e + \\phi].",
+    "topic": "approximations_using_phi",
+    "answer": {
+      "answer": 7,
+      "type": "numeric"
+    }
+  }
+]

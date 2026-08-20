@@ -1,0 +1,300 @@
+[
+  {
+    "id": "bh.3.1.6.q1",
+    "prompt": "6^{x} = 34, then 6^{x+2} =",
+    "topic": "exponent_rules",
+    "answer": {
+      "answer": 1224,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.6.q2",
+    "prompt": "3^{x} = 70.1, then 3^{x+2} =",
+    "topic": "exponent_rules",
+    "answer": {
+      "answer": 630.9,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.6.q3",
+    "prompt": "4^{x+1} = 2, then 4^{x-1} =",
+    "topic": "exponent_rules",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 8,
+      "display": "\\frac{1}{8}"
+    }
+  },
+  {
+    "id": "bh.3.1.6.q4",
+    "prompt": "6^{x} = 72, then 6^{x-2} =",
+    "topic": "exponent_rules",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.6.q5",
+    "prompt": "7^{x} = 14, then 7^{x-2} =",
+    "topic": "exponent_rules",
+    "answer": {
+      "type": "fraction",
+      "num": 2,
+      "den": 7,
+      "display": "\\frac{2}{7}"
+    }
+  },
+  {
+    "id": "bh.3.1.6.q6",
+    "prompt": "4^{x} = .125, then 4^{2x} =",
+    "topic": "exponent_rules",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 64,
+      "display": "\\frac{1}{64}"
+    }
+  },
+  {
+    "id": "bh.3.1.6.q7",
+    "prompt": "8^{x} = 17, then 8^{2x} =",
+    "topic": "exponent_rules",
+    "answer": {
+      "answer": 289,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.6.q8",
+    "prompt": "2^{x} = 14.6, then 2^{x+1} =",
+    "topic": "exponent_rules",
+    "answer": {
+      "answer": 29.2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.6.q9",
+    "prompt": "4^{x} = 32, then x =",
+    "topic": "exponent_rules",
+    "answer": {
+      "answer": 2.5,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.6.q10",
+    "prompt": "9^{x} = 108, then 3^{2x+1} =",
+    "topic": "exponent_rules",
+    "answer": {
+      "answer": 324,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.6.q11",
+    "prompt": "6^{2x} = 36, then 6^{3x} =",
+    "topic": "exponent_rules",
+    "answer": {
+      "answer": 216,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.6.q12",
+    "prompt": "8^{x} = 256, then x =",
+    "topic": "exponent_rules",
+    "answer": {
+      "type": "fraction",
+      "num": 8,
+      "den": 3,
+      "display": "2\\frac{2}{3}"
+    }
+  },
+  {
+    "id": "bh.3.1.6.q13",
+    "prompt": "27^{x} = 81, then x =",
+    "topic": "exponent_rules",
+    "answer": {
+      "type": "fraction",
+      "num": 4,
+      "den": 3,
+      "display": "\\frac{4}{3}"
+    }
+  },
+  {
+    "id": "bh.3.1.6.q14",
+    "prompt": "2^{8} \\div 4^{3} has a remainder of:",
+    "topic": "exponent_rules",
+    "answer": {
+      "answer": 0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.6.q15",
+    "prompt": "9^{x} = 27^{x+2}, then x =",
+    "topic": "exponent_rules",
+    "answer": {
+      "answer": -6,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.6.q16",
+    "prompt": "n^{4} = 49, then n^{6} =",
+    "topic": "exponent_rules",
+    "answer": {
+      "answer": 343,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.6.q17",
+    "prompt": "16^{x} = 169, then 4^{x} =",
+    "topic": "exponent_rules",
+    "answer": {
+      "answer": 13,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.6.q18",
+    "prompt": "5^{3x} = 25^{2+x}, then x =",
+    "topic": "exponent_rules",
+    "answer": {
+      "answer": 4,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.6.q19",
+    "prompt": "n^{6} = 1728, then n^{4} =",
+    "topic": "exponent_rules",
+    "answer": {
+      "answer": 144,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.6.q20",
+    "prompt": "4^{x} \\div 16^{x} = 4^{-2}, then x =",
+    "topic": "exponent_rules",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.6.q21",
+    "prompt": "6^{8} \\div 8 has a remainder of:",
+    "topic": "exponent_rules",
+    "answer": {
+      "answer": 0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.6.q22",
+    "prompt": "\\sqrt[3]{a^{4}} \\times \\sqrt[4]{a^{3}} = \\sqrt[12]{a^{n}}, n =",
+    "topic": "exponent_rules",
+    "answer": {
+      "answer": 25,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.6.q42",
+    "prompt": "3\\log_{2}x = 6, \\sqrt{x} =",
+    "topic": "exponent_rules",
+    "answer": {
+      "answer": 2.0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.6.q43",
+    "prompt": "\\log_{2}x = 9, \\sqrt[3]{x} =",
+    "topic": "exponent_rules",
+    "answer": {
+      "answer": 8.0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.6.q44",
+    "prompt": "\\log_{x}64 = 3, x^{-2} =",
+    "topic": "exponent_rules",
+    "answer": {
+      "answer": 0.0625,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.6.q45",
+    "prompt": "\\log_{9}x = 2, \\sqrt{x} =",
+    "topic": "exponent_rules",
+    "answer": {
+      "answer": 9.0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.6.q46",
+    "prompt": "\\log_{k}1728 = 3, k =",
+    "topic": "exponent_rules",
+    "answer": {
+      "answer": 12.0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.6.q47",
+    "prompt": "\\log_{4}x = 3, \\sqrt{x} =",
+    "topic": "exponent_rules",
+    "answer": {
+      "answer": 8.0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.6.q48",
+    "prompt": "\\log_{2}(\\log_{10}100) =",
+    "topic": "exponent_rules",
+    "answer": {
+      "answer": 1.0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.6.q49",
+    "prompt": "\\log_{x}64 = 1.5, x =",
+    "topic": "exponent_rules",
+    "answer": {
+      "answer": 16.0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.6.q50",
+    "prompt": "\\log_{8}(\\log_{4}16) =",
+    "topic": "exponent_rules",
+    "answer": {
+      "answer": 0.3333333333,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.6.q51",
+    "prompt": "\\log_{9}(\\log_{3}27) =",
+    "topic": "exponent_rules",
+    "answer": {
+      "answer": 0.5,
+      "type": "numeric"
+    }
+  }
+]

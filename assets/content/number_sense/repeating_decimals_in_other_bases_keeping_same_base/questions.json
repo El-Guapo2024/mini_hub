@@ -1,0 +1,156 @@
+[
+  {
+    "id": "bh.4.5.4.q1",
+    "prompt": "Change 0.\\overline{444}_{8} to a base-8 fraction. =",
+    "topic": "repeating_decimals_in_other_bases_keeping_same_base",
+    "answer": {
+      "answer": 0.5714285714285714,
+      "base": 8,
+      "display": "\\frac{4}{7}_{8}",
+      "type": "base"
+    }
+  },
+  {
+    "id": "bh.4.5.4.q2",
+    "prompt": "Change 0.\\overline{444}_{9} to a base-9 fraction. =",
+    "topic": "repeating_decimals_in_other_bases_keeping_same_base",
+    "answer": {
+      "answer": 0.5,
+      "base": 9,
+      "display": "\\frac{1}{2}_{9}",
+      "type": "base"
+    }
+  },
+  {
+    "id": "bh.4.5.4.q3",
+    "prompt": "Change 0.\\overline{333}_{8} to a base-8 fraction. =",
+    "topic": "repeating_decimals_in_other_bases_keeping_same_base",
+    "answer": {
+      "answer": 0.42857142857142855,
+      "base": 8,
+      "display": "\\frac{3}{7}_{8}",
+      "type": "base"
+    }
+  },
+  {
+    "id": "bh.4.5.4.q4",
+    "prompt": "Change 0.\\overline{444}_{7} to a base-7 fraction. =",
+    "topic": "repeating_decimals_in_other_bases_keeping_same_base",
+    "answer": {
+      "answer": 0.6666666666666666,
+      "base": 7,
+      "display": "\\frac{2}{3}_{7}",
+      "type": "base"
+    }
+  },
+  {
+    "id": "bh.4.5.4.q5",
+    "prompt": "Change 0.\\overline{777}_{9} to a base-9 fraction. =",
+    "topic": "repeating_decimals_in_other_bases_keeping_same_base",
+    "answer": {
+      "answer": 0.875,
+      "base": 9,
+      "display": "\\frac{7}{8}_{9}",
+      "type": "base"
+    }
+  },
+  {
+    "id": "bh.4.5.4.q6",
+    "prompt": "0.\\overline{31}_{5} = 5 (fraction)",
+    "topic": "repeating_decimals_in_other_bases_keeping_same_base",
+    "answer": {
+      "type": "fraction",
+      "num": 2,
+      "den": 3,
+      "display": "\\frac{2}{3}"
+    }
+  },
+  {
+    "id": "bh.4.5.4.q7",
+    "prompt": "Change 0.3\\overline{444}_{6} to a base-6 fraction. =",
+    "topic": "repeating_decimals_in_other_bases_keeping_same_base",
+    "answer": {
+      "answer": 0.6333333333333333,
+      "base": 6,
+      "display": "\\frac{31}{50}_{6}",
+      "type": "base"
+    }
+  },
+  {
+    "id": "bh.4.5.4.q8",
+    "prompt": "Change 0.4\\overline{777}_{8} to a base-8 fraction. =",
+    "topic": "repeating_decimals_in_other_bases_keeping_same_base",
+    "answer": {
+      "answer": 0.625,
+      "base": 8,
+      "display": "\\frac{43}{70}_{8}",
+      "type": "base"
+    }
+  },
+  {
+    "id": "bh.4.5.4.q9",
+    "prompt": "Change 0.3\\overline{222}_{7} to a base-7 fraction. =",
+    "topic": "repeating_decimals_in_other_bases_keeping_same_base",
+    "answer": {
+      "answer": 0.47619047619047616,
+      "base": 7,
+      "display": "\\frac{13}{30}_{7}",
+      "type": "base"
+    }
+  },
+  {
+    "id": "bh.4.5.4.q10",
+    "prompt": "Convert 0.1\\overline{666}_{8} to a base-8 fraction. =",
+    "topic": "repeating_decimals_in_other_bases_keeping_same_base",
+    "answer": {
+      "answer": 0.23214285714285715,
+      "base": 8,
+      "display": "\\frac{15}{70}_{8}",
+      "type": "base"
+    }
+  },
+  {
+    "id": "bh.4.5.4.q11",
+    "prompt": "Change 0.3\\overline{444}_{7} to a base-7 fraction. =",
+    "topic": "repeating_decimals_in_other_bases_keeping_same_base",
+    "answer": {
+      "answer": 0.5238095238095238,
+      "base": 7,
+      "display": "\\frac{31}{60}_{7}",
+      "type": "base"
+    }
+  },
+  {
+    "id": "bh.4.5.4.q12",
+    "prompt": "0.\\overline{23}_{5} = 5 (fraction)",
+    "topic": "repeating_decimals_in_other_bases_keeping_same_base",
+    "answer": {
+      "type": "fraction",
+      "num": 23,
+      "den": 44,
+      "display": "\\frac{23}{44}"
+    }
+  },
+  {
+    "id": "bh.4.5.4.q13",
+    "prompt": "0.1\\overline{313}_{5} = 5 (fraction)",
+    "topic": "repeating_decimals_in_other_bases_keeping_same_base",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 3,
+      "display": "\\frac{1}{3}"
+    }
+  },
+  {
+    "id": "bh.4.5.4.q14",
+    "prompt": "Change 0.1\\overline{444}_{6} to a base-6 fraction. =",
+    "topic": "repeating_decimals_in_other_bases_keeping_same_base",
+    "answer": {
+      "answer": 0.3,
+      "base": 6,
+      "display": "\\frac{3}{14}_{6}",
+      "type": "base"
+    }
+  }
+]

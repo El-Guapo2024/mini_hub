@@ -1,0 +1,57 @@
+[
+  {
+    "id": "bh.3.3.3.q1",
+    "prompt": ".2\\overline{3} =",
+    "topic": "in_the_form_abbbb",
+    "answer": {
+      "type": "fraction",
+      "num": 7,
+      "den": 30,
+      "display": "\\frac{7}{30}"
+    }
+  },
+  {
+    "id": "bh.3.3.3.q2",
+    "prompt": ".3\\overline{2} =",
+    "topic": "in_the_form_abbbb",
+    "answer": {
+      "type": "fraction",
+      "num": 29,
+      "den": 90,
+      "display": "\\frac{29}{90}"
+    }
+  },
+  {
+    "id": "bh.3.3.3.q3",
+    "prompt": ".2\\overline{1} =",
+    "topic": "in_the_form_abbbb",
+    "answer": {
+      "type": "fraction",
+      "num": 19,
+      "den": 90,
+      "display": "\\frac{19}{90}"
+    }
+  },
+  {
+    "id": "bh.3.3.3.q4",
+    "prompt": ".3\\overline{2} =",
+    "topic": "in_the_form_abbbb",
+    "answer": {
+      "type": "fraction",
+      "num": 29,
+      "den": 90,
+      "display": "\\frac{29}{90}"
+    }
+  },
+  {
+    "id": "bh.3.3.3.q5",
+    "prompt": ".01\\overline{2} =",
+    "topic": "in_the_form_abbbb",
+    "answer": {
+      "type": "fraction",
+      "num": 11,
+      "den": 900,
+      "display": "\\frac{11}{900}"
+    }
+  }
+]

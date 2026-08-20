@@ -1,0 +1,114 @@
+[
+  {
+    "id": "bh.3.1.8.q1",
+    "prompt": "\\sqrt{75} \\times \\sqrt{27} =",
+    "topic": "square_root_problems",
+    "answer": {
+      "answer": 45,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.8.q2",
+    "prompt": "\\sqrt{75} \\times \\sqrt{48} =",
+    "topic": "square_root_problems",
+    "answer": {
+      "answer": 60,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.8.q3",
+    "prompt": "\\sqrt{44} \\times \\sqrt{99} =",
+    "topic": "square_root_problems",
+    "answer": {
+      "answer": 66,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.8.q4",
+    "prompt": "\\sqrt{39} \\times \\sqrt{156} =",
+    "topic": "square_root_problems",
+    "answer": {
+      "answer": 78,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.8.q5",
+    "prompt": "\\sqrt{27} \\times \\sqrt{48} =",
+    "topic": "square_root_problems",
+    "answer": {
+      "answer": 36,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.8.q6",
+    "prompt": "\\sqrt{98 \\times 8} =",
+    "topic": "square_root_problems",
+    "answer": {
+      "answer": 28,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.8.q7",
+    "prompt": "\\sqrt{44 \\times 11} =",
+    "topic": "square_root_problems",
+    "answer": {
+      "answer": 22,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.8.q8",
+    "prompt": "\\sqrt{96 \\times 24} =",
+    "topic": "square_root_problems",
+    "answer": {
+      "answer": 48,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.8.q9",
+    "prompt": "\\sqrt{72 \\times 18} =",
+    "topic": "square_root_problems",
+    "answer": {
+      "answer": 36,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.8.q10",
+    "prompt": "\\sqrt{45} \\div \\sqrt{80} =",
+    "topic": "square_root_problems",
+    "answer": {
+      "type": "fraction",
+      "num": 3,
+      "den": 4,
+      "display": "\\frac{3}{4}"
+    }
+  },
+  {
+    "id": "bh.3.1.8.q11",
+    "prompt": "\\sqrt{28} \\div \\sqrt{63} =",
+    "topic": "square_root_problems",
+    "answer": {
+      "type": "fraction",
+      "num": 2,
+      "den": 3,
+      "display": "\\frac{2}{3}"
+    }
+  },
+  {
+    "id": "bh.3.1.8.q12",
+    "prompt": "\\sqrt[3]{125 \\times 512} =",
+    "topic": "square_root_problems",
+    "answer": {
+      "answer": 40,
+      "type": "numeric"
+    }
+  }
+]

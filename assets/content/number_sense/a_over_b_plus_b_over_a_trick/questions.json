@@ -1,0 +1,229 @@
+[
+  {
+    "id": "bh.1.5.4.q1",
+    "prompt": "\\frac{12}{13} + \\frac{13}{12} =",
+    "topic": "a_over_b_plus_b_over_a_trick",
+    "answer": {
+      "type": "fraction",
+      "num": 313,
+      "den": 156,
+      "display": "2\\frac{1}{156}"
+    }
+  },
+  {
+    "id": "bh.1.5.4.q2",
+    "prompt": "\\frac{5}{6} + \\frac{6}{5} =",
+    "topic": "a_over_b_plus_b_over_a_trick",
+    "answer": {
+      "type": "fraction",
+      "num": 61,
+      "den": 30,
+      "display": "2\\frac{1}{30}"
+    }
+  },
+  {
+    "id": "bh.1.5.4.q3",
+    "prompt": "\\frac{15}{19} + \\frac{19}{15} =",
+    "topic": "a_over_b_plus_b_over_a_trick",
+    "answer": {
+      "type": "fraction",
+      "num": 586,
+      "den": 285,
+      "display": "2\\frac{16}{285}"
+    }
+  },
+  {
+    "id": "bh.1.5.4.q4",
+    "prompt": "\\frac{3}{5} + \\frac{5}{3} - 2 =",
+    "topic": "a_over_b_plus_b_over_a_trick",
+    "answer": {
+      "type": "fraction",
+      "num": 4,
+      "den": 15,
+      "display": "\\frac{4}{15}"
+    }
+  },
+  {
+    "id": "bh.1.5.4.q5",
+    "prompt": "\\frac{7}{5} + \\frac{5}{7} - 1 =",
+    "topic": "a_over_b_plus_b_over_a_trick",
+    "answer": {
+      "type": "fraction",
+      "num": 39,
+      "den": 35,
+      "display": "1\\frac{4}{35}"
+    }
+  },
+  {
+    "id": "bh.1.5.4.q6",
+    "prompt": "\\frac{11}{13} + \\frac{2}{11} =",
+    "topic": "a_over_b_plus_b_over_a_trick",
+    "answer": {
+      "type": "fraction",
+      "num": 147,
+      "den": 143,
+      "display": "1\\frac{4}{143}"
+    }
+  },
+  {
+    "id": "bh.1.5.4.q7",
+    "prompt": "\\frac{7}{13} + \\frac{6}{7} =",
+    "topic": "a_over_b_plus_b_over_a_trick",
+    "answer": {
+      "type": "fraction",
+      "num": 127,
+      "den": 91,
+      "display": "1\\frac{36}{91}"
+    }
+  },
+  {
+    "id": "bh.1.5.4.q8",
+    "prompt": "\\frac{5}{6} + 1\\frac{1}{5} - 2 =",
+    "topic": "a_over_b_plus_b_over_a_trick",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 30,
+      "display": "\\frac{1}{30}"
+    }
+  },
+  {
+    "id": "bh.1.5.4.q9",
+    "prompt": "\\frac{13}{15} + \\frac{2}{13} =",
+    "topic": "a_over_b_plus_b_over_a_trick",
+    "answer": {
+      "type": "fraction",
+      "num": 199,
+      "den": 195,
+      "display": "1\\frac{4}{195}"
+    }
+  },
+  {
+    "id": "bh.1.5.4.q10",
+    "prompt": "\\frac{5}{8} + \\frac{8}{5} - \\frac{9}{40} =",
+    "topic": "a_over_b_plus_b_over_a_trick",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.5.4.q11",
+    "prompt": "\\frac{3}{5} + \\frac{5}{3} + \\frac{11}{15} =",
+    "topic": "a_over_b_plus_b_over_a_trick",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.5.4.q12",
+    "prompt": "\\frac{5}{7} + \\frac{7}{5} - 3 =",
+    "topic": "a_over_b_plus_b_over_a_trick",
+    "answer": {
+      "type": "fraction",
+      "num": -31,
+      "den": 35,
+      "display": "-\\frac{31}{35}"
+    }
+  },
+  {
+    "id": "bh.1.5.4.q13",
+    "prompt": "\\frac{15}{17} + \\frac{2}{15} =",
+    "topic": "a_over_b_plus_b_over_a_trick",
+    "answer": {
+      "type": "fraction",
+      "num": 259,
+      "den": 255,
+      "display": "1\\frac{4}{255}"
+    }
+  },
+  {
+    "id": "bh.1.5.4.q14",
+    "prompt": "\\frac{11}{15} + \\frac{4}{11} =",
+    "topic": "a_over_b_plus_b_over_a_trick",
+    "answer": {
+      "type": "fraction",
+      "num": 181,
+      "den": 165,
+      "display": "1\\frac{16}{165}"
+    }
+  },
+  {
+    "id": "bh.1.5.4.q15",
+    "prompt": "\\frac{11}{13} + \\frac{2}{11} =",
+    "topic": "a_over_b_plus_b_over_a_trick",
+    "answer": {
+      "type": "fraction",
+      "num": 147,
+      "den": 143,
+      "display": "1\\frac{4}{143}"
+    }
+  },
+  {
+    "id": "bh.1.5.4.q16",
+    "prompt": "\\frac{14}{15} + \\frac{1}{14} =",
+    "topic": "a_over_b_plus_b_over_a_trick",
+    "answer": {
+      "type": "fraction",
+      "num": 211,
+      "den": 210,
+      "display": "1\\frac{1}{210}"
+    }
+  },
+  {
+    "id": "bh.1.5.4.q17",
+    "prompt": "1\\frac{12}{13} + 1\\frac{1}{12} =",
+    "topic": "a_over_b_plus_b_over_a_trick",
+    "answer": {
+      "type": "fraction",
+      "num": 469,
+      "den": 156,
+      "display": "3\\frac{1}{156}"
+    }
+  },
+  {
+    "id": "bh.1.5.4.q18",
+    "prompt": "\\left(\\frac{5}{7} + \\frac{7}{5}\\right) \\div 2 =",
+    "topic": "a_over_b_plus_b_over_a_trick",
+    "answer": {
+      "type": "fraction",
+      "num": 37,
+      "den": 35,
+      "display": "1\\frac{2}{35}"
+    }
+  },
+  {
+    "id": "bh.1.5.4.q19",
+    "prompt": "\\frac{11}{12} + \\frac{1}{11} =",
+    "topic": "a_over_b_plus_b_over_a_trick",
+    "answer": {
+      "type": "fraction",
+      "num": 133,
+      "den": 132,
+      "display": "1\\frac{1}{132}"
+    }
+  },
+  {
+    "id": "bh.1.5.4.q20",
+    "prompt": "\\frac{15}{22} + \\frac{7}{15} - 1 =",
+    "topic": "a_over_b_plus_b_over_a_trick",
+    "answer": {
+      "type": "fraction",
+      "num": 49,
+      "den": 330,
+      "display": "\\frac{49}{330}"
+    }
+  },
+  {
+    "id": "bh.1.5.4.q21",
+    "prompt": "\\frac{11}{14} + \\frac{3}{11} - 2 =",
+    "topic": "a_over_b_plus_b_over_a_trick",
+    "answer": {
+      "type": "fraction",
+      "num": -145,
+      "den": 154,
+      "display": "-\\frac{145}{154}"
+    }
+  }
+]

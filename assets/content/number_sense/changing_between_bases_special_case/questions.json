@@ -1,0 +1,137 @@
+[
+  {
+    "id": "bh.3.2.4.q1",
+    "prompt": "46_{9} = {}_{3}",
+    "topic": "changing_between_bases_special_case",
+    "answer": {
+      "answer": 1120,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.4.q2",
+    "prompt": "48_{9} = {}_{3}",
+    "topic": "changing_between_bases_special_case",
+    "answer": {
+      "answer": 1122,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.4.q3",
+    "prompt": "1011011_{2} = {}_{8}",
+    "topic": "changing_between_bases_special_case",
+    "answer": {
+      "answer": 133,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.4.q4",
+    "prompt": "123_{4} = {}_{2}",
+    "topic": "changing_between_bases_special_case",
+    "answer": {
+      "answer": 11011,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.4.q5",
+    "prompt": "2122_{3} = {}_{9}",
+    "topic": "changing_between_bases_special_case",
+    "answer": {
+      "answer": 78,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.4.q6",
+    "prompt": "345_{8} = {}_{2}",
+    "topic": "changing_between_bases_special_case",
+    "answer": {
+      "answer": 11100101,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.4.q7",
+    "prompt": "123_{4} = {}_{2}",
+    "topic": "changing_between_bases_special_case",
+    "answer": {
+      "answer": 11011,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.4.q8",
+    "prompt": "101011_{2} = {}_{4}",
+    "topic": "changing_between_bases_special_case",
+    "answer": {
+      "answer": 223,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.4.q9",
+    "prompt": "231_{4} = {}_{2}",
+    "topic": "changing_between_bases_special_case",
+    "answer": {
+      "answer": 101101,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.4.q10",
+    "prompt": "432_{8} = {}_{2}",
+    "topic": "changing_between_bases_special_case",
+    "answer": {
+      "answer": 100011010,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.4.q11",
+    "prompt": "312_{4} = {}_{2}",
+    "topic": "changing_between_bases_special_case",
+    "answer": {
+      "answer": 110110,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.4.q12",
+    "prompt": "1111_{2} = {}_{4}",
+    "topic": "changing_between_bases_special_case",
+    "answer": {
+      "answer": 33,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.4.q13",
+    "prompt": "1011_{2} = {}_{4}",
+    "topic": "changing_between_bases_special_case",
+    "answer": {
+      "answer": 23,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.4.q14",
+    "prompt": "123_{4} = {}_{2}",
+    "topic": "changing_between_bases_special_case",
+    "answer": {
+      "answer": 11011,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.4.q15",
+    "prompt": "11011_{2} = {}_{4}",
+    "topic": "changing_between_bases_special_case",
+    "answer": {
+      "answer": 123,
+      "type": "numeric"
+    }
+  }
+]

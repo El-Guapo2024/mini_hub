@@ -2,4 +2,13 @@ id: squares_ending_in_5_trick
 title: 'Squares Ending in 5 Trick'
 logo: assets/icons/number_sense.png
 bh_section: '1.2.8'
-questionIds: []
+questionIds:
+  - bh.1.2.8.q1
+  - bh.1.2.8.q2
+  - bh.1.2.8.q3
+  - bh.1.2.8.q4
+  - bh.1.2.8.q5
+  - bh.1.2.8.q6
+  - bh.1.2.8.q7
+  - bh.1.2.8.q8
+  - bh.1.2.8.q9

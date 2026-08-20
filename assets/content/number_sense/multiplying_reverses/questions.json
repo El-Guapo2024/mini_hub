@@ -1,0 +1,110 @@
+[
+  {
+    "id": "bh.1.2.11.q1",
+    "prompt": "43 \\times 34 =",
+    "topic": "multiplying_reverses",
+    "answer": {
+      "answer": 1462,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.11.q2",
+    "prompt": "23 \\times 32 =",
+    "topic": "multiplying_reverses",
+    "answer": {
+      "answer": 736,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.11.q3",
+    "prompt": "31 \\times 13 =",
+    "topic": "multiplying_reverses",
+    "answer": {
+      "answer": 403,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.11.q4",
+    "prompt": "21 \\times 12 =",
+    "topic": "multiplying_reverses",
+    "answer": {
+      "answer": 252,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.11.q5",
+    "prompt": "27 \\times 72 =",
+    "topic": "multiplying_reverses",
+    "answer": {
+      "answer": 1944,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.11.q6",
+    "prompt": "61 \\times 16 =",
+    "topic": "multiplying_reverses",
+    "answer": {
+      "answer": 976,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.11.q7",
+    "prompt": "15 \\times 51 =",
+    "topic": "multiplying_reverses",
+    "answer": {
+      "answer": 765,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.11.q8",
+    "prompt": "14 \\times 41 =",
+    "topic": "multiplying_reverses",
+    "answer": {
+      "answer": 574,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.11.q9",
+    "prompt": "18 \\times 81 =",
+    "topic": "multiplying_reverses",
+    "answer": {
+      "answer": 1458,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.11.q10",
+    "prompt": "36 \\times 63 =",
+    "topic": "multiplying_reverses",
+    "answer": {
+      "answer": 2268,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.11.q11",
+    "prompt": "42 \\times 24 =",
+    "topic": "multiplying_reverses",
+    "answer": {
+      "answer": 1008,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.11.q12",
+    "prompt": "26 \\times 62 =",
+    "topic": "multiplying_reverses",
+    "answer": {
+      "answer": 1612,
+      "type": "numeric"
+    }
+  }
+]

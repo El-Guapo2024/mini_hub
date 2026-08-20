@@ -2,4 +2,23 @@ id: converting_decimals
 title: 'Converting Decimals'
 logo: assets/icons/number_sense.png
 bh_section: '3.2.2'
-questionIds: []
+questionIds:
+  - bh.3.2.2.q1
+  - bh.3.2.2.q2
+  - bh.3.2.2.q3
+  - bh.3.2.2.q4
+  - bh.3.2.2.q5
+  - bh.3.2.2.q6
+  - bh.3.2.2.q7
+  - bh.3.2.2.q8
+  - bh.3.2.2.q9
+  - bh.3.2.2.q10
+  - bh.3.2.2.q11
+  - bh.3.2.2.q12
+  - bh.3.2.2.q13
+  - bh.3.2.2.q14
+  - bh.3.2.2.q15
+  - bh.3.2.2.q16
+  - bh.3.2.2.q17
+  - bh.3.2.2.q18
+  - bh.3.2.2.q19

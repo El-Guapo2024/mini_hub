@@ -1,0 +1,196 @@
+[
+  {
+    "id": "bh.1.4.7.q1",
+    "prompt": "\\frac{1}{40} = ___ \\%",
+    "topic": "converting_a_and_b_etc_to_decimals",
+    "answer": {
+      "answer": 2.5,
+      "type": "numeric",
+      "unit": "%"
+    }
+  },
+  {
+    "id": "bh.1.4.7.q2",
+    "prompt": "\\frac{3}{40} = ___ \\%",
+    "topic": "converting_a_and_b_etc_to_decimals",
+    "answer": {
+      "answer": 7.5,
+      "type": "numeric",
+      "unit": "%"
+    }
+  },
+  {
+    "id": "bh.1.4.7.q3",
+    "prompt": "\\frac{7}{40} = ___ \\%",
+    "topic": "converting_a_and_b_etc_to_decimals",
+    "answer": {
+      "answer": 17.5,
+      "type": "numeric",
+      "unit": "%"
+    }
+  },
+  {
+    "id": "bh.1.4.7.q4",
+    "prompt": "\\frac{21}{40} = ___ \\%",
+    "topic": "converting_a_and_b_etc_to_decimals",
+    "answer": {
+      "answer": 52.5,
+      "type": "numeric",
+      "unit": "%"
+    }
+  },
+  {
+    "id": "bh.1.4.7.q5",
+    "prompt": "\\frac{43}{40} = ___ (dec.)",
+    "topic": "converting_a_and_b_etc_to_decimals",
+    "answer": {
+      "answer": 1.075,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.7.q6",
+    "prompt": "\\frac{3}{(2^{3})(5^{1})} = ___ (dec.)",
+    "topic": "converting_a_and_b_etc_to_decimals",
+    "answer": {
+      "answer": 0.075,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.7.q7",
+    "prompt": ".0125 = ___ \\% (frac.)",
+    "topic": "converting_a_and_b_etc_to_decimals",
+    "answer": {
+      "type": "fraction",
+      "num": 5,
+      "den": 4,
+      "display": "1\\frac{1}{4}"
+    }
+  },
+  {
+    "id": "bh.1.4.7.q8",
+    "prompt": "48 is ___ % greater than 40",
+    "topic": "converting_a_and_b_etc_to_decimals",
+    "answer": {
+      "answer": 20,
+      "type": "numeric",
+      "unit": "%"
+    }
+  },
+  {
+    "id": "bh.1.4.7.q9",
+    "prompt": "\\frac{7}{40} = ___ \\%",
+    "topic": "converting_a_and_b_etc_to_decimals",
+    "answer": {
+      "answer": 17.5,
+      "type": "numeric",
+      "unit": "%"
+    }
+  },
+  {
+    "id": "bh.1.4.7.q10",
+    "prompt": "32 is what % of 80?",
+    "topic": "converting_a_and_b_etc_to_decimals",
+    "answer": {
+      "answer": 40,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.7.q11",
+    "prompt": "\\frac{11}{40} = ___ \\%",
+    "topic": "converting_a_and_b_etc_to_decimals",
+    "answer": {
+      "answer": 27.5,
+      "type": "numeric",
+      "unit": "%"
+    }
+  },
+  {
+    "id": "bh.1.4.7.q12",
+    "prompt": "\\frac{3^{2}}{(2^{3})(5^{2})} = ___ (dec.)",
+    "topic": "converting_a_and_b_etc_to_decimals",
+    "answer": {
+      "answer": 0.045,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.7.q13",
+    "prompt": "72 is what % of 400?",
+    "topic": "converting_a_and_b_etc_to_decimals",
+    "answer": {
+      "answer": 18,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.7.q14",
+    "prompt": "\\frac{5}{(2^{3})(5^{2})} = ___ (dec.)",
+    "topic": "converting_a_and_b_etc_to_decimals",
+    "answer": {
+      "answer": 0.025,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.7.q15",
+    "prompt": "4\\frac{7}{20} = ___ \\%",
+    "topic": "converting_a_and_b_etc_to_decimals",
+    "answer": {
+      "answer": 435,
+      "type": "numeric",
+      "unit": "%"
+    }
+  },
+  {
+    "id": "bh.1.4.7.q16",
+    "prompt": "\\frac{5}{80} = ___ \\%",
+    "topic": "converting_a_and_b_etc_to_decimals",
+    "answer": {
+      "answer": 6.25,
+      "type": "numeric",
+      "unit": "%"
+    }
+  },
+  {
+    "id": "bh.1.4.7.q17",
+    "prompt": "27.5\\% = ___ (frac.)",
+    "topic": "converting_a_and_b_etc_to_decimals",
+    "answer": {
+      "type": "fraction",
+      "num": 11,
+      "den": 40,
+      "display": "\\frac{11}{40}"
+    }
+  },
+  {
+    "id": "bh.1.4.7.q18",
+    "prompt": "\\frac{4^{3}}{(2^{3})(5^{2})} = ___ (dec.)",
+    "topic": "converting_a_and_b_etc_to_decimals",
+    "answer": {
+      "answer": 0.32,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.7.q19",
+    "prompt": "1.6 is ___ % of 20",
+    "topic": "converting_a_and_b_etc_to_decimals",
+    "answer": {
+      "answer": 8,
+      "type": "numeric",
+      "unit": "%"
+    }
+  },
+  {
+    "id": "bh.1.4.7.q20",
+    "prompt": "\\frac{3^{4}}{(2^{4})(5^{4})} = ___ (dec.)",
+    "topic": "converting_a_and_b_etc_to_decimals",
+    "answer": {
+      "answer": 0.0081,
+      "type": "numeric"
+    }
+  }
+]

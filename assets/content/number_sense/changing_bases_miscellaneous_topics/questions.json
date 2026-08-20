@@ -1,0 +1,55 @@
+[
+  {
+    "id": "bh.3.2.6.q1",
+    "prompt": ".\\overline{5}_{7} = {}_{10}",
+    "topic": "changing_bases_miscellaneous_topics",
+    "answer": {
+      "type": "fraction",
+      "num": 5,
+      "den": 6,
+      "display": "\\frac{5}{6}"
+    }
+  },
+  {
+    "id": "bh.3.2.6.q2",
+    "prompt": "The remainder when 123456_{7} is divided by 6 is:",
+    "topic": "changing_bases_miscellaneous_topics",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.6.q3",
+    "prompt": ".\\overline{6}_{8} = {}_{10}",
+    "topic": "changing_bases_miscellaneous_topics",
+    "answer": {
+      "type": "fraction",
+      "num": 6,
+      "den": 7,
+      "display": "\\frac{6}{7}"
+    }
+  },
+  {
+    "id": "bh.3.2.6.q4",
+    "prompt": ".\\overline{7}_{9} = {}_{10}",
+    "topic": "changing_bases_miscellaneous_topics",
+    "answer": {
+      "type": "fraction",
+      "num": 7,
+      "den": 8,
+      "display": "\\frac{7}{8}"
+    }
+  },
+  {
+    "id": "bh.3.2.6.q5",
+    "prompt": ".\\overline{1}_{5} = {}_{10}",
+    "topic": "changing_bases_miscellaneous_topics",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 4,
+      "display": "\\frac{1}{4}"
+    }
+  }
+]

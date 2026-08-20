@@ -1,0 +1,75 @@
+[
+  {
+    "id": "bh.2.2.8.q1",
+    "prompt": "The sides of an equilateral triangle are 2\\sqrt{3} cm, then its height is:",
+    "topic": "equilateral_triangle_formulas",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.8.q2",
+    "prompt": "The area of an equilateral triangle is 9\\sqrt{3} cm^{2}, then its side length is:",
+    "topic": "equilateral_triangle_formulas",
+    "answer": {
+      "answer": 6,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.8.q3",
+    "prompt": "If the area of an equilateral triangle is 3\\sqrt{3} ft^{2} then its side length is:",
+    "topic": "equilateral_triangle_formulas",
+    "answer": {
+      "answer": 3.4641016151377544,
+      "display": "2\\sqrt{3}",
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.8.q4",
+    "prompt": "The height of an equilateral triangle is 12 in. Its area is 4k\\sqrt{3}, k =",
+    "topic": "equilateral_triangle_formulas",
+    "answer": {
+      "answer": 12,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.8.q5",
+    "prompt": "The perimeter of an equilateral triangle is 12 cm. Its area is k\\sqrt{3} cm^{2}. k =",
+    "topic": "equilateral_triangle_formulas",
+    "answer": {
+      "answer": 4,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.8.q6",
+    "prompt": "Find the perimeter of an equilateral triangle whose area is 9\\sqrt{3} cm^{2}:",
+    "topic": "equilateral_triangle_formulas",
+    "answer": {
+      "answer": 18,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.8.q7",
+    "prompt": "The area of an equilateral triangle is 3\\sqrt{3} in^{2}. Its height is:",
+    "topic": "equilateral_triangle_formulas",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.8.q8",
+    "prompt": "An equilateral triangle has an area of 27\\sqrt{3} cm^{2}. Its height is:",
+    "topic": "equilateral_triangle_formulas",
+    "answer": {
+      "answer": 9,
+      "type": "numeric"
+    }
+  }
+]

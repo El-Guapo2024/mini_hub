@@ -2,4 +2,34 @@ id: probability_and_odds
 title: 'Units Digits (Powers)'
 logo: assets/icons/number_sense.png
 bh_section: '3.1.13'
-questionIds: []
+questionIds:
+  - bh.3.1.13.q1
+  - bh.3.1.13.q2
+  - bh.3.1.13.q3
+  - bh.3.1.13.q4
+  - bh.3.1.13.q5
+  - bh.3.1.13.q6
+  - bh.3.1.13.q7
+  - bh.3.1.13.q8
+  - bh.3.1.13.q9
+  - bh.3.1.13.q10
+  - bh.3.1.13.q11
+  - bh.3.1.13.q12
+  - bh.3.1.13.q13
+  - bh.3.1.13.q14
+  - bh.3.1.13.q15
+  - bh.3.1.13.q16
+  - bh.3.1.13.q17
+  - bh.3.1.13.q18
+  - bh.3.1.13.q19
+  - bh.3.1.13.q20
+  - bh.3.1.13.q21
+  - bh.3.1.13.q22
+  - bh.3.1.13.q23
+  - bh.3.1.13.q24
+  - bh.3.1.13.q25
+  - bh.3.1.13.q26
+  - bh.3.1.13.q27
+  - bh.3.1.13.q28
+  - bh.3.1.13.q29
+  - bh.3.1.13.q30

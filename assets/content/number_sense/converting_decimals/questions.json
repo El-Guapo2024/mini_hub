@@ -1,0 +1,199 @@
+[
+  {
+    "id": "bh.3.2.2.q1",
+    "prompt": "Change .32_{5} to a base-10 fraction:",
+    "topic": "converting_decimals",
+    "answer": {
+      "type": "fraction",
+      "num": 17,
+      "den": 25,
+      "display": "\\frac{17}{25}"
+    }
+  },
+  {
+    "id": "bh.3.2.2.q2",
+    "prompt": "Change .34_{5} to a base-10 fraction:",
+    "topic": "converting_decimals",
+    "answer": {
+      "type": "fraction",
+      "num": 19,
+      "den": 25,
+      "display": "\\frac{19}{25}"
+    }
+  },
+  {
+    "id": "bh.3.2.2.q3",
+    "prompt": "Change .111_{7} to a base-10 fraction:",
+    "topic": "converting_decimals",
+    "answer": {
+      "type": "fraction",
+      "num": 57,
+      "den": 343,
+      "display": "\\frac{57}{343}"
+    }
+  },
+  {
+    "id": "bh.3.2.2.q4",
+    "prompt": "Change .33_{4} to a base-10 fraction:",
+    "topic": "converting_decimals",
+    "answer": {
+      "type": "fraction",
+      "num": 15,
+      "den": 16,
+      "display": "\\frac{15}{16}"
+    }
+  },
+  {
+    "id": "bh.3.2.2.q5",
+    "prompt": "(*) Change .234_{5} to a base-10 fraction:",
+    "topic": "converting_decimals",
+    "answer": {
+      "type": "fraction",
+      "num": 69,
+      "den": 125,
+      "display": "\\frac{69}{125}"
+    }
+  },
+  {
+    "id": "bh.3.2.2.q6",
+    "prompt": "Change .44_{8} to a base-10 fraction:",
+    "topic": "converting_decimals",
+    "answer": {
+      "type": "fraction",
+      "num": 9,
+      "den": 16,
+      "display": "\\frac{9}{16}"
+    }
+  },
+  {
+    "id": "bh.3.2.2.q7",
+    "prompt": "Change .33_{6} to a base-10 fraction:",
+    "topic": "converting_decimals",
+    "answer": {
+      "type": "fraction",
+      "num": 7,
+      "den": 12,
+      "display": "\\frac{7}{12}"
+    }
+  },
+  {
+    "id": "bh.3.2.2.q8",
+    "prompt": "Change .66_{12} to a base-10 fraction:",
+    "topic": "converting_decimals",
+    "answer": {
+      "type": "fraction",
+      "num": 13,
+      "den": 24,
+      "display": "\\frac{13}{24}"
+    }
+  },
+  {
+    "id": "bh.3.2.2.q9",
+    "prompt": "Change .202_{5} to a base-10 fraction:",
+    "topic": "converting_decimals",
+    "answer": {
+      "type": "fraction",
+      "num": 52,
+      "den": 125,
+      "display": "\\frac{52}{125}"
+    }
+  },
+  {
+    "id": "bh.3.2.2.q10",
+    "prompt": "Change .55_{6} to a base-10 fraction:",
+    "topic": "converting_decimals",
+    "answer": {
+      "type": "fraction",
+      "num": 35,
+      "den": 36,
+      "display": "\\frac{35}{36}"
+    }
+  },
+  {
+    "id": "bh.3.2.2.q11",
+    "prompt": "(*) Change .444_{5} to a base-10 fraction:",
+    "topic": "converting_decimals",
+    "answer": {
+      "type": "fraction",
+      "num": 124,
+      "den": 125,
+      "display": "\\frac{124}{125}"
+    }
+  },
+  {
+    "id": "bh.3.2.2.q12",
+    "prompt": "Change .44_{5} to a base-10 decimal:",
+    "topic": "converting_decimals",
+    "answer": {
+      "type": "fraction",
+      "num": 24,
+      "den": 25,
+      "display": "\\frac{24}{25}"
+    }
+  },
+  {
+    "id": "bh.3.2.2.q13",
+    "prompt": "Change .14_{5} to a base-10 decimal:",
+    "topic": "converting_decimals",
+    "answer": {
+      "type": "fraction",
+      "num": 9,
+      "den": 25,
+      "display": "\\frac{9}{25}"
+    }
+  },
+  {
+    "id": "bh.3.2.2.q14",
+    "prompt": "Change \\frac{9}{16} to a base-4 decimal:",
+    "topic": "converting_decimals",
+    "answer": {
+      "answer": 0.21,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.2.q15",
+    "prompt": "Change \\frac{35}{36} to a base-6 decimal:",
+    "topic": "converting_decimals",
+    "answer": {
+      "answer": 0.55,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.2.q16",
+    "prompt": "Change \\frac{15}{16} to a base-4 decimal:",
+    "topic": "converting_decimals",
+    "answer": {
+      "answer": 0.33,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.2.q17",
+    "prompt": "Change \\frac{15}{16} to a base-8 decimal:",
+    "topic": "converting_decimals",
+    "answer": {
+      "answer": 0.74,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.2.q18",
+    "prompt": "Change \\frac{11}{25} to a base-5 decimal:",
+    "topic": "converting_decimals",
+    "answer": {
+      "answer": 0.21,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.2.q19",
+    "prompt": "Change \\frac{30}{49} to a base-7 decimal:",
+    "topic": "converting_decimals",
+    "answer": {
+      "answer": 0.42,
+      "type": "numeric"
+    }
+  }
+]

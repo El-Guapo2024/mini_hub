@@ -2,4 +2,23 @@ id: adding_consecutive_terms_of_arbitrary_fibonacci_sequence_method_2
 title: 'Adding Consecutive Terms of Arbitrary Fibonacci Sequence, Method 2'
 logo: assets/icons/number_sense.png
 bh_section: '4.3.2'
-questionIds: []
+questionIds:
+  - bh.4.3.2.q1
+  - bh.4.3.2.q2
+  - bh.4.3.2.q3
+  - bh.4.3.2.q4
+  - bh.4.3.2.q5
+  - bh.4.3.2.q6
+  - bh.4.3.2.q7
+  - bh.4.3.2.q8
+  - bh.4.3.2.q9
+  - bh.4.3.2.q10
+  - bh.4.3.2.q11
+  - bh.4.3.2.q12
+  - bh.4.3.2.q13
+  - bh.4.3.2.q14
+  - bh.4.3.2.q15
+  - bh.4.3.2.q16
+  - bh.4.3.2.q17
+  - bh.4.3.2.q18
+  - bh.4.3.2.q19

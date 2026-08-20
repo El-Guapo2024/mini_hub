@@ -1,0 +1,640 @@
+[
+  {
+    "id": "bh.1.3.2.q1",
+    "prompt": "8^{2} + 24^{2} =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 640,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q2",
+    "prompt": "27^{2} + 9^{2} =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 810,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q3",
+    "prompt": "15 \\times 12 + 9 \\times 30 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 450,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q4",
+    "prompt": "28 \\times 6 - 12 \\times 14 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q5",
+    "prompt": "33^{2} + 11^{2} =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 1210,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q6",
+    "prompt": "48 \\times 22 - 22 \\times 78 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": -660,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q7",
+    "prompt": "3.9^{2} + 1.3^{2} =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 16.9,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q8",
+    "prompt": "2004 + 2004 \\times 4 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 10020,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q9",
+    "prompt": "32 \\times 16 + 16 \\times 48 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 1280,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q10",
+    "prompt": "19^{2} + 19 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 380,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q11",
+    "prompt": "2005 \\times 5 + 2005 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 12030,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q12",
+    "prompt": "27 \\times 33 - 11 \\times 81 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q13",
+    "prompt": "21 \\times 38 - 17 \\times 21 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 441,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q14",
+    "prompt": "40 \\times 12 + 20 \\times 24 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 960,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q15",
+    "prompt": "51^{2} + 51 \\times 49 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 5100,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q16",
+    "prompt": "30 \\times 11 + 22 \\times 15 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 660,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q17",
+    "prompt": "21^{2} + 7^{2} =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 490,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q18",
+    "prompt": "2006 - 2006 \\times 6 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": -10030,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q19",
+    "prompt": "12 \\times 16 + 8 \\times 24 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 384,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q20",
+    "prompt": "1.2^{2} + 3.6^{2} =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 14.4,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q21",
+    "prompt": "14 \\times 44 - 14 \\times 30 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 196,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q22",
+    "prompt": "60 \\times 32 - 32 \\times 28 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 1024,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q23",
+    "prompt": "45 \\times 22 - 44 \\times 15 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 330,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q24",
+    "prompt": "(20 \\times 44) - (18 \\times 22) =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 484,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q25",
+    "prompt": "49^{2} + 49 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 2450,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q26",
+    "prompt": "29^{2} + 29 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 870,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q27",
+    "prompt": "16 \\times 66 - 16 \\times 50 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 256,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q28",
+    "prompt": "59^{2} + 59 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 3540,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q29",
+    "prompt": "14 \\times 38 - 14 \\times 52 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": -196,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q30",
+    "prompt": "41 \\times 17 - 17 \\times 24 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 289,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q31",
+    "prompt": "17 \\times 34 - 51 \\times 17 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": -289,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q32",
+    "prompt": "15 \\times 36 + 12 \\times 45 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 1080,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q33",
+    "prompt": "69^{2} + 69 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 4830,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q34",
+    "prompt": "13 \\times 77 + 91 \\times 11 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 2002,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q35",
+    "prompt": "11^{3} - 11^{2} =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 1210,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q36",
+    "prompt": "12 \\times 90 + 72 \\times 15 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 2160,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q37",
+    "prompt": "79^{2} + 79 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 6320,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q38",
+    "prompt": "54 \\times 11 + 99 \\times 6 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 1188,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q39",
+    "prompt": "10 \\cdot 11 + 11 \\cdot 11 + 12 \\cdot 11 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 363,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q40",
+    "prompt": "119^{2} + 119 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 14280,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q41",
+    "prompt": "39^{2} + 39 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 1560,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q42",
+    "prompt": "18 \\times 36 - 18 \\times 54 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": -324,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q43",
+    "prompt": "22 \\times 75 + 110 \\times 15 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 3300,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q44",
+    "prompt": "99 \\times 99 + 99 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 9900,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q45",
+    "prompt": "45 \\times 16 - 24 \\times 30 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q46",
+    "prompt": "11^{2} - 11^{3} =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": -1210,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q47",
+    "prompt": "25 \\times 77 + 25 \\times 34 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 2775,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q48",
+    "prompt": "15 \\times 18 + 9 \\times 30 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 540,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q49",
+    "prompt": "24 \\times 13 + 24 \\times 11 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 576,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q50",
+    "prompt": "129 \\times 129 + 129 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 16770,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q51",
+    "prompt": "13 \\times 15 + 11 \\times 65 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 910,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q52",
+    "prompt": "(*) 33 \\times 31 + 31 \\times 29 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "high": 2019.0,
+      "low": 1825.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q53",
+    "prompt": "31 \\times 44 + 44 \\times 44 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 3300,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q54",
+    "prompt": "12^{2} + 24^{2} =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 720,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q55",
+    "prompt": "(*) 73 \\times 86 + 77 \\times 84 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "high": 13384.0,
+      "low": 12108.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q56",
+    "prompt": "(*) 63 \\times 119 + 121 \\times 17 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "high": 10032.0,
+      "low": 9076.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q57",
+    "prompt": "48 \\times 11 + 44 \\times 12 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 1056,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q58",
+    "prompt": "109^{2} + 109 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 11990,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q59",
+    "prompt": "(*) 38 \\times 107 + 47 \\times 93 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "high": 8859.0,
+      "low": 8015.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q60",
+    "prompt": "64 \\times 21 - 42 \\times 16 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 672,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q61",
+    "prompt": "(*) 23 \\times 34 + 43 \\times 32 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "high": 2266.0,
+      "low": 2050.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q62",
+    "prompt": "72 \\times 11 + 99 \\times 8 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 1584,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q63",
+    "prompt": "(*) 43 \\times 56 + 47 \\times 54 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "high": 5194.0,
+      "low": 4698.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q64",
+    "prompt": "15 \\times 75 + 45 \\times 25 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 2250,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q65",
+    "prompt": "42 \\times 48 + 63 \\times 42 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 4662,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q66",
+    "prompt": "14^{2} - 28^{2} =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": -588,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q67",
+    "prompt": "(*) 31 \\times 117 + 30 \\times 213 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "high": 10518.0,
+      "low": 9516.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q68",
+    "prompt": "48 \\times 28 + 27 \\times 28 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 2100,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q69",
+    "prompt": "34 \\times 56 + 55 \\times 34 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "answer": 3774,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.2.q70",
+    "prompt": "(*) 34 \\times 45 + 54 \\times 43 =",
+    "topic": "factoring_of_numerical_problems",
+    "answer": {
+      "high": 4045.0,
+      "low": 3659.0,
+      "type": "estimate"
+    }
+  }
+]

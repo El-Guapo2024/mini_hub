@@ -1,0 +1,290 @@
+[
+  {
+    "id": "bh.3.1.9.q1",
+    "prompt": "(*) \\sqrt{15376} =",
+    "topic": "finding_approximations_of_square_roots",
+    "answer": {
+      "high": 131.0,
+      "low": 117.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.3.1.9.q2",
+    "prompt": "\\sqrt[3]{830584} =",
+    "topic": "finding_approximations_of_square_roots",
+    "answer": {
+      "answer": 94,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.9.q3",
+    "prompt": "(*) \\sqrt{23456} =",
+    "topic": "finding_approximations_of_square_roots",
+    "answer": {
+      "high": 161.0,
+      "low": 145.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.3.1.9.q4",
+    "prompt": "(*) \\sqrt{32905} =",
+    "topic": "finding_approximations_of_square_roots",
+    "answer": {
+      "high": 191.0,
+      "low": 172.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.3.1.9.q5",
+    "prompt": "(*) \\sqrt{6543210} =",
+    "topic": "finding_approximations_of_square_roots",
+    "answer": {
+      "high": 2686.0,
+      "low": 2430.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.3.1.9.q6",
+    "prompt": "\\sqrt[3]{658503} =",
+    "topic": "finding_approximations_of_square_roots",
+    "answer": {
+      "answer": 87,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.9.q7",
+    "prompt": "(*) \\sqrt{6213457} =",
+    "topic": "finding_approximations_of_square_roots",
+    "answer": {
+      "high": 2618.0,
+      "low": 2368.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.3.1.9.q8",
+    "prompt": "(*) \\sqrt{173468} =",
+    "topic": "finding_approximations_of_square_roots",
+    "answer": {
+      "high": 438.0,
+      "low": 395.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.3.1.9.q9",
+    "prompt": "(*) \\sqrt{6420135} =",
+    "topic": "finding_approximations_of_square_roots",
+    "answer": {
+      "high": 2661.0,
+      "low": 2407.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.3.1.9.q10",
+    "prompt": "(*) \\sqrt{872143} =",
+    "topic": "finding_approximations_of_square_roots",
+    "answer": {
+      "high": 981.0,
+      "low": 887.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.3.1.9.q11",
+    "prompt": "(*) \\sqrt{272727} =",
+    "topic": "finding_approximations_of_square_roots",
+    "answer": {
+      "high": 549.0,
+      "low": 496.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.3.1.9.q12",
+    "prompt": "(*) \\sqrt{38527} =",
+    "topic": "finding_approximations_of_square_roots",
+    "answer": {
+      "high": 207.0,
+      "low": 186.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.3.1.9.q13",
+    "prompt": "(*) \\sqrt{32323} =",
+    "topic": "finding_approximations_of_square_roots",
+    "answer": {
+      "high": 189.0,
+      "low": 170.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.3.1.9.q14",
+    "prompt": "(*) \\sqrt{18220} =",
+    "topic": "finding_approximations_of_square_roots",
+    "answer": {
+      "high": 142.0,
+      "low": 128.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.3.1.9.q15",
+    "prompt": "(*) \\sqrt{25252} =",
+    "topic": "finding_approximations_of_square_roots",
+    "answer": {
+      "high": 167.0,
+      "low": 150.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.3.1.9.q16",
+    "prompt": "(*) \\sqrt{265278} =",
+    "topic": "finding_approximations_of_square_roots",
+    "answer": {
+      "high": 541.0,
+      "low": 489.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.3.1.9.q17",
+    "prompt": "(*) \\sqrt{81818} =",
+    "topic": "finding_approximations_of_square_roots",
+    "answer": {
+      "high": 301.0,
+      "low": 271.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.3.1.9.q18",
+    "prompt": "(*) \\sqrt{262626} =",
+    "topic": "finding_approximations_of_square_roots",
+    "answer": {
+      "high": 539.0,
+      "low": 486.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.3.1.9.q19",
+    "prompt": "(*) \\sqrt{765432} =",
+    "topic": "finding_approximations_of_square_roots",
+    "answer": {
+      "high": 919.0,
+      "low": 831.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.3.1.9.q20",
+    "prompt": "(*) \\sqrt{80808} =",
+    "topic": "finding_approximations_of_square_roots",
+    "answer": {
+      "high": 299.0,
+      "low": 270.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.3.1.9.q21",
+    "prompt": "(*) \\sqrt{97531} =",
+    "topic": "finding_approximations_of_square_roots",
+    "answer": {
+      "high": 328.0,
+      "low": 296.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.3.1.9.q22",
+    "prompt": "(*) \\sqrt{86420} =",
+    "topic": "finding_approximations_of_square_roots",
+    "answer": {
+      "high": 309.0,
+      "low": 279.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.3.1.9.q23",
+    "prompt": "(*) \\sqrt{8844} \\times \\sqrt{6633} =",
+    "topic": "finding_approximations_of_square_roots",
+    "answer": {
+      "high": 8043.0,
+      "low": 7276.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.3.1.9.q24",
+    "prompt": "(*) \\sqrt[3]{217777} \\times \\sqrt{3777} \\times 57 =",
+    "topic": "finding_approximations_of_square_roots",
+    "answer": {
+      "high": 221297.0,
+      "low": 200220.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.3.1.9.q25",
+    "prompt": "(*) \\sqrt[3]{26789} \\times \\sqrt{911} \\times 31 =",
+    "topic": "finding_approximations_of_square_roots",
+    "answer": {
+      "high": 29397.0,
+      "low": 26596.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.3.1.9.q26",
+    "prompt": "(*) \\sqrt[3]{215346} \\times \\sqrt{3690} \\times 57 =",
+    "topic": "finding_approximations_of_square_roots",
+    "answer": {
+      "high": 217917.0,
+      "low": 197162.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.3.1.9.q27",
+    "prompt": "(*) \\sqrt[3]{2006 \\times 6002} =",
+    "topic": "finding_approximations_of_square_roots",
+    "answer": {
+      "high": 241.0,
+      "low": 217.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.3.1.9.q28",
+    "prompt": "(*) \\sqrt[3]{63489} \\times \\sqrt{1611} \\times 41 =",
+    "topic": "finding_approximations_of_square_roots",
+    "answer": {
+      "high": 68932.0,
+      "low": 62366.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.3.1.9.q29",
+    "prompt": "(*) \\sqrt[4]{14643} \\times \\sqrt[3]{1329} \\times \\sqrt{120} =",
+    "topic": "finding_approximations_of_square_roots",
+    "answer": {
+      "high": 1392.0,
+      "low": 1258.0,
+      "type": "estimate"
+    }
+  }
+]

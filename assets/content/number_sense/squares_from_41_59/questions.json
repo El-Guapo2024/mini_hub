@@ -1,0 +1,75 @@
+[
+  {
+    "id": "bh.1.2.9.q1",
+    "prompt": "58^{2} =",
+    "topic": "squares_from_41_59",
+    "answer": {
+      "answer": 3364,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.9.q2",
+    "prompt": "(510)^{2} =",
+    "topic": "squares_from_41_59",
+    "answer": {
+      "answer": 260100,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.9.q3",
+    "prompt": "47 \\times 47 =",
+    "topic": "squares_from_41_59",
+    "answer": {
+      "answer": 2209,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.9.q4",
+    "prompt": "53^{2} =",
+    "topic": "squares_from_41_59",
+    "answer": {
+      "answer": 2809,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.9.q5",
+    "prompt": "(*) 48 \\times 49 \\times 50 =",
+    "topic": "squares_from_41_59",
+    "answer": {
+      "high": 123480.0,
+      "low": 111720.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.9.q6",
+    "prompt": "56^{2} =",
+    "topic": "squares_from_41_59",
+    "answer": {
+      "answer": 3136,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.9.q7",
+    "prompt": "59 \\times 59 =",
+    "topic": "squares_from_41_59",
+    "answer": {
+      "answer": 3481,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.9.q8",
+    "prompt": "41^{2} =",
+    "topic": "squares_from_41_59",
+    "answer": {
+      "answer": 1681,
+      "type": "numeric"
+    }
+  }
+]

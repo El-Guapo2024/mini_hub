@@ -2,4 +2,20 @@ id: switching_numbers_and_negating_on_subtraction
 title: 'Switching Numbers and Negating on Subtraction'
 logo: assets/icons/number_sense.png
 bh_section: '1.5.2'
-questionIds: []
+questionIds:
+  - bh.1.5.2.q1
+  - bh.1.5.2.q2
+  - bh.1.5.2.q3
+  - bh.1.5.2.q4
+  - bh.1.5.2.q5
+  - bh.1.5.2.q6
+  - bh.1.5.2.q7
+  - bh.1.5.2.q8
+  - bh.1.5.2.q9
+  - bh.1.5.2.q10
+  - bh.1.5.2.q11
+  - bh.1.5.2.q12
+  - bh.1.5.2.q13
+  - bh.1.5.2.q14
+  - bh.1.5.2.q15
+  - bh.1.5.2.q16

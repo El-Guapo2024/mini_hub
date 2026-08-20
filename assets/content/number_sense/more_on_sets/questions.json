@@ -1,0 +1,101 @@
+[
+  {
+    "id": "bh.4.5.1.q1",
+    "prompt": "The set \\{a,b,c\\} has 2-element subsets",
+    "topic": "more_on_sets",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.1.q2",
+    "prompt": "The set \\{s,l,o,p,e\\} has 3-element subsets",
+    "topic": "more_on_sets",
+    "answer": {
+      "answer": 10,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.1.q3",
+    "prompt": "The set \\{a,b,c,d\\} has 3-element subsets",
+    "topic": "more_on_sets",
+    "answer": {
+      "answer": 4,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.1.q4",
+    "prompt": "The set \\{l,i,n,e,a,r\\} has 4-element subsets",
+    "topic": "more_on_sets",
+    "answer": {
+      "answer": 15,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.1.q5",
+    "prompt": "The set \\{a,b,c,d\\} has 2-element subsets",
+    "topic": "more_on_sets",
+    "answer": {
+      "answer": 6,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.1.q6",
+    "prompt": "The set \\{t,e,x,a,s\\} has 3-element subsets",
+    "topic": "more_on_sets",
+    "answer": {
+      "answer": 10,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.1.q7",
+    "prompt": "How many three element subsets does a five element set contain?",
+    "topic": "more_on_sets",
+    "answer": {
+      "answer": 10,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.1.q8",
+    "prompt": "How many two element subsets does a six element set contain?",
+    "topic": "more_on_sets",
+    "answer": {
+      "answer": 15,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.1.q9",
+    "prompt": "How many four element subsets does \\{m,o,n,d,a,y\\} have?",
+    "topic": "more_on_sets",
+    "answer": {
+      "answer": 15,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.1.q10",
+    "prompt": "How many subsets containing only 4 elements does the set \\{d,e,c,i,m,a,l,s\\} have?",
+    "topic": "more_on_sets",
+    "answer": {
+      "answer": 70,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.5.1.q11",
+    "prompt": "How many subsets containing only 2 or 3 elements does the set \\{s,q,u,a,r,e\\} have?",
+    "topic": "more_on_sets",
+    "answer": {
+      "answer": 35,
+      "type": "numeric"
+    }
+  }
+]

@@ -1,0 +1,332 @@
+[
+  {
+    "id": "bh.3.1.13.q1",
+    "prompt": "The odds of drawing a king from a 52-card deck is:",
+    "topic": "probability_and_odds",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 12,
+      "display": "\\frac{1}{12}"
+    }
+  },
+  {
+    "id": "bh.3.1.13.q2",
+    "prompt": "If 2 dice are tossed, what is the probability of getting a sum of 11:",
+    "topic": "probability_and_odds",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 18,
+      "display": "\\frac{1}{18}"
+    }
+  },
+  {
+    "id": "bh.3.1.13.q3",
+    "prompt": "A bag has a 3 red, 6 white, and 9 blue marbles. What is the probability of drawing a red one:",
+    "topic": "probability_and_odds",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 6,
+      "display": "\\frac{1}{6}"
+    }
+  },
+  {
+    "id": "bh.3.1.13.q4",
+    "prompt": "Three coins are tossed. Find the odds of getting 3 tails:",
+    "topic": "probability_and_odds",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 7,
+      "display": "\\frac{1}{7}"
+    }
+  },
+  {
+    "id": "bh.3.1.13.q5",
+    "prompt": "The odds of losing are 4-to-9. The probability of winning is:",
+    "topic": "probability_and_odds",
+    "answer": {
+      "type": "fraction",
+      "num": 9,
+      "den": 13,
+      "display": "\\frac{9}{13}"
+    }
+  },
+  {
+    "id": "bh.3.1.13.q6",
+    "prompt": "The probability of winning is \\frac{5}{9}. The odds of losing is:",
+    "topic": "probability_and_odds",
+    "answer": {
+      "type": "fraction",
+      "num": 4,
+      "den": 5,
+      "display": "\\frac{4}{5}"
+    }
+  },
+  {
+    "id": "bh.3.1.13.q7",
+    "prompt": "The odds of losing is \\frac{7}{13}. The probability of winning is:",
+    "topic": "probability_and_odds",
+    "answer": {
+      "type": "fraction",
+      "num": 13,
+      "den": 20,
+      "display": "\\frac{13}{20}"
+    }
+  },
+  {
+    "id": "bh.3.1.13.q8",
+    "prompt": "If three dice are tossed once, what is the probability of getting three 5's:",
+    "topic": "probability_and_odds",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 216,
+      "display": "\\frac{1}{216}"
+    }
+  },
+  {
+    "id": "bh.3.1.13.q9",
+    "prompt": "If all of the letters in the words \"NUMBER SENSE\" are put in a box, what are the odds of drawing an 'E':",
+    "topic": "probability_and_odds",
+    "answer": {
+      "type": "fraction",
+      "num": 3,
+      "den": 8,
+      "display": "\\frac{3}{8}"
+    }
+  },
+  {
+    "id": "bh.3.1.13.q10",
+    "prompt": "The probability of success if \\frac{8}{17}. The odds of failure is:",
+    "topic": "probability_and_odds",
+    "answer": {
+      "type": "fraction",
+      "num": 9,
+      "den": 8,
+      "display": "\\frac{9}{8}"
+    }
+  },
+  {
+    "id": "bh.3.1.13.q11",
+    "prompt": "If all of the letters in the words \"STATE MEET\" were put in a box, what is the probability of drawing an 'E':",
+    "topic": "probability_and_odds",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 3,
+      "display": "\\frac{1}{3}"
+    }
+  },
+  {
+    "id": "bh.3.1.13.q12",
+    "prompt": "A pair of dice is thrown, the odds that the sum is a multiple of 5 is:",
+    "topic": "probability_and_odds",
+    "answer": {
+      "type": "fraction",
+      "num": 7,
+      "den": 29,
+      "display": "\\frac{7}{29}"
+    }
+  },
+  {
+    "id": "bh.3.1.13.q13",
+    "prompt": "The probability of losing is 44\\frac{4}{9}\\%. The odds of winning is:",
+    "topic": "probability_and_odds",
+    "answer": {
+      "type": "fraction",
+      "num": 5,
+      "den": 4,
+      "display": "\\frac{5}{4}"
+    }
+  },
+  {
+    "id": "bh.3.1.13.q14",
+    "prompt": "The odds of winning the game is 3 to 5. The probability of losing the game is:",
+    "topic": "probability_and_odds",
+    "answer": {
+      "type": "fraction",
+      "num": 5,
+      "den": 8,
+      "display": "\\frac{5}{8}"
+    }
+  },
+  {
+    "id": "bh.3.1.13.q15",
+    "prompt": "A number is drawn from \\{1, 2, 3, 6, 18\\}. The probability that the number drawn is not a prime number is:",
+    "topic": "probability_and_odds",
+    "answer": {
+      "type": "fraction",
+      "num": 3,
+      "den": 5,
+      "display": "\\frac{3}{5}"
+    }
+  },
+  {
+    "id": "bh.3.1.13.q16",
+    "prompt": "The odds of drawing a red 7 from a standard 52-card deck is:",
+    "topic": "probability_and_odds",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 25,
+      "display": "\\frac{1}{25}"
+    }
+  },
+  {
+    "id": "bh.3.1.13.q17",
+    "prompt": "A number is randomly drawn from the set \\{1, 2, 3, 4, 5, 6, 7, 8, 9\\}. What are the odds that the number drawn is odd:",
+    "topic": "probability_and_odds",
+    "answer": {
+      "type": "fraction",
+      "num": 5,
+      "den": 4,
+      "display": "\\frac{5}{4}"
+    }
+  },
+  {
+    "id": "bh.3.1.13.q18",
+    "prompt": "A number is drawn from the set \\{1, 2, 3, 4, 5\\}. What is the probability that the number drawn is a factor of 6:",
+    "topic": "probability_and_odds",
+    "answer": {
+      "type": "fraction",
+      "num": 3,
+      "den": 5,
+      "display": "\\frac{3}{5}"
+    }
+  },
+  {
+    "id": "bh.3.1.13.q19",
+    "prompt": "The odds of randomly drawing a prime number from the set \\{1, 2, 3, 4, 5\\} is:",
+    "topic": "probability_and_odds",
+    "answer": {
+      "type": "fraction",
+      "num": 3,
+      "den": 2,
+      "display": "\\frac{3}{2}"
+    }
+  },
+  {
+    "id": "bh.3.1.13.q20",
+    "prompt": "When two dice are tossed, the probability that the sum of the faces will be 3 is:",
+    "topic": "probability_and_odds",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 18,
+      "display": "\\frac{1}{18}"
+    }
+  },
+  {
+    "id": "bh.3.1.13.q21",
+    "prompt": "A pair of dice is thrown. The probability that their sum is 7 is:",
+    "topic": "probability_and_odds",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 6,
+      "display": "\\frac{1}{6}"
+    }
+  },
+  {
+    "id": "bh.3.1.13.q22",
+    "prompt": "A pair of dice is thrown. The odds that their sum is 7 is:",
+    "topic": "probability_and_odds",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 5,
+      "display": "\\frac{1}{5}"
+    }
+  },
+  {
+    "id": "bh.3.1.13.q23",
+    "prompt": "A pair of dice is thrown. The odds that the sum is 6 or 8 is:",
+    "topic": "probability_and_odds",
+    "answer": {
+      "type": "fraction",
+      "num": 5,
+      "den": 13,
+      "display": "\\frac{5}{13}"
+    }
+  },
+  {
+    "id": "bh.3.1.13.q24",
+    "prompt": "Two dice are tossed. What is the probability the sum is a multiple of 4:",
+    "topic": "probability_and_odds",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 4,
+      "display": "\\frac{1}{4}"
+    }
+  },
+  {
+    "id": "bh.3.1.13.q25",
+    "prompt": "(*) Two dice are tossed. What is the probability the sum is a multiple of 5:",
+    "topic": "probability_and_odds",
+    "answer": {
+      "type": "fraction",
+      "num": 7,
+      "den": 36,
+      "display": "\\frac{7}{36}"
+    }
+  },
+  {
+    "id": "bh.3.1.13.q26",
+    "prompt": "A die is rolled. What is the probability that a multiple of 2 is shown:",
+    "topic": "probability_and_odds",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 2,
+      "display": "\\frac{1}{2}"
+    }
+  },
+  {
+    "id": "bh.3.1.13.q27",
+    "prompt": "A die is rolled. What is the probability that a composite number is rolled:",
+    "topic": "probability_and_odds",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 3,
+      "display": "\\frac{1}{3}"
+    }
+  },
+  {
+    "id": "bh.3.1.13.q28",
+    "prompt": "A die is rolled. What is the probability that a factor of 12 is shown:",
+    "topic": "probability_and_odds",
+    "answer": {
+      "type": "fraction",
+      "num": 5,
+      "den": 6,
+      "display": "\\frac{5}{6}"
+    }
+  },
+  {
+    "id": "bh.3.1.13.q29",
+    "prompt": "The probability of losing is 4-to-7. What are the odds of winning:",
+    "topic": "probability_and_odds",
+    "answer": {
+      "type": "fraction",
+      "num": 3,
+      "den": 4,
+      "display": "\\frac{3}{4}"
+    }
+  },
+  {
+    "id": "bh.3.1.13.q30",
+    "prompt": "A pair of dice are rolled. What are the odds that the same number is shown:",
+    "topic": "probability_and_odds",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 5,
+      "display": "\\frac{1}{5}"
+    }
+  }
+]

@@ -2,4 +2,25 @@ id: sets
 title: 'Probability (Basic)'
 logo: assets/icons/number_sense.png
 bh_section: '3.1.14'
-questionIds: []
+questionIds:
+  - bh.3.1.14.q1
+  - bh.3.1.14.q2
+  - bh.3.1.14.q3
+  - bh.3.1.14.q4
+  - bh.3.1.14.q5
+  - bh.3.1.14.q6
+  - bh.3.1.14.q7
+  - bh.3.1.14.q8
+  - bh.3.1.14.q9
+  - bh.3.1.14.q10
+  - bh.3.1.14.q11
+  - bh.3.1.14.q12
+  - bh.3.1.14.q13
+  - bh.3.1.14.q14
+  - bh.3.1.14.q15
+  - bh.3.1.14.q16
+  - bh.3.1.14.q17
+  - bh.3.1.14.q18
+  - bh.3.1.14.q19
+  - bh.3.1.14.q20
+  - bh.3.1.14.q21

@@ -1,0 +1,251 @@
+[
+  {
+    "id": "bh.3.1.4.q1",
+    "prompt": "The sum of the roots of 2x^{2} - 3x + 1 = 0 is:",
+    "topic": "sumproduct_of_the_roots",
+    "answer": {
+      "type": "fraction",
+      "num": 3,
+      "den": 2,
+      "display": "\\frac{3}{2}"
+    }
+  },
+  {
+    "id": "bh.3.1.4.q2",
+    "prompt": "The sum of the roots of (x-4)(x-5) = 0 is:",
+    "topic": "sumproduct_of_the_roots",
+    "answer": {
+      "answer": 9,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.4.q3",
+    "prompt": "The sum of the roots of 3x^{3} - 2x^{2} + x - 4 = 0 is:",
+    "topic": "sumproduct_of_the_roots",
+    "answer": {
+      "type": "fraction",
+      "num": 2,
+      "den": 3,
+      "display": "\\frac{2}{3}"
+    }
+  },
+  {
+    "id": "bh.3.1.4.q4",
+    "prompt": "The product of the roots of x^{2} + 3x = 7 is:",
+    "topic": "sumproduct_of_the_roots",
+    "answer": {
+      "answer": -7,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.4.q5",
+    "prompt": "The sum of the roots of x^{2} - 9 = 0 is:",
+    "topic": "sumproduct_of_the_roots",
+    "answer": {
+      "answer": 0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.4.q6",
+    "prompt": "The sum of the roots of 4x^{2} + 3x = 2 is:",
+    "topic": "sumproduct_of_the_roots",
+    "answer": {
+      "type": "fraction",
+      "num": -3,
+      "den": 4,
+      "display": "-\\frac{3}{4}"
+    }
+  },
+  {
+    "id": "bh.3.1.4.q7",
+    "prompt": "The sum of the roots of (2x-3)^{2} = 0 is:",
+    "topic": "sumproduct_of_the_roots",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.4.q8",
+    "prompt": "The product of the roots of 5x^{3} - 8x^{2} + 2x + 3 = 0 is:",
+    "topic": "sumproduct_of_the_roots",
+    "answer": {
+      "type": "fraction",
+      "num": -3,
+      "den": 5,
+      "display": "-\\frac{3}{5}"
+    }
+  },
+  {
+    "id": "bh.3.1.4.q9",
+    "prompt": "The product of the roots of 4x^{3} - 3x^{2} + 2x - 1 = 0 is:",
+    "topic": "sumproduct_of_the_roots",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 4,
+      "display": "\\frac{1}{4}"
+    }
+  },
+  {
+    "id": "bh.3.1.4.q10",
+    "prompt": "The sum of the roots of 3x^{3} + 2x^{2} = 9 is:",
+    "topic": "sumproduct_of_the_roots",
+    "answer": {
+      "type": "fraction",
+      "num": -2,
+      "den": 3,
+      "display": "-\\frac{2}{3}"
+    }
+  },
+  {
+    "id": "bh.3.1.4.q11",
+    "prompt": "The sum of the roots of x^{3} - 13x = 12 is:",
+    "topic": "sumproduct_of_the_roots",
+    "answer": {
+      "answer": 0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.4.q12",
+    "prompt": "Let R,S,T be the roots of 2x^{3} + 4x = 5. Then R \\times S \\times T =",
+    "topic": "sumproduct_of_the_roots",
+    "answer": {
+      "type": "fraction",
+      "num": 5,
+      "den": 2,
+      "display": "\\frac{5}{2}"
+    }
+  },
+  {
+    "id": "bh.3.1.4.q13",
+    "prompt": "The product of the roots of 5x^{3} + 4x - 3 = 0 is:",
+    "topic": "sumproduct_of_the_roots",
+    "answer": {
+      "type": "fraction",
+      "num": 3,
+      "den": 5,
+      "display": "\\frac{3}{5}"
+    }
+  },
+  {
+    "id": "bh.3.1.4.q14",
+    "prompt": "The sum of the roots of (3x-2)(2x+1) = 0 is:",
+    "topic": "sumproduct_of_the_roots",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 6,
+      "display": "\\frac{1}{6}"
+    }
+  },
+  {
+    "id": "bh.3.1.4.q15",
+    "prompt": "The sum of the product of the roots taken two at a time of 2x^{3} + 4x^{2} - 6x = 8 is:",
+    "topic": "sumproduct_of_the_roots",
+    "answer": {
+      "answer": -3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.4.q16",
+    "prompt": "The sum of the roots of 2x^{3} + 4x^{2} - 3x + 5 = 0 is:",
+    "topic": "sumproduct_of_the_roots",
+    "answer": {
+      "answer": -2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.4.q17",
+    "prompt": "The product of the roots of (2x-1)(3x+2)(4x-3) = 0 is:",
+    "topic": "sumproduct_of_the_roots",
+    "answer": {
+      "type": "fraction",
+      "num": -1,
+      "den": 4,
+      "display": "-\\frac{1}{4}"
+    }
+  },
+  {
+    "id": "bh.3.1.4.q18",
+    "prompt": "Let R,S,T be the roots of 2x^{3} + 4x = 5. Then RS + RT + ST =",
+    "topic": "sumproduct_of_the_roots",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.4.q19",
+    "prompt": "The equation 2x^{3} - bx^{2} + cx = d has roots r,s,t and rst=3.5, then d =",
+    "topic": "sumproduct_of_the_roots",
+    "answer": {
+      "answer": 7,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.4.q20",
+    "prompt": "The sum of the roots of 3x^{2} - bx + c = 0 is -12 then b =",
+    "topic": "sumproduct_of_the_roots",
+    "answer": {
+      "answer": -36,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.4.q21",
+    "prompt": "If r, s, and t are the roots of the equation 2x^{3} - 4x^{2} + 6x = 8 then rs + rt + st =",
+    "topic": "sumproduct_of_the_roots",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.4.q22",
+    "prompt": "The sum of the roots of 4x^{3} + 3x^{2} - 2x - 1 = 0 is:",
+    "topic": "sumproduct_of_the_roots",
+    "answer": {
+      "type": "fraction",
+      "num": -3,
+      "den": 4,
+      "display": "-\\frac{3}{4}"
+    }
+  },
+  {
+    "id": "bh.3.1.4.q23",
+    "prompt": "The product of the roots of 4x^{3} - 3x^{2} + 2x + 1 = 0 is:",
+    "topic": "sumproduct_of_the_roots",
+    "answer": {
+      "type": "fraction",
+      "num": -1,
+      "den": 4,
+      "display": "-\\frac{1}{4}"
+    }
+  },
+  {
+    "id": "bh.3.1.4.q24",
+    "prompt": "The sum of the roots of 5x^{3} + 4x - 3 = 0 is:",
+    "topic": "sumproduct_of_the_roots",
+    "answer": {
+      "answer": 0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.4.q25",
+    "prompt": "The equation 2x^{3} - bx^{2} + cx = d has roots r,s,t. If r + s + t = -2 then b =",
+    "topic": "sumproduct_of_the_roots",
+    "answer": {
+      "answer": -4,
+      "type": "numeric"
+    }
+  }
+]

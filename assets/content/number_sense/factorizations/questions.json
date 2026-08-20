@@ -1,0 +1,56 @@
+[
+  {
+    "id": "bh.4.4.2.q1",
+    "prompt": "If xy = 1 and x + y = -2, then x^{3} + y^{3} =",
+    "topic": "factorizations",
+    "answer": {
+      "answer": -2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.4.2.q2",
+    "prompt": "If xy = 3 and x - y = -1, then x^{3} - y^{3} =",
+    "topic": "factorizations",
+    "answer": {
+      "answer": -10,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.4.2.q3",
+    "prompt": "If x + y = 1 and xy = 3, then x^{3} + y^{3} =",
+    "topic": "factorizations",
+    "answer": {
+      "answer": -8,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.4.2.q4",
+    "prompt": "If x - y = 2 and xy = 5, then x^{3} - y^{3} =",
+    "topic": "factorizations",
+    "answer": {
+      "answer": 38,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.4.2.q5",
+    "prompt": "If xy = \\frac{5}{3} and x + y = 4, then x^{3} + y^{3} =",
+    "topic": "factorizations",
+    "answer": {
+      "answer": 44,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.4.2.q6",
+    "prompt": "If xy = -3 and x - y = -2, then x^{3} - y^{3} =",
+    "topic": "factorizations",
+    "answer": {
+      "answer": 10,
+      "type": "numeric"
+    }
+  }
+]

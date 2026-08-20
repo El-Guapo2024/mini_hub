@@ -1,0 +1,146 @@
+[
+  {
+    "id": "bh.2.2.7.q1",
+    "prompt": "An obtuse triangle has integral sides of 3, x, and 7. The largest value for x is:",
+    "topic": "finding_sides_of_a_triangle",
+    "answer": {
+      "answer": 9,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.7.q2",
+    "prompt": "The sides of a right triangle are integers. If one leg is 9 then the other leg is:",
+    "topic": "finding_sides_of_a_triangle",
+    "answer": {
+      "answer": 40,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.7.q3",
+    "prompt": "x, y are positive integers with x^{2} - y^{2} = 53. Then y =",
+    "topic": "finding_sides_of_a_triangle",
+    "answer": {
+      "answer": 26,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.7.q4",
+    "prompt": "A right triangle with integer sides has a hypotenuse of 113. The smallest leg is:",
+    "topic": "finding_sides_of_a_triangle",
+    "answer": {
+      "answer": 15,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.7.q5",
+    "prompt": "An acute triangle has integer side lengths of 4, 7, and x. The smallest value for x is:",
+    "topic": "finding_sides_of_a_triangle",
+    "answer": {
+      "answer": 6,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.7.q6",
+    "prompt": "An acute triangle has integer side lengths of 4, 7, and x. The largest value for x is:",
+    "topic": "finding_sides_of_a_triangle",
+    "answer": {
+      "answer": 8,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.7.q7",
+    "prompt": "x, y are integers with x^{2} - y^{2} = -67 then x is:",
+    "topic": "finding_sides_of_a_triangle",
+    "answer": {
+      "answer": 33,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.7.q8",
+    "prompt": "An obtuse triangle has integer side lengths of x, 7, and 11. The smallest value of x is:",
+    "topic": "finding_sides_of_a_triangle",
+    "answer": {
+      "answer": 5,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.7.q9",
+    "prompt": "a^{2} + b^{2} = 113^{2} where 0 < a < b and a, b are integers. Then a =",
+    "topic": "finding_sides_of_a_triangle",
+    "answer": {
+      "answer": 15,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.7.q10",
+    "prompt": "The sides of a right triangle are x, 7, and 11. If x < 7 and x = a\\sqrt{2} then a =",
+    "topic": "finding_sides_of_a_triangle",
+    "answer": {
+      "answer": 6,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.7.q11",
+    "prompt": "An acute triangle has integer sides of 2, 7, and x. The largest value of x is:",
+    "topic": "finding_sides_of_a_triangle",
+    "answer": {
+      "answer": 7,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.7.q12",
+    "prompt": "An obtuse triangle has integer sides of 6, x, and 11. The smallest value of x is:",
+    "topic": "finding_sides_of_a_triangle",
+    "answer": {
+      "answer": 6,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.7.q13",
+    "prompt": "An acute triangle has integer sides of 7, 11, and x. The smallest value of x is:",
+    "topic": "finding_sides_of_a_triangle",
+    "answer": {
+      "answer": 9,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.7.q14",
+    "prompt": "An obtuse triangle has integer sides of 8, 15, and x. The smallest value of x is:",
+    "topic": "finding_sides_of_a_triangle",
+    "answer": {
+      "answer": 8,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.7.q15",
+    "prompt": "The sides of a right triangle are integral. If one leg is 13, find the length of the other leg:",
+    "topic": "finding_sides_of_a_triangle",
+    "answer": {
+      "answer": 84,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.7.q16",
+    "prompt": "A right triangle has integer side lengths of 7, x, and 25. Its area is:",
+    "topic": "finding_sides_of_a_triangle",
+    "answer": {
+      "answer": 84,
+      "type": "numeric"
+    }
+  }
+]

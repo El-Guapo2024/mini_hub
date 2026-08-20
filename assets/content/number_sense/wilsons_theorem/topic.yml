@@ -2,4 +2,10 @@ id: wilsons_theorem
 title: 'Factorials (Divisibility)'
 logo: assets/icons/number_sense.png
 bh_section: '3.5.3'
-questionIds: []
+questionIds:
+  - bh.3.5.3.q1
+  - bh.3.5.3.q2
+  - bh.3.5.3.q3
+  - bh.3.5.3.q4
+  - bh.3.5.3.q5
+  - bh.3.5.3.q6

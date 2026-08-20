@@ -1,0 +1,74 @@
+[
+  {
+    "id": "bh.2.2.5.q1",
+    "prompt": "A regular nonagon has an interior angle of:",
+    "topic": "exteriorinterior_angles",
+    "answer": {
+      "answer": 140,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.5.q2",
+    "prompt": "An interior angle of a regular pentagon has a measure of:",
+    "topic": "exteriorinterior_angles",
+    "answer": {
+      "answer": 108,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.5.q3",
+    "prompt": "The supplement of an interior angle of a regular octagon measures:",
+    "topic": "exteriorinterior_angles",
+    "answer": {
+      "answer": 45,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.5.q4",
+    "prompt": "The angles in a regular octagon total:",
+    "topic": "exteriorinterior_angles",
+    "answer": {
+      "answer": 1080,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.5.q5",
+    "prompt": "The measure of an interior angle of a regular hexagon measures:",
+    "topic": "exteriorinterior_angles",
+    "answer": {
+      "answer": 120,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.5.q6",
+    "prompt": "The sum of the angles in a regular decagon is:",
+    "topic": "exteriorinterior_angles",
+    "answer": {
+      "answer": 1440,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.5.q7",
+    "prompt": "The supplement of a 47^{\\circ} angle is:",
+    "topic": "exteriorinterior_angles",
+    "answer": {
+      "answer": 133,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.5.q8",
+    "prompt": "The sum of the interior angles of a regular pentagon is:",
+    "topic": "exteriorinterior_angles",
+    "answer": {
+      "answer": 540,
+      "type": "numeric"
+    }
+  }
+]

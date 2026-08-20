@@ -2,4 +2,21 @@ id: double_and_half_trick
 title: 'Double and Half Trick'
 logo: assets/icons/number_sense.png
 bh_section: '1.2.6'
-questionIds: []
+questionIds:
+  - bh.1.2.6.q1
+  - bh.1.2.6.q2
+  - bh.1.2.6.q3
+  - bh.1.2.6.q4
+  - bh.1.2.6.q5
+  - bh.1.2.6.q6
+  - bh.1.2.6.q7
+  - bh.1.2.6.q8
+  - bh.1.2.6.q9
+  - bh.1.2.6.q10
+  - bh.1.2.6.q11
+  - bh.1.2.6.q12
+  - bh.1.2.6.q13
+  - bh.1.2.6.q14
+  - bh.1.2.6.q15
+  - bh.1.2.6.q16
+  - bh.1.2.6.q17

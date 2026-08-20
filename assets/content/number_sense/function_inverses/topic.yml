@@ -2,4 +2,28 @@ id: function_inverses
 title: 'Function Inverses'
 logo: assets/icons/number_sense.png
 bh_section: '3.1.11'
-questionIds: []
+questionIds:
+  - bh.3.1.11.q1
+  - bh.3.1.11.q2
+  - bh.3.1.11.q3
+  - bh.3.1.11.q4
+  - bh.3.1.11.q5
+  - bh.3.1.11.q6
+  - bh.3.1.11.q7
+  - bh.3.1.11.q8
+  - bh.3.1.11.q9
+  - bh.3.1.11.q10
+  - bh.3.1.11.q11
+  - bh.3.1.11.q12
+  - bh.3.1.11.q13
+  - bh.3.1.11.q14
+  - bh.3.1.11.q15
+  - bh.3.1.11.q16
+  - bh.3.1.11.q17
+  - bh.3.1.11.q18
+  - bh.3.1.11.q19
+  - bh.3.1.11.q20
+  - bh.3.1.11.q21
+  - bh.3.1.11.q22
+  - bh.3.1.11.q23
+  - bh.3.1.11.q24

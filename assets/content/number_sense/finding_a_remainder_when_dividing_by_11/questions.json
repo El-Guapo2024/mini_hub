@@ -1,0 +1,92 @@
+[
+  {
+    "id": "bh.1.4.3.q1",
+    "prompt": "7653 \\div 11 \\text{ has a remainder of:}",
+    "topic": "finding_a_remainder_when_dividing_by_11",
+    "answer": {
+      "answer": 8,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.3.q2",
+    "prompt": "745321 \\div 11 \\text{ has a remainder of:}",
+    "topic": "finding_a_remainder_when_dividing_by_11",
+    "answer": {
+      "answer": 5,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.3.q3",
+    "prompt": "142536 \\div 11 \\text{ has a remainder of:}",
+    "topic": "finding_a_remainder_when_dividing_by_11",
+    "answer": {
+      "answer": 9,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.3.q4",
+    "prompt": "6253718 \\div 11 \\text{ has a remainder of:}",
+    "topic": "finding_a_remainder_when_dividing_by_11",
+    "answer": {
+      "answer": 9,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.3.q5",
+    "prompt": "87125643 \\div 11 \\text{ has a remainder of:}",
+    "topic": "finding_a_remainder_when_dividing_by_11",
+    "answer": {
+      "answer": 0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.3.q6",
+    "prompt": "325476 \\div 11 \\text{ has a remainder of:}",
+    "topic": "finding_a_remainder_when_dividing_by_11",
+    "answer": {
+      "answer": 8,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.3.q7",
+    "prompt": "Find k so that 23578k is divisible by 11:",
+    "topic": "finding_a_remainder_when_dividing_by_11",
+    "answer": {
+      "answer": 5,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.3.q8",
+    "prompt": "Find k so that 1482065k5 is divisible by 11:",
+    "topic": "finding_a_remainder_when_dividing_by_11",
+    "answer": {
+      "answer": 7,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.3.q9",
+    "prompt": "Find k so that 456k89 is divisible by 11:",
+    "topic": "finding_a_remainder_when_dividing_by_11",
+    "answer": {
+      "answer": 4,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.3.q10",
+    "prompt": "Find k so that 377337k is divisible by 11:",
+    "topic": "finding_a_remainder_when_dividing_by_11",
+    "answer": {
+      "answer": 4,
+      "type": "numeric"
+    }
+  }
+]

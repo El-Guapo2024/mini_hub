@@ -2,4 +2,6 @@ id: approximations_using_phi
 title: 'Approximations Using Phi'
 logo: assets/icons/number_sense.png
 bh_section: '4.2.4'
-questionIds: []
+questionIds:
+  - bh.4.2.4.q1
+  - bh.4.2.4.q2

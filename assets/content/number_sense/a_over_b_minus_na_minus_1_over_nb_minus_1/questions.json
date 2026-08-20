@@ -1,0 +1,90 @@
+[
+  {
+    "id": "bh.4.4.1.q1",
+    "prompt": "\\frac{5}{7} - \\frac{9}{13} =",
+    "topic": "a_over_b_minus_na_minus_1_over_nb_minus_1",
+    "answer": {
+      "type": "fraction",
+      "num": 2,
+      "den": 91,
+      "display": "\\frac{2}{91}"
+    }
+  },
+  {
+    "id": "bh.4.4.1.q2",
+    "prompt": "\\frac{5}{7} - \\frac{11}{15} =",
+    "topic": "a_over_b_minus_na_minus_1_over_nb_minus_1",
+    "answer": {
+      "type": "fraction",
+      "num": -2,
+      "den": 105,
+      "display": "-\\frac{2}{105}"
+    }
+  },
+  {
+    "id": "bh.4.4.1.q3",
+    "prompt": "\\frac{7}{11} - \\frac{55}{87} =",
+    "topic": "a_over_b_minus_na_minus_1_over_nb_minus_1",
+    "answer": {
+      "type": "fraction",
+      "num": 4,
+      "den": 957,
+      "display": "\\frac{4}{957}"
+    }
+  },
+  {
+    "id": "bh.4.4.1.q4",
+    "prompt": "\\frac{3}{5} - \\frac{59}{99} =",
+    "topic": "a_over_b_minus_na_minus_1_over_nb_minus_1",
+    "answer": {
+      "type": "fraction",
+      "num": 2,
+      "den": 495,
+      "display": "\\frac{2}{495}"
+    }
+  },
+  {
+    "id": "bh.4.4.1.q5",
+    "prompt": "\\frac{2}{7} - \\frac{21}{71} =",
+    "topic": "a_over_b_minus_na_minus_1_over_nb_minus_1",
+    "answer": {
+      "type": "fraction",
+      "num": -5,
+      "den": 497,
+      "display": "-\\frac{5}{497}"
+    }
+  },
+  {
+    "id": "bh.4.4.1.q6",
+    "prompt": "\\frac{29}{35} - \\frac{5}{6} =",
+    "topic": "a_over_b_minus_na_minus_1_over_nb_minus_1",
+    "answer": {
+      "type": "fraction",
+      "num": -1,
+      "den": 210,
+      "display": "-\\frac{1}{210}"
+    }
+  },
+  {
+    "id": "bh.4.4.1.q7",
+    "prompt": "\\frac{43}{49} - \\frac{7}{8} =",
+    "topic": "a_over_b_minus_na_minus_1_over_nb_minus_1",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 392,
+      "display": "\\frac{1}{392}"
+    }
+  },
+  {
+    "id": "bh.4.4.1.q8",
+    "prompt": "\\frac{23}{25} - \\frac{229}{249} =",
+    "topic": "a_over_b_minus_na_minus_1_over_nb_minus_1",
+    "answer": {
+      "type": "fraction",
+      "num": 2,
+      "den": 6225,
+      "display": "\\frac{2}{6225}"
+    }
+  }
+]

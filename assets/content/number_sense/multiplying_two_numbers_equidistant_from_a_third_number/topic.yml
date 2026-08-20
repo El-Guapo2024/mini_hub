@@ -2,4 +2,50 @@ id: multiplying_two_numbers_equidistant_from_a_third_number
 title: 'Multiplying Two Numbers Equidistant from a Third Number'
 logo: assets/icons/number_sense.png
 bh_section: '1.2.10'
-questionIds: []
+questionIds:
+  - bh.1.2.10.q1
+  - bh.1.2.10.q2
+  - bh.1.2.10.q3
+  - bh.1.2.10.q4
+  - bh.1.2.10.q5
+  - bh.1.2.10.q6
+  - bh.1.2.10.q7
+  - bh.1.2.10.q8
+  - bh.1.2.10.q9
+  - bh.1.2.10.q10
+  - bh.1.2.10.q11
+  - bh.1.2.10.q12
+  - bh.1.2.10.q13
+  - bh.1.2.10.q14
+  - bh.1.2.10.q15
+  - bh.1.2.10.q16
+  - bh.1.2.10.q17
+  - bh.1.2.10.q18
+  - bh.1.2.10.q19
+  - bh.1.2.10.q20
+  - bh.1.2.10.q21
+  - bh.1.2.10.q22
+  - bh.1.2.10.q23
+  - bh.1.2.10.q24
+  - bh.1.2.10.q25
+  - bh.1.2.10.q26
+  - bh.1.2.10.q27
+  - bh.1.2.10.q28
+  - bh.1.2.10.q29
+  - bh.1.2.10.q30
+  - bh.1.2.10.q31
+  - bh.1.2.10.q32
+  - bh.1.2.10.q33
+  - bh.1.2.10.q34
+  - bh.1.2.10.q35
+  - bh.1.2.10.q36
+  - bh.1.2.10.q37
+  - bh.1.2.10.q38
+  - bh.1.2.10.q39
+  - bh.1.2.10.q40
+  - bh.1.2.10.q41
+  - bh.1.2.10.q42
+  - bh.1.2.10.q43
+  - bh.1.2.10.q44
+  - bh.1.2.10.q45
+  - bh.1.2.10.q46

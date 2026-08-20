@@ -1,0 +1,344 @@
+[
+  {
+    "id": "bh.3.2.3.q1",
+    "prompt": "112_{6} + 4_{6} = {}_{6}",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 120,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q2",
+    "prompt": "53_{6} \\times 4_{6} = {}_{6}",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 340,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q3",
+    "prompt": "101_{2} - 11_{2} = {}_{2}",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 10,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q4",
+    "prompt": "44_{5} \\times 4_{5} = {}_{5}",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 341,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q5",
+    "prompt": "26_{9} \\div 6_{9} =",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 4,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q6",
+    "prompt": "37_{8} + 56_{8} =",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 115,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q7",
+    "prompt": "88_{9} + 82_{9} =",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 181,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q8",
+    "prompt": "100_{6} - 44_{6} =",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 12,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q9",
+    "prompt": "104_{8} - 47_{8} =",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 35,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q10",
+    "prompt": "143_{5} \\div 4_{5} =",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 22,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q11",
+    "prompt": "(*) 22_{9} - 66_{9} =",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": -44,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q12",
+    "prompt": "(*) 135_{7} \\times 4_{7} =",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 606,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q13",
+    "prompt": "132_{4} - 33_{4} =",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 33,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q14",
+    "prompt": "42_{5} - 34_{5} + 23_{5} =",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 31,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q15",
+    "prompt": "(*) 123_{5} \\times 4_{5} =",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 1102,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q16",
+    "prompt": "(*) 33_{4} \\times 3_{4} - 21_{4} =",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 210,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q17",
+    "prompt": "22_{7} \\times 4_{7} =",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 121,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q18",
+    "prompt": "33_{6} \\times 3_{6} =",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 143,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q19",
+    "prompt": "22_{6} + 33_{6} + 44_{6} =",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 143,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q20",
+    "prompt": "44_{8} \\times 4_{8} =",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 220,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q21",
+    "prompt": "32_{6} \\div 5_{6} \\times 4_{6} =",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 24,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q22",
+    "prompt": "24_{7} \\div 6_{7} + 24_{7} =",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 30,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q23",
+    "prompt": "23_{6} + 45_{6} - 50_{6} =",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 22,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q24",
+    "prompt": "(*) 23_{5} \\times 4_{5} - 10_{5} =",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 142,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q25",
+    "prompt": "123_{4} \\div 3_{4} =",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 21,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q26",
+    "prompt": "431_{5} \\div 4_{5} =",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 104,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q27",
+    "prompt": "222_{3} \\times 2_{3} =",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 1221,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q28",
+    "prompt": "(21_{5} - 12_{5}) \\times 11_{5} =",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 44,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q29",
+    "prompt": "(33_{4} + 22_{4}) \\times 11_{4} =",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 1331,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q30",
+    "prompt": "235_{6} \\div 5_{6} =",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 31,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q31",
+    "prompt": "(*) 543_{7} \\div 6_{7} =",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 64,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q32",
+    "prompt": "234_{5} + 432_{5} =",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 1221,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q33",
+    "prompt": "33_{4} \\times 2_{4} - 11_{4} =",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 121,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q34",
+    "prompt": "44_{5} \\times 2_{5} + 33_{5} =",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 231,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q35",
+    "prompt": "(13_{5} + 12_{5}) \\times 11_{5} =",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 330,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q36",
+    "prompt": "11_{4} \\times 21_{4} - 3_{4} =",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 222,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q37",
+    "prompt": "12_{5} + 23_{5} + 34_{5} =",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 124,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.3.q38",
+    "prompt": "(*) (22_{4} + 33_{4}) \\times 11_{4} =",
+    "topic": "performing_operations",
+    "answer": {
+      "answer": 1331,
+      "type": "numeric"
+    }
+  }
+]

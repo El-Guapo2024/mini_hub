@@ -1,0 +1,282 @@
+[
+  {
+    "id": "bh.1.2.7.q1",
+    "prompt": "89 \\times 97 =",
+    "topic": "multiplying_two_numbers_near_100",
+    "answer": {
+      "answer": 8633,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.7.q2",
+    "prompt": "96 \\times 97 =",
+    "topic": "multiplying_two_numbers_near_100",
+    "answer": {
+      "answer": 9312,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.7.q3",
+    "prompt": "103 \\times 109 =",
+    "topic": "multiplying_two_numbers_near_100",
+    "answer": {
+      "answer": 11227,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.7.q4",
+    "prompt": "93 \\times 97 =",
+    "topic": "multiplying_two_numbers_near_100",
+    "answer": {
+      "answer": 9021,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.7.q5",
+    "prompt": "103 \\times 107 =",
+    "topic": "multiplying_two_numbers_near_100",
+    "answer": {
+      "answer": 11021,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.7.q6",
+    "prompt": "93 \\times 89 =",
+    "topic": "multiplying_two_numbers_near_100",
+    "answer": {
+      "answer": 8277,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.7.q7",
+    "prompt": "102 \\times 108 =",
+    "topic": "multiplying_two_numbers_near_100",
+    "answer": {
+      "answer": 11016,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.7.q8",
+    "prompt": "109 \\times 107 =",
+    "topic": "multiplying_two_numbers_near_100",
+    "answer": {
+      "answer": 11663,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.7.q9",
+    "prompt": "96 \\times 89 =",
+    "topic": "multiplying_two_numbers_near_100",
+    "answer": {
+      "answer": 8544,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.7.q10",
+    "prompt": "92 \\times 97 =",
+    "topic": "multiplying_two_numbers_near_100",
+    "answer": {
+      "answer": 8924,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.7.q11",
+    "prompt": "103 \\times 104 =",
+    "topic": "multiplying_two_numbers_near_100",
+    "answer": {
+      "answer": 10712,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.7.q12",
+    "prompt": "102 \\times 103 =",
+    "topic": "multiplying_two_numbers_near_100",
+    "answer": {
+      "answer": 10506,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.7.q13",
+    "prompt": "92 \\times 93 =",
+    "topic": "multiplying_two_numbers_near_100",
+    "answer": {
+      "answer": 8556,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.7.q14",
+    "prompt": "106 \\times 107 =",
+    "topic": "multiplying_two_numbers_near_100",
+    "answer": {
+      "answer": 11342,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.7.q15",
+    "prompt": "97 \\times 89 =",
+    "topic": "multiplying_two_numbers_near_100",
+    "answer": {
+      "answer": 8633,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.7.q16",
+    "prompt": "94 \\times 98 =",
+    "topic": "multiplying_two_numbers_near_100",
+    "answer": {
+      "answer": 9212,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.7.q17",
+    "prompt": "94 \\times 91 =",
+    "topic": "multiplying_two_numbers_near_100",
+    "answer": {
+      "answer": 8554,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.7.q18",
+    "prompt": "91 \\times 98 =",
+    "topic": "multiplying_two_numbers_near_100",
+    "answer": {
+      "answer": 8918,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.7.q19",
+    "prompt": "993 \\times 994 =",
+    "topic": "multiplying_two_numbers_near_100",
+    "answer": {
+      "answer": 987042,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.7.q20",
+    "prompt": "103 \\times 96 =",
+    "topic": "multiplying_two_numbers_near_100",
+    "answer": {
+      "answer": 9888,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.7.q21",
+    "prompt": "93 \\times 103 =",
+    "topic": "multiplying_two_numbers_near_100",
+    "answer": {
+      "answer": 9579,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.7.q22",
+    "prompt": "991 \\times 989 =",
+    "topic": "multiplying_two_numbers_near_100",
+    "answer": {
+      "answer": 980099,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.7.q23",
+    "prompt": "1009 \\times 1004 =",
+    "topic": "multiplying_two_numbers_near_100",
+    "answer": {
+      "answer": 1013036,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.7.q24",
+    "prompt": "97 \\times 107 =",
+    "topic": "multiplying_two_numbers_near_100",
+    "answer": {
+      "answer": 10379,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.7.q25",
+    "prompt": "93 \\times 104 =",
+    "topic": "multiplying_two_numbers_near_100",
+    "answer": {
+      "answer": 9672,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.7.q26",
+    "prompt": "96 \\times 103 =",
+    "topic": "multiplying_two_numbers_near_100",
+    "answer": {
+      "answer": 9888,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.7.q27",
+    "prompt": "991 \\times 991 =",
+    "topic": "multiplying_two_numbers_near_100",
+    "answer": {
+      "answer": 982081,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.7.q28",
+    "prompt": "104 \\times 97 =",
+    "topic": "multiplying_two_numbers_near_100",
+    "answer": {
+      "answer": 10088,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.7.q29",
+    "prompt": "1003 \\times 1008 =",
+    "topic": "multiplying_two_numbers_near_100",
+    "answer": {
+      "answer": 1011024,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.7.q30",
+    "prompt": "(*) 98^{2} + 97^{2} =",
+    "topic": "multiplying_two_numbers_near_100",
+    "answer": {
+      "high": 19964.0,
+      "low": 18062.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.7.q31",
+    "prompt": "19^{2} \\times 3^{2} \\times 2^{2} =",
+    "topic": "multiplying_two_numbers_near_100",
+    "answer": {
+      "answer": 12996,
+      "type": "numeric"
+    }
+  }
+]

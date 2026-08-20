@@ -2,4 +2,9 @@ id: sum_of_n_times_n_factorial
 title: 'Sum of Factorials: 1·1! + 2·2! + ⋯ + n·n!'
 logo: assets/icons/number_sense.png
 bh_section: '3.5.1'
-questionIds: []
+questionIds:
+  - bh.3.5.1.q1
+  - bh.3.5.1.q2
+  - bh.3.5.1.q3
+  - bh.3.5.1.q4
+  - bh.3.5.1.q5

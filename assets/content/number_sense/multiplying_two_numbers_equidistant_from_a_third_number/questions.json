@@ -1,0 +1,424 @@
+[
+  {
+    "id": "bh.1.2.10.q1",
+    "prompt": "84 \\times 86 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 7224,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q2",
+    "prompt": "53 \\times 57 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 3021,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q3",
+    "prompt": "48 \\times 52 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 2496,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q4",
+    "prompt": "62 \\times 58 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 3596,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q5",
+    "prompt": "6.8 \\times 7.2 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 48.96,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q6",
+    "prompt": "88 \\times 82 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 7216,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q7",
+    "prompt": "36 \\times 24 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 864,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q8",
+    "prompt": "7.6 \\times 8.4 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 63.84,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q9",
+    "prompt": "5.3 \\times 4.7 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 24.91,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q10",
+    "prompt": "51 \\times 59 + 16 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 3025,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q11",
+    "prompt": "96 \\times 104 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 9984,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q12",
+    "prompt": "81 \\times 89 + 16 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 7225,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q13",
+    "prompt": "34 \\times 36 + 1 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 1225,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q14",
+    "prompt": "73 \\times 77 + 4 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 5625,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q15",
+    "prompt": "62 \\times 68 + 9 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 4225,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q16",
+    "prompt": "32 \\times 38 + 9 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 1225,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q17",
+    "prompt": "18 \\times 24 + 9 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 441,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q18",
+    "prompt": "61 \\times 69 + 16 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 4225,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q19",
+    "prompt": "43 \\times 47 + 4 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 2025,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q20",
+    "prompt": "88 \\times 82 + 9 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 7225,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q21",
+    "prompt": "57 \\times 53 + 4 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 3025,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q22",
+    "prompt": "38 \\times 28 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 1064,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q23",
+    "prompt": "41 \\times 49 - 9 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 2000,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q24",
+    "prompt": "77 \\times 73 + 4 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 5625,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q25",
+    "prompt": "65 \\times 75 - 33 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 4842,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q26",
+    "prompt": "33 \\times 27 + 9 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 900,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q27",
+    "prompt": "71 \\times 79 + 16 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 5625,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q28",
+    "prompt": "72 \\times 78 + 9 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 5625,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q29",
+    "prompt": "53 \\times 57 + 4 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 3025,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q30",
+    "prompt": "105 \\times 95 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 9975,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q31",
+    "prompt": "62 \\times 68 - 16 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 4200,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q32",
+    "prompt": "36 \\times 26 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 936,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q33",
+    "prompt": "83 \\times 87 - 21 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 7200,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q34",
+    "prompt": "23 \\times 27 + 4 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 625,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q35",
+    "prompt": "29 \\times 37 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 1073,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q36",
+    "prompt": "21 - 83 \\times 87 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": -7200,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q37",
+    "prompt": "112 \\times 88 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 9856,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q38",
+    "prompt": "(*) 52 \\times 48 + 49 \\times 51 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "high": 5245.0,
+      "low": 4745.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q39",
+    "prompt": "(*) 4.9^{3} \\times 3.3^{3} =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "high": 4440.0,
+      "low": 4016.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q40",
+    "prompt": "(*) 72 \\times 68 + 71 \\times 69 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "high": 10285.0,
+      "low": 9305.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q41",
+    "prompt": "(*) 42 \\times 38 + 41 \\times 39 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "high": 3355.0,
+      "low": 3035.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q42",
+    "prompt": "(*) 4.8^{3} \\times 6.3^{3} =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "high": 29036.0,
+      "low": 26270.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q43",
+    "prompt": "(*) 4000 + 322 \\times 318 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "high": 111716.0,
+      "low": 101076.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q44",
+    "prompt": "118 \\times 122 + 4 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "answer": 14400,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q45",
+    "prompt": "(*) 5.1^{3} \\times 7.9^{3} =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "high": 68673.0,
+      "low": 62132.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.10.q46",
+    "prompt": "(*) 34 \\times 36 \\times 34 \\times 36 =",
+    "topic": "multiplying_two_numbers_equidistant_from_a_third_number",
+    "answer": {
+      "high": 1573085.0,
+      "low": 1423267.0,
+      "type": "estimate"
+    }
+  }
+]

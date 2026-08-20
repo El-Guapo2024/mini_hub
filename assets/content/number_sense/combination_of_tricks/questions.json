@@ -1,0 +1,401 @@
+[
+  {
+    "id": "bh.1.3.10.q1",
+    "prompt": "(*) 12 \\times 14 \\times 16 =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 2823.0,
+      "low": 2553.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q2",
+    "prompt": "(*) 21 \\times 31 \\times 41 =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 28026.0,
+      "low": 25356.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q3",
+    "prompt": "(*) 13 \\times 15 \\times 17 =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 3481.0,
+      "low": 3149.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q4",
+    "prompt": "(*) 14 \\times 16 \\times 28 =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 6586.0,
+      "low": 5958.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q5",
+    "prompt": "(*) 146 \\times 5 \\times 154 =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 118041.0,
+      "low": 106799.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q6",
+    "prompt": "(*) 24 \\times 34 \\times 44 =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 37700.0,
+      "low": 34108.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q7",
+    "prompt": "(*) 24 \\times 36 \\times 48 =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 43545.0,
+      "low": 39398.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q8",
+    "prompt": "(*) 44 \\times 25 \\times 11^{2} =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 139755.0,
+      "low": 126445.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q9",
+    "prompt": "(*) 22 \\times 25 \\times 28 =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 16170.0,
+      "low": 14630.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q10",
+    "prompt": "(*) 83 \\times 87 \\times 91 =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 689967.0,
+      "low": 624255.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q11",
+    "prompt": "(*) 43 \\times 47 \\times 51 =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 108225.0,
+      "low": 97917.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q12",
+    "prompt": "(*) 27 \\times 29 \\times 31 \\times 33 =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 841060.0,
+      "low": 760958.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q13",
+    "prompt": "(*) 23 \\times 33 \\times 43 =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 34269.0,
+      "low": 31005.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q14",
+    "prompt": "(*) 29 \\times 127 + 31 \\times 213 =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 10801.0,
+      "low": 9771.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q15",
+    "prompt": "(*) 41 \\times 44 \\times 47 =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 89028.0,
+      "low": 80548.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q16",
+    "prompt": "(*) 31 \\times 42 \\times 53 =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 72457.0,
+      "low": 65555.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q17",
+    "prompt": "(*) 22 \\times 44 \\times 66 =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 67083.0,
+      "low": 60693.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q18",
+    "prompt": "(*) 39 \\times 40 \\times 41 =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 67158.0,
+      "low": 60762.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q19",
+    "prompt": "(*) \\sqrt[3]{1329} \\times \\sqrt{171} \\times 15 =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 2265.0,
+      "low": 2048.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q20",
+    "prompt": "(*) 42 \\times 48 \\times 45 =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 95256.0,
+      "low": 86184.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q21",
+    "prompt": "(*) 52 \\times 55 \\times 58 =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 174174.0,
+      "low": 157586.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q22",
+    "prompt": "(*) 18 \\times 20 \\times 22 =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 8316.0,
+      "low": 7524.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q23",
+    "prompt": "(*) 24 \\times 34 \\times 44 =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 37700.0,
+      "low": 34108.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q24",
+    "prompt": "(*) 80 \\times 82 \\times 84 =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 578592.0,
+      "low": 523488.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q25",
+    "prompt": "(*) 28 \\times 30 \\times 32 =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 28224.0,
+      "low": 25536.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q26",
+    "prompt": "(*) 66 \\times 68 \\times 70 =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 329868.0,
+      "low": 298452.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q27",
+    "prompt": "(*) 63 \\times 65 \\times 67 =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 288084.0,
+      "low": 260646.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q28",
+    "prompt": "(*) 41 \\times 43 \\div 51 \\times 53 =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 1924.0,
+      "low": 1740.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q29",
+    "prompt": "(*) 67 \\times 56 + 65 \\times 76 =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 9127.0,
+      "low": 8257.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q30",
+    "prompt": "(*) 56 \\times 45 + 54 \\times 65 =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 6332.0,
+      "low": 5728.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q31",
+    "prompt": "(*) 112 \\times 123 + 132 \\times 121 =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 31236.0,
+      "low": 28260.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q32",
+    "prompt": "(*) 29 \\times 11 + 31 \\times 109 =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 3883.0,
+      "low": 3513.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q33",
+    "prompt": "(*) 75^{2} \\div 25^{2} \\times 50^{4} =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 59062500.0,
+      "low": 53437500.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q34",
+    "prompt": "(*) 18^{3} \\times 15^{3} \\div 9^{3} =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 28350.0,
+      "low": 25650.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q35",
+    "prompt": "(*) 50^{5} \\div 25^{5} \\times 5^{5} =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 105000.0,
+      "low": 95000.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q36",
+    "prompt": "(*) 24^{3} \\times 21^{3} \\div 4^{4} =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 525099.0,
+      "low": 475089.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q37",
+    "prompt": "(*) 21^{3} \\times 18^{2} \\div 9^{3} =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 4322.0,
+      "low": 3910.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q38",
+    "prompt": "(*) 75^{4} \\div 50^{3} \\times 25^{2} =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 166114.0,
+      "low": 150292.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q39",
+    "prompt": "24^{2} \\times 18^{3} \\div 6^{4} =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "answer": 2592,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.3.10.q40",
+    "prompt": "(*) \\sqrt[3]{3380} \\times \\sqrt{223} \\times 16 =",
+    "topic": "combination_of_tricks",
+    "answer": {
+      "high": 3766.0,
+      "low": 3406.0,
+      "type": "estimate"
+    }
+  }
+]

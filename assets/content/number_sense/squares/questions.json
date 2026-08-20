@@ -1,0 +1,377 @@
+[
+  {
+    "id": "bh.2.1.1.q1",
+    "prompt": "28^{2} =",
+    "topic": "squares",
+    "answer": {
+      "answer": 784,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q2",
+    "prompt": "3.2^{2} =",
+    "topic": "squares",
+    "answer": {
+      "answer": 10.24,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q3",
+    "prompt": "29 \\times 29 =",
+    "topic": "squares",
+    "answer": {
+      "answer": 841,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q4",
+    "prompt": "16 \\times 16 =",
+    "topic": "squares",
+    "answer": {
+      "answer": 256,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q5",
+    "prompt": "31^{2} =",
+    "topic": "squares",
+    "answer": {
+      "answer": 961,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q6",
+    "prompt": "If 2.2 cm= 1 inch, then 2.2 in equals how many cm.? =",
+    "topic": "squares",
+    "answer": {
+      "answer": 4.84,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q7",
+    "prompt": "34 \\times 34 =",
+    "topic": "squares",
+    "answer": {
+      "answer": 1156,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q8",
+    "prompt": "17 \\times 17 =",
+    "topic": "squares",
+    "answer": {
+      "answer": 289,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q9",
+    "prompt": "23 \\times 23 =",
+    "topic": "squares",
+    "answer": {
+      "answer": 529,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q10",
+    "prompt": "18 \\times 18 =",
+    "topic": "squares",
+    "answer": {
+      "answer": 324,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q11",
+    "prompt": "24\\% of 24 is:",
+    "topic": "squares",
+    "answer": {
+      "answer": 5.76,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q12",
+    "prompt": "23^{2} =",
+    "topic": "squares",
+    "answer": {
+      "answer": 529,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q13",
+    "prompt": "32^{2} =",
+    "topic": "squares",
+    "answer": {
+      "answer": 1024,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q14",
+    "prompt": "14 \\times 14 =",
+    "topic": "squares",
+    "answer": {
+      "answer": 196,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q15",
+    "prompt": "21^{2} =",
+    "topic": "squares",
+    "answer": {
+      "answer": 441,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q16",
+    "prompt": "24^{2} =",
+    "topic": "squares",
+    "answer": {
+      "answer": 576,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q17",
+    "prompt": "31\\% of 31 is:",
+    "topic": "squares",
+    "answer": {
+      "answer": 9.61,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q18",
+    "prompt": "What is 27\\% of 27:",
+    "topic": "squares",
+    "answer": {
+      "answer": 7.29,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q19",
+    "prompt": "34^{2} =",
+    "topic": "squares",
+    "answer": {
+      "answer": 1156,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q20",
+    "prompt": "26^{2} =",
+    "topic": "squares",
+    "answer": {
+      "answer": 676,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q21",
+    "prompt": "17^{2} =",
+    "topic": "squares",
+    "answer": {
+      "answer": 289,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q22",
+    "prompt": "33 \\times 33 =",
+    "topic": "squares",
+    "answer": {
+      "answer": 1089,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q23",
+    "prompt": "Find x < 0 when x^{2} = 729 :",
+    "topic": "squares",
+    "answer": {
+      "answer": -27,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q24",
+    "prompt": "(*) \\sqrt{1090} \\times 31 =",
+    "topic": "squares",
+    "answer": {
+      "high": 1075.0,
+      "low": 972.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q25",
+    "prompt": "(*) \\sqrt{291} \\times 23 =",
+    "topic": "squares",
+    "answer": {
+      "high": 412.0,
+      "low": 372.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q26",
+    "prompt": "\\sqrt{-196} \\times \\sqrt{-256} =",
+    "topic": "squares",
+    "answer": {
+      "answer": -224,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q27",
+    "prompt": "\\frac{3}{4} of 24\\% of 1.8:",
+    "topic": "squares",
+    "answer": {
+      "answer": 0.324,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q28",
+    "prompt": "(*) 509 \\times \\sqrt{905} =",
+    "topic": "squares",
+    "answer": {
+      "high": 16078.0,
+      "low": 14546.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q29",
+    "prompt": "(*) \\sqrt{327} \\times \\sqrt{397} \\times \\sqrt{487} =",
+    "topic": "squares",
+    "answer": {
+      "high": 8349.0,
+      "low": 7553.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q30",
+    "prompt": "(*) 14^{4} =",
+    "topic": "squares",
+    "answer": {
+      "high": 40337.0,
+      "low": 36495.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q31",
+    "prompt": "(*) \\sqrt{362} \\times \\sqrt{440} =",
+    "topic": "squares",
+    "answer": {
+      "high": 420.0,
+      "low": 379.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q32",
+    "prompt": "959 \\times \\sqrt{960} =",
+    "topic": "squares",
+    "answer": {
+      "high": 31200.0,
+      "low": 28227.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q33",
+    "prompt": "(*) 13^{4} =",
+    "topic": "squares",
+    "answer": {
+      "high": 29990.0,
+      "low": 27132.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q34",
+    "prompt": "(*) \\sqrt{451} \\times 451 =",
+    "topic": "squares",
+    "answer": {
+      "high": 10057.0,
+      "low": 9098.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q35",
+    "prompt": "(*) \\sqrt{574} \\times \\sqrt{577} \\times \\sqrt{580} =",
+    "topic": "squares",
+    "answer": {
+      "high": 14553.0,
+      "low": 13166.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q36",
+    "prompt": "(*) 17^{4} =",
+    "topic": "squares",
+    "answer": {
+      "high": 87698.0,
+      "low": 79344.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q37",
+    "prompt": "(*) \\sqrt{1025} \\times \\sqrt{63} =",
+    "topic": "squares",
+    "answer": {
+      "high": 267.0,
+      "low": 241.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q38",
+    "prompt": "(*) 28 \\times 56 \\times 14 \\div 42 =",
+    "topic": "squares",
+    "answer": {
+      "high": 549.0,
+      "low": 496.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q39",
+    "prompt": "(*) \\sqrt{1030} \\times 2^{5} =",
+    "topic": "squares",
+    "answer": {
+      "high": 1078.0,
+      "low": 975.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.2.1.1.q40",
+    "prompt": "(*) 21^{4} =",
+    "topic": "squares",
+    "answer": {
+      "high": 204206.0,
+      "low": 184756.0,
+      "type": "estimate"
+    }
+  }
+]

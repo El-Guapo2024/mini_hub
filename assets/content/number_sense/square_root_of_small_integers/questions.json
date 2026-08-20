@@ -1,0 +1,83 @@
+[
+  {
+    "id": "bh.4.2.3.q1",
+    "prompt": "Round 2\\sqrt{3} to the nearest tenth.",
+    "topic": "square_root_of_small_integers",
+    "answer": {
+      "answer": 3.5,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.2.3.q2",
+    "prompt": "The greatest integer less than 12\\sqrt{2} is",
+    "topic": "square_root_of_small_integers",
+    "answer": {
+      "answer": 16,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.2.3.q3",
+    "prompt": "Truncate \\sqrt{2} + \\sqrt{3} + \\sqrt{5} to one decimal place. (decimal)",
+    "topic": "square_root_of_small_integers",
+    "answer": {
+      "answer": 5.3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.2.3.q4",
+    "prompt": "The greatest integer function is written as f(x) = [x]. Find [\\sqrt{7} - \\sqrt{3}].",
+    "topic": "square_root_of_small_integers",
+    "answer": {
+      "answer": 0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.2.3.q5",
+    "prompt": "The greatest integer function is written as f(x) = [x]. Find [\\sqrt{6} + \\sqrt{7}].",
+    "topic": "square_root_of_small_integers",
+    "answer": {
+      "answer": 5,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.2.3.q6",
+    "prompt": "The greatest integer less than 12\\sqrt{2} is",
+    "topic": "square_root_of_small_integers",
+    "answer": {
+      "answer": 16,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.2.3.q7",
+    "prompt": "The greatest integer function is written as f(x) = [x]. Find [2\\sqrt{3} - \\pi].",
+    "topic": "square_root_of_small_integers",
+    "answer": {
+      "answer": 0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.2.3.q8",
+    "prompt": "Round (5\\sqrt{2} + 4\\sqrt{3}) to the nearest whole number.",
+    "topic": "square_root_of_small_integers",
+    "answer": {
+      "answer": 14,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.2.3.q9",
+    "prompt": "Round (\\sqrt{5} + 6\\sqrt{7} to the nearest whole number.",
+    "topic": "square_root_of_small_integers",
+    "answer": {
+      "answer": 18,
+      "type": "numeric"
+    }
+  }
+]

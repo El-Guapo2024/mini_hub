@@ -1,0 +1,128 @@
+[
+  {
+    "id": "bh.2.2.6.q1",
+    "prompt": "The 7^{th} pentagonal number:",
+    "topic": "triangular_pentagonal_etc_numbers",
+    "answer": {
+      "answer": 70,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.6.q2",
+    "prompt": "The 4^{th} octagonal number:",
+    "topic": "triangular_pentagonal_etc_numbers",
+    "answer": {
+      "answer": 40,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.6.q3",
+    "prompt": "The 5^{th} pentagonal number:",
+    "topic": "triangular_pentagonal_etc_numbers",
+    "answer": {
+      "answer": 35,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.6.q4",
+    "prompt": "The 8^{th} octagonal number:",
+    "topic": "triangular_pentagonal_etc_numbers",
+    "answer": {
+      "answer": 176,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.6.q5",
+    "prompt": "The 12^{th} hexagonal number:",
+    "topic": "triangular_pentagonal_etc_numbers",
+    "answer": {
+      "answer": 276,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.6.q6",
+    "prompt": "The 7^{th} septagonal number is:",
+    "topic": "triangular_pentagonal_etc_numbers",
+    "answer": {
+      "answer": 112,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.6.q7",
+    "prompt": "The 5^{th} pentagonal number is:",
+    "topic": "triangular_pentagonal_etc_numbers",
+    "answer": {
+      "answer": 35,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.6.q8",
+    "prompt": "The 6^{th} pentagonal number is:",
+    "topic": "triangular_pentagonal_etc_numbers",
+    "answer": {
+      "answer": 51,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.6.q9",
+    "prompt": "The 5^{th} hexagonal number is:",
+    "topic": "triangular_pentagonal_etc_numbers",
+    "answer": {
+      "answer": 45,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.6.q10",
+    "prompt": "The 11^{th} triangular number is:",
+    "topic": "triangular_pentagonal_etc_numbers",
+    "answer": {
+      "answer": 66,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.6.q11",
+    "prompt": "The 12^{th} triangular number is:",
+    "topic": "triangular_pentagonal_etc_numbers",
+    "answer": {
+      "answer": 78,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.6.q12",
+    "prompt": "The 6^{th} hexagonal number is:",
+    "topic": "triangular_pentagonal_etc_numbers",
+    "answer": {
+      "answer": 66,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.6.q13",
+    "prompt": "The sum of the 5^{th} triangular and the 6^{th} triangular numbers:",
+    "topic": "triangular_pentagonal_etc_numbers",
+    "answer": {
+      "answer": 36,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.2.6.q14",
+    "prompt": "The sum of the 3^{rd} triangular and the 3^{rd} pentagonal numbers:",
+    "topic": "triangular_pentagonal_etc_numbers",
+    "answer": {
+      "answer": 18,
+      "type": "numeric"
+    }
+  }
+]

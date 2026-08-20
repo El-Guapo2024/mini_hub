@@ -1,0 +1,84 @@
+[
+  {
+    "id": "bh.1.2.8.q1",
+    "prompt": "25\\% of 25 =",
+    "topic": "squares_ending_in_5_trick",
+    "answer": {
+      "answer": 6.25,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.8.q2",
+    "prompt": ".35 \\times 3.5 =",
+    "topic": "squares_ending_in_5_trick",
+    "answer": {
+      "answer": 1.225,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.8.q3",
+    "prompt": "12^{2} + 2 \\times 12 \\times 13 + 13^{2} =",
+    "topic": "squares_ending_in_5_trick",
+    "answer": {
+      "answer": 625,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.8.q4",
+    "prompt": "(115)^{2} =",
+    "topic": "squares_ending_in_5_trick",
+    "answer": {
+      "answer": 13225,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.8.q5",
+    "prompt": "f(x) = 9x^{2} - 12x + 4, f(19) =",
+    "topic": "squares_ending_in_5_trick",
+    "answer": {
+      "answer": 3025,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.8.q6",
+    "prompt": "45\\% of 45 - 45 =",
+    "topic": "squares_ending_in_5_trick",
+    "answer": {
+      "answer": -24.75,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.8.q7",
+    "prompt": "(*) 12^{4} =",
+    "topic": "squares_ending_in_5_trick",
+    "answer": {
+      "high": 21773.0,
+      "low": 19699.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.8.q8",
+    "prompt": "505 \\times 505 =",
+    "topic": "squares_ending_in_5_trick",
+    "answer": {
+      "answer": 255025,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.8.q9",
+    "prompt": "A square has an area of 12.25 sq. cm. Its perimeter is:",
+    "topic": "squares_ending_in_5_trick",
+    "answer": {
+      "answer": 14,
+      "type": "numeric"
+    }
+  }
+]

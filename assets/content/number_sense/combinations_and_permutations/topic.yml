@@ -2,4 +2,26 @@ id: combinations_and_permutations
 title: 'Combinations Formula'
 logo: assets/icons/number_sense.png
 bh_section: '2.2.10'
-questionIds: []
+questionIds:
+  - bh.2.2.10.q1
+  - bh.2.2.10.q2
+  - bh.2.2.10.q3
+  - bh.2.2.10.q4
+  - bh.2.2.10.q5
+  - bh.2.2.10.q6
+  - bh.2.2.10.q7
+  - bh.2.2.10.q8
+  - bh.2.2.10.q9
+  - bh.2.2.10.q10
+  - bh.2.2.10.q11
+  - bh.2.2.10.q12
+  - bh.2.2.10.q13
+  - bh.2.2.10.q14
+  - bh.2.2.10.q15
+  - bh.2.2.10.q16
+  - bh.2.2.10.q17
+  - bh.2.2.10.q18
+  - bh.2.2.10.q19
+  - bh.2.2.10.q20
+  - bh.2.2.10.q21
+  - bh.2.2.10.q22

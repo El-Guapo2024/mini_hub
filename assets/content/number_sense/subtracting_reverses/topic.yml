@@ -2,4 +2,14 @@ id: subtracting_reverses
 title: 'Subtracting Reverses'
 logo: assets/icons/number_sense.png
 bh_section: '1.5.1'
-questionIds: []
+questionIds:
+  - bh.1.5.1.q1
+  - bh.1.5.1.q2
+  - bh.1.5.1.q3
+  - bh.1.5.1.q4
+  - bh.1.5.1.q5
+  - bh.1.5.1.q6
+  - bh.1.5.1.q7
+  - bh.1.5.1.q8
+  - bh.1.5.1.q9
+  - bh.1.5.1.q10

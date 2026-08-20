@@ -2,4 +2,32 @@ id: derivatives
 title: 'Calculus (Limits)'
 logo: assets/icons/number_sense.png
 bh_section: '3.6.2'
-questionIds: []
+questionIds:
+  - bh.3.6.2.q1
+  - bh.3.6.2.q2
+  - bh.3.6.2.q3
+  - bh.3.6.2.q4
+  - bh.3.6.2.q5
+  - bh.3.6.2.q6
+  - bh.3.6.2.q7
+  - bh.3.6.2.q8
+  - bh.3.6.2.q9
+  - bh.3.6.2.q10
+  - bh.3.6.2.q11
+  - bh.3.6.2.q12
+  - bh.3.6.2.q13
+  - bh.3.6.2.q14
+  - bh.3.6.2.q15
+  - bh.3.6.2.q16
+  - bh.3.6.2.q17
+  - bh.3.6.2.q18
+  - bh.3.6.2.q19
+  - bh.3.6.2.q20
+  - bh.3.6.2.q21
+  - bh.3.6.2.q22
+  - bh.3.6.2.q23
+  - bh.3.6.2.q24
+  - bh.3.6.2.q25
+  - bh.3.6.2.q26
+  - bh.3.6.2.q27
+  - bh.3.6.2.q28

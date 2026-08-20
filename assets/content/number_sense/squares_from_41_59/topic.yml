@@ -2,4 +2,12 @@ id: squares_from_41_59
 title: 'Squares from 41–59 Trick'
 logo: assets/icons/number_sense.png
 bh_section: '1.2.9'
-questionIds: []
+questionIds:
+  - bh.1.2.9.q1
+  - bh.1.2.9.q2
+  - bh.1.2.9.q3
+  - bh.1.2.9.q4
+  - bh.1.2.9.q5
+  - bh.1.2.9.q6
+  - bh.1.2.9.q7
+  - bh.1.2.9.q8

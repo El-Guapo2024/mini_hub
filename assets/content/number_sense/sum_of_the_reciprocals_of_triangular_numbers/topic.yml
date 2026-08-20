@@ -2,4 +2,9 @@ id: sum_of_the_reciprocals_of_triangular_numbers
 title: 'Sum of Reciprocals of Triangular Numbers'
 logo: assets/icons/number_sense.png
 bh_section: '4.4.3'
-questionIds: []
+questionIds:
+  - bh.4.4.3.q1
+  - bh.4.4.3.q2
+  - bh.4.4.3.q3
+  - bh.4.4.3.q4
+  - bh.4.4.3.q5

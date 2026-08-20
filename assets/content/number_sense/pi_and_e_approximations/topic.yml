@@ -2,4 +2,20 @@ id: pi_and_e_approximations
 title: 'π and e Approximations'
 logo: assets/icons/number_sense.png
 bh_section: '2.1.8'
-questionIds: []
+questionIds:
+  - bh.2.1.8.q1
+  - bh.2.1.8.q2
+  - bh.2.1.8.q3
+  - bh.2.1.8.q4
+  - bh.2.1.8.q5
+  - bh.2.1.8.q6
+  - bh.2.1.8.q7
+  - bh.2.1.8.q8
+  - bh.2.1.8.q9
+  - bh.2.1.8.q10
+  - bh.2.1.8.q11
+  - bh.2.1.8.q12
+  - bh.2.1.8.q13
+  - bh.2.1.8.q14
+  - bh.2.1.8.q15
+  - bh.2.1.8.q16

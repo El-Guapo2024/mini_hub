@@ -1,0 +1,128 @@
+[
+  {
+    "id": "bh.3.4.q1",
+    "prompt": "x + 6 \\cong 9(\\text{mod } 7), 0 \\le x \\le 6, then x =",
+    "topic": "modular_arithmetic_basic",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.4.q2",
+    "prompt": "4^{7} \\div 7 has a remainder of:",
+    "topic": "modular_arithmetic_basic",
+    "answer": {
+      "answer": 4,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.4.q3",
+    "prompt": "2^{5} \\times 3^{5} \\div 5 has a remainder of:",
+    "topic": "modular_arithmetic_basic",
+    "answer": {
+      "answer": 1,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.4.q4",
+    "prompt": "2^{6} \\times 3^{4} \\div 5 has a remainder of:",
+    "topic": "modular_arithmetic_basic",
+    "answer": {
+      "answer": 4,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.4.q5",
+    "prompt": "8^{7} \\div 6 has a remainder of:",
+    "topic": "modular_arithmetic_basic",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.4.q6",
+    "prompt": "If N is a positive integer and 4N \\div 5 has a remainder of 2 then N \\div 5 has a remainder of:",
+    "topic": "modular_arithmetic_basic",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.4.q7",
+    "prompt": "x + 3 \\cong 9(\\text{mod } 5), 0 \\le x \\le 4, then x =",
+    "topic": "modular_arithmetic_basic",
+    "answer": {
+      "answer": 1,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.4.q8",
+    "prompt": "x + 4 \\cong 1(\\text{mod } 8), 0 \\le x \\le 7, then x =",
+    "topic": "modular_arithmetic_basic",
+    "answer": {
+      "answer": 5,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.4.q9",
+    "prompt": "3^{8} \\div 7 has a remainder of:",
+    "topic": "modular_arithmetic_basic",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.4.q10",
+    "prompt": "3x \\cong 17(\\text{mod } 5), 0 \\le x \\le 5, then x =",
+    "topic": "modular_arithmetic_basic",
+    "answer": {
+      "answer": 4,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.4.q11",
+    "prompt": "3x - 2 \\cong 4(\\text{mod } 7), 0 \\le x \\le 7, then x =",
+    "topic": "modular_arithmetic_basic",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.4.q12",
+    "prompt": "6^{8} \\div 7 has a remainder of:",
+    "topic": "modular_arithmetic_basic",
+    "answer": {
+      "answer": 1,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.4.q13",
+    "prompt": "3^{7} \\div 7 has a remainder of:",
+    "topic": "modular_arithmetic_basic",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.4.q14",
+    "prompt": "5^{4} \\div 11 has a remainder of:",
+    "topic": "modular_arithmetic_basic",
+    "answer": {
+      "answer": 9,
+      "type": "numeric"
+    }
+  }
+]

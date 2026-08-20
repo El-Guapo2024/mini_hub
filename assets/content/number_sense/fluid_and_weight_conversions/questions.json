@@ -1,0 +1,310 @@
+[
+  {
+    "id": "bh.2.1.11.q1",
+    "prompt": "1 quart = ______ cups",
+    "topic": "fluid_and_weight_conversions",
+    "answer": {
+      "answer": 4,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.11.q2",
+    "prompt": "1 quart = ______ ounces",
+    "topic": "fluid_and_weight_conversions",
+    "answer": {
+      "answer": 32,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.11.q3",
+    "prompt": "3 pints = ______ ounces",
+    "topic": "fluid_and_weight_conversions",
+    "answer": {
+      "answer": 48,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.11.q4",
+    "prompt": "3 gallons = ______ cubic inches",
+    "topic": "fluid_and_weight_conversions",
+    "answer": {
+      "answer": 693,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.11.q5",
+    "prompt": "\\frac{2}{3} gallon = ______ cubic inches",
+    "topic": "fluid_and_weight_conversions",
+    "answer": {
+      "answer": 154,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.11.q6",
+    "prompt": "1\\frac{1}{3} gallon = ______ cubic inches",
+    "topic": "fluid_and_weight_conversions",
+    "answer": {
+      "answer": 308,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.11.q7",
+    "prompt": "75\\% of 1 gallon = ______ ounces",
+    "topic": "fluid_and_weight_conversions",
+    "answer": {
+      "answer": 96,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.11.q8",
+    "prompt": "256 ounces = ______ pounds",
+    "topic": "fluid_and_weight_conversions",
+    "answer": {
+      "answer": 16,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.11.q9",
+    "prompt": "750 pounds = ______ \\% of a ton",
+    "topic": "fluid_and_weight_conversions",
+    "answer": {
+      "type": "fraction",
+      "num": 3,
+      "den": 8,
+      "display": "\\frac{3}{8}"
+    }
+  },
+  {
+    "id": "bh.2.1.11.q10",
+    "prompt": "75\\% of a gallon = ______ pints",
+    "topic": "fluid_and_weight_conversions",
+    "answer": {
+      "answer": 6,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.11.q11",
+    "prompt": "12\\frac{1}{2}\\% of a pint = ______ ounces",
+    "topic": "fluid_and_weight_conversions",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.11.q12",
+    "prompt": "4 pints is what \\% of a gallon:",
+    "topic": "fluid_and_weight_conversions",
+    "answer": {
+      "answer": 50,
+      "type": "numeric",
+      "unit": "%"
+    }
+  },
+  {
+    "id": "bh.2.1.11.q13",
+    "prompt": "2 quarts is what \\% of a pint:",
+    "topic": "fluid_and_weight_conversions",
+    "answer": {
+      "answer": 400,
+      "type": "numeric",
+      "unit": "%"
+    }
+  },
+  {
+    "id": "bh.2.1.11.q14",
+    "prompt": "6 tablespoons is ______ \\% of a cup",
+    "topic": "fluid_and_weight_conversions",
+    "answer": {
+      "answer": 37.5,
+      "type": "numeric",
+      "unit": "%"
+    }
+  },
+  {
+    "id": "bh.2.1.11.q15",
+    "prompt": "9 cups is what \\% of a quart:",
+    "topic": "fluid_and_weight_conversions",
+    "answer": {
+      "answer": 225,
+      "type": "numeric",
+      "unit": "%"
+    }
+  },
+  {
+    "id": "bh.2.1.11.q16",
+    "prompt": "A quart is what \\% of a cup:",
+    "topic": "fluid_and_weight_conversions",
+    "answer": {
+      "answer": 400,
+      "type": "numeric",
+      "unit": "%"
+    }
+  },
+  {
+    "id": "bh.2.1.11.q17",
+    "prompt": "2541 cubic inches = ______ gallons",
+    "topic": "fluid_and_weight_conversions",
+    "answer": {
+      "answer": 11,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.11.q18",
+    "prompt": "3 pints is what \\% of a cup:",
+    "topic": "fluid_and_weight_conversions",
+    "answer": {
+      "answer": 600,
+      "type": "numeric",
+      "unit": "%"
+    }
+  },
+  {
+    "id": "bh.2.1.11.q19",
+    "prompt": "3 pints is what \\% of a gallon:",
+    "topic": "fluid_and_weight_conversions",
+    "answer": {
+      "answer": 37.5,
+      "type": "numeric",
+      "unit": "%"
+    }
+  },
+  {
+    "id": "bh.2.1.11.q20",
+    "prompt": "5 gallons = ______ cubic inches",
+    "topic": "fluid_and_weight_conversions",
+    "answer": {
+      "answer": 1155,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.11.q21",
+    "prompt": "32 ounces = ______ pints",
+    "topic": "fluid_and_weight_conversions",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.11.q22",
+    "prompt": "3.5 pints = ______ quarts",
+    "topic": "fluid_and_weight_conversions",
+    "answer": {
+      "answer": 1.75,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.11.q23",
+    "prompt": "2.5 pints = ______ cups",
+    "topic": "fluid_and_weight_conversions",
+    "answer": {
+      "answer": 5,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.11.q24",
+    "prompt": "37.5\\% of a gallon is ______ pints",
+    "topic": "fluid_and_weight_conversions",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.11.q25",
+    "prompt": "62.5\\% of a gallon is ______ quarts",
+    "topic": "fluid_and_weight_conversions",
+    "answer": {
+      "answer": 2.5,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.11.q26",
+    "prompt": "87.5\\% of a gallon is ______ ounces",
+    "topic": "fluid_and_weight_conversions",
+    "answer": {
+      "answer": 112,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.11.q27",
+    "prompt": "16 ounces is what part of a gallon:",
+    "topic": "fluid_and_weight_conversions",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 8,
+      "display": "\\frac{1}{8}"
+    }
+  },
+  {
+    "id": "bh.2.1.11.q28",
+    "prompt": "1 gallon = ______ cubic inches",
+    "topic": "fluid_and_weight_conversions",
+    "answer": {
+      "answer": 231,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.11.q29",
+    "prompt": "\\frac{3}{11} of a gallon = ______ cubic inches",
+    "topic": "fluid_and_weight_conversions",
+    "answer": {
+      "answer": 63,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.11.q30",
+    "prompt": "\\frac{3}{8} of a quart = ______ ounces",
+    "topic": "fluid_and_weight_conversions",
+    "answer": {
+      "answer": 12,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.11.q31",
+    "prompt": "\\frac{7}{11} of a gallon = ______ cubic inches",
+    "topic": "fluid_and_weight_conversions",
+    "answer": {
+      "answer": 147,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.11.q32",
+    "prompt": "3 quarts and 2 pints = ______ ounces",
+    "topic": "fluid_and_weight_conversions",
+    "answer": {
+      "answer": 128,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.11.q33",
+    "prompt": "7 quarts and 6 pints = ______ gallons",
+    "topic": "fluid_and_weight_conversions",
+    "answer": {
+      "answer": 2.5,
+      "type": "numeric"
+    }
+  }
+]

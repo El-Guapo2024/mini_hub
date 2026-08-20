@@ -2,4 +2,15 @@ id: in_the_form_abcbcbc
 title: 'Repeating Decimals (Fractions)'
 logo: assets/icons/number_sense.png
 bh_section: '3.3.4'
-questionIds: []
+questionIds:
+  - bh.3.3.4.q1
+  - bh.3.3.4.q2
+  - bh.3.3.4.q3
+  - bh.3.3.4.q4
+  - bh.3.3.4.q5
+  - bh.3.3.4.q6
+  - bh.3.3.4.q7
+  - bh.3.3.4.q8
+  - bh.3.3.4.q9
+  - bh.3.3.4.q10
+  - bh.3.3.4.q11

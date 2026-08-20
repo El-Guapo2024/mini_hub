@@ -2,4 +2,16 @@ id: graphs_of_sinescosines
 title: 'Sine/Cosine Graph Parameters'
 logo: assets/icons/number_sense.png
 bh_section: '2.2.13'
-questionIds: []
+questionIds:
+  - bh.2.2.13.q1
+  - bh.2.2.13.q2
+  - bh.2.2.13.q3
+  - bh.2.2.13.q4
+  - bh.2.2.13.q5
+  - bh.2.2.13.q6
+  - bh.2.2.13.q7
+  - bh.2.2.13.q8
+  - bh.2.2.13.q9
+  - bh.2.2.13.q10
+  - bh.2.2.13.q11
+  - bh.2.2.13.q12

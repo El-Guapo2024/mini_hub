@@ -1,0 +1,80 @@
+[
+  {
+    "id": "bh.4.4.5.q1",
+    "prompt": "The distance between the line 3x - 4y = 6 and the point (5, 1) is",
+    "topic": "distance_between_a_point_and_a_line",
+    "answer": {
+      "answer": 1,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.4.5.q2",
+    "prompt": "The distance between the line 3x - 4y = 3 and the point (4, 1) is",
+    "topic": "distance_between_a_point_and_a_line",
+    "answer": {
+      "answer": 1.0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.4.5.q3",
+    "prompt": "The distance between the line 3x - 4y = -3 and the point (-2, -3) is",
+    "topic": "distance_between_a_point_and_a_line",
+    "answer": {
+      "type": "fraction",
+      "num": 9,
+      "den": 5,
+      "display": "1\\frac{4}{5}"
+    }
+  },
+  {
+    "id": "bh.4.4.5.q4",
+    "prompt": "The distance between the point (3, 1) and the line 5x - 12y = 1 is",
+    "topic": "distance_between_a_point_and_a_line",
+    "answer": {
+      "type": "fraction",
+      "num": 2,
+      "den": 13,
+      "display": "\\frac{2}{13}"
+    }
+  },
+  {
+    "id": "bh.4.4.5.q5",
+    "prompt": "The distance between the line 3x + 4y = 5 and the point (1, 1) is",
+    "topic": "distance_between_a_point_and_a_line",
+    "answer": {
+      "answer": 0.4,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.4.5.q6",
+    "prompt": "The distance between the point (2, 1) and the line 3x + 4y = 5 is",
+    "topic": "distance_between_a_point_and_a_line",
+    "answer": {
+      "answer": 1,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.4.5.q7",
+    "prompt": "The distance between the line 3x + 4y = 1 and the point (-2, 2) is",
+    "topic": "distance_between_a_point_and_a_line",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 5,
+      "display": "\\frac{1}{5}"
+    }
+  },
+  {
+    "id": "bh.4.4.5.q8",
+    "prompt": "The distance between the line 4x + 3y = 11 and the point (-2, 3) is",
+    "topic": "distance_between_a_point_and_a_line",
+    "answer": {
+      "answer": 2.0,
+      "type": "numeric"
+    }
+  }
+]

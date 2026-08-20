@@ -1,0 +1,97 @@
+[
+  {
+    "id": "bh.4.4.4.q1",
+    "prompt": "The harmonic mean of 5 and 7 is",
+    "topic": "geometric_and_harmonic_means",
+    "answer": {
+      "type": "fraction",
+      "num": 35,
+      "den": 6,
+      "display": "5\\frac{5}{6}"
+    }
+  },
+  {
+    "id": "bh.4.4.4.q2",
+    "prompt": "If x^{3} - 11x^{2} + 38x = 40, then the harmonic mean of the roots is",
+    "topic": "geometric_and_harmonic_means",
+    "answer": {
+      "type": "fraction",
+      "num": 60,
+      "den": 19,
+      "display": "3\\frac{3}{19}"
+    }
+  },
+  {
+    "id": "bh.4.4.4.q3",
+    "prompt": "If x^{3} + 3x^{2} + 2x + 1 = 0, then the harmonic mean of the roots is",
+    "topic": "geometric_and_harmonic_means",
+    "answer": {
+      "type": "fraction",
+      "num": -3,
+      "den": 2,
+      "display": "-1\\frac{1}{2}"
+    }
+  },
+  {
+    "id": "bh.4.4.4.q4",
+    "prompt": "If x^{3} + 4x^{2} + 13x + 7 = 0, then the harmonic mean of the roots is",
+    "topic": "geometric_and_harmonic_means",
+    "answer": {
+      "type": "fraction",
+      "num": -21,
+      "den": 13,
+      "display": "-1\\frac{8}{13}"
+    }
+  },
+  {
+    "id": "bh.4.4.4.q5",
+    "prompt": "If x^{3} - 9x^{2} + 26x - 24 = 0, then the harmonic mean of the roots is",
+    "topic": "geometric_and_harmonic_means",
+    "answer": {
+      "type": "fraction",
+      "num": 36,
+      "den": 13,
+      "display": "2\\frac{10}{13}"
+    }
+  },
+  {
+    "id": "bh.4.4.4.q6",
+    "prompt": "If x^{3} - \\frac{13}{12}x^{2} - \\frac{5}{12}x + \\frac{1}{2} = 0, then the harmonic mean of the roots is",
+    "topic": "geometric_and_harmonic_means",
+    "answer": {
+      "type": "fraction",
+      "num": 18,
+      "den": 5,
+      "display": "3\\frac{3}{5}"
+    }
+  },
+  {
+    "id": "bh.4.4.4.q7",
+    "prompt": "The harmonic mean of the roots of x^{3} + Bx^{2} + 3x + D = 0 is 4. Find D.",
+    "topic": "geometric_and_harmonic_means",
+    "answer": {
+      "answer": -4,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.4.4.q8",
+    "prompt": "If 2x^{2} + 7x - 4 = 0, then the harmonic mean of the roots is",
+    "topic": "geometric_and_harmonic_means",
+    "answer": {
+      "type": "fraction",
+      "num": 8,
+      "den": 7,
+      "display": "1\\frac{1}{7}"
+    }
+  },
+  {
+    "id": "bh.4.4.4.q9",
+    "prompt": "The positive geometric mean of 8 and 18 is",
+    "topic": "geometric_and_harmonic_means",
+    "answer": {
+      "answer": 12,
+      "type": "numeric"
+    }
+  }
+]

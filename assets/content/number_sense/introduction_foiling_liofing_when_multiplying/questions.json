@@ -1,0 +1,794 @@
+[
+  {
+    "id": "bh.1.1.q1",
+    "prompt": "95 \\times 30 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 2850,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q2",
+    "prompt": "90 \\times 78 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 7020,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q3",
+    "prompt": "51 \\times 11 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 561,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q4",
+    "prompt": "83 \\times 51 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 4233,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q5",
+    "prompt": "64 \\times 53 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 3392,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q6",
+    "prompt": "65 \\times 81 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 5265,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q7",
+    "prompt": "92 \\times 76 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 6992,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q8",
+    "prompt": "25 \\times 46 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 1150,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q9",
+    "prompt": "94 \\times 92 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 8648,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q10",
+    "prompt": "27 \\times 64 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 1728,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q11",
+    "prompt": "34 \\times 27 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 918,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q12",
+    "prompt": "11 \\times 77 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 847,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q13",
+    "prompt": "44 \\times 87 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 3828,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q14",
+    "prompt": "86 \\times 63 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 5418,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q15",
+    "prompt": "54 \\times 92 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 4968,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q16",
+    "prompt": "83 \\times 68 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 5644,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q17",
+    "prompt": "72 \\times 65 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 4680,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q18",
+    "prompt": "81 \\times 96 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 7776,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q19",
+    "prompt": "57 \\times 89 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 5073,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q20",
+    "prompt": "25 \\times 98 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 2450,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q21",
+    "prompt": "34 \\times 32 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 1088,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q22",
+    "prompt": "88 \\times 76 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 6688,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q23",
+    "prompt": "22 \\times 11 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 242,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q24",
+    "prompt": "36 \\times 69 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 2484,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q25",
+    "prompt": "35 \\times 52 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 1820,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q26",
+    "prompt": "15 \\times 88 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 1320,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q27",
+    "prompt": "62 \\times 48 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 2976,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q28",
+    "prompt": "56 \\times 40 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 2240,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q29",
+    "prompt": "62 \\times 78 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 4836,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q30",
+    "prompt": "57 \\times 67 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 3819,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q31",
+    "prompt": "28 \\times 44 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 1232,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q32",
+    "prompt": "80 \\times 71 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 5680,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q33",
+    "prompt": "51 \\times 61 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 3111,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q34",
+    "prompt": "81 \\times 15 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 1215,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q35",
+    "prompt": "64 \\times 14 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 896,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q36",
+    "prompt": "47 \\times 37 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 1739,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q37",
+    "prompt": "79 \\times 97 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 7663,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q38",
+    "prompt": "99 \\times 87 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 8613,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q39",
+    "prompt": "49 \\times 54 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 2646,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q40",
+    "prompt": "29 \\times 67 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 1943,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q41",
+    "prompt": "38 \\times 98 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 3724,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q42",
+    "prompt": "75 \\times 47 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 3525,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q43",
+    "prompt": "77 \\times 34 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 2618,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q44",
+    "prompt": "49 \\times 94 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 4606,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q45",
+    "prompt": "71 \\times 29 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 2059,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q46",
+    "prompt": "85 \\times 66 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 5610,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q47",
+    "prompt": "13 \\times 65 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 845,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q48",
+    "prompt": "64 \\times 11 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 704,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q49",
+    "prompt": "62 \\times 15 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 930,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q50",
+    "prompt": "43 \\times 65 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 2795,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q51",
+    "prompt": "74 \\times 72 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 5328,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q52",
+    "prompt": "49 \\times 41 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 2009,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q53",
+    "prompt": "23 \\times 70 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 1610,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q54",
+    "prompt": "72 \\times 75 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 5400,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q55",
+    "prompt": "53 \\times 59 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 3127,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q56",
+    "prompt": "82 \\times 91 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 7462,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q57",
+    "prompt": "14 \\times 17 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 238,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q58",
+    "prompt": "67 \\times 27 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 1809,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q59",
+    "prompt": "85 \\times 25 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 2125,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q60",
+    "prompt": "25 \\times 99 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 2475,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q61",
+    "prompt": "137 \\times 32 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 4384,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q62",
+    "prompt": "428 \\times 74 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 31672,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q63",
+    "prompt": "996 \\times 47 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 46812,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q64",
+    "prompt": "654 \\times 45 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 29430,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q65",
+    "prompt": "443 \\times 39 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 17277,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q66",
+    "prompt": "739 \\times 50 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 36950,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q67",
+    "prompt": "247 \\times 87 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 21489,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q68",
+    "prompt": "732 \\times 66 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 48312,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q69",
+    "prompt": "554 \\times 77 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 42658,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q70",
+    "prompt": "324 \\times 11 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 3564,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q71",
+    "prompt": "111 \\times 54 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 5994,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q72",
+    "prompt": "885 \\times 78 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 69030,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q73",
+    "prompt": "34 \\times 655 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 22270,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q74",
+    "prompt": "52 \\times 532 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 27664,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q75",
+    "prompt": "33 \\times 334 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 11022,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q76",
+    "prompt": "45 \\times 301 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 13545,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q77",
+    "prompt": "543 \\times 543 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 294849,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q78",
+    "prompt": "606 \\times 212 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 128472,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q79",
+    "prompt": "657 \\times 322 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 211554,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q80",
+    "prompt": "543 \\times 230 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 124890,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q81",
+    "prompt": "111 \\times 121 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 13431,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q82",
+    "prompt": "422 \\times 943 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 397946,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q83",
+    "prompt": "342 \\times 542 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 185364,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q84",
+    "prompt": "789 \\times 359 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 283251,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q85",
+    "prompt": "239 \\times 795 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 190005,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q86",
+    "prompt": "123 \\times 543 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 66789,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q87",
+    "prompt": "683 \\times 429 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 293007,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.1.q88",
+    "prompt": "222 \\times 796 =",
+    "topic": "introduction_foiling_liofing_when_multiplying",
+    "answer": {
+      "answer": 176712,
+      "type": "numeric"
+    }
+  }
+]

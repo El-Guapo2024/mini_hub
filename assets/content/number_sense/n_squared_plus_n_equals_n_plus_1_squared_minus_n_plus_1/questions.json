@@ -1,0 +1,56 @@
+[
+  {
+    "id": "bh.4.1.6.q1",
+    "prompt": "49^{2} + 49 =",
+    "topic": "n_squared_plus_n_equals_n_plus_1_squared_minus_n_plus_1",
+    "answer": {
+      "answer": 2450,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.1.6.q2",
+    "prompt": "79^{2} + 79 =",
+    "topic": "n_squared_plus_n_equals_n_plus_1_squared_minus_n_plus_1",
+    "answer": {
+      "answer": 6320,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.1.6.q3",
+    "prompt": "59^{2} + 59 =",
+    "topic": "n_squared_plus_n_equals_n_plus_1_squared_minus_n_plus_1",
+    "answer": {
+      "answer": 3540,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.1.6.q4",
+    "prompt": "69^{2} + 69 =",
+    "topic": "n_squared_plus_n_equals_n_plus_1_squared_minus_n_plus_1",
+    "answer": {
+      "answer": 4830,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.1.6.q5",
+    "prompt": "24^{2} + 24 =",
+    "topic": "n_squared_plus_n_equals_n_plus_1_squared_minus_n_plus_1",
+    "answer": {
+      "answer": 600,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.1.6.q6",
+    "prompt": "99 \\times 99 + 99 =",
+    "topic": "n_squared_plus_n_equals_n_plus_1_squared_minus_n_plus_1",
+    "answer": {
+      "answer": 9900,
+      "type": "numeric"
+    }
+  }
+]

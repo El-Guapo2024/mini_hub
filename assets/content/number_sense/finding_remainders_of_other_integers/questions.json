@@ -1,0 +1,137 @@
+[
+  {
+    "id": "bh.1.4.4.q1",
+    "prompt": "2002 \\div 6 \\text{ has a remainder of:}",
+    "topic": "finding_remainders_of_other_integers",
+    "answer": {
+      "answer": 4,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.4.q2",
+    "prompt": "2006 \\div 6 \\text{ has a remainder of:}",
+    "topic": "finding_remainders_of_other_integers",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.4.q3",
+    "prompt": "112358 \\div 6 \\text{ has a remainder of:}",
+    "topic": "finding_remainders_of_other_integers",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.4.q4",
+    "prompt": "If 852k is divisible by 6 then the largest value for k is:",
+    "topic": "finding_remainders_of_other_integers",
+    "answer": {
+      "answer": 6,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.4.q5",
+    "prompt": "13579248 \\div 6 \\text{ has a remainder of:}",
+    "topic": "finding_remainders_of_other_integers",
+    "answer": {
+      "answer": 0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.4.q6",
+    "prompt": "322766211 \\div 6 \\text{ has a remainder of:}",
+    "topic": "finding_remainders_of_other_integers",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.4.q7",
+    "prompt": "563412 \\div 6 \\text{ has a remainder of:}",
+    "topic": "finding_remainders_of_other_integers",
+    "answer": {
+      "answer": 0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.4.q8",
+    "prompt": "Find k, k > 0 so that the 4-digit number 567k is divisible by 6:",
+    "topic": "finding_remainders_of_other_integers",
+    "answer": {
+      "answer": 6,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.4.q9",
+    "prompt": "If 86k6 is divisible by 6 then the largest value for k is:",
+    "topic": "finding_remainders_of_other_integers",
+    "answer": {
+      "answer": 7,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.4.q10",
+    "prompt": "423156 \\div 12 \\text{ has a remainder of:}",
+    "topic": "finding_remainders_of_other_integers",
+    "answer": {
+      "answer": 0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.4.q11",
+    "prompt": "If 555k is divisible by 6 then the largest value for k is:",
+    "topic": "finding_remainders_of_other_integers",
+    "answer": {
+      "answer": 6,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.4.q12",
+    "prompt": "Find k > 4 so that the 6-digit number 3576k2 is divisible by 12:",
+    "topic": "finding_remainders_of_other_integers",
+    "answer": {
+      "answer": 7,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.4.q13",
+    "prompt": "735246 \\div 18 \\text{ has a remainder of:}",
+    "topic": "finding_remainders_of_other_integers",
+    "answer": {
+      "answer": 0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.4.q14",
+    "prompt": "6253718 \\div 12 \\text{ has a remainder of:}",
+    "topic": "finding_remainders_of_other_integers",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.4.4.q15",
+    "prompt": "Find k, k > 0 so that the 5-digit number 8475k is divisible by 6:",
+    "topic": "finding_remainders_of_other_integers",
+    "answer": {
+      "answer": 6,
+      "type": "numeric"
+    }
+  }
+]

@@ -2,4 +2,16 @@ id: square_root_problems
 title: 'Square Root Problems'
 logo: assets/icons/number_sense.png
 bh_section: '3.1.8'
-questionIds: []
+questionIds:
+  - bh.3.1.8.q1
+  - bh.3.1.8.q2
+  - bh.3.1.8.q3
+  - bh.3.1.8.q4
+  - bh.3.1.8.q5
+  - bh.3.1.8.q6
+  - bh.3.1.8.q7
+  - bh.3.1.8.q8
+  - bh.3.1.8.q9
+  - bh.3.1.8.q10
+  - bh.3.1.8.q11
+  - bh.3.1.8.q12

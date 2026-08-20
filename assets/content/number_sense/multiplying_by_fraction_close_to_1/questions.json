@@ -1,0 +1,145 @@
+[
+  {
+    "id": "bh.4.1.5.q1",
+    "prompt": "6 \\times \\frac{7}{8} + 5 = \\text{(mixed number)}",
+    "topic": "multiplying_by_fraction_close_to_1",
+    "answer": {
+      "type": "fraction",
+      "num": 41,
+      "den": 4,
+      "display": "10\\frac{1}{4}"
+    }
+  },
+  {
+    "id": "bh.4.1.5.q2",
+    "prompt": "13 \\times \\frac{14}{15} = \\text{(mixed number)}",
+    "topic": "multiplying_by_fraction_close_to_1",
+    "answer": {
+      "type": "fraction",
+      "num": 182,
+      "den": 15,
+      "display": "12\\frac{2}{15}"
+    }
+  },
+  {
+    "id": "bh.4.1.5.q3",
+    "prompt": "18 \\times \\frac{19}{20} = \\text{(mixed number)}",
+    "topic": "multiplying_by_fraction_close_to_1",
+    "answer": {
+      "type": "fraction",
+      "num": 171,
+      "den": 10,
+      "display": "17\\frac{1}{10}"
+    }
+  },
+  {
+    "id": "bh.4.1.5.q4",
+    "prompt": "12 \\times \\frac{13}{14} = \\text{(mixed number)}",
+    "topic": "multiplying_by_fraction_close_to_1",
+    "answer": {
+      "type": "fraction",
+      "num": 78,
+      "den": 7,
+      "display": "11\\frac{1}{7}"
+    }
+  },
+  {
+    "id": "bh.4.1.5.q5",
+    "prompt": "13 \\times \\frac{13}{14} + 13 = \\text{(mixed number)}",
+    "topic": "multiplying_by_fraction_close_to_1",
+    "answer": {
+      "type": "fraction",
+      "num": 351,
+      "den": 14,
+      "display": "25\\frac{1}{14}"
+    }
+  },
+  {
+    "id": "bh.4.1.5.q6",
+    "prompt": "11 \\times \\frac{12}{13} = \\text{(mixed number)}",
+    "topic": "multiplying_by_fraction_close_to_1",
+    "answer": {
+      "type": "fraction",
+      "num": 132,
+      "den": 13,
+      "display": "10\\frac{2}{13}"
+    }
+  },
+  {
+    "id": "bh.4.1.5.q7",
+    "prompt": "11 \\times \\frac{14}{17} = \\text{(mixed number)}",
+    "topic": "multiplying_by_fraction_close_to_1",
+    "answer": {
+      "type": "fraction",
+      "num": 154,
+      "den": 17,
+      "display": "9\\frac{1}{17}"
+    }
+  },
+  {
+    "id": "bh.4.1.5.q8",
+    "prompt": "13 \\times \\frac{13}{14} - 13 =",
+    "topic": "multiplying_by_fraction_close_to_1",
+    "answer": {
+      "type": "fraction",
+      "num": -13,
+      "den": 14,
+      "display": "-\\frac{13}{14}"
+    }
+  },
+  {
+    "id": "bh.4.1.5.q9",
+    "prompt": "17 \\times \\frac{17}{18} - 17 =",
+    "topic": "multiplying_by_fraction_close_to_1",
+    "answer": {
+      "type": "fraction",
+      "num": -17,
+      "den": 18,
+      "display": "-\\frac{17}{18}"
+    }
+  },
+  {
+    "id": "bh.4.1.5.q10",
+    "prompt": "14 \\times \\frac{14}{17} - 14 =",
+    "topic": "multiplying_by_fraction_close_to_1",
+    "answer": {
+      "type": "fraction",
+      "num": -42,
+      "den": 17,
+      "display": "-2\\frac{8}{17}"
+    }
+  },
+  {
+    "id": "bh.4.1.5.q11",
+    "prompt": "13 \\times \\frac{13}{16} - 13 =",
+    "topic": "multiplying_by_fraction_close_to_1",
+    "answer": {
+      "type": "fraction",
+      "num": -39,
+      "den": 16,
+      "display": "-2\\frac{7}{16}"
+    }
+  },
+  {
+    "id": "bh.4.1.5.q12",
+    "prompt": "15 \\times \\frac{15}{17} - 15 =",
+    "topic": "multiplying_by_fraction_close_to_1",
+    "answer": {
+      "type": "fraction",
+      "num": -30,
+      "den": 17,
+      "display": "-1\\frac{13}{17}"
+    }
+  },
+  {
+    "id": "bh.4.1.5.q13",
+    "prompt": "14 \\times \\frac{14}{17} - 14 =",
+    "topic": "multiplying_by_fraction_close_to_1",
+    "answer": {
+      "type": "fraction",
+      "num": -42,
+      "den": 17,
+      "display": "-2\\frac{8}{17}"
+    }
+  }
+]

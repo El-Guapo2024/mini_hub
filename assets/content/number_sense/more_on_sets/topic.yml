@@ -2,4 +2,15 @@ id: more_on_sets
 title: 'More on Sets'
 logo: assets/icons/number_sense.png
 bh_section: '4.5.1'
-questionIds: []
+questionIds:
+  - bh.4.5.1.q1
+  - bh.4.5.1.q2
+  - bh.4.5.1.q3
+  - bh.4.5.1.q4
+  - bh.4.5.1.q5
+  - bh.4.5.1.q6
+  - bh.4.5.1.q7
+  - bh.4.5.1.q8
+  - bh.4.5.1.q9
+  - bh.4.5.1.q10
+  - bh.4.5.1.q11

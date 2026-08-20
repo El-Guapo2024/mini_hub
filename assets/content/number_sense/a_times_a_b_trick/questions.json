@@ -1,0 +1,255 @@
+[
+  {
+    "id": "bh.1.3.9.q1",
+    "prompt": "11 \\times \\frac{11}{14} =",
+    "topic": "a_times_a_b_trick",
+    "answer": {
+      "type": "fraction",
+      "num": 121,
+      "den": 14,
+      "display": "8\\frac{9}{14}"
+    }
+  },
+  {
+    "id": "bh.1.3.9.q2",
+    "prompt": "22 \\times \\frac{22}{25} =",
+    "topic": "a_times_a_b_trick",
+    "answer": {
+      "type": "fraction",
+      "num": 484,
+      "den": 25,
+      "display": "19\\frac{9}{25}"
+    }
+  },
+  {
+    "id": "bh.1.3.9.q3",
+    "prompt": "19 \\times \\frac{19}{23} =",
+    "topic": "a_times_a_b_trick",
+    "answer": {
+      "type": "fraction",
+      "num": 361,
+      "den": 23,
+      "display": "15\\frac{16}{23}"
+    }
+  },
+  {
+    "id": "bh.1.3.9.q4",
+    "prompt": "27 \\times \\frac{27}{32} =",
+    "topic": "a_times_a_b_trick",
+    "answer": {
+      "type": "fraction",
+      "num": 729,
+      "den": 32,
+      "display": "22\\frac{25}{32}"
+    }
+  },
+  {
+    "id": "bh.1.3.9.q5",
+    "prompt": "16 \\times \\frac{16}{19} =",
+    "topic": "a_times_a_b_trick",
+    "answer": {
+      "type": "fraction",
+      "num": 256,
+      "den": 19,
+      "display": "13\\frac{9}{19}"
+    }
+  },
+  {
+    "id": "bh.1.3.9.q6",
+    "prompt": "29 \\times \\frac{29}{34} =",
+    "topic": "a_times_a_b_trick",
+    "answer": {
+      "type": "fraction",
+      "num": 841,
+      "den": 34,
+      "display": "24\\frac{25}{34}"
+    }
+  },
+  {
+    "id": "bh.1.3.9.q7",
+    "prompt": "31 \\times \\frac{31}{34} =",
+    "topic": "a_times_a_b_trick",
+    "answer": {
+      "type": "fraction",
+      "num": 961,
+      "den": 34,
+      "display": "28\\frac{9}{34}"
+    }
+  },
+  {
+    "id": "bh.1.3.9.q8",
+    "prompt": "14 \\times \\frac{14}{17} - 3 =",
+    "topic": "a_times_a_b_trick",
+    "answer": {
+      "type": "fraction",
+      "num": 145,
+      "den": 17,
+      "display": "8\\frac{9}{17}"
+    }
+  },
+  {
+    "id": "bh.1.3.9.q9",
+    "prompt": "11 \\times \\frac{11}{14} + 3 =",
+    "topic": "a_times_a_b_trick",
+    "answer": {
+      "type": "fraction",
+      "num": 163,
+      "den": 14,
+      "display": "11\\frac{9}{14}"
+    }
+  },
+  {
+    "id": "bh.1.3.9.q10",
+    "prompt": "13 \\times \\frac{13}{16} + 13 =",
+    "topic": "a_times_a_b_trick",
+    "answer": {
+      "type": "fraction",
+      "num": 377,
+      "den": 16,
+      "display": "23\\frac{9}{16}"
+    }
+  },
+  {
+    "id": "bh.1.3.9.q11",
+    "prompt": "13 \\times \\frac{13}{17} + 4 =",
+    "topic": "a_times_a_b_trick",
+    "answer": {
+      "type": "fraction",
+      "num": 237,
+      "den": 17,
+      "display": "13\\frac{16}{17}"
+    }
+  },
+  {
+    "id": "bh.1.3.9.q12",
+    "prompt": "13 \\times \\frac{13}{14} - 13 =",
+    "topic": "a_times_a_b_trick",
+    "answer": {
+      "type": "fraction",
+      "num": -13,
+      "den": 14,
+      "display": "-\\frac{13}{14}"
+    }
+  },
+  {
+    "id": "bh.1.3.9.q13",
+    "prompt": "17 \\times \\frac{17}{18} - 17 =",
+    "topic": "a_times_a_b_trick",
+    "answer": {
+      "type": "fraction",
+      "num": -17,
+      "den": 18,
+      "display": "-\\frac{17}{18}"
+    }
+  },
+  {
+    "id": "bh.1.3.9.q14",
+    "prompt": "22 \\times \\frac{22}{25} - 22 =",
+    "topic": "a_times_a_b_trick",
+    "answer": {
+      "type": "fraction",
+      "num": -66,
+      "den": 25,
+      "display": "-2\\frac{16}{25}"
+    }
+  },
+  {
+    "id": "bh.1.3.9.q15",
+    "prompt": "14 \\times \\frac{14}{17} - 14 =",
+    "topic": "a_times_a_b_trick",
+    "answer": {
+      "type": "fraction",
+      "num": -42,
+      "den": 17,
+      "display": "-2\\frac{8}{17}"
+    }
+  },
+  {
+    "id": "bh.1.3.9.q16",
+    "prompt": "17 \\times 1\\frac{17}{21} =",
+    "topic": "a_times_a_b_trick",
+    "answer": {
+      "type": "fraction",
+      "num": 646,
+      "den": 21,
+      "display": "30\\frac{16}{21}"
+    }
+  },
+  {
+    "id": "bh.1.3.9.q17",
+    "prompt": "13 \\times \\frac{13}{16} - 13 =",
+    "topic": "a_times_a_b_trick",
+    "answer": {
+      "type": "fraction",
+      "num": -39,
+      "den": 16,
+      "display": "-2\\frac{7}{16}"
+    }
+  },
+  {
+    "id": "bh.1.3.9.q18",
+    "prompt": "11 \\times \\frac{11}{12} - 11 =",
+    "topic": "a_times_a_b_trick",
+    "answer": {
+      "type": "fraction",
+      "num": -11,
+      "den": 12,
+      "display": "-\\frac{11}{12}"
+    }
+  },
+  {
+    "id": "bh.1.3.9.q19",
+    "prompt": "7 \\times \\frac{7}{15} - 7 =",
+    "topic": "a_times_a_b_trick",
+    "answer": {
+      "type": "fraction",
+      "num": -56,
+      "den": 15,
+      "display": "-3\\frac{11}{15}"
+    }
+  },
+  {
+    "id": "bh.1.3.9.q20",
+    "prompt": "14 \\times \\frac{14}{17} - 14 =",
+    "topic": "a_times_a_b_trick",
+    "answer": {
+      "type": "fraction",
+      "num": -42,
+      "den": 17,
+      "display": "-2\\frac{8}{17}"
+    }
+  },
+  {
+    "id": "bh.1.3.9.q21",
+    "prompt": "15 \\times \\frac{15}{17} - 15 =",
+    "topic": "a_times_a_b_trick",
+    "answer": {
+      "type": "fraction",
+      "num": -30,
+      "den": 17,
+      "display": "-1\\frac{13}{17}"
+    }
+  },
+  {
+    "id": "bh.1.3.9.q22",
+    "prompt": "35 \\times 1\\frac{35}{38} =",
+    "topic": "a_times_a_b_trick",
+    "answer": {
+      "type": "fraction",
+      "num": 2555,
+      "den": 38,
+      "display": "67\\frac{9}{38}"
+    }
+  },
+  {
+    "id": "bh.1.3.9.q23",
+    "prompt": "13 \\times \\frac{13}{15} - 13 =",
+    "topic": "a_times_a_b_trick",
+    "answer": {
+      "type": "fraction",
+      "num": -26,
+      "den": 15,
+      "display": "-1\\frac{11}{15}"
+    }
+  }
+]

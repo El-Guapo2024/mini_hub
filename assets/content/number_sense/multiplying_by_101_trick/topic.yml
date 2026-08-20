@@ -2,4 +2,14 @@ id: multiplying_by_101_trick
 title: 'Multiplying by 101 Trick'
 logo: assets/icons/number_sense.png
 bh_section: '1.2.2'
-questionIds: []
+questionIds:
+  - bh.1.2.2.q1
+  - bh.1.2.2.q2
+  - bh.1.2.2.q3
+  - bh.1.2.2.q4
+  - bh.1.2.2.q5
+  - bh.1.2.2.q6
+  - bh.1.2.2.q7
+  - bh.1.2.2.q8
+  - bh.1.2.2.q9
+  - bh.1.2.2.q10

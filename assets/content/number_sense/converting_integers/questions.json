@@ -1,0 +1,407 @@
+[
+  {
+    "id": "bh.3.2.1.q1",
+    "prompt": "212_{5} = {}_{10}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 57,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q2",
+    "prompt": "108 = {}_{4}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 1230,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q3",
+    "prompt": "2004_{5} = {}_{10}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 254,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q4",
+    "prompt": "3^{4} + 3 = {}_{9}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 103,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q5",
+    "prompt": "2^{4} + 2 = {}_{4}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 102,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q6",
+    "prompt": "82 = {}_{5}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 312,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q7",
+    "prompt": "4^{3} + 4 = {}_{4}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 1010,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q8",
+    "prompt": "24 = {}_{2}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 11000,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q9",
+    "prompt": "3^{3} + 3 = {}_{3}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 1010,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q10",
+    "prompt": "48 = {}_{3}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 1210,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q11",
+    "prompt": "4^{3} + 2^{3} = {}_{8}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 110,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q12",
+    "prompt": "2^{4} + 1 = {}_{8}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 21,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q13",
+    "prompt": "200_{10} = {}_{7}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 404,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q14",
+    "prompt": "72 + 18 + 4 = {}_{6}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 234,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q15",
+    "prompt": "234_{10} = {}_{5}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 1414,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q16",
+    "prompt": "123_{4} = {}_{10}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 27,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q17",
+    "prompt": "2^{5} + 2 = {}_{4}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 202,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q18",
+    "prompt": "430_{10} = {}_{5}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 3210,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q19",
+    "prompt": "540_{10} = {}_{6}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 2300,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q20",
+    "prompt": "243 + 27 + 3 = {}_{9}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 333,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q21",
+    "prompt": "200_{5} = {}_{10}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 50,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q22",
+    "prompt": "200_{6} = {}_{10}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 72,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q23",
+    "prompt": "4^{4} + 4^{2} + 4^{0} = {}_{4}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 10101,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q24",
+    "prompt": "3^{3} + 3^{2} + 3^{0} = {}_{3}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 1101,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q25",
+    "prompt": "216 + 108 + 30 + 5 = {}_{6}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 1355,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q26",
+    "prompt": "44_{b} = 40, then b =",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 9,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q27",
+    "prompt": "123_{10} = {}_{5}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 443,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q28",
+    "prompt": "123_{4} = {}_{5}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 102,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q29",
+    "prompt": "8^{2} + 2^{4} + 4^{0} = {}_{4}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 1101,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q30",
+    "prompt": "234_{5} = {}_{4}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 1011,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q31",
+    "prompt": "686 + 98 + 14 = {}_{7}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 2220,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q32",
+    "prompt": "77_{10} = {}_{7}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 140,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q33",
+    "prompt": "4^{3} + 4 = {}_{8}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 104,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q34",
+    "prompt": "234_{5} = {}_{10}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 69,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q35",
+    "prompt": "3^{4} + 3^{2} + 3^{0} = {}_{3}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 10101,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q36",
+    "prompt": "123_{10} = {}_{4}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 1323,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q37",
+    "prompt": "125 + 75 + 15 + 1 = {}_{5}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 1331,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q38",
+    "prompt": "234_{10} = {}_{5}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 1414,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q39",
+    "prompt": "1728 + 288 + 36 + 4 = {}_{12}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 1234,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q40",
+    "prompt": "128 + 48 + 12 + 2 = {}_{4}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 2332,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q41",
+    "prompt": "Find b when 4b_{6} = 29:",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 5,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q42",
+    "prompt": "45_{6} = {}_{9}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 32,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q43",
+    "prompt": "210_{4} = {}_{6}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 100,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q44",
+    "prompt": "43_{8} = {}_{9}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 38,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.2.1.q45",
+    "prompt": "34_{5} = {}_{7}",
+    "topic": "converting_integers",
+    "answer": {
+      "answer": 25,
+      "type": "numeric"
+    }
+  }
+]

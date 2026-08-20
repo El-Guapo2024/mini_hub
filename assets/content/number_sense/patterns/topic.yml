@@ -2,4 +2,20 @@ id: patterns
 title: 'Patterns'
 logo: assets/icons/number_sense.png
 bh_section: '3.1.12'
-questionIds: []
+questionIds:
+  - bh.3.1.12.q1
+  - bh.3.1.12.q2
+  - bh.3.1.12.q3
+  - bh.3.1.12.q4
+  - bh.3.1.12.q5
+  - bh.3.1.12.q6
+  - bh.3.1.12.q7
+  - bh.3.1.12.q8
+  - bh.3.1.12.q9
+  - bh.3.1.12.q10
+  - bh.3.1.12.q11
+  - bh.3.1.12.q12
+  - bh.3.1.12.q13
+  - bh.3.1.12.q14
+  - bh.3.1.12.q15
+  - bh.3.1.12.q16

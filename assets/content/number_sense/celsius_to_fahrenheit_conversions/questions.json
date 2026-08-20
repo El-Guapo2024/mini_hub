@@ -1,0 +1,29 @@
+[
+  {
+    "id": "bh.2.1.12.q1",
+    "prompt": "25^{\\circ} C = ______ ^{\\circ} F",
+    "topic": "celsius_to_fahrenheit_conversions",
+    "answer": {
+      "answer": 77,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.12.q2",
+    "prompt": "-40^{\\circ} C = ______ ^{\\circ} F",
+    "topic": "celsius_to_fahrenheit_conversions",
+    "answer": {
+      "answer": -40,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.12.q3",
+    "prompt": "98.6^{\\circ} F = ______ ^{\\circ} C",
+    "topic": "celsius_to_fahrenheit_conversions",
+    "answer": {
+      "answer": 37,
+      "type": "numeric"
+    }
+  }
+]

@@ -1,0 +1,192 @@
+[
+  {
+    "id": "bh.3.5.2.q1",
+    "prompt": "\\frac{8! + 6!}{7!} =",
+    "topic": "a_factorial_plus_or_minus_b_factorial_over_c_factorial",
+    "answer": {
+      "type": "fraction",
+      "num": 57,
+      "den": 7,
+      "display": "8\\frac{1}{7}"
+    }
+  },
+  {
+    "id": "bh.3.5.2.q2",
+    "prompt": "\\frac{10! + 8!}{9!} =",
+    "topic": "a_factorial_plus_or_minus_b_factorial_over_c_factorial",
+    "answer": {
+      "type": "fraction",
+      "num": 91,
+      "den": 9,
+      "display": "10\\frac{1}{9}"
+    }
+  },
+  {
+    "id": "bh.3.5.2.q3",
+    "prompt": "\\frac{7! - 5!}{6!} =",
+    "topic": "a_factorial_plus_or_minus_b_factorial_over_c_factorial",
+    "answer": {
+      "type": "fraction",
+      "num": 41,
+      "den": 6,
+      "display": "6\\frac{5}{6}"
+    }
+  },
+  {
+    "id": "bh.3.5.2.q4",
+    "prompt": "\\frac{11! - 9!}{10!} =",
+    "topic": "a_factorial_plus_or_minus_b_factorial_over_c_factorial",
+    "answer": {
+      "type": "fraction",
+      "num": 109,
+      "den": 10,
+      "display": "10\\frac{9}{10}"
+    }
+  },
+  {
+    "id": "bh.3.5.2.q5",
+    "prompt": "\\frac{10! - 11!}{9!} =",
+    "topic": "a_factorial_plus_or_minus_b_factorial_over_c_factorial",
+    "answer": {
+      "answer": -100,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.5.2.q6",
+    "prompt": "6 \\cdot 5 \\cdot 4! - 5! =",
+    "topic": "a_factorial_plus_or_minus_b_factorial_over_c_factorial",
+    "answer": {
+      "answer": 600,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.5.2.q7",
+    "prompt": "(2! + 3!) \\div 5! =",
+    "topic": "a_factorial_plus_or_minus_b_factorial_over_c_factorial",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 15,
+      "display": "\\frac{1}{15}"
+    }
+  },
+  {
+    "id": "bh.3.5.2.q8",
+    "prompt": "(2! \\times 3!) - 4! =",
+    "topic": "a_factorial_plus_or_minus_b_factorial_over_c_factorial",
+    "answer": {
+      "answer": -12,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.5.2.q9",
+    "prompt": "7! \\div 6! - 5! =",
+    "topic": "a_factorial_plus_or_minus_b_factorial_over_c_factorial",
+    "answer": {
+      "answer": -113,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.5.2.q10",
+    "prompt": "7 \\times 5! - 6! =",
+    "topic": "a_factorial_plus_or_minus_b_factorial_over_c_factorial",
+    "answer": {
+      "answer": 120,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.5.2.q11",
+    "prompt": "2! - 3! \\times 5! =",
+    "topic": "a_factorial_plus_or_minus_b_factorial_over_c_factorial",
+    "answer": {
+      "answer": -718,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.5.2.q12",
+    "prompt": "8! \\div 6! - 4! =",
+    "topic": "a_factorial_plus_or_minus_b_factorial_over_c_factorial",
+    "answer": {
+      "answer": 32,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.5.2.q13",
+    "prompt": "\\frac{5! \\cdot 4!}{6!} =",
+    "topic": "a_factorial_plus_or_minus_b_factorial_over_c_factorial",
+    "answer": {
+      "answer": 4,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.5.2.q14",
+    "prompt": "\\frac{4 \\times 5! - 5 \\times 4!}{4!} =",
+    "topic": "a_factorial_plus_or_minus_b_factorial_over_c_factorial",
+    "answer": {
+      "answer": 15,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.5.2.q15",
+    "prompt": "\\frac{4 \\times 5! + 5 \\times 4!}{4!} =",
+    "topic": "a_factorial_plus_or_minus_b_factorial_over_c_factorial",
+    "answer": {
+      "answer": 25,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.5.2.q16",
+    "prompt": "\\frac{6 \\times 7! - 7 \\times 6!}{6!} =",
+    "topic": "a_factorial_plus_or_minus_b_factorial_over_c_factorial",
+    "answer": {
+      "answer": 35,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.5.2.q17",
+    "prompt": "\\frac{10 \\times 9! - 10! \\times 9}{9!} =",
+    "topic": "a_factorial_plus_or_minus_b_factorial_over_c_factorial",
+    "answer": {
+      "answer": -80,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.5.2.q18",
+    "prompt": "\\frac{8! \\times 7 - 8 \\times 7!}{7!} =",
+    "topic": "a_factorial_plus_or_minus_b_factorial_over_c_factorial",
+    "answer": {
+      "answer": 48,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.5.2.q19",
+    "prompt": "\\frac{11 \\times 10! - 11! \\times 10}{11!} =",
+    "topic": "a_factorial_plus_or_minus_b_factorial_over_c_factorial",
+    "answer": {
+      "answer": -9,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.5.2.q20",
+    "prompt": "6! \\div (3! \\times 2!) =",
+    "topic": "a_factorial_plus_or_minus_b_factorial_over_c_factorial",
+    "answer": {
+      "answer": 60,
+      "type": "numeric"
+    }
+  }
+]

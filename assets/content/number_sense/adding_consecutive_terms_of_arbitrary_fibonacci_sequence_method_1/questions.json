@@ -1,0 +1,56 @@
+[
+  {
+    "id": "bh.4.3.1.q1",
+    "prompt": "2 + 1 + 3 + 4 + 7 + 11 + \\ldots + 29 + 47 =",
+    "topic": "adding_consecutive_terms_of_arbitrary_fibonacci_sequence_method_1",
+    "answer": {
+      "answer": 122,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.3.1.q2",
+    "prompt": "1 + 1 + 2 + 3 + 5 + 8 + \\ldots + 24 + 55 =",
+    "topic": "adding_consecutive_terms_of_arbitrary_fibonacci_sequence_method_1",
+    "answer": {
+      "answer": 143.0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.3.1.q3",
+    "prompt": "5 + 7 + 12 + 19 + 31 + \\ldots + 131 + 212 =",
+    "topic": "adding_consecutive_terms_of_arbitrary_fibonacci_sequence_method_1",
+    "answer": {
+      "answer": 548,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.3.1.q4",
+    "prompt": "3 + 4 + 7 + 11 + 18 + 29 + \\ldots + 123 =",
+    "topic": "adding_consecutive_terms_of_arbitrary_fibonacci_sequence_method_1",
+    "answer": {
+      "answer": 318,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.3.1.q5",
+    "prompt": "3 + 7 + 10 + 17 + 27 + \\ldots + 115 + 186 =",
+    "topic": "adding_consecutive_terms_of_arbitrary_fibonacci_sequence_method_1",
+    "answer": {
+      "answer": 480,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.3.1.q6",
+    "prompt": "15 + 18 + 33 + 51 + 84 + 135 + 219 + 354 =",
+    "topic": "adding_consecutive_terms_of_arbitrary_fibonacci_sequence_method_1",
+    "answer": {
+      "answer": 909,
+      "type": "numeric"
+    }
+  }
+]

@@ -2,4 +2,20 @@ id: finding_sides_of_a_triangle
 title: 'Triangle Inequality'
 logo: assets/icons/number_sense.png
 bh_section: '2.2.7'
-questionIds: []
+questionIds:
+  - bh.2.2.7.q1
+  - bh.2.2.7.q2
+  - bh.2.2.7.q3
+  - bh.2.2.7.q4
+  - bh.2.2.7.q5
+  - bh.2.2.7.q6
+  - bh.2.2.7.q7
+  - bh.2.2.7.q8
+  - bh.2.2.7.q9
+  - bh.2.2.7.q10
+  - bh.2.2.7.q11
+  - bh.2.2.7.q12
+  - bh.2.2.7.q13
+  - bh.2.2.7.q14
+  - bh.2.2.7.q15
+  - bh.2.2.7.q16

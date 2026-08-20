@@ -2,4 +2,13 @@ id: formulas_of_solids
 title: 'Cube Volume and Surface Area'
 logo: assets/icons/number_sense.png
 bh_section: '2.2.9'
-questionIds: []
+questionIds:
+  - bh.2.2.9.q1
+  - bh.2.2.9.q2
+  - bh.2.2.9.q3
+  - bh.2.2.9.q4
+  - bh.2.2.9.q5
+  - bh.2.2.9.q6
+  - bh.2.2.9.q7
+  - bh.2.2.9.q8
+  - bh.2.2.9.q9

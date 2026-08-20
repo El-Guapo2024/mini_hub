@@ -2,4 +2,19 @@ id: finding_remainders_of_other_integers
 title: 'Finding Remainders of Other Integers'
 logo: assets/icons/number_sense.png
 bh_section: '1.4.4'
-questionIds: []
+questionIds:
+  - bh.1.4.4.q1
+  - bh.1.4.4.q2
+  - bh.1.4.4.q3
+  - bh.1.4.4.q4
+  - bh.1.4.4.q5
+  - bh.1.4.4.q6
+  - bh.1.4.4.q7
+  - bh.1.4.4.q8
+  - bh.1.4.4.q9
+  - bh.1.4.4.q10
+  - bh.1.4.4.q11
+  - bh.1.4.4.q12
+  - bh.1.4.4.q13
+  - bh.1.4.4.q14
+  - bh.1.4.4.q15

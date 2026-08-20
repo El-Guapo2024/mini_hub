@@ -2,4 +2,36 @@ id: exponent_rules
 title: 'Exponents/Powers (Evaluation)'
 logo: assets/icons/number_sense.png
 bh_section: '3.1.6'
-questionIds: []
+questionIds:
+  - bh.3.1.6.q1
+  - bh.3.1.6.q2
+  - bh.3.1.6.q3
+  - bh.3.1.6.q4
+  - bh.3.1.6.q5
+  - bh.3.1.6.q6
+  - bh.3.1.6.q7
+  - bh.3.1.6.q8
+  - bh.3.1.6.q9
+  - bh.3.1.6.q10
+  - bh.3.1.6.q11
+  - bh.3.1.6.q12
+  - bh.3.1.6.q13
+  - bh.3.1.6.q14
+  - bh.3.1.6.q15
+  - bh.3.1.6.q16
+  - bh.3.1.6.q17
+  - bh.3.1.6.q18
+  - bh.3.1.6.q19
+  - bh.3.1.6.q20
+  - bh.3.1.6.q21
+  - bh.3.1.6.q22
+  - bh.3.1.6.q42
+  - bh.3.1.6.q43
+  - bh.3.1.6.q44
+  - bh.3.1.6.q45
+  - bh.3.1.6.q46
+  - bh.3.1.6.q47
+  - bh.3.1.6.q48
+  - bh.3.1.6.q49
+  - bh.3.1.6.q50
+  - bh.3.1.6.q51

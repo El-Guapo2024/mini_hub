@@ -1,0 +1,56 @@
+[
+  {
+    "id": "bh.3.5.3.q1",
+    "prompt": "(4!)(3!)(2!) \\cong x(\\bmod\\ 8),\\ 0 \\le x \\le 7,\\ \\text{then } x =",
+    "topic": "wilsons_theorem",
+    "answer": {
+      "answer": 0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.5.3.q2",
+    "prompt": "(4+2)! \\cong x(\\bmod\\ 7),\\ 0 \\le x \\le 6,\\ \\text{then } x =",
+    "topic": "wilsons_theorem",
+    "answer": {
+      "answer": 6,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.5.3.q3",
+    "prompt": "(5-2)! \\cong x(\\bmod\\ 5),\\ 0 \\le x \\le 5,\\ \\text{then } x =",
+    "topic": "wilsons_theorem",
+    "answer": {
+      "answer": 1,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.5.3.q4",
+    "prompt": "\\frac{5! \\cdot 3!}{4!} \\cong k(\\bmod\\ 8),\\ 0 \\le k \\le 7,\\ \\text{then } k =",
+    "topic": "wilsons_theorem",
+    "answer": {
+      "answer": 6,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.5.3.q5",
+    "prompt": "\\frac{5! \\cdot 4!}{3!} \\cong k(\\bmod\\ 9),\\ 0 \\le k \\le 8,\\ \\text{then } k =",
+    "topic": "wilsons_theorem",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.5.3.q6",
+    "prompt": "5! \\cdot 3! \\cong k(\\bmod\\ 8),\\ 0 \\le k \\le 7,\\ \\text{then } k =",
+    "topic": "wilsons_theorem",
+    "answer": {
+      "answer": 0,
+      "type": "numeric"
+    }
+  }
+]

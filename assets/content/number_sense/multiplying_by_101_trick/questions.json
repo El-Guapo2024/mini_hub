@@ -1,0 +1,94 @@
+[
+  {
+    "id": "bh.1.2.2.q1",
+    "prompt": "1234 \\times 101 =",
+    "topic": "multiplying_by_101_trick",
+    "answer": {
+      "answer": 124634,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.2.q2",
+    "prompt": "10.1 \\times 234 =",
+    "topic": "multiplying_by_101_trick",
+    "answer": {
+      "answer": 2363.4,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.2.q3",
+    "prompt": "369 \\times 101 =",
+    "topic": "multiplying_by_101_trick",
+    "answer": {
+      "answer": 37269,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.2.q4",
+    "prompt": "34845 \\div 101 =",
+    "topic": "multiplying_by_101_trick",
+    "answer": {
+      "answer": 345,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.2.q5",
+    "prompt": "22422 \\div 101 =",
+    "topic": "multiplying_by_101_trick",
+    "answer": {
+      "answer": 222,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.2.q6",
+    "prompt": "202 \\times 123 =",
+    "topic": "multiplying_by_101_trick",
+    "answer": {
+      "answer": 24846,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.2.q7",
+    "prompt": "If 6 balls cost $6.06, then 15 balls cost: $",
+    "topic": "multiplying_by_101_trick",
+    "answer": {
+      "answer": 15.15,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.2.q8",
+    "prompt": "404 \\times 1111 =",
+    "topic": "multiplying_by_101_trick",
+    "answer": {
+      "answer": 448844,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.2.q9",
+    "prompt": "(*) (48 + 53) \\times 151 =",
+    "topic": "multiplying_by_101_trick",
+    "answer": {
+      "high": 16014.0,
+      "low": 14488.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.2.q10",
+    "prompt": "(*) 8888 \\times 62.5\\% \\times \\frac{5}{11} =",
+    "topic": "multiplying_by_101_trick",
+    "answer": {
+      "high": 2652.0,
+      "low": 2398.0,
+      "type": "estimate"
+    }
+  }
+]

@@ -1,0 +1,830 @@
+[
+  {
+    "id": "bh.1.2.5.q1",
+    "prompt": "125 \\times 320 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "answer": 40000,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q2",
+    "prompt": "(*) 8333 \\times 24 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 209992.0,
+      "low": 189992.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q3",
+    "prompt": "138 \\div 125 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "answer": 1.104,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q4",
+    "prompt": "(*) 57381 \\div 128 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 471.0,
+      "low": 425.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q5",
+    "prompt": "(*) 245632 \\div 111 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 2324.0,
+      "low": 2102.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q6",
+    "prompt": "(*) 16667 \\div 8333 \\times 555 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 1166.0,
+      "low": 1054.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q7",
+    "prompt": "625 \\times 320 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "answer": 200000,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q8",
+    "prompt": "(*) 774447 \\div 111 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 7326.0,
+      "low": 6628.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q9",
+    "prompt": "(*) 62.5 \\times 3248 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 213150.0,
+      "low": 192850.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q10",
+    "prompt": "12.5 \\times 480 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "answer": 6000,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q11",
+    "prompt": "(*) 17304 \\div 118 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 154.0,
+      "low": 139.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q12",
+    "prompt": "(*) 87\\% of 5590 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 5107.0,
+      "low": 4620.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q13",
+    "prompt": "(*) 457689 \\div 111 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 4330.0,
+      "low": 3917.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q14",
+    "prompt": "(*) 625 \\times 648 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 425250.0,
+      "low": 384750.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q15",
+    "prompt": "375 \\times 408 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "answer": 153000,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q16",
+    "prompt": "(*) 359954 \\div 1111 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 341.0,
+      "low": 307.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q17",
+    "prompt": "88 \\times 12.5 \\times .11 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "answer": 121,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q18",
+    "prompt": "(*) 719 \\times 875 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 660582.0,
+      "low": 597668.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q19",
+    "prompt": "(*) 428571 \\times 22 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 9899991.0,
+      "low": 8957133.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q20",
+    "prompt": "(*) 85714.2 \\div 714.285 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 126.0,
+      "low": 114.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q21",
+    "prompt": "488 \\times 375 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "answer": 183000,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q22",
+    "prompt": "(*) 6311 \\times 1241 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 8223549.0,
+      "low": 7440353.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q23",
+    "prompt": "(*) 884422 \\div 666 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 1395.0,
+      "low": 1261.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q24",
+    "prompt": "(*) 106.25\\% \\text{ of } 640 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 714.0,
+      "low": 646.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q25",
+    "prompt": "(*) 6388 \\times 3.75 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 25153.0,
+      "low": 22757.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q26",
+    "prompt": "240 \\times 875 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "answer": 210000,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q27",
+    "prompt": "(*) 12.75 \\times 28300 \\div 102 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 3715.0,
+      "low": 3360.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q28",
+    "prompt": "375 \\times 24.8 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "answer": 9300,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q29",
+    "prompt": "(*) 857142 \\times 427 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 384299616.0,
+      "low": 347699652.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q30",
+    "prompt": ".0625 \\times .32 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "answer": 0.02,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q31",
+    "prompt": "(*) 16667 \\times 369 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 6457630.0,
+      "low": 5842616.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q32",
+    "prompt": "(*) 918576 \\div 432 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 2233.0,
+      "low": 2020.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q33",
+    "prompt": "(*) 456789 \\div 123 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 3900.0,
+      "low": 3528.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q34",
+    "prompt": "(*) 106\\% \\text{ of } 319 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 356.0,
+      "low": 321.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q35",
+    "prompt": "(*) 571428 \\times .875 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 525000.0,
+      "low": 474999.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q36",
+    "prompt": "(*) 123\\% \\text{ of } 882 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 1140.0,
+      "low": 1030.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q37",
+    "prompt": "(*) 95634 \\div 278 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 362.0,
+      "low": 326.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q38",
+    "prompt": "(*) 273849 \\div 165 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 1743.0,
+      "low": 1576.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q39",
+    "prompt": "(*) 5714.28 \\times 85 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 510000.0,
+      "low": 461428.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q40",
+    "prompt": "(*) 9.08\\% \\text{ of } 443322 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 42267.0,
+      "low": 38240.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q41",
+    "prompt": "(*) 8333 \\times 23 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 201242.0,
+      "low": 182076.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q42",
+    "prompt": ".125 \\times 482 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "answer": 60.25,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q43",
+    "prompt": "(*) 714285 \\times .875 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 656250.0,
+      "low": 593749.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q44",
+    "prompt": "(*) 87\\% \\text{ of } 789 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 721.0,
+      "low": 652.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q45",
+    "prompt": "(*) 16667 \\times 49 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 857518.0,
+      "low": 775848.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q46",
+    "prompt": "(*) 123456 \\div 111 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 1168.0,
+      "low": 1056.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q47",
+    "prompt": "(*) 875421 \\div 369 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 2492.0,
+      "low": 2253.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q48",
+    "prompt": "(*) 71984 \\times 1.371 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 103625.0,
+      "low": 93755.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q49",
+    "prompt": "(*) 63\\% \\text{ of } 7191 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 4757.0,
+      "low": 4303.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q50",
+    "prompt": "(*) 5714.28 \\times 83 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 498000.0,
+      "low": 450570.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q51",
+    "prompt": "(*) 1428.57 \\times 62 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 93000.0,
+      "low": 84142.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q52",
+    "prompt": "(*) 80520 \\div 131 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 646.0,
+      "low": 583.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q53",
+    "prompt": "(*) 142.857 \\times 428.571 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 64286.0,
+      "low": 58163.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q54",
+    "prompt": "(*) 12509 \\times 635 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 8340376.0,
+      "low": 7546054.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q55",
+    "prompt": "(*) 1234 \\times 567 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 734662.0,
+      "low": 664694.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q56",
+    "prompt": "(*) 789123 \\div 456 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 1818.0,
+      "low": 1644.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q57",
+    "prompt": "625 \\times 65 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "answer": 40625,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q58",
+    "prompt": "(*) 1428.57 \\times 73 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 109500.0,
+      "low": 99071.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q59",
+    "prompt": "(*) 7142.85 \\times 34.2 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 256500.0,
+      "low": 232071.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q60",
+    "prompt": "(*) 333 \\times 808 \\times 444 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 125437637.0,
+      "low": 113491195.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q61",
+    "prompt": "(*) 571428 \\times 34 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 20399980.0,
+      "low": 18457124.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q62",
+    "prompt": "(*) 833 \\times 612 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 535286.0,
+      "low": 484306.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q63",
+    "prompt": "(*) 8333 \\times (481 + 358)",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 7340957.0,
+      "low": 6641817.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q64",
+    "prompt": "(*) 234678 \\div 9111 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 28.0,
+      "low": 24.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q65",
+    "prompt": "(*) 428.571 \\times 87.5 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 39375.0,
+      "low": 35624.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q66",
+    "prompt": "(*) 375.1 \\times 83.33 \\times 1.595 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 52348.0,
+      "low": 47362.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q67",
+    "prompt": "(*) 8333 \\div 6666 \\times 4444 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 5834.0,
+      "low": 5277.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q68",
+    "prompt": "(*) 8333 \\times 12\\frac{1}{2}\\% \\times .12 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 132.0,
+      "low": 118.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q69",
+    "prompt": "(*) 639 \\times 375 \\div 28 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 8986.0,
+      "low": 8130.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q70",
+    "prompt": "(*) 6250 \\div 8333 \\times 8888 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 7000.0,
+      "low": 6332.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q71",
+    "prompt": "(*) 416666 \\div 555 \\times 76 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 59910.0,
+      "low": 54204.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q72",
+    "prompt": "(*) 375 \\div 833 \\times 555 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 263.0,
+      "low": 237.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q73",
+    "prompt": "(*) 438 \\div 9\\frac{1}{11}\\% \\times 11.1 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 56154,
+      "low": 50805,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q74",
+    "prompt": "(*) 857142 \\div 428571 \\times 7777 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 16332.0,
+      "low": 14776.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q75",
+    "prompt": "(*) 546 \\div 45\\frac{5}{11}\\% \\times 10.8 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 13622,
+      "low": 12324,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q76",
+    "prompt": "(*) 54.5454 \\times 66.6 \\times 58 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 221233.0,
+      "low": 200163.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q77",
+    "prompt": "(*) 456 \\div 18.75\\% \\times \\frac{1}{4}",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 639.0,
+      "low": 577.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q78",
+    "prompt": "(*) 818 \\div 44\\frac{4}{9}\\% \\times 12.5 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 24157,
+      "low": 21855,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q79",
+    "prompt": "(*) 62.5 \\div 83.3 \\times 888 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 700.0,
+      "low": 632.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q80",
+    "prompt": "(*) 797 \\div 87.5\\% \\times \\frac{7}{10}",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 670.0,
+      "low": 605.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q81",
+    "prompt": "(*) 888 \\times 87.5\\% \\div \\frac{7}{11}",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 1283.0,
+      "low": 1159.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q82",
+    "prompt": "(*) 1250 \\div 1666 \\times 4444 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 3502.0,
+      "low": 3167.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q83",
+    "prompt": "(*) 85858 \\div 585 =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 155.0,
+      "low": 139.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.1.2.5.q84",
+    "prompt": "(*) (51597 \\div 147)^{2} =",
+    "topic": "multiplying_by_any_fraction_of_100_1000_etc",
+    "answer": {
+      "high": 129362.0,
+      "low": 117040.0,
+      "type": "estimate"
+    }
+  }
+]

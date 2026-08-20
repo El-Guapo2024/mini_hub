@@ -2,4 +2,18 @@ id: triangular_pentagonal_etc_numbers
 title: 'Triangular Numbers'
 logo: assets/icons/number_sense.png
 bh_section: '2.2.6'
-questionIds: []
+questionIds:
+  - bh.2.2.6.q1
+  - bh.2.2.6.q2
+  - bh.2.2.6.q3
+  - bh.2.2.6.q4
+  - bh.2.2.6.q5
+  - bh.2.2.6.q6
+  - bh.2.2.6.q7
+  - bh.2.2.6.q8
+  - bh.2.2.6.q9
+  - bh.2.2.6.q10
+  - bh.2.2.6.q11
+  - bh.2.2.6.q12
+  - bh.2.2.6.q13
+  - bh.2.2.6.q14

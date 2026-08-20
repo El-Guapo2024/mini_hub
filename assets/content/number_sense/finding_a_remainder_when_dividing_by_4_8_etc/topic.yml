@@ -2,4 +2,11 @@ id: finding_a_remainder_when_dividing_by_4_8_etc
 title: 'Remainder by 4, 8 etc.'
 logo: assets/icons/number_sense.png
 bh_section: '1.4.1'
-questionIds: []
+questionIds:
+  - bh.1.4.1.q1
+  - bh.1.4.1.q2
+  - bh.1.4.1.q3
+  - bh.1.4.1.q4
+  - bh.1.4.1.q5
+  - bh.1.4.1.q6
+  - bh.1.4.1.q7

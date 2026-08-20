@@ -2,4 +2,13 @@ id: geometric_and_harmonic_means
 title: 'Geometric and Harmonic Means'
 logo: assets/icons/number_sense.png
 bh_section: '4.4.4'
-questionIds: []
+questionIds:
+  - bh.4.4.4.q1
+  - bh.4.4.4.q2
+  - bh.4.4.4.q3
+  - bh.4.4.4.q4
+  - bh.4.4.4.q5
+  - bh.4.4.4.q6
+  - bh.4.4.4.q7
+  - bh.4.4.4.q8
+  - bh.4.4.4.q9

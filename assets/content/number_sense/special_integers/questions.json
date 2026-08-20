@@ -1,0 +1,620 @@
+[
+  {
+    "id": "bh.2.1.5.q1",
+    "prompt": "572 \\times 21 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 12012,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q2",
+    "prompt": "\\frac{2}{37} \\times 999 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 54,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q3",
+    "prompt": "33.67 \\times 15 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 505.05,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q4",
+    "prompt": "715 \\times 35 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 25025,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q5",
+    "prompt": "3367 \\times 21 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 70707,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q6",
+    "prompt": "1073 \\div 29 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 37,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q7",
+    "prompt": "715 \\times 28 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 20020,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q8",
+    "prompt": "429 \\times 35 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 15015,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q9",
+    "prompt": "63 \\times 429 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 27027,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q10",
+    "prompt": "1073 \\div 37 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 29,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q11",
+    "prompt": "444 \\times \\frac{5}{37} =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 60,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q12",
+    "prompt": "63 \\times 572 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 36036,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q13",
+    "prompt": "143 \\times 49 = 1001 \\times ___",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 7,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q14",
+    "prompt": "29 \\times 37 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 1073,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q15",
+    "prompt": "42 \\times 715 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 30030,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q16",
+    "prompt": "715 \\times 98 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 70070,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q17",
+    "prompt": "27 \\times 37 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 999,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q18",
+    "prompt": "715 \\times 77 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 55055,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q19",
+    "prompt": "105 \\times 715 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 75075,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q20",
+    "prompt": "429 \\times 357 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 153153,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q21",
+    "prompt": "14 \\times 715 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 10010,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q22",
+    "prompt": "42 \\times 429 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 18018,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q23",
+    "prompt": "21 \\times 336.7 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 7070.7,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q24",
+    "prompt": "36 \\times 3.367 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 121.212,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q25",
+    "prompt": "715 \\times 49 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 35035,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q26",
+    "prompt": "33.67 \\times 27 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 909.09,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q27",
+    "prompt": "707 \\times 715 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 505505,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q28",
+    "prompt": "429 \\times 21 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 9009,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q29",
+    "prompt": "336.7 \\times 3.3 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 1111.11,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q30",
+    "prompt": "707 \\times 429 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 303303,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q31",
+    "prompt": "385 \\times 13 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 5005,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q32",
+    "prompt": "111 \\times \\frac{7}{27} =",
+    "topic": "special_integers",
+    "answer": {
+      "type": "fraction",
+      "num": 259,
+      "den": 9,
+      "display": "28\\frac{7}{9}"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q33",
+    "prompt": "539 \\times 13 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 7007,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q34",
+    "prompt": "666 \\times \\frac{2}{37} =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 36,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q35",
+    "prompt": "(*) \\frac{5}{37} \\times 5548 =",
+    "topic": "special_integers",
+    "answer": {
+      "high": 788.0,
+      "low": 712.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q36",
+    "prompt": "333 \\times \\frac{1}{27} \\times \\frac{1}{37} =",
+    "topic": "special_integers",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 3,
+      "display": "\\frac{1}{3}"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q37",
+    "prompt": "462 \\times 13 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 6006,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q38",
+    "prompt": "999 \\times \\frac{7}{27} \\times \\frac{7}{37} =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 49,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q39",
+    "prompt": "6006 \\div 462 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 13,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q40",
+    "prompt": "444 \\times \\frac{4}{37} =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 48,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q41",
+    "prompt": "770 \\times 13 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 10010,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q42",
+    "prompt": "888 \\times \\frac{4}{37} =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 96,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q43",
+    "prompt": "666 \\times \\frac{16}{27} \\times \\frac{24}{37} =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 256,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q44",
+    "prompt": "143 \\times 77 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 11011,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q45",
+    "prompt": "143 \\times 63 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 9009,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q46",
+    "prompt": "84 \\times 429 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 36036,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q47",
+    "prompt": "143 \\times 49 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 7007,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q48",
+    "prompt": "444 \\times \\frac{5}{37} =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 60,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q49",
+    "prompt": "222 \\times \\frac{1}{27} =",
+    "topic": "special_integers",
+    "answer": {
+      "type": "fraction",
+      "num": 74,
+      "den": 9,
+      "display": "8\\frac{2}{9}"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q50",
+    "prompt": "63 \\times 143 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 9009,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q51",
+    "prompt": "555 \\times \\frac{6}{37} =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 90,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q52",
+    "prompt": "444 \\times \\frac{1}{27} =",
+    "topic": "special_integers",
+    "answer": {
+      "type": "fraction",
+      "num": 148,
+      "den": 9,
+      "display": "16\\frac{4}{9}"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q53",
+    "prompt": "143 \\times 77 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 11011,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q54",
+    "prompt": "888 \\times \\frac{4}{37} =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 96,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q55",
+    "prompt": "666 \\times \\frac{1}{27} =",
+    "topic": "special_integers",
+    "answer": {
+      "type": "fraction",
+      "num": 74,
+      "den": 3,
+      "display": "24\\frac{2}{3}"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q56",
+    "prompt": "777 \\times \\frac{7}{37} =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 147,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q57",
+    "prompt": "444 \\times \\frac{2}{27} =",
+    "topic": "special_integers",
+    "answer": {
+      "type": "fraction",
+      "num": 296,
+      "den": 9,
+      "display": "32\\frac{8}{9}"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q58",
+    "prompt": "999 \\times \\frac{3}{37} =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 81,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q59",
+    "prompt": "666 \\times \\frac{3}{27} =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 74,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q60",
+    "prompt": "888 \\times \\frac{24}{27} =",
+    "topic": "special_integers",
+    "answer": {
+      "type": "fraction",
+      "num": 2368,
+      "den": 3,
+      "display": "789\\frac{1}{3}"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q61",
+    "prompt": "999 \\times \\frac{1}{27} =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 37,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q62",
+    "prompt": "143 \\times 13 \\times 7 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 13013,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q63",
+    "prompt": "666 \\times \\frac{18}{37} =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 324,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q64",
+    "prompt": "999 \\times \\frac{5}{27} =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 185,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q65",
+    "prompt": "1001 \\times 25 = 143 \\times",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 175,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q66",
+    "prompt": "3 \\times 11 \\times 13 \\times 21 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 9009,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.2.1.5.q67",
+    "prompt": "3 \\times 5 \\times 7 \\times 11 \\times 13 =",
+    "topic": "special_integers",
+    "answer": {
+      "answer": 15015,
+      "type": "numeric"
+    }
+  }
+]

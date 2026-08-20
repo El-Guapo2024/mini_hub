@@ -1,0 +1,78 @@
+[
+  {
+    "id": "bh.3.6.1.q1",
+    "prompt": "\\lim_{x \\to \\infty} \\frac{3x + 8}{7x - 4} =",
+    "topic": "limits",
+    "answer": {
+      "type": "fraction",
+      "num": 3,
+      "den": 7,
+      "display": "\\frac{3}{7}"
+    }
+  },
+  {
+    "id": "bh.3.6.1.q2",
+    "prompt": "\\lim_{x \\to 4} 2x - 6 =",
+    "topic": "limits",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.6.1.q3",
+    "prompt": "\\lim_{x \\to 2} \\frac{x^{2} - 4}{x - 2} =",
+    "topic": "limits",
+    "answer": {
+      "answer": 4,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.6.1.q4",
+    "prompt": "\\lim_{x \\to 2} \\frac{x^{3} - 8}{x^{2} - 4} =",
+    "topic": "limits",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.6.1.q5",
+    "prompt": "\\lim_{x \\to \\infty} \\frac{3x - 1}{x} =",
+    "topic": "limits",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.6.1.q6",
+    "prompt": "\\lim_{x \\to 3} \\frac{x^{3} - 27}{x - 3} =",
+    "topic": "limits",
+    "answer": {
+      "answer": 27,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.6.1.q7",
+    "prompt": "\\lim_{x \\to 0} \\frac{x^{2} - 3x}{x} =",
+    "topic": "limits",
+    "answer": {
+      "answer": -3.0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.6.1.q8",
+    "prompt": "\\lim_{x \\to 3} \\frac{x^{3} - 27}{x^{2} - 9} =",
+    "topic": "limits",
+    "answer": {
+      "type": "fraction",
+      "num": 9,
+      "den": 2,
+      "display": "\\frac{9}{2}"
+    }
+  }
+]

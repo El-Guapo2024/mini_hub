@@ -1,0 +1,66 @@
+[
+  {
+    "id": "bh.4.2.1.q1",
+    "prompt": "How many bushels are 15 pecks?",
+    "topic": "conversions_part_2",
+    "answer": {
+      "answer": 3.75,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.2.1.q2",
+    "prompt": "\\frac{1}{11} of a mile is how many feet?",
+    "topic": "conversions_part_2",
+    "answer": {
+      "answer": 480,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.2.1.q3",
+    "prompt": "44 bushels are how many pecks?",
+    "topic": "conversions_part_2",
+    "answer": {
+      "answer": 176,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.2.1.q4",
+    "prompt": "160 acres is ___ sq. miles",
+    "topic": "conversions_part_2",
+    "answer": {
+      "answer": 0.25,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.2.1.q5",
+    "prompt": "\\frac{1}{8} miles is ___ rods",
+    "topic": "conversions_part_2",
+    "answer": {
+      "answer": 40,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.2.1.q6",
+    "prompt": "\\frac{1}{44} of a mile is how many feet?",
+    "topic": "conversions_part_2",
+    "answer": {
+      "answer": 120,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.2.1.q7",
+    "prompt": "(*) 2 days 7 hours 12 minutes = ___ minutes",
+    "topic": "conversions_part_2",
+    "answer": {
+      "high": 3477.0,
+      "low": 3147.0,
+      "type": "estimate"
+    }
+  }
+]

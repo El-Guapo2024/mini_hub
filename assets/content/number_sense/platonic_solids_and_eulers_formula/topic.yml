@@ -2,4 +2,14 @@ id: platonic_solids_and_eulers_formula
 title: 'Platonic Solids and Euler''s Formula'
 logo: assets/icons/number_sense.png
 bh_section: '2.1.7'
-questionIds: []
+questionIds:
+  - bh.2.1.7.q1
+  - bh.2.1.7.q2
+  - bh.2.1.7.q3
+  - bh.2.1.7.q4
+  - bh.2.1.7.q5
+  - bh.2.1.7.q6
+  - bh.2.1.7.q7
+  - bh.2.1.7.q8
+  - bh.2.1.7.q9
+  - bh.2.1.7.q10

@@ -2,4 +2,14 @@ id: repeating_decimals_in_reverse
 title: 'Repeating Decimals in Reverse'
 logo: assets/icons/number_sense.png
 bh_section: '4.5.2'
-questionIds: []
+questionIds:
+  - bh.4.5.2.q1
+  - bh.4.5.2.q2
+  - bh.4.5.2.q3
+  - bh.4.5.2.q4
+  - bh.4.5.2.q5
+  - bh.4.5.2.q6
+  - bh.4.5.2.q7
+  - bh.4.5.2.q8
+  - bh.4.5.2.q9
+  - bh.4.5.2.q10

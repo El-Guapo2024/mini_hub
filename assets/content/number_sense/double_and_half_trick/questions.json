@@ -1,0 +1,155 @@
+[
+  {
+    "id": "bh.1.2.6.q1",
+    "prompt": "1.5 \\times 5.2 =",
+    "topic": "double_and_half_trick",
+    "answer": {
+      "answer": 7.8,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.6.q2",
+    "prompt": "4.8 \\times 15 =",
+    "topic": "double_and_half_trick",
+    "answer": {
+      "answer": 72,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.6.q3",
+    "prompt": "64 \\times 1.5 =",
+    "topic": "double_and_half_trick",
+    "answer": {
+      "answer": 96,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.6.q4",
+    "prompt": "15 \\times 48 =",
+    "topic": "double_and_half_trick",
+    "answer": {
+      "answer": 720,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.6.q5",
+    "prompt": "14 \\times 203 =",
+    "topic": "double_and_half_trick",
+    "answer": {
+      "answer": 2842,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.6.q6",
+    "prompt": "14 \\times 312 =",
+    "topic": "double_and_half_trick",
+    "answer": {
+      "answer": 4368,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.6.q7",
+    "prompt": "24 \\times 35 =",
+    "topic": "double_and_half_trick",
+    "answer": {
+      "answer": 840,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.6.q8",
+    "prompt": "312 \\times 14 =",
+    "topic": "double_and_half_trick",
+    "answer": {
+      "answer": 4368,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.6.q9",
+    "prompt": "A rectangle has a length of 2.4 and a width of 1.5. Its area is",
+    "topic": "double_and_half_trick",
+    "answer": {
+      "answer": 3.6,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.6.q10",
+    "prompt": "18 \\times 112 =",
+    "topic": "double_and_half_trick",
+    "answer": {
+      "answer": 2016,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.6.q11",
+    "prompt": "27 \\times 14 =",
+    "topic": "double_and_half_trick",
+    "answer": {
+      "answer": 378,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.6.q12",
+    "prompt": "21 \\times 15 \\times 14 =",
+    "topic": "double_and_half_trick",
+    "answer": {
+      "answer": 4410,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.6.q13",
+    "prompt": "33.75 = 1.5 \\times",
+    "topic": "double_and_half_trick",
+    "answer": {
+      "answer": 22.5,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.6.q14",
+    "prompt": "345 \\times 12 =",
+    "topic": "double_and_half_trick",
+    "answer": {
+      "answer": 4140,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.6.q15",
+    "prompt": "1.2 \\times 1.25 =",
+    "topic": "double_and_half_trick",
+    "answer": {
+      "answer": 1.5,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.6.q16",
+    "prompt": "24\\% of 44 =",
+    "topic": "double_and_half_trick",
+    "answer": {
+      "answer": 10.56,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.1.2.6.q17",
+    "prompt": "14 \\times 25 + 12.5 \\times 28 =",
+    "topic": "double_and_half_trick",
+    "answer": {
+      "answer": 700,
+      "type": "numeric"
+    }
+  }
+]

@@ -2,4 +2,35 @@ id: multiplying_two_numbers_near_100
 title: 'Multiplying Two Numbers Near 100'
 logo: assets/icons/number_sense.png
 bh_section: '1.2.7'
-questionIds: []
+questionIds:
+  - bh.1.2.7.q1
+  - bh.1.2.7.q2
+  - bh.1.2.7.q3
+  - bh.1.2.7.q4
+  - bh.1.2.7.q5
+  - bh.1.2.7.q6
+  - bh.1.2.7.q7
+  - bh.1.2.7.q8
+  - bh.1.2.7.q9
+  - bh.1.2.7.q10
+  - bh.1.2.7.q11
+  - bh.1.2.7.q12
+  - bh.1.2.7.q13
+  - bh.1.2.7.q14
+  - bh.1.2.7.q15
+  - bh.1.2.7.q16
+  - bh.1.2.7.q17
+  - bh.1.2.7.q18
+  - bh.1.2.7.q19
+  - bh.1.2.7.q20
+  - bh.1.2.7.q21
+  - bh.1.2.7.q22
+  - bh.1.2.7.q23
+  - bh.1.2.7.q24
+  - bh.1.2.7.q25
+  - bh.1.2.7.q26
+  - bh.1.2.7.q27
+  - bh.1.2.7.q28
+  - bh.1.2.7.q29
+  - bh.1.2.7.q30
+  - bh.1.2.7.q31

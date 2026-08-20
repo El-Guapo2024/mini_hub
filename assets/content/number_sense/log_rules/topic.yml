@@ -2,4 +2,45 @@ id: log_rules
 title: 'Logarithms (Evaluation)'
 logo: assets/icons/number_sense.png
 bh_section: '3.1.7'
-questionIds: []
+questionIds:
+  - bh.3.1.7.q1
+  - bh.3.1.7.q2
+  - bh.3.1.7.q3
+  - bh.3.1.7.q4
+  - bh.3.1.7.q5
+  - bh.3.1.7.q6
+  - bh.3.1.7.q7
+  - bh.3.1.7.q8
+  - bh.3.1.7.q9
+  - bh.3.1.7.q10
+  - bh.3.1.7.q11
+  - bh.3.1.7.q12
+  - bh.3.1.7.q13
+  - bh.3.1.7.q14
+  - bh.3.1.7.q15
+  - bh.3.1.7.q16
+  - bh.3.1.7.q17
+  - bh.3.1.7.q18
+  - bh.3.1.7.q19
+  - bh.3.1.7.q20
+  - bh.3.1.7.q21
+  - bh.3.1.7.q22
+  - bh.3.1.7.q23
+  - bh.3.1.7.q24
+  - bh.3.1.7.q25
+  - bh.3.1.7.q26
+  - bh.3.1.7.q27
+  - bh.3.1.7.q28
+  - bh.3.1.7.q29
+  - bh.3.1.7.q30
+  - bh.3.1.7.q31
+  - bh.3.1.7.q32
+  - bh.3.1.7.q33
+  - bh.3.1.7.q34
+  - bh.3.1.7.q35
+  - bh.3.1.7.q36
+  - bh.3.1.7.q37
+  - bh.3.1.7.q38
+  - bh.3.1.7.q39
+  - bh.3.1.7.q40
+  - bh.3.1.7.q41

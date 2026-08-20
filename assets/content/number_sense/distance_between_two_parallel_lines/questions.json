@@ -1,0 +1,82 @@
+[
+  {
+    "id": "bh.4.4.6.q1",
+    "prompt": "The distance between the lines 3x - 4y = 8 and 3x - 4y = 3 is",
+    "topic": "distance_between_two_parallel_lines",
+    "answer": {
+      "answer": 1,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.4.6.q2",
+    "prompt": "The distance between the lines 3x + 4y = -1 and 3x + 4y = 6 is",
+    "topic": "distance_between_two_parallel_lines",
+    "answer": {
+      "type": "fraction",
+      "num": 7,
+      "den": 5,
+      "display": "\\frac{7}{5}"
+    }
+  },
+  {
+    "id": "bh.4.4.6.q3",
+    "prompt": "The distance between the lines 5x + 12y = 2 and 5x + 12y = 9 is",
+    "topic": "distance_between_two_parallel_lines",
+    "answer": {
+      "type": "fraction",
+      "num": 7,
+      "den": 13,
+      "display": "\\frac{7}{13}"
+    }
+  },
+  {
+    "id": "bh.4.4.6.q4",
+    "prompt": "The distance between the lines 3x + 4y = 9 and 3x + 4y = -1 is",
+    "topic": "distance_between_two_parallel_lines",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.4.6.q5",
+    "prompt": "The distance between the lines 3x - 4y = 7 and 3x - 4y = 10 is",
+    "topic": "distance_between_two_parallel_lines",
+    "answer": {
+      "type": "fraction",
+      "num": 3,
+      "den": 5,
+      "display": "\\frac{3}{5}"
+    }
+  },
+  {
+    "id": "bh.4.4.6.q6",
+    "prompt": "The distance between the lines \\sqrt{2}x + \\sqrt{7}y = 2 and \\sqrt{2}x + \\sqrt{7}y = 5 is",
+    "topic": "distance_between_two_parallel_lines",
+    "answer": {
+      "answer": 1,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.4.4.6.q7",
+    "prompt": "The distance between the lines \\sqrt{11}x + \\sqrt{5}y = 5 and \\sqrt{11}x + \\sqrt{5}y = -2 is",
+    "topic": "distance_between_two_parallel_lines",
+    "answer": {
+      "type": "fraction",
+      "num": 7,
+      "den": 4,
+      "display": "\\frac{7}{4}"
+    }
+  },
+  {
+    "id": "bh.4.4.6.q8",
+    "prompt": "The distance between the lines \\sqrt{2}x + \\sqrt{7}y = 23 and \\sqrt{2}x + \\sqrt{7}y = 2 is",
+    "topic": "distance_between_two_parallel_lines",
+    "answer": {
+      "answer": 7,
+      "type": "numeric"
+    }
+  }
+]

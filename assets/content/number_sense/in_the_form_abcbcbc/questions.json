@@ -1,0 +1,119 @@
+[
+  {
+    "id": "bh.3.3.4.q1",
+    "prompt": ".2\\overline{13} =",
+    "topic": "in_the_form_abcbcbc",
+    "answer": {
+      "type": "fraction",
+      "num": 211,
+      "den": 990,
+      "display": "\\frac{211}{990}"
+    }
+  },
+  {
+    "id": "bh.3.3.4.q2",
+    "prompt": ".1\\overline{23} =",
+    "topic": "in_the_form_abcbcbc",
+    "answer": {
+      "type": "fraction",
+      "num": 61,
+      "den": 495,
+      "display": "\\frac{61}{495}"
+    }
+  },
+  {
+    "id": "bh.3.3.4.q3",
+    "prompt": ".2\\overline{31} =",
+    "topic": "in_the_form_abcbcbc",
+    "answer": {
+      "type": "fraction",
+      "num": 229,
+      "den": 990,
+      "display": "\\frac{229}{990}"
+    }
+  },
+  {
+    "id": "bh.3.3.4.q4",
+    "prompt": ".3\\overline{05} =",
+    "topic": "in_the_form_abcbcbc",
+    "answer": {
+      "answer": 0.30505050505050507,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.3.4.q5",
+    "prompt": ".2\\overline{05} =",
+    "topic": "in_the_form_abcbcbc",
+    "answer": {
+      "type": "fraction",
+      "num": 203,
+      "den": 990,
+      "display": "\\frac{203}{990}"
+    }
+  },
+  {
+    "id": "bh.3.3.4.q6",
+    "prompt": ".3\\overline{14} =",
+    "topic": "in_the_form_abcbcbc",
+    "answer": {
+      "type": "fraction",
+      "num": 311,
+      "den": 990,
+      "display": "\\frac{311}{990}"
+    }
+  },
+  {
+    "id": "bh.3.3.4.q7",
+    "prompt": ".2\\overline{71} =",
+    "topic": "in_the_form_abcbcbc",
+    "answer": {
+      "type": "fraction",
+      "num": 269,
+      "den": 990,
+      "display": "\\frac{269}{990}"
+    }
+  },
+  {
+    "id": "bh.3.3.4.q8",
+    "prompt": ".2\\overline{35} =",
+    "topic": "in_the_form_abcbcbc",
+    "answer": {
+      "type": "fraction",
+      "num": 233,
+      "den": 990,
+      "display": "\\frac{233}{990}"
+    }
+  },
+  {
+    "id": "bh.3.3.4.q9",
+    "prompt": ".0\\overline{47} =",
+    "topic": "in_the_form_abcbcbc",
+    "answer": {
+      "type": "fraction",
+      "num": 47,
+      "den": 990,
+      "display": "\\frac{47}{990}"
+    }
+  },
+  {
+    "id": "bh.3.3.4.q10",
+    "prompt": ".2\\overline{14} =",
+    "topic": "in_the_form_abcbcbc",
+    "answer": {
+      "answer": 0.21414141414141413,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.3.4.q11",
+    "prompt": ".1\\overline{23} =",
+    "topic": "in_the_form_abcbcbc",
+    "answer": {
+      "type": "fraction",
+      "num": 61,
+      "den": 495,
+      "display": "\\frac{61}{495}"
+    }
+  }
+]

@@ -2,4 +2,10 @@ id: finding_a_remainder_when_dividing_by_3_9_etc
 title: 'Remainder by 3, 9'
 logo: assets/icons/number_sense.png
 bh_section: '1.4.2'
-questionIds: []
+questionIds:
+  - bh.1.4.2.q1
+  - bh.1.4.2.q2
+  - bh.1.4.2.q3
+  - bh.1.4.2.q4
+  - bh.1.4.2.q5
+  - bh.1.4.2.q6

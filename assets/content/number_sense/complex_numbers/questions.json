@@ -1,0 +1,318 @@
+[
+  {
+    "id": "bh.3.1.10.q1",
+    "prompt": "(4-i)^{2} = a+bi, a =",
+    "topic": "complex_numbers",
+    "answer": {
+      "answer": 15,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.10.q2",
+    "prompt": "(6-5i)(6+5i) =",
+    "topic": "complex_numbers",
+    "answer": {
+      "answer": 61,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.10.q3",
+    "prompt": "The conjugate of (4i-6) is a+bi, a =",
+    "topic": "complex_numbers",
+    "answer": {
+      "answer": -6,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.10.q4",
+    "prompt": "(5+i)^{2} = a+bi, a =",
+    "topic": "complex_numbers",
+    "answer": {
+      "answer": 24,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.10.q5",
+    "prompt": "(9-3i)(3+9i) = a+bi, a =",
+    "topic": "complex_numbers",
+    "answer": {
+      "answer": 54,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.10.q6",
+    "prompt": "(8+3i)(3-8i) = a+bi, a =",
+    "topic": "complex_numbers",
+    "answer": {
+      "answer": 48,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.10.q7",
+    "prompt": "(2+3i) \\div (2i) = a+bi, a =",
+    "topic": "complex_numbers",
+    "answer": {
+      "type": "fraction",
+      "num": 3,
+      "den": 2,
+      "display": "\\frac{3}{2}"
+    }
+  },
+  {
+    "id": "bh.3.1.10.q8",
+    "prompt": "(3-4i)(3+4i) =",
+    "topic": "complex_numbers",
+    "answer": {
+      "answer": 25,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.10.q9",
+    "prompt": "(24-32i)(24+32i) =",
+    "topic": "complex_numbers",
+    "answer": {
+      "answer": 1600,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.10.q10",
+    "prompt": "(5+12i)^{2} = a+bi, a+b =",
+    "topic": "complex_numbers",
+    "answer": {
+      "answer": 1,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.10.q11",
+    "prompt": "(3-5i)(2-5i) = a+bi, a+b =",
+    "topic": "complex_numbers",
+    "answer": {
+      "answer": -44,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.10.q12",
+    "prompt": "(2-5i)(3+5i) = a+bi, a =",
+    "topic": "complex_numbers",
+    "answer": {
+      "answer": 31,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.10.q13",
+    "prompt": "(2-5i)(3-4i) = a+bi, a-b =",
+    "topic": "complex_numbers",
+    "answer": {
+      "answer": 9,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.10.q14",
+    "prompt": "(4-3i)(2-i) = a+bi, a-b =",
+    "topic": "complex_numbers",
+    "answer": {
+      "answer": 15,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.10.q15",
+    "prompt": "(2+7i)(2-7i) = a+bi, a-b =",
+    "topic": "complex_numbers",
+    "answer": {
+      "answer": 53,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.10.q16",
+    "prompt": "(2+3i)(4+5i) = a+bi, a =",
+    "topic": "complex_numbers",
+    "answer": {
+      "answer": -7,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.10.q17",
+    "prompt": "(3+4i)^{2} = a+bi, a =",
+    "topic": "complex_numbers",
+    "answer": {
+      "answer": -7,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.10.q18",
+    "prompt": "The modulus of 14+48i is:",
+    "topic": "complex_numbers",
+    "answer": {
+      "answer": 50,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.10.q19",
+    "prompt": "(2-5i)^{2} = a+bi, a+b =",
+    "topic": "complex_numbers",
+    "answer": {
+      "answer": -41,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.10.q20",
+    "prompt": "(5+4i)(3+2i) = a+bi, a =",
+    "topic": "complex_numbers",
+    "answer": {
+      "answer": 7,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.10.q21",
+    "prompt": "(0+4i)^{2} = a+bi, b =",
+    "topic": "complex_numbers",
+    "answer": {
+      "answer": 0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.10.q22",
+    "prompt": "(4+5i)(4-5i) =",
+    "topic": "complex_numbers",
+    "answer": {
+      "answer": 41,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.10.q23",
+    "prompt": "The modulus of (11+60i)^{2} is:",
+    "topic": "complex_numbers",
+    "answer": {
+      "answer": 3721,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.10.q24",
+    "prompt": "(0-3i)^{5} = a+bi, b =",
+    "topic": "complex_numbers",
+    "answer": {
+      "answer": -243,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.10.q25",
+    "prompt": "(3-5i)(2+i) = a+bi, a+b =",
+    "topic": "complex_numbers",
+    "answer": {
+      "answer": 4,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.10.q26",
+    "prompt": "(4-2i)(3-i) = a+bi, a+b =",
+    "topic": "complex_numbers",
+    "answer": {
+      "answer": 0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.10.q27",
+    "prompt": "(1+i)^{9} =",
+    "topic": "complex_numbers",
+    "answer": {
+      "display": "16+16i",
+      "imag": 16,
+      "real": 16,
+      "type": "complex"
+    }
+  },
+  {
+    "id": "bh.3.1.10.q28",
+    "prompt": "(2+3i) \\div (3-2i) = a+bi, b =",
+    "topic": "complex_numbers",
+    "answer": {
+      "answer": 1,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.10.q29",
+    "prompt": "(2-3i) \\div (3-2i) = a+bi, a =",
+    "topic": "complex_numbers",
+    "answer": {
+      "type": "fraction",
+      "num": 12,
+      "den": 13,
+      "display": "\\frac{12}{13}"
+    }
+  },
+  {
+    "id": "bh.3.1.10.q30",
+    "prompt": "(2i)^{6} =",
+    "topic": "complex_numbers",
+    "answer": {
+      "answer": -64,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.10.q31",
+    "prompt": "(3+4i) \\div (5i) = a+bi, a+b =",
+    "topic": "complex_numbers",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 5,
+      "display": "\\frac{1}{5}"
+    }
+  },
+  {
+    "id": "bh.3.1.10.q32",
+    "prompt": "The modulus of (24+7i)^{2} is:",
+    "topic": "complex_numbers",
+    "answer": {
+      "answer": 625,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.10.q33",
+    "prompt": "(3i-2) \\div (3i+2) = a+bi, b =",
+    "topic": "complex_numbers",
+    "answer": {
+      "type": "fraction",
+      "num": 12,
+      "den": 13,
+      "display": "\\frac{12}{13}"
+    }
+  },
+  {
+    "id": "bh.3.1.10.q34",
+    "prompt": "The modulus of (5+12i)^{2} is:",
+    "topic": "complex_numbers",
+    "answer": {
+      "answer": 169,
+      "type": "numeric"
+    }
+  }
+]

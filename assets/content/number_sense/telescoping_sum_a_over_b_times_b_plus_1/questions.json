@@ -1,0 +1,46 @@
+[
+  {
+    "id": "bh.1.5.3.q1",
+    "prompt": "\\frac{1}{12} + \\frac{1}{20} + \\frac{1}{30} + \\frac{1}{42} =",
+    "topic": "telescoping_sum_a_over_b_times_b_plus_1",
+    "answer": {
+      "type": "fraction",
+      "num": 4,
+      "den": 21,
+      "display": "\\frac{4}{21}"
+    }
+  },
+  {
+    "id": "bh.1.5.3.q2",
+    "prompt": "\\frac{1}{72} + \\frac{1}{90} + \\frac{1}{110} + \\frac{1}{132} =",
+    "topic": "telescoping_sum_a_over_b_times_b_plus_1",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 24,
+      "display": "\\frac{1}{24}"
+    }
+  },
+  {
+    "id": "bh.1.5.3.q3",
+    "prompt": "\\frac{1}{30} + \\frac{1}{42} + \\frac{1}{56} =",
+    "topic": "telescoping_sum_a_over_b_times_b_plus_1",
+    "answer": {
+      "type": "fraction",
+      "num": 3,
+      "den": 40,
+      "display": "\\frac{3}{40}"
+    }
+  },
+  {
+    "id": "bh.1.5.3.q4",
+    "prompt": "\\frac{7}{30} + \\frac{7}{20} + \\frac{7}{12} =",
+    "topic": "telescoping_sum_a_over_b_times_b_plus_1",
+    "answer": {
+      "type": "fraction",
+      "num": 7,
+      "den": 6,
+      "display": "1\\frac{1}{6}"
+    }
+  }
+]

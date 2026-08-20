@@ -1,0 +1,384 @@
+[
+  {
+    "id": "bh.3.1.7.q1",
+    "prompt": "-2\\log_{3} x = 4, x =",
+    "topic": "log_rules",
+    "answer": {
+      "type": "fraction",
+      "num": 1,
+      "den": 9,
+      "display": "\\frac{1}{9}"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q2",
+    "prompt": "\\log_{12} 2 + \\log_{12} 8 + \\log_{12} 9 =",
+    "topic": "log_rules",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q3",
+    "prompt": "\\log_{3} 40 - \\log_{3} 8 + \\log_{3} 1.8 =",
+    "topic": "log_rules",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q4",
+    "prompt": "\\log_{x} 216 = 3, x =",
+    "topic": "log_rules",
+    "answer": {
+      "answer": 6,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q5",
+    "prompt": "f(x) = \\log_{3} x - 4, f(3) =",
+    "topic": "log_rules",
+    "answer": {
+      "answer": -3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q6",
+    "prompt": "\\log_{8} 16 =",
+    "topic": "log_rules",
+    "answer": {
+      "type": "fraction",
+      "num": 4,
+      "den": 3,
+      "display": "\\frac{4}{3}"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q7",
+    "prompt": "\\log_{3} x = 4, \\sqrt{x} =",
+    "topic": "log_rules",
+    "answer": {
+      "answer": 9,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q8",
+    "prompt": "\\log_{x} 343 = 3, x =",
+    "topic": "log_rules",
+    "answer": {
+      "answer": 7,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q9",
+    "prompt": "If \\log .25 = 3, then \\log 4 =",
+    "topic": "log_rules",
+    "answer": {
+      "answer": -3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q10",
+    "prompt": "(\\log_{5} 6)(\\log_{6} 5) =",
+    "topic": "log_rules",
+    "answer": {
+      "answer": 1,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q11",
+    "prompt": "\\log_{3} 216 \\div \\log_{3} 6 =",
+    "topic": "log_rules",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q12",
+    "prompt": "\\log_{3} 32 - \\log_{3} 16 + \\log_{3} 1.5 =",
+    "topic": "log_rules",
+    "answer": {
+      "answer": 1,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q13",
+    "prompt": "\\log_{2} 64 \\div \\log_{2} 4 =",
+    "topic": "log_rules",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q14",
+    "prompt": "\\log_{4} 32 + \\log_{4} 2 - \\log_{4} 16 =",
+    "topic": "log_rules",
+    "answer": {
+      "answer": 1,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q15",
+    "prompt": "\\log_{5} 625 \\times \\log_{5} 25 \\div \\log_{5} 125 =",
+    "topic": "log_rules",
+    "answer": {
+      "type": "fraction",
+      "num": 8,
+      "den": 3,
+      "display": "\\frac{8}{3}"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q16",
+    "prompt": "\\log_{4} 8 \\times \\log_{8} 4 =",
+    "topic": "log_rules",
+    "answer": {
+      "answer": 1,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q17",
+    "prompt": "\\log_{4} 256 \\div \\log_{4} 16 \\times \\log_{4} 64 =",
+    "topic": "log_rules",
+    "answer": {
+      "answer": 6,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q18",
+    "prompt": "\\log_{8} k = \\frac{1}{3}, k =",
+    "topic": "log_rules",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q19",
+    "prompt": "\\log_{5} M = 2, \\sqrt{M} =",
+    "topic": "log_rules",
+    "answer": {
+      "answer": 5,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q20",
+    "prompt": "4\\log_{9} k = 2, k =",
+    "topic": "log_rules",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q21",
+    "prompt": "\\log_{4} 8 = N \\text{ then } 2N =",
+    "topic": "log_rules",
+    "answer": {
+      "answer": 3,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q22",
+    "prompt": "\\log_{9} 3 = W \\text{ then } 3W =",
+    "topic": "log_rules",
+    "answer": {
+      "type": "fraction",
+      "num": 3,
+      "den": 2,
+      "display": "1\\frac{1}{2}"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q23",
+    "prompt": "\\log_{k} 32 = 5, k =",
+    "topic": "log_rules",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q24",
+    "prompt": "\\log_{3}[\\log_{2}(\\log_{2} 256)] =",
+    "topic": "log_rules",
+    "answer": {
+      "answer": 1,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q25",
+    "prompt": "\\log_{4} .5 = k, k =",
+    "topic": "log_rules",
+    "answer": {
+      "answer": -0.5,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q26",
+    "prompt": "\\log_{5}[\\log_{4}(\\log_{3} 81)] =",
+    "topic": "log_rules",
+    "answer": {
+      "answer": 0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q27",
+    "prompt": "\\log_{16} 8 = w, w =",
+    "topic": "log_rules",
+    "answer": {
+      "type": "fraction",
+      "num": 3,
+      "den": 4,
+      "display": "\\frac{3}{4}"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q28",
+    "prompt": "\\log_{9} k = 2.5, k =",
+    "topic": "log_rules",
+    "answer": {
+      "answer": 243,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q29",
+    "prompt": "\\log_{2}[\\log_{3}(\\log_{2} 512)] =",
+    "topic": "log_rules",
+    "answer": {
+      "answer": 1,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q30",
+    "prompt": "\\log_{b} .5 = -.5, b =",
+    "topic": "log_rules",
+    "answer": {
+      "answer": 4,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q31",
+    "prompt": "\\log_{b} 8 = 3, b =",
+    "topic": "log_rules",
+    "answer": {
+      "answer": 2,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q32",
+    "prompt": "\\log_{3}[\\log_{4}(\\log_{5} 625)] =",
+    "topic": "log_rules",
+    "answer": {
+      "answer": 0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q33",
+    "prompt": "\\log_{4} 8 = k, k =",
+    "topic": "log_rules",
+    "answer": {
+      "type": "fraction",
+      "num": 3,
+      "den": 2,
+      "display": "\\frac{3}{2}"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q34",
+    "prompt": "\\log_{4}[\\log_{3}(\\log_{5} 125)] =",
+    "topic": "log_rules",
+    "answer": {
+      "answer": 0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q35",
+    "prompt": "\\log_{4} .125 = k, k =",
+    "topic": "log_rules",
+    "answer": {
+      "answer": -1.5,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q36",
+    "prompt": "\\log_{8}(3x-2) = 2, x =",
+    "topic": "log_rules",
+    "answer": {
+      "answer": 22,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q37",
+    "prompt": "\\log_{4}[\\log_{2}(\\log_{6} 36)] =",
+    "topic": "log_rules",
+    "answer": {
+      "answer": 0,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q38",
+    "prompt": "\\log_{4} x = 3, \\sqrt{x} =",
+    "topic": "log_rules",
+    "answer": {
+      "answer": 8,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q39",
+    "prompt": "\\log_{5} x^{2} = 4, \\sqrt{x} =",
+    "topic": "log_rules",
+    "answer": {
+      "answer": 5,
+      "type": "numeric"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q40",
+    "prompt": "(*) 300\\log 600 =",
+    "topic": "log_rules",
+    "answer": {
+      "high": 876.0,
+      "low": 791.0,
+      "type": "estimate"
+    }
+  },
+  {
+    "id": "bh.3.1.7.q41",
+    "prompt": "\\log_{4} x = -.5, x =",
+    "topic": "log_rules",
+    "answer": {
+      "answer": 0.5,
+      "type": "numeric"
+    }
+  }
+]

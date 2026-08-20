@@ -113,9 +113,17 @@ def escape_for_math(prompt):
     — the student is shown "Expected group after '_'" where the question should
     be. The same goes for the `$` in a price.
 
-    A `_` that really is a subscript is left alone: it is one followed by `{` or
-    by a single character, which is what `123456_{7}` and `x_1` are. Anything
-    already escaped passes through untouched, so running this twice is safe.
+    A `_` that really is a subscript is left alone, and TeX only ever subscripts
+    one thing: `_` then a braced group, or `_` then a single character. So
+    `123456_{7}` and `x_1` are subscripts, while `___` and `___8` are blanks —
+    a run of underscores cannot be a subscript, and neither can one followed by
+    a multi-character run, since TeX would subscript only the first character
+    and set the rest on the baseline.
+
+    A subscript also needs something to attach to, so a leading `_` is a blank.
+
+    Anything already escaped passes through untouched, so running this twice is
+    safe.
     """
     out = []
     i = 0
@@ -126,14 +134,30 @@ def escape_for_math(prompt):
             i += 2
             continue
         if char == "_":
-            after = prompt[i + 1] if i + 1 < len(prompt) else ""
-            out.append("_" if after == "{" or after.isalnum() else "\\_")
+            out.append("_" if _is_subscript(prompt, i) else "\\_")
         elif char == "$":
             out.append("\\$")
         else:
             out.append(char)
         i += 1
     return "".join(out)
+
+
+def _is_subscript(prompt, i):
+    """Whether the `_` at [i] subscripts what follows rather than marking a blank."""
+    # Nothing before it to subscript.
+    if i == 0:
+        return False
+    # One of a run of underscores; a run is always a blank.
+    if prompt[i - 1] == "_" or prompt[i + 1 : i + 2] == "_":
+        return False
+
+    after = prompt[i + 1 : i + 2]
+    if after == "{":
+        return True
+    # A single character subscripts; a longer run does not, because TeX would
+    # lower only its first character and leave the rest on the baseline.
+    return after.isalnum() and not prompt[i + 2 : i + 3].isalnum()
 
 
 def question_number(key):

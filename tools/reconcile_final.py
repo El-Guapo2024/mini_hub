@@ -170,9 +170,14 @@ def main():
                            'note': 'no printed key; two independent '
                                    'derivations agree'}
         added += 1
-    (SRC / 'bh_answers.json').write_text(
-        json.dumps(answers, indent=1, sort_keys=True) + '\n'
-    )
+    # Only when there is something to add. Rewriting it regardless meant a run
+    # that established nothing still touched the key, which is the file every
+    # answer in the app is built from — it should show in a diff when it has
+    # changed, and not otherwise.
+    if added:
+        (SRC / 'bh_answers.json').write_text(
+            json.dumps(answers, indent=1, sort_keys=True) + '\n'
+        )
     print(f'\nadded {added} derived answers to the key')
     record_derived(answers)
 

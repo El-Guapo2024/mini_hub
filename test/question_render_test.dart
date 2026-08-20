@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_math_fork/flutter_math.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:math_keyboard/math_keyboard.dart';
 import 'package:mini_hub/content/answer.dart';
@@ -62,6 +63,20 @@ void main() {
           isNull,
           reason: '${question.id.value} does not render',
         );
+
+        // Checked rather than left to takeException, which cannot see it:
+        // `Math.tex` catches a parse failure and draws "Parser Error: ..." in
+        // place of the maths, so a prompt TeX cannot read renders happily and
+        // throws nothing while the student is shown the error.
+        for (final math in tester.widgetList<Math>(find.byType(Math))) {
+          expect(
+            math.parseError,
+            isNull,
+            reason:
+                '${question.id.value} draws a parser error: '
+                '${math.parseError?.message}',
+          );
+        }
         built++;
       }
 

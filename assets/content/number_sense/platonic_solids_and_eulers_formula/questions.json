@@ -1,7 +1,7 @@
 [
   {
     "id": "bh.2.1.7.q1",
-    "prompt": "A dodecahedron has ___ vertices.",
+    "prompt": "A dodecahedron has \\_\\_\\_ vertices.",
     "topic": "platonic_solids_and_eulers_formula",
     "answer": {
       "answer": 20,
@@ -10,7 +10,7 @@
   },
   {
     "id": "bh.2.1.7.q2",
-    "prompt": "An icosahedron has ___ congruent faces.",
+    "prompt": "An icosahedron has \\_\\_\\_ congruent faces.",
     "topic": "platonic_solids_and_eulers_formula",
     "answer": {
       "answer": 20,
@@ -19,7 +19,7 @@
   },
   {
     "id": "bh.2.1.7.q3",
-    "prompt": "The area of the base of a tetrahedron is 4 ft^{2}. The total surface area is ___ ft^{2}.",
+    "prompt": "The area of the base of a tetrahedron is 4 ft^{2}. The total surface area is \\_\\_\\_ ft^{2}.",
     "topic": "platonic_solids_and_eulers_formula",
     "answer": {
       "answer": 16,
@@ -28,7 +28,7 @@
   },
   {
     "id": "bh.2.1.7.q4",
-    "prompt": "A tetrahedron has ___ vertices.",
+    "prompt": "A tetrahedron has \\_\\_\\_ vertices.",
     "topic": "platonic_solids_and_eulers_formula",
     "answer": {
       "answer": 4,
@@ -37,7 +37,7 @@
   },
   {
     "id": "bh.2.1.7.q5",
-    "prompt": "An octahedron has ___ edges.",
+    "prompt": "An octahedron has \\_\\_\\_ edges.",
     "topic": "platonic_solids_and_eulers_formula",
     "answer": {
       "answer": 12,
@@ -46,7 +46,7 @@
   },
   {
     "id": "bh.2.1.7.q6",
-    "prompt": "A hexahedron has ___ faces.",
+    "prompt": "A hexahedron has \\_\\_\\_ faces.",
     "topic": "platonic_solids_and_eulers_formula",
     "answer": {
       "answer": 6,
@@ -55,7 +55,7 @@
   },
   {
     "id": "bh.2.1.7.q7",
-    "prompt": "A dodecahedron is a platonic solid with 30 edges and ___ vertices.",
+    "prompt": "A dodecahedron is a platonic solid with 30 edges and \\_\\_\\_ vertices.",
     "topic": "platonic_solids_and_eulers_formula",
     "answer": {
       "answer": 20,
@@ -64,7 +64,7 @@
   },
   {
     "id": "bh.2.1.7.q8",
-    "prompt": "An octahedron has ___ vertices.",
+    "prompt": "An octahedron has \\_\\_\\_ vertices.",
     "topic": "platonic_solids_and_eulers_formula",
     "answer": {
       "answer": 6,
@@ -73,7 +73,7 @@
   },
   {
     "id": "bh.2.1.7.q9",
-    "prompt": "An icosahedron is a platonic solid with 30 edges and ___ vertices.",
+    "prompt": "An icosahedron is a platonic solid with 30 edges and \\_\\_\\_ vertices.",
     "topic": "platonic_solids_and_eulers_formula",
     "answer": {
       "answer": 12,
@@ -82,7 +82,7 @@
   },
   {
     "id": "bh.2.1.7.q10",
-    "prompt": "A dodecahedron is a platonic solid with 30 edges and ___ vertices.",
+    "prompt": "A dodecahedron is a platonic solid with 30 edges and \\_\\_\\_ vertices.",
     "topic": "platonic_solids_and_eulers_formula",
     "answer": {
       "answer": 20,

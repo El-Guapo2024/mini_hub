@@ -1,7 +1,7 @@
 [
   {
     "id": "bh.2.1.4.q1",
-    "prompt": "12\\frac{1}{2}\\% = ___ (frac.)",
+    "prompt": "12\\frac{1}{2}\\% = \\_\\_\\_ (frac.)",
     "topic": "important_fractions",
     "answer": {
       "type": "fraction",
@@ -12,7 +12,7 @@
   },
   {
     "id": "bh.2.1.4.q2",
-    "prompt": "\\frac{11}{5} = ___ \\%",
+    "prompt": "\\frac{11}{5} = \\_\\_\\_ \\%",
     "topic": "important_fractions",
     "answer": {
       "answer": 220,
@@ -42,7 +42,7 @@
   },
   {
     "id": "bh.2.1.4.q5",
-    "prompt": "\\frac{17}{8} = ___ (dec.)",
+    "prompt": "\\frac{17}{8} = \\_\\_\\_ (dec.)",
     "topic": "important_fractions",
     "answer": {
       "answer": 2.125,
@@ -60,7 +60,7 @@
   },
   {
     "id": "bh.2.1.4.q7",
-    "prompt": "\\frac{3}{5} = ___ \\%",
+    "prompt": "\\frac{3}{5} = \\_\\_\\_ \\%",
     "topic": "important_fractions",
     "answer": {
       "answer": 60,
@@ -70,7 +70,7 @@
   },
   {
     "id": "bh.2.1.4.q8",
-    "prompt": "\\frac{1}{8} = ___ (dec.)",
+    "prompt": "\\frac{1}{8} = \\_\\_\\_ (dec.)",
     "topic": "important_fractions",
     "answer": {
       "answer": 0.125,
@@ -88,7 +88,7 @@
   },
   {
     "id": "bh.2.1.4.q10",
-    "prompt": "\\frac{1}{16} = ___ \\%",
+    "prompt": "\\frac{1}{16} = \\_\\_\\_ \\%",
     "topic": "important_fractions",
     "answer": {
       "answer": 6.25,
@@ -107,7 +107,7 @@
   },
   {
     "id": "bh.2.1.4.q12",
-    "prompt": "\\frac{11}{4} = ___ \\%",
+    "prompt": "\\frac{11}{4} = \\_\\_\\_ \\%",
     "topic": "important_fractions",
     "answer": {
       "answer": 275,
@@ -170,7 +170,7 @@
   },
   {
     "id": "bh.2.1.4.q18",
-    "prompt": "37.5\\% = ___ (frac.)",
+    "prompt": "37.5\\% = \\_\\_\\_ (frac.)",
     "topic": "important_fractions",
     "answer": {
       "type": "fraction",
@@ -190,7 +190,7 @@
   },
   {
     "id": "bh.2.1.4.q20",
-    "prompt": "\\frac{3}{7} = ___ \\%",
+    "prompt": "\\frac{3}{7} = \\_\\_\\_ \\%",
     "topic": "important_fractions",
     "answer": {
       "type": "fraction",
@@ -201,7 +201,7 @@
   },
   {
     "id": "bh.2.1.4.q21",
-    "prompt": "\\frac{7}{9} = ___ \\%",
+    "prompt": "\\frac{7}{9} = \\_\\_\\_ \\%",
     "topic": "important_fractions",
     "answer": {
       "type": "fraction",
@@ -254,7 +254,7 @@
   },
   {
     "id": "bh.2.1.4.q26",
-    "prompt": "\\frac{7}{16} = ___ \\% (dec.)",
+    "prompt": "\\frac{7}{16} = \\_\\_\\_ \\% (dec.)",
     "topic": "important_fractions",
     "answer": {
       "answer": 43.75,
@@ -273,7 +273,7 @@
   },
   {
     "id": "bh.2.1.4.q28",
-    "prompt": "\\frac{2}{7} = ___ \\%",
+    "prompt": "\\frac{2}{7} = \\_\\_\\_ \\%",
     "topic": "important_fractions",
     "answer": {
       "type": "fraction",
@@ -304,7 +304,7 @@
   },
   {
     "id": "bh.2.1.4.q31",
-    "prompt": "\\frac{1}{14} = ___ \\%",
+    "prompt": "\\frac{1}{14} = \\_\\_\\_ \\%",
     "topic": "important_fractions",
     "answer": {
       "type": "fraction",

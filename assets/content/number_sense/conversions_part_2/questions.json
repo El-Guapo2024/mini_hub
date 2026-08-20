@@ -28,7 +28,7 @@
   },
   {
     "id": "bh.4.2.1.q4",
-    "prompt": "160 acres is ___ sq. miles",
+    "prompt": "160 acres is \\_\\_\\_ sq. miles",
     "topic": "conversions_part_2",
     "answer": {
       "answer": 0.25,
@@ -37,7 +37,7 @@
   },
   {
     "id": "bh.4.2.1.q5",
-    "prompt": "\\frac{1}{8} miles is ___ rods",
+    "prompt": "\\frac{1}{8} miles is \\_\\_\\_ rods",
     "topic": "conversions_part_2",
     "answer": {
       "answer": 40,
@@ -55,7 +55,7 @@
   },
   {
     "id": "bh.4.2.1.q7",
-    "prompt": "(*) 2 days 7 hours 12 minutes = ___ minutes",
+    "prompt": "(*) 2 days 7 hours 12 minutes = \\_\\_\\_ minutes",
     "topic": "conversions_part_2",
     "answer": {
       "high": 3477.0,

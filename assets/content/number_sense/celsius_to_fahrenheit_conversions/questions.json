@@ -1,7 +1,7 @@
 [
   {
     "id": "bh.2.1.12.q1",
-    "prompt": "25^{\\circ} C = ______ ^{\\circ} F",
+    "prompt": "25^{\\circ} C = \\_\\_\\_\\_\\_\\_ ^{\\circ} F",
     "topic": "celsius_to_fahrenheit_conversions",
     "answer": {
       "answer": 77,
@@ -10,7 +10,7 @@
   },
   {
     "id": "bh.2.1.12.q2",
-    "prompt": "-40^{\\circ} C = ______ ^{\\circ} F",
+    "prompt": "-40^{\\circ} C = \\_\\_\\_\\_\\_\\_ ^{\\circ} F",
     "topic": "celsius_to_fahrenheit_conversions",
     "answer": {
       "answer": -40,
@@ -19,7 +19,7 @@
   },
   {
     "id": "bh.2.1.12.q3",
-    "prompt": "98.6^{\\circ} F = ______ ^{\\circ} C",
+    "prompt": "98.6^{\\circ} F = \\_\\_\\_\\_\\_\\_ ^{\\circ} C",
     "topic": "celsius_to_fahrenheit_conversions",
     "answer": {
       "answer": 37,

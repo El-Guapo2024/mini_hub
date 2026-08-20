@@ -105,6 +105,37 @@ def reduce(numerator, denominator):
     return numerator // divisor, denominator // divisor
 
 
+def escape_for_math(prompt):
+    """Escapes characters the manual uses as punctuation but TeX reads as syntax.
+
+    A prompt is rendered as math, so the blank in `25^{\\circ} C = ______ F` is
+    parsed as a subscript and the whole prompt becomes a parser error on screen
+    — the student is shown "Expected group after '_'" where the question should
+    be. The same goes for the `$` in a price.
+
+    A `_` that really is a subscript is left alone: it is one followed by `{` or
+    by a single character, which is what `123456_{7}` and `x_1` are. Anything
+    already escaped passes through untouched, so running this twice is safe.
+    """
+    out = []
+    i = 0
+    while i < len(prompt):
+        char = prompt[i]
+        if char == "\\" and i + 1 < len(prompt):
+            out.append(prompt[i : i + 2])
+            i += 2
+            continue
+        if char == "_":
+            after = prompt[i + 1] if i + 1 < len(prompt) else ""
+            out.append("_" if after == "{" or after.isalnum() else "\\_")
+        elif char == "$":
+            out.append("\\$")
+        else:
+            out.append(char)
+        i += 1
+    return "".join(out)
+
+
 def question_number(key):
     """Sorts questions the way the manual prints them, 2 before 10."""
     return int(key) if key.isdigit() else 0
@@ -127,7 +158,7 @@ def write_questions(topic_dir, topic, section, prompts, answers):
         questions.append(
             {
                 "id": f"bh.{section}.q{key}",
-                "prompt": prompts[key],
+                "prompt": escape_for_math(prompts[key]),
                 "topic": topic,
                 "answer": build_answer(answer),
             }

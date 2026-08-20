@@ -109,7 +109,7 @@
   },
   {
     "id": "bh.2.1.5.q13",
-    "prompt": "143 \\times 49 = 1001 \\times ___",
+    "prompt": "143 \\times 49 = 1001 \\times \\_\\_\\_",
     "topic": "special_integers",
     "answer": {
       "answer": 7,

@@ -307,7 +307,7 @@
   },
   {
     "id": "bh.1.2.1.q35",
-    "prompt": "11\\% \\text{ of } 22 = \\text{____\\% (dec.)}",
+    "prompt": "11\\% \\text{ of } 22 = \\text{\\_\\_\\_\\_\\% (dec.)}",
     "topic": "multiplying_by_11_trick",
     "answer": {
       "answer": 2.42,

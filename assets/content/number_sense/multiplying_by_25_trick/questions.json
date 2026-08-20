@@ -158,7 +158,7 @@
   },
   {
     "id": "bh.1.2.3.q18",
-    "prompt": "21.4 is ____ \\% of 25.",
+    "prompt": "21.4 is \\_\\_\\_\\_ \\% of 25.",
     "topic": "multiplying_by_25_trick",
     "answer": {
       "answer": 85.6,

@@ -55,7 +55,7 @@
   },
   {
     "id": "bh.1.2.2.q7",
-    "prompt": "If 6 balls cost $6.06, then 15 balls cost: $",
+    "prompt": "If 6 balls cost \\$6.06, then 15 balls cost: \\$",
     "topic": "multiplying_by_101_trick",
     "answer": {
       "answer": 15.15,

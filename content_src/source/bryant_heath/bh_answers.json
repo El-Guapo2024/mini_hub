@@ -6224,8 +6224,10 @@
    "type": "numeric"
   },
   "35": {
-   "answer": 1.0,
-   "display": "\\frac{2}{2}",
+   "answer": 0.7071067811865476,
+   "corrected": true,
+   "display": "\\frac{\\sqrt{2}}{2}",
+   "note": "extraction dropped the radical: the key printed \\frac{\\sqrt{2}}{2} and was read as \\frac{2}{2}. sin(cos^-1(sqrt2/2)) = sin 45 = sqrt2/2, not 1.",
    "type": "numeric"
   },
   "36": {

@@ -63,11 +63,37 @@ class AppConfig {
   /// wait.
   final Duration advanceAfter;
 
+  /// The name this build was given for its content source, whether or not it
+  /// names one.
+  static const String requestedContent = String.fromEnvironment(
+    'CONTENT',
+    defaultValue: 'real',
+  );
+
+  /// Why this build cannot be configured, or null if it can.
+  ///
+  /// Checked rather than thrown, because [current] is a lazy static and the
+  /// first thing to touch it is a repository built in a field initializer —
+  /// before any `initState`, and so outside the `try` that would have shown
+  /// the failure. Thrown there it reached nothing but Flutter's own handler,
+  /// and the student got a blank screen.
+  static String? get configurationError {
+    const names = ContentSource.values;
+    if (names.any((source) => source.name == requestedContent)) return null;
+    return 'CONTENT was built as "$requestedContent", which is not one of '
+        '${names.map((source) => source.name).join(', ')}.';
+  }
+
   /// The configuration this build runs with. Read once, at startup, so the
   /// app cannot behave as though two different settings were in force.
+  ///
+  /// Falls back to the real bank where the build named a source that does not
+  /// exist; [configurationError] is what says so, and main refuses to start on
+  /// it. The fallback keeps a bad flag from throwing out of a field
+  /// initializer somewhere far from the cause.
   static final AppConfig current = AppConfig(
-    content: ContentSource.byName(
-      const String.fromEnvironment('CONTENT', defaultValue: 'real'),
-    ),
+    content: configurationError == null
+        ? ContentSource.byName(requestedContent)
+        : ContentSource.real,
   );
 }

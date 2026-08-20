@@ -292,7 +292,10 @@ class _QuestionWidgetState extends State<QuestionWidget> {
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8),
                   borderSide: BorderSide(
-                    color: _result == null ? Colors.white24 : _borderColor,
+                    // The border is what says where to type, and white24 is
+                    // 1.94:1 against this background — under the 3:1 a control
+                    // needs to be made out at all. white38 is 3.39:1.
+                    color: _result == null ? Colors.white38 : _borderColor,
                   ),
                 ),
                 focusedBorder: OutlineInputBorder(

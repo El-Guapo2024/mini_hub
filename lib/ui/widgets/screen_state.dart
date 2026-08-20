@@ -9,10 +9,17 @@ import 'package:flutter/material.dart';
 class ScreenMessage extends StatelessWidget {
   const ScreenMessage(this.text, {super.key});
 
-  /// What went wrong, said plainly. An error left to speak for itself reads as
-  /// "there is nothing here" rather than "this is broken".
-  const ScreenMessage.failure(Object error, {super.key})
-    : text = 'could not load: $error';
+  /// That something is broken, said plainly. An error left to speak for itself
+  /// reads as "there is nothing here" rather than "this is broken".
+  ///
+  /// What broke goes to the log rather than the screen. A student was being
+  /// shown the parser's own words — column numbers, a caret under the offending
+  /// character — which say nothing they can act on and bury the one thing that
+  /// does: that this is not their fault and not empty.
+  ScreenMessage.failure(Object error, {super.key})
+    : text = 'This part could not be loaded.' {
+    debugPrint('could not load: $error');
+  }
 
   final String text;
 

@@ -81,11 +81,19 @@ String expandMixedNumbers(String tex) {
 /// command: `2i` and `\frac{1}{2}i` end in the unit, `\pi` does not.
 final _imaginaryUnit = RegExp(r'(?<![a-zA-Z])i$');
 
-/// `math_keyboard` emits a declared variable as `\mathrm{i}`, so the unit has
-/// to be folded to a bare `i` *before* braces are stripped — otherwise
-/// `\mathrm{i}` collapses to `\mathrmi` and the `\mathrm` reads as a coefficient.
+/// The imaginary unit as it can arrive, folded to a bare `i` *before* braces
+/// are stripped — otherwise `\mathrm{i}` collapses to `\mathrmi` and the
+/// `\mathrm` reads as a coefficient.
+///
+/// The plain `{i}` is what the keyboard actually inserts: its variable button
+/// adds `{name}` and nothing else, so the one complex question in the bank was
+/// answered `16+16{i}` and marked wrong — there being no other way to type an
+/// `i`, it could not be got right at all.
+///
+/// That braced form is only taken where nothing names it: a `{` after letters
+/// belongs to the command before it, so `\frac{i}{2}` keeps its numerator.
 final _imaginaryForms = RegExp(
-  r'\\(?:mathrm|text|mathit)\s*\{\s*i\s*\}|\\imath',
+  r'\\(?:mathrm|text|mathit)\s*\{\s*i\s*\}|\\imath|(?<![a-zA-Z])\{\s*i\s*\}',
 );
 
 /// Splits a complex answer into `(real, imaginary)`, or null if the input is

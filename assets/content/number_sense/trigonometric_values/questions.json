@@ -324,10 +324,9 @@
     "prompt": "\\sin\\left[\\cos^{-1}\\left(\\frac{\\sqrt{2}}{2}\\right)\\right] =",
     "topic": "trigonometric_values",
     "answer": {
-      "type": "fraction",
-      "num": 1,
-      "den": 1,
-      "display": "\\frac{2}{2}"
+      "answer": 0.7071067811865476,
+      "display": "\\frac{\\sqrt{2}}{2}",
+      "type": "numeric"
     }
   },
   {

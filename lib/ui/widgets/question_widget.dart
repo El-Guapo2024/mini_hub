@@ -65,6 +65,17 @@ class _QuestionWidgetState extends State<QuestionWidget> {
   /// while the student reads the lesson above it isn't time spent solving.
   DateTime? _startedAt;
 
+  /// What [_check] last graded. A submit that arrives again with the input
+  /// unchanged is the same answer arriving twice — a double tap, or a keyboard
+  /// sending the event twice — not a second attempt. Each one built its own
+  /// [Attempt] with its own id, so the store could not tell them apart and one
+  /// answer was recorded, and counted, twice.
+  String? _graded;
+
+  /// Set when a write fails. The student is told, because the alternative is a
+  /// screen full of green checks that a restart quietly takes back.
+  bool _recordingFailed = false;
+
   @override
   void dispose() {
     _advancing?.cancel();
@@ -73,7 +84,10 @@ class _QuestionWidgetState extends State<QuestionWidget> {
   }
 
   void _check(String tex) {
+    if (_result != null && tex == _graded) return;
+
     final correct = widget.question.answer.accepts(tex);
+    _graded = tex;
     setState(() => _result = correct ? _Result.correct : _Result.wrong);
     _record(tex, correct);
     _startedAt = null;
@@ -108,7 +122,13 @@ class _QuestionWidgetState extends State<QuestionWidget> {
       correct: correct,
       at: DateTime.now().toUtc(),
       given: tex,
-      elapsed: elapsed == null || elapsed > AppConfig.current.maxAnswerTime
+      // A negative duration means the clock moved backwards mid-answer — an
+      // NTP correction, say. That is not a fast answer, and averaging it in
+      // would make the log say something that never happened.
+      elapsed:
+          elapsed == null ||
+              elapsed.isNegative ||
+              elapsed > AppConfig.current.maxAnswerTime
           ? null
           : elapsed,
     );
@@ -120,6 +140,9 @@ class _QuestionWidgetState extends State<QuestionWidget> {
     unawaited(
       store.record(attempt).catchError((Object error) {
         debugPrint('could not record an attempt: $error');
+        // Grading stays as it is — it was right about the answer. What the
+        // student is told is that this one will not be remembered.
+        if (mounted) setState(() => _recordingFailed = true);
       }),
     );
   }
@@ -130,7 +153,13 @@ class _QuestionWidgetState extends State<QuestionWidget> {
 
   void _onChanged(String tex) {
     _startedAt ??= DateTime.now();
-    if (_result != null) setState(() => _result = null);
+    if (_result != null) {
+      // Editing after a correct answer takes back the hop it queued. The green
+      // is already gone; being moved to the next question anyway, mid-word,
+      // reads as the deck losing track of where the student is.
+      _advancing?.cancel();
+      setState(() => _result = null);
+    }
 
     // Step back over what was just typed, so the next character lands to its
     // left. Moving the cursor does not change the value, so this cannot
@@ -173,6 +202,14 @@ class _QuestionWidgetState extends State<QuestionWidget> {
             textStyle: const TextStyle(fontSize: 13, color: Colors.white70),
           ),
         ],
+      );
+    }
+    // After the answer itself, because a wrong attempt needs the answer more
+    // than it needs this — and this stays true until the app is restarted.
+    if (_recordingFailed) {
+      return const Text(
+        'Progress is not being saved on this device',
+        style: TextStyle(color: _wrong, fontSize: 12),
       );
     }
     final hint = answer.inputHint;

@@ -120,13 +120,22 @@ final _imaginaryForms = RegExp(
     var body = isImaginary
         ? term.substring(0, _imaginaryUnit.firstMatch(term)!.start)
         : term;
-    if (body == '' || body == '+') body = '1';
-    if (body == '-') body = '-1';
+    // The sign is taken off here rather than left for the evaluator, which
+    // cannot read a leading `+` at all: `16i+3` and `+3+16i` were rejected
+    // outright, though both name a number a student may reasonably write.
+    var sign = 1.0;
+    if (body.startsWith('+')) {
+      body = body.substring(1);
+    } else if (body.startsWith('-')) {
+      sign = -1.0;
+      body = body.substring(1);
+    }
+    // A term that is only a sign is a unit: `i` and `-i` are 1 and -1.
+    if (body.isEmpty) body = '1';
 
-    final value = isImaginary
-        ? (double.tryParse(body) ?? evaluateTex(body))
-        : evaluateTex(body);
-    if (value == null) return null;
+    final magnitude = double.tryParse(body) ?? evaluateTex(body);
+    if (magnitude == null) return null;
+    final value = sign * magnitude;
     if (isImaginary) {
       imaginary += value;
     } else {

@@ -75,6 +75,19 @@ void main() {
           .accepts(r'\frac{2+2}{2}+16i'), isTrue);
     });
 
+    test('a real term may be written after the imaginary one', () {
+      // TeXParser cannot read a leading `+`, so these were rejected outright.
+      expect(parseComplexTex('16i+3'), (3.0, 16.0));
+      expect(parseComplexTex('+3+16i'), (3.0, 16.0));
+      expect(parseComplexTex(r'16i+\frac{1}{2}'), (0.5, 16.0));
+    });
+
+    test('a term that is only a sign is a unit', () {
+      expect(parseComplexTex('-i'), (0.0, -1.0));
+      expect(parseComplexTex('3-i'), (3.0, -1.0));
+      expect(parseComplexTex('3+i'), (3.0, 1.0));
+    });
+
     test('unbalanced grouping is still rejected', () {
       expect(parseComplexTex(r'\frac{2+2}{2'), isNull);
       expect(parseComplexTex(r'1+2)i'), isNull);

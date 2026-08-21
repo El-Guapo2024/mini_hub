@@ -286,7 +286,7 @@
   },
   {
     "id": "bh.2.1.1.q32",
-    "prompt": "959 \\times \\sqrt{960} =",
+    "prompt": "(*) 959 \\times \\sqrt{960} =",
     "topic": "squares",
     "answer": {
       "high": 31200.0,

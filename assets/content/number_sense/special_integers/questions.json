@@ -592,7 +592,7 @@
   },
   {
     "id": "bh.2.1.5.q65",
-    "prompt": "1001 \\times 25 = 143 \\times",
+    "prompt": "1001 \\times 25 = 143 \\times \\_\\_\\_",
     "topic": "special_integers",
     "answer": {
       "answer": 175,

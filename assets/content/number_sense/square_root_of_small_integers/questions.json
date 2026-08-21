@@ -73,7 +73,7 @@
   },
   {
     "id": "bh.4.2.3.q9",
-    "prompt": "Round (\\sqrt{5} + 6\\sqrt{7} to the nearest whole number.",
+    "prompt": "Round (\\sqrt{5} + 6\\sqrt{7}) to the nearest whole number.",
     "topic": "square_root_of_small_integers",
     "answer": {
       "answer": 18,

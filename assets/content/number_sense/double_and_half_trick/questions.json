@@ -109,7 +109,7 @@
   },
   {
     "id": "bh.1.2.6.q13",
-    "prompt": "33.75 = 1.5 \\times",
+    "prompt": "33.75 = 1.5 \\times \\_\\_\\_",
     "topic": "double_and_half_trick",
     "answer": {
       "answer": 22.5,

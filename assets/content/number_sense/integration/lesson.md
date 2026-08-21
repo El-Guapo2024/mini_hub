@@ -1,3 +1,3 @@
-# Calculus (Derivatives)
+# Integration
 
 _(appendix entry — no extended lesson in source)_

@@ -1,3 +1,3 @@
-# Calculus (Derivatives/Integrals)
+# Limits
 
 _(appendix entry — no extended lesson in source)_

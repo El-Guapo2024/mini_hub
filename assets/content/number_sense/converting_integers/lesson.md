@@ -1,3 +1,3 @@
-# Base Conversion (Binary/Decimal)
+# Converting Integers Between Bases
 
 _(appendix entry — no extended lesson in source)_

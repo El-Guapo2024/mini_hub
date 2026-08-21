@@ -86,4 +86,44 @@ void main() {
           '${wrong.join('\n')}',
     );
   });
+
+  test('a lesson is headed by the name its topic is listed under', () {
+    // The title in topic.yml names the topic in the list and in the bar; the
+    // heading names it again at the top of the lesson itself. Renaming the one
+    // and not the other leaves the student reading the old name.
+    final wrong = <String>[];
+
+    for (final directory in Directory(
+      'assets/content/number_sense',
+    ).listSync().whereType<Directory>()) {
+      final topic = File('${directory.path}/topic.yml');
+      final lesson = File('${directory.path}/lesson.md');
+      if (!topic.existsSync() || !lesson.existsSync()) continue;
+
+      final title = RegExp(r'''^title:\s*'?(.*?)'?\s*$''', multiLine: true)
+          .firstMatch(topic.readAsStringSync())
+          ?.group(1)
+          // A doubled apostrophe is how YAML escapes one inside quotes.
+          ?.replaceAll("''", "'");
+      final heading = lesson.readAsLinesSync().firstOrNull;
+      if (title == null || heading == null || !heading.startsWith('# ')) {
+        continue;
+      }
+
+      if (heading.substring(2).trim() != title) {
+        wrong.add(
+          '${directory.path.split(Platform.pathSeparator).last}: '
+          'listed as "$title", headed "${heading.substring(2).trim()}"',
+        );
+      }
+    }
+
+    expect(
+      wrong,
+      isEmpty,
+      reason:
+          '${wrong.length} topics are named for something else:\n'
+          '${wrong.join('\n')}',
+    );
+  });
 }

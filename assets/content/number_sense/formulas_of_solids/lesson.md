@@ -1,4 +1,4 @@
-# Cube Volume and Surface Area
+# Formulas of Solids
 
 Usually basic formulas for spheres, cubes, cones, and cylinders are fair game for the Number Sense test. In order to solve these problems, memorize the following table (where $s$ is the side-length, $r$ is the radius, $h$ is the height, and $l$ is the slant height):
 

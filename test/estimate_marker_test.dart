@@ -11,9 +11,15 @@ import 'package:mini_hub/content/answer.dart';
 /// exact answer it will not insist on — one estimate had lost its marker at
 /// extraction, which is how this got written.
 ///
-/// Not the converse. Twelve marked questions are graded exactly, and they are
+/// Not the converse. Eighteen marked questions are graded exactly, and they are
 /// right to be: `22_{9} - 66_{9}` and the count of divisors of 100 have exact
 /// answers, so whatever the marker means on those, a band is not it.
+///
+/// They fall in six sections, and in each one every marked question is typed
+/// the same as its unmarked neighbours. Section 2.1.1 is the opposite: there,
+/// every marked question is banded but one — which is the one that had lost its
+/// marker. That asymmetry is what says the mark means estimation there and
+/// something else in the other six.
 void main() {
   final files = Directory('assets/content')
       .listSync(recursive: true)

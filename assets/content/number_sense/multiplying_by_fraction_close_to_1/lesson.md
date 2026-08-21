@@ -7,9 +7,16 @@ $$
 14 \times \frac{15}{16} \\
 &= 14 \times \left(1 - \frac{1}{16}\right) \\
 &= 14 - \frac{14}{16} \\
-&= 14\frac{7}{8}
+&= 14 - \frac{7}{8} \\
+&= 13\frac{1}{8}
 \end{aligned}
 $$
+
+The subtraction is the whole point of the method, and it is the step that is
+easiest to drop: $\frac{14}{16}$ reduces to $\frac{7}{8}$, and it is tempting to
+write $14\frac{7}{8}$ having reduced it. The manual prints that. It is
+$13\frac{1}{8}$ — out by $1\frac{3}{4}$, and worth checking yourself the first
+time.
 
 The same procedure works when the fraction is slightly above 1:
 

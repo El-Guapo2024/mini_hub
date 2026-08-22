@@ -99,7 +99,8 @@ class TopicProgress {
 /// left any other widget showing a stale count until it was rebuilt for some
 /// unrelated reason.
 class AttemptStore extends ChangeNotifier {
-  AttemptStore._(this._db, this._attempts, {this.unreadableAttempts = 0}) {
+  AttemptStore._(this._db, this._attempts, {int unreadable = 0})
+    : unreadableAttempts = unreadable {
     _attempts.forEach(_index);
   }
 
@@ -112,7 +113,7 @@ class AttemptStore extends ChangeNotifier {
   /// this build cannot name, and then the student's history is short by that
   /// many with nothing on screen to say so — so the number is kept rather than
   /// only logged, for whatever wants to tell them.
-  final int unreadableAttempts;
+  int unreadableAttempts;
 
   /// The whole log, in memory: every statistic reads it in full, and a year of
   /// daily practice is a few thousand rows. SQLite is the durable copy here,
@@ -224,7 +225,7 @@ class AttemptStore extends ChangeNotifier {
     if (unreadable > 0) {
       debugPrint('$unreadable of ${rows.length} attempts could not be read');
     }
-    return AttemptStore._(db, attempts, unreadableAttempts: unreadable);
+    return AttemptStore._(db, attempts, unreadable: unreadable);
   }
 
   List<Attempt> get all => List.unmodifiable(_attempts);
@@ -271,6 +272,10 @@ class AttemptStore extends ChangeNotifier {
   Future<void> clear() async {
     _attempts.clear();
     _reindex();
+    // The delete below takes the unreadable rows with it, so there are no
+    // longer any to be short by. Left as it was, the store would go on
+    // reporting rows that no longer exist until the next restart.
+    unreadableAttempts = 0;
     notifyListeners();
     await _db.delete(_table);
   }

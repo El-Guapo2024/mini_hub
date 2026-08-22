@@ -149,7 +149,14 @@ void main() {
     await tester.pump();
 
     // Marked correct on screen.
-    expect(find.byIcon(Icons.check), findsOneWidget);
+    expect(
+      find.byIcon(Icons.check),
+      findsOneWidget,
+      reason:
+          'question 1 of Special Integers is 572 x 21 = 12012. If the bank has '
+          'been regenerated and the order moved, this is a content shift '
+          'rather than a grading fault.',
+    );
     expect(
       find.textContaining('1 done'),
       findsOneWidget,
@@ -179,7 +186,13 @@ void main() {
     await tester.pump();
 
     // Marked wrong, revealed answer shown, no auto-advance.
-    expect(find.byIcon(Icons.close), findsOneWidget);
+    expect(
+      find.byIcon(Icons.close),
+      findsOneWidget,
+      reason:
+          'question 2 is 2/37 x 999 = 54, and 999999 is meant to be wrong for '
+          'it. If the bank moved, this is a content shift.',
+    );
     expect(
       find.textContaining('Answer:'),
       findsOneWidget,

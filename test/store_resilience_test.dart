@@ -107,6 +107,35 @@ void main() {
     expect(store.isDone(const QuestionId('sq.q2')), isFalse);
   });
 
+  test('clearing takes the unreadable rows with it', () async {
+    final directory = await Directory.systemTemp.createTemp('mini_hub_clear');
+    addTearDown(() => directory.delete(recursive: true));
+    final path = '${directory.path}/attempts.db';
+
+    final first = await AttemptStore.openAt(path);
+    await first.close();
+    final raw = await databaseFactory.openDatabase(path);
+    await raw.insert('attempts', {
+      'id': 'bad',
+      'question_id': 'sq.q1',
+      'topic': 'squares',
+      'type': 'bogus',
+      'correct': 1,
+      'at': DateTime.now().toUtc().millisecondsSinceEpoch,
+      'given_tex': '1',
+      'elapsed_ms': null,
+    });
+    await raw.close();
+
+    final store = await AttemptStore.openAt(path);
+    addTearDown(store.close);
+    expect(store.unreadableAttempts, 1);
+
+    // Clearing deletes those rows too, so there is nothing left to be short by.
+    await store.clear();
+    expect(store.unreadableAttempts, 0);
+  });
+
   test('fractions equal to each other hash alike', () {
     // Equality cross-multiplies, so these are the same number however the sign
     // is written. A hash that disagreed would keep both in a Set.

@@ -32,4 +32,12 @@ $$
 
 writing $8=2^3$, $16=2^4$, $25=5^2$ and canceling.
 
-Two other common patterns: solving $\log_x n = k$ for $x$ (rewrite as $x^k = n\text{)}$, and nested logs like $\log_2(\log_{10}100) = \log_2(2) = 1$ — always evaluate the inside first. For approximation problems, it helps to remember $\log 2 \approx .3$, $\log 5 \approx .7$, $\ln 2 \approx .7$, $\ln 10 \approx 2.3$.
+Two other common patterns: solving $\log_x n = k$ for $x$ (rewrite as $x^k = n\text{)}$, and nested logs like $\log_2(\log_{10}100) = \log_2(2) = 1$ — always evaluate the inside first. For approximation problems, remember $\log 2 \approx .3$, $\log 3 \approx .477$, $\log 5 \approx .7$, $\ln 2 \approx .7$, $\ln 10 \approx 2.3$.
+
+These are worth memorising because an estimation problem is answered by splitting the number into those factors and a power of ten. For $300\log 600$: since $600 = 2 \times 3 \times 100$,
+
+$$
+\log 600 = \log 2 + \log 3 + 2 \approx .3 + .477 + 2 = 2.777
+$$
+
+so $300 \log 600 \approx 300 \times 2.777 = \mathbf{833}$, comfortably inside the accepted band.

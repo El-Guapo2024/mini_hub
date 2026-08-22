@@ -10,6 +10,10 @@ $$
 \mathbf{154}: & 154 = \dfrac{2002}{13} \\[8pt]
 \vdots & \\
 \mathbf{693}: & 693 = \dfrac{9009}{13} \\[8pt]
+\mathbf{143}: & 143 = \dfrac{1001}{7} \\[8pt]
+\mathbf{286}: & 286 = \dfrac{2002}{7} \\[8pt]
+\vdots & \\
+\mathbf{858}: & 858 = \dfrac{6006}{7} \\[8pt]
 \mathbf{3367}: & 3367 = \dfrac{10101}{3} \\[8pt]
 \mathbf{1443}: & 1443 = \dfrac{10101}{7} \\[8pt]
 \mathbf{1430}: & 1430 = \dfrac{10010}{7}
@@ -37,6 +41,24 @@ $$
 = 1001 \times 5
 = \mathbf{5005}
 $$
+
+Since $1001 = 7 \times 11 \times 13$, it can be split either way: $77 = \frac{1001}{13}$ pairs with a factor of 13, and $143 = \frac{1001}{7}$ pairs with a factor of 7. The 143 family is the one that turns up most, because 49, 35, 63 and 98 all carry a 7:
+
+$$
+143 \times 49 = \frac{\mathbf{1001}}{7} \times 49
+= 1001 \times 7
+= \mathbf{7007}
+$$
+
+Multiples work the same way — take the multiple out first, then pair what is left:
+
+$$
+429 \times 35 = (3 \times 143) \times (5 \times 7)
+= 3 \times 5 \times \mathbf{1001}
+= \mathbf{15015}
+$$
+
+Recognising $286, 429, 572, 715, 858$ as $2, 3, 4, 5, 6$ times 143 is what makes these instant.
 
 **10101 Trick:**
 

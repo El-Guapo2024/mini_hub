@@ -30,10 +30,16 @@ $$
 \text{LCM}(44,84) = \frac{44 \times 84}{4} = 11 \times 84 = \mathbf{924}
 $$
 
-For the GCD of more than two numbers (usually no more than three), the procedure is:
+**Three numbers.** Both extend by taking two at a time and folding in the third:
 
-1. Find the GCD of two of the numbers.
-2. Find the LCM of those two numbers using the GCD and the formula above.
-3. Calculate the GCD of the LCM of those two numbers and the third number.
+$$
+\text{GCD}(a,b,c) = \text{GCD}\left(\text{GCD}(a,b),\, c\right)
+\qquad
+\text{LCM}(a,b,c) = \text{LCM}\left(\text{LCM}(a,b),\, c\right)
+$$
 
-It should be noted that usually one of the numbers is a multiple of another, thus leaving less required calculations (because the LCM between two numbers which are multiples of each other is just the larger of the two numbers).
+The manual mixes these up — it heads the procedure "GCD" and then takes the GCD of the LCM of the first two with the third, which is neither. Fold like with like.
+
+For the LCM of 16, 20 and 32: $\text{GCD}(16,20)=4$, so $\text{LCM}(16,20) = \frac{16 \times 20}{4} = 80$. Then $\text{LCM}(80,32)$: their GCD is 16, so $\frac{80 \times 32}{16} = \mathbf{160}$.
+
+Usually one number is a multiple of another, which saves most of the work — the LCM of two numbers where one divides the other is just the larger, and their GCD is the smaller.

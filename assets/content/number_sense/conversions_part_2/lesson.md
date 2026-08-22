@@ -1,6 +1,6 @@
 # Conversions, Part 2
 
-The following additional unit conversions have appeared on recent Number Sense exams (supplement to Section 2.0):
+The following additional unit conversions have appeared on recent Number Sense exams (a supplement to the distance, area/volume, and fluid/weight conversion topics):
 
 $$
 \begin{array}{rcl}

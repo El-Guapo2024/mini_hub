@@ -73,15 +73,21 @@ void main() {
     // MarkdownBody lays tables out at the available width with no horizontal
     // scroll, so on a phone the columns crush together. Wide tabular content
     // belongs in a display-math array, which scrolls sideways instead.
+    // Display math is not prose and is not a table: a modulus opening a line,
+    // as `\left|z\right| = ...` does, is a row of nothing.
+    bool hasTable(File file) {
+      final prose = file.readAsStringSync().replaceAll(
+        RegExp(r'\$\$.*?\$\$', dotAll: true),
+        '',
+      );
+      return prose.split('\n').any((line) => line.startsWith('|'));
+    }
+
     final tables = Directory('assets/content/number_sense')
         .listSync()
         .whereType<Directory>()
         .map((d) => File('${d.path}/lesson.md'))
-        .where(
-          (f) =>
-              f.existsSync() &&
-              f.readAsStringSync().split('\n').any((l) => l.startsWith('|')),
-        )
+        .where((f) => f.existsSync() && hasTable(f))
         .map((f) => f.parent.path.split('/').last)
         .toList();
 

@@ -99,11 +99,20 @@ class TopicProgress {
 /// left any other widget showing a stale count until it was rebuilt for some
 /// unrelated reason.
 class AttemptStore extends ChangeNotifier {
-  AttemptStore._(this._db, this._attempts) {
+  AttemptStore._(this._db, this._attempts, {this.unreadableAttempts = 0}) {
     _attempts.forEach(_index);
   }
 
   final Database _db;
+
+  /// How many stored attempts could not be read at open, and so are missing
+  /// from everything below.
+  ///
+  /// Zero in every ordinary session. It is not zero when the log holds rows
+  /// this build cannot name, and then the student's history is short by that
+  /// many with nothing on screen to say so — so the number is kept rather than
+  /// only logged, for whatever wants to tell them.
+  final int unreadableAttempts;
 
   /// The whole log, in memory: every statistic reads it in full, and a year of
   /// daily practice is a few thousand rows. SQLite is the durable copy here,
@@ -215,7 +224,7 @@ class AttemptStore extends ChangeNotifier {
     if (unreadable > 0) {
       debugPrint('$unreadable of ${rows.length} attempts could not be read');
     }
-    return AttemptStore._(db, attempts);
+    return AttemptStore._(db, attempts, unreadableAttempts: unreadable);
   }
 
   List<Attempt> get all => List.unmodifiable(_attempts);

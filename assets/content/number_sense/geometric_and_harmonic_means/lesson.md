@@ -18,7 +18,7 @@ Questions asking about geometric means are pretty straightforward. For instance,
 As for the harmonic mean, there are two different types of questions. The first involves asking what the harmonic mean of the roots of a cubic polynomial are. Assuming the roots are $r$, $s$, and $t$, applying the formula yields:
 
 $$
-H_3 = \frac{3}{\left(\dfrac{1}{r} + \dfrac{1}{s} + \dfrac{1}{t}\right)} = \frac{3pqr}{pq + pr + qr}
+H_3 = \frac{3}{\left(\dfrac{1}{r} + \dfrac{1}{s} + \dfrac{1}{t}\right)} = \frac{3rst}{rs + rt + st}
 $$
 
 So you can relate the harmonic mean of the roots to the product of the roots and the sum of roots taken two at a time (similar to what we found with the Vieta/Newton Factorization in the Factorizations topic). You'll need to familiarize yourself with the Sum of Polynomial Roots topic in order to determine what these sums are. Here is an example:

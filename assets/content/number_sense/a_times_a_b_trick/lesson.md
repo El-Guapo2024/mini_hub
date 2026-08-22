@@ -35,7 +35,8 @@ It should be noted that there are exceptions (usually on the fourth column) wher
 $$
 \begin{aligned}
 7 \times \frac{7}{15} - 7 \\
-&= (7-8) + \frac{8^2}{15} - 7 \\
+&= 7 + (7-15) + \frac{(7-15)^2}{15} - 7 \\
+&= 7 - 8 + \frac{64}{15} - 7 \\
 &= -8 + 4 + \frac{4}{15} \\
 &= -3\mathbf{\tfrac{11}{15}}
 \end{aligned}

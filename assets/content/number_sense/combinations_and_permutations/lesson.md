@@ -1,4 +1,4 @@
-# Combinations Formula
+# Combinations and Permutations
 
 For most, this is just a refresher on the definitions of Combinations ($_{n}C_{k}\text{)}$ and Permutations ($_{n}P_{k}\text{)}$:
 

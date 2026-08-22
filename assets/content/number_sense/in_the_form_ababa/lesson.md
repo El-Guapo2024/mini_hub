@@ -18,6 +18,8 @@ $$
 .242424\ldots = \frac{24}{99} = \frac{8}{33}
 $$
 
+Since the denominator here is always $99 = 9 \times 11$, the only reduction to check for is a common factor of 3 or 9 between the numerator $ab$ and 99 — e.g. $.484848\ldots = \dfrac{48}{99}$ reduces to $\dfrac{16}{33}$.
+
 You can extend this concept to any continuously repeating pattern. For example:
 
 $$

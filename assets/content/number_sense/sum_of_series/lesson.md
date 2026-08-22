@@ -1,4 +1,4 @@
-# Sum of the First m Odd Integers
+# Sum of Series Formulas
 
 The following are special series whose sums should be memorized.
 

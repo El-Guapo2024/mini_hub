@@ -1,4 +1,4 @@
-# Sum of Binomial Coefficients
+# Sum and Product of Binomial Coefficients
 
 From the binomial expansion we know that:
 

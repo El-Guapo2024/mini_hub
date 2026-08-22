@@ -24,3 +24,5 @@ $$
 $$
 
 More generally, for a decimal with one non-repeating digit $a$ followed by a repeating block $b$: subtract the non-repeating part from the full number formed by all digits shown, and place it over 90 (or 900, 9000, etc., depending on how many repeating digits there are).
+
+Always check the numerator and denominator for common factors of 2, 3, and 5 first — the test expects fractions in lowest terms, and this is usually the fastest way to spot a reduction.

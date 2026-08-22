@@ -22,3 +22,5 @@ This confirms what we already know from the fractions of $\frac{1}{9}$. For exam
 $$
 .44444\ldots = \frac{4}{9}
 $$
+
+Since the denominator here is always 9, the only reduction to check for is a common factor of 3 with the numerator $a$ — e.g. $.66666\ldots = \dfrac{6}{9}$ reduces to $\dfrac{2}{3}$.

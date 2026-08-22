@@ -58,6 +58,10 @@ void main() {
     expect(reopened.isDone(const QuestionId('sq.q1')), isTrue);
     expect(reopened.isDone(const QuestionId('sq.q2')), isTrue);
     expect(reopened.isDone(const QuestionId('sq.q3')), isFalse);
+
+    // And the loss is counted rather than only logged, so it is possible to
+    // say so rather than leave the history quietly short.
+    expect(reopened.unreadableAttempts, 1);
   });
 
   test('fractions equal to each other hash alike', () {

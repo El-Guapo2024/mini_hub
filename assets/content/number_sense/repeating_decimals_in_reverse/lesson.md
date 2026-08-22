@@ -20,7 +20,10 @@ $$
 \begin{aligned}
 \frac{17}{45} \\
 &= \frac{34}{90} \Rightarrow ab - a \\
-&= 34 \Rightarrow ab \\
+&= 34 \Rightarrow 9a + b \\
+&= 34 \quad \text{(since } ab = 10a + b\text{)} \\
+&\Rightarrow a = 3, \ b = 7 \quad \text{(the only single digit } b \text{ works with)} \\
+&\Rightarrow ab \\
 &= 37 \Rightarrow \textbf{Answer: 3777}
 \end{aligned}
 $$

@@ -10255,7 +10255,7 @@
   "2": {
    "answer": 143.0,
    "corrected": true,
-   "note": "Fibonacci sum; key prints 133",
+   "note": "Fibonacci sum; key prints 133. The book also prints the eighth term as 24, which breaks the recurrence — 13+21 is 34, and 24+? is not 55. Text extraction and a vision read of the page agree the book says 24, so the typo is the book's and its key was computed from it. The prompt is corrected to 34: every other problem in the set is a real Fibonacci sequence, and the method the section teaches gives 1*F10 + 1*(F11-1) = 55 + 88 = 143.",
    "type": "numeric"
   },
   "3": {

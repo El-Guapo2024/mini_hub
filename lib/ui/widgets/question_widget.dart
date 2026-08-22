@@ -52,8 +52,34 @@ class QuestionWidget extends StatefulWidget {
   State<QuestionWidget> createState() => _QuestionWidgetState();
 }
 
+/// A controller that deletes in the direction the answer is being typed.
+///
+/// The keyboard's delete key removes the character before the cursor. Typing
+/// right to left parks the cursor to the left of everything entered so the next
+/// digit lands to its left — which leaves nothing before the cursor for delete
+/// to take, so it did nothing at all. A typo could only be undone by clearing
+/// the whole answer and starting again.
+class _AnswerController extends MathFieldEditingController {
+  /// Whether the answer is being typed from its last digit to its first.
+  bool rightToLeft = false;
+
+  @override
+  void goBack({bool deleteMode = false}) {
+    // Only the delete key is turned around. The left arrow and the step back
+    // this widget takes after each keystroke both mean "go left" and still do.
+    if (!rightToLeft || !deleteMode) {
+      super.goBack(deleteMode: deleteMode);
+      return;
+    }
+    // Step over the digit entered last and take it, which puts the cursor back
+    // where it was, ready for the next one.
+    goNext();
+    super.goBack(deleteMode: true);
+  }
+}
+
 class _QuestionWidgetState extends State<QuestionWidget> {
-  final _controller = MathFieldEditingController();
+  final _controller = _AnswerController();
   _Result? _result;
 
   /// Held so it can be cancelled: a card answered right and then swiped away
@@ -75,6 +101,20 @@ class _QuestionWidgetState extends State<QuestionWidget> {
   /// Set when a write fails. The student is told, because the alternative is a
   /// screen full of green checks that a restart quietly takes back.
   bool _recordingFailed = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller.rightToLeft = widget.rightToLeft;
+  }
+
+  @override
+  void didUpdateWidget(QuestionWidget oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    // The toggle sits above this widget, so the direction can change under a
+    // card that is already half answered.
+    _controller.rightToLeft = widget.rightToLeft;
+  }
 
   @override
   void dispose() {

@@ -66,3 +66,18 @@ The other scripts in `tools/` — `extract_bh_*`, `solve_*`, `verify_*`,
 `reconcile_final`, `apply_adjudications`, and the rest — are the one-time
 pipeline that read the manual and produced the committed `bh_*.json` files.
 They are not run as part of a normal build. Only `build_questions.py` is.
+
+## Things that look like extraction bugs and are not
+
+- **Thirty prompts appear twice inside one topic**, and one appears three
+  times. The manual repeats them. Problem Set 3.3.4 asks `.1232323... =` at
+  both #2 and #11; Problem Set 3.2.4 asks `123_4 = ?_2` at #4, #7 and #14.
+  Deduplicating would depart from the source, so the decks repeat as the book
+  does. Each copy is its own question id, so answering one does not tick the
+  other off.
+- **Eighteen `(*)`-marked questions are graded exactly rather than to a band.**
+  The manual's preface says every marked problem is an approximation needing
+  ±5%, but its answer key does not follow its own preface: where the mark means
+  a band the key prints one (`27. (*) 972 - 1075`), and for these eighteen it
+  prints a single exact value with no marker and no range (`24. 12`, `31. 160`).
+  `estimate_marker_test` carries the full reasoning.

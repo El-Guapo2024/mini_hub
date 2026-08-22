@@ -20,6 +20,22 @@ import 'package:mini_hub/content/answer.dart';
 /// every marked question is banded but one — which is the one that had lost its
 /// marker. That asymmetry is what says the mark means estimation there and
 /// something else in the other six.
+///
+/// The manual's own answer key settles it, and is the reason to stop looking.
+/// Its preface says every `(*)` problem is an approximation needing ±5%, which
+/// reads as a rule covering all eighteen — but the key does not follow its own
+/// preface. Where the mark means a band, the key prints one:
+///
+///     Problem Set 2.1.1:   27. (*) 972 - 1075     28. (*) 372 - 412
+///
+/// and where these eighteen live, it prints a single exact value, with no
+/// marker and no range:
+///
+///     Problem Set 2.2.3:    9. 9     24. 55     31. 160
+///     Problem Set 3.6.3:   24. 12    26. 84     34. 6
+///
+/// So the app grades them as the manual grades them. Banding them to match the
+/// preface would accept 750 for 748 and 168 for 160, which the key does not.
 void main() {
   final files = Directory('assets/content')
       .listSync(recursive: true)

@@ -65,11 +65,17 @@ class Fraction {
   bool get isReduced =>
       numerator == 0 || _gcd(numerator.abs(), denominator.abs()) == 1;
 
+  /// Lowest terms, with the sign on the numerator.
+  ///
+  /// The sign is moved because equality cross-multiplies and so calls `1/-2`
+  /// and `-1/2` the same number, while a hash built from the pair as written
+  /// gave them different codes — two objects equal to each other and hashing
+  /// apart, which is the one thing a hash may not do.
   Fraction get reduced {
     final divisor = _gcd(numerator.abs(), denominator.abs());
-    return divisor == 0
-        ? this
-        : Fraction(numerator ~/ divisor, denominator ~/ divisor);
+    if (divisor == 0) return this;
+    final sign = denominator.isNegative ? -1 : 1;
+    return Fraction(sign * (numerator ~/ divisor), sign * (denominator ~/ divisor));
   }
 
   static int _gcd(int a, int b) => b == 0 ? a : _gcd(b, a % b);

@@ -23,3 +23,5 @@ This same idea — that $10 \equiv 1 \pmod 9$, so any power of 10 also $\equiv 1
 For example, solve $3x \equiv 17 \pmod 5$: first reduce $17 \equiv 2 \pmod 5$, so $3x \equiv 2 \pmod 5$. Testing inverses of 3 mod 5: $3\times 2 = 6 \equiv 1 \pmod 5$, so $3^{-1} \equiv 2$. Multiply both sides by 2: $x \equiv 2\times 2 = 4 \pmod 5$, so $x = 4$.
 
 Similarly, solve $3x - 2 \equiv 4 \pmod 7$: first isolate, $3x \equiv 6 \pmod 7$. The inverse of 3 mod 7 is 5, since $3\times5=15\equiv 1 \pmod 7$. Multiply both sides by 5: $x \equiv 5\times 6 = 30 \equiv 2 \pmod 7$, so $x = 2$.
+
+The search only ends if there is something to find: $c$ has an inverse mod $n$ exactly when $c$ and $n$ share no factor, that is when $\gcd(c,n) = 1$. Testing $1, 2, 3, \ldots$ against $4x \equiv 3 \pmod 6$ never hits 1, because every multiple of 4 is even and so is 6. Check the gcd before hunting. On this test the modulus is usually prime, which makes every coefficient below it invertible — that is why the cases above go through without comment.

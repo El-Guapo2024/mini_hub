@@ -12,11 +12,10 @@ $$
 \end{aligned}
 $$
 
-The subtraction is the whole point of the method, and it is the step that is
-easiest to drop: $\frac{14}{16}$ reduces to $\frac{7}{8}$, and it is tempting to
-write $14\frac{7}{8}$ having reduced it. The manual prints that. It is
-$13\frac{1}{8}$ — out by $1\frac{3}{4}$, and worth checking yourself the first
-time.
+The subtraction is the whole point, and it is the step that is easiest to drop:
+$\frac{14}{16}$ reduces to $\frac{7}{8}$, and having reduced it it is tempting to
+write $14\frac{7}{8}$. That is the same fraction attached to the wrong whole
+number. Subtract, and it is $13\frac{1}{8}$.
 
 The same procedure works when the fraction is slightly above 1:
 

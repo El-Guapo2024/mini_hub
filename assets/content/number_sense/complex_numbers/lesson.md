@@ -1,4 +1,4 @@
-# Complex Numbers (NEW)
+# Complex Numbers
 
 Recall $i = \sqrt{-1}$, so $i^2 = -1$. Complex numbers are written $a + bi$, and the test mostly asks you to multiply two of them, square one, or divide by one.
 

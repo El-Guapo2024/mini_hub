@@ -22,7 +22,7 @@ If you don't have the Pythagorean relationships for acute/obtuse triangles memor
 
 **Solution:** The triangle inequality alone gives $4 + x > 9$, so $x > 5$ — but that only says the sides *form* a triangle, not that it is acute, and both are required. With 9 the largest side, acute means $4^2 + x^2 > 9^2$, so $x^2 > 65$ and the smallest integer is $\mathbf{9}$.
 
-Together with the example above, $x$ must be exactly 9: sides 4, 9, 9. It is worth checking why the inequality on its own is not enough — 4, 6, 9 satisfies it, but $4^2 + 6^2 = 52 < 81$, so that triangle is obtuse. The manual stops at the triangle inequality here and prints 6; the practice questions below are answered the full way, and so should you be.
+Together with the example above, $x$ must be exactly 9: sides 4, 9, 9. It is worth checking why the inequality on its own is not enough — 4, 6, 9 satisfies it, but $4^2 + 6^2 = 52 < 81$, so that triangle is obtuse.
 
 **Example:** An obtuse triangle has integer sides of 7, $x$, and 8. What is the smallest value of $x$?
 

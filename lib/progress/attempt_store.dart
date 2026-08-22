@@ -196,7 +196,26 @@ class AttemptStore extends ChangeNotifier {
     );
 
     final rows = await db.query(_table, orderBy: 'at ASC');
-    return AttemptStore._(db, rows.map(Attempt.fromRow).toList());
+
+    // Row by row, so one the app cannot read costs that row rather than the
+    // log. `type` reaches the database as a plain string, so a question type
+    // renamed in a later release meets its own old rows and cannot name them
+    // — read all at once, that threw, open failed, and a student lost every
+    // attempt they had ever made, along with the recording of any more.
+    final attempts = <Attempt>[];
+    var unreadable = 0;
+    for (final row in rows) {
+      try {
+        attempts.add(Attempt.fromRow(row));
+      } on Object catch (error) {
+        unreadable++;
+        debugPrint('skipping an unreadable attempt: $error');
+      }
+    }
+    if (unreadable > 0) {
+      debugPrint('$unreadable of ${rows.length} attempts could not be read');
+    }
+    return AttemptStore._(db, attempts);
   }
 
   List<Attempt> get all => List.unmodifiable(_attempts);

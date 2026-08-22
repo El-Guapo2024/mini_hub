@@ -5,7 +5,8 @@ Let's look at when we add the two fractions $\frac{a}{b} + \frac{b}{a}$:
 $$
 \begin{array}{rl}
 \dfrac{a}{b} + \dfrac{b}{a} &= \dfrac{a^2 + b^2}{ab} \\[8pt]
-&= \dfrac{2ab}{ab} + \dfrac{a^2 + b^2}{ab} \\[8pt]
+&= \dfrac{2ab + (a-b)^2}{ab} \\[8pt]
+&= \dfrac{2ab}{ab} + \dfrac{(a-b)^2}{ab} \\[8pt]
 &= 2 + \dfrac{(a-b)^2}{ab}
 \end{array}
 $$

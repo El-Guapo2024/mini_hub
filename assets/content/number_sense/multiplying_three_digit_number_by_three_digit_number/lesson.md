@@ -24,9 +24,6 @@ $$
 \text{Hundreds and Thousands:} & 16 \times 2 + 11 \times 4 + 1 = \mathbf{77} \\
 \text{Remaining:} & 4 \times 2 = \mathbf{8} \end{cases} \quad \Rightarrow \quad \mathbf{87776}
 $$
-
-> Note: the PDF prints the answer as **87772**, but the step-by-step yields 87776. The worked example uses $16 \times 11 = 176$ (carry 1, last two digits 76), then $16 \times 2 + 11 \times 4 + 1 = 77$, remainder $4 \times 2 = 8$, giving 87776. Use the step-by-step logic; the printed answer may contain a typo.
-
 **Example (larger inner products):**
 
 $$

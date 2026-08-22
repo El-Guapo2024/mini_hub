@@ -38,7 +38,7 @@ $$
 \text{LCM}(a,b,c) = \text{LCM}\left(\text{LCM}(a,b),\, c\right)
 $$
 
-The manual mixes these up — it heads the procedure "GCD" and then takes the GCD of the LCM of the first two with the third, which is neither. Fold like with like.
+Fold like with like: a GCD of GCDs, an LCM of LCMs. Taking the GCD of the LCM of the first two with the third gives neither.
 
 For the LCM of 16, 20 and 32: $\text{GCD}(16,20)=4$, so $\text{LCM}(16,20) = \frac{16 \times 20}{4} = 80$. Then $\text{LCM}(80,32)$: their GCD is 16, so $\frac{80 \times 32}{16} = \mathbf{160}$.
 

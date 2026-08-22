@@ -12,7 +12,7 @@ $$
 \frac{6}{7} - \frac{29}{36} = \frac{6+7}{7 \cdot 36} = \frac{\mathbf{13}}{\mathbf{252}}
 $$
 
-Like I said it is easy to notice when to do this problem because, if you didn't know the formula, if would be relatively difficult to solve swiftly.
+This shape is easy to spot, which matters: without the formula it is slow to do any other way.
 
 There is one variation to the formula which is:
 

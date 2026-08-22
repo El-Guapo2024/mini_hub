@@ -36,4 +36,4 @@ $$
 \end{array}
 $$
 
-Like I said, you have to be careful with negative signs, a better (and highly recommended approach outlined in the next section) is to say: $105 - 501 = -(501 - 105) = -396$. By negating and reversing the numbers, you deal with positive numbers which are naturally more manageable. After you find the solution, you negate the result because of the sign switch.
+Negative signs are where this goes wrong, so it is worth reversing the subtraction instead: $105 - 501 = -(501 - 105) = -396$. By negating and reversing the numbers, you deal with positive numbers which are naturally more manageable. After you find the solution, you negate the result because of the sign switch.

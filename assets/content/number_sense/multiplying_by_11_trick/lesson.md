@@ -69,4 +69,4 @@ $$
 \end{array}
 $$
 
-The hardest part of the procedure is knowing when to stop. The easiest way I've found is to think about how many digits the answer *should* have. For example, with the above expression, we are dividing a 5-digit number by a roughly 100, leaving an answer which should be 3-digits, so after the third-digit you know you are done.
+The hardest part of the procedure is knowing when to stop. A reliable way is to think about how many digits the answer *should* have. For example, with the above expression, we are dividing a 5-digit number by a roughly 100, leaving an answer which should be 3-digits, so after the third-digit you know you are done.

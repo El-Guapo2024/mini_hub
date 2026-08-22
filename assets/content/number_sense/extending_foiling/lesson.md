@@ -21,7 +21,7 @@ $$
 \end{array}
 $$
 
-By treating the last two digits as a single entity, you reduce the three-digit multiplication to a two-digit problem. The last two digits need not be the same in the two numbers (usually I do see this as the case though) in order to apply this method. For example:
+By treating the last two digits as a single entity, you reduce the three-digit multiplication to a two-digit problem. The last two digits usually match in these problems, but the method does not require it. For example:
 
 $$
 211 \times 808 = \begin{array}{lll}

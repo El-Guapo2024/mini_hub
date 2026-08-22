@@ -11,7 +11,7 @@ abcd \div 9 = \begin{array}{ll}
 \end{array}
 $$
 
-I think the gist of the trick is self explanatory, let's look at a simple example:
+Here is a simple example:
 
 $$
 3211 \div 9 = \begin{array}{lll}

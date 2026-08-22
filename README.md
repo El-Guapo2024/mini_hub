@@ -43,6 +43,13 @@ the app shows is derived from that log rather than stored beside it, so changing
 what progress means is a recompute rather than a migration. Today it means one
 thing — whether a question has ever been answered correctly.
 
+Storage failures never block practice. If the log can't be opened, the app
+still runs (with a banner saying progress isn't being saved); if individual
+rows in an existing log can't be read (e.g. after a schema rename), those rows
+are skipped rather than failing the whole open. A build with a bad
+`CONTENT` flag is refused at startup with a screen naming the flag, instead of
+throwing from deep inside a field initializer.
+
 More is recorded than is read: the question type, what the student typed, how
 long it took. That is deliberate, so a scheduler built later has a history to
 work from instead of starting empty.

@@ -101,6 +101,10 @@ void main() {
 
     expect(store.all, hasLength(4));
     expect(store.all.where((a) => a.correct), hasLength(1));
+    // In the order they were given, with the right one last.
+    expect(store.all.map((a) => a.given), ['5', '6', '7', '4']);
+    expect(store.all.first.correct, isFalse);
+    expect(store.all.last.correct, isTrue);
     expect(store.isDone(_question.id), isTrue);
   });
 }

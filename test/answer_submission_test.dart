@@ -35,61 +35,6 @@ void main() {
     answer: NumericAnswer(value: 2),
   );
 
-  Future<AttemptStore> pumpQuestion(WidgetTester tester) async {
-    final store = (await tester.runAsync(() => AttemptStore.openAt(file)))!;
-    addTearDown(() => tester.runAsync(store.close));
-
-    await tester.pumpWidget(
-      MaterialApp(
-        home: AttemptScope(
-          store: store,
-          child: const Scaffold(
-            body: QuestionWidget(question: question),
-          ),
-        ),
-      ),
-    );
-    return store;
-  }
-
-  testWidgets('the same answer submitted twice is one attempt', (tester) async {
-    final store = await pumpQuestion(tester);
-    final field = tester.widget<MathField>(find.byType(MathField));
-
-    // Two submits with the input unchanged: a double tap, or a keyboard
-    // sending the event twice. Each used to build its own Attempt with its own
-    // id, which the store had no way to tell apart.
-    field.onSubmitted!('2');
-    await tester.pump();
-    field.onSubmitted!('2');
-    await tester.pump();
-    await tester.runAsync(() => Future<void>.delayed(Duration.zero));
-
-    expect(store.all, hasLength(1));
-
-    await tester.pumpAndSettle();
-  });
-
-  testWidgets('changing the answer and resubmitting is a second attempt', (
-    tester,
-  ) async {
-    final store = await pumpQuestion(tester);
-    final field = tester.widget<MathField>(find.byType(MathField));
-
-    field.onSubmitted!('3');
-    await tester.pump();
-    field.onChanged!('2');
-    await tester.pump();
-    field.onSubmitted!('2');
-    await tester.pump();
-    await tester.runAsync(() => Future<void>.delayed(Duration.zero));
-
-    expect(store.all, hasLength(2));
-    expect(store.all.first.correct, isFalse);
-    expect(store.all.last.correct, isTrue);
-
-    await tester.pumpAndSettle();
-  });
 
   testWidgets('editing after a correct answer cancels the advance', (
     tester,

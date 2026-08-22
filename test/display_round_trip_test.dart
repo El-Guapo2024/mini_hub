@@ -39,4 +39,38 @@ void main() {
     expect(checked, greaterThan(2000), reason: 'the bank was not read');
     expect(rejected, isEmpty, reason: '${rejected.length} untypable answers');
   });
+
+  test('no answer reveals itself as an unwritable decimal', () {
+    // A key whose exact value is a repeating fraction cannot be stored as a
+    // decimal: what comes back out is seventeen digits of float, and that is
+    // what the student is shown as the answer. `.3\overline{05}` revealed
+    // `0.30505050505050507` — the question restated, in a topic whose whole
+    // point is turning it into a fraction — and, graded to a tolerance, could
+    // be got right by typing the prompt back. Its ten siblings were all keyed
+    // as fractions; these had been missed.
+    //
+    // Six places is past anything the manual prints and well past anything a
+    // student writes, so a display longer than that is a key of the wrong
+    // shape rather than a long answer.
+    final longDecimal = RegExp(r'\.\d{7,}');
+    final unwritable = <String>[];
+
+    for (final file
+        in Directory('assets/content')
+            .listSync(recursive: true)
+            .whereType<File>()
+            .where((f) => f.path.endsWith('questions.json'))) {
+      final questions = jsonDecode(file.readAsStringSync()) as List<dynamic>;
+      for (final raw in questions.cast<Map<String, dynamic>>()) {
+        final answer = Answer.fromJson(raw['answer'] as Map<String, dynamic>);
+        // An estimate's band is two rounded endpoints and is never typed back.
+        if (answer is ApproxAnswer) continue;
+        if (longDecimal.hasMatch(answer.display)) {
+          unwritable.add('${raw['id']}: ${answer.display}');
+        }
+      }
+    }
+
+    expect(unwritable, isEmpty);
+  });
 }

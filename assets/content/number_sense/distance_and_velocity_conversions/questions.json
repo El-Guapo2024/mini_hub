@@ -94,8 +94,10 @@
     "prompt": "10 feet = \\_\\_\\_\\_\\_\\_ yards.",
     "topic": "distance_and_velocity_conversions",
     "answer": {
-      "answer": 3.3333333333333335,
-      "type": "numeric"
+      "type": "fraction",
+      "num": 10,
+      "den": 3,
+      "display": "3\\frac{1}{3}"
     }
   },
   {

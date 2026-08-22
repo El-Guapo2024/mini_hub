@@ -37,8 +37,10 @@
     "prompt": ".3\\overline{05} =",
     "topic": "in_the_form_abcbcbc",
     "answer": {
-      "answer": 0.30505050505050507,
-      "type": "numeric"
+      "type": "fraction",
+      "num": 151,
+      "den": 495,
+      "display": "\\frac{151}{495}"
     }
   },
   {
@@ -101,8 +103,10 @@
     "prompt": ".2\\overline{14} =",
     "topic": "in_the_form_abcbcbc",
     "answer": {
-      "answer": 0.21414141414141413,
-      "type": "numeric"
+      "type": "fraction",
+      "num": 106,
+      "den": 495,
+      "display": "\\frac{106}{495}"
     }
   },
   {

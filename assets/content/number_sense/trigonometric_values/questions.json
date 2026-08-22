@@ -315,8 +315,10 @@
     "prompt": "\\cot^{2} 60^{\\circ} =",
     "topic": "trigonometric_values",
     "answer": {
-      "answer": 0.3333333333333333,
-      "type": "numeric"
+      "type": "fraction",
+      "num": 1,
+      "den": 3,
+      "display": "\\frac{1}{3}"
     }
   },
   {

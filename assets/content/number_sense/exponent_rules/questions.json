@@ -284,8 +284,10 @@
     "prompt": "\\log_{8}(\\log_{4}16) =",
     "topic": "exponent_rules",
     "answer": {
-      "answer": 0.3333333333,
-      "type": "numeric"
+      "type": "fraction",
+      "num": 1,
+      "den": 3,
+      "display": "\\frac{1}{3}"
     }
   },
   {

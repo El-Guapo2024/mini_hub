@@ -71,9 +71,8 @@ sealed class Answer {
   /// ever "is the answer written with it" — an answer of any shape that prints
   /// pi and is not given the key cannot be entered at all. A subclass adding
   /// its own symbols builds on this rather than replacing it.
-  List<String> get inputVariables => display.contains(r'\pi')
-      ? const [r'\pi']
-      : const [];
+  List<String> get inputVariables =>
+      display.contains(r'\pi') ? const [r'\pi'] : const [];
 
   /// Shown under the input when the grading rule isn't obvious from the
   /// prompt — a student can't tell an estimation problem from an exact one.
@@ -291,10 +290,28 @@ class BaseAnswer extends Answer {
   );
   static final _integer = RegExp(r'^(-?)([0-9a-zA-Z]+)$');
 
+  /// A base written as a subscript at the end, the way the manual writes one
+  /// and the way this answer reveals itself: `\frac{4}{7}_{8}`.
+  static final _baseTag = RegExp(r'_\{?([0-9]+)\}?$');
+
   @override
   bool accepts(String tex) {
-    final s = tex.replaceAll(_decoration, '');
+    var s = tex.replaceAll(_decoration, '');
     if (s.isEmpty) return false;
+
+    // A student copying the revealed answer types the subscript with it, and
+    // every base answer in the bank reveals itself carrying one — so without
+    // this, the one form the app ever shows them is the one form it rejects.
+    //
+    // Only this answer's own base is dropped. A subscript naming a different
+    // one is a claim about what was written, not decoration: `\frac{4}{7}_{10}`
+    // is a different number from `\frac{4}{7}_{8}` and must not be taken for it.
+    final tag = _baseTag.firstMatch(s);
+    if (tag != null) {
+      if (int.parse(tag[1]!) != base) return false;
+      s = s.substring(0, tag.start);
+      if (s.isEmpty) return false;
+    }
 
     final fraction = _fraction.firstMatch(s);
     if (fraction != null) {
@@ -304,9 +321,11 @@ class BaseAnswer extends Answer {
         return false;
       }
       // Three places may each carry a minus; an even number of them is positive.
-      final minuses = [fraction[1]!, fraction[2]!, fraction[4]!]
-          .where((sign) => sign == '-')
-          .length;
+      final minuses = [
+        fraction[1]!,
+        fraction[2]!,
+        fraction[4]!,
+      ].where((sign) => sign == '-').length;
       final magnitude = numerator / denominator;
       return _matches(minuses.isOdd ? -magnitude : magnitude);
     }

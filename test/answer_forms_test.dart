@@ -37,10 +37,11 @@ void main() {
 
     test('every percent answer in the bank accepts what it reveals', () {
       var checked = 0;
-      for (final file in Directory('assets/content')
-          .listSync(recursive: true)
-          .whereType<File>()
-          .where((f) => f.path.endsWith('questions.json'))) {
+      for (final file
+          in Directory('assets/content')
+              .listSync(recursive: true)
+              .whereType<File>()
+              .where((f) => f.path.endsWith('questions.json'))) {
         final questions = jsonDecode(file.readAsStringSync()) as List<dynamic>;
         for (final raw in questions.cast<Map<String, dynamic>>()) {
           final json = raw['answer'] as Map<String, dynamic>;
@@ -87,6 +88,33 @@ void main() {
       const ten = BaseAnswer(value: 8, base: 8);
       expect(ten.accepts('10'), isTrue);
       expect(ten.accepts('8'), isFalse);
+    });
+
+    // Every base answer in the bank reveals itself with its base written as a
+    // subscript, which is how the manual writes one — and all eleven of them
+    // were rejected in exactly that form. A student copying down the answer
+    // they had just been shown was marked wrong for it.
+    const revealed = BaseAnswer(
+      value: 4 / 7,
+      base: 8,
+      display: r'\frac{4}{7}_{8}',
+    );
+
+    test('accepts the answer it reveals, subscript and all', () {
+      expect(revealed.accepts(revealed.display), isTrue);
+      expect(revealed.accepts(r'\frac{4}{7}_8'), isTrue);
+      // And still accepts it written without one.
+      expect(revealed.accepts(r'\frac{4}{7}'), isTrue);
+    });
+
+    test('a subscript naming another base is a different number', () {
+      // Not decoration to be dropped: 4/7 in base 10 is not 4/7 in base 8.
+      expect(revealed.accepts(r'\frac{4}{7}_{10}'), isFalse);
+      expect(revealed.accepts(r'\frac{4}{7}_{9}'), isFalse);
+    });
+
+    test('digits invalid for the base are rejected, subscript or not', () {
+      expect(revealed.accepts(r'\frac{8}{7}_{8}'), isFalse);
     });
   });
 }

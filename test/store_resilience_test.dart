@@ -64,6 +64,49 @@ void main() {
     expect(reopened.unreadableAttempts, 1);
   });
 
+  test('an answer shown as recorded is really recorded', () async {
+    final directory = await Directory.systemTemp.createTemp('mini_hub_collide');
+    addTearDown(() => directory.delete(recursive: true));
+    final path = '${directory.path}/attempts.db';
+
+    final first = await AttemptStore.openAt(path);
+    await first.close();
+
+    // An unreadable row holding an id. Skipped at open, it is still in the
+    // table, so an insert reusing that id conflicts and is ignored.
+    final raw = await databaseFactory.openDatabase(path);
+    await raw.insert('attempts', {
+      'id': 'collide',
+      'question_id': 'sq.q1',
+      'topic': 'squares',
+      'type': 'bogus',
+      'correct': 1,
+      'at': DateTime.now().toUtc().millisecondsSinceEpoch,
+      'given_tex': '1',
+      'elapsed_ms': null,
+    });
+    await raw.close();
+
+    final store = await AttemptStore.openAt(path);
+    addTearDown(store.close);
+    expect(store.unreadableAttempts, 1);
+
+    final attempt = Attempt(
+      id: 'collide',
+      questionId: const QuestionId('sq.q2'),
+      topic: const TopicId('squares'),
+      type: QuestionType.numeric,
+      correct: true,
+      at: DateTime.now().toUtc(),
+      given: '4',
+    );
+
+    // It must fail loudly rather than leave a green check the log never held.
+    await expectLater(store.record(attempt), throwsA(isA<StateError>()));
+    expect(store.all, isEmpty, reason: 'the failed write was taken back out');
+    expect(store.isDone(const QuestionId('sq.q2')), isFalse);
+  });
+
   test('fractions equal to each other hash alike', () {
     // Equality cross-multiplies, so these are the same number however the sign
     // is written. A hash that disagreed would keep both in a Set.

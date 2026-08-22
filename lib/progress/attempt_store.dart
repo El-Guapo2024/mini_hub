@@ -245,12 +245,21 @@ class AttemptStore extends ChangeNotifier {
     _index(attempt);
     notifyListeners();
     try {
-      await _db.insert(
+      final rowId = await _db.insert(
         _table,
         attempt.toRow(),
         // Replaying the same attempt is a no-op rather than an error.
         conflictAlgorithm: ConflictAlgorithm.ignore,
       );
+      // Ignoring a conflict is silent, and the row it collided with need not
+      // be one held in memory: a row skipped at open as unreadable still holds
+      // its id here. Left unchecked, the answer was shown as recorded and was
+      // gone at the next restart.
+      if (rowId == 0) {
+        throw StateError(
+          'the attempt log already holds a row with id ${attempt.id}',
+        );
+      }
     } on Object {
       _attempts.remove(attempt);
       _reindex();

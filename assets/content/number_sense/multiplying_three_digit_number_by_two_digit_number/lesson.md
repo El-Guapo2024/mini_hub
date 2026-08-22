@@ -1,6 +1,6 @@
 # Multiplying a Three-Digit Number by a Two-Digit Number
 
-This technique extends FOILing/LIOFing (Section 1.1) to three-digit by two-digit multiplication. Let $n_1 = abc$ and $n_2 = ef$, where $a, b, c, e, f$ are digits.
+This technique extends FOILing/LIOFing to three-digit by two-digit multiplication. Let $n_1 = abc$ and $n_2 = ef$, where $a, b, c, e, f$ are digits.
 
 The key insight is to treat $n_2$ as a three-digit number $0ef$, group $bc$ and $ef$ as two-digit units, and perform a FOIL/LIOF:
 
@@ -38,4 +38,4 @@ $$
 \text{Remaining:} & 2 \times 37 + 12 = \mathbf{86} \end{cases} \quad \Rightarrow \quad \mathbf{8621}
 $$
 
-In the second example the carry is two digits because $33 \times 37$ produces a four-digit number. Other tricks (e.g., Multiplying Two Numbers Equidistant from a Third Number, Section 1.2.10, or Squares Ending in 5, Section 1.2.8) can be used for the inner multiplication step.
+In the second example the carry is two digits because $33 \times 37$ produces a four-digit number. Other tricks (e.g., Multiplying Two Numbers Equidistant from a Third Number, or Squares Ending in 5) can be used for the inner multiplication step.

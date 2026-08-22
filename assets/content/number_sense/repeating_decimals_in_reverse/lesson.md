@@ -1,6 +1,6 @@
 # Repeating Decimals in Reverse
 
-Another problem that has been in vogue in recent years is applying all the procedures used with repeating decimals (Section 3.3), but in reverse. Instead of giving you a decimal and asking for a fraction, they give you a fraction and ask for the first few digits of the decimal. Here is an example:
+Another problem that has been in vogue in recent years is applying all the procedures used with repeating decimals (covered in the Repeating Decimals topic), but in reverse. Instead of giving you a decimal and asking for a fraction, they give you a fraction and ask for the first few digits of the decimal. Here is an example:
 
 $$
 \frac{23}{90} = 0.\underline{\hspace{2cm}} \quad \text{(first four digits)}

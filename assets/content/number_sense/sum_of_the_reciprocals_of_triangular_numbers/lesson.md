@@ -30,4 +30,4 @@ $$
 \end{aligned}
 $$
 
-All that matters is that you need to know what term the first and last triangular numbers in the sequence are (which you can back-track using the formulas supplied in Section 2.2.6).
+All that matters is that you need to know what term the first and last triangular numbers in the sequence are (which you can back-track using the formulas supplied in the Triangular Numbers topic).

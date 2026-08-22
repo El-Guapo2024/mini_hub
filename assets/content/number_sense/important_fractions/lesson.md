@@ -1,6 +1,6 @@
 # Important Fractions (Fraction-to-Decimal-to-Percent)
 
-The following fractions should be memorized for reasons stated in Section 1.2.5. In addition, early problems on the test typically involve converting these fractions to decimals and percentages. So if these conversions were memorized, a lot of time would be saved. Omitted are the "obvious" fractions ($\frac{1}{4}, \frac{1}{3}, \frac{1}{5}$, etc.).
+The following fractions should be memorized for reasons stated in the Multiplying by Any Fraction of 100, 1000, etc. topic. In addition, early problems on the test typically involve converting these fractions to decimals and percentages. So if these conversions were memorized, a lot of time would be saved. Omitted are the "obvious" fractions ($\frac{1}{4}, \frac{1}{3}, \frac{1}{5}$, etc.).
 
 $$
 \begin{array}{ll}

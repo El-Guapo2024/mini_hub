@@ -6,7 +6,7 @@ $$
 .aaaa\ldots = \frac{a}{10} + \frac{a}{100} + \frac{a}{1000} + \cdots
 $$
 
-This is an infinite geometric series with first term $\frac{a}{10}$ and common ratio $\frac{1}{10}$ (see Section 2.2.1). Summing it:
+This is an infinite geometric series with first term $\frac{a}{10}$ and common ratio $\frac{1}{10}$. Summing it:
 
 $$
 \begin{aligned}

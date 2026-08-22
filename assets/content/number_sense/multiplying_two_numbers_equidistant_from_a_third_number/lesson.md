@@ -18,7 +18,7 @@ So the procedure is:
 
 2. Subtract from that the difference between the middle number and one of two numbers squared.
 
-For most of these types of problems, the center number will be a multiple of 5, making the computation of its square relatively simple (See Section 1.2.7, Square's Ending in 5 Trick). The following illustrates another example:
+For most of these types of problems, the center number will be a multiple of 5, making the computation of its square relatively simple (see the Squares Ending in 5 Trick topic). The following illustrates another example:
 
 $$
 61 \times 69 = 65^2 - 4^2 = 4225 - 16 = \mathbf{4209}

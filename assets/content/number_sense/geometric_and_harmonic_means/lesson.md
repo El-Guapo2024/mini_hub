@@ -21,7 +21,7 @@ $$
 H_3 = \frac{3}{\left(\dfrac{1}{r} + \dfrac{1}{s} + \dfrac{1}{t}\right)} = \frac{3pqr}{pq + pr + qr}
 $$
 
-So you can relate the harmonic mean of the roots to the product of the roots and the sum of roots taken two at a time (similar to what we found with the Vieta/Newton Factorization in Section 4.4.2). You'll need to familiarize yourself with Section 3.1.4 in order to determine what these sums are. Here is an example:
+So you can relate the harmonic mean of the roots to the product of the roots and the sum of roots taken two at a time (similar to what we found with the Vieta/Newton Factorization in the Factorizations topic). You'll need to familiarize yourself with the Sum of Polynomial Roots topic in order to determine what these sums are. Here is an example:
 
 **Problem:** What is the harmonic mean of the roots of $x^3 + 2x^2 - 3x + 7 = 0$?
 

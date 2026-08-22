@@ -1,6 +1,6 @@
 # Multiplying a Three-Digit Number by a Three-Digit Number
 
-This extends Section 4.1.1 to three-digit by three-digit multiplication. Let $n_1 = abc$ and $n_2 = def$, where $a, b, c, d, e, f$ are digits. Group $n_1$ as $a$ and $bc$, and $n_2$ as $d$ and $ef$, then FOIL/LIOF:
+This extends the Multiplying a Three-Digit Number by a Two-Digit Number topic to three-digit by three-digit multiplication. Let $n_1 = abc$ and $n_2 = def$, where $a, b, c, d, e, f$ are digits. Group $n_1$ as $a$ and $bc$, and $n_2$ as $d$ and $ef$, then FOIL/LIOF:
 
 $$
 abc = 100a + (bc), \quad def = 100d + (ef)
@@ -32,4 +32,4 @@ $$
 \text{Remaining:} & 2 \times 2 + 1 = \mathbf{5} \end{cases} \quad \Rightarrow \quad \mathbf{53165}
 $$
 
-As an alternative, you can treat each digit as a separate entity and move down the line as described in Section 1.1 — both methods produce the same result.
+As an alternative, you can treat each digit as a separate entity and move down the line as described in the Introduction: FOILing/LIOFing When Multiplying topic — both methods produce the same result.

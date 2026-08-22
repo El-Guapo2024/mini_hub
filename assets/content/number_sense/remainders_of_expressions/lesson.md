@@ -1,6 +1,6 @@
 # Remainders of Expressions
 
-Questions like $(4^3 - 15 \times 43) \div 6$ has what remainder, are very popular and appear anywhere from the $2^{nd}$ to the $4^{th}$ column. This problem has its root in modular arithmetic (See Section 3.4: Modular Arithmetic), and the procedure for solving it is simply knowing that "the remainders after algebra is equal to the algebra of the remainders." So instead of actually finding what $4^3 - 15 \times 43$ is and then dividing by 6, we can figure out what the remainder of each term is when dividing by 6, then do the algebra. So:
+Questions like $(4^3 - 15 \times 43) \div 6$ has what remainder, are very popular and appear anywhere from the $2^{nd}$ to the $4^{th}$ column. This problem has its root in modular arithmetic (see the Modular Arithmetic (Basic) topic), and the procedure for solving it is simply knowing that "the remainders after algebra is equal to the algebra of the remainders." So instead of actually finding what $4^3 - 15 \times 43$ is and then dividing by 6, we can figure out what the remainder of each term is when dividing by 6, then do the algebra. So:
 
 $$
 (4^3 - 15 \times 43) \div 6 \cong (4 - 3 \times 1) \div 6 = r\mathbf{1}

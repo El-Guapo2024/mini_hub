@@ -18,7 +18,7 @@ $$
 \end{aligned}
 $$
 
-or, if you have your squares memorized and noticed you also have a difference of squares (Section 1.3.6):
+or, if you have your squares memorized and noticed you also have a difference of squares (see the Difference of Squares topic):
 
 $$
 19^2 + (10^2 - 9^2) = 361 + (10-9)\cdot(10+9) = 361 + 19 = 380

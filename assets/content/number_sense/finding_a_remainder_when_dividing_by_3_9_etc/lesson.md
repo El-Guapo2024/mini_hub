@@ -6,7 +6,7 @@ $34952 \div 3$ has what remainder? Sum of the Digits: $(3+4+9+5+2) = 23$, and $2
 
 $112321 \div 9$ has what remainder? Sum of the Digits: $(1+1+2+3+2+1) = 10$, and $10 \div 9 = r\mathbf{1}$
 
-For some examples, you can employ faster methods by using modular techniques in order to get the results quicker (see Section 3.4 Modular Arithmetic). For example, if we were trying to see the remainder of 366699995 when dividing by 3, rather than summing up all the digits (which would be a hassle) and then seeing the remainder when that is divided by 3, you can look at each digit and figure out what its remainder is when dividing by 3 then summing _those_. So for our example:
+For some examples, you can employ faster methods by using modular techniques in order to get the results quicker (see the Modular Arithmetic (Basic) topic). For example, if we were trying to see the remainder of 366699995 when dividing by 3, rather than summing up all the digits (which would be a hassle) and then seeing the remainder when that is divided by 3, you can look at each digit and figure out what its remainder is when dividing by 3 then summing _those_. So for our example:
 
 $$
 366699995 \cong (0+0+0+0+0+0+0+0+2) \cong 2\pmod{3}

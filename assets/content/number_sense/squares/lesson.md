@@ -1,6 +1,6 @@
 # Squares (Memorized)
 
-In order for faster speed in taking the test, squares up to 25 should definitely be memorized, with memorization of squares up to 50 being highly recommended. In the event that memorization can't be achieved, remember the tricks discussed in Section 1 of the book as well as the method of FOILing.
+In order for faster speed in taking the test, squares up to 25 should definitely be memorized, with memorization of squares up to 50 being highly recommended. In the event that memorization can't be achieved, remember the multiplication tricks covered elsewhere in this course as well as the method of FOILing.
 
 The following table should aid in memorization:
 

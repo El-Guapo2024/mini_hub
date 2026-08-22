@@ -1,6 +1,6 @@
 # Dividing by 9 Trick
 
-From Section 1.4.2 it is explained how a remainder can be found when dividing by 9. However, you can continue this process of adding *select* digits to get the complete answer when dividing by 9. The following is the result when you divide a four digit number $abcd$ by 9 without carries. The details of the proof is omitted, only the result is shown:
+The Remainder by 3, 9 topic explains how a remainder can be found when dividing by 9. However, you can continue this process of adding *select* digits to get the complete answer when dividing by 9. The following is the result when you divide a four digit number $abcd$ by 9 without carries. The details of the proof is omitted, only the result is shown:
 
 $$
 abcd \div 9 = \begin{array}{ll}

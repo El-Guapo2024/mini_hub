@@ -1,6 +1,6 @@
 # Exotic Definitions of Numbers
 
-These are additional classifications of numbers (similar to Section 3.1.2) that appear on recent Number Sense exams.
+These are additional classifications of numbers (similar to the Perfect, Abundant, and Deficient Numbers topic) that appear on recent Number Sense exams.
 
 1. A **happy number** is a number whose sum of the squares of the individual digits eventually leads to a chain that terminates at 1. For example, 19 is a happy number because $19 \Rightarrow 1^2 + 9^2 = 82 \Rightarrow 8^2 + 2^2 = 68 \Rightarrow 6^2 + 8^2 = 100 \Rightarrow 1^2 + 0^2 + 0^2 = \mathbf{1}$. The first handful of happy numbers are 1, 7, 10, 13, 19, 23, 28, 31, 32, 44, 49, 68, 70, 79, 82, 86, 91, 94, 97, and 100.
 

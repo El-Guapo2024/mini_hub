@@ -12,6 +12,6 @@ $$
 \end{array}
 $$
 
-The rod conversions are especially useful for unusual fractions of miles. Since $1 \text{ mile} = 320 \text{ rods} \times 16.5 \text{ ft/rod}$, through the Double and Half trick (Section 1.2.6) you can reduce: $1 \text{ mile} = 160 \times 33 \text{ feet}$. This is extremely helpful for questions like "how many feet is $\frac{2}{11}$ of a mile?"
+The rod conversions are especially useful for unusual fractions of miles. Since $1 \text{ mile} = 320 \text{ rods} \times 16.5 \text{ ft/rod}$, through the Double and Half trick you can reduce: $1 \text{ mile} = 160 \times 33 \text{ feet}$. This is extremely helpful for questions like "how many feet is $\frac{2}{11}$ of a mile?"
 
 Knowing that $1 \text{ day} = 12^2 \times 10$ minutes can also lead to quick reductions.

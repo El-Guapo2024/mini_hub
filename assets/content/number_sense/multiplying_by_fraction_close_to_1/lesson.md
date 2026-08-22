@@ -30,4 +30,4 @@ $$
 
 Note: when the fractional part is improper (as in the second example), you must reduce it to a mixed number to get the correct answer.
 
-Also, when the whole number equals the numerator of the fraction, you can apply the $a \times \frac{a}{b}$ trick from Section 1.3.9 for a potentially quicker path — but this method always works regardless.
+Also, when the whole number equals the numerator of the fraction, you can apply the $a \times \frac{a}{b}$ trick for a potentially quicker path — but this method always works regardless.

@@ -1,6 +1,6 @@
 # Multiplying Two Numbers Whose Units Digits Add to 10 and Leading Digits Are the Same
 
-This is a generalized version of the Squares Ending in 5 trick (Section 1.2.8). Take $n_1 = ab$ and $n_2 = ac$ with $b + c = 10$. Then:
+This is a generalized version of the Squares Ending in 5 trick. Take $n_1 = ab$ and $n_2 = ac$ with $b + c = 10$. Then:
 
 $$
 ab \times ac = (10a + b)(10a + c) = 10a(10a + b + c) + bc
@@ -30,4 +30,4 @@ $$
 \text{Remaining:} & 17 \times (17+1) = \mathbf{306} \end{cases} \quad \Rightarrow \quad \mathbf{30621}
 $$
 
-You can also combine this with the Multiplying Two Numbers Equidistant from a Third Number trick (Section 1.2.10): $68 \times 62 = 65^2 - 3^2 = 4225 - 9 = 4216$. Both methods agree; this version avoids the subtraction step.
+You can also combine this with the Multiplying Two Numbers Equidistant from a Third Number trick: $68 \times 62 = 65^2 - 3^2 = 4225 - 9 = 4216$. Both methods agree; this version avoids the subtraction step.

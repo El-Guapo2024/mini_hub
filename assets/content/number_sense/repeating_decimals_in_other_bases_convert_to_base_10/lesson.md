@@ -1,12 +1,12 @@
 # Repeating Decimals in Other Bases - Convert to Base 10
 
-There are two types of questions involving converting repeating decimals in other bases. The first asks you to convert them into a base-10 fraction while the second asks you to keep the base the same as the repeating decimal. We'll tackle the base-10 conversion here and in the next section we'll look at keeping the bases the same. We'll start off with a simple type of conversion where you only need to use the sum of an infinite geometric series (Section 2.2.1) in order to solve. Here is an example of that type:
+There are two types of questions involving converting repeating decimals in other bases. The first asks you to convert them into a base-10 fraction while the second asks you to keep the base the same as the repeating decimal. We'll tackle the base-10 conversion here; the Repeating Decimals in Other Bases - Keeping Same Base topic covers keeping the bases the same. We'll start off with a simple type of conversion where you only need to use the sum of an infinite geometric series in order to solve. Here is an example of that type:
 
 $$
 \text{Change } .555\ldots_8 \text{ to a base-10 fraction.}
 $$
 
-For these types of problems, you can apply the change of base (as explained in Section 3.2.2) to produce an infinite geometric series which you can then sum using the well-known formula:
+For these types of problems, you can apply the change of base (as explained in the Converting Decimals topic) to produce an infinite geometric series which you can then sum using the well-known formula:
 
 $$
 .555\ldots_8 = \frac{5}{8} + \frac{5}{64} + \frac{5}{512} + \cdots
@@ -14,7 +14,7 @@ $$
 = \frac{5}{8} \times \frac{8}{7} = \mathbf{\frac{5}{7}}
 $$
 
-Although these problems look pretty intimidating they are pretty straightforward to solve. Now there is a more complicated form of the repeated decimal problem that uses a general variant of all the procedures outlined in Section 3.3.2 and Section 3.3.3 (because of the complexity, it is hard to imagine they'd do something like Section 3.3.4, but you can certainly extend these methods to come up with a procedure).
+Although these problems look pretty intimidating they are pretty straightforward to solve. Now there is a more complicated form of the repeated decimal problem that uses a general variant of all the procedures outlined in the Repeating Decimal Form: .ab repeating and Repeating Decimal Form: .ab with one non-repeating digit topics (because of the complexity, it is hard to imagine they'd do something like the Repeating Decimal Form: .abcbcbc topic, but you can certainly extend these methods to come up with a procedure).
 
 For instance, for a repeating fraction in the form $.\overline{xyxy}_b$, with base $b$, the procedure for converting to a base-10 fraction is:
 

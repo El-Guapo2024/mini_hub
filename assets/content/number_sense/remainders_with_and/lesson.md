@@ -4,7 +4,7 @@ It's best just to show a practice problem first so you know the type of question
 
 **Problem:** If $\dfrac{6x}{7}$ has a remainder of 2 and $\dfrac{2y}{7}$ has a remainder of 3, what is the remainder of $\dfrac{4xy}{7}$?
 
-As explained in Section 1.4.5, "the remainders after algebra is equal to the algebra of the remainders." You can do the multiplication of the first two expressions which translates to the multiplication of the remainders. From there, you can divide the calculated expression (and their equivalent calculated remainders) to get what the question is asking for:
+As explained in the Remainders of Expressions topic, "the remainders after algebra is equal to the algebra of the remainders." You can do the multiplication of the first two expressions which translates to the multiplication of the remainders. From there, you can divide the calculated expression (and their equivalent calculated remainders) to get what the question is asking for:
 
 $$
 \frac{6x}{7} \times \frac{2y}{7} = \frac{12xy}{7} \div 3 = \frac{4xy}{7}

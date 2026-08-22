@@ -1,6 +1,6 @@
 # Additional Formulas: a/b − (na−1)/(nb−1)
 
-This is a supplement to the formulas given in Section 1.5.5 and deals with subtracting expressions in the form $\frac{a}{b} - \frac{na-1}{nb-1}$. Here is the formula:
+This is a supplement to the formulas given in the a/b − (na−1)/(nb+1) Trick topic and deals with subtracting expressions in the form $\frac{a}{b} - \frac{na-1}{nb-1}$. Here is the formula:
 
 $$
 \frac{a}{b} - \frac{na-1}{nb-1} = \frac{(b-a)}{b \cdot (nb-1)}

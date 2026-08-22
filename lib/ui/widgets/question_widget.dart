@@ -239,10 +239,33 @@ class _QuestionWidgetState extends State<QuestionWidget> {
     // The card is the screen: one question, centred, with room to think. It
     // used to be a bordered block titled "Question", which made sense when it
     // sat inside a lesson among prose and needed to announce itself.
+    // Centred when there is room and scrollable when there is not. The card's
+    // height is the prompt plus a fixed 40 and 48 of spacing, and the pane it
+    // sits in is what is left after the tab bar and the math keyboard — 160pt
+    // on an 800x600 window, which the card overran by half a pixel. Half a
+    // pixel still paints the striped overflow banner across the question, and
+    // anything that makes the card taller, a larger text scale most of all,
+    // overruns it by more.
+    return LayoutBuilder(
+      builder: (context, constraints) => SingleChildScrollView(
+        child: ConstrainedBox(
+          constraints: BoxConstraints(minHeight: constraints.maxHeight),
+          child: _card(context),
+        ),
+      ),
+    );
+  }
+
+  Widget _card(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
+        // The scroll view above leaves the height unbounded, so the column
+        // sizes to its children — and the minimum the box below it imposes is
+        // the pane's own height, which is what keeps the card centred whenever
+        // there is room to centre it.
+        mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           // Rendered math does not wrap, and real prompts run wider than a

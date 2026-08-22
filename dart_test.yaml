@@ -1,0 +1,15 @@
+# The exhaustive render tests build every one of the 2423 questions and every
+# lesson through the real widget tree. Together they are most of the suite's
+# running time, and a suite that takes a quarter of an hour stops being run.
+#
+# What they uniquely catch is a widget that cannot be built. Whether the maths
+# itself parses — the failure that actually reaches a student, as a "Parser
+# Error" where the question should be — is covered in under a second by
+# prompt_parses_test and lesson_parses_test, which read every prompt, every
+# revealed answer and every lesson span and stay in the default run.
+#
+#     flutter test                                  # short
+#     flutter test --run-skipped --tags slow        # the exhaustive ones too
+tags:
+  slow:
+    skip: "exhaustive; run with: flutter test --run-skipped --tags slow"

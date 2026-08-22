@@ -9,9 +9,23 @@ attempt is logged locally. Nothing is sent anywhere.
 ```sh
 flutter run                                # the shipped question bank
 flutter run --dart-define=CONTENT=sample   # a small stand-in course
-flutter test
+flutter test                               # about twenty seconds
 flutter analyze
 ```
+
+Two tests build every question and every lesson through the real widget tree.
+They are most of the running time and are tagged `slow`, so `flutter test`
+skips them:
+
+```sh
+flutter test --run-skipped --tags slow
+```
+
+What they uniquely catch is a widget that cannot be built. Whether the maths
+parses — the failure a student actually sees, a "Parser Error" where the
+question should be — is checked in under a second by `prompt_parses_test` and
+`lesson_parses_test` over every prompt, revealed answer and lesson span, and
+those stay in the default run.
 
 Every setting lives in `lib/config.dart`. Nothing else in `lib` names an asset
 path.

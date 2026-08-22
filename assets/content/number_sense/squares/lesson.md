@@ -20,3 +20,13 @@ $$
 $$
 
 Avoid FOILing when possible so you can work on having automatic responses on some of the questions.
+
+**Estimating a square root** for a non-perfect square uses the memorized table above: find the perfect square closest to $n\text{,}$ take its root as your estimate for $\sqrt{n}\text{,}$ then finish the arithmetic. Since these are always $(*)$ estimate questions with a generous margin, you don't need to interpolate — the nearest whole root is close enough.
+
+For example, $\sqrt{1090} \times 31$: since $33^2 = 1089$ is essentially $1090\text{,}$ take $\sqrt{1090} \approx 33\text{,}$ so $\sqrt{1090} \times 31 \approx 33 \times 31 = 1023$, comfortably inside the allowed range of $972$ to $1075$.
+
+Similarly, for $509 \times \sqrt{905}$: since $30^2 = 900$ is close to $905\text{,}$ use $\sqrt{905} \approx 30\text{,}$ giving $509 \times 30 = 15270$, inside the allowed range of $14546$ to $16078$.
+
+**Percent of itself:** a question like asking for $24\%$ of 24 is just $\dfrac{24}{100} \times 24 = \dfrac{24^2}{100}$, so it reduces to a memorized square divided by 100. Since $24^2 = 576\text{,}$ the answer is $5.76$. Likewise $31\%$ of $31 = \dfrac{31^2}{100} = \dfrac{961}{100} = 9.61$, and $27\%$ of $27 = \dfrac{27^2}{100} = \dfrac{729}{100} = 7.29$.
+
+**Imaginary roots:** $\sqrt{-a} = i\sqrt{a}$, so a product of two negative-radicand square roots picks up a factor of $i^2 = -1$: $\sqrt{-a}\times\sqrt{-b} = i\sqrt{a}\times i\sqrt{b} = -\sqrt{ab}$. For example, $\sqrt{-196}\times\sqrt{-256} = -\sqrt{196\times 256} = -(14\times16) = -224$.

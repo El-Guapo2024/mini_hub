@@ -14,3 +14,15 @@ $$
 2^{10} = 1024 &         &
 \end{array}
 $$
+
+**Solving for an unknown exponent** uses these memorized powers in reverse: rewrite both sides as powers of the same base, then match up the exponents.
+
+For example, $5^x = 125$: since $125 = 5^3$, we get $x=3$, so $x^5 = 3^5 = \mathbf{243}$.
+
+For $2^{x+1} = 32$: since $32 = 2^5$, we get $x+1=5$, so $x=4$ and $x-1=\mathbf{3}$.
+
+For $5^{x-1} = 3125$: since $3125 = 5^5$, we get $x-1=5$, so $x=6$ and $x+1=\mathbf{7}$.
+
+Sometimes the two sides don't share an obvious common base at first glance, so rewrite both as powers of the same prime. For $9^x = 243$: rewrite $9 = 3^2$ and $243 = 3^5$, giving $3^{2x} = 3^5$, so $2x=5$ and $x=\mathbf{2.5}$.
+
+The same idea works when the unknown is the base instead of the exponent. For $x^3=64$: since $64=4^3$, we get $x=4$, so $3^x = 3^4 = \mathbf{81}$. Likewise, if $x^5=-32$, since $(-2)^5=-32$, we get $x=-2$, so $5^x = 5^{-2} = \dfrac{1}{25} = \mathbf{0.04}$.

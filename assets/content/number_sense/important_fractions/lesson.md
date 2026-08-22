@@ -102,3 +102,19 @@ $$
 $$
 
 Although memorization of *all* fractions is ideal, this method will result in correctly answering the question, albeit a lot slower.
+
+## Using the Sixteenths Table for Reciprocals
+
+The sixteenths table above is also handy for spotting reciprocals of decimals that are just over $1$. For example, to find the reciprocal of $-1.0625$, first recognize the decimal part: $.0625 = \dfrac{1}{16}$. So
+
+$$
+-1.0625 = -\left(1 + \frac{1}{16}\right) = -\frac{17}{16}
+$$
+
+The reciprocal simply flips the fraction:
+
+$$
+\frac{1}{-\frac{17}{16}} = -\frac{16}{17}
+$$
+
+No long division needed once the sixteenths table is memorized.

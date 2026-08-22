@@ -53,6 +53,40 @@ $1^2 - 2^2 + 3^2 - \cdots + 9^2 = \dfrac{9 \cdot 10}{2} = 45$
 
 $1^2 - 2^2 + 3^2 - \cdots - 12^2 = -\dfrac{12 \cdot 13}{2} = -78$
 
+**Sum of the First $m$ Alternating Cubes**
+
+The same trick applies to cubes, but the pattern splits depending on whether $m$ is odd or even:
+
+$$
+\sum_{n=1}^{m} (-1)^{n+1} n^3 = 1^3 - 2^3 + 3^3 - \cdots \pm m^3 =
+\begin{cases}
+\dfrac{(m+1)^2 (2m-1)}{4} & \text{if } m \text{ is odd} \\
+-\dfrac{m^2 (2m+3)}{4} & \text{if } m \text{ is even}
+\end{cases}
+$$
+
+*Example (odd $m\text{)}$:* $1^3 - 2^3 + 3^3 - 4^3 + 5^3$ has $m = 5$, so:
+
+$$
+\frac{(5+1)^2 (2 \cdot 5 - 1)}{4} = \frac{36 \cdot 9}{4} = \mathbf{81}
+$$
+
+A question may hand you the terms grouped by parity instead of written in alternating order, such as evens minus odds, or reversed largest-to-smallest. Since addition can be reordered, just rewrite the expression into the standard ascending alternating form first, then apply the formula above.
+
+*Example:* $(6^3 + 4^3 + 2^3) - (5^3 + 3^3 + 1^3)$ is the same value as $-(1^3 - 2^3 + 3^3 - 4^3 + 5^3 - 6^3)$, i.e. the negative of the $m=6$ case:
+
+$$
+-\left(-\frac{6^2 (2 \cdot 6 + 3)}{4}\right) = -\left(-\frac{36 \cdot 15}{4}\right) = -(-135) = \mathbf{135}
+$$
+
+If the alternating cubes do not start at $n=1$, use the same subtraction idea you would use for any partial sum: compute the full sum up to the last term, and subtract off the full sum up to one term before the first term you want, since the missing early terms cancel out.
+
+*Example:* $3^3 - 4^3 - 2^3 + 5^3$ rearranges to the ascending alternating form $-2^3 + 3^3 - 4^3 + 5^3$, which runs from $n=2$ to $n=5$. Take the $m=5$ total and remove the $m=1$ term:
+
+$$
+\left(\frac{6^2 \cdot 9}{4}\right) - \left(\frac{2^2 \cdot 1}{4}\right) = 81 - 1 = \mathbf{80}
+$$
+
 **Sum of a General Arithmetic Series**
 
 $$
@@ -68,6 +102,28 @@ $$
 m = \frac{35 - 8}{3} + 1 = 10 \\
 \text{So } \sum = \frac{(8+35) \cdot 10}{2} = 43 \cdot 5 = \mathbf{215}
 \end{aligned}
+$$
+
+**Finding the nth Term of an Arithmetic Sequence**
+
+The term-count formula above can be rearranged to solve for the term value itself instead of the term count. Starting from $m = \dfrac{a_m - a_1}{d} + 1$ and solving for $a_m$:
+
+$$
+a_m = a_1 + (m-1) \cdot d
+$$
+
+This lets you jump straight to the $m^{\text{th}}$ term of a sequence without listing every term in between: just identify the first term $a_1$, the common difference $d$, and plug in the term number $m$.
+
+*Example:* Find the $25^{\text{th}}$ term of $3, 8, 13, 18, \cdots$. Here $a_1 = 3$ and $d = 5$:
+
+$$
+a_{25} = 3 + (25-1) \cdot 5 = 3 + 120 = \mathbf{123}
+$$
+
+*Example:* Find the $11^{\text{th}}$ term of $12, 9.5, 7, 4.5, \cdots$. Here $a_1 = 12$ and $d = -2.5$:
+
+$$
+a_{11} = 12 + (11-1) \cdot (-2.5) = 12 - 25 = \mathbf{-13}
 $$
 
 **Sum of an Infinite Geometric Series**

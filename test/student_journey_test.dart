@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:mini_hub/ui/screens/topic_screen.dart';
 import 'package:math_keyboard/math_keyboard.dart';
 import 'package:mini_hub/main.dart';
 import 'package:mini_hub/progress/attempt_store.dart';
@@ -28,6 +29,11 @@ Future<void> _scrollUntilVisible(WidgetTester tester, Finder finder) async {
 }
 
 void main() {
+  // The deck is shuffled in the app. This test types a particular answer, so
+  // it has to know which question it is answering.
+  setUp(() => debugShufflePractice = false);
+  tearDown(() => debugShufflePractice = true);
+
   late Directory dir;
   late AttemptStore store;
 
@@ -239,20 +245,22 @@ void main() {
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 100));
 
+    // Reopening deals a fresh deck of what is left, so the answered question
+    // is not in it and the tick that marks one is not on screen. This used to
+    // assert the opposite: the deck reopened at question one every time, so a
+    // student met the same answered card at the top of every sitting.
     expect(
       find.byIcon(Icons.check_circle),
-      findsOneWidget,
-      reason:
-          'reopening the topic should show question 1 as already answered correctly',
+      findsNothing,
+      reason: 'the answered question should not be dealt again',
     );
-    // The previous route (topic list, "1 of 67 done") is still stacked
-    // beneath this one, so more than one match is expected; the header text
-    // "1 of 67   ·   1 done" is what confirms the practice screen itself.
+    // 66 left of 67, and the topic's own total beside it. The previous route
+    // is still stacked beneath, so the loose match sees more than one.
     expect(find.textContaining('1 of'), findsWidgets);
     expect(
-      find.text('1 of 67   ·   1 done'),
+      find.text('1 of 66   ·   1 done'),
       findsOneWidget,
-      reason: 'the practice header should still count question 1 as done',
+      reason: 'the deck should hold what is left, and say what the topic is at',
     );
 
     expect(tester.takeException(), isNull);

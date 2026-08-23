@@ -1,25 +1,47 @@
-# Shipping to TestFlight
+# Shipping
 
-Every merge to `main` builds a signed iOS release and uploads it to App Store
-Connect, where it appears in TestFlight. That build is the artifact that goes
-to the App Store — there is no separate release build to make later.
-
-Two workflows:
+Every merge to `main` bundles the app and attaches it to the workflow run.
+Nothing is signed for a store and nothing is uploaded to Apple yet — that waits
+on an Apple Developer account. The release point comes later; the artifact is
+here now.
 
 | Workflow | Runs on | Does |
 | --- | --- | --- |
 | `pr.yml` | pull requests, and pushes to `main` | format, analyze, both test suites |
-| `testflight.yml` | pushes to `main`, or by hand | archives, signs, uploads |
+| `build.yml` | pushes to `main`, or by hand | APK and iOS archive, attached to the run |
+| `testflight.yml` | **by hand only** | signs and uploads to App Store Connect |
 
-The gate runs a second time inside `testflight.yml`. That is deliberate: a
-direct push to `main` never opens a pull request, and this is the job that puts
-code on someone's phone.
+## Getting a build
 
-## What has to be set before the first build can work
+Actions → the run for your merge → **Artifacts**, at the bottom.
+
+| Artifact | What it is |
+| --- | --- |
+| `mini-hub-android-<n>` | `app-release.apk`. Install it on any Android phone — the phone will warn about an unknown source, because it is signed with the Flutter debug key rather than a Play Store one. |
+| `mini-hub-ios-archive-<n>` | `Runner.xcarchive`, zipped. Not installable: an iOS build has to be signed by a real account before a phone will run it. It is kept because signing it is the only step between here and TestFlight. |
+
+The iOS job earns its place even so — a release build is compiled ahead of time
+and tree-shaken, and it can fail where the debug build the tests run against
+does not.
+
+Artifacts are kept for 30 days.
+
+## Turning on TestFlight, later
+
+`testflight.yml` is written and works, but its `push` trigger is removed so it
+cannot fail on every merge — a workflow that is always red is one everybody
+learns to ignore. Run it from the Actions tab once the list below is done, and
+when it goes green, add back:
+
+```yaml
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+```
 
 Nothing below can be done from this repository — all of it needs an Apple
-Developer account. Until it is in place `testflight.yml` fails, and says which
-piece is missing.
+Developer account.
 
 ### 1. A bundle identifier you own
 
@@ -62,9 +84,11 @@ Give the API key the **App Manager** role. Developer cannot upload builds.
 
 ## Version numbers
 
-The build number is the workflow run number. App Store Connect refuses a build
-number it has seen before, and `pubspec.yaml` ships `+1` forever, so CI
-overrides it with something that only ever goes up.
+The build number is the workflow run number, in every workflow. App Store
+Connect refuses a build number it has seen before, and `pubspec.yaml` ships `+1`
+forever, so CI overrides it with something that only ever goes up. It is worth
+doing now rather than at the end: it means two artifacts from two merges are
+told apart by the app itself, not only by the file they came in.
 
 The marketing version — the `1.0.0` in `pubspec.yaml` — is left alone, because
 deciding that a release is 1.1 rather than 1.0.1 is not a thing CI should guess.

@@ -1,0 +1,105 @@
+name: Build
+
+# Every merge to main bundles the app and attaches it to the run.
+#
+# Nothing here is signed for the store and nothing is uploaded to Apple. That
+# comes later, when there is an Apple account to upload with; see
+# `testflight.yml`, which is written and waiting. The point of this workflow is
+# that every merge leaves behind something you can actually hold — an APK you
+# can install on a phone right now, and an iOS archive that only needs signing.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # The gate is not repeated here. `pr.yml` runs on pushes to main as well as
+  # on pull requests, so a direct push is still checked — and nothing this
+  # workflow produces reaches anyone who has not chosen to install it.
+
+  android:
+    name: apk
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - run: flutter pub get
+
+      - name: Build the APK
+        # A release build, but signed with the debug key that the Flutter
+        # template configures — which is why this needs no account and no
+        # secret. It installs on any phone that allows unknown sources. Play
+        # Store would refuse it; that is a later problem and a different key.
+        run: |
+          set -euo pipefail
+          version=$(grep -m1 '^version:' pubspec.yaml | sed 's/version: //; s/+.*//')
+          flutter build apk --release \
+            --build-name "$version" \
+            --build-number "${{ github.run_number }}"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mini-hub-android-${{ github.run_number }}
+          path: build/app/outputs/flutter-apk/app-release.apk
+          if-no-files-found: error
+          retention-days: 30
+
+  ios:
+    name: ios archive
+    # Only a Mac can archive an iOS app, signed or not.
+    runs-on: macos-14
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - run: flutter pub get
+
+      - name: Build the archive
+        # --no-codesign means no certificate, no profile, no bundle id that
+        # Apple has heard of. Flutter says "ipa not built" and leaves the
+        # .xcarchive, which is the right thing to keep: exporting a signed IPA
+        # from it later is the only step this is missing.
+        #
+        # It also means every merge proves the release build compiles, which a
+        # debug test run does not — tree shaking and AOT fail on their own.
+        run: |
+          set -euo pipefail
+          version=$(grep -m1 '^version:' pubspec.yaml | sed 's/version: //; s/+.*//')
+          flutter build ipa --release --no-codesign \
+            --build-name "$version" \
+            --build-number "${{ github.run_number }}"
+
+      - name: Compress the archive
+        # An .xcarchive is a directory of thousands of files. upload-artifact
+        # would zip it anyway, one file at a time and slowly.
+        run: |
+          set -euo pipefail
+          cd build/ios/archive
+          zip -qry "$RUNNER_TEMP/Runner.xcarchive.zip" ./*.xcarchive
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mini-hub-ios-archive-${{ github.run_number }}
+          path: ${{ runner.temp }}/Runner.xcarchive.zip
+          if-no-files-found: error
+          retention-days: 30

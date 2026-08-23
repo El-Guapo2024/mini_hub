@@ -1,15 +1,17 @@
 name: TestFlight
 
-# Every merge to main becomes a TestFlight build.
+# A signed build, uploaded to App Store Connect, where it appears in TestFlight.
 #
-# This is the artifact that goes to the App Store, so it is signed for
-# distribution and uploaded to App Store Connect rather than left on a release
-# page. Nothing here runs on a pull request: a PR must not be able to ship.
+# NOT WIRED UP YET, deliberately. It needs an Apple Developer account, a bundle
+# identifier we own, and eight secrets — none of which exist. Until they do it
+# would fail on every merge, and a workflow that is always red teaches everyone
+# to ignore it.
+#
+# So it runs only when someone asks for it by hand. `build.yml` is what runs on
+# a merge today. When the account is ready: fill in the secrets listed in
+# docs/shipping.md, set a real bundle id, try it once from the Actions tab, and
+# then add the `push: branches: [main]` trigger back.
 on:
-  push:
-    branches: [main]
-  # So a build can be re-cut without an empty commit — a rejected upload, an
-  # expired certificate, an App Store Connect outage.
   workflow_dispatch:
 
 concurrency:

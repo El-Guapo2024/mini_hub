@@ -57,10 +57,11 @@ void main() {
 
   test('no lesson still says it is a placeholder', () {
     final placeholders = <String>[];
-    for (final lesson in Directory('assets/content')
-        .listSync(recursive: true)
-        .whereType<File>()
-        .where((f) => f.path.endsWith('lesson.md'))) {
+    for (final lesson
+        in Directory('assets/content')
+            .listSync(recursive: true)
+            .whereType<File>()
+            .where((f) => f.path.endsWith('lesson.md'))) {
       final text = lesson.readAsStringSync();
       if (text.contains('appendix entry') || text.contains('no extended')) {
         placeholders.add(lesson.parent.path);

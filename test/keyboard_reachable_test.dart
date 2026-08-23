@@ -48,10 +48,11 @@ void main() {
     var checked = 0;
     final unreachable = <String>[];
 
-    for (final file in Directory('assets/content')
-        .listSync(recursive: true)
-        .whereType<File>()
-        .where((f) => f.path.endsWith('questions.json'))) {
+    for (final file
+        in Directory('assets/content')
+            .listSync(recursive: true)
+            .whereType<File>()
+            .where((f) => f.path.endsWith('questions.json'))) {
       final questions = jsonDecode(file.readAsStringSync()) as List<dynamic>;
       for (final raw in questions.cast<Map<String, dynamic>>()) {
         final answer = Answer.fromJson(raw['answer'] as Map<String, dynamic>);

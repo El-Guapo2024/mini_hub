@@ -1,0 +1,56 @@
+name: PR
+
+# The merge gate. Everything here has to pass before main moves, because main
+# is what ships to TestFlight.
+on:
+  pull_request:
+    branches: [main]
+  # Also on main itself, so a direct push is checked even though the intent is
+  # that changes arrive through pull requests.
+  push:
+    branches: [main]
+
+concurrency:
+  # A second push to the same branch cancels the first: the older answer is
+  # about code nobody is going to merge.
+  group: pr-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: analyze and test
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          # Pinned to the channel rather than a version so the toolchain does
+          # not move under us on a Tuesday. Bump deliberately.
+          channel: stable
+          cache: true
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Check formatting
+        # Formatting is mechanical, so it is worth failing on rather than
+        # arguing about in review. --set-exit-if-changed reports rather than
+        # rewrites.
+        run: dart format --output=none --set-exit-if-changed lib test
+
+      - name: Analyze
+        # Warnings included: the analyzer has caught a shipped YAML break and
+        # an unused import in this repo already.
+        run: flutter analyze --fatal-infos --fatal-warnings
+
+      - name: Test
+        # The everyday suite: ~181 tests in about half a minute.
+        run: flutter test --reporter expanded
+
+      - name: Test (slow)
+        # The whole-bank rendering checks, tagged slow so they stay out of the
+        # local loop. On CI there is no reason to skip them — a question that
+        # renders as "Parser Error" for a student is exactly what they catch.
+        run: flutter test --run-skipped --tags slow --reporter expanded

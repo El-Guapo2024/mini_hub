@@ -59,7 +59,7 @@ class QuestionWidget extends StatefulWidget {
 /// digit lands to its left — which leaves nothing before the cursor for delete
 /// to take, so it did nothing at all. A typo could only be undone by clearing
 /// the whole answer and starting again.
-class _AnswerController extends MathFieldEditingController {
+class AnswerController extends MathFieldEditingController {
   /// Whether the answer is being typed from its last digit to its first.
   bool rightToLeft = false;
 
@@ -79,7 +79,7 @@ class _AnswerController extends MathFieldEditingController {
 }
 
 class _QuestionWidgetState extends State<QuestionWidget> {
-  final _controller = _AnswerController();
+  final _controller = AnswerController();
   _Result? _result;
 
   /// Held so it can be cancelled: a card answered right and then swiped away

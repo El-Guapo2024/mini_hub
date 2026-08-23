@@ -98,36 +98,47 @@ jobs:
           security list-keychain -d user -s "$keychain" login.keychain-db
           rm "$RUNNER_TEMP/dist.p12"
 
-      - name: Install the provisioning profile
+      - name: Place the App Store Connect API key
+        # Used twice: Xcode signs with it below, altool uploads with it later.
+        # Written once, in the directory altool insists on, under the name it
+        # insists on.
         env:
-          PROVISIONING_PROFILE: ${{ secrets.IOS_PROVISIONING_PROFILE }}
+          API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
+          API_PRIVATE_KEY: ${{ secrets.APP_STORE_CONNECT_PRIVATE_KEY }}
         run: |
           set -euo pipefail
-          profiles="$HOME/Library/MobileDevice/Provisioning Profiles"
-          mkdir -p "$profiles"
-          echo "$PROVISIONING_PROFILE" | base64 --decode > "$profiles/dist.mobileprovision"
+          mkdir -p ~/private_keys
+          echo "$API_PRIVATE_KEY" | base64 --decode > ~/private_keys/AuthKey_$API_KEY_ID.p8
 
       - name: Build the IPA
         env:
-          EXPORT_METHOD: app-store-connect
+          API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
+          API_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
         run: |
           set -euo pipefail
-          # The export options tell Xcode this is a store build and which
-          # profile signs it. Written here rather than committed because the
-          # profile name belongs to the account, not to the source.
+          # Automatic signing, with the API key as Xcode's credentials. Xcode
+          # fetches the provisioning profile from App Store Connect, and
+          # creates it if it does not exist yet.
+          #
+          # This replaces a committed profile and its name. A profile expires a
+          # year after it is made, always quietly and never at a good moment;
+          # one fetched per build cannot go stale. It also removes the step
+          # where the profile in the secret and the app being built disagree
+          # about the bundle id, which fails with a message about nothing.
+          #
+          # The signing certificate is still ours, imported above, and stays
+          # that way on purpose: Apple allows three distribution certificates
+          # and a fresh runner has no private key to reuse, so leaving that to
+          # automatic signing would mint a new one every build and lock the
+          # account out on the fourth.
           cat > "$RUNNER_TEMP/export.plist" <<PLIST
           <?xml version="1.0" encoding="UTF-8"?>
           <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
           <plist version="1.0">
           <dict>
-            <key>method</key><string>$EXPORT_METHOD</string>
+            <key>method</key><string>app-store-connect</string>
             <key>teamID</key><string>${{ secrets.APPLE_TEAM_ID }}</string>
-            <key>signingStyle</key><string>manual</string>
-            <key>provisioningProfiles</key>
-            <dict>
-              <key>${{ vars.IOS_BUNDLE_ID }}</key>
-              <string>${{ secrets.IOS_PROVISIONING_PROFILE_NAME }}</string>
-            </dict>
+            <key>signingStyle</key><string>automatic</string>
             <key>uploadSymbols</key><true/>
           </dict>
           </plist>
@@ -137,19 +148,20 @@ jobs:
             --release \
             --build-name "$FLUTTER_VERSION" \
             --build-number "${{ github.run_number }}" \
-            --export-options-plist "$RUNNER_TEMP/export.plist"
+            --export-options-plist "$RUNNER_TEMP/export.plist" \
+            -- \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath ~/private_keys/AuthKey_$API_KEY_ID.p8 \
+            -authenticationKeyID "$API_KEY_ID" \
+            -authenticationKeyIssuerID "$API_ISSUER_ID"
 
       - name: Upload to TestFlight
         env:
           API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
           API_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
-          API_PRIVATE_KEY: ${{ secrets.APP_STORE_CONNECT_PRIVATE_KEY }}
         run: |
           set -euo pipefail
-          # altool looks for the key in this exact place, by this exact name.
-          mkdir -p ~/private_keys
-          echo "$API_PRIVATE_KEY" | base64 --decode > ~/private_keys/AuthKey_$API_KEY_ID.p8
-
+          # The key is already in ~/private_keys, where signing put it.
           ipa=$(find build/ios/ipa -name '*.ipa' -print -quit)
           echo "uploading $ipa"
 
@@ -161,7 +173,12 @@ jobs:
           xcrun altool --upload-app -f "$ipa" -t ios \
             --apiKey "$API_KEY_ID" --apiIssuer "$API_ISSUER_ID"
 
-          rm -rf ~/private_keys
+      - name: Shred the key
+        # always(), because a failed build is exactly when the key is left
+        # lying around. The runner is destroyed either way; this is so that
+        # being wrong about that is not interesting.
+        if: always()
+        run: rm -rf ~/private_keys
 
       - name: Keep the IPA and symbols
         # Attached to the run regardless of whether the upload landed, so a

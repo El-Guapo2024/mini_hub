@@ -43,26 +43,22 @@ on:
 Nothing below can be done from this repository — all of it needs an Apple
 Developer account.
 
-### 1. A bundle identifier you own
+### 1. Enrol in the Apple Developer Program
 
-The app is still `com.example.miniHub`. App Store Connect will not accept
-anything under `com.example`, so this has to change to a reverse-domain id you
-control — `com.juanluera.minihub`, say.
+<https://developer.apple.com/programs/enroll/> — $99 a year. Sign in with the
+Apple ID you already have; enrolment adds a membership to that account rather
+than making a new one. Choose **Individual**: an Organization enrolment needs a
+D-U-N-S number and takes weeks. Approval is usually a day or two.
 
-It is set in `ios/Runner.xcodeproj/project.pbxproj` (two places for the app,
-three more for `RunnerTests`), and has to be registered as an App ID in the
-Apple Developer portal and given an app record in App Store Connect.
+### 2. Register the bundle identifier
 
-`testflight.yml` checks this before it archives, so it fails in a minute
-rather than after twenty.
+The app is `com.juanluera.minihub`, set in
+`ios/Runner.xcodeproj/project.pbxproj` and `android/app/build.gradle.kts`. It is
+permanent from the first build App Store Connect sees.
 
-### 2. Repository variable
-
-| Variable | Value |
-| --- | --- |
-| `IOS_BUNDLE_ID` | the same identifier, so the export plist can name its profile |
-
-Set under Settings → Secrets and variables → Actions → Variables.
+- Developer portal → Identifiers → App IDs → App, **explicit**, that string. No
+  capabilities: the app uses none.
+- App Store Connect → Apps → `+`, pick that bundle id.
 
 ### 3. Repository secrets
 
@@ -74,13 +70,20 @@ is base64, because a secret is a string:
 | `APPLE_TEAM_ID` | 10-character team id | Apple Developer → Membership |
 | `IOS_DIST_CERTIFICATE_P12` | Apple Distribution certificate and private key | Keychain Access → export as .p12 → `base64 -i cert.p12 \| pbcopy` |
 | `IOS_DIST_CERTIFICATE_PASSWORD` | the password set on that export | you choose it |
-| `IOS_PROVISIONING_PROFILE` | App Store provisioning profile | Developer portal → Profiles → Distribution → App Store → `base64 -i profile.mobileprovision \| pbcopy` |
-| `IOS_PROVISIONING_PROFILE_NAME` | the profile's name, exactly | shown next to it in the portal |
 | `APP_STORE_CONNECT_KEY_ID` | API key id | App Store Connect → Users and Access → Integrations → App Store Connect API |
 | `APP_STORE_CONNECT_ISSUER_ID` | issuer id, on the same page | as above |
 | `APP_STORE_CONNECT_PRIVATE_KEY` | the `.p8` the key page downloads | `base64 -i AuthKey_XXX.p8 \| pbcopy` — Apple lets you download it once |
 
 Give the API key the **App Manager** role. Developer cannot upload builds.
+
+There is no provisioning profile to export. Xcode fetches one per build using
+the API key, and creates it if it does not exist. A committed profile expires a
+year after it is made, always quietly.
+
+The certificate is not left to the API key in the same way, deliberately: Apple
+allows three distribution certificates, and a fresh runner has no private key to
+reuse, so automatic signing would mint a new one every build and lock the
+account out on the fourth.
 
 ## Version numbers
 

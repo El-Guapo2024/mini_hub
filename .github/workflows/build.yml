@@ -62,7 +62,7 @@ jobs:
   ios:
     name: ios archive
     # Only a Mac can archive an iOS app, signed or not.
-    runs-on: macos-14
+    runs-on: macos-26
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4

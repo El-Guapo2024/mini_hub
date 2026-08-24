@@ -2,15 +2,13 @@ name: TestFlight
 
 # A signed build, uploaded to App Store Connect, where it appears in TestFlight.
 #
-# NOT WIRED UP YET, deliberately. It needs an Apple Developer account, a bundle
-# identifier we own, and eight secrets — none of which exist. Until they do it
-# would fail on every merge, and a workflow that is always red teaches everyone
-# to ignore it.
+# By hand for now, while the upload path is still being proven. Once a run
+# reaches TestFlight, add back:
 #
-# So it runs only when someone asks for it by hand. `build.yml` is what runs on
-# a merge today. When the account is ready: fill in the secrets listed in
-# docs/shipping.md, set a real bundle id, try it once from the Actions tab, and
-# then add the `push: branches: [main]` trigger back.
+#   push:
+#     branches: [main]
+#
+# so that every merge ships. `build.yml` is what runs on a merge until then.
 on:
   workflow_dispatch:
 
@@ -25,11 +23,29 @@ jobs:
   ship:
     name: build and upload
     # A macOS runner is not optional: only Xcode can archive an iOS app.
-    runs-on: macos-14
+    runs-on: macos-26
     timeout-minutes: 60
 
     steps:
       - uses: actions/checkout@v4
+
+      - name: Pick the newest Xcode
+        # Apple rejects an upload built against an SDK it considers old, and
+        # says so only at the very end:
+        #
+        #   This app was built with the iOS 17.5 SDK. All iOS and iPadOS apps
+        #   must be built with the iOS 26 SDK or later.
+        #
+        # A runner image can carry several Xcodes and the default is not always
+        # the newest, so pick it rather than inherit it, and print the version
+        # -- when Apple next raises the floor, this line is the evidence.
+        run: |
+          set -euo pipefail
+          newest=$(ls -d /Applications/Xcode*.app | sort -V | tail -1)
+          echo "using $newest"
+          sudo xcode-select -s "$newest/Contents/Developer"
+          xcodebuild -version
+          xcodebuild -showsdks | grep -i 'iphoneos' || true
 
       - uses: subosito/flutter-action@v2
         with:

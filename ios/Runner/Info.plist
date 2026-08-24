@@ -41,6 +41,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<!-- The app has no cryptography of its own: answers are stored in a
+	     local SQLite file and nothing is sent anywhere. Declaring it here
+	     stops App Store Connect asking the same question on every upload,
+	     and an unanswered question holds the build out of TestFlight. -->
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>

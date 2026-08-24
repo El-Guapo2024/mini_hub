@@ -2,14 +2,11 @@ name: TestFlight
 
 # A signed build, uploaded to App Store Connect, where it appears in TestFlight.
 #
-# By hand for now, while the upload path is still being proven. Once a run
-# reaches TestFlight, add back:
-#
-#   push:
-#     branches: [main]
-#
-# so that every merge ships. `build.yml` is what runs on a merge until then.
+# Every merge to main becomes a TestFlight build. Nothing here runs on a pull
+# request: a PR must not be able to ship.
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 concurrency:

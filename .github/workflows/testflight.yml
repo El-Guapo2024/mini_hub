@@ -56,6 +56,7 @@ jobs:
           bundle_id=$(grep -m1 'PRODUCT_BUNDLE_IDENTIFIER = ' ios/Runner.xcodeproj/project.pbxproj \
             | sed 's/.*= //; s/;//')
           echo "bundle identifier: $bundle_id"
+          echo "BUNDLE_ID=$bundle_id" >> "$GITHUB_ENV"
           if [[ "$bundle_id" == com.example.* ]]; then
             echo "::error::The bundle identifier is still $bundle_id. App Store" \
                  "Connect will not accept com.example.*; set a real reverse-domain" \
@@ -110,6 +111,21 @@ jobs:
           mkdir -p ~/private_keys
           echo "$API_PRIVATE_KEY" | base64 --decode > ~/private_keys/AuthKey_$API_KEY_ID.p8
 
+      - name: Install the provisioning profile
+        # Made through the App Store Connect API rather than committed as a
+        # secret, so there is no profile sitting in a repository quietly
+        # expiring. See tools/ci/provisioning_profile.py for why this is not
+        # left to Xcode's automatic signing.
+        env:
+          ASC_KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+        run: |
+          set -euo pipefail
+          pip3 install --quiet --break-system-packages pyjwt cryptography
+          export ASC_KEY_PATH="$HOME/private_keys/AuthKey_$ASC_KEY_ID.p8"
+          name=$(python3 tools/ci/provisioning_profile.py)
+          echo "PROFILE_NAME=$name" >> "$GITHUB_ENV"
+
       - name: Archive
         # Unsigned, and signed on export instead. `flutter build ipa` has no
         # way to pass flags through to xcodebuild -- it reads the first thing
@@ -129,21 +145,15 @@ jobs:
           API_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
         run: |
           set -euo pipefail
-          # Automatic signing, with the API key as Xcode's credentials: Xcode
-          # fetches the provisioning profile from App Store Connect, and
-          # creates it if it does not exist yet.
+          # Manual signing, with the certificate imported above and the profile
+          # installed above. Automatic signing cannot be used at all here:
+          # Xcode's version of it wants a cloud-managed distribution
+          # certificate, and an App Store Connect API key is not permitted to
+          # use one -- it fails with "Cloud signing permission error", and then
+          # with "No profiles were found" as a consequence of that.
           #
-          # This replaces a committed profile and its name. A profile expires a
-          # year after it is made, always quietly and never at a good moment;
-          # one fetched per build cannot go stale. It also removes the failure
-          # where the profile in the secret and the app being built disagree
-          # about the bundle id, which reports a message about nothing.
-          #
-          # The signing certificate is still ours, imported above, and stays
-          # that way on purpose: Apple allows three distribution certificates
-          # and a fresh runner has no private key to reuse, so leaving that to
-          # automatic signing too would mint a new one every build and lock the
-          # account out on the fourth.
+          # Manual here does not mean anyone does anything by hand. Both halves
+          # were made through the API and neither is committed.
           cat > "$RUNNER_TEMP/export.plist" <<PLIST
           <?xml version="1.0" encoding="UTF-8"?>
           <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -151,7 +161,11 @@ jobs:
           <dict>
             <key>method</key><string>app-store-connect</string>
             <key>teamID</key><string>${{ secrets.APPLE_TEAM_ID }}</string>
-            <key>signingStyle</key><string>automatic</string>
+            <key>signingStyle</key><string>manual</string>
+            <key>provisioningProfiles</key>
+            <dict>
+              <key>$BUNDLE_ID</key><string>$PROFILE_NAME</string>
+            </dict>
             <key>uploadSymbols</key><true/>
           </dict>
           </plist>

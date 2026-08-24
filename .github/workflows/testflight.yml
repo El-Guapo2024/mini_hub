@@ -1,0 +1,194 @@
+name: TestFlight
+
+# A signed build, uploaded to App Store Connect, where it appears in TestFlight.
+#
+# NOT WIRED UP YET, deliberately. It needs an Apple Developer account, a bundle
+# identifier we own, and eight secrets — none of which exist. Until they do it
+# would fail on every merge, and a workflow that is always red teaches everyone
+# to ignore it.
+#
+# So it runs only when someone asks for it by hand. `build.yml` is what runs on
+# a merge today. When the account is ready: fill in the secrets listed in
+# docs/shipping.md, set a real bundle id, try it once from the Actions tab, and
+# then add the `push: branches: [main]` trigger back.
+on:
+  workflow_dispatch:
+
+concurrency:
+  # Uploads must not race: two jobs in flight can both claim the same build
+  # number and the second is rejected. Queued, not cancelled — a merge that
+  # was already building should still reach testers.
+  group: testflight
+  cancel-in-progress: false
+
+jobs:
+  ship:
+    name: build and upload
+    # A macOS runner is not optional: only Xcode can archive an iOS app.
+    runs-on: macos-14
+    timeout-minutes: 60
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      # The gate runs again here rather than trusting that the PR checks ran.
+      # A direct push to main skips pull request checks entirely, and this is
+      # the job that puts code on someone's phone.
+      - name: Analyze
+        run: flutter analyze --fatal-infos --fatal-warnings
+
+      - name: Test
+        run: flutter test
+
+      - name: Check the release settings are real
+        # Fails early and says why, rather than after a twenty-minute archive
+        # that App Store Connect then rejects.
+        run: |
+          set -euo pipefail
+          bundle_id=$(grep -m1 'PRODUCT_BUNDLE_IDENTIFIER = ' ios/Runner.xcodeproj/project.pbxproj \
+            | sed 's/.*= //; s/;//')
+          echo "bundle identifier: $bundle_id"
+          if [[ "$bundle_id" == com.example.* ]]; then
+            echo "::error::The bundle identifier is still $bundle_id. App Store" \
+                 "Connect will not accept com.example.*; set a real reverse-domain" \
+                 "id you own in ios/Runner.xcodeproj and register it in App Store Connect."
+            exit 1
+          fi
+
+      - name: Set the build number
+        # App Store Connect refuses a build number it has already seen, and
+        # pubspec ships +1 forever. The run number only ever goes up, which is
+        # the one property the store cares about. The marketing version in
+        # pubspec is left alone — that is a human decision.
+        run: |
+          set -euo pipefail
+          version=$(grep -m1 '^version:' pubspec.yaml | sed 's/version: //; s/+.*//')
+          echo "shipping $version+${{ github.run_number }}"
+          echo "FLUTTER_VERSION=$version" >> "$GITHUB_ENV"
+
+      - name: Import the signing certificate
+        env:
+          CERTIFICATE_P12: ${{ secrets.IOS_DIST_CERTIFICATE_P12 }}
+          CERTIFICATE_PASSWORD: ${{ secrets.IOS_DIST_CERTIFICATE_PASSWORD }}
+        run: |
+          set -euo pipefail
+          # A keychain of its own, unlocked for this job only. The runner is
+          # thrown away afterwards, but a build should not leave a signing
+          # identity sitting in the default keychain even so.
+          keychain="$RUNNER_TEMP/signing.keychain-db"
+          password=$(uuidgen)
+          security create-keychain -p "$password" "$keychain"
+          security set-keychain-settings -lut 3600 "$keychain"
+          security unlock-keychain -p "$password" "$keychain"
+
+          echo "$CERTIFICATE_P12" | base64 --decode > "$RUNNER_TEMP/dist.p12"
+          security import "$RUNNER_TEMP/dist.p12" \
+            -k "$keychain" -P "$CERTIFICATE_PASSWORD" \
+            -T /usr/bin/codesign -T /usr/bin/security
+          # Without this, codesign stops for a UI prompt no one can answer.
+          security set-key-partition-list -S apple-tool:,apple: -s -k "$password" "$keychain"
+          security list-keychain -d user -s "$keychain" login.keychain-db
+          rm "$RUNNER_TEMP/dist.p12"
+
+      - name: Place the App Store Connect API key
+        # Used twice: Xcode signs with it below, altool uploads with it later.
+        # Written once, in the directory altool insists on, under the name it
+        # insists on.
+        env:
+          API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
+          API_PRIVATE_KEY: ${{ secrets.APP_STORE_CONNECT_PRIVATE_KEY }}
+        run: |
+          set -euo pipefail
+          mkdir -p ~/private_keys
+          echo "$API_PRIVATE_KEY" | base64 --decode > ~/private_keys/AuthKey_$API_KEY_ID.p8
+
+      - name: Build the IPA
+        env:
+          API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
+          API_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+        run: |
+          set -euo pipefail
+          # Automatic signing, with the API key as Xcode's credentials. Xcode
+          # fetches the provisioning profile from App Store Connect, and
+          # creates it if it does not exist yet.
+          #
+          # This replaces a committed profile and its name. A profile expires a
+          # year after it is made, always quietly and never at a good moment;
+          # one fetched per build cannot go stale. It also removes the step
+          # where the profile in the secret and the app being built disagree
+          # about the bundle id, which fails with a message about nothing.
+          #
+          # The signing certificate is still ours, imported above, and stays
+          # that way on purpose: Apple allows three distribution certificates
+          # and a fresh runner has no private key to reuse, so leaving that to
+          # automatic signing would mint a new one every build and lock the
+          # account out on the fourth.
+          cat > "$RUNNER_TEMP/export.plist" <<PLIST
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0">
+          <dict>
+            <key>method</key><string>app-store-connect</string>
+            <key>teamID</key><string>${{ secrets.APPLE_TEAM_ID }}</string>
+            <key>signingStyle</key><string>automatic</string>
+            <key>uploadSymbols</key><true/>
+          </dict>
+          </plist>
+          PLIST
+
+          flutter build ipa \
+            --release \
+            --build-name "$FLUTTER_VERSION" \
+            --build-number "${{ github.run_number }}" \
+            --export-options-plist "$RUNNER_TEMP/export.plist" \
+            -- \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath ~/private_keys/AuthKey_$API_KEY_ID.p8 \
+            -authenticationKeyID "$API_KEY_ID" \
+            -authenticationKeyIssuerID "$API_ISSUER_ID"
+
+      - name: Upload to TestFlight
+        env:
+          API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
+          API_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+        run: |
+          set -euo pipefail
+          # The key is already in ~/private_keys, where signing put it.
+          ipa=$(find build/ios/ipa -name '*.ipa' -print -quit)
+          echo "uploading $ipa"
+
+          # Validated first: a rejection here costs a minute, the same
+          # rejection after upload costs a build number and a round trip.
+          xcrun altool --validate-app -f "$ipa" -t ios \
+            --apiKey "$API_KEY_ID" --apiIssuer "$API_ISSUER_ID"
+
+          xcrun altool --upload-app -f "$ipa" -t ios \
+            --apiKey "$API_KEY_ID" --apiIssuer "$API_ISSUER_ID"
+
+      - name: Shred the key
+        # always(), because a failed build is exactly when the key is left
+        # lying around. The runner is destroyed either way; this is so that
+        # being wrong about that is not interesting.
+        if: always()
+        run: rm -rf ~/private_keys
+
+      - name: Keep the IPA and symbols
+        # Attached to the run regardless of whether the upload landed, so a
+        # rejected build can be looked at rather than rebuilt blind.
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ipa-${{ github.run_number }}
+          path: |
+            build/ios/ipa/*.ipa
+            build/ios/archive/*.xcarchive/dSYMs
+          if-no-files-found: warn
+          retention-days: 30

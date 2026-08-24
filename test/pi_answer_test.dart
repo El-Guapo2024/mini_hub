@@ -26,10 +26,7 @@ void main() {
   });
 
   test('a pi answer is typable on the keyboard and grades', () {
-    const answer = NumericAnswer(
-      value: 452.3893421169302,
-      display: r'144\pi',
-    );
+    const answer = NumericAnswer(value: 452.3893421169302, display: r'144\pi');
     expect(answer.inputVariables, [r'\pi'], reason: 'the keyboard offers pi');
 
     // Exactly what the variable button inserts.
@@ -78,9 +75,7 @@ void main() {
     for (final file in files) {
       final questions = jsonDecode(file.readAsStringSync()) as List<dynamic>;
       for (final raw in questions.cast<Map<String, dynamic>>()) {
-        final answer = Answer.fromJson(
-          raw['answer'] as Map<String, dynamic>,
-        );
+        final answer = Answer.fromJson(raw['answer'] as Map<String, dynamic>);
         if (!answer.display.contains(r'\pi')) continue;
         checked++;
         expect(

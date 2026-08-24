@@ -48,8 +48,9 @@ void main() {
     final wrong = <String>[];
     var checked = 0;
 
-    for (final directory
-        in Directory('assets/content/number_sense').listSync().whereType<Directory>()) {
+    for (final directory in Directory(
+      'assets/content/number_sense',
+    ).listSync().whereType<Directory>()) {
       final file = File('${directory.path}/topic.yml');
       if (!file.existsSync()) continue;
 

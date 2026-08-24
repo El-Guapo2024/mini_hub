@@ -16,7 +16,6 @@ Future<void> _scrollUntilVisible(WidgetTester tester, Finder finder) async {
   }
 }
 
-
 Future<void> _openStemaArena(WidgetTester tester) async {
   await tester.tap(find.text('Stema Arena'));
   await tester.pump();
@@ -37,7 +36,7 @@ void main() {
 
   tearDown(() => dir.deleteSync(recursive: true));
 
-testWidgets('lesson-only topic: lesson renders, practice shows a message, '
+  testWidgets('lesson-only topic: lesson renders, practice shows a message, '
       'list row has no progress text', (tester) async {
     late AttemptStore store;
     await tester.runAsync(() async {
@@ -50,7 +49,11 @@ testWidgets('lesson-only topic: lesson renders, practice shows a message, '
 
     await _openStemaArena(tester);
 
-    for (var i = 0; i < 5 && find.text('Number Sense').evaluate().isEmpty; i++) {
+    for (
+      var i = 0;
+      i < 5 && find.text('Number Sense').evaluate().isEmpty;
+      i++
+    ) {
       await tester.pump(const Duration(milliseconds: 100));
     }
     await tester.tap(find.text('Number Sense'));
@@ -110,5 +113,4 @@ testWidgets('lesson-only topic: lesson renders, practice shows a message, '
     );
     expect(tester.takeException(), isNull);
   });
-
 }

@@ -13,13 +13,17 @@ void main() {
     });
 
     test('a numeric answer accepts a bracketed input', () {
-      expect(const NumericAnswer(value: 27).accepts(r'\left(4+5\right)\cdot3'),
-          isTrue);
+      expect(
+        const NumericAnswer(value: 27).accepts(r'\left(4+5\right)\cdot3'),
+        isTrue,
+      );
     });
 
     test('an estimate accepts a bracketed input inside its band', () {
-      expect(const ApproxAnswer(low: 26, high: 28).accepts(r'\left(4+5\right)3'),
-          isTrue);
+      expect(
+        const ApproxAnswer(low: 26, high: 28).accepts(r'\left(4+5\right)3'),
+        isTrue,
+      );
     });
   });
 
@@ -52,8 +56,10 @@ void main() {
       const answer = BaseAnswer(value: -0.5, base: 8);
       expect(answer.accepts(r'\frac{-4}{10}'), isTrue);
       expect(answer.accepts(r'-\frac{4}{10}'), isTrue);
-      expect(const BaseAnswer(value: 0.5, base: 8).accepts(r'-\frac{-4}{10}'),
-          isTrue);
+      expect(
+        const BaseAnswer(value: 0.5, base: 8).accepts(r'-\frac{-4}{10}'),
+        isTrue,
+      );
     });
   });
 
@@ -71,8 +77,13 @@ void main() {
     });
 
     test('a complex answer accepts an unsimplified equivalent', () {
-      expect(const ComplexAnswer(real: 2, imaginary: 16)
-          .accepts(r'\frac{2+2}{2}+16i'), isTrue);
+      expect(
+        const ComplexAnswer(
+          real: 2,
+          imaginary: 16,
+        ).accepts(r'\frac{2+2}{2}+16i'),
+        isTrue,
+      );
     });
 
     test('a real term may be written after the imaginary one', () {
@@ -104,10 +115,14 @@ void main() {
     });
 
     test('a wrong answer is still wrong', () {
-      expect(const NumericAnswer(value: 27).accepts(r'\left(4+5\right)\cdot2'),
-          isFalse);
-      expect(const FractionAnswer(value: Fraction(-3, 4))
-          .accepts(r'\frac{3}{4}'), isFalse);
+      expect(
+        const NumericAnswer(value: 27).accepts(r'\left(4+5\right)\cdot2'),
+        isFalse,
+      );
+      expect(
+        const FractionAnswer(value: Fraction(-3, 4)).accepts(r'\frac{3}{4}'),
+        isFalse,
+      );
     });
   });
 }

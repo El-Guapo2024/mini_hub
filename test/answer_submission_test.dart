@@ -35,7 +35,6 @@ void main() {
     answer: NumericAnswer(value: 2),
   );
 
-
   testWidgets('editing after a correct answer cancels the advance', (
     tester,
   ) async {

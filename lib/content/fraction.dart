@@ -75,7 +75,10 @@ class Fraction {
     final divisor = _gcd(numerator.abs(), denominator.abs());
     if (divisor == 0) return this;
     final sign = denominator.isNegative ? -1 : 1;
-    return Fraction(sign * (numerator ~/ divisor), sign * (denominator ~/ divisor));
+    return Fraction(
+      sign * (numerator ~/ divisor),
+      sign * (denominator ~/ divisor),
+    );
   }
 
   static int _gcd(int a, int b) => b == 0 ? a : _gcd(b, a % b);

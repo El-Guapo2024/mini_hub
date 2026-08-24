@@ -70,7 +70,11 @@ void main() {
 
     // ---- Course list (courses.json load) ----
     // Give the async course load a few pumps to land.
-    for (var i = 0; i < 5 && find.text('Number Sense').evaluate().isEmpty; i++) {
+    for (
+      var i = 0;
+      i < 5 && find.text('Number Sense').evaluate().isEmpty;
+      i++
+    ) {
       await tester.pump(const Duration(milliseconds: 100));
     }
     expect(
@@ -166,7 +170,8 @@ void main() {
     expect(
       find.textContaining('1 done'),
       findsOneWidget,
-      reason: 'the done count should tick up immediately after a correct answer',
+      reason:
+          'the done count should tick up immediately after a correct answer',
     );
 
     // Auto-advance timer is AppConfig.current.advanceAfter (700ms), then a

@@ -110,26 +110,39 @@ jobs:
           mkdir -p ~/private_keys
           echo "$API_PRIVATE_KEY" | base64 --decode > ~/private_keys/AuthKey_$API_KEY_ID.p8
 
-      - name: Build the IPA
+      - name: Archive
+        # Unsigned, and signed on export instead. `flutter build ipa` has no
+        # way to pass flags through to xcodebuild -- it reads the first thing
+        # after `--` as a Dart entrypoint and fails with "Target file not
+        # found" -- and the flags Xcode needs in order to fetch a provisioning
+        # profile can only be given to xcodebuild. So the two halves are split
+        # and the signing happens in the half that can be told how.
+        run: |
+          set -euo pipefail
+          flutter build ipa --release --no-codesign \
+            --build-name "$FLUTTER_VERSION" \
+            --build-number "${{ github.run_number }}"
+
+      - name: Sign and export the IPA
         env:
           API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
           API_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
         run: |
           set -euo pipefail
-          # Automatic signing, with the API key as Xcode's credentials. Xcode
+          # Automatic signing, with the API key as Xcode's credentials: Xcode
           # fetches the provisioning profile from App Store Connect, and
           # creates it if it does not exist yet.
           #
           # This replaces a committed profile and its name. A profile expires a
           # year after it is made, always quietly and never at a good moment;
-          # one fetched per build cannot go stale. It also removes the step
+          # one fetched per build cannot go stale. It also removes the failure
           # where the profile in the secret and the app being built disagree
-          # about the bundle id, which fails with a message about nothing.
+          # about the bundle id, which reports a message about nothing.
           #
           # The signing certificate is still ours, imported above, and stays
           # that way on purpose: Apple allows three distribution certificates
           # and a fresh runner has no private key to reuse, so leaving that to
-          # automatic signing would mint a new one every build and lock the
+          # automatic signing too would mint a new one every build and lock the
           # account out on the fourth.
           cat > "$RUNNER_TEMP/export.plist" <<PLIST
           <?xml version="1.0" encoding="UTF-8"?>
@@ -144,14 +157,15 @@ jobs:
           </plist>
           PLIST
 
-          flutter build ipa \
-            --release \
-            --build-name "$FLUTTER_VERSION" \
-            --build-number "${{ github.run_number }}" \
-            --export-options-plist "$RUNNER_TEMP/export.plist" \
-            -- \
+          archive=$(find build/ios/archive -maxdepth 1 -name '*.xcarchive' -print -quit)
+          echo "exporting $archive"
+
+          xcrun xcodebuild -exportArchive \
+            -archivePath "$archive" \
+            -exportOptionsPlist "$RUNNER_TEMP/export.plist" \
+            -exportPath build/ios/ipa \
             -allowProvisioningUpdates \
-            -authenticationKeyPath ~/private_keys/AuthKey_$API_KEY_ID.p8 \
+            -authenticationKeyPath "$HOME/private_keys/AuthKey_$API_KEY_ID.p8" \
             -authenticationKeyID "$API_KEY_ID" \
             -authenticationKeyIssuerID "$API_ISSUER_ID"
 

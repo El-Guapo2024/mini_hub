@@ -198,6 +198,23 @@ class _PracticeState extends State<_Practice> {
   /// they came back to that card deliberately.
   int _pageChanges = 0;
 
+  /// Moves past the question on screen without answering it.
+  ///
+  /// A miss no longer prints the answer, so a question the student cannot
+  /// get would otherwise be a question they are stuck on. Swiping the deck
+  /// has always done this; the button is here because nothing said so.
+  ///
+  /// Nothing is recorded. The attempt log is answers, and a skip is the
+  /// absence of one — the card keeps its place in the deck and comes round
+  /// again next time the topic is opened.
+  void _skip() {
+    if (_current >= _deck.length - 1) return;
+    _pages.nextPage(
+      duration: const Duration(milliseconds: 300),
+      curve: Curves.easeOut,
+    );
+  }
+
   /// Moves on from [index], a moment after it was answered right.
   ///
   /// The card that asked is named, because a [PageView] keeps its neighbour
@@ -312,6 +329,9 @@ class _PracticeState extends State<_Practice> {
                 key: ValueKey(question.id.value),
                 question: question,
                 onCorrect: () => _advanceFrom(index, changesWhenBuilt),
+                // Null on the last card, which is what hides the control
+                // where there is nothing to skip to.
+                onSkip: index >= questions.length - 1 ? null : _skip,
                 rightToLeft: _rightToLeft,
               );
             },

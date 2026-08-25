@@ -11,8 +11,13 @@ class TileGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridView.count(
-      crossAxisCount: 2,
+    // Sized by how big a tile should be, not by how many fit across. Two
+    // columns is right on a phone and absurd on a 13-inch iPad, where it gave
+    // each tile a third of a metre of card with a 48-pixel icon adrift in the
+    // middle of it. Asking for a maximum width instead means the phone still
+    // gets two and the iPad gets as many as it has room for.
+    return GridView.extent(
+      maxCrossAxisExtent: 240,
       padding: const EdgeInsets.all(16),
       mainAxisSpacing: 16,
       crossAxisSpacing: 16,

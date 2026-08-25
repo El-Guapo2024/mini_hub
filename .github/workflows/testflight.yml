@@ -221,6 +221,11 @@ jobs:
         #
         # It waits for Apple to finish processing, which is why this step takes
         # minutes while the ones around it take seconds.
+        #
+        # Both groups, not just the internal one. External testers are attached
+        # to the same build here rather than by hand; the build stays invisible
+        # to them until Apple's beta review passes it, which is Apple's timing
+        # and not something this step waits on.
         env:
           ASC_KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
           ASC_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}

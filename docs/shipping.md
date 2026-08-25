@@ -16,8 +16,14 @@ code on someone's iPad.
 
 ## Installing a build
 
-TestFlight, on the device. Sign in as a tester in the **Internal** group, open
-TestFlight, install **TheMiniHub**. Later merges update it in place.
+TestFlight, on the device. Later merges update it in place.
+
+| Group | Who | How they get in | Waits on review |
+| --- | --- | --- | --- |
+| `Internal` | anyone with a user account on this App Store Connect account | invited under Users and Access, then added to the group | no — a build is installable as soon as it is `VALID` |
+| `Public` | anyone else, up to 10,000 | the public link, or an email invitation | yes — the first build of each version needs Apple's beta review |
+
+Sign in as a tester in one of those, open TestFlight, install **TheMiniHub**.
 
 `build.yml` also attaches downloadable files to each run — Actions → the run →
 **Artifacts**, kept for 30 days:
@@ -148,9 +154,12 @@ It waits for Apple to move the build to `VALID`, which is why that step takes
 minutes when the ones around it take seconds, and it is safe to re-run: a build
 already with the group is left alone.
 
-The group name is `Internal` and the app id is written into the workflow. Both
-are account facts rather than secrets — publishing them costs nothing, and
-having them in the file means the step says what it does.
+It attaches the build to both groups — `Internal` and `Public`. The group names
+and the app id are account facts rather than secrets, so they live in the file
+rather than in a secret, and the step says what it does. External testers see
+the build only after Apple's beta review passes it; attaching it here rather
+than by hand is what stops them stalling on whichever build someone last
+remembered to attach.
 
 ## Version numbers
 

@@ -196,7 +196,7 @@ void main() {
     await tester.runAsync(() => Future<void>.delayed(Duration.zero));
     await tester.pump();
 
-    // Marked wrong, revealed answer shown, no auto-advance.
+    // Marked wrong, answer NOT shown, no auto-advance.
     expect(
       find.byIcon(Icons.close),
       findsOneWidget,
@@ -206,8 +206,11 @@ void main() {
     );
     expect(
       find.textContaining('Answer:'),
-      findsOneWidget,
-      reason: 'a wrong answer should reveal the correct answer',
+      findsNothing,
+      reason:
+          'a miss must not print the answer. It used to, and it was the '
+          'fastest way through the bank -- read the answer, move on. Skip is '
+          'the way past a question that will not come.',
     );
     // Pump well past the advance window: must NOT have moved on.
     await tester.pump(const Duration(milliseconds: 750));

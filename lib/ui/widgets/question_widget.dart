@@ -31,6 +31,7 @@ class QuestionWidget extends StatefulWidget {
     super.key,
     required this.question,
     this.onCorrect,
+    this.onSkip,
     this.rightToLeft = false,
   });
 
@@ -47,6 +48,14 @@ class QuestionWidget extends StatefulWidget {
   /// Called once the student has had a moment to see they were right. Null
   /// where there is nowhere to go next, which is why it is not required.
   final VoidCallback? onCorrect;
+
+  /// Leaves the question unanswered and moves on. Null on the last card, and
+  /// wherever there is nowhere to go, which is what hides the control.
+  ///
+  /// It sits with the question rather than up in the counter row, because
+  /// the counter row is dropped when the pane is short -- which is to say
+  /// whenever the maths keyboard is up, which is to say while practising.
+  final VoidCallback? onSkip;
 
   @override
   State<QuestionWidget> createState() => _QuestionWidgetState();
@@ -226,34 +235,27 @@ class _QuestionWidgetState extends State<QuestionWidget> {
     null => null,
   };
 
-  /// The grading rule before an attempt, the correct answer after a wrong one.
+  /// The grading rule, while the question is still open.
+  ///
+  /// A miss used to print `Answer: 54` under the field. It was the fastest
+  /// way out of a question, which is the problem: the answer arrived before
+  /// the student had a second go at working it out, and a bank this size is
+  /// no use if the way through it is reading the answers. A wrong attempt
+  /// now leaves the question exactly as it was, minus the attempt. Skip is
+  /// the way past one that will not come — see the practice screen.
   Widget? get _footer {
-    final answer = widget.question.answer;
-    if (_result == _Result.wrong) {
-      return Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          const Text(
-            'Answer: ',
-            style: TextStyle(color: Colors.white54, fontSize: 12),
-          ),
-          Math.tex(
-            answer.display,
-            textStyle: const TextStyle(fontSize: 13, color: Colors.white70),
-          ),
-        ],
-      );
-    }
-    // After the answer itself, because a wrong attempt needs the answer more
-    // than it needs this — and this stays true until the app is restarted.
     if (_recordingFailed) {
       return const Text(
         'Progress is not being saved on this device',
         style: TextStyle(color: _wrong, fontSize: 12),
       );
     }
-    final hint = answer.inputHint;
-    if (hint == null || _result != null) return null;
+    // Shown again after a miss, unlike the answer: that an estimate is an
+    // estimate, or that a fraction wants lowest terms, is the rule the
+    // attempt is graded by rather than what it grades to. Hidden once it is
+    // right, where there is nothing left to aim at.
+    final hint = widget.question.answer.inputHint;
+    if (hint == null || _result == _Result.correct) return null;
     return Text(
       hint,
       // white60 for the same reason as the placeholder: this is the only place
@@ -369,12 +371,29 @@ class _QuestionWidgetState extends State<QuestionWidget> {
             ),
           ),
           // Reserved whether or not there is a footer, so the field does not
-          // jump up the screen the moment an answer is graded.
+          // jump up the screen the moment an answer is graded. Skip shares
+          // the row for the same reason: space already held open cannot
+          // shift anything by being filled.
           SizedBox(
             height: 48,
             child: Padding(
               padding: const EdgeInsets.only(top: 12),
-              child: _footer ?? const SizedBox.shrink(),
+              child: Row(
+                children: [
+                  Expanded(child: _footer ?? const SizedBox.shrink()),
+                  if (widget.onSkip != null)
+                    TextButton(
+                      onPressed: widget.onSkip,
+                      style: TextButton.styleFrom(
+                        foregroundColor: Colors.white60,
+                        padding: const EdgeInsets.symmetric(horizontal: 12),
+                        minimumSize: const Size(0, 36),
+                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                      ),
+                      child: const Text('Skip', style: TextStyle(fontSize: 13)),
+                    ),
+                ],
+              ),
             ),
           ),
         ],

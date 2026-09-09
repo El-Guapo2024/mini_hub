@@ -1,0 +1,66 @@
+[
+  {
+    "id": "zw.1.4.q1",
+    "prompt": "|\\Psi\\rangle = \\cos\\frac{\\theta}{2}\\,|A\\rangle + e^{i\\phi}\\sin\\frac{\\theta}{2}\\,|B\\rangle \\text{ with } \\theta = \\frac{\\pi}{3}. \\ \\ P(A) = \\_\\_\\_\\_\\_\\_",
+    "topic": "quantum_superpositions",
+    "answer": {
+      "type": "fraction",
+      "num": 3,
+      "den": 4
+    }
+  },
+  {
+    "id": "zw.1.4.q2",
+    "prompt": "|\\Psi\\rangle = 2\\,|A\\rangle + (1+i)\\,|B\\rangle. \\text{ The physical content is the ratio } \\frac{\\beta}{\\alpha} = \\_\\_\\_\\_\\_\\_",
+    "topic": "quantum_superpositions",
+    "answer": {
+      "type": "complex",
+      "real": 0.5,
+      "imag": 0.5,
+      "display": "\\frac{1}{2}+\\frac{1}{2}i"
+    }
+  },
+  {
+    "id": "zw.1.4.q3",
+    "prompt": "\\text{For which } \\theta \\text{ is the canonical superposition equally likely to be found in } |A\\rangle \\text{ or } |B\\rangle? \\ \\ \\theta = \\_\\_\\_\\_\\_\\_",
+    "topic": "quantum_superpositions",
+    "answer": {
+      "type": "numeric",
+      "answer": 1.5707963267948966,
+      "display": "\\frac{\\pi}{2}"
+    }
+  },
+  {
+    "id": "zw.1.4.q4",
+    "prompt": "\\text{Which superposition gives 50/50 along } z \\text{ but every electron down along } x?\\\\ \\text{(1) } \\tfrac{1}{\\sqrt2}(|{\\uparrow}\\rangle + |{\\downarrow}\\rangle) \\quad \\text{(2) } \\tfrac{1}{\\sqrt2}(|{\\uparrow}\\rangle - |{\\downarrow}\\rangle) \\quad \\text{(3) } |{\\uparrow}\\rangle \\quad \\text{(4) a 50/50 mixture}",
+    "topic": "quantum_superpositions",
+    "answer": {
+      "type": "choice",
+      "correct": 2,
+      "count": 4,
+      "display": "(2)\\ \\tfrac{1}{\\sqrt2}(|{\\uparrow}\\rangle - |{\\downarrow}\\rangle)"
+    }
+  },
+  {
+    "id": "zw.1.4.q5",
+    "prompt": "\\phi \\text{ drops out of both probabilities } P(A), P(B). \\text{ What kind of experiment detects it?}\\\\ \\text{(1) A more precise measurement of } P(A)\\\\ \\text{(2) An interference experiment between the two components}\\\\ \\text{(3) None; } \\phi \\text{ is unphysical}\\\\ \\text{(4) Measuring } P(B) \\text{ instead}",
+    "topic": "quantum_superpositions",
+    "answer": {
+      "type": "choice",
+      "correct": 2,
+      "count": 4,
+      "display": "(2)\\ \\text{an interference experiment}"
+    }
+  },
+  {
+    "id": "zw.1.4.q6",
+    "prompt": "\\text{Which state is not equivalent to the other three?}\\\\ \\text{(1) } |A\\rangle + |B\\rangle \\quad \\text{(2) } i\\big(|A\\rangle + |B\\rangle\\big) \\quad \\text{(3) } -|A\\rangle - |B\\rangle \\quad \\text{(4) } |A\\rangle - |B\\rangle",
+    "topic": "quantum_superpositions",
+    "answer": {
+      "type": "choice",
+      "correct": 4,
+      "count": 4,
+      "display": "(4)\\ |A\\rangle - |B\\rangle\\ \\text{— the others differ only by an overall factor}"
+    }
+  }
+]

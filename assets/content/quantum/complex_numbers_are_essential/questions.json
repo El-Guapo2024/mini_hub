@@ -1,0 +1,32 @@
+[
+  {
+    "id": "zw.1.2.q1",
+    "prompt": "i = e^{i\\theta} \\text{ with } 0 \\le \\theta < 2\\pi. \\ \\ \\theta = \\_\\_\\_\\_\\_\\_",
+    "topic": "complex_numbers_are_essential",
+    "answer": { "type": "numeric", "answer": 1.5707963267948966, "display": "\\frac{\\pi}{2}" }
+  },
+  {
+    "id": "zw.1.2.q2",
+    "prompt": "\\text{The two square roots of } i \\text{ differ by an overall factor } c. \\ \\ c = \\_\\_\\_\\_\\_\\_",
+    "topic": "complex_numbers_are_essential",
+    "answer": { "type": "numeric", "answer": -1 }
+  },
+  {
+    "id": "zw.1.2.q3",
+    "prompt": "x^2 = -4. \\text{ The solution with positive imaginary part is } \\_\\_\\_\\_\\_\\_",
+    "topic": "complex_numbers_are_essential",
+    "answer": { "type": "complex", "real": 0, "imag": 2, "display": "2i" }
+  },
+  {
+    "id": "zw.1.2.q4",
+    "prompt": "\\text{How many solutions does } x^3 = 1 \\text{ have over the complex numbers?}",
+    "topic": "complex_numbers_are_essential",
+    "answer": { "type": "numeric", "answer": 3 }
+  },
+  {
+    "id": "zw.1.2.q5",
+    "prompt": "\\Psi = \\alpha + \\beta \\text{ with } \\alpha = \\tfrac{1}{2},\\ \\beta = -\\tfrac{1}{2}. \\text{ Then } |\\Psi|^2 - |\\alpha|^2 - |\\beta|^2 = \\_\\_\\_\\_\\_\\_",
+    "topic": "complex_numbers_are_essential",
+    "answer": { "type": "fraction", "num": -1, "den": 2 }
+  }
+]

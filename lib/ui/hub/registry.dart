@@ -6,7 +6,7 @@ import 'app_module.dart';
 final List<AppModule> registry = [
   CourseApp(),
   const ComingSoon('Robotics', Icons.smart_toy),
-  const ComingSoon('Physics Tools', Icons.science),
+  const PhysicsApp(),
   const ComingSoon('Physics LeetCode', Icons.functions),
   const ComingSoon('Notes', Icons.note),
   const ComingSoon('Projects', Icons.folder),

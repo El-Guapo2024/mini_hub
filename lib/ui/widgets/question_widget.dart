@@ -274,7 +274,8 @@ class _QuestionWidgetState extends State<QuestionWidget> {
     ApproxAnswer() ||
     ComplexAnswer() ||
     FractionAnswer() ||
-    BaseAnswer() => _typedAnswer(context),
+    BaseAnswer() ||
+    ChoiceAnswer() => _typedAnswer(context),
   };
 
   Widget _typedAnswer(BuildContext context) {

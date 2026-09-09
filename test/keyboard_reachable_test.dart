@@ -58,6 +58,8 @@ void main() {
         final answer = Answer.fromJson(raw['answer'] as Map<String, dynamic>);
         // An estimate reveals a range to aim at, not a value to type back.
         if (answer is ApproxAnswer) continue;
+        // A choice reveals the option's content; the typable form is its number.
+        if (answer is ChoiceAnswer) continue;
         checked++;
 
         // A base answer prints the base it is written in — `\frac{4}{7}_{8}`

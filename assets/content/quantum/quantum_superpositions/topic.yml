@@ -1,0 +1,11 @@
+id: quantum_superpositions
+title: 'Quantum Superpositions'
+logo: assets/icons/quantum.png
+zwiebach_section: '1.4'
+questionIds:
+  - zw.1.4.q1
+  - zw.1.4.q2
+  - zw.1.4.q3
+  - zw.1.4.q4
+  - zw.1.4.q5
+  - zw.1.4.q6

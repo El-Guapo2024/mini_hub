@@ -29,6 +29,9 @@ void main() {
       for (final raw in questions.cast<Map<String, dynamic>>()) {
         final answer = Answer.fromJson(raw['answer'] as Map<String, dynamic>);
         if (answer is ApproxAnswer) continue;
+        // A choice reveals the option's content; what a student types back is
+        // its number.
+        if (answer is ChoiceAnswer) continue;
         checked++;
         if (!answer.accepts(answer.display)) {
           rejected.add('${raw['id']}: ${answer.display}');

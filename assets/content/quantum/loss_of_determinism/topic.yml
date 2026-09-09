@@ -1,0 +1,12 @@
+id: loss_of_determinism
+title: 'Loss of Determinism'
+logo: assets/icons/quantum.png
+zwiebach_section: '1.3'
+questionIds:
+  - zw.1.3.q1
+  - zw.1.3.q2
+  - zw.1.3.q3
+  - zw.1.3.q4
+  - zw.1.3.q5
+  - zw.1.3.q6
+  - zw.1.3.q7

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "zw.2.1.q1",
+    "prompt": "\\text{Mach-Zehnder, photon in from the top, both beam splitters in place. } P(D_1) = \\_\\_\\_\\_\\_\\_",
+    "topic": "amplitudes_and_interference",
+    "answer": { "type": "numeric", "answer": 0 }
+  },
+  {
+    "id": "zw.2.1.q2",
+    "prompt": "\\text{Photon enters from the bottom, one balanced splitter. } P(\\text{upper}) = \\_\\_\\_\\_\\_\\_",
+    "topic": "amplitudes_and_interference",
+    "answer": { "type": "fraction", "num": 1, "den": 2 }
+  },
+  {
+    "id": "zw.2.1.q3",
+    "prompt": "\\text{At } D_1 \\text{ the two path amplitudes are } +\\tfrac12 \\text{ and } c. \\ \\ c = \\_\\_\\_\\_\\_\\_",
+    "topic": "amplitudes_and_interference",
+    "answer": { "type": "fraction", "num": -1, "den": 2 }
+  },
+  {
+    "id": "zw.2.1.q4",
+    "prompt": "\\text{Why can no assignment of probabilities to paths give } P(D_1) = 0?\\\\ \\text{(1) Probabilities are nonnegative, so their sum cannot cancel.}\\\\ \\text{(2) The photon always takes the upper path.}\\\\ \\text{(3) The detectors are imperfect.}\\\\ \\text{(4) The paths have different lengths.}",
+    "topic": "amplitudes_and_interference",
+    "answer": { "type": "choice", "correct": 1, "count": 4, "display": "(1)\\ \\text{probabilities cannot cancel}" }
+  }
+]

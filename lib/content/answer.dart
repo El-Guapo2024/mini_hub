@@ -3,7 +3,7 @@ import 'fraction.dart';
 
 /// How a question is answered. Recorded on every attempt, so the names are
 /// stored data: renaming one splits a question's history in two.
-enum QuestionType { numeric, estimate, complex, fraction, base }
+enum QuestionType { numeric, estimate, complex, fraction, base, choice }
 
 /// What counts as a correct response to a question.
 ///
@@ -43,6 +43,12 @@ sealed class Answer {
         return BaseAnswer(
           value: (json['answer'] as num).toDouble(),
           base: json['base'] as int,
+          display: json['display'] as String?,
+        );
+      case QuestionType.choice:
+        return ChoiceAnswer(
+          correct: json['correct'] as int,
+          count: json['count'] as int,
           display: json['display'] as String?,
         );
       case QuestionType.numeric:
@@ -355,6 +361,47 @@ class BaseAnswer extends Answer {
 
   @override
   String get display => _display ?? '${_trim(value)}_{$base}';
+}
+
+/// One option among several printed in the prompt, answered by its number.
+///
+/// The options themselves live in the prompt's LaTeX, so the shared math
+/// keyboard is the input and the widget stays type-blind — a student types
+/// `2` for option 2. The answer knows how many options exist, so a number
+/// outside the range is wrong rather than a parse error.
+class ChoiceAnswer extends Answer {
+  const ChoiceAnswer({
+    required this.correct,
+    required this.count,
+    String? display,
+  }) : _display = display;
+
+  /// The right option, 1-based, as the prompt numbers them.
+  final int correct;
+
+  /// How many options the prompt offers.
+  final int count;
+
+  /// The correct option restated, e.g. `(2)\ L_1L_2`, shown on reveal so a
+  /// wrong answer teaches the content rather than a bare index.
+  final String? _display;
+
+  @override
+  QuestionType get kind => QuestionType.choice;
+
+  @override
+  bool accepts(String tex) {
+    final entered = evaluateTex(tex);
+    if (entered == null) return false;
+    if (entered != entered.roundToDouble()) return false;
+    return entered.round() == correct;
+  }
+
+  @override
+  String? get inputHint => 'Enter the number of your choice (1–$count)';
+
+  @override
+  String get display => _display ?? '$correct';
 }
 
 /// Renders a double without a trailing `.0` on whole numbers.

@@ -1,0 +1,11 @@
+id: quantum
+title: 'Quantum Mechanics'
+icon: science
+topics:
+  - linearity_of_the_equations_of_motion
+  - complex_numbers_are_essential
+  - loss_of_determinism
+  - quantum_superpositions
+  - entanglement
+  - making_atoms_possible
+  - amplitudes_and_interference

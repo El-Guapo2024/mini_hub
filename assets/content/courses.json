@@ -1,3 +1,4 @@
 [
-  { "id": "number_sense", "path": "assets/content/number_sense/" }
+  { "id": "number_sense", "path": "assets/content/number_sense/" },
+  { "id": "quantum", "path": "assets/content/quantum/" }
 ]

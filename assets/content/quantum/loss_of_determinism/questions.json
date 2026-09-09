@@ -1,0 +1,44 @@
+[
+  {
+    "id": "zw.1.3.q1",
+    "prompt": "\\text{Light polarized along } x \\text{ meets a } 45^{\\circ} \\text{ polarizer, then a } y \\text{ polarizer. Fraction of photons emerging} = \\_\\_\\_\\_\\_\\_",
+    "topic": "loss_of_determinism",
+    "answer": { "type": "fraction", "num": 1, "den": 4 }
+  },
+  {
+    "id": "zw.1.3.q2",
+    "prompt": "\\text{Removing the } 45^{\\circ} \\text{ polarizer makes the emerging fraction } \\_\\_\\_\\_\\_\\_",
+    "topic": "loss_of_determinism",
+    "answer": { "type": "numeric", "answer": 0 }
+  },
+  {
+    "id": "zw.1.3.q3",
+    "prompt": "\\text{Why does inserting an extra absorber let more photons through?}\\\\ \\text{(1) It refocuses the beam.}\\\\ \\text{(2) Each passage projects the state, so polarization is rotated in steps.}\\\\ \\text{(3) The polarizers amplify the light.}\\\\ \\text{(4) It cannot; the lesson's claim is approximate.}",
+    "topic": "loss_of_determinism",
+    "answer": { "type": "choice", "correct": 2, "count": 4, "display": "(2)\\ \\text{each passage projects the state}" }
+  },
+  {
+    "id": "zw.1.3.q4",
+    "prompt": "N = 500 \\text{ polarizers stepping from } x \\text{ to } y, \\text{ 1000 photons in. Expected number emerging} = \\_\\_\\_\\_\\_\\_",
+    "topic": "loss_of_determinism",
+    "answer": { "type": "numeric", "answer": 995 }
+  },
+  {
+    "id": "zw.1.3.q5",
+    "prompt": "\\text{In the limit } N \\to \\infty, \\text{ the fraction emerging} \\to \\_\\_\\_\\_\\_\\_",
+    "topic": "loss_of_determinism",
+    "answer": { "type": "numeric", "answer": 1 }
+  },
+  {
+    "id": "zw.1.3.q6",
+    "prompt": "\\text{A photon in } \\cos\\alpha\\,|x\\rangle + \\sin\\alpha\\,|y\\rangle \\text{ passes an } x \\text{ polarizer. Probability it passes a second } x \\text{ polarizer} = \\_\\_\\_\\_\\_\\_",
+    "topic": "loss_of_determinism",
+    "answer": { "type": "numeric", "answer": 1 }
+  },
+  {
+    "id": "zw.1.3.q7",
+    "prompt": "(*) \\text{Photons per second from a 1 W laser at 520 nm} \\approx \\_\\_\\_\\_\\_\\_",
+    "topic": "loss_of_determinism",
+    "answer": { "type": "estimate", "low": 2.4e+18, "high": 2.8e+18 }
+  }
+]

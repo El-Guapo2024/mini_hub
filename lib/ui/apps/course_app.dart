@@ -20,8 +20,41 @@ class CourseApp implements AppModule {
   }
 }
 
+/// Physics, as its own way in.
+///
+/// The same screen over the same index, showing only the courses named here.
+/// A subject is a selection of what already exists rather than a second kind
+/// of thing, so nothing about loading, topics or progress differs — and a
+/// course reached this way is the same course reached from the hub, with one
+/// history rather than two.
+class PhysicsApp implements AppModule {
+  const PhysicsApp();
+
+  /// Course ids this tile offers. Named here rather than read from a field on
+  /// the course, because one list in one place is easier to check than a
+  /// subject spelled out in every course file.
+  static const courseIds = {'quantum'};
+
+  @override
+  String get title => 'Physics';
+
+  @override
+  IconData get icon => Icons.science;
+
+  @override
+  Widget build(BuildContext context) =>
+      const StemaArenaScreen(title: 'Physics', only: courseIds);
+}
+
 class StemaArenaScreen extends StatefulWidget {
-  const StemaArenaScreen({super.key});
+  const StemaArenaScreen({super.key, this.title = 'Stema Arena', this.only});
+
+  /// What the bar says. The screen is the same either way; only the heading
+  /// tells a student which way in they took.
+  final String title;
+
+  /// Ids to show, or null for every course the index names.
+  final Set<String>? only;
 
   @override
   State<StemaArenaScreen> createState() => _StemaArenaScreenState();
@@ -41,9 +74,17 @@ class _StemaArenaScreenState extends State<StemaArenaScreen> {
   Future<void> loadData() async {
     try {
       final result = await content.courses();
+      final only = widget.only;
       // The load is asynchronous and the screen can be popped mid-flight.
       if (!mounted) return;
-      setState(() => courses = result);
+      setState(
+        () => courses = only == null
+            ? result
+            : [
+                for (final c in result)
+                  if (only.contains(c.id)) c,
+              ],
+      );
     } on Object catch (e) {
       if (!mounted) return;
       // An unreadable index used to leave an empty grid and no explanation,
@@ -55,7 +96,7 @@ class _StemaArenaScreenState extends State<StemaArenaScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Stema Arena')),
+      appBar: AppBar(title: Text(widget.title)),
       body: _body(),
     );
   }

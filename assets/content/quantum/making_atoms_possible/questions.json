@@ -1,0 +1,38 @@
+[
+  {
+    "id": "zw.1.6.q1",
+    "prompt": "E_{\\text{cl}}(r) = c\\,\\frac{e^2}{r} \\text{ for the classical circular orbit.} \\ \\ c = \\_\\_\\_\\_\\_\\_",
+    "topic": "making_atoms_possible",
+    "answer": { "type": "fraction", "num": -1, "den": 2 }
+  },
+  {
+    "id": "zw.1.6.q2",
+    "prompt": "\\text{The measured hydrogen ground state energy, in eV} = \\_\\_\\_\\_\\_\\_",
+    "topic": "making_atoms_possible",
+    "answer": { "type": "numeric", "answer": -13.6 }
+  },
+  {
+    "id": "zw.1.6.q3",
+    "prompt": "V(r) = -k/r^n. \\text{ The uncertainty argument yields a minimum only for } n < \\_\\_\\_\\_\\_\\_",
+    "topic": "making_atoms_possible",
+    "answer": { "type": "numeric", "answer": 2 }
+  },
+  {
+    "id": "zw.1.6.q4",
+    "prompt": "\\text{Why does the quantum atom not radiate?}\\\\ \\text{(1) The electron moves too slowly.}\\\\ \\text{(2) The ground state is stationary, with zero angular momentum — no accelerating orbit.}\\\\ \\text{(3) The proton absorbs the radiation.}\\\\ \\text{(4) It does, but too faintly to detect.}",
+    "topic": "making_atoms_possible",
+    "answer": { "type": "choice", "correct": 2, "count": 4, "display": "(2)\\ \\text{the ground state is stationary}" }
+  },
+  {
+    "id": "zw.1.6.q5",
+    "prompt": "(*) a_0 = \\frac{\\hbar^2}{m_e e^2} \\text{ in metres} \\approx \\_\\_\\_\\_\\_\\_",
+    "topic": "making_atoms_possible",
+    "answer": { "type": "estimate", "low": 5e-11, "high": 5.6e-11 }
+  },
+  {
+    "id": "zw.1.6.q6",
+    "prompt": "(*) \\text{Time for a classical electron at } r = a_0 \\text{ to spiral into the proton, in seconds} \\approx \\_\\_\\_\\_\\_\\_",
+    "topic": "making_atoms_possible",
+    "answer": { "type": "estimate", "low": 1e-11, "high": 2e-11 }
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "zw.1.5.q1",
+    "prompt": "\\text{For } \\textstyle\\sum_{ij}\\alpha_{ij}|A_i\\rangle\\otimes|B_j\\rangle, \\text{ compute } \\alpha_{11}\\alpha_{22} - \\alpha_{12}\\alpha_{21} \\text{ for the state } \\frac{1}{\\sqrt2}\\big(|{\\uparrow}\\rangle\\otimes|{\\downarrow}\\rangle - |{\\downarrow}\\rangle\\otimes|{\\uparrow}\\rangle\\big)",
+    "topic": "entanglement",
+    "answer": { "type": "fraction", "num": 1, "den": 2 }
+  },
+  {
+    "id": "zw.1.5.q2",
+    "prompt": "\\text{Same quantity for } \\tfrac{1}{2}\\big(|{\\uparrow}\\rangle + |{\\downarrow}\\rangle\\big) \\otimes \\big(|{\\uparrow}\\rangle + |{\\downarrow}\\rangle\\big) = \\_\\_\\_\\_\\_\\_",
+    "topic": "entanglement",
+    "answer": { "type": "numeric", "answer": 0 }
+  },
+  {
+    "id": "zw.1.5.q3",
+    "prompt": "\\text{In the entangled state of q1, Alice measures along } z \\text{ and finds up. Bob's state is now}\\\\ \\text{(1) } |{\\uparrow}\\rangle \\quad \\text{(2) } |{\\downarrow}\\rangle \\quad \\text{(3) } \\tfrac{1}{\\sqrt2}(|{\\uparrow}\\rangle + |{\\downarrow}\\rangle) \\quad \\text{(4) still undefined}",
+    "topic": "entanglement",
+    "answer": { "type": "choice", "correct": 2, "count": 4, "display": "(2)\\ |{\\downarrow}\\rangle" }
+  },
+  {
+    "id": "zw.1.5.q4",
+    "prompt": "\\text{Whatever Alice does, Bob's probability of measuring up along } z \\text{ is } \\_\\_\\_\\_\\_\\_",
+    "topic": "entanglement",
+    "answer": { "type": "fraction", "num": 1, "den": 2 }
+  }
+]

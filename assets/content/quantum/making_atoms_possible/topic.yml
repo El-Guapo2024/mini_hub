@@ -1,0 +1,11 @@
+id: making_atoms_possible
+title: 'Making Atoms Possible'
+logo: assets/icons/quantum.png
+zwiebach_section: '1.6'
+questionIds:
+  - zw.1.6.q1
+  - zw.1.6.q2
+  - zw.1.6.q3
+  - zw.1.6.q4
+  - zw.1.6.q5
+  - zw.1.6.q6

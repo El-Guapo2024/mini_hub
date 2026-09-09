@@ -1,0 +1,9 @@
+id: amplitudes_and_interference
+title: 'Amplitudes and Interference'
+logo: assets/icons/quantum.png
+zwiebach_section: '2.1'
+questionIds:
+  - zw.2.1.q1
+  - zw.2.1.q2
+  - zw.2.1.q3
+  - zw.2.1.q4

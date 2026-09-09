@@ -1,0 +1,49 @@
+[
+  {
+    "id": "zw.1.1.q1",
+    "prompt": "\\text{Of the five equations } (a){-}(e) \\text{ in the lesson's exercise 2, how many are linear?}",
+    "topic": "linearity_of_the_equations_of_motion",
+    "answer": {
+      "type": "numeric",
+      "answer": 2
+    }
+  },
+  {
+    "id": "zw.1.1.q2",
+    "prompt": "L = \\frac{d}{dt} + \\frac{1}{\\tau}. \\text{ Then } L\\big(t\\,e^{-t/\\tau}\\big) = c\\,e^{-t/\\tau}. \\ \\ c = \\_\\_\\_\\_\\_\\_",
+    "topic": "linearity_of_the_equations_of_motion",
+    "answer": {
+      "type": "numeric",
+      "answer": 1
+    }
+  },
+  {
+    "id": "zw.1.1.q3",
+    "prompt": "\\text{The general superposition } \\alpha u_1 + \\beta u_2 \\text{ with complex } \\alpha, \\beta. \\text{ How many real parameters?}",
+    "topic": "linearity_of_the_equations_of_motion",
+    "answer": {
+      "type": "numeric",
+      "answer": 4
+    }
+  },
+  {
+    "id": "zw.1.1.q4",
+    "prompt": "L_1, L_2 \\text{ linear. Which is true?}\\\\ \\text{(1) } L_1+L_2 \\text{ linear, } L_1L_2 \\text{ not} \\quad \\text{(2) } L_1L_2 \\text{ linear, } L_1+L_2 \\text{ not}\\\\ \\text{(3) both are linear} \\quad \\text{(4) neither need be}",
+    "topic": "linearity_of_the_equations_of_motion",
+    "answer": {
+      "type": "choice",
+      "correct": 3,
+      "count": 4,
+      "display": "(3)\\ \\text{both are linear}"
+    }
+  },
+  {
+    "id": "zw.1.1.q5",
+    "prompt": "m\\ddot{x} = -V'(x) \\text{ is linear only when } V \\text{ has degree at most } \\_\\_\\_\\_\\_\\_",
+    "topic": "linearity_of_the_equations_of_motion",
+    "answer": {
+      "type": "numeric",
+      "answer": 2
+    }
+  }
+]

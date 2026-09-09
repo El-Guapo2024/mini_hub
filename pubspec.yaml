@@ -40,6 +40,13 @@ dependencies:
   math_expressions: ^2.7.0
   path_provider: ^2.1.4
   sqflite: ^2.3.3
+  webview_flutter: ^4.10.0
+  flutter_tts: ^4.2.0
+  file_picker: ^8.1.2
+  share_plus: ^10.1.1
+  http: ^1.2.2
+  record: ^6.2.1
+  whisper_ggml: ^1.3.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -47,6 +54,10 @@ dependencies:
 
 dev_dependencies:
   flutter_test:
+    sdk: flutter
+  # Drives the real app on a device for the Chinese reader flow; the WebView
+  # cannot be exercised in a widget test.
+  integration_test:
     sdk: flutter
 
   # The "flutter_lints" package below contains a set of recommended lints to
@@ -56,6 +67,9 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^6.0.0
   sqflite_common_ffi: ^2.3.3
+  # The integration test builds its own test epub; reinstalls wipe anything
+  # seeded into the container beforehand.
+  archive: ^3.6.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -64,11 +78,21 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
+    - assets/chinese/
+    - assets/chinese/epubjs/
     - assets/content/
     - assets/sample/
     - assets/sample/math/
     - assets/sample/math/arithmetic_basics/
     - assets/content/number_sense/
+    - assets/content/quantum/
+    - assets/content/quantum/linearity_of_the_equations_of_motion/
+    - assets/content/quantum/complex_numbers_are_essential/
+    - assets/content/quantum/loss_of_determinism/
+    - assets/content/quantum/quantum_superpositions/
+    - assets/content/quantum/entanglement/
+    - assets/content/quantum/making_atoms_possible/
+    - assets/content/quantum/amplitudes_and_interference/
     - assets/content/number_sense/introduction_foiling_liofing_when_multiplying/
     - assets/content/number_sense/multiplying_by_11_trick/
     - assets/content/number_sense/multiplying_by_101_trick/
@@ -223,3 +247,4 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+

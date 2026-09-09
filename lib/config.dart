@@ -33,6 +33,28 @@ enum ContentSource {
   static ContentSource byName(String name) => values.byName(name);
 }
 
+/// The Chinese reader's settings. Its assets are named here and nowhere
+/// else, per the rule above; the voice values are the ones someone will
+/// actually want to tune.
+class ChineseConfig {
+  /// CC-CEDICT, as shipped upstream (via Wen Reader, MIT).
+  static const String cedictAsset = 'assets/chinese/cedict_ts.u8';
+
+  /// The bundled epub.js page the reader WebView loads.
+  static const String readerPage = 'assets/chinese/epubjs/reader.html';
+
+  /// The companion's model — the project doc's cost/nuance decision.
+  /// The Mac-side Agent SDK companion (tutor_server/). With no API key in
+  /// the Keychain, questions go here instead; 127.0.0.1 reaches the Mac
+  /// from the simulator.
+  static const String tutorServer = 'http://127.0.0.1:8790';
+
+  static const String ttsLanguage = 'zh-CN';
+
+  /// Slower than the OS default (0.5): a learner's reading speed.
+  static const double ttsRate = 0.45;
+}
+
 /// The app's settings, read once at startup.
 ///
 /// Defaults are overridden at build time, so a demo build needs no edit to a

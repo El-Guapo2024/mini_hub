@@ -51,5 +51,14 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
+	</dict>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Hold the mic to ask the reading companion a question by voice.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Turns your spoken question into text for the reading companion.</string>
 </dict>
 </plist>

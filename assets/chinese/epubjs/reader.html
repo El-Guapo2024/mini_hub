@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script src="jszip.min.js"></script>
+<script src="epub.min.js"></script>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: transparent; }
+  #viewer { height: 100%; }
+</style>
+</head>
+<body>
+<div id="viewer"></div>
+<script>
+// The JS half of the bridge. Everything crossing to Dart goes through send();
+// everything Dart calls is one of the plain functions below. The WebView owns
+// rendering and position, and nothing else.
+let chunks = [];
+let book, rendition;
+
+function send(m) { Bridge.postMessage(JSON.stringify(m)); }
+
+// Outer-page probes: if these never fire while a finger taps, touches are
+// not reaching the WebView at all (a Flutter/platform-view problem); if
+// they fire but the iframe handlers don't, the problem is epub.js layering.
+window.addEventListener('touchstart', e => send({ type: 'log', msg: 'outer touchstart' }), { passive: true, capture: true });
+window.addEventListener('click', e => send({ type: 'log', msg: 'outer click ' + e.clientX + ',' + e.clientY }), true);
+
+// The book arrives in base64 chunks over runJavaScript, because file:// XHR
+// is blocked in WKWebView and a single multi-megabyte call is fragile.
+function appendChunk(b64) { chunks.push(b64); }
+
+// A tap resolves to the text node under it. Shared by the real click
+// handler and debugTapAt, so tests exercise the same hit-testing.
+function handleTap(doc, x, y) {
+  const r = doc.caretRangeFromPoint(x, y);
+  if (!r || r.startContainer.nodeType !== Node.TEXT_NODE) return false;
+  send({ type: 'tapped', text: r.startContainer.textContent, offset: r.startOffset });
+  return true;
+}
+
+// Test hook: a tap at a fractional position of the visible page. Returns a
+// diagnostic string so the test can see why a probe found nothing.
+function debugTapAt(fx, fy) {
+  const f = document.querySelector('iframe');
+  if (!f) return 'no-iframe';
+  if (!f.contentDocument) return 'no-doc';
+  const d = f.contentDocument;
+  const w = d.documentElement.clientWidth || f.clientWidth;
+  const h = d.documentElement.clientHeight || f.clientHeight;
+  if (!d.caretRangeFromPoint) return 'no-caretRangeFromPoint';
+  return handleTap(d, w * fx, h * fy) ? 'hit' : 'miss ' + w + 'x' + h;
+}
+
+function openBook(cfi, fg) {
+  const bin = atob(chunks.join(''));
+  chunks = [];
+  const buf = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) buf[i] = bin.charCodeAt(i);
+
+  book = ePub(buf.buffer);
+  rendition = book.renderTo('viewer', {
+    width: '100%', height: '100%', flow: 'paginated', spread: 'none',
+  });
+  // The text color comes from the Flutter theme, or dark mode is unreadable.
+  rendition.themes.default({
+    body: { 'font-size': '20px', 'line-height': '1.9', 'color': fg || '#000000' },
+    h1: { 'color': fg || '#000000' },
+  });
+  rendition.display(cfi || undefined);
+
+  rendition.on('relocated', loc => {
+    send({ type: 'moved', cfi: loc.start.cfi, pct: loc.start.percentage || 0 });
+  });
+
+  rendition.hooks.content.register(contents => {
+    const doc = contents.document;
+
+    // The companion's context: what chapter is open. Truncated — a question
+    // needs the surrounding text, not the whole book.
+    send({ type: 'chapter', text: (doc.body.innerText || '').slice(0, 8000) });
+
+    // Horizontal swipe turns the page; anything else is left to the tap.
+    let sx = 0, sy = 0;
+    doc.addEventListener('touchstart', e => {
+      sx = e.changedTouches[0].screenX;
+      sy = e.changedTouches[0].screenY;
+    }, { passive: true });
+    doc.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].screenX - sx;
+      const dy = e.changedTouches[0].screenY - sy;
+      if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy)) {
+        dx < 0 ? rendition.next() : rendition.prev();
+      }
+    }, { passive: true });
+
+    // A tap reports the text node it landed in and where. Which word that
+    // is — segmentation, sentence boundaries — is decided in Dart, so the
+    // dictionary and the bridge stay independent.
+    // Edge taps turn the page; the middle looks up the word under the finger.
+    doc.addEventListener('click', e => {
+      const w = doc.documentElement.clientWidth || 1;
+      send({ type: 'log', msg: 'click ' + e.clientX + ',' + e.clientY + ' w=' + w });
+      const fx = e.clientX / w;
+      if (fx < 0.15) { rendition.prev(); return; }
+      if (fx > 0.85) { rendition.next(); return; }
+      handleTap(doc, e.clientX, e.clientY);
+    });
+  });
+
+  book.ready.then(() => send({ type: 'ready' }));
+}
+
+// Real touches never reach the WKWebView on iOS (Flutter platform-view
+// gesture hand-off); Flutter detects taps/swipes itself and calls these
+// with logical-pixel coordinates (1 Flutter px == 1 CSS px here).
+function caretAt(x, y) {
+  const f = document.querySelector('iframe');
+  if (!f || !f.contentDocument || !f.contentDocument.caretRangeFromPoint) return null;
+  const rect = f.getBoundingClientRect();
+  const d = f.contentDocument;
+  const ix = x - rect.left, iy = y - rect.top;
+  const c = d.caretRangeFromPoint(ix, iy);
+  if (!c || c.startContainer.nodeType !== Node.TEXT_NODE) return null;
+  const t = c.startContainer;
+  // The caret sits BETWEEN glyphs; clicking the right half of a character
+  // yields the caret after it. Pick the glyph whose box holds the point.
+  const box = (i) => {
+    if (i < 0 || i >= t.textContent.length) return null;
+    const r = d.createRange();
+    r.setStart(t, i);
+    r.setEnd(t, i + 1);
+    // At a soft wrap the bounding box unions in a collapsed rect from the
+    // previous line; the last client rect is the glyph itself.
+    const rs = r.getClientRects();
+    return rs.length ? rs[rs.length - 1] : r.getBoundingClientRect();
+  };
+  let o = c.startOffset;
+  const here = box(o), prev = box(o - 1);
+  if (here && ix >= here.left && ix <= here.right &&
+      iy >= here.top && iy <= here.bottom) {
+    // keep o
+  } else if (prev && ix >= prev.left && ix <= prev.right &&
+      iy >= prev.top && iy <= prev.bottom) {
+    o = o - 1;
+  } else {
+    // Around line wraps the caret can land a whole line away; find the
+    // glyph whose box really holds the point.
+    let found = -1;
+    for (let i = 0; i < Math.min(t.textContent.length, 4000); i++) {
+      const b = box(i);
+      if (b && ix >= b.left && ix <= b.right && iy >= b.top && iy <= b.bottom) {
+        found = i;
+        break;
+      }
+    }
+    if (found >= 0) o = found;
+    else if (o >= t.textContent.length) o = t.textContent.length - 1;
+  }
+  return { node: t, offset: o };
+}
+
+function tapAt(x, y) {
+  // A character under the finger always wins — the first glyph of a line
+  // sits inside the edge zone, and readers tap it for the dictionary.
+  const c = caretAt(x, y);
+  if (c) {
+    send({ type: 'tapped', text: c.node.textContent, offset: c.offset });
+    return 'hit';
+  }
+  const w = window.innerWidth || 1;
+  if (x / w < 0.2) { if (rendition) rendition.prev(); return 'prev'; }
+  if (x / w > 0.8) { if (rendition) rendition.next(); return 'next'; }
+  send({ type: 'log', msg: 'tapAt miss ' + x + ',' + y });
+  return 'miss';
+}
+
+// The visible half of a drag-selection: paint the native highlight so the
+// reader can see what their finger is picking up, phone-style.
+function showSelection(x1, y1, x2, y2) {
+  const a = caretAt(x1, y1), b = caretAt(x2, y2);
+  if (!a || !b) return;
+  const f = document.querySelector('iframe');
+  try {
+    f.contentWindow.getSelection().setBaseAndExtent(
+      a.node, a.offset, b.node, b.offset + 1);
+  } catch (e) { /* offsets can momentarily overrun the node */ }
+}
+function clearSelection() {
+  const f = document.querySelector('iframe');
+  if (f && f.contentWindow) f.contentWindow.getSelection().removeAllRanges();
+}
+
+// Hold-and-drag across a line selects the run between the two carets,
+// the way a press-drag selects on the phone.
+function selectRange(x1, y1, x2, y2) {
+  const a = caretAt(x1, y1), b = caretAt(x2, y2);
+  if (!a || !b || a.node !== b.node) {
+    send({ type: 'log', msg: 'selectRange miss' });
+    return 'miss';
+  }
+  const t = a.node.textContent;
+  const s = Math.min(a.offset, b.offset);
+  const e = Math.min(t.length, Math.max(a.offset, b.offset) + 1);
+  if (e <= s) return 'empty';
+  send({ type: 'selected', text: t, start: s, end: e });
+  return 'sel';
+}
+
+// Test-only: click the center of each of the first n glyphs and check the
+// caret resolves to exactly that character. Returns "ok/total miss[...]".
+function debugAccuracy(n) {
+  const f = document.querySelector('iframe');
+  if (!f || !f.contentDocument) return 'no-iframe';
+  const d = f.contentDocument;
+  const rect = f.getBoundingClientRect();
+  const walker = d.createTreeWalker(d.body, NodeFilter.SHOW_TEXT);
+  let ok = 0, total = 0;
+  const misses = [];
+  let nodeIdx = -1;
+  while (walker.nextNode()) {
+    const node = walker.currentNode;
+    if (!node.textContent.trim()) continue;
+    nodeIdx++;
+    for (let i = 0; i < Math.min(n, node.textContent.length); i++) {
+      if (!node.textContent[i].trim()) continue;
+      const r = d.createRange();
+      r.setStart(node, i);
+      r.setEnd(node, i + 1);
+      const brs = r.getClientRects();
+      const b = brs.length ? brs[brs.length - 1] : r.getBoundingClientRect();
+      if (!b.width) continue;
+      if (b.left < 0 || b.right > rect.width) continue;
+      const pts = [[0.5, 0.5], [0.15, 0.5], [0.85, 0.5], [0.5, 0.2], [0.5, 0.8]];
+      for (const [px, py] of pts) {
+        const c = caretAt(rect.left + b.left + b.width * px,
+                          rect.top + b.top + b.height * py);
+        total++;
+        if (c && c.node === node && c.offset === i) ok++;
+        else if (misses.length < 12) {
+          misses.push(nodeIdx + ':' + i + '@' + px + ',' + py + '->' +
+            (c ? (c.node === node ? c.offset : 'othernode:' + c.offset) : 'null'));
+        }
+      }
+    }
+  }
+  return ok + '/' + total + ' miss[' + misses.join(',') + ']';
+}
+
+// Co-reading: the text on the page currently shown, for the read-aloud
+// voice. A text node counts when its box overlaps the visible column.
+function visibleText() {
+  const f = document.querySelector('iframe');
+  if (!f || !f.contentDocument) return '';
+  const d = f.contentDocument;
+  const w = f.getBoundingClientRect().width;
+  const walker = d.createTreeWalker(d.body, NodeFilter.SHOW_TEXT);
+  let out = '';
+  while (walker.nextNode()) {
+    const n = walker.currentNode;
+    if (!n.textContent.trim()) continue;
+    const r = d.createRange();
+    r.selectNodeContents(n);
+    const rect = r.getBoundingClientRect();
+    if (rect.width === 0 && rect.height === 0) continue;
+    if (rect.right < 0 || rect.left > w) continue;
+    out += n.textContent;
+  }
+  return out;
+}
+
+function goNext() { if (rendition) rendition.next(); }
+function goPrev() { if (rendition) rendition.prev(); }
+</script>
+</body>
+</html>

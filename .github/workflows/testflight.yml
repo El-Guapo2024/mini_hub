@@ -28,7 +28,10 @@ jobs:
     needs: bridge
     # A macOS runner is not optional: only Xcode can archive an iOS app.
     runs-on: macos-26
-    timeout-minutes: 60
+    # Room for the archive plus the longest wait release_to_testers.py will
+    # sit through; a job killed mid-wait leaves the build uploaded but
+    # attached to nobody, which is the failure this is sized to avoid.
+    timeout-minutes: 90
 
     steps:
       - uses: actions/checkout@v4

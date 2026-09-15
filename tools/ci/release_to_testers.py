@@ -39,9 +39,12 @@ GROUP_NAMES = [
     if n.strip()
 ]
 
-# Apple usually takes two or three minutes. Fifteen is generous rather than
-# hopeful; past that something is wrong and saying so beats waiting longer.
-DEADLINE = 15 * 60
+# Apple usually takes two or three minutes, but not always: the build that
+# first carried Anki's core sat invisible for the whole fifteen minutes this
+# used to wait, and was uploaded fine -- only unattached. Three quarters of an
+# hour costs nothing when processing is quick and saves a whole rebuild when
+# it is not.
+DEADLINE = 45 * 60
 POLL = 20
 
 

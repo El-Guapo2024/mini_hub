@@ -31,6 +31,17 @@ jobs:
           channel: stable
           cache: true
 
+      - name: Cache the speech model
+        uses: actions/cache@v4
+        with:
+          path: assets/chinese/asr
+          key: asr-${{ hashFiles('tool/fetch_asr_model.sh') }}
+
+      - name: Fetch the speech model
+        # ~170MB and gitignored, but pubspec lists its folder as an asset, so
+        # tests and builds fail without it. Cached, so this is usually a no-op.
+        run: tool/fetch_asr_model.sh
+
       - name: Install dependencies
         run: flutter pub get
 

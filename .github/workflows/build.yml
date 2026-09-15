@@ -38,6 +38,15 @@ jobs:
           channel: stable
           cache: true
 
+      - name: Cache the speech model
+        uses: actions/cache@v4
+        with:
+          path: assets/chinese/asr
+          key: asr-${{ hashFiles('tool/fetch_asr_model.sh') }}
+
+      - name: Fetch the speech model
+        run: tool/fetch_asr_model.sh
+
       - run: flutter pub get
 
       - name: Build the APK
@@ -59,8 +68,15 @@ jobs:
           if-no-files-found: error
           retention-days: 30
 
+  bridge:
+    # Anki's core for iOS: reused when already published, built otherwise.
+    uses: ./.github/workflows/anki_bridge.yml
+    permissions:
+      contents: write
+
   ios:
     name: ios archive
+    needs: bridge
     # Only a Mac can archive an iOS app, signed or not.
     runs-on: macos-26
     timeout-minutes: 45
@@ -71,6 +87,21 @@ jobs:
         with:
           channel: stable
           cache: true
+
+      - name: Cache the speech model
+        uses: actions/cache@v4
+        with:
+          path: assets/chinese/asr
+          key: asr-${{ hashFiles('tool/fetch_asr_model.sh') }}
+
+      - name: Fetch the speech model
+        run: tool/fetch_asr_model.sh
+
+      - name: Fetch Anki's core
+        # Published by the bridge job above; downloaded, not compiled.
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: tool/fetch_anki_bridge.sh
 
       - run: flutter pub get
 

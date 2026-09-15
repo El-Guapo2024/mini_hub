@@ -1,0 +1,70 @@
+name: Anki bridge
+
+# Anki's Rust core for iOS, compiled once per version and kept as a GitHub
+# release asset. App builds call this first and then download the result
+# (tool/fetch_anki_bridge.sh) instead of spending a Rust build on every
+# merge.
+#
+# The release is named by a hash of everything that goes into the binary
+# (tool/anki_bridge_key.sh): a change to the bridge, its build script or the
+# pinned Anki commit builds a new one; any other change finds it already
+# published and moves on in seconds.
+on:
+  workflow_call:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: build or reuse
+    runs-on: macos-26
+    timeout-minutes: 90
+    permissions:
+      contents: write
+    # The build and TestFlight workflows both call this on the same push.
+    # Queued, not cancelled: the second waits, then finds the release the
+    # first published instead of racing it to the same tag.
+    concurrency:
+      group: anki-bridge
+      cancel-in-progress: false
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Is this version already published?
+        id: key
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          key=$(tool/anki_bridge_key.sh)
+          echo "key=$key" >> "$GITHUB_OUTPUT"
+          if gh release view "anki-bridge-$key" >/dev/null 2>&1; then
+            echo "anki-bridge-$key is already published"
+            echo "built=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "anki-bridge-$key needs building"
+            echo "built=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build Anki's core for iOS
+        if: steps.key.outputs.built == 'false'
+        run: |
+          set -euo pipefail
+          brew install protobuf
+          ANKI_DIR="$RUNNER_TEMP/anki" \
+          PROFILE=release \
+          ZIP="$RUNNER_TEMP/MiniHubAnkiBridge.xcframework.zip" \
+            tool/build_anki_bridge.sh
+
+      - name: Publish it
+        if: steps.key.outputs.built == 'false'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          tag="anki-bridge-${{ steps.key.outputs.key }}"
+          gh release create "$tag" \
+            "$RUNNER_TEMP/MiniHubAnkiBridge.xcframework.zip" \
+            --title "$tag" \
+            --notes "Anki's core for iOS (device + simulator), built from ankitects/anki $(cat native/anki_bridge/ANKI_COMMIT)." \
+            --prerelease

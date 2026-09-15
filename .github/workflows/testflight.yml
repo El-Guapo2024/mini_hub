@@ -17,8 +17,15 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  bridge:
+    # Anki's core for iOS: reused when already published, built otherwise.
+    uses: ./.github/workflows/anki_bridge.yml
+    permissions:
+      contents: write
+
   ship:
     name: build and upload
+    needs: bridge
     # A macOS runner is not optional: only Xcode can archive an iOS app.
     runs-on: macos-26
     timeout-minutes: 60
@@ -48,6 +55,23 @@ jobs:
         with:
           channel: stable
           cache: true
+
+      - name: Cache the speech model
+        uses: actions/cache@v4
+        with:
+          path: assets/chinese/asr
+          key: asr-${{ hashFiles('tool/fetch_asr_model.sh') }}
+
+      - name: Fetch the speech model
+        # ~170MB and gitignored; the mic's recognizer ships inside the app.
+        run: tool/fetch_asr_model.sh
+
+      - name: Fetch Anki's core
+        # Published by the bridge job this one needs; downloaded, not
+        # compiled, so a merge doesn't pay for a Rust build.
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: tool/fetch_anki_bridge.sh
 
       - name: Install dependencies
         run: flutter pub get

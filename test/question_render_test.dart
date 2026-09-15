@@ -101,6 +101,7 @@ void main() {
       QuestionType.complex: ComplexAnswer(real: 16, imaginary: 16),
       QuestionType.fraction: FractionAnswer(value: Fraction(1, 2)),
       QuestionType.base: BaseAnswer(value: 16, base: 8),
+      QuestionType.choice: ChoiceAnswer(correct: 2, count: 4),
     };
     expect(types.keys, containsAll(QuestionType.values));
 

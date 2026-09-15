@@ -16,7 +16,7 @@ fi
 
 TMP="$(mktemp -d)"
 trap 'rm -rf "$TMP"' EXIT
-echo "Downloading $NAME…"
+echo "Downloading ${NAME}…"
 curl -fL --retry 3 -o "$TMP/model.tar.bz2" "$URL"
 tar xjf "$TMP/model.tar.bz2" -C "$TMP"
 mkdir -p "$DEST"

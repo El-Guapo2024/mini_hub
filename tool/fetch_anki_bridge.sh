@@ -20,7 +20,7 @@ tag="anki-bridge-$("$ROOT/tool/anki_bridge_key.sh")"
 TMP="$(mktemp -d)"
 trap 'rm -rf "$TMP"' EXIT
 
-echo "Downloading $tag…"
+echo "Downloading ${tag}…"
 if ! (cd "$ROOT" && gh release download "$tag" -p "$ASSET" -D "$TMP"); then
   echo "No release $tag. Run the Anki bridge workflow, or build it here" \
     "with tool/build_anki_bridge.sh." >&2

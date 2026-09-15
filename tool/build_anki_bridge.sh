@@ -25,7 +25,7 @@ export IPHONEOS_DEPLOYMENT_TARGET=15.6
 
 # Anki itself at the pinned commit, with the translation files its build reads.
 if [[ ! -d "$ANKI_DIR/.git" ]]; then
-  echo "Fetching Anki $COMMIT…"
+  echo "Fetching Anki ${COMMIT}…"
   git init -q "$ANKI_DIR"
   git -C "$ANKI_DIR" remote add origin https://github.com/ankitects/anki.git
   git -C "$ANKI_DIR" fetch -q --depth 1 origin "$COMMIT"

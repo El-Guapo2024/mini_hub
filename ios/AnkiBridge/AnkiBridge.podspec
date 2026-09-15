@@ -14,7 +14,13 @@ Pod::Spec.new do |s|
   s.frameworks = 'Security', 'SystemConfiguration'
   # Nothing in Swift calls these; Dart finds them at runtime, so keep the
   # linker from stripping them.
+  #
+  # And keep their names in a release build: Xcode strips every symbol from
+  # an app by default, and Dart looks these up by name at runtime — so the
+  # simulator (debug) worked while a TestFlight build would have failed on
+  # the first Anki call. Non-global keeps exported names, strips the rest.
   s.user_target_xcconfig = {
-    'OTHER_LDFLAGS' => '$(inherited) -Wl,-u,_anki_bridge_call -Wl,-u,_anki_bridge_free'
+    'OTHER_LDFLAGS' => '$(inherited) -Wl,-u,_anki_bridge_call -Wl,-u,_anki_bridge_free',
+    'STRIP_STYLE' => 'non-global'
   }
 end

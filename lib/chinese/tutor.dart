@@ -19,9 +19,11 @@ class TutorSession {
   TutorSession({
     required this.chapterContext,
     ClaudeClient? claude,
+    Future<Card?> Function(String word)? cardFor,
     Future<void> Function(Card card, String? deck)? saveCard,
     Future<List<String>> Function()? listDecks,
   }) : _claude = claude ?? ClaudeClient(),
+       _cardFor = cardFor ?? _bareCard,
        _saveCard = saveCard ?? _toDeck,
        _listDecks = listDecks ?? _ankiDecks;
 
@@ -29,6 +31,11 @@ class TutorSession {
   String chapterContext;
 
   final ClaudeClient _claude;
+
+  /// Builds the card for a word exactly as tapping it in the book does:
+  /// pinyin and meaning from the dictionary, the sentence from the chapter.
+  /// Null when the dictionary doesn't know the word.
+  final Future<Card?> Function(String word) _cardFor;
   final Future<void> Function(Card card, String? deck) _saveCard;
   final Future<List<String>> Function() _listDecks;
 
@@ -47,24 +54,28 @@ class TutorSession {
       'implied rather than written: dropped subjects, unmarked conditionals, '
       'aspect particles. Never correct the learner unless they ask to be '
       'corrected. When the learner asks to save or remember a word (or you '
-      'both agree one is worth keeping), call the add_card tool to put it in '
-      'their Anki deck. If they name a deck, or ask which decks they have, '
-      'call list_decks first and use a deck name exactly as listed; '
-      'otherwise leave the deck null and the card goes to their usual deck.';
+      'both agree one is worth keeping), call the add_card tool straight '
+      'away with just the word in Chinese characters, written as it appears '
+      'in the passage. The app fills in the pinyin, the meaning and the '
+      'sentence from its dictionary and the book, exactly as when the '
+      'learner taps the word, so never ask them for those. If they name a '
+      'deck, or ask which decks they have, call list_decks first and use a '
+      'deck name exactly as listed; otherwise leave the deck null and the '
+      'card goes to their usual deck.';
 
   static const Map<String, dynamic> _addCard = {
     'name': 'add_card',
-    'description': "Add a flashcard to the learner's Anki collection.",
+    'description':
+        "Add a flashcard for a word to the learner's Anki collection. Give "
+        'only the word; its pinyin, meaning and example sentence come from '
+        "the app's dictionary and the open book.",
     'strict': true,
     'input_schema': {
       'type': 'object',
       'properties': {
-        'word': {'type': 'string', 'description': 'the Chinese word or phrase'},
-        'pinyin': {'type': 'string', 'description': 'accented pinyin'},
-        'gloss': {'type': 'string', 'description': 'short English meaning'},
-        'sentence': {
+        'word': {
           'type': 'string',
-          'description': 'example sentence, ideally from the book',
+          'description': 'the Chinese word or phrase, in characters',
         },
         'deck': {
           'type': ['string', 'null'],
@@ -73,7 +84,7 @@ class TutorSession {
               "the learner's usual deck",
         },
       },
-      'required': ['word', 'pinyin', 'gloss', 'sentence', 'deck'],
+      'required': ['word', 'deck'],
       'additionalProperties': false,
     },
   };
@@ -91,6 +102,10 @@ class TutorSession {
       'additionalProperties': false,
     },
   };
+
+  /// Without a reader to look words up in, the card carries only the word.
+  static Future<Card?> _bareCard(String word) async =>
+      Card(word: word, pinyin: '', gloss: '', sentence: '');
 
   static Future<void> _toDeck(Card card, String? deck) async {
     await keepCard(card, deck: deck);
@@ -164,6 +179,7 @@ class TutorSession {
                 : decks.join('\n'),
           };
         case 'add_card':
+          final word = field('word');
           final deck = field('deck').isEmpty ? null : field('deck');
           if (deck != null) {
             // A misspelt name would quietly create a new deck in Anki;
@@ -177,19 +193,22 @@ class TutorSession {
               };
             }
           }
-          await _saveCard(
-            Card(
-              word: field('word'),
-              pinyin: field('pinyin'),
-              gloss: field('gloss'),
-              sentence: field('sentence'),
-            ),
-            deck,
-          );
+          final card = word.isEmpty ? null : await _cardFor(word);
+          if (card == null) {
+            return {
+              ...result,
+              'content':
+                  '"$word" is not in the dictionary; try the word exactly as '
+                  'written in the passage, in characters.',
+              'is_error': true,
+            };
+          }
+          await _saveCard(card, deck);
           return {
             ...result,
             'content':
-                'card saved: ${field('word')}${deck == null ? '' : ' to $deck'}',
+                'card saved: ${card.word} ${card.pinyin} — ${card.gloss}'
+                '${deck == null ? '' : ' (to $deck)'}',
           };
       }
       return {...result, 'content': 'no such tool', 'is_error': true};

@@ -100,6 +100,9 @@ class _ReaderScreenState extends State<ReaderScreen> {
   /// The companion strip under the page — toggled, never covering the book.
   bool _companionOpen = false;
 
+  /// The play/chat strip's fixed height; the chat bar sits just above it.
+  static const double _controlsHeight = 52;
+
   /// Real touches never make it into the WKWebView on iOS, so gestures are
   /// recognized here from raw pointer events and replayed over the bridge.
   /// A quick horizontal flick turns the page; a slower hold-and-drag
@@ -239,7 +242,10 @@ class _ReaderScreenState extends State<ReaderScreen> {
         final text = m['text'] as String;
         // A new chapter keeps the conversation but moves its anchor.
         _chapter = text;
-        (_tutor ??= TutorSession(chapterContext: text)).chapterContext = text;
+        (_tutor ??= TutorSession(
+          chapterContext: text,
+          cardFor: _cardFor,
+        )).chapterContext = text;
       case 'moved':
         widget.library.savePosition(widget.book, m['cfi'] as String);
         final pct = (m['pct'] as num?)?.toDouble() ?? 0;
@@ -346,6 +352,22 @@ class _ReaderScreenState extends State<ReaderScreen> {
         ),
         deck: deck,
       ),
+    );
+  }
+
+  /// The companion's card for [word], made exactly as tapping it would make
+  /// it: pinyin and meaning from the dictionary, the sentence from the open
+  /// chapter. Null when the dictionary doesn't know the word.
+  Future<Card?> _cardFor(String word) async {
+    final dictionary = await _dictionaryLoad!;
+    final r = dictionary.lookupSelection(word);
+    if (r == null) return null;
+    final at = _chapter.indexOf(word);
+    return Card(
+      word: word,
+      pinyin: r.pinyin,
+      gloss: r.entries.map((e) => e.glosses.join('; ')).join(' | '),
+      sentence: at < 0 ? '' : ReaderScreen.sentenceAround(_chapter, at),
     );
   }
 
@@ -541,27 +563,60 @@ class _ReaderScreenState extends State<ReaderScreen> {
       // The eager recognizer hands every gesture straight to the WKWebView;
       // without it, taps died in Flutter's gesture arena and no touch ever
       // reached the page (the JS side proved it: zero touchstarts).
+      //
+      // The page keeps one size whatever opens over it: epub.js lays the whole
+      // chapter out again on any resize, so a chat bar or keyboard pushing the
+      // page up looked like the book reloading. The chat bar lies over the
+      // page instead, and the keyboard lifts only the chat bar.
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
-        child: Column(
-          children: [
-            Expanded(
-              child: Listener(
-                onPointerDown: (e) {
-                  _down = e.localPosition;
-                  _downAt = DateTime.now();
-                },
-                onPointerMove: _pointerMove,
-                onPointerUp: _pointerUp,
-                child: WebViewWidget(controller: _web),
-              ),
-            ),
-            if (_companionOpen)
-              CompanionBar(
-                session: _tutor ??= TutorSession(chapterContext: ''),
-                speech: _speech,
-              ),
-            _controls(context),
-          ],
+        bottom: false,
+        child: Builder(
+          builder: (context) {
+            final media = MediaQuery.of(context);
+            // viewPadding, not padding: padding shrinks while the keyboard is
+            // up, which would resize the page all over again.
+            final safeBottom = media.viewPadding.bottom;
+            final aboveControls = _controlsHeight + safeBottom;
+            final keyboard = media.viewInsets.bottom;
+            return Stack(
+              children: [
+                Column(
+                  children: [
+                    Expanded(
+                      child: Listener(
+                        onPointerDown: (e) {
+                          _down = e.localPosition;
+                          _downAt = DateTime.now();
+                        },
+                        onPointerMove: _pointerMove,
+                        onPointerUp: _pointerUp,
+                        child: WebViewWidget(controller: _web),
+                      ),
+                    ),
+                    SizedBox(
+                      height: _controlsHeight,
+                      child: _controls(context),
+                    ),
+                    SizedBox(height: safeBottom),
+                  ],
+                ),
+                if (_companionOpen)
+                  Positioned(
+                    left: 0,
+                    right: 0,
+                    bottom: keyboard > aboveControls ? keyboard : aboveControls,
+                    child: CompanionBar(
+                      session: _tutor ??= TutorSession(
+                        chapterContext: '',
+                        cardFor: _cardFor,
+                      ),
+                      speech: _speech,
+                    ),
+                  ),
+              ],
+            );
+          },
         ),
       ),
     );

@@ -79,6 +79,15 @@ void main() {
         return reply(script[requests.length - 1]);
       }),
     ),
+    // Stands in for the reader's dictionary and open chapter.
+    cardFor: (word) async => word == '走进'
+        ? const Card(
+            word: '走进',
+            pinyin: 'zǒu jìn',
+            gloss: 'to walk into',
+            sentence: '他走进来了。',
+          )
+        : null,
     saveCard: (card, deck) async => saved.add((card, deck)),
     listDecks: () async => ['Chinese::Reader', 'Mandarin::Books'],
   );
@@ -166,6 +175,49 @@ void main() {
     await session.ask('save 走进');
 
     expect(saved.single.$2, isNull);
+  });
+
+  test('the model gives only the word; the card comes from the book', () async {
+    final saved = <(Card, String?)>[];
+    final requests = <Map<String, dynamic>>[];
+    final session = scripted(
+      [
+        toolUse('t1', 'add_card', {'word': '走进', 'deck': null}),
+        done,
+      ],
+      saved: saved,
+      requests: requests,
+    );
+
+    await session.ask('add 走进');
+
+    final schema =
+        (requests.first['tools'] as List).firstWhere(
+              (t) => t['name'] == 'add_card',
+            )['input_schema']
+            as Map;
+    expect((schema['properties'] as Map).keys, ['word', 'deck']);
+    expect(saved.single.$1.pinyin, 'zǒu jìn');
+    expect(saved.single.$1.sentence, '他走进来了。');
+    expect(toolResults(requests[1]).single['content'], contains('zǒu jìn'));
+  });
+
+  test('a word the dictionary does not know is sent back', () async {
+    final saved = <(Card, String?)>[];
+    final requests = <Map<String, dynamic>>[];
+    final session = scripted(
+      [
+        toolUse('t1', 'add_card', {'word': 'zoujin', 'deck': null}),
+        done,
+      ],
+      saved: saved,
+      requests: requests,
+    );
+
+    await session.ask('add zoujin');
+
+    expect(toolResults(requests[1]).single['is_error'], isTrue);
+    expect(saved, isEmpty);
   });
 
   test('a failed question leaves no half turn behind', () async {

@@ -2,11 +2,11 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
 
 import '../config.dart';
+import 'connections.dart';
 
 /// What the companion says when the call fails — shown to the reader as-is.
 class TutorException implements Exception {
@@ -22,35 +22,26 @@ class TutorException implements Exception {
 /// pulled out of it by anyone who has the build, and TestFlight hands the
 /// build to other people.
 class ApiKeyStore {
-  static const _storage = FlutterSecureStorage();
-  static const _name = 'anthropic_api_key';
-
+  /// The key of the Claude connector in use (see Connectors).
   static Future<String?> read() async {
-    final key = (await _storage.read(key: _name))?.trim();
+    final key = (await const ConnectionStore().active(
+      ConnectorKind.claude,
+    ))?.secret.trim();
     return key == null || key.isEmpty ? null : key;
   }
 
-  static Future<void> write(String key) =>
-      _storage.write(key: _name, value: key.trim());
-
-  static Future<void> delete() => _storage.delete(key: _name);
-
-  static const _modelName = 'companion_model';
-
-  /// The reader's chosen model; an unknown or missing value is the default.
+  /// The model chosen for that key; missing or unreadable is the default.
   static Future<CompanionModel> readModel() async {
     try {
-      final name = await _storage.read(key: _modelName);
-      return CompanionModel.values.asNameMap()[name] ??
+      return (await const ConnectionStore().active(
+            ConnectorKind.claude,
+          ))?.model ??
           ChineseConfig.defaultModel;
     } catch (_) {
       // An unreadable preference costs a choice, not the answer.
       return ChineseConfig.defaultModel;
     }
   }
-
-  static Future<void> writeModel(CompanionModel model) =>
-      _storage.write(key: _modelName, value: model.name);
 }
 
 /// The Messages API over plain HTTP — Dart has no official SDK.
@@ -66,7 +57,8 @@ class ClaudeClient {
   final http.Client _client;
   final Future<String?> Function() _apiKey;
 
-  /// Read per request, so a change in the dialog applies to the next call.
+  /// Read per request, so switching keys or models in Connectors applies to
+  /// the next call.
   final Future<CompanionModel> Function() _model;
 
   static final Uri _endpoint = Uri.parse(
@@ -96,8 +88,7 @@ class ClaudeClient {
     _trace(key == null ? 'no key saved' : 'key saved');
     if (key == null) {
       throw TutorException(
-        'Add your Anthropic API key first — the key button on the Chinese '
-        'shelf.',
+        'Add a Claude API key first — Connectors, on the Chinese shelf.',
       );
     }
 
@@ -153,7 +144,7 @@ class ClaudeClient {
 
     if (resp.statusCode == 401) {
       throw TutorException(
-        'The API key was rejected — replace it on the Chinese shelf.',
+        'The API key was rejected — replace it or pick another in Connectors.',
       );
     }
     if (resp.statusCode != 200) {

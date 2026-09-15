@@ -2,7 +2,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 
 import '../../chinese/library.dart';
-import '../widgets/api_key_dialog.dart';
+import 'connectors_screen.dart';
 import 'reader_screen.dart';
 
 /// The shelf: pick a book or import one.
@@ -51,9 +51,11 @@ class _LibraryScreenState extends State<LibraryScreen> {
         title: const Text('Chinese'),
         actions: [
           IconButton(
-            icon: const Icon(Icons.key),
-            tooltip: 'Anthropic API key',
-            onPressed: () => showApiKeyDialog(context),
+            icon: const Icon(Icons.hub_outlined),
+            tooltip: 'Connectors',
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute<void>(builder: (_) => const ConnectorsScreen()),
+            ),
           ),
         ],
       ),

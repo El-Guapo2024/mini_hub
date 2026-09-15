@@ -2,30 +2,35 @@ import 'dart:io';
 
 import 'package:path_provider/path_provider.dart';
 
+import 'anki_sync.dart';
 import 'card_store.dart';
 import 'claude.dart';
+import 'keep_card.dart';
 
 export 'claude.dart' show TutorException;
 
 /// One conversation with the companion, anchored to the open chapter.
 ///
 /// The phone talks to the Claude API directly, on the reader's own key. The
-/// model can call add_card; the loop that runs that tool lives here, and the
-/// card goes straight into the phone's deck — the phone stays the source of
-/// truth.
+/// model can list the learner's Anki decks and add cards to any of them; the
+/// loop that runs those tools lives here, and every card is kept on the
+/// phone first — the phone stays the source of truth.
 class TutorSession {
   TutorSession({
     required this.chapterContext,
     ClaudeClient? claude,
-    Future<void> Function(Card card)? saveCard,
+    Future<void> Function(Card card, String? deck)? saveCard,
+    Future<List<String>> Function()? listDecks,
   }) : _claude = claude ?? ClaudeClient(),
-       _saveCard = saveCard ?? _toDeck;
+       _saveCard = saveCard ?? _toDeck,
+       _listDecks = listDecks ?? _ankiDecks;
 
   /// The visible chapter's text, sent with every question.
   String chapterContext;
 
   final ClaudeClient _claude;
-  final Future<void> Function(Card card) _saveCard;
+  final Future<void> Function(Card card, String? deck) _saveCard;
+  final Future<List<String>> Function() _listDecks;
 
   /// The whole conversation as the API sees it, replies kept verbatim —
   /// thinking blocks included, which must go back unchanged.
@@ -43,11 +48,13 @@ class TutorSession {
       'aspect particles. Never correct the learner unless they ask to be '
       'corrected. When the learner asks to save or remember a word (or you '
       'both agree one is worth keeping), call the add_card tool to put it in '
-      'their Anki deck.';
+      'their Anki deck. If they name a deck, or ask which decks they have, '
+      'call list_decks first and use a deck name exactly as listed; '
+      'otherwise leave the deck null and the card goes to their usual deck.';
 
   static const Map<String, dynamic> _addCard = {
     'name': 'add_card',
-    'description': "Add a flashcard to the learner's Anki deck.",
+    'description': "Add a flashcard to the learner's Anki collection.",
     'strict': true,
     'input_schema': {
       'type': 'object',
@@ -59,14 +66,37 @@ class TutorSession {
           'type': 'string',
           'description': 'example sentence, ideally from the book',
         },
+        'deck': {
+          'type': ['string', 'null'],
+          'description':
+              'a deck name exactly as list_decks returned it, or null for '
+              "the learner's usual deck",
+        },
       },
-      'required': ['word', 'pinyin', 'gloss', 'sentence'],
+      'required': ['word', 'pinyin', 'gloss', 'sentence', 'deck'],
       'additionalProperties': false,
     },
   };
 
-  static Future<void> _toDeck(Card card) async =>
-      (await CardStore.open()).add(card);
+  static const Map<String, dynamic> _listDecksTool = {
+    'name': 'list_decks',
+    'description':
+        "List the decks in the learner's connected Anki collection. Empty "
+        'when no Anki account is connected.',
+    'strict': true,
+    'input_schema': {
+      'type': 'object',
+      'properties': <String, dynamic>{},
+      'required': <String>[],
+      'additionalProperties': false,
+    },
+  };
+
+  static Future<void> _toDeck(Card card, String? deck) async {
+    await keepCard(card, deck: deck);
+  }
+
+  static Future<List<String>> _ankiDecks() => AnkiSync().decks();
 
   /// Same trace file the reader writes — the only observable channel from
   /// a simctl-launched app.
@@ -91,7 +121,7 @@ class TutorSession {
           'system':
               '$_persona\n\nThe reader currently has this passage open:'
               '\n\n$chapterContext',
-          'tools': [_addCard],
+          'tools': [_addCard, _listDecksTool],
           'messages': _messages,
         });
         final content = reply['content'] as List? ?? [];
@@ -123,21 +153,48 @@ class TutorSession {
     final input = block['input'] as Map? ?? {};
     String field(String name) => (input[name] as String? ?? '').trim();
     final result = {'type': 'tool_result', 'tool_use_id': block['id']};
-    if (block['name'] != 'add_card') {
-      return {...result, 'content': 'no such tool', 'is_error': true};
-    }
     try {
-      await _saveCard(
-        Card(
-          word: field('word'),
-          pinyin: field('pinyin'),
-          gloss: field('gloss'),
-          sentence: field('sentence'),
-        ),
-      );
-      return {...result, 'content': 'card saved: ${field('word')}'};
+      switch (block['name']) {
+        case 'list_decks':
+          final decks = await _listDecks();
+          return {
+            ...result,
+            'content': decks.isEmpty
+                ? 'No Anki account is connected; cards stay on the phone.'
+                : decks.join('\n'),
+          };
+        case 'add_card':
+          final deck = field('deck').isEmpty ? null : field('deck');
+          if (deck != null) {
+            // A misspelt name would quietly create a new deck in Anki;
+            // send the model back to the real list instead.
+            final decks = await _listDecks();
+            if (decks.isNotEmpty && !decks.contains(deck)) {
+              return {
+                ...result,
+                'content': 'No deck named "$deck". Decks: ${decks.join(', ')}',
+                'is_error': true,
+              };
+            }
+          }
+          await _saveCard(
+            Card(
+              word: field('word'),
+              pinyin: field('pinyin'),
+              gloss: field('gloss'),
+              sentence: field('sentence'),
+            ),
+            deck,
+          );
+          return {
+            ...result,
+            'content':
+                'card saved: ${field('word')}${deck == null ? '' : ' to $deck'}',
+          };
+      }
+      return {...result, 'content': 'no such tool', 'is_error': true};
     } catch (e) {
-      return {...result, 'content': 'could not save: $e', 'is_error': true};
+      return {...result, 'content': 'could not do that: $e', 'is_error': true};
     }
   }
 }

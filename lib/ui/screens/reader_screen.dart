@@ -6,7 +6,9 @@ import 'package:flutter/material.dart' hide Card;
 import 'package:path_provider/path_provider.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
+import '../../chinese/anki_sync.dart';
 import '../../chinese/card_store.dart';
+import '../../chinese/keep_card.dart';
 import '../../chinese/dictionary.dart';
 import '../../chinese/entry.dart';
 import '../../chinese/library.dart';
@@ -323,6 +325,8 @@ class _ReaderScreenState extends State<ReaderScreen> {
 
     final entry = match.entries.first;
     final sentence = ReaderScreen.sentenceAround(text, offset);
+    final (deck, loadDecks) = await _deckChoice();
+    if (!mounted) return;
     await showWordPopup(
       context: context,
       word: match.word,
@@ -331,18 +335,37 @@ class _ReaderScreenState extends State<ReaderScreen> {
       onSpeakWord: () => _speech.speak(match.word),
       onSpeakSentence: () => _speech.speak(sentence),
       onExplain: () => _explain(sentence),
-      onAddCard: () async {
-        final store = await CardStore.open();
-        await store.add(
-          Card(
-            word: match.word,
-            pinyin: entry.pinyin,
-            gloss: entry.glosses.join('; '),
-            sentence: sentence,
-          ),
-        );
-      },
+      deck: deck,
+      loadDecks: loadDecks,
+      onAddCard: (deck) => _keep(
+        Card(
+          word: match.word,
+          pinyin: entry.pinyin,
+          gloss: entry.glosses.join('; '),
+          sentence: sentence,
+        ),
+        deck: deck,
+      ),
     );
+  }
+
+  /// Where a card would go right now, and how to list the other decks —
+  /// both null when no Anki account is connected.
+  Future<(String?, Future<List<String>> Function()?)> _deckChoice() async {
+    final anki = AnkiSync();
+    final account = await anki.activeAccount();
+    if (account == null) return (null, null);
+    return (account.deck ?? AnkiSync.defaultDeck, anki.decks);
+  }
+
+  /// Saves a card, and says so when Anki didn't take it — the card itself
+  /// is always kept on the phone.
+  Future<void> _keep(Card card, {String? deck}) async {
+    final warning = await keepCard(card, deck: deck);
+    if (warning == null || !mounted) return;
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(SnackBar(content: Text(warning)));
   }
 
   /// A drag-selection: look the exact run up, or segment it word by word.
@@ -356,6 +379,8 @@ class _ReaderScreenState extends State<ReaderScreen> {
         [DictEntry(traditional: sel, simplified: sel, pinyin: '', glosses: [])];
     final entry = entries.first;
     final sentence = ReaderScreen.sentenceAround(text, start);
+    final (deck, loadDecks) = await _deckChoice();
+    if (!mounted) return;
     await showWordPopup(
       context: context,
       word: sel,
@@ -365,17 +390,17 @@ class _ReaderScreenState extends State<ReaderScreen> {
       onSpeakWord: () => _speech.speak(sel),
       onSpeakSentence: () => _speech.speak(sentence),
       onExplain: () => _explain(sentence),
-      onAddCard: () async {
-        final store = await CardStore.open();
-        await store.add(
-          Card(
-            word: sel,
-            pinyin: r?.pinyin ?? entry.pinyin,
-            gloss: entries.map((e) => e.glosses.join('; ')).join(' | '),
-            sentence: sentence,
-          ),
-        );
-      },
+      deck: deck,
+      loadDecks: loadDecks,
+      onAddCard: (deck) => _keep(
+        Card(
+          word: sel,
+          pinyin: r?.pinyin ?? entry.pinyin,
+          gloss: entries.map((e) => e.glosses.join('; ')).join(' | '),
+          sentence: sentence,
+        ),
+        deck: deck,
+      ),
     );
     unawaited(_web.runJavaScript('clearSelection()'));
   }

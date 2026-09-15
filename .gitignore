@@ -56,3 +56,6 @@ __pycache__/
 
 # Streaming speech model (~170MB) — fetched by tool/fetch_asr_model.sh
 /assets/chinese/asr/
+
+# Anki core for iOS: built by tool/build_anki_bridge.sh (large, AGPL)
+/ios/AnkiBridge/MiniHubAnkiBridge.xcframework/

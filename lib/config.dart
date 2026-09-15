@@ -43,16 +43,27 @@ class ChineseConfig {
   /// The bundled epub.js page the reader WebView loads.
   static const String readerPage = 'assets/chinese/epubjs/reader.html';
 
-  /// The companion's model — the project doc's cost/nuance decision.
-  /// The Mac-side Agent SDK companion (tutor_server/). With no API key in
-  /// the Keychain, questions go here instead; 127.0.0.1 reaches the Mac
-  /// from the simulator.
-  static const String tutorServer = 'http://127.0.0.1:8790';
+  /// The model a reader gets before choosing one.
+  static const CompanionModel defaultModel = CompanionModel.sonnet;
 
   static const String ttsLanguage = 'zh-CN';
 
   /// Slower than the OS default (0.5): a learner's reading speed.
   static const double ttsRate = 0.45;
+}
+
+/// The companion's model — the project doc's cost/nuance decision, now the
+/// reader's, since calls run on their own key and their own bill.
+enum CompanionModel {
+  haiku('claude-haiku-4-5', 'Haiku', 'cheapest'),
+  sonnet('claude-sonnet-5', 'Sonnet', 'balanced'),
+  opus('claude-opus-5', 'Opus', 'most nuance');
+
+  const CompanionModel(this.id, this.label, this.blurb);
+
+  final String id;
+  final String label;
+  final String blurb;
 }
 
 /// The app's settings, read once at startup.

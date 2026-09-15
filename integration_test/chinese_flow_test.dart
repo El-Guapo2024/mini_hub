@@ -88,11 +88,6 @@ void main() {
     expect(cards.last.pinyin, isNotEmpty);
     expect(cards.last.sentence, isNotEmpty);
 
-    // And the export file an Anki share would carry exists and holds it.
-    final tsv = await store.exportTsv();
-    expect(await tsv.exists(), isTrue);
-    expect(await tsv.readAsString(), contains(cards.last.word));
-
     // Leave evidence for the host: what the store held at the end.
     final docs = await getApplicationDocumentsDirectory();
     await File('${docs.path}/itest_result.txt').writeAsString(

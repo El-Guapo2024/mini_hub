@@ -41,6 +41,16 @@ class ReaderScreen extends StatefulWidget {
   static Future<void>? get debugDictionaryReady =>
       _ReaderScreenState._dictionaryLoad;
 
+  /// A CJK ideograph, as opposed to the punctuation between them. The main
+  /// block plus extension A covers everything a modern book uses.
+  @visibleForTesting
+  static bool isHan(String char) {
+    if (char.isEmpty) return false;
+    final code = char.runes.first;
+    return (code >= 0x4E00 && code <= 0x9FFF) ||
+        (code >= 0x3400 && code <= 0x4DBF);
+  }
+
   /// The doc's finding: the prepared unit is the sentence. Expand from the
   /// tap to the nearest sentence-ending punctuation on each side.
   @visibleForTesting
@@ -142,6 +152,8 @@ class _ReaderScreenState extends State<ReaderScreen> {
     // Loaded once for the app's life; every book shares it.
     _dictionaryLoad ??= Dictionary.load(ChineseConfig.cedictAsset);
     _debugLog('reader init');
+    // A page read to its end turns the page and keeps reading.
+    _speech.onReadDone = _turnAndReadOn;
 
     _web = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
@@ -156,7 +168,19 @@ class _ReaderScreenState extends State<ReaderScreen> {
 
   @override
   void dispose() {
+    _speech.onReadDone = null;
     _speech.stop();
+    // The test hook is a static, so without this every reader ever opened
+    // keeps its WebViewController — and with it the WKWebView holding a
+    // whole book — alive for the life of the app. Closing a book has to
+    // actually release it; the second one opened was enough to be killed
+    // for memory on a simulator.
+    if (identical(ReaderScreen.debugController, _web)) {
+      ReaderScreen.debugController = null;
+    }
+    // Drop the page's own retained state too: epub.js keeps the parsed book
+    // and its rendered sections, which is the large half of the leak.
+    _web.loadRequest(Uri.parse('about:blank')).ignore();
     super.dispose();
   }
 
@@ -218,6 +242,15 @@ class _ReaderScreenState extends State<ReaderScreen> {
         widget.library.savePosition(widget.book, m['cfi'] as String);
         final pct = (m['pct'] as num?)?.toDouble() ?? 0;
         setState(() => _progress = pct);
+        final turnedAt = _readOnAfterTurn;
+        if (turnedAt != null &&
+            DateTime.now().difference(turnedAt) < const Duration(seconds: 5)) {
+          _readOnAfterTurn = null;
+          // Give the new page a moment to lay out before reading its text.
+          Future.delayed(const Duration(milliseconds: 400), () {
+            if (mounted) _readVisiblePage();
+          });
+        }
       case 'tapped':
         _onTapped(m['text'] as String, m['offset'] as int);
       case 'selected':
@@ -271,7 +304,22 @@ class _ReaderScreenState extends State<ReaderScreen> {
       );
       return true;
     }());
-    if (match == null || !mounted) return;
+    if (!mounted) return;
+    if (match == null) {
+      // Punctuation and spaces are meant to do nothing — a sheet for 。 is
+      // noise. A character with no entry is different: the tap landed, the
+      // dictionary simply has nothing, and silence there reads as a dead
+      // app rather than a miss.
+      if (ReaderScreen.isHan(char)) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('No dictionary entry for $char.'),
+            duration: const Duration(seconds: 2),
+          ),
+        );
+      }
+      return;
+    }
 
     final entry = match.entries.first;
     final sentence = ReaderScreen.sentenceAround(text, offset);
@@ -332,20 +380,126 @@ class _ReaderScreenState extends State<ReaderScreen> {
     unawaited(_web.runJavaScript('clearSelection()'));
   }
 
-  /// Co-reading: speak exactly what the open page shows. iOS returns the
-  /// JS string JSON-quoted, hence the decode.
-  Future<void> _readPageAloud() async {
+  /// Co-reading: speak exactly what the open page shows, sentence by
+  /// sentence. Pressed while reading, it pauses; pressed again on the same
+  /// page, it resumes where it stopped.
+  Future<void> _toggleReadAloud() async {
+    _readOnAfterTurn = null;
+    if (_speech.reading.value) {
+      await _speech.pause();
+      return;
+    }
+    await _readVisiblePage();
+  }
+
+  Future<void> _readVisiblePage() async {
+    final text = await _visibleText();
+    if (text.trim().isEmpty) return;
+    await _speech.read(text);
+  }
+
+  /// Set when a page read to its end turned the page itself; the `moved`
+  /// that follows reads the new page. Timestamped, so a turn that never
+  /// comes (the last page of the book) cannot fire on a later manual swipe.
+  DateTime? _readOnAfterTurn;
+
+  /// Opening the companion pauses a page read (its place is kept) and hides
+  /// the play controls until it is closed again.
+  void _toggleCompanion() {
+    final opening = !_companionOpen;
+    if (opening) {
+      _readOnAfterTurn = null;
+      if (_speech.reading.value) _speech.pause();
+    }
+    setState(() => _companionOpen = opening);
+  }
+
+  void _turnAndReadOn() {
+    if (!mounted) return;
+    _readOnAfterTurn = DateTime.now();
+    _web.runJavaScript('goNext()');
+  }
+
+  /// iOS returns the JS string JSON-quoted, hence the decode.
+  Future<String> _visibleText() async {
     final raw = await _web.runJavaScriptReturningResult('visibleText()');
     var text = raw.toString();
     if (text.startsWith('"')) {
       try {
         text = jsonDecode(text) as String;
       } on FormatException {
-        // Speak it as it came.
+        // Use it as it came.
       }
     }
-    if (text.trim().isEmpty) return;
-    await _speech.speak(text);
+    return text;
+  }
+
+  /// The strip under the page: read aloud with its progress, and the
+  /// companion. At the thumb, not in the title bar.
+  Widget _controls(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    return Material(
+      color: cs.surfaceContainer,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+        child: ListenableBuilder(
+          listenable: Listenable.merge([_speech.reading, _speech.readOffset]),
+          builder: (context, _) {
+            final reading = _speech.reading.value;
+            final total = _speech.readLength;
+            final done = _speech.readOffset.value.clamp(0, total);
+            return Row(
+              children: [
+                // While the companion is open the strip is just its toggle:
+                // reading aloud and talking to the companion don't mix.
+                if (_companionOpen)
+                  const Spacer()
+                else ...[
+                  // One button that toggles — never play and stop side by side.
+                  IconButton(
+                    icon: Icon(
+                      reading
+                          ? Icons.pause_circle_filled
+                          : Icons.play_circle_outline,
+                    ),
+                    iconSize: 30,
+                    tooltip: reading ? 'Pause reading' : 'Read this page aloud',
+                    onPressed: _toggleReadAloud,
+                  ),
+                  // Scrub like a video: the dot follows the voice word by
+                  // word, and dropping it anywhere plays from that character.
+                  Expanded(
+                    child: Slider(
+                      value: total == 0 ? 0 : done.toDouble(),
+                      max: total == 0 ? 1 : total.toDouble(),
+                      onChanged: total == 0
+                          ? null
+                          : (v) => _speech.readOffset.value = v.round(),
+                      onChangeEnd: total == 0
+                          ? null
+                          : (v) => _speech.seek(v.round()),
+                    ),
+                  ),
+                  Text(
+                    total == 0 ? '' : '${(100 * done / total).round()}%',
+                    style: Theme.of(context).textTheme.labelSmall,
+                  ),
+                ],
+                IconButton(
+                  icon: Icon(
+                    _companionOpen
+                        ? Icons.chat_bubble
+                        : Icons.chat_bubble_outline,
+                  ),
+                  tooltip: 'Companion',
+                  onPressed: () => _toggleCompanion(),
+                ),
+              ],
+            );
+          },
+        ),
+      ),
+    );
   }
 
   @override
@@ -353,32 +507,6 @@ class _ReaderScreenState extends State<ReaderScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.book.title),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.play_circle_outline),
-            tooltip: 'Read this page aloud',
-            onPressed: _readPageAloud,
-          ),
-          // A stop control exists only while the voice is talking —
-          // permanently visible, it read as "voice mode is on".
-          ValueListenableBuilder<bool>(
-            valueListenable: _speech.speaking,
-            builder: (_, speaking, _) => speaking
-                ? IconButton(
-                    icon: const Icon(Icons.stop_circle_outlined),
-                    tooltip: 'Stop speaking',
-                    onPressed: _speech.stop,
-                  )
-                : const SizedBox.shrink(),
-          ),
-          IconButton(
-            icon: Icon(
-              _companionOpen ? Icons.chat_bubble : Icons.chat_bubble_outline,
-            ),
-            tooltip: 'Companion',
-            onPressed: () => setState(() => _companionOpen = !_companionOpen),
-          ),
-        ],
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(2),
           child: LinearProgressIndicator(value: _progress, minHeight: 2),
@@ -407,6 +535,7 @@ class _ReaderScreenState extends State<ReaderScreen> {
                 session: _tutor ??= TutorSession(chapterContext: ''),
                 speech: _speech,
               ),
+            _controls(context),
           ],
         ),
       ),

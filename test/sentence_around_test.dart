@@ -19,4 +19,19 @@ void main() {
   test('text without enders returns the whole node, trimmed', () {
     expect(ReaderScreen.sentenceAround('  只有四个字  ', 4), '只有四个字');
   });
+
+  /// Punctuation is not a word, and must not be treated as a failed lookup.
+  /// A tap on 。 finding nothing is correct; a tap on a character the
+  /// dictionary does not carry is a miss worth saying out loud. Telling
+  /// those apart is the whole job of isHan.
+  test('han characters are told apart from the punctuation between them', () {
+    expect(ReaderScreen.isHan('走'), isTrue);
+    expect(ReaderScreen.isHan('了'), isTrue);
+    expect(ReaderScreen.isHan('。'), isFalse);
+    expect(ReaderScreen.isHan('，'), isFalse);
+    expect(ReaderScreen.isHan('“'), isFalse);
+    expect(ReaderScreen.isHan(' '), isFalse);
+    expect(ReaderScreen.isHan(''), isFalse);
+    expect(ReaderScreen.isHan('a'), isFalse);
+  });
 }

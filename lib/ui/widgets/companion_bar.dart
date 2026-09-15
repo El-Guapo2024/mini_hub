@@ -6,9 +6,11 @@ import '../../chinese/tutor.dart';
 
 /// The companion as a slim strip under the page, never a sheet over it.
 ///
-/// Voice mode: hold the mic, speak, release — the question sends itself.
-/// Talk mode: answers are read aloud (the speaker toggle turns that off).
-/// The answer is a compact card above the strip; the book stays visible.
+/// Voice works like Claude Code's: tap the mic inside the field, speak in
+/// English, Chinese or both, tap again — the words land in the field to
+/// check, and send sends them. Answers are always spoken, each language in
+/// its own voice. The answer is a compact card above the strip; the book
+/// stays visible.
 class CompanionBar extends StatefulWidget {
   const CompanionBar({super.key, required this.session, required this.speech});
 
@@ -25,16 +27,18 @@ class _CompanionBarState extends State<CompanionBar> {
 
   bool _busy = false;
   bool _listening = false;
-  bool _speakAnswers = true;
   String? _answer;
   String? _error;
+
+  /// The start still in flight, if the mic was tapped off before it finished.
+  Future<String?>? _starting;
 
   @override
   void initState() {
     super.initState();
-    // Fetch the Whisper model in the background so the first hold-to-talk
-    // doesn't stall on a 140MB download.
-    _transcriber.ensureReady();
+    // Fetch the Whisper model in the background so the first tap of the
+    // mic doesn't stall on a 140MB download.
+    _transcriber.ensureReady().catchError((_) {});
   }
 
   @override
@@ -46,7 +50,7 @@ class _CompanionBarState extends State<CompanionBar> {
 
   Future<void> _send() async {
     final q = _input.text.trim();
-    if (q.isEmpty || _busy) return;
+    if (q.isEmpty || _busy || _listening) return;
     _input.clear();
     setState(() {
       _busy = true;
@@ -56,11 +60,7 @@ class _CompanionBarState extends State<CompanionBar> {
       final a = await widget.session.ask(q);
       if (!mounted) return;
       setState(() => _answer = a);
-      if (_speakAnswers) {
-        // Answers are English prose with Chinese examples; the English
-        // voice reads that mix far better than the Chinese one.
-        await widget.speech.speak(a, language: 'en-US');
-      }
+      await widget.speech.speakMixed(a);
     } on TutorException catch (e) {
       if (mounted) setState(() => _error = e.message);
     } catch (e) {
@@ -71,11 +71,27 @@ class _CompanionBarState extends State<CompanionBar> {
   }
 
   Future<void> _startListening() async {
-    // Words appear in the field while speaking — streaming Whisper.
-    final ok = await _transcriber.start((partial) {
+    // Lit at once: loading Whisper takes a moment, and a mic that does
+    // nothing meanwhile reads as broken.
+    setState(() {
+      _listening = true;
+      _error = null;
+    });
+    // Awaited: the voice releasing the audio session while the recorder is
+    // claiming it left the recorder with a dead session and silent input.
+    await widget.speech.stop();
+    _starting = _transcriber.start((partial) {
       if (mounted) setState(() => _input.text = partial);
     });
-    if (ok && mounted) setState(() => _listening = true);
+    final error = await _starting;
+    _starting = null;
+    if (!mounted) return;
+    if (error != null) {
+      setState(() {
+        _listening = false;
+        _error = error;
+      });
+    }
   }
 
   Future<void> _stopListening() async {
@@ -84,13 +100,19 @@ class _CompanionBarState extends State<CompanionBar> {
       _listening = false;
       _busy = true;
     });
+    // Tapped off while Whisper was still loading: without waiting here the
+    // stop was dropped and the mic then recorded forever.
+    final pending = _starting;
+    if (pending != null && await pending != null) {
+      if (mounted) setState(() => _busy = false);
+      return;
+    }
     final text = await _transcriber.stop();
     if (!mounted) return;
-    setState(() => _busy = false);
-    if (text.isEmpty) return;
-    _input.text = text;
-    // Release sends what was heard — voice mode needs no second gesture.
-    await _send();
+    setState(() {
+      _busy = false;
+      if (text.isNotEmpty) _input.text = text;
+    });
   }
 
   @override
@@ -164,77 +186,55 @@ class _CompanionBarState extends State<CompanionBar> {
                 ),
               ),
             ),
-          SafeArea(
-            top: false,
-            child: Padding(
-              padding: const EdgeInsets.fromLTRB(12, 10, 12, 10),
-              child: Row(
-                children: [
-                  // Hold to talk; release to send.
-                  GestureDetector(
-                    onLongPressStart: (_) => _startListening(),
-                    onLongPressEnd: (_) => _stopListening(),
-                    child: AnimatedContainer(
-                      duration: const Duration(milliseconds: 150),
-                      width: 44,
-                      height: 44,
-                      decoration: BoxDecoration(
-                        color: _listening ? cs.primary : cs.secondaryContainer,
-                        shape: BoxShape.circle,
-                      ),
-                      child: Icon(
-                        _listening ? Icons.mic : Icons.mic_none,
-                        size: 22,
-                        color: _listening
-                            ? cs.onPrimary
-                            : cs.onSecondaryContainer,
-                      ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(12, 10, 12, 10),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: cs.surfaceContainerHighest,
+                      borderRadius: BorderRadius.circular(22),
                     ),
-                  ),
-                  const SizedBox(width: 10),
-                  Expanded(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: cs.surfaceContainerHighest,
-                        borderRadius: BorderRadius.circular(22),
-                      ),
-                      padding: const EdgeInsets.symmetric(horizontal: 16),
-                      child: TextField(
-                        controller: _input,
-                        minLines: 1,
-                        maxLines: 3,
-                        style: theme.textTheme.bodyMedium,
-                        decoration: const InputDecoration(
-                          hintText: 'Hold the mic, or type…',
-                          border: InputBorder.none,
-                          isDense: true,
-                          contentPadding: EdgeInsets.symmetric(vertical: 12),
+                    padding: const EdgeInsets.only(left: 16),
+                    child: TextField(
+                      controller: _input,
+                      minLines: 1,
+                      maxLines: 3,
+                      style: theme.textTheme.bodyMedium,
+                      decoration: InputDecoration(
+                        hintText: _listening
+                            ? 'Listening…'
+                            : 'Ask, or tap the mic',
+                        border: InputBorder.none,
+                        isDense: true,
+                        contentPadding: const EdgeInsets.symmetric(
+                          vertical: 12,
                         ),
-                        onSubmitted: (_) => _send(),
+                        // The mic lives inside the field: tap to talk, tap
+                        // again to stop; the words stay here to check.
+                        suffixIcon: IconButton(
+                          icon: Icon(
+                            _listening ? Icons.stop_circle : Icons.mic_none,
+                            color: _listening ? cs.error : cs.onSurfaceVariant,
+                          ),
+                          tooltip: _listening ? 'Stop listening' : 'Speak',
+                          onPressed: _listening
+                              ? _stopListening
+                              : _startListening,
+                        ),
                       ),
+                      onSubmitted: (_) => _send(),
                     ),
                   ),
-                  const SizedBox(width: 4),
-                  IconButton(
-                    icon: Icon(
-                      _speakAnswers ? Icons.volume_up : Icons.volume_off,
-                      size: 20,
-                    ),
-                    color: _speakAnswers ? cs.primary : theme.disabledColor,
-                    visualDensity: VisualDensity.compact,
-                    tooltip: _speakAnswers
-                        ? 'Answers are read aloud'
-                        : 'Answers are silent',
-                    onPressed: () =>
-                        setState(() => _speakAnswers = !_speakAnswers),
-                  ),
-                  IconButton.filled(
-                    icon: const Icon(Icons.arrow_upward, size: 20),
-                    visualDensity: VisualDensity.compact,
-                    onPressed: _busy ? null : _send,
-                  ),
-                ],
-              ),
+                ),
+                const SizedBox(width: 8),
+                IconButton.filled(
+                  icon: const Icon(Icons.arrow_upward, size: 20),
+                  visualDensity: VisualDensity.compact,
+                  onPressed: _busy || _listening ? null : _send,
+                ),
+              ],
             ),
           ),
         ],

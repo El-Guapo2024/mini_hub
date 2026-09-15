@@ -4,9 +4,9 @@ import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';
+import 'package:mini_hub/chinese/claude.dart';
 import 'package:mini_hub/chinese/reading.dart';
 import 'package:mini_hub/chinese/reading_cache.dart';
-import 'package:mini_hub/chinese/tutor.dart';
 
 /// A prepared reading survives what a model actually sends back.
 ///
@@ -130,23 +130,36 @@ void main() {
     setUp(() => dir = Directory.systemTemp.createTempSync('readings'));
     tearDown(() => dir.deleteSync(recursive: true));
 
+    /// A Messages API reply whose one text block is [json], encoded.
+    http.Response apiReply(Object json) => http.Response(
+      jsonEncode({
+        'stop_reason': 'end_turn',
+        'content': [
+          {'type': 'text', 'text': jsonEncode(json)},
+        ],
+      }),
+      200,
+      headers: {'content-type': 'application/json; charset=utf-8'},
+    );
+
+    ClaudeClient claude(MockClientHandler handler) =>
+        ClaudeClient(apiKey: () async => 'k', client: MockClient(handler));
+
     test('asks once, then answers from the cache', () async {
       var calls = 0;
       final service = ReadingService(
         cache: ReadingCache(dir),
-        client: MockClient((req) async {
+        claude: claude((req) async {
           calls++;
-          expect(jsonDecode(req.body)['sentence'], '他走进来了。');
-          return http.Response(
-            jsonEncode({
-              'translation': 'He came in.',
-              'notes': [
-                {'about': '了', 'says': 'change of state'},
-              ],
-            }),
-            200,
-            headers: {'content-type': 'application/json; charset=utf-8'},
-          );
+          expect(req.headers['x-api-key'], 'k');
+          final messages = jsonDecode(req.body)['messages'] as List;
+          expect(messages.single['content'], contains('他走进来了。'));
+          return apiReply({
+            'translation': 'He came in.',
+            'notes': [
+              {'about': '了', 'says': 'change of state'},
+            ],
+          });
         }),
       );
 
@@ -158,12 +171,15 @@ void main() {
       expect(calls, 1, reason: 'the second reading came off disk');
     });
 
-    test('the server error is what the reader is shown', () async {
+    test('the API error is what the reader is shown', () async {
       final service = ReadingService(
-        client: MockClient(
+        claude: claude(
           (_) async => http.Response(
-            jsonEncode({'error': 'agent error_max_turns'}),
-            500,
+            jsonEncode({
+              'type': 'error',
+              'error': {'type': 'overloaded_error', 'message': 'Overloaded'},
+            }),
+            529,
           ),
         ),
       );
@@ -174,15 +190,15 @@ void main() {
           isA<TutorException>().having(
             (e) => e.message,
             'message',
-            'agent error_max_turns',
+            'Overloaded',
           ),
         ),
       );
     });
 
-    test('a sleeping server says how to start it', () async {
+    test('offline says so', () async {
       final service = ReadingService(
-        client: MockClient((_) async => throw const SocketException('nope')),
+        claude: claude((_) async => throw const SocketException('nope')),
       );
 
       expect(
@@ -191,7 +207,24 @@ void main() {
           isA<TutorException>().having(
             (e) => e.message,
             'message',
-            contains('node tutor_server/server.mjs'),
+            contains('online'),
+          ),
+        ),
+      );
+    });
+
+    test('a rejected key says where to replace it', () async {
+      final service = ReadingService(
+        claude: claude((_) async => http.Response('{}', 401)),
+      );
+
+      expect(
+        () => service.prepare('他走进来了。'),
+        throwsA(
+          isA<TutorException>().having(
+            (e) => e.message,
+            'message',
+            contains('replace it'),
           ),
         ),
       );
@@ -201,9 +234,7 @@ void main() {
       final cache = ReadingCache(dir);
       final service = ReadingService(
         cache: cache,
-        client: MockClient(
-          (_) async => http.Response(jsonEncode({'notes': <dynamic>[]}), 200),
-        ),
+        claude: claude((_) async => apiReply({'notes': <dynamic>[]})),
       );
 
       await expectLater(

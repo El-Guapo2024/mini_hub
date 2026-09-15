@@ -1,10 +1,7 @@
 import 'dart:convert';
 
-import 'package:http/http.dart' as http;
-
-import '../config.dart';
+import 'claude.dart';
 import 'reading_cache.dart';
-import 'tutor.dart';
 
 /// One thing the sentence means without saying it.
 ///
@@ -79,12 +76,47 @@ class Reading {
 /// a prepared reading does not change — so the cache is checked first and the
 /// companion is asked only for what is genuinely new.
 class ReadingService {
-  ReadingService({ReadingCache? cache, http.Client? client})
+  ReadingService({ReadingCache? cache, ClaudeClient? claude})
     : _cache = cache,
-      _client = client ?? http.Client();
+      _claude = claude ?? ClaudeClient();
 
   final ReadingCache? _cache;
-  final http.Client _client;
+  final ClaudeClient _claude;
+
+  static const String _reader =
+      'You prepare one Chinese sentence for a learner reading a book.\n\n'
+      'translation: natural English for the whole sentence, not word by '
+      'word.\n'
+      'notes: only meaning that is implied rather than written — dropped '
+      'subjects, unmarked conditionals, aspect particles, register, an idiom '
+      'whose parts mislead. "about" quotes the fragment from the sentence; '
+      '"says" is one plain English line about what it carries. A sentence '
+      'that implies nothing beyond its words gets an empty notes list; do not '
+      'pad it with a gloss of every word, which is what this exists instead '
+      'of.';
+
+  /// Structured output: the API holds the reply to this shape, so there is
+  /// no fence-stripping of a model told to emit bare JSON.
+  static const Map<String, dynamic> _schema = {
+    'type': 'object',
+    'properties': {
+      'translation': {'type': 'string'},
+      'notes': {
+        'type': 'array',
+        'items': {
+          'type': 'object',
+          'properties': {
+            'about': {'type': 'string'},
+            'says': {'type': 'string'},
+          },
+          'required': ['about', 'says'],
+          'additionalProperties': false,
+        },
+      },
+    },
+    'required': ['translation', 'notes'],
+    'additionalProperties': false,
+  };
 
   Future<Reading> prepare(String sentence, {String chapter = ''}) async {
     final trimmed = sentence.trim();
@@ -95,39 +127,24 @@ class ReadingService {
     final cached = await _cache?.get(trimmed);
     if (cached != null) return cached;
 
-    final http.Response resp;
-    try {
-      resp = await _client.post(
-        Uri.parse('${ChineseConfig.tutorServer}/read'),
-        headers: {'content-type': 'application/json'},
-        body: jsonEncode({'sentence': trimmed, 'chapter': chapter}),
-      );
-    } catch (e) {
-      throw TutorException(
-        'Companion server not reachable — start it on the Mac:\n'
-        'node tutor_server/server.mjs',
-      );
-    }
-
-    if (resp.statusCode != 200) {
-      String detail = 'HTTP ${resp.statusCode}';
-      try {
-        detail =
-            (jsonDecode(utf8.decode(resp.bodyBytes))['error'] as String?) ??
-            detail;
-      } on FormatException {
-        // A non-JSON body (a stray server, a proxy) — keep the status line.
-      }
-      throw TutorException(detail);
-    }
+    final reply = await _claude.messages({
+      'max_tokens': 16000,
+      'system': '$_reader\n\nIt appears in this passage:\n\n$chapter',
+      'messages': [
+        {'role': 'user', 'content': 'Prepare this sentence:\n\n$trimmed'},
+      ],
+      'output_config': {
+        'format': {'type': 'json_schema', 'schema': _schema},
+      },
+    });
 
     final Reading reading;
     try {
-      final json = jsonDecode(utf8.decode(resp.bodyBytes));
-      reading = Reading.fromJson({
-        'sentence': trimmed,
-        ...json as Map<String, dynamic>,
-      });
+      final json = jsonDecode(ClaudeClient.textOf(reply));
+      if (json is! Map<String, dynamic>) {
+        throw const FormatException('the reading was not an object');
+      }
+      reading = Reading.fromJson({'sentence': trimmed, ...json});
     } on FormatException catch (e) {
       throw TutorException('The companion did not prepare a reading: $e');
     }

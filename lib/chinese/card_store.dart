@@ -63,22 +63,4 @@ class CardStore {
     }
     return cards;
   }
-
-  /// Anki's plainest import format: tab-separated, one card per line, fields
-  /// word / pinyin / gloss / sentence. Tabs and newlines inside a field would
-  /// break the row, so they are flattened to spaces.
-  Future<File> exportTsv() async {
-    String clean(String s) => s.replaceAll(RegExp(r'[\t\n\r]+'), ' ');
-    final cards = await all();
-    final tsv = cards
-        .map(
-          (c) =>
-              '${clean(c.word)}\t${clean(c.pinyin)}\t${clean(c.gloss)}\t${clean(c.sentence)}',
-        )
-        .join('\n');
-    final docs = await getApplicationDocumentsDirectory();
-    final out = File('${docs.path}/anki_export.tsv');
-    await out.writeAsString(tsv);
-    return out;
-  }
 }

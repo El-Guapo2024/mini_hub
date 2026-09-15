@@ -53,3 +53,6 @@ __pycache__/
 # The companion server's dependencies — installed with `npm install`, and
 # 250MB that has no business in a Flutter repo.
 /tutor_server/node_modules/
+
+# Streaming speech model (~170MB) — fetched by tool/fetch_asr_model.sh
+/assets/chinese/asr/

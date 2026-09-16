@@ -168,4 +168,30 @@ void main() {
     expect(add['notetype'], AnkiSync.noteType);
     expect(add['fields'], ['了', 'le', 'done', '他来了']);
   });
+
+  test('replacing from AnkiWeb pulls a copy down, and only down', () async {
+    final a = anki();
+    final account = (await a.connect(user: 'me@x', password: 'pw')).account;
+    // What a collection uploaded from desktop Anki looks like from here.
+    syncStatus = 'full_download_required';
+    calls.clear();
+
+    expect(await a.resetFromAnkiWeb(account), 12);
+    expect(calls.map((c) => c.$1), ['sync', 'download']);
+  });
+
+  test(
+    'replacing never pushes, even when AnkiWeb asks for an upload',
+    () async {
+      final a = anki();
+      final account = (await a.connect(user: 'me@x', password: 'pw')).account;
+      // The one status that must never be obeyed: the phone's copy going up
+      // over the real collection is the mistake with no undo.
+      syncStatus = 'full_upload_required';
+      calls.clear();
+
+      await a.resetFromAnkiWeb(account);
+      expect(calls.map((c) => c.$1), ['sync', 'download']);
+    },
+  );
 }

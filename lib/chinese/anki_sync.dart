@@ -115,6 +115,27 @@ class AnkiSync {
     }
   }
 
+  /// Throws this phone's copy away and takes AnkiWeb's instead.
+  ///
+  /// Overwriting the cloud collection from desktop Anki — "upload to
+  /// AnkiWeb", which is what a full sync there does — leaves the two
+  /// collections with no shared history, and from then on a normal sync can
+  /// never succeed: AnkiWeb asks every other device for a full sync, and
+  /// [syncNow] rightly refuses. This is the way back, and the only one.
+  ///
+  /// Destructive, deliberately, and only ever downwards: a card added here
+  /// that never reached AnkiWeb is gone afterwards. It must never push the
+  /// other way — the phone's copy overwriting the real collection is the one
+  /// mistake no undo exists for. Returns how many notes came down.
+  Future<int> resetFromAnkiWeb(Connection account) async {
+    // Synced first only to follow AnkiWeb moving the account to another
+    // server; the status it reports is beside the point, since the caller
+    // has already decided to take the cloud copy.
+    final (_, updated) = await _sync(account);
+    final pulled = await _call('download', await _auth(updated));
+    return pulled['notes'] as int;
+  }
+
   Future<Connection?> activeAccount() => _store.active(ConnectorKind.anki);
 
   /// The decks in the collection of the account in use — synced first, so a

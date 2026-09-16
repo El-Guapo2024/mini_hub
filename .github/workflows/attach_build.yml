@@ -1,0 +1,76 @@
+name: Attach a build to the testers
+
+# Uploading is not releasing, and the two can fail apart. When a build reaches
+# App Store Connect but the release step does not attach it — processing ran
+# long, the job timed out, the lookup was wrong — the binary is sitting there,
+# valid and invisible, and re-running the build job cannot fix it: that would
+# upload the same build number again and Apple refuses a duplicate.
+#
+# So attaching is available on its own, by build number. Nothing is rebuilt and
+# nothing is uploaded; this only talks to the App Store Connect API.
+#
+#   gh workflow run attach_build.yml -f build=11
+
+on:
+  workflow_dispatch:
+    inputs:
+      build:
+        description: 'Build number (CFBundleVersion), e.g. 11'
+        required: true
+        type: string
+      groups:
+        description: 'Comma-separated beta groups'
+        required: false
+        default: Internal,Public
+        type: string
+
+concurrency:
+  # Shares the queue with the shipping workflow: attaching a build while
+  # another is mid-upload is exactly the race that produces a surprise.
+  group: testflight
+  cancel-in-progress: false
+
+jobs:
+  attach:
+    name: attach
+    # No Xcode needed — this is the API and nothing else, so it runs on the
+    # cheap runner rather than a Mac.
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install the JWT library
+        # App Store Connect authenticates with an ES256-signed token, which
+        # needs cryptography underneath pyjwt.
+        run: pip install --quiet 'pyjwt[crypto]'
+
+      - name: Place the App Store Connect API key
+        env:
+          API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
+          API_PRIVATE_KEY: ${{ secrets.APP_STORE_CONNECT_PRIVATE_KEY }}
+        run: |
+          set -euo pipefail
+          mkdir -p ~/private_keys
+          echo "$API_PRIVATE_KEY" | base64 --decode > ~/private_keys/AuthKey_$API_KEY_ID.p8
+
+      - name: Attach it
+        env:
+          ASC_KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+          ASC_APP_ID: '6804838723'
+          BUILD_VERSION: ${{ inputs.build }}
+          ASC_GROUPS: ${{ inputs.groups }}
+        run: |
+          set -euo pipefail
+          export ASC_KEY_PATH="$HOME/private_keys/AuthKey_$ASC_KEY_ID.p8"
+          python3 tools/ci/release_to_testers.py
+
+      - name: Shred the key
+        if: always()
+        run: rm -rf ~/private_keys

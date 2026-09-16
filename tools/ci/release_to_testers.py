@@ -70,8 +70,22 @@ def call(method: str, path: str, body=None):
         raise SystemExit(f"HTTP {e.code} on {method} {path}\n{e.read().decode()}")
 
 
+def recent_builds():
+    """Newest builds first.
+
+    Sorted and asked for by the hundred rather than taking whatever twenty the
+    API felt like returning: unsorted, a build falls out of the window as soon
+    as the app has enough history, and a build that is merely out of view is
+    indistinguishable from one that was never uploaded.
+    """
+    return call(
+        "GET",
+        f"/builds?filter[app]={APP_ID}&sort=-uploadedDate&limit=200",
+    )["data"]
+
+
 def build_now():
-    for b in call("GET", f"/builds?filter[app]={APP_ID}&limit=20")["data"]:
+    for b in recent_builds():
         if b["attributes"]["version"] == VERSION:
             return b
     return None
@@ -80,8 +94,18 @@ def build_now():
 started = time.time()
 build = None
 while time.time() - started < DEADLINE:
-    build = build_now()
+    seen = recent_builds()
+    build = next((b for b in seen if b["attributes"]["version"] == VERSION), None)
     state = build["attributes"]["processingState"] if build else "not visible yet"
+    # What else is there, when the one we want is not. "Not visible yet" on its
+    # own cannot tell a slow build from a lookup that is looking in the wrong
+    # place, and that ambiguity cost two uploads.
+    if not build:
+        others = ", ".join(
+            f"{b['attributes']['version']}={b['attributes']['processingState']}"
+            for b in seen[:5]
+        )
+        state += f" (newest on the app: {others or 'no builds at all'})"
     print(f"build {VERSION}: {state}", flush=True)
     if build and state == "VALID":
         break

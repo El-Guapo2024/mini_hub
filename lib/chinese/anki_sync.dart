@@ -32,7 +32,10 @@ class AnkiSync {
   final AnkiCall _call;
   final Future<String> Function() _root;
 
-  static const String defaultDeck = 'Chinese::Reader';
+  /// Where a card goes when the user has not chosen a deck. Anki's own
+  /// deck, which every collection has — not a deck of ours invented in the
+  /// user's collection. The decks belong to AnkiWeb; this app names none.
+  static const String fallbackDeck = 'Default';
 
   static Future<String> _defaultRoot() async =>
       '${(await getApplicationSupportDirectory()).path}/anki';
@@ -61,7 +64,9 @@ class AnkiSync {
       name: name.trim().isEmpty ? user : name.trim(),
       secret: login['hkey'] as String,
       user: user,
-      deck: defaultDeck,
+      // No deck chosen yet: the collection's own decks are what to choose
+      // from, and they are not known until it has come down.
+      deck: null,
     );
     try {
       // A fresh, empty copy can only be asked to pull.
@@ -93,10 +98,11 @@ class AnkiSync {
     await _store.remove(account);
   }
 
+  /// Remembers which deck this account's cards go into. An empty name
+  /// clears the choice rather than standing in a deck of our own.
   Future<Connection> setDeck(Connection account, String deck) async {
-    final updated = account.copyWith(
-      deck: deck.trim().isEmpty ? defaultDeck : deck.trim(),
-    );
+    final chosen = deck.trim();
+    final updated = account.copyWith(deck: chosen.isEmpty ? null : chosen);
     await _store.save(updated);
     return updated;
   }
@@ -145,14 +151,10 @@ class AnkiSync {
       // Offline: the phone's copy still knows every deck it has seen.
     }
     final out = await _call('decks', {'dir': await _dir(account)});
-    final names = [for (final d in out['decks'] as List) d as String];
-    final own = account.deck ?? defaultDeck;
-    if (!names.contains(own)) {
-      names
-        ..add(own)
-        ..sort();
-    }
-    return names;
+    // Exactly the collection's decks. A deck the user has not made is not
+    // offered: the list used to carry our own name whether or not Anki had
+    // ever heard of it, which read as a real deck and was not one.
+    return [for (final d in out['decks'] as List) d as String];
   }
 
   /// Adds [card] to the Anki account in use — into [deck], or the account's
@@ -169,7 +171,7 @@ class AnkiSync {
     }
     final added = await _call('add', {
       ...await _auth(account),
-      'deck': account.deck ?? defaultDeck,
+      'deck': account.deck ?? fallbackDeck,
       'notetype': noteType,
       'create_notetype': noteTypeSpec,
       'fields': chineseFields(card),

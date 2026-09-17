@@ -229,7 +229,7 @@ class _ConnectorsScreenState extends State<ConnectorsScreen> {
   static String _subtitle(Connection c) => switch (c.kind) {
     ConnectorKind.claude =>
       'Key ${c.hint} · ${(c.model ?? ChineseConfig.defaultModel).label}',
-    ConnectorKind.anki => '${c.user ?? ''} · ${c.deck ?? AnkiSync.defaultDeck}',
+    ConnectorKind.anki => '${c.user ?? ''} · ${c.deck ?? 'no deck chosen'}',
   };
 }
 
@@ -490,7 +490,10 @@ class _AnkiAccountDialogState extends State<_AnkiAccountDialog> {
   late final TextEditingController _name = TextEditingController(
     text: widget.account.name,
   );
-  late String _deck = widget.account.deck ?? AnkiSync.defaultDeck;
+
+  /// Null until the user picks one, which is what an account that has never
+  /// chosen a deck actually looks like.
+  late String? _deck = widget.account.deck;
 
   /// The collection's decks, read from Anki — chosen from, never typed.
   late final Future<List<String>> _decks = widget.anki.decksFor(widget.account);
@@ -528,7 +531,7 @@ class _AnkiAccountDialogState extends State<_AnkiAccountDialog> {
     final name = _name.text.trim();
     await widget.anki.setDeck(
       widget.account.copyWith(name: name.isEmpty ? null : name),
-      _deck,
+      _deck ?? '',
     );
     if (mounted) Navigator.of(context).pop();
   }

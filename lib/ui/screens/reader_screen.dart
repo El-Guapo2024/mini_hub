@@ -377,7 +377,7 @@ class _ReaderScreenState extends State<ReaderScreen> {
     final anki = AnkiSync();
     final account = await anki.activeAccount();
     if (account == null) return (null, null);
-    return (account.deck ?? AnkiSync.defaultDeck, anki.decks);
+    return (account.deck, anki.decks);
   }
 
   /// Saves a card, and says so when Anki didn't take it — the card itself

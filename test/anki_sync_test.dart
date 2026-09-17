@@ -89,10 +89,12 @@ void main() {
     expect(add['deck'], 'Mandarin::Books');
   });
 
-  test('decks lists the collection, with the usual deck included', () async {
+  test('decks lists the collection, and nothing of our own', () async {
     final a = anki();
     await a.connect(user: 'me@x', password: 'pw');
-    expect(await a.decks(), ['Chinese::Reader', 'Default', 'Mandarin::Books']);
+    // No deck of ours in the list. It used to carry one whether or not the
+    // collection had ever heard of it, which read as a real deck.
+    expect(await a.decks(), ['Default', 'Mandarin::Books']);
   });
 
   test('a card can go to any deck, which becomes the usual one', () async {

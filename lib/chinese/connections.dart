@@ -199,5 +199,39 @@ class ConnectionStore {
         await _storage.delete(key: k);
       }
     }
+
+    // The deck the app used to name for itself. connect() wrote it into
+    // every new account, so nobody ever chose it — and once the deck list
+    // stopped carrying our own name, an account still pointing at it looked
+    // like a deliberate choice and kept sending cards to a deck of ours.
+    //
+    // Cleared once, back to no deck chosen. Nothing here can tell the
+    // assigned name from a deck someone genuinely picked with that name, so
+    // this does take a real choice away from anyone who had; re-picking it
+    // is one tap, whereas guessing the other way leaves every reader
+    // quietly pointed at a deck they never asked for.
+    const assigned = 'Chinese::Reader';
+    bool wasAssigned(Connection c) =>
+        c.kind == ConnectorKind.anki && c.deck == assigned;
+    final saved = await _read();
+    if (saved.any(wasAssigned)) {
+      await _write([
+        for (final c in saved)
+          if (wasAssigned(c))
+            // Built by hand: copyWith cannot clear a field, since it reads
+            // a null argument as "leave this one alone".
+            Connection(
+              id: c.id,
+              kind: c.kind,
+              name: c.name,
+              secret: c.secret,
+              model: c.model,
+              user: c.user,
+              endpoint: c.endpoint,
+            )
+          else
+            c,
+      ]);
+    }
   }
 }

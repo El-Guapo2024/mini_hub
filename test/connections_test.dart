@@ -91,4 +91,31 @@ void main() {
   test('a hint shows only the last four characters', () {
     expect(claude('1', CompanionModel.haiku).hint, '…abcd');
   });
+
+  test('the deck the app named for itself is let go', () async {
+    Connection anki(String id, String? deck) => Connection(
+      id: id,
+      kind: ConnectorKind.anki,
+      name: 'me@x',
+      secret: 'key-$id',
+      user: 'me@x',
+      deck: deck,
+    );
+    // One account left pointing at the name connect() used to assign, and
+    // one pointing at a deck of the user's own.
+    await store.save(anki('1', 'Chinese::Reader'));
+    await store.save(anki('2', 'Mandarin::Books'));
+
+    final saved = await store.all();
+    expect(
+      saved.firstWhere((c) => c.id == '1').deck,
+      isNull,
+      reason: 'nobody chose that deck; the app assigned it',
+    );
+    expect(
+      saved.firstWhere((c) => c.id == '2').deck,
+      'Mandarin::Books',
+      reason: 'a deck the user picked is theirs to keep',
+    );
+  });
 }

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  The app's own privacy manifest.
+
+  Every Flutter plugin ships one of these; nothing covered the app target
+  itself, and Anki's core is a static library linked straight into the app
+  rather than a framework carrying a manifest of its own. It calls stat,
+  lstat, fstat and fstatat to read and write the collection, and fstatvfs
+  and fstatfs to see whether there is room — all APIs Apple requires a
+  declared reason for. Undeclared, those are what a build is turned away
+  for, silently, after the upload has already succeeded.
+
+  Nothing is tracked and nothing is collected: the app has no backend. The
+  Anthropic and AnkiWeb keys are the reader's own, kept in the Keychain on
+  the phone, and what they send goes to the reader's own accounts.
+-->
+<plist version="1.0">
+<dict>
+  <key>NSPrivacyTracking</key>
+  <false/>
+  <key>NSPrivacyTrackingDomains</key>
+  <array/>
+  <key>NSPrivacyCollectedDataTypes</key>
+  <array/>
+  <key>NSPrivacyAccessedAPITypes</key>
+  <array>
+    <dict>
+      <key>NSPrivacyAccessedAPIType</key>
+      <string>NSPrivacyAccessedAPICategoryFileTimestamp</string>
+      <key>NSPrivacyAccessedAPITypeReasons</key>
+      <array>
+        <!-- C617.1: timestamps of files inside the app's own container. -->
+        <string>C617.1</string>
+      </array>
+    </dict>
+    <dict>
+      <key>NSPrivacyAccessedAPIType</key>
+      <string>NSPrivacyAccessedAPICategoryDiskSpace</string>
+      <key>NSPrivacyAccessedAPITypeReasons</key>
+      <array>
+        <!-- E174.1: room to write, before writing to the collection. -->
+        <string>E174.1</string>
+      </array>
+    </dict>
+    <dict>
+      <key>NSPrivacyAccessedAPIType</key>
+      <string>NSPrivacyAccessedAPICategoryUserDefaults</string>
+      <key>NSPrivacyAccessedAPITypeReasons</key>
+      <array>
+        <!-- CA92.1: the app's own defaults, read by nothing else. -->
+        <string>CA92.1</string>
+      </array>
+    </dict>
+  </array>
+</dict>
+</plist>

@@ -12,6 +12,12 @@ Pod::Spec.new do |s|
   s.platform = :ios, '15.6'
   s.vendored_frameworks = 'MiniHubAnkiBridge.xcframework'
   s.frameworks = 'Security', 'SystemConfiguration'
+  # Anki's core is a static library linked straight into the app, so it
+  # carries no manifest of its own the way a framework would — and it calls
+  # stat, lstat and fstatvfs, which Apple requires a declared reason for.
+  # Undeclared, the upload succeeds and the build is then thrown away during
+  # processing, reported by email and by nothing the API can see.
+  s.resource_bundles = { 'AnkiBridge_privacy' => ['PrivacyInfo.xcprivacy'] }
   # Nothing in Swift calls these; Dart finds them at runtime, so keep the
   # linker from stripping them.
   #

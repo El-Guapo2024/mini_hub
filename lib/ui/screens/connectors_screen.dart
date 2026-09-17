@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../chinese/anki_sync.dart';
 import '../../chinese/connections.dart';
 import '../../config.dart';
+import '../widgets/new_deck_dialog.dart';
 
 /// Every outside service the reader uses, in one place: Claude API keys for
 /// the companion and AnkiWeb accounts for cards. Several of each can be
@@ -571,21 +572,41 @@ class _AnkiAccountDialogState extends State<_AnkiAccountDialog> {
                     child: LinearProgressIndicator(),
                   );
                 }
+                // A deck just named here is not in the collection yet, so it
+                // is listed alongside the real ones or the dropdown would
+                // show nothing chosen.
+                final chosen = _deck;
+                final all = [
+                  ...names,
+                  if (chosen != null && !names.contains(chosen)) chosen,
+                ];
                 return DropdownButtonFormField<String>(
-                  initialValue: names.contains(_deck) ? _deck : null,
+                  initialValue: chosen,
                   isExpanded: true,
                   decoration: const InputDecoration(
                     labelText: 'Default deck',
                     helperText: 'You can still pick another for each card.',
                   ),
                   items: [
-                    for (final name in names)
+                    for (final name in all)
                       DropdownMenuItem(value: name, child: Text(name)),
+                    const DropdownMenuItem(
+                      value: newDeckOption,
+                      child: Text('New deck…'),
+                    ),
                   ],
                   onChanged: _busy
                       ? null
-                      : (name) {
-                          if (name != null) setState(() => _deck = name);
+                      : (name) async {
+                          if (name == null) return;
+                          if (name != newDeckOption) {
+                            setState(() => _deck = name);
+                            return;
+                          }
+                          final made = await askNewDeckName(context);
+                          if (made != null && mounted) {
+                            setState(() => _deck = made);
+                          }
                         },
                 );
               },

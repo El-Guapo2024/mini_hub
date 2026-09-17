@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../chinese/entry.dart';
+import 'new_deck_dialog.dart';
 
 /// The tap-a-word sheet: hanzi, pinyin, glosses, and the actions — hear the
 /// word, hear its sentence, have the sentence explained, keep it as a card. A
@@ -119,16 +120,23 @@ Future<void> showWordPopup({
                 const SizedBox(height: 8),
                 Row(
                   children: [
-                    if (chosen != null && loadDecks != null)
+                    // Shown even before a deck is chosen: this chip is the
+                    // only way into the deck list from here, so hiding it
+                    // left an account that had chosen none with no way to
+                    // choose one.
+                    if (loadDecks != null)
                       Flexible(
                         child: ActionChip(
                           avatar: const Icon(Icons.layers_outlined, size: 18),
-                          label: Text(chosen!, overflow: TextOverflow.ellipsis),
+                          label: Text(
+                            chosen ?? 'Choose deck',
+                            overflow: TextOverflow.ellipsis,
+                          ),
                           tooltip: 'Choose deck',
                           onPressed: () async {
                             final picked = await _pickDeck(
                               sheetContext,
-                              current: chosen!,
+                              current: chosen,
                               loadDecks: loadDecks,
                             );
                             if (picked != null) setSheet(() => chosen = picked);
@@ -163,7 +171,7 @@ Future<void> showWordPopup({
 /// the one tapped, or null when dismissed.
 Future<String?> _pickDeck(
   BuildContext context, {
-  required String current,
+  required String? current,
   required Future<List<String>> Function() loadDecks,
 }) {
   final decks = loadDecks();
@@ -199,6 +207,18 @@ Future<String?> _pickDeck(
                     trailing: name == current ? const Icon(Icons.check) : null,
                     onTap: () => Navigator.of(dialogContext).pop(name),
                   ),
+                // Anki makes the deck when the first card lands in it, so
+                // naming one here creates nothing until a card is saved.
+                ListTile(
+                  leading: const Icon(Icons.add),
+                  title: const Text('New deck…'),
+                  onTap: () async {
+                    final made = await askNewDeckName(dialogContext);
+                    if (made != null && dialogContext.mounted) {
+                      Navigator.of(dialogContext).pop(made);
+                    }
+                  },
+                ),
               ],
             );
           },

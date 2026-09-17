@@ -12,10 +12,20 @@ import '../../chinese/tutor.dart';
 /// its own voice. The answer is a compact card above the strip; the book
 /// stays visible.
 class CompanionBar extends StatefulWidget {
-  const CompanionBar({super.key, required this.session, required this.speech});
+  const CompanionBar({
+    super.key,
+    required this.session,
+    required this.speech,
+    this.onClose,
+  });
 
   final TutorSession session;
   final Speech speech;
+
+  /// Puts the strip away. It carries its own way out because the reader's
+  /// control row is hidden while this is open — that row held nothing but
+  /// this strip's own toggle, and left an empty band under the chat.
+  final VoidCallback? onClose;
 
   @override
   State<CompanionBar> createState() => _CompanionBarState();
@@ -158,7 +168,13 @@ class _CompanionBarState extends State<CompanionBar> {
                 ),
                 padding: const EdgeInsets.fromLTRB(14, 10, 4, 10),
                 child: ConstrainedBox(
-                  constraints: const BoxConstraints(maxHeight: 160),
+                  // A share of the screen rather than a fixed 160, which on
+                  // any real phone left a long answer scrolling inside a
+                  // window three lines tall while the page behind it had
+                  // room to spare.
+                  constraints: BoxConstraints(
+                    maxHeight: MediaQuery.sizeOf(context).height * 0.4,
+                  ),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -187,9 +203,25 @@ class _CompanionBarState extends State<CompanionBar> {
               ),
             ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(12, 10, 12, 10),
+            // Sitting on the screen's edge now, so the bar owes the home
+            // indicator its own clearance — but only while the keyboard is
+            // down, since the keyboard already covers that ground.
+            padding: EdgeInsets.fromLTRB(
+              12,
+              10,
+              12,
+              MediaQuery.viewInsetsOf(context).bottom > 0
+                  ? 10
+                  : 10 + MediaQuery.viewPaddingOf(context).bottom,
+            ),
             child: Row(
               children: [
+                if (widget.onClose != null)
+                  IconButton(
+                    icon: const Icon(Icons.keyboard_arrow_down),
+                    tooltip: 'Close companion',
+                    onPressed: widget.onClose,
+                  ),
                 Expanded(
                   child: Container(
                     decoration: BoxDecoration(
@@ -200,7 +232,10 @@ class _CompanionBarState extends State<CompanionBar> {
                     child: TextField(
                       controller: _input,
                       minLines: 1,
-                      maxLines: 3,
+                      // Grows to five lines and scrolls inside itself after
+                      // that, so a long question is still reviewable before
+                      // sending without burying the book.
+                      maxLines: 5,
                       style: theme.textTheme.bodyMedium,
                       decoration: InputDecoration(
                         hintText: _listening

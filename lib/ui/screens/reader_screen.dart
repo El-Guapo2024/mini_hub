@@ -577,7 +577,6 @@ class _ReaderScreenState extends State<ReaderScreen> {
             // viewPadding, not padding: padding shrinks while the keyboard is
             // up, which would resize the page all over again.
             final safeBottom = media.viewPadding.bottom;
-            final aboveControls = _controlsHeight + safeBottom;
             final keyboard = media.viewInsets.bottom;
             return Stack(
               children: [
@@ -594,24 +593,32 @@ class _ReaderScreenState extends State<ReaderScreen> {
                         child: WebViewWidget(controller: _web),
                       ),
                     ),
-                    SizedBox(
-                      height: _controlsHeight,
-                      child: _controls(context),
-                    ),
-                    SizedBox(height: safeBottom),
+                    // Put away while the companion is open. Reading aloud
+                    // and the companion don't mix, so the row held nothing
+                    // but the companion's own toggle: a band of empty
+                    // chrome under the chat. The chat closes itself now.
+                    if (!_companionOpen) ...[
+                      SizedBox(
+                        height: _controlsHeight,
+                        child: _controls(context),
+                      ),
+                      SizedBox(height: safeBottom),
+                    ],
                   ],
                 ),
                 if (_companionOpen)
                   Positioned(
                     left: 0,
                     right: 0,
-                    bottom: keyboard > aboveControls ? keyboard : aboveControls,
+                    // On the bottom edge, or on the keyboard when it is up.
+                    bottom: keyboard,
                     child: CompanionBar(
                       session: _tutor ??= TutorSession(
                         chapterContext: '',
                         cardFor: _cardFor,
                       ),
                       speech: _speech,
+                      onClose: () => _toggleCompanion(),
                     ),
                   ),
               ],

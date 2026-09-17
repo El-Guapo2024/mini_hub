@@ -7,7 +7,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 import '../../chinese/anki_sync.dart';
-import '../../chinese/card_store.dart';
+import '../../chinese/card.dart';
 import '../../chinese/keep_card.dart';
 import '../../chinese/dictionary.dart';
 import '../../chinese/entry.dart';

@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:path_provider/path_provider.dart';
 
 import 'anki_sync.dart';
-import 'card_store.dart';
+import 'card.dart';
 import 'claude.dart';
 import 'keep_card.dart';
 

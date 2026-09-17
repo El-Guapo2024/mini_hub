@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';
-import 'package:mini_hub/chinese/card_store.dart';
+import 'package:mini_hub/chinese/card.dart';
 import 'package:mini_hub/chinese/claude.dart';
 import 'package:mini_hub/chinese/tutor.dart';
 import 'package:mini_hub/config.dart';

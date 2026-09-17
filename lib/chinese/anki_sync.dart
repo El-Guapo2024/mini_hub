@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:path_provider/path_provider.dart';
 
 import 'anki_bridge.dart';
-import 'card_store.dart';
+import 'card.dart';
 import 'connections.dart';
 
 export 'anki_bridge.dart' show AnkiException;
@@ -101,39 +101,30 @@ class AnkiSync {
     return updated;
   }
 
-  /// Sends pending changes to AnkiWeb. Anything but a plain sync is left
-  /// for the user to settle in Anki: pulling a full copy now would drop
-  /// cards added here, pushing one would wipe reviews made elsewhere.
+  /// Brings this phone in step with AnkiWeb, which is the collection that
+  /// counts.
+  ///
+  /// When the two no longer share a history — someone uploaded from desktop
+  /// Anki, which replaces the cloud collection outright — the phone's copy
+  /// is replaced rather than defended. That costs nothing, because nothing
+  /// lives only here: cards go to Anki as they are made, and the copy on
+  /// the phone is a working copy, not a record.
+  ///
+  /// The other direction stays refused. This phone's copy going up over the
+  /// real collection is the one mistake with no undo, and no amount of
+  /// convenience is worth it.
   Future<void> syncNow(Connection account) async {
-    final (status, _) = await _sync(account);
-    if (status == 'full_download_required' ||
-        status == 'full_upload_required') {
+    final (status, updated) = await _sync(account);
+    if (status == 'full_download_required') {
+      await _call('download', await _auth(updated));
+      return;
+    }
+    if (status == 'full_upload_required') {
       throw AnkiException(
-        'AnkiWeb asks for a full sync. Sync in desktop Anki first, then '
-        'try again.',
+        'AnkiWeb wants this phone to replace the collection, which it will '
+        'not do. Sync in desktop Anki first, then try again.',
       );
     }
-  }
-
-  /// Throws this phone's copy away and takes AnkiWeb's instead.
-  ///
-  /// Overwriting the cloud collection from desktop Anki — "upload to
-  /// AnkiWeb", which is what a full sync there does — leaves the two
-  /// collections with no shared history, and from then on a normal sync can
-  /// never succeed: AnkiWeb asks every other device for a full sync, and
-  /// [syncNow] rightly refuses. This is the way back, and the only one.
-  ///
-  /// Destructive, deliberately, and only ever downwards: a card added here
-  /// that never reached AnkiWeb is gone afterwards. It must never push the
-  /// other way — the phone's copy overwriting the real collection is the one
-  /// mistake no undo exists for. Returns how many notes came down.
-  Future<int> resetFromAnkiWeb(Connection account) async {
-    // Synced first only to follow AnkiWeb moving the account to another
-    // server; the status it reports is beside the point, since the caller
-    // has already decided to take the cloud copy.
-    final (_, updated) = await _sync(account);
-    final pulled = await _call('download', await _auth(updated));
-    return pulled['notes'] as int;
   }
 
   Future<Connection?> activeAccount() => _store.active(ConnectorKind.anki);

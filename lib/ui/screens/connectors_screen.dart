@@ -493,9 +493,7 @@ class _AnkiAccountDialogState extends State<_AnkiAccountDialog> {
   late String _deck = widget.account.deck ?? AnkiSync.defaultDeck;
 
   /// The collection's decks, read from Anki — chosen from, never typed.
-  /// Re-read after a reset, which is the one thing here that can change the
-  /// list out from under the dropdown.
-  late Future<List<String>> _decks = widget.anki.decksFor(widget.account);
+  late final Future<List<String>> _decks = widget.anki.decksFor(widget.account);
   bool _busy = false;
   String? _message;
 
@@ -538,42 +536,6 @@ class _AnkiAccountDialogState extends State<_AnkiAccountDialog> {
   Future<void> _remove() async {
     await widget.anki.remove(widget.account);
     if (mounted) Navigator.of(context).pop();
-  }
-
-  /// Takes AnkiWeb's collection over this phone's. Needed after uploading
-  /// from desktop Anki, which leaves the two with no shared history and
-  /// every later sync refused. Asked first, because anything added here and
-  /// not yet synced goes with it.
-  Future<void> _resetFromCloud() async {
-    final yes = await showDialog<bool>(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: const Text('Replace from AnkiWeb?'),
-        content: const Text(
-          'This phone takes AnkiWeb\'s collection, and its own copy is '
-          'thrown away. Any card added here that has not reached AnkiWeb '
-          'yet is lost.\n\nUse this after uploading from desktop Anki.',
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(false),
-            child: const Text('Cancel'),
-          ),
-          FilledButton(
-            onPressed: () => Navigator.of(context).pop(true),
-            child: const Text('Replace'),
-          ),
-        ],
-      ),
-    );
-    if (yes != true || !mounted) return;
-    var notes = 0;
-    await _run(() async {
-      notes = await widget.anki.resetFromAnkiWeb(widget.account);
-    }, 'Took $notes notes from AnkiWeb.');
-    if (mounted) {
-      setState(() => _decks = widget.anki.decksFor(widget.account));
-    }
   }
 
   @override
@@ -624,13 +586,6 @@ class _AnkiAccountDialogState extends State<_AnkiAccountDialog> {
                         },
                 );
               },
-            ),
-            Align(
-              alignment: Alignment.centerLeft,
-              child: TextButton(
-                onPressed: _busy ? null : _resetFromCloud,
-                child: const Text('Replace from AnkiWeb…'),
-              ),
             ),
             if (_busy) ...[
               const SizedBox(height: 16),

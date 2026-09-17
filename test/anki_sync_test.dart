@@ -1,7 +1,7 @@
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mini_hub/chinese/anki_sync.dart';
-import 'package:mini_hub/chinese/card_store.dart';
+import 'package:mini_hub/chinese/card.dart';
 import 'package:mini_hub/chinese/connections.dart';
 
 /// The Rust side is proven against AnkiWeb by hand; these pin what the app
@@ -133,11 +133,26 @@ void main() {
     expect(calls.map((c) => c.$1), ['add', 'sync']);
   });
 
-  test('syncNow refuses a full sync either way', () async {
+  test('a diverged collection is replaced from AnkiWeb, not refused', () async {
     final a = anki();
     final account = (await a.connect(user: 'me@x', password: 'pw')).account;
+    // What an upload from desktop Anki looks like from here: the two no
+    // longer share a history, and AnkiWeb's copy is the one that counts.
     syncStatus = 'full_download_required';
+    calls.clear();
+
+    await a.syncNow(account);
+    expect(calls.map((c) => c.$1), ['sync', 'download']);
+  });
+
+  test('syncNow still refuses to push this phone up', () async {
+    final a = anki();
+    final account = (await a.connect(user: 'me@x', password: 'pw')).account;
+    syncStatus = 'full_upload_required';
+    calls.clear();
+
     await expectLater(a.syncNow(account), throwsA(isA<AnkiException>()));
+    expect(calls.map((c) => c.$1), ['sync']);
   });
 
   test('an empty AnkiWeb account connects without a download', () async {
@@ -168,30 +183,4 @@ void main() {
     expect(add['notetype'], AnkiSync.noteType);
     expect(add['fields'], ['了', 'le', 'done', '他来了']);
   });
-
-  test('replacing from AnkiWeb pulls a copy down, and only down', () async {
-    final a = anki();
-    final account = (await a.connect(user: 'me@x', password: 'pw')).account;
-    // What a collection uploaded from desktop Anki looks like from here.
-    syncStatus = 'full_download_required';
-    calls.clear();
-
-    expect(await a.resetFromAnkiWeb(account), 12);
-    expect(calls.map((c) => c.$1), ['sync', 'download']);
-  });
-
-  test(
-    'replacing never pushes, even when AnkiWeb asks for an upload',
-    () async {
-      final a = anki();
-      final account = (await a.connect(user: 'me@x', password: 'pw')).account;
-      // The one status that must never be obeyed: the phone's copy going up
-      // over the real collection is the mistake with no undo.
-      syncStatus = 'full_upload_required';
-      calls.clear();
-
-      await a.resetFromAnkiWeb(account);
-      expect(calls.map((c) => c.$1), ['sync', 'download']);
-    },
-  );
 }

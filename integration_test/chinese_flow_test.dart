@@ -6,7 +6,6 @@ import 'package:flutter/foundation.dart' show debugPrint;
 import 'package:flutter/material.dart' show Icons;
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
-import 'package:mini_hub/chinese/card_store.dart';
 import 'package:mini_hub/main.dart' as app;
 import 'package:mini_hub/ui/screens/reader_screen.dart';
 import 'package:path_provider/path_provider.dart';
@@ -14,7 +13,11 @@ import 'package:webview_flutter/webview_flutter.dart';
 
 /// The four features, on a real device build: open the reader, tap a word,
 /// hear it (no assertion possible on sound — only that speaking doesn't
-/// throw), keep a card, and find the card in the store an export would ship.
+/// throw), and keep a card.
+///
+/// Where the card ends up is not asserted, and cannot be: Anki owns the
+/// cards, and a test device has no AnkiWeb account connected. What is
+/// checked is everything up to the hand-off.
 ///
 /// Requires a book seeded at Documents/chinese_books/ before the run.
 void main() {
@@ -47,18 +50,21 @@ void main() {
 
     // Per-glyph accuracy: the center of every visible character must
     // resolve to exactly that character. This is the finger-tap contract.
-    final acc =
-        await web.runJavaScriptReturningResult('debugAccuracy(200)');
+    final acc = await web.runJavaScriptReturningResult('debugAccuracy(200)');
     debugPrint('accuracy: $acc');
-    expect('$acc', contains('miss[]'),
-        reason: 'tap accuracy not perfect: $acc');
+    expect(
+      '$acc',
+      contains('miss[]'),
+      reason: 'tap accuracy not perfect: $acc',
+    );
 
     var found = false;
     outer:
     for (final fy in [0.3, 0.4, 0.5, 0.6]) {
       for (final fx in [0.2, 0.4, 0.6]) {
-        final probe =
-            await web.runJavaScriptReturningResult('debugTapAt($fx, $fy)');
+        final probe = await web.runJavaScriptReturningResult(
+          'debugTapAt($fx, $fy)',
+        );
         debugPrint('probe($fx,$fy) -> $probe');
         for (var i = 0; i < 10; i++) {
           await tester.pump(const Duration(milliseconds: 200));
@@ -80,19 +86,20 @@ void main() {
     await tester.tap(find.text('Card'));
     await tester.pumpAndSettle();
 
-    // The card reached the store, carrying its sentence.
-    final store = await CardStore.open();
-    final cards = await store.all();
-    expect(cards, isNotEmpty);
-    expect(cards.last.word, isNotEmpty);
-    expect(cards.last.pinyin, isNotEmpty);
-    expect(cards.last.sentence, isNotEmpty);
-
-    // Leave evidence for the host: what the store held at the end.
-    final docs = await getApplicationDocumentsDirectory();
-    await File('${docs.path}/itest_result.txt').writeAsString(
-      'cards=${cards.length} last=${cards.last.word} ${cards.last.pinyin}\n',
+    // The sheet took the tap and closed itself. That is as far as this can
+    // go: keeping a card hands it to Anki, and with no account connected
+    // there is nothing left behind on the device to read back.
+    expect(
+      find.text('Card'),
+      findsNothing,
+      reason: 'the card sheet stayed open',
     );
+
+    // Leave evidence for the host: the tap accuracy this run measured.
+    final docs = await getApplicationDocumentsDirectory();
+    await File(
+      '${docs.path}/itest_result.txt',
+    ).writeAsString('accuracy=$acc\n');
 
     // Hold the reader on screen briefly so host-side screenshots catch it.
     await tester.pump(const Duration(seconds: 3));
@@ -114,8 +121,11 @@ void main() {
     await tester.pump(const Duration(seconds: 6));
     final probe = await ReaderScreen.debugController!
         .runJavaScriptReturningResult('debugTapAt(0.4, 0.4)');
-    expect('$probe', contains('hit'),
-        reason: 'reopening at a saved position should still render text');
+    expect(
+      '$probe',
+      contains('hit'),
+      reason: 'reopening at a saved position should still render text',
+    );
 
     // The probe opens a word popup asynchronously; wait for it, then
     // dismiss it before reaching the app bar.
@@ -152,11 +162,13 @@ Future<void> _seedBook() async {
       '${paras.map((p) => '<p>$p</p>').join()}</body></html>';
 
   final files = <String, String>{
-    'META-INF/container.xml': '<?xml version="1.0"?>'
+    'META-INF/container.xml':
+        '<?xml version="1.0"?>'
         '<container version="1.0" xmlns="urn:oasis:names:tc:opendocument:xmlns:container">'
         '<rootfiles><rootfile full-path="OEBPS/content.opf" '
         'media-type="application/oebps-package+xml"/></rootfiles></container>',
-    'OEBPS/content.opf': '<?xml version="1.0" encoding="utf-8"?>'
+    'OEBPS/content.opf':
+        '<?xml version="1.0" encoding="utf-8"?>'
         '<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="id" version="3.0">'
         '<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">'
         '<dc:title>test</dc:title><dc:language>zh</dc:language>'
@@ -164,7 +176,8 @@ Future<void> _seedBook() async {
         '<manifest><item id="c1" href="ch1.xhtml" media-type="application/xhtml+xml"/>'
         '<item id="nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>'
         '</manifest><spine><itemref idref="c1"/></spine></package>',
-    'OEBPS/nav.xhtml': '<?xml version="1.0" encoding="utf-8"?>'
+    'OEBPS/nav.xhtml':
+        '<?xml version="1.0" encoding="utf-8"?>'
         '<html xmlns="http://www.w3.org/1999/xhtml" '
         'xmlns:epub="http://www.idpf.org/2007/ops"><head><title>nav</title></head>'
         '<body><nav epub:type="toc"><ol><li><a href="ch1.xhtml">一</a></li></ol>'
@@ -187,6 +200,7 @@ Future<void> _seedBook() async {
   final docs = await getApplicationDocumentsDirectory();
   final shelf = Directory('${docs.path}/chinese_books');
   await shelf.create(recursive: true);
-  await File('${shelf.path}/xiaowangzi.epub')
-      .writeAsBytes(ZipEncoder().encode(zip)!);
+  await File(
+    '${shelf.path}/xiaowangzi.epub',
+  ).writeAsBytes(ZipEncoder().encode(zip)!);
 }

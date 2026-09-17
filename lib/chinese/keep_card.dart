@@ -3,27 +3,31 @@ import 'dart:io';
 import 'package:path_provider/path_provider.dart';
 
 import 'anki_sync.dart';
-import 'card_store.dart';
+import 'card.dart';
 
-/// Where every saved card goes: the phone's own log first, always, then the
-/// user's Anki collection once they have connected AnkiWeb. Anki refusing
-/// or being out of reach never loses the card — it is already in the log.
+/// Where every saved card goes: the user's Anki collection, and nowhere
+/// else. Anki owns the cards — the phone keeps no copy of its own — so a
+/// card Anki would not take is a card that was not saved, and the reader
+/// says so rather than reassuring the user about a log that no longer
+/// exists.
 ///
-/// Returns null when all went well (or Anki isn't connected), otherwise a
-/// line the reader can be shown.
+/// Returns null when the card is safely in Anki, otherwise a line the
+/// reader can show.
 Future<String?> keepCard(Card card, {String? deck, AnkiSync? anki}) async {
-  await (await CardStore.open()).add(card);
   final sync = anki ?? AnkiSync();
   try {
-    // Into [deck], or the account's usual one; nothing without an account.
-    await sync.add(card, deck: deck);
+    // Into [deck], or the account's usual one; null when none is connected.
+    final id = await sync.add(card, deck: deck);
+    if (id == null) {
+      return 'No Anki account connected, so the card was not saved.';
+    }
     return null;
   } on AnkiException catch (e) {
     await _log('add failed: $e');
-    return 'Saved on the phone, but Anki refused it: $e';
+    return 'Anki refused the card, so it was not saved: $e';
   } catch (e) {
     await _log('add failed: $e');
-    return 'Saved on the phone; Anki could not be reached.';
+    return 'Anki could not be reached, so the card was not saved.';
   }
 }
 

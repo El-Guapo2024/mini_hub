@@ -39,12 +39,15 @@ GROUP_NAMES = [
     if n.strip()
 ]
 
-# Apple usually takes two or three minutes, but not always: the build that
-# first carried Anki's core sat invisible for the whole fifteen minutes this
-# used to wait, and was uploaded fine -- only unattached. Three quarters of an
-# hour costs nothing when processing is quick and saves a whole rebuild when
-# it is not.
-DEADLINE = 45 * 60
+# Ten minutes, and no longer. This once waited forty-five, on the theory that
+# a build missing from the API was a slow build worth waiting for. It is not:
+# a build Apple discards during ingest never appears in the API in any state,
+# so the wait could only ever end in failure. Builds 10 to 14 were each
+# discarded for ITMS-90683 and each held a macOS runner for the full
+# three quarters of an hour -- about 510 billed minutes apiece at the 10x
+# macOS multiplier, which spent a month's quota waiting for five builds that
+# did not exist. Waiting longer cannot rescue a build; it only costs money.
+DEADLINE = 10 * 60
 POLL = 20
 
 
@@ -113,7 +116,19 @@ while time.time() - started < DEADLINE:
         raise SystemExit(f"build {VERSION} came back {state} -- App Store Connect says why")
     time.sleep(POLL)
 else:
-    raise SystemExit(f"build {VERSION} was still not VALID after {DEADLINE // 60} minutes")
+    raise SystemExit(
+        f"build {VERSION} was still not VALID after {DEADLINE // 60} minutes.\n"
+        "\n"
+        "If it never became visible at all, Apple discarded it while "
+        "processing and it will never appear here. The reason is sent by "
+        "email and by nothing this API can see, so check the Apple "
+        "developer account holder's mailbox -- not necessarily the address "
+        "you read day to day -- for a message from App Store Connect titled "
+        "'Action needed: The uploaded build ... has one or more issues'. It "
+        "names an ITMS code, which is the actual cause. Do that before "
+        "changing anything or rebuilding: five builds were lost to guessing "
+        "at this while the answer sat in an inbox."
+    )
 
 all_groups = {
     g["attributes"]["name"]: g

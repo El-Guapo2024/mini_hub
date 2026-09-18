@@ -28,10 +28,11 @@ jobs:
     needs: bridge
     # A macOS runner is not optional: only Xcode can archive an iOS app.
     runs-on: macos-26
-    # Room for the archive plus the longest wait release_to_testers.py will
-    # sit through; a job killed mid-wait leaves the build uploaded but
-    # attached to nobody, which is the failure this is sized to avoid.
-    timeout-minutes: 90
+    # The archive and the upload, and nothing that waits on Apple: the
+    # waiting moved to the release job, which is not billed at 10x. A build
+    # that has not archived and uploaded inside half an hour is stuck, and
+    # holding a Mac open past that only spends the quota faster.
+    timeout-minutes: 35
 
     steps:
       - uses: actions/checkout@v4
@@ -241,27 +242,10 @@ jobs:
           xcrun altool --upload-app -f "$ipa" -t ios \
             --apiKey "$API_KEY_ID" --apiIssuer "$API_ISSUER_ID"
 
-      - name: Release it to the testers
-        # Uploading is not releasing. A build that finishes processing sits in
-        # App Store Connect visible to nobody until it is attached to a group,
-        # so without this every merge would reach Apple and no iPad.
-        #
-        # It waits for Apple to finish processing, which is why this step takes
-        # minutes while the ones around it take seconds.
-        #
-        # Both groups, not just the internal one. External testers are attached
-        # to the same build here rather than by hand; the build stays invisible
-        # to them until Apple's beta review passes it, which is Apple's timing
-        # and not something this step waits on.
-        env:
-          ASC_KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
-          ASC_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
-          ASC_APP_ID: '6804838723'
-          BUILD_VERSION: ${{ github.run_number }}
-        run: |
-          set -euo pipefail
-          export ASC_KEY_PATH="$HOME/private_keys/AuthKey_$ASC_KEY_ID.p8"
-          python3 tools/ci/release_to_testers.py
+      # Releasing to the testers used to happen here. It does not any more:
+      # it is only HTTP calls to App Store Connect, it spends most of its
+      # time asleep waiting for Apple, and every minute of that sleep was
+      # billed at the macOS rate. It is its own job now, on Linux.
 
       - name: Shred the key
         # always(), because a failed build is exactly when the key is left
@@ -282,3 +266,64 @@ jobs:
             build/ios/archive/*.xcarchive/dSYMs
           if-no-files-found: warn
           retention-days: 30
+
+  release:
+    name: release to the testers
+    needs: ship
+    # Uploading is not releasing. A build that finishes processing sits in
+    # App Store Connect visible to nobody until it is attached to a group,
+    # so without this every merge would reach Apple and no iPad.
+    #
+    # This is a job of its own, on Linux, because it is nothing but HTTP
+    # calls to App Store Connect and it spends almost all of its time asleep
+    # waiting for Apple to finish processing. On the macOS runner it shared
+    # with the archive, that sleep billed at ten times the Linux rate: five
+    # builds that Apple had already discarded each sat here for forty-five
+    # minutes and between them spent a month's quota. The same wait costs a
+    # tenth as much here, and the Mac is released as soon as the upload is
+    # done rather than held open for Apple's convenience.
+    #
+    # Both groups, not just the internal one. External testers are attached
+    # to the same build here rather than by hand; the build stays invisible
+    # to them until Apple's beta review passes it, which is Apple's timing
+    # and not something this job waits on.
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install the JWT library
+        # App Store Connect authenticates with an ES256-signed token, which
+        # needs cryptography underneath pyjwt.
+        run: pip install --quiet 'pyjwt[crypto]'
+
+      - name: Place the App Store Connect API key
+        env:
+          API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
+          API_PRIVATE_KEY: ${{ secrets.APP_STORE_CONNECT_PRIVATE_KEY }}
+        run: |
+          set -euo pipefail
+          mkdir -p ~/private_keys
+          echo "$API_PRIVATE_KEY" | base64 --decode > ~/private_keys/AuthKey_$API_KEY_ID.p8
+
+      - name: Release it to the testers
+        # The same run number the ship job built with, so this attaches the
+        # build that job just uploaded and not some neighbour.
+        env:
+          ASC_KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+          ASC_APP_ID: '6804838723'
+          BUILD_VERSION: ${{ github.run_number }}
+        run: |
+          set -euo pipefail
+          export ASC_KEY_PATH="$HOME/private_keys/AuthKey_$ASC_KEY_ID.p8"
+          python3 tools/ci/release_to_testers.py
+
+      - name: Shred the key
+        if: always()
+        run: rm -rf ~/private_keys

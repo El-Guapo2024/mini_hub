@@ -60,5 +60,19 @@
 	<string>Hold the mic to ask the reading companion a question by voice.</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>Turns your spoken question into text for the reading companion.</string>
+	<!-- The app never opens the camera or the photo library itself, but
+	     file_picker bundles DKImagePickerController, which references the
+	     Photos and Camera APIs. Apple requires a purpose string for an API
+	     the binary merely references, so without these two the upload
+	     succeeds, passes altool's validation, and is then discarded during
+	     processing as ITMS-90683 — reported only by email. Builds 10 to 14
+	     were lost exactly this way. Location is the same story and is only
+	     a warning, but it is declared here so the warning stays quiet. -->
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Lets you pick a page or cover image from your photos when adding a text to the library.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Lets you photograph a page when adding a text to the library.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>The reader does not use your location. A bundled file-picker component references the location API, which Apple requires be declared.</string>
 </dict>
 </plist>

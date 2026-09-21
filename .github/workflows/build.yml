@@ -1,6 +1,8 @@
 name: Build
 
-# Every merge to main bundles the app and attaches it to the run.
+# Bundles the app and attaches it to the run. Started by hand:
+#
+#     gh workflow run Build --ref main
 #
 # Nothing here is signed for the store and nothing is uploaded to Apple. That
 # comes later, when there is an Apple account to upload with; see
@@ -8,8 +10,6 @@ name: Build
 # that every merge leaves behind something you can actually hold — an APK you
 # can install on a phone right now, and an iOS archive that only needs signing.
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 concurrency:
@@ -17,9 +17,9 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # The gate is not repeated here. `pr.yml` runs on pushes to main as well as
-  # on pull requests, so a direct push is still checked — and nothing this
-  # workflow produces reaches anyone who has not chosen to install it.
+  # The gate is not repeated here, and it no longer runs on its own either:
+  # `pr.yml` is manual now too. Run it yourself before trusting anything this
+  # workflow produces — nothing else will.
 
   android:
     name: apk
@@ -70,12 +70,8 @@ jobs:
 
   bridge:
     # Anki's core for iOS: reused when already published, built otherwise.
-    #
-    # Guarded with the same condition as the ios job below, and for the same
-    # reason: this is a macOS runner too. Gating only the archive would have
-    # left a Mac starting on every push to decide it had nothing to do --
-    # the whole drain, minus the useful part.
-    if: github.event_name == 'workflow_dispatch'
+    # A macOS runner as well, which is why this workflow starting itself was
+    # never only about the archive below.
     uses: ./.github/workflows/anki_bridge.yml
     permissions:
       contents: write
@@ -83,17 +79,11 @@ jobs:
   ios:
     name: ios archive
     needs: bridge
-    # By hand only. This proves the release build compiles -- tree shaking and
-    # AOT fail in ways a debug test run never shows -- but it is a Mac, and a
-    # Mac bills at ten times the Linux rate. Run on every merge it spent the
-    # month's quota proving that doc edits still compile.
+    # This proves the release build compiles -- tree shaking and AOT fail in
+    # ways a debug test run never shows -- but it is a Mac, and a Mac bills at
+    # ten times the Linux rate. Run on every merge it spent the month's quota
+    # proving that doc edits still compile.
     #
-    # The Linux gate above still runs on every push, so nothing stops being
-    # checked; what stops is paying Mac rates to check it. Before shipping,
-    # start it deliberately:
-    #
-    #     gh workflow run Build --ref main
-    if: github.event_name == 'workflow_dispatch'
     # Only a Mac can archive an iOS app, signed or not.
     runs-on: macos-26
     timeout-minutes: 45

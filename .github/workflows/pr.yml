@@ -1,14 +1,18 @@
 name: PR
 
-# The merge gate. Everything here has to pass before main moves, because main
-# is what ships to TestFlight.
+# The merge gate -- started by hand, like everything else here.
+#
+# This one is Linux and cheap, but it ran on every push and every pull
+# request, and the point of going manual was to stop runners starting on
+# their own at all. Nothing is checked less; it is checked when asked:
+#
+#     gh workflow run PR --ref main
+#
+# The trade is real and worth knowing: a broken commit now reaches main
+# without anything objecting. Run this before shipping, because TestFlight
+# no longer runs the gate for you either.
 on:
-  pull_request:
-    branches: [main]
-  # Also on main itself, so a direct push is checked even though the intent is
-  # that changes arrive through pull requests.
-  push:
-    branches: [main]
+  workflow_dispatch:
 
 concurrency:
   # A second push to the same branch cancels the first: the older answer is

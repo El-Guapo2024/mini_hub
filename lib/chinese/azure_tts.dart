@@ -112,13 +112,16 @@ class AzureTts {
   }
 
   static String _reason(int status) => switch (status) {
-    401 => 'Azure rejected the key. Check the key and that its region '
-        'matches the one saved with it.',
+    401 =>
+      'Azure rejected the key. Check the key and that its region '
+          'matches the one saved with it.',
     415 => 'Azure refused the request format.',
-    429 => 'Azure is rate limiting, or the free quota for the month is used '
-        'up. The device voice still works.',
-    >= 500 => 'Azure is having trouble ($status). The device voice still '
-        'works.',
+    429 =>
+      'Azure is rate limiting, or the free quota for the month is used '
+          'up. The device voice still works.',
+    >= 500 =>
+      'Azure is having trouble ($status). The device voice still '
+          'works.',
     _ => 'Azure would not speak that ($status).',
   };
 

@@ -67,11 +67,15 @@ That is the same position as any ebook reader.
 
 ## Privacy policy
 
-Needs a **public URL**, which is the only awkward part: this repository is
-private. A public Gist or a GitHub Pages site is enough — Apple only requires
-that the link resolves for anyone.
+**Published:**
+https://gist.github.com/El-Guapo2024/4cc6c5daef50907725e8fe430ab94987
 
-Draft text:
+A public Gist, because this repository is private and Apple only requires
+that the link resolve for anyone. The file it was made from is kept at
+`~/Documents/TheMiniHub App Store/privacy-policy.md`; edit that and
+`gh gist edit` to change it, so the two do not drift.
+
+The text, as published:
 
 > **TheMiniHub — Privacy Policy**
 >
@@ -103,9 +107,8 @@ Draft text:
 > Removing a connector on the Connectors screen deletes its credentials from
 > your device. Deleting the app removes everything else.
 >
-> Questions: <contact address>
+> Questions: antoniotwin_luera@hotmail.com
 
-Replace `<contact address>` before publishing — Apple requires a working one.
 
 ## Description
 
@@ -134,10 +137,15 @@ flashcards,learn chinese,study`
 
 ## Still outstanding
 
-- **Screenshots** at the sizes Apple requires. Needs a simulator run; the
-  6.7" iPhone and 12.9" iPad sets are the ones that cannot be skipped.
-- **A contact address** for the policy and for App Review.
-- **A public home for the privacy policy.**
+- ~~Screenshots~~ **done** (2026-09-20), in
+  `~/Documents/TheMiniHub App Store/screenshots/`. Five each at 1320x2868
+  (iPhone 6.9") and 2064x2752 (iPad 13") -- in 2026 only the largest of each
+  family is uploaded and Apple scales the rest, so those two cover every
+  device. Captured by `integration_test/screenshots_test.dart`; only one
+  simulator may be booted while it runs.
+- ~~A contact address~~ **done**: `antoniotwin_luera@hotmail.com`, the
+  address the Apple Developer account holder already reads.
+- ~~A public home for the privacy policy~~ **done** — the Gist above.
 - **The licence question.** Anki's core ships inside the binary under
   AGPL-3 (`ios/AnkiBridge/AnkiBridge.podspec` declares it). That is settled
   one way or another before Submit, not after — see the note in

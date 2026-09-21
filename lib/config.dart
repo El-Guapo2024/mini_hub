@@ -50,6 +50,21 @@ class ChineseConfig {
 
   /// Slower than the OS default (0.5): a learner's reading speed.
   static const double ttsRate = 0.45;
+
+  /// The companion's Azure voice, given to the build itself so a fresh
+  /// install speaks well with nothing to set up. Empty in a plain
+  /// `flutter run`, which is fine: with no key the device voice answers.
+  ///
+  /// Passed with --dart-define from CI secrets, never committed. **Keep the
+  /// Azure resource on the free F0 tier.** A --dart-define value is compiled
+  /// into the IPA and TestFlight hands that binary to every tester, so this
+  /// key should be treated as public. F0 is capped at 500,000 characters a
+  /// month and cannot bill, so the worst a leak costs is the quota; an S0
+  /// key here would be an open tab on a card.
+  ///
+  /// A key saved in Connectors belongs to the reader and wins over this one.
+  static const String azureKey = String.fromEnvironment('AZURE_KEY');
+  static const String azureRegion = String.fromEnvironment('AZURE_REGION');
 }
 
 /// The companion's model — the project doc's cost/nuance decision, now the

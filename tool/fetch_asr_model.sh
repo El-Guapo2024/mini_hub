@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Fetches the streaming Chinese+English speech model the companion's mic uses
-# into assets/chinese/asr/. The files are ~170MB, so they are gitignored and
+# into assets/chinese/asr/. The files are ~160MB, so they are gitignored and
 # must be fetched before building (locally and in CI).
 set -euo pipefail
 

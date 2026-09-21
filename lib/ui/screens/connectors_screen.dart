@@ -38,11 +38,13 @@ class _ConnectorsScreenState extends State<ConnectorsScreen> {
     final all = await widget.store.all();
     final claude = await widget.store.active(ConnectorKind.claude);
     final anki = await widget.store.active(ConnectorKind.anki);
+    final azure = await widget.store.active(ConnectorKind.azure);
     if (!mounted) return;
     setState(() {
       _all = all;
       _active[ConnectorKind.claude] = claude?.id;
       _active[ConnectorKind.anki] = anki?.id;
+      _active[ConnectorKind.azure] = azure?.id;
       _loaded = true;
     });
   }
@@ -114,16 +116,22 @@ class _ConnectorsScreenState extends State<ConnectorsScreen> {
               subtitle: const Text('For the cards you save'),
               onTap: () => Navigator.of(sheet).pop(ConnectorKind.anki),
             ),
+            ListTile(
+              leading: const Icon(Icons.record_voice_over),
+              title: const Text('Azure Speech key'),
+              subtitle: const Text("For the companion's voice"),
+              onTap: () => Navigator.of(sheet).pop(ConnectorKind.azure),
+            ),
           ],
         ),
       ),
     );
     if (kind == null || !mounted) return;
-    await _open(
-      kind == ConnectorKind.claude
-          ? _ClaudeDialog(store: widget.store)
-          : _AnkiLoginDialog(anki: _anki),
-    );
+    await _open(switch (kind) {
+      ConnectorKind.claude => _ClaudeDialog(store: widget.store),
+      ConnectorKind.anki => _AnkiLoginDialog(anki: _anki),
+      ConnectorKind.azure => _AzureDialog(store: widget.store),
+    });
   }
 
   @override
@@ -155,6 +163,16 @@ class _ConnectorsScreenState extends State<ConnectorsScreen> {
                   blurb:
                       'Cards you save while reading go to the account in '
                       'use, and from AnkiWeb to all your Anki apps.',
+                ),
+                const Divider(height: 32),
+                _section(
+                  kind: ConnectorKind.azure,
+                  title: 'Azure Speech',
+                  blurb:
+                      'Gives the companion a better voice than the phone '
+                      "ships with. Optional: without a key the phone's own "
+                      'voice answers. The book is always read aloud by the '
+                      'phone, which is free and works offline.',
                 ),
               ],
             ),
@@ -207,11 +225,20 @@ class _ConnectorsScreenState extends State<ConnectorsScreen> {
               trailing: IconButton(
                 icon: const Icon(Icons.edit_outlined),
                 tooltip: 'Edit ${c.name}',
-                onPressed: () => _open(
-                  kind == ConnectorKind.claude
-                      ? _ClaudeDialog(store: widget.store, existing: c)
-                      : _AnkiAccountDialog(anki: _anki, account: c),
-                ),
+                onPressed: () => _open(switch (kind) {
+                  ConnectorKind.claude => _ClaudeDialog(
+                    store: widget.store,
+                    existing: c,
+                  ),
+                  ConnectorKind.anki => _AnkiAccountDialog(
+                    anki: _anki,
+                    account: c,
+                  ),
+                  ConnectorKind.azure => _AzureDialog(
+                    store: widget.store,
+                    existing: c,
+                  ),
+                }),
               ),
             ),
           ),
@@ -231,7 +258,137 @@ class _ConnectorsScreenState extends State<ConnectorsScreen> {
     ConnectorKind.claude =>
       'Key ${c.hint} · ${(c.model ?? ChineseConfig.defaultModel).label}',
     ConnectorKind.anki => '${c.user ?? ''} · ${c.deck ?? 'no deck chosen'}',
+    ConnectorKind.azure =>
+      'Key ${c.hint} · ${c.endpoint?.isNotEmpty == true ? c.endpoint : 'no region'}',
   };
+}
+
+/// Adds the Azure Speech key that gives the companion its voice, or edits
+/// one. Needs the region as well as the key: an Azure key only works against
+/// the region its resource was created in, and a mismatch reads as a 401,
+/// which looks exactly like a wrong key.
+class _AzureDialog extends StatefulWidget {
+  const _AzureDialog({required this.store, this.existing});
+
+  final ConnectionStore store;
+  final Connection? existing;
+
+  @override
+  State<_AzureDialog> createState() => _AzureDialogState();
+}
+
+class _AzureDialogState extends State<_AzureDialog> {
+  late final TextEditingController _name = TextEditingController(
+    text: widget.existing?.name ?? '',
+  );
+  final TextEditingController _key = TextEditingController();
+  late final TextEditingController _region = TextEditingController(
+    text: widget.existing?.endpoint ?? '',
+  );
+  String? _error;
+
+  @override
+  void dispose() {
+    _name.dispose();
+    _key.dispose();
+    _region.dispose();
+    super.dispose();
+  }
+
+  Future<void> _save() async {
+    final existing = widget.existing;
+    final key = _key.text.trim();
+    final region = _region.text.trim().toLowerCase();
+    if (existing == null && key.isEmpty) {
+      setState(() => _error = 'Paste the key from your Azure Speech resource.');
+      return;
+    }
+    if (region.isEmpty) {
+      setState(() => _error = 'The region is on the same page as the key.');
+      return;
+    }
+    final name = _name.text.trim();
+    await widget.store.save(
+      Connection(
+        id: existing?.id ?? ConnectionStore.newId(),
+        kind: ConnectorKind.azure,
+        name: name.isEmpty ? (existing?.name ?? 'Azure Speech') : name,
+        secret: key.isEmpty ? existing!.secret : key,
+        endpoint: region,
+      ),
+    );
+    if (mounted) Navigator.of(context).pop();
+  }
+
+  Future<void> _remove() async {
+    await widget.store.remove(widget.existing!);
+    if (mounted) Navigator.of(context).pop();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final existing = widget.existing;
+    final theme = Theme.of(context);
+    final error = _error;
+    return AlertDialog(
+      title: Text(existing == null ? 'Add Azure Speech key' : existing.name),
+      content: SingleChildScrollView(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            TextField(
+              controller: _name,
+              decoration: const InputDecoration(
+                labelText: 'Name',
+                hintText: 'e.g. Personal',
+              ),
+            ),
+            TextField(
+              controller: _key,
+              obscureText: true,
+              autocorrect: false,
+              enableSuggestions: false,
+              decoration: InputDecoration(
+                labelText: existing == null
+                    ? 'Key'
+                    : 'Replace key (${existing.hint})',
+              ),
+            ),
+            TextField(
+              controller: _region,
+              autocorrect: false,
+              enableSuggestions: false,
+              decoration: const InputDecoration(
+                labelText: 'Region',
+                hintText: 'e.g. eastus, westeurope',
+              ),
+            ),
+            const SizedBox(height: 12),
+            Text(
+              'Both are on the Keys and Endpoint page of your Speech '
+              'resource in the Azure portal. The free tier covers 500,000 '
+              'characters a month.',
+              style: theme.textTheme.bodySmall,
+            ),
+            if (error != null) ...[
+              const SizedBox(height: 12),
+              Text(error, style: TextStyle(color: theme.colorScheme.error)),
+            ],
+          ],
+        ),
+      ),
+      actions: [
+        if (existing != null)
+          TextButton(onPressed: _remove, child: const Text('Remove')),
+        TextButton(
+          onPressed: () => Navigator.of(context).pop(),
+          child: const Text('Cancel'),
+        ),
+        FilledButton(onPressed: _save, child: const Text('Save')),
+      ],
+    );
+  }
 }
 
 /// Adds a named Claude key, or edits one: rename, pick its model, replace

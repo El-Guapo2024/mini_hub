@@ -103,6 +103,20 @@ class _ReaderScreenState extends State<ReaderScreen> {
   /// The play/chat strip's fixed height; the chat bar sits just above it.
   static const double _controlsHeight = 52;
 
+  /// Room kept clear under the page for the keyboard while the companion is
+  /// open, so no line of the book is left hiding under it.
+  ///
+  /// Set once when the companion opens and cleared when it closes — never
+  /// followed live. The page is paginated, so epub.js lays the whole chapter
+  /// out again on every height change; a reserve that tracked the keyboard's
+  /// slide would reflow the book on each frame of the animation. This way it
+  /// reflows once on the way in and once on the way out.
+  double _kbReserve = 0;
+
+  /// The tallest keyboard seen this session, so the reserve is the real
+  /// height instead of a guess after the keyboard has been up once.
+  double _kbSeen = 0;
+
   /// Real touches never make it into the WKWebView on iOS, so gestures are
   /// recognized here from raw pointer events and replayed over the bridge.
   /// A quick horizontal flick turns the page; a slower hold-and-drag
@@ -175,6 +189,10 @@ class _ReaderScreenState extends State<ReaderScreen> {
   void dispose() {
     _speech.onReadDone = null;
     _speech.stop();
+    // Speech now owns a native audio player for the companion's Azure voice.
+    // Stopping it is not releasing it: without this, every book opened
+    // leaves a player behind, the same way the WebView below used to.
+    _speech.dispose().ignore();
     // The test hook is a static, so without this every reader ever opened
     // keeps its WebViewController — and with it the WKWebView holding a
     // whole book — alive for the life of the app. Closing a book has to
@@ -458,7 +476,11 @@ class _ReaderScreenState extends State<ReaderScreen> {
       _readOnAfterTurn = null;
       if (_speech.reading.value) _speech.pause();
     }
-    setState(() => _companionOpen = opening);
+    setState(() {
+      _companionOpen = opening;
+      // A guess the very first time, the measured height after that.
+      _kbReserve = opening ? (_kbSeen > 0 ? _kbSeen : 336) : 0;
+    });
   }
 
   void _turnAndReadOn() {
@@ -564,10 +586,15 @@ class _ReaderScreenState extends State<ReaderScreen> {
       // without it, taps died in Flutter's gesture arena and no touch ever
       // reached the page (the JS side proved it: zero touchstarts).
       //
-      // The page keeps one size whatever opens over it: epub.js lays the whole
-      // chapter out again on any resize, so a chat bar or keyboard pushing the
-      // page up looked like the book reloading. The chat bar lies over the
-      // page instead, and the keyboard lifts only the chat bar.
+      // Flutter must not resize this for the keyboard: epub.js lays the whole
+      // chapter out again on any height change, and following the keyboard's
+      // slide frame by frame looked like the book reloading. The chat bar
+      // lies over the page, and the keyboard lifts only the chat bar.
+      //
+      // Leaving it at that, though, meant the keyboard simply covered the
+      // bottom of the page, and a paginated page has no scroll to reach what
+      // is under it. So the reserve below (_kbReserve) shortens the page by
+      // the keyboard's height ourselves, once on open and once on close.
       resizeToAvoidBottomInset: false,
       body: SafeArea(
         bottom: false,
@@ -578,6 +605,10 @@ class _ReaderScreenState extends State<ReaderScreen> {
             // up, which would resize the page all over again.
             final safeBottom = media.viewPadding.bottom;
             final keyboard = media.viewInsets.bottom;
+            // Cached straight onto the field rather than through setState:
+            // learning the height must not itself cause a layout, or it
+            // triggers the very reflow the reserve exists to prevent.
+            if (keyboard > _kbSeen) _kbSeen = keyboard;
             return Stack(
               children: [
                 Column(
@@ -593,6 +624,11 @@ class _ReaderScreenState extends State<ReaderScreen> {
                         child: WebViewWidget(controller: _web),
                       ),
                     ),
+                    // The page stops above the keyboard while the companion
+                    // is open. Without this the book keeps its full height
+                    // and the keyboard simply covers the bottom of it — and
+                    // a paginated page has no scroll to reach what is hidden.
+                    if (_kbReserve > 0) SizedBox(height: _kbReserve),
                     // Put away while the companion is open. Reading aloud
                     // and the companion don't mix, so the row held nothing
                     // but the companion's own toggle: a band of empty

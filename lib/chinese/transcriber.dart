@@ -17,7 +17,8 @@ import 'package:sherpa_onnx/sherpa_onnx.dart' as sherpa;
 class Transcriber {
   final AudioRecorder _recorder = AudioRecorder();
 
-  /// The model is large (~170MB), so it is loaded once for the app's life.
+  /// The model is large (~160MB on disk, most of it the int8 encoder), so
+  /// it is loaded once for the app's life.
   static sherpa.OnlineRecognizer? _recognizer;
   static Future<void>? _loading;
 

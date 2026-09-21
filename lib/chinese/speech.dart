@@ -1,7 +1,11 @@
+import 'dart:async';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter_tts/flutter_tts.dart';
+import 'package:just_audio/just_audio.dart';
 
 import '../config.dart';
+import 'azure_tts.dart';
 
 /// The one place that speaks. Today it is the on-device zh-CN voice; if the
 /// engine ever changes, this file is the whole change.
@@ -10,7 +14,8 @@ class Speech {
     _tts
       // By default the plugin deactivates the shared audio session after
       // every utterance — which also killed the mic's recording session, so
-      // Whisper got silence. The recorder manages the session instead.
+      // the recogniser got silence. The recorder manages the session
+      // instead.
       ..autoStopSharedSession(false)
       ..setLanguage(ChineseConfig.ttsLanguage)
       ..setSpeechRate(ChineseConfig.ttsRate)
@@ -18,6 +23,16 @@ class Speech {
       ..setCompletionHandler(_finished)
       ..setCancelHandler(() => speaking.value = false)
       ..setProgressHandler(_progressed);
+
+    // A run spoken by Azure is played here, not by flutter_tts, so that
+    // plugin's completion handler never fires for it. Without this the
+    // first Chinese run of a mixed answer would play and the English after
+    // it would never start.
+    _player.playerStateStream.listen((s) {
+      if (s.processingState != ProcessingState.completed) return;
+      speaking.value = false;
+      if (!reading.value && _runs.isNotEmpty) _speakNextRun();
+    });
   }
 
   /// The page being read aloud. Position is a character offset into it,
@@ -86,6 +101,7 @@ class Speech {
   Future<void> pause() async {
     reading.value = false;
     await _tts.stop();
+    await _player.stop();
     speaking.value = false;
   }
 
@@ -139,6 +155,13 @@ class Speech {
   }
 
   final FlutterTts _tts = FlutterTts();
+
+  /// The companion's voice, when an Azure key is saved. The book is never
+  /// read this way: a novel is hundreds of thousands of characters, and the
+  /// device voice is free, works offline and reports word boundaries so the
+  /// page can follow along as it reads.
+  final AzureTts _azure = AzureTts();
+  final AudioPlayer _player = AudioPlayer();
 
   /// True while the voice is talking — so a stop control can exist only
   /// when there is something to stop.
@@ -226,6 +249,7 @@ class Speech {
   Future<void> speakMixed(String text) async {
     reading.value = false;
     await _tts.stop();
+    await _player.stop();
     _runs = languageRuns(text);
     await _speakNextRun();
   }
@@ -233,6 +257,22 @@ class Speech {
   Future<void> _speakNextRun() async {
     if (_runs.isEmpty) return;
     final (text, lang) = _runs.removeAt(0);
+    try {
+      final file = await _azure.synthesize(text, lang);
+      if (file != null) {
+        speaking.value = true;
+        await _player.setFilePath(file.path);
+        // Not awaited: the future finishes when playback does, and the
+        // state stream already chains the next run. Awaiting both would
+        // speak the run after this one twice.
+        unawaited(_player.play());
+        return;
+      }
+    } catch (e) {
+      // A bad key, a spent quota or no network must not cost the answer:
+      // it is spoken in the device voice, exactly as with no key at all.
+      debugPrint('azure tts, falling back to the device voice: $e');
+    }
     await _tts.setLanguage(lang);
     final voice = await _pickVoice(lang);
     if (voice != null) await _tts.setVoice(voice);
@@ -245,6 +285,7 @@ class Speech {
     reading.value = false;
     _runs = [];
     await _tts.stop();
+    await _player.stop();
     await _tts.setLanguage(lang);
     final voice = await _pickVoice(lang);
     if (voice != null) await _tts.setVoice(voice);
@@ -255,6 +296,13 @@ class Speech {
     reading.value = false;
     _runs = [];
     await _tts.stop();
+    await _player.stop();
     speaking.value = false;
+  }
+
+  /// Hands back the native audio player. The reader owns one Speech for the
+  /// life of the screen, so this runs when the book is closed.
+  Future<void> dispose() async {
+    await _player.dispose();
   }
 }

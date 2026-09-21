@@ -4,7 +4,7 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 import '../config.dart';
 
-enum ConnectorKind { claude, anki }
+enum ConnectorKind { claude, anki, azure }
 
 /// One saved way into an outside service: a named Claude API key with the
 /// model chosen for it, or a logged-in AnkiWeb account with its deck. Several

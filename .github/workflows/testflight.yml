@@ -176,9 +176,17 @@ jobs:
         # and the signing happens in the half that can be told how.
         run: |
           set -euo pipefail
+          # The companion's Azure voice. These are compiled into the IPA,
+          # which TestFlight hands to every tester, so the key behind them
+          # must be an Azure free-tier (F0) one: capped at 500,000
+          # characters a month and unable to bill, so a leak costs quota
+          # rather than money. Unset secrets expand to empty, and an empty
+          # key simply means the device voice answers instead.
           flutter build ipa --release --no-codesign \
             --build-name "$FLUTTER_VERSION" \
-            --build-number "${{ github.run_number }}"
+            --build-number "${{ github.run_number }}" \
+            --dart-define=AZURE_KEY="${{ secrets.AZURE_KEY }}" \
+            --dart-define=AZURE_REGION="${{ secrets.AZURE_REGION }}"
 
       - name: Sign and export the IPA
         env:

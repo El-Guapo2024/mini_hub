@@ -33,7 +33,19 @@ void main() {
     store = await AttemptStore.openAt('${dir.path}/attempts.db');
   });
 
-  tearDown(() => dir.deleteSync(recursive: true));
+  // Closed before the directory goes, or the delete races SQLite. The store
+  // holds the database open, and SQLite writes -wal and -shm beside the file;
+  // a recursive delete that walks the directory while those are still being
+  // flushed can find a new one after the walk and fail with
+  //
+  //     FileSystemException: Deletion failed (OS Error: Directory not empty)
+  //
+  // which showed up as this file failing once in a full run and passing on
+  // its own -- the window only opens under the I/O load of the other tests.
+  tearDown(() async {
+    await store.close();
+    dir.deleteSync(recursive: true);
+  });
 
   testWidgets('a correct answer is recorded against its topic', (tester) async {
     await pumpQuestion(tester, _question, store: store);

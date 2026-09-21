@@ -70,6 +70,12 @@ jobs:
 
   bridge:
     # Anki's core for iOS: reused when already published, built otherwise.
+    #
+    # Guarded with the same condition as the ios job below, and for the same
+    # reason: this is a macOS runner too. Gating only the archive would have
+    # left a Mac starting on every push to decide it had nothing to do --
+    # the whole drain, minus the useful part.
+    if: github.event_name == 'workflow_dispatch'
     uses: ./.github/workflows/anki_bridge.yml
     permissions:
       contents: write
@@ -77,6 +83,17 @@ jobs:
   ios:
     name: ios archive
     needs: bridge
+    # By hand only. This proves the release build compiles -- tree shaking and
+    # AOT fail in ways a debug test run never shows -- but it is a Mac, and a
+    # Mac bills at ten times the Linux rate. Run on every merge it spent the
+    # month's quota proving that doc edits still compile.
+    #
+    # The Linux gate above still runs on every push, so nothing stops being
+    # checked; what stops is paying Mac rates to check it. Before shipping,
+    # start it deliberately:
+    #
+    #     gh workflow run Build --ref main
+    if: github.event_name == 'workflow_dispatch'
     # Only a Mac can archive an iOS app, signed or not.
     runs-on: macos-26
     timeout-minutes: 45

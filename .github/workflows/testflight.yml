@@ -2,11 +2,16 @@ name: TestFlight
 
 # A signed build, uploaded to App Store Connect, where it appears in TestFlight.
 #
-# Every merge to main becomes a TestFlight build. Nothing here runs on a pull
-# request: a PR must not be able to ship.
+# Started by hand, never by a push. A macOS runner bills at ten times the
+# Linux rate, and a build on every merge to main spent the month's quota on
+# commits that were never meant to reach a tester -- docs, CI edits, work in
+# progress. Shipping is a decision, so it is made deliberately:
+#
+#     gh workflow run TestFlight --ref main
+#
+# or the "Run workflow" button on the Actions tab. Nothing here runs on a
+# pull request either: a PR must not be able to ship.
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 concurrency:

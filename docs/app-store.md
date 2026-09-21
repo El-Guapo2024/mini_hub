@@ -146,7 +146,11 @@ flashcards,learn chinese,study`
 - ~~A contact address~~ **done**: `antoniotwin_luera@hotmail.com`, the
   address the Apple Developer account holder already reads.
 - ~~A public home for the privacy policy~~ **done** — the Gist above.
-- **The licence question.** Anki's core ships inside the binary under
-  AGPL-3 (`ios/AnkiBridge/AnkiBridge.podspec` declares it). That is settled
-  one way or another before Submit, not after — see the note in
-  `docs/chinese-module.md`.
+- ~~The licence question~~ **settled** (2026-09-21): the app is **AGPL-3**
+  and the repository is public. Anki's core is statically linked, so the
+  combined binary is AGPL either way; keeping AnkiWeb sync meant publishing
+  the source. `LICENSE` holds the text and
+  `docs/chinese-module.md` records why the alternatives were rejected.
+
+Nothing is outstanding. What is left is entering the above into App Store
+Connect, which is done under the Apple account by hand.

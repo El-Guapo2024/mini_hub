@@ -99,3 +99,16 @@ The asset tests are the ones that catch what a device would otherwise catch
 first: a content directory missing from `pubspec.yaml` ships no files at all, a
 question that fails to parse breaks the practice tab, and a course absent from
 the index is invisible however finished it is.
+
+## Licence
+
+**AGPL-3.0-or-later** — see `LICENSE`.
+
+The whole app is under AGPL because Anki's `rslib` is statically linked into
+the iOS binary to provide AnkiWeb sync, and AGPL has no linking exception: the
+combined work it produces is covered, so the source is published. Anyone who
+receives a build is entitled to this source, which is why the repository is
+public.
+
+`docs/chinese-module.md` records the reasoning, including the two alternatives
+that were considered and why neither avoids the obligation.

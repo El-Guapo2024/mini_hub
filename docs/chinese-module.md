@@ -250,19 +250,34 @@ static library linked into Runner.
 On TestFlight this was deferred deliberately — the decision was to verify the
 sync worked first. Build 17 shipped that way. A **public App Store release is
 the point at which it stops being deferrable**, because AGPL entitles anyone
-who receives the binary to the source of the whole combined work, and this
-repository is private.
+who receives the binary to the source of the whole combined work.
 
-The options, none of which is chosen yet:
+### How it was settled
 
-| | What it costs |
-| --- | --- |
-| Drop rslib from the App Store build | no AnkiWeb sync in the public app; cards still save locally; repo stays private; your own builds keep the sync |
-| Open-source the app under AGPL-3 | keeps the sync; repo becomes public; does **not** fully settle it, since Apple's distribution terms and the GPL family are the unresolved conflict that pulled VLC |
-| Stay on the TestFlight public link | up to 10,000 testers, no review, question stays parked |
+**The app is licensed AGPL-3 and the repository is public** (`LICENSE`,
+2026-09-21). AnkiWeb sync was the reason: it is the feature that makes the
+cards worth saving, and every way of keeping it ends at the same place —
+rslib is statically linked into the IPA, so what Apple distributes is one
+binary containing AGPL code, and the whole combined work goes under AGPL-3.
 
-Settle this **before** Submit, not after. Nothing in `docs/app-store.md` —
-icon, screenshots, privacy answers — depends on which way it goes, so that
-work is safe to do first.
+Two things that were considered and are worth writing down, because both
+look like escapes and neither is:
+
+- **A separate repo and pipeline for the bridge, consumed as an artifact.**
+  This is good build hygiene and it is what `anki_bridge.yml` already does,
+  but it does not change the licence. AGPL attaches to the binary that is
+  distributed, not to the topology that produced it; two repos and one
+  artifact yield a binary identical to a monorepo's. There is no LGPL-style
+  linking exception in AGPL — that is the whole difference between them.
+- **Dropping rslib from the App Store build.** This works and keeps the
+  repository private, at the cost of AnkiWeb sync for public users. It was
+  rejected because sync is the point.
+
+What remains genuinely unresolved is not this repository's side of the deal —
+that is now satisfied — but the older conflict between the GPL family and
+Apple's distribution terms, which is what pulled VLC from the store. The
+difference in this case is that the copyright holder of the app is the person
+publishing it, and the AGPL obligation the app itself creates is discharged by
+the public repository.
 
 This is a note about a licence, written by someone who is not a lawyer.

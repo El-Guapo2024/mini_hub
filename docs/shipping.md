@@ -189,8 +189,12 @@ being `ACTIVE`, which is the one expiry that takes care of itself.
 
 TestFlight will take a build that the App Store would reject. Still outstanding:
 
-- **An app icon.** It is the Flutter placeholder — a plain white square on the
-  home screen. This does not block TestFlight and does block the App Store.
+- ~~**An app icon.**~~ **Done** (2026-09-20). 读 on ink, with the vermilion
+  bar of an interlinear gloss beneath it, in Songti SC Black. Generated at
+  all 19 sizes from a 1024 master and checked at 40px, which is the size that
+  decides an icon: an earlier draft looked right at 1024 and lost both its
+  thin strokes and its gloss bar when the phone drew it small. No alpha
+  channel — Apple rejects icons that carry one.
 - **Privacy policy URL and the privacy questionnaire.** The app stores what a
   student answered, locally in SQLite. It collects nothing and sends nothing —
   say so, rather than leaving it blank.

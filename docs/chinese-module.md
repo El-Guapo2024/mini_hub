@@ -167,7 +167,9 @@ Fits the existing split without a new category:
 3. ~~Select a sentence → ask Claude~~ **done** *(the key feature; before voice
    complicates it)*
 4. ~~Cards from taps and selections~~ **done**, into their own store
-5. ~~Voice — TTS out, speech in~~ **done** (Whisper on device, `flutter_tts` out)
+5. ~~Voice — TTS out, speech in~~ **done** (sherpa-onnx on device for speech
+   in; `flutter_tts` out, with Azure for the companion's own voice when a key
+   is set)
 6. Tone judging — not started
 
 Stages 1–3 are the app. Voice and tones sharpen it but aren't what make it
@@ -230,9 +232,37 @@ work must be pitch-based.
 | MCP server as the co-reader | no microphone — it can hold a book, not be talked to |
 | Prepare on Mac, read on iPad | moves questions to another night instead of removing them |
 | Camera as the text source | DRM independence you don't need, at a cost on every page |
-| Whisper on the phone | iOS already has on-device `zh-CN` recognition |
+| Whisper on the phone | transcribes mixed speech in bursts, not while you talk; sherpa-onnx streams it |
+| iOS's own recogniser | streams, but one language at a time — a question mixing English and Chinese comes back mangled |
 | Bluetooth between devices | Wi-Fi + Bonjour, without fighting iOS background limits |
 | Wi-Fi bridge to Claude Code | a weekend's work plus a permanent "is the Mac awake" failure, to save a few dollars |
 | Kindle or Pleco integration | neither exposes a plugin API on any platform |
 | Obsidian plugin | it's a notes app; reading a novel in it is bad, and it yields "capture now, study later" rather than asking while you read |
 | Writing our own text renderer | tap hit-testing on Chinese text is the trap that sinks the project — embed epub.js |
+
+## The licence question
+
+Anki's core ships **inside the app binary**, under **AGPL-3**:
+`ios/AnkiBridge/AnkiBridge.podspec` declares
+`s.license = { :type => 'AGPL-3.0-or-later' }`, and the xcframework is a
+static library linked into Runner.
+
+On TestFlight this was deferred deliberately — the decision was to verify the
+sync worked first. Build 17 shipped that way. A **public App Store release is
+the point at which it stops being deferrable**, because AGPL entitles anyone
+who receives the binary to the source of the whole combined work, and this
+repository is private.
+
+The options, none of which is chosen yet:
+
+| | What it costs |
+| --- | --- |
+| Drop rslib from the App Store build | no AnkiWeb sync in the public app; cards still save locally; repo stays private; your own builds keep the sync |
+| Open-source the app under AGPL-3 | keeps the sync; repo becomes public; does **not** fully settle it, since Apple's distribution terms and the GPL family are the unresolved conflict that pulled VLC |
+| Stay on the TestFlight public link | up to 10,000 testers, no review, question stays parked |
+
+Settle this **before** Submit, not after. Nothing in `docs/app-store.md` —
+icon, screenshots, privacy answers — depends on which way it goes, so that
+work is safe to do first.
+
+This is a note about a licence, written by someone who is not a lawyer.

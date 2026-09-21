@@ -55,6 +55,12 @@ class MyApp extends StatelessWidget {
     final app = MaterialApp(
       title: "Mini Hub",
       theme: appTheme,
+      // The corner ribbon serves nobody: it tells a developer what they
+      // already know, and it sits across App Store screenshots, which the
+      // simulator can only ever produce in debug — release and profile are
+      // both refused for simulators, so there is no build mode that hides
+      // it for us.
+      debugShowCheckedModeBanner: false,
       home: const HubHome(),
       builder: storageFailed
           ? (context, child) => _NotSaving(child: child)

@@ -17,10 +17,21 @@ class CompanionBar extends StatefulWidget {
     required this.session,
     required this.speech,
     this.onClose,
+    this.onKeyboardWanted,
   });
 
   final TutorSession session;
   final Speech speech;
+
+  /// True when the question field takes focus, false when it gives it up —
+  /// which is to say, when the keyboard is about to arrive or leave.
+  ///
+  /// The reader shortens the page by the keyboard's height while this is
+  /// true. It is reported from focus rather than read from the keyboard
+  /// inset on purpose: focus changes twice a conversation, the inset changes
+  /// on every frame of the keyboard's slide, and each change relays out the
+  /// whole chapter.
+  final ValueChanged<bool>? onKeyboardWanted;
 
   /// Puts the strip away. It carries its own way out because the reader's
   /// control row is hidden while this is open — that row held nothing but
@@ -33,6 +44,7 @@ class CompanionBar extends StatefulWidget {
 
 class _CompanionBarState extends State<CompanionBar> {
   final TextEditingController _input = TextEditingController();
+  final FocusNode _inputFocus = FocusNode();
   final Transcriber _transcriber = Transcriber();
 
   bool _busy = false;
@@ -55,6 +67,12 @@ class _CompanionBarState extends State<CompanionBar> {
   @override
   void initState() {
     super.initState();
+    // Focus, not the keyboard inset: the reader shortens the page by the
+    // keyboard's height, and it must be told twice a conversation rather
+    // than on every frame of the keyboard's slide.
+    _inputFocus.addListener(
+      () => widget.onKeyboardWanted?.call(_inputFocus.hasFocus),
+    );
     // Warm the sherpa-onnx model in the background so the first tap of the
     // mic doesn't stall. It is ~160MB and ships in the bundle, so the wait
     // is copying it out on first launch, not a download.
@@ -65,6 +83,7 @@ class _CompanionBarState extends State<CompanionBar> {
   void dispose() {
     _transcriber.dispose();
     _input.dispose();
+    _inputFocus.dispose();
     _scroll.dispose();
     super.dispose();
   }
@@ -281,6 +300,7 @@ class _CompanionBarState extends State<CompanionBar> {
                     padding: const EdgeInsets.only(left: 16),
                     child: TextField(
                       controller: _input,
+                      focusNode: _inputFocus,
                       minLines: 1,
                       // Grows to five lines and scrolls inside itself after
                       // that, so a long question is still reviewable before

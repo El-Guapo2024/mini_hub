@@ -478,9 +478,21 @@ class _ReaderScreenState extends State<ReaderScreen> {
     }
     setState(() {
       _companionOpen = opening;
-      // A guess the very first time, the measured height after that.
-      _kbReserve = opening ? (_kbSeen > 0 ? _kbSeen : 336) : 0;
+      // Closing takes the keyboard with it. Opening reserves nothing yet:
+      // reserving on open alone cost the page a third of its height for a
+      // chat nobody had started typing into.
+      if (!opening) _kbReserve = 0;
     });
+  }
+
+  /// The question field gained or lost focus, so the keyboard is on its way
+  /// in or out. That is the moment the page is worth shortening — and it
+  /// happens twice a conversation, not once a frame.
+  void _keyboardWanted(bool wanted) {
+    // A guess the very first time, the measured height after that.
+    final want = wanted ? (_kbSeen > 0 ? _kbSeen : 336.0) : 0.0;
+    if (want == _kbReserve) return;
+    setState(() => _kbReserve = want);
   }
 
   void _turnAndReadOn() {
@@ -655,6 +667,7 @@ class _ReaderScreenState extends State<ReaderScreen> {
                       ),
                       speech: _speech,
                       onClose: () => _toggleCompanion(),
+                      onKeyboardWanted: _keyboardWanted,
                     ),
                   ),
               ],

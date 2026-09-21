@@ -37,8 +37,17 @@ class _CompanionBarState extends State<CompanionBar> {
 
   bool _busy = false;
   bool _listening = false;
-  String? _answer;
   String? _error;
+
+  /// The conversation itself lives in the session; this only says whether it
+  /// is on screen. Collapsing hands the page back without losing the thread,
+  /// which dropping the answer used to do.
+  bool _showChat = true;
+  final ScrollController _scroll = ScrollController();
+
+  /// The ceiling on how much of the screen the conversation may take. It
+  /// scrolls inside that; the book keeps the rest.
+  static const double _maxChatFraction = 0.35;
 
   /// The start still in flight, if the mic was tapped off before it finished.
   Future<String?>? _starting;
@@ -46,8 +55,9 @@ class _CompanionBarState extends State<CompanionBar> {
   @override
   void initState() {
     super.initState();
-    // Fetch the Whisper model in the background so the first tap of the
-    // mic doesn't stall on a 140MB download.
+    // Warm the sherpa-onnx model in the background so the first tap of the
+    // mic doesn't stall. It is ~160MB and ships in the bundle, so the wait
+    // is copying it out on first launch, not a download.
     _transcriber.ensureReady().catchError((_) {});
   }
 
@@ -55,6 +65,7 @@ class _CompanionBarState extends State<CompanionBar> {
   void dispose() {
     _transcriber.dispose();
     _input.dispose();
+    _scroll.dispose();
     super.dispose();
   }
 
@@ -69,7 +80,10 @@ class _CompanionBarState extends State<CompanionBar> {
     try {
       final a = await widget.session.ask(q);
       if (!mounted) return;
-      setState(() => _answer = a);
+      // The answer is already in the session's transcript; this only brings
+      // the conversation back into view if it had been collapsed.
+      setState(() => _showChat = true);
+      _scrollToEnd();
       await widget.speech.speakMixed(a);
     } on TutorException catch (e) {
       if (mounted) setState(() => _error = e.message);
@@ -81,8 +95,8 @@ class _CompanionBarState extends State<CompanionBar> {
   }
 
   Future<void> _startListening() async {
-    // Lit at once: loading Whisper takes a moment, and a mic that does
-    // nothing meanwhile reads as broken.
+    // Lit at once: loading the recogniser takes a moment, and a mic that
+    // does nothing meanwhile reads as broken.
     setState(() {
       _listening = true;
       _error = null;
@@ -110,7 +124,7 @@ class _CompanionBarState extends State<CompanionBar> {
       _listening = false;
       _busy = true;
     });
-    // Tapped off while Whisper was still loading: without waiting here the
+    // Tapped off while the model was still loading: without waiting here the
     // stop was dropped and the mic then recorded forever.
     final pending = _starting;
     if (pending != null && await pending != null) {
@@ -125,10 +139,41 @@ class _CompanionBarState extends State<CompanionBar> {
     });
   }
 
+  /// A new answer should be the one you are looking at, not something you
+  /// have to scroll down to find.
+  void _scrollToEnd() {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!_scroll.hasClients) return;
+      _scroll.jumpTo(_scroll.position.maxScrollExtent);
+    });
+  }
+
+  /// Questions sit quiet and small, replies read as the body text. Enough to
+  /// tell speakers apart without chat bubbles, which a strip this short has
+  /// no room for.
+  Widget _turn(BuildContext context, TutorTurn turn) {
+    final theme = Theme.of(context);
+    final cs = theme.colorScheme;
+    if (turn.fromUser) {
+      return Text(
+        turn.text,
+        style: theme.textTheme.bodySmall?.copyWith(
+          color: cs.onSurfaceVariant,
+          fontWeight: FontWeight.w600,
+        ),
+      );
+    }
+    return SelectableText(
+      turn.text,
+      style: theme.textTheme.bodyMedium?.copyWith(height: 1.4),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final cs = theme.colorScheme;
+    final turns = widget.session.transcript;
     return Container(
       decoration: BoxDecoration(
         color: cs.surfaceContainerLow,
@@ -157,7 +202,7 @@ class _CompanionBarState extends State<CompanionBar> {
                 style: theme.textTheme.bodySmall?.copyWith(color: cs.error),
               ),
             ),
-          if (_answer != null)
+          if (_showChat && turns.isNotEmpty)
             Padding(
               padding: const EdgeInsets.fromLTRB(12, 10, 12, 0),
               child: Container(
@@ -173,28 +218,33 @@ class _CompanionBarState extends State<CompanionBar> {
                   // window three lines tall while the page behind it had
                   // room to spare.
                   constraints: BoxConstraints(
-                    maxHeight: MediaQuery.sizeOf(context).height * 0.4,
+                    maxHeight:
+                        MediaQuery.sizeOf(context).height * _maxChatFraction,
                   ),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Expanded(
-                        child: SingleChildScrollView(
-                          child: SelectableText(
-                            _answer!,
-                            style: theme.textTheme.bodyMedium?.copyWith(
-                              height: 1.4,
-                            ),
-                          ),
+                        // The whole session, not just the last reply: a
+                        // question about an answer needs the answer still
+                        // on screen to point at.
+                        child: ListView.separated(
+                          controller: _scroll,
+                          shrinkWrap: true,
+                          padding: EdgeInsets.zero,
+                          itemCount: turns.length,
+                          separatorBuilder: (_, _) =>
+                              const SizedBox(height: 10),
+                          itemBuilder: (context, i) => _turn(context, turns[i]),
                         ),
                       ),
                       IconButton(
                         icon: const Icon(Icons.close, size: 16),
                         visualDensity: VisualDensity.compact,
-                        tooltip: 'Dismiss answer',
+                        tooltip: 'Hide the conversation',
                         onPressed: () {
                           widget.speech.stop();
-                          setState(() => _answer = null);
+                          setState(() => _showChat = false);
                         },
                       ),
                     ],

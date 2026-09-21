@@ -15,6 +15,14 @@ export 'claude.dart' show TutorException;
 /// model can list the learner's Anki decks and add cards to any of them; the
 /// loop that runs those tools lives here, and every card is kept on the
 /// phone first — the phone stays the source of truth.
+/// One line of the companion conversation as it appears on screen.
+class TutorTurn {
+  const TutorTurn({required this.fromUser, required this.text});
+
+  final bool fromUser;
+  final String text;
+}
+
 class TutorSession {
   TutorSession({
     required this.chapterContext,
@@ -43,14 +51,51 @@ class TutorSession {
   /// thinking blocks included, which must go back unchanged.
   final List<Map<String, dynamic>> _messages = [];
 
+  /// The conversation as the screen shows it: the learner's questions and
+  /// the companion's replies, in order. The tool plumbing is left out — a
+  /// tool-result turn is something the API needs, not something the reader
+  /// asked or was told — and so are thinking blocks, which go back to the
+  /// model verbatim but were never meant for a human to read.
+  List<TutorTurn> get transcript {
+    final out = <TutorTurn>[];
+    for (final message in _messages) {
+      final content = message['content'];
+      if (message['role'] == 'user') {
+        // A list here is tool results, not the learner speaking.
+        if (content is String && content.trim().isNotEmpty) {
+          out.add(TutorTurn(fromUser: true, text: content.trim()));
+        }
+        continue;
+      }
+      if (content is! List) continue;
+      final text = content
+          .whereType<Map>()
+          .where((block) => block['type'] == 'text')
+          .map((block) => (block['text'] as String? ?? '').trim())
+          .where((t) => t.isNotEmpty)
+          .join('\n\n');
+      if (text.isNotEmpty) out.add(TutorTurn(fromUser: false, text: text));
+    }
+    return out;
+  }
+
   /// Rounds of tool use one question may take before giving up.
   static const int _maxRounds = 5;
 
   static const String _persona =
       'You are a native Chinese speaker reading a book together with a '
       'learner, sitting beside them. Answer their questions about the text in '
-      'English, with Chinese examples where they help. Be concise and warm; '
-      'answer only what was asked. Pay special attention to meaning that is '
+      'English, with Chinese examples where they help.\n\n'
+      'Length matters more than you think. Two or three sentences is the '
+      'normal answer; four is long. The learner is mid-page with the book '
+      'open, not reading an essay — every extra sentence is one they have to '
+      'wade through to get back to the story. Answer only what was asked, '
+      'and stop there. Do not restate the question, do not summarise what '
+      'you just said, do not list several possible readings when one is '
+      'right, and do not add background they did not ask for. No preamble '
+      '("Great question!") and no closing offer ("Let me know if..."). If '
+      'the honest answer is one word, give one word.\n\n'
+      'Pay special attention to meaning that is '
       'implied rather than written: dropped subjects, unmarked conditionals, '
       'aspect particles. Never correct the learner unless they ask to be '
       'corrected. When the learner asks to save or remember a word (or you '
@@ -132,7 +177,10 @@ class TutorSession {
     try {
       for (var round = 0; round < _maxRounds; round++) {
         final reply = await _claude.messages({
-          'max_tokens': 16000,
+          // A reading companion answers in a few sentences. The old 16000
+          // was a ceiling no good answer ever came near, and a budget that
+          // large reads to a small model as licence to fill it.
+          'max_tokens': 1200,
           'system':
               '$_persona\n\nThe reader currently has this passage open:'
               '\n\n$chapterContext',

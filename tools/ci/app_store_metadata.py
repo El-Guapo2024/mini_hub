@@ -92,11 +92,21 @@ and Anki sync are optional and use your own keys."""
 # supplies, which is the same position as any ebook reader and is not what
 # this questionnaire is asking about.
 #
-# Names differ by API version; only those Apple reports are sent.
+# The split between enum and boolean is not guessable from the names --
+# healthOrWellnessTopics is a boolean and gunsOrOtherWeapons is an enum -- and
+# one wrong type rejects the whole PATCH. Taken from fastlane's
+# spaceship/connect_api/models/age_rating_declaration.rb, which is maintained
+# against the live API; Apple's own documentation page renders client-side and
+# fetches as an empty shell, and the Go client cidertool/asc-go is stale
+# enough to call every field a bool.
+#
+# The content enums take NONE / INFREQUENT_OR_MILD / FREQUENT_OR_INTENSE.
 AGE_RATING_NONE = {
+    # Enums: nothing in the questionnaire applies to a dictionary reader.
     "alcoholTobaccoOrDrugUseOrReferences": "NONE",
     "contests": "NONE",
     "gamblingSimulated": "NONE",
+    "gunsOrOtherWeapons": "NONE",
     "horrorOrFearThemes": "NONE",
     "matureOrSuggestiveThemes": "NONE",
     "medicalOrTreatmentInformation": "NONE",
@@ -106,11 +116,26 @@ AGE_RATING_NONE = {
     "violenceCartoonOrFantasy": "NONE",
     "violenceRealistic": "NONE",
     "violenceRealisticProlongedGraphicOrSadistic": "NONE",
+    # Booleans.
+    "advertising": False,  # no ad SDK in pubspec.yaml
+    "ageAssurance": False,
     "gambling": False,
+    "healthOrWellnessTopics": False,
+    "lootBox": False,
+    "parentalControls": False,
+    "socialMedia": False,
+    "socialMediaAgeRestricted": False,
+    # The companion is the reader talking to their own Claude key, not to
+    # another person; nothing in this app carries a message between two users.
+    "messagingAndChat": False,
+    # Cards and reading progress stay on the device, and there is no way for
+    # one reader's anything to reach another's.
+    "userGeneratedContent": False,
+    # The WebView renders local book files and is pointed at about:blank when
+    # a book closes. It cannot browse.
     "unrestrictedWebAccess": False,
+    # Not a kids-category app, so no band.
     "kidsAgeBand": None,
-    "seventeenPlus": False,
-    "loleAppEnabled": False,
 }
 
 

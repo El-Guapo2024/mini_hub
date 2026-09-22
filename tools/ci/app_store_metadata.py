@@ -211,7 +211,13 @@ if not rating:
 else:
     live = rating["attributes"]
     print(f"\nageRatingDeclaration {rating['id']}")
-    print(f"  Apple reports these fields: {sorted(live)}")
+    # Values, not just names. Half these fields are booleans and half are
+    # NONE/INFREQUENT_OR_MILD/FREQUENT_OR_INTENSE enums, and there is no way
+    # to tell which from the name: sending false where an enum belongs
+    # rejects the whole payload. The live value gives away the type.
+    print("  Apple reports:")
+    for k in sorted(live):
+        print(f"    {k} = {live[k]!r}")
     known = {k: v for k, v in AGE_RATING_NONE.items() if k in live}
     unknown = sorted(set(AGE_RATING_NONE) - set(live))
     extra = sorted(set(live) - set(AGE_RATING_NONE))

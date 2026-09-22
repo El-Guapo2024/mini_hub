@@ -1,0 +1,78 @@
+name: App Store metadata
+
+# Fills in the listing App Store Connect asks for before 1.0 can be submitted:
+# subtitle, description, keywords, privacy policy URL, the age rating, and the
+# build to ship. It does not submit.
+#
+# Run it here rather than from a laptop so the App Store Connect key stays a
+# GitHub secret. It is the same key the TestFlight workflow signs with, and it
+# never has to exist on anyone's machine.
+#
+#     gh workflow run "App Store metadata" --ref main -f mode=inspect
+#     gh workflow run "App Store metadata" --ref main -f mode=apply -f build=42
+#
+# Start with inspect. It prints what Apple currently holds and what would
+# change, and -- this is the point of it -- prints the age rating fields this
+# account's API actually has, which differ between API versions. apply then
+# sends only fields Apple has reported, because one unknown attribute rejects
+# the whole payload with a 400 that looks like a broken script.
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'inspect (read only) or apply (write)'
+        required: true
+        default: inspect
+        type: choice
+        options: [inspect, apply]
+      build:
+        description: 'Build number to attach (CFBundleVersion), e.g. 42. Blank leaves it alone.'
+        required: false
+        type: string
+
+jobs:
+  metadata:
+    name: ${{ inputs.mode }}
+    # Linux: this is HTTP and nothing else. Nothing here needs a Mac.
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install the JWT library
+        # App Store Connect authenticates with an ES256-signed token, which
+        # needs cryptography underneath pyjwt.
+        run: pip install --quiet 'pyjwt[crypto]'
+
+      - name: Place the App Store Connect API key
+        env:
+          API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
+          API_PRIVATE_KEY: ${{ secrets.APP_STORE_CONNECT_PRIVATE_KEY }}
+        run: |
+          set -euo pipefail
+          mkdir -p ~/private_keys
+          echo "$API_PRIVATE_KEY" | base64 --decode > ~/private_keys/AuthKey_$API_KEY_ID.p8
+
+      - name: ${{ inputs.mode == 'apply' && 'Write the listing' || 'Read the listing' }}
+        env:
+          ASC_KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+          ASC_APP_ID: '6804838723'
+          MODE: ${{ inputs.mode }}
+          BUILD_VERSION: ${{ inputs.build }}
+        run: |
+          set -euo pipefail
+          export ASC_KEY_PATH="$HOME/private_keys/AuthKey_$ASC_KEY_ID.p8"
+          python3 tools/ci/app_store_metadata.py
+
+      - name: Shred the key
+        # always(), because a failed run is exactly when a key is left lying
+        # around. The runner is destroyed either way; this is so that being
+        # wrong about that is not interesting.
+        if: always()
+        run: rm -rf ~/private_keys

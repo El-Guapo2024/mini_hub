@@ -16,6 +16,17 @@ void main() {
     expect(ReaderScreen.sentenceAround(text, 2), '他们回答我说。');
   });
 
+  test('a selection crossing 。 takes every sentence it touches', () {
+    // From 说 (5) through 顶 (8): the end of the first sentence and the
+    // start of the second.
+    expect(ReaderScreen.sentenceAround(text, 5, 9), '他们回答我说。一顶帽子有什么可怕的？');
+  });
+
+  test('a selection ending on its own 。 stops there', () {
+    // 我说。 — the selection includes the full stop and nothing after it.
+    expect(ReaderScreen.sentenceAround(text, 4, 7), '他们回答我说。');
+  });
+
   test('text without enders returns the whole node, trimmed', () {
     expect(ReaderScreen.sentenceAround('  只有四个字  ', 4), '只有四个字');
   });

@@ -192,19 +192,42 @@ function clearSelection() {
   if (f && f.contentWindow) f.contentWindow.getSelection().removeAllRanges();
 }
 
-// Hold-and-drag across a line selects the run between the two carets,
-// the way a press-drag selects on the phone.
+// The block a selection is read in: its paragraph, or whatever holds both
+// ends when they sit in different ones.
+const BLOCKS = 'p, li, blockquote, h1, h2, h3, h4, h5, h6, td, div, body';
+
+// Hold-and-drag selects the run between the two carets, the way a press-drag
+// selects on the phone — across a styled word, a line or a paragraph, not
+// only within one text node. Dart gets the block's text and where the run
+// sits in it, so it reads the selection against its own sentence.
 function selectRange(x1, y1, x2, y2) {
   const a = caretAt(x1, y1), b = caretAt(x2, y2);
-  if (!a || !b || a.node !== b.node) {
+  if (!a || !b) {
     send({ type: 'log', msg: 'selectRange miss' });
     return 'miss';
   }
-  const t = a.node.textContent;
-  const s = Math.min(a.offset, b.offset);
-  const e = Math.min(t.length, Math.max(a.offset, b.offset) + 1);
-  if (e <= s) return 'empty';
-  send({ type: 'selected', text: t, start: s, end: e });
+  // Whichever way the finger went, the run starts at the earlier glyph.
+  const ordered = a.node === b.node
+    ? a.offset <= b.offset
+    : !!(a.node.compareDocumentPosition(b.node) & Node.DOCUMENT_POSITION_FOLLOWING);
+  const s = ordered ? a : b, e = ordered ? b : a;
+  const d = s.node.ownerDocument;
+  const run = d.createRange();
+  run.setStart(s.node, s.offset);
+  run.setEnd(e.node, Math.min(e.node.textContent.length, e.offset + 1));
+  const picked = run.toString();
+  if (!picked.trim()) return 'empty';
+
+  let block = run.commonAncestorContainer;
+  if (block.nodeType !== Node.ELEMENT_NODE) block = block.parentElement;
+  block = (block && block.closest(BLOCKS)) || d.body;
+  // Everything in the block before the run, measured the same way the run
+  // is, so the offsets index the text sent with them.
+  const lead = d.createRange();
+  lead.setStart(block, 0);
+  lead.setEnd(s.node, s.offset);
+  const start = lead.toString().length;
+  send({ type: 'selected', text: block.textContent, start, end: start + picked.length });
   return 'sel';
 }
 

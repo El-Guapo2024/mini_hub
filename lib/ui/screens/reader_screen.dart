@@ -8,10 +8,12 @@ import 'package:webview_flutter/webview_flutter.dart';
 
 import '../../chinese/anki_sync.dart';
 import '../../chinese/card.dart';
+import '../../chinese/claude.dart';
 import '../../chinese/keep_card.dart';
 import '../../chinese/dictionary.dart';
 import '../../chinese/entry.dart';
 import '../../chinese/library.dart';
+import '../../chinese/phrase.dart';
 import '../../chinese/reading.dart';
 import '../../chinese/reading_cache.dart';
 import '../../chinese/speech.dart';
@@ -55,8 +57,11 @@ class ReaderScreen extends StatefulWidget {
 
   /// The doc's finding: the prepared unit is the sentence. Expand from the
   /// tap to the nearest sentence-ending punctuation on each side.
+  ///
+  /// A selection passes where it ends as [until]: a run that crosses a 。 is
+  /// read against every sentence it touches, not just the one it began in.
   @visibleForTesting
-  static String sentenceAround(String text, int offset) {
+  static String sentenceAround(String text, int offset, [int? until]) {
     const enders = '。！？；!?;\n';
     var start = 0;
     for (var i = offset - 1; i >= 0; i--) {
@@ -66,7 +71,12 @@ class ReaderScreen extends StatefulWidget {
       }
     }
     var end = text.length;
-    for (var i = offset; i < text.length; i++) {
+    // The last character of the run, so a selection ending on its own 。
+    // stops there rather than taking the next sentence too.
+    final from = until == null
+        ? offset
+        : (until - 1).clamp(offset, text.length);
+    for (var i = from; i < text.length; i++) {
       if (enders.contains(text[i])) {
         end = i + 1;
         break;
@@ -410,17 +420,32 @@ class _ReaderScreenState extends State<ReaderScreen> {
     ).showSnackBar(SnackBar(content: Text(warning)));
   }
 
-  /// A drag-selection: look the exact run up, or segment it word by word.
+  /// A drag-selection: the dictionary for its words, and — with a Claude key
+  /// saved — what the run means in this sentence, which is the answer a
+  /// selection over several words is really after.
   Future<void> _onSelected(String text, int start, int end) async {
     final dictionary = await _dictionaryLoad!;
-    final sel = text.substring(start, end);
+    final sel = text.substring(start, end).trim();
     final r = dictionary.lookupSelection(sel);
     if (!mounted) return;
     final entries =
         r?.entries ??
         [DictEntry(traditional: sel, simplified: sel, pinyin: '', glosses: [])];
     final entry = entries.first;
-    final sentence = ReaderScreen.sentenceAround(text, start);
+    final sentence = ReaderScreen.sentenceAround(text, start, end);
+    // Asked for now, while the sheet is still sliding up. Without a key
+    // nothing is asked and the sheet is the dictionary alone.
+    final inContext = !await _hasClaudeKey()
+        ? null
+        : (_phrasesLoad ??= _openPhrases()).then(
+            (phrases) => phrases.prepare(
+              sel,
+              sentence: sentence,
+              passage: PhraseService.passageAround(text, start, end),
+            ),
+          );
+    PhraseReading? here;
+    inContext?.then((r) => here = r).ignore();
     final (deck, loadDecks) = await _deckChoice();
     if (!mounted) return;
     await showWordPopup(
@@ -429,23 +454,50 @@ class _ReaderScreenState extends State<ReaderScreen> {
       pinyin: r?.pinyin ?? '',
       entries: entries,
       sentence: sentence,
+      inContext: inContext,
       onSpeakWord: () => _speech.speak(sel),
       onSpeakSentence: () => _speech.speak(sentence),
       onExplain: () => _explain(sentence),
       deck: deck,
       loadDecks: loadDecks,
-      onAddCard: (deck) => _keep(
-        Card(
-          word: sel,
-          pinyin: r?.pinyin ?? entry.pinyin,
-          gloss: entries.map((e) => e.glosses.join('; ')).join(' | '),
-          sentence: sentence,
-        ),
-        deck: deck,
-      ),
+      // The card carries what the run meant here once that has arrived;
+      // until then, and without a key, the dictionary's senses.
+      onAddCard: (deck) {
+        final read = here;
+        return _keep(
+          Card(
+            word: sel,
+            pinyin: read != null && read.pinyin.isNotEmpty
+                ? read.pinyin
+                : r?.pinyin ?? entry.pinyin,
+            gloss:
+                read?.translation ??
+                entries.map((e) => e.glosses.join('; ')).join(' | '),
+            sentence: sentence,
+          ),
+          deck: deck,
+        );
+      },
     );
     unawaited(_web.runJavaScript('clearSelection()'));
   }
+
+  /// Whether a Claude key is saved. An unreadable store is no key: the
+  /// selection still gets its dictionary answer.
+  static Future<bool> _hasClaudeKey() async {
+    try {
+      return await ApiKeyStore.read() != null;
+    } catch (_) {
+      return false;
+    }
+  }
+
+  /// Selections read in context. Opened once, with its cache, like
+  /// [_readingsLoad].
+  Future<PhraseService>? _phrasesLoad;
+
+  Future<PhraseService> _openPhrases() async =>
+      PhraseService(cache: await PhraseCache.open());
 
   /// Co-reading: speak exactly what the open page shows, sentence by
   /// sentence. Pressed while reading, it pauses; pressed again on the same

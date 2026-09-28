@@ -52,6 +52,9 @@ jobs:
         if: steps.key.outputs.built == 'false'
         run: |
           set -euo pipefail
+          # The runner's package lists can be older than the mirror, and an
+          # install from stale lists fails on a version that has moved.
+          sudo apt-get update -q
           sudo apt-get install -y -q protobuf-compiler
           # The NDK Flutter builds with; the build script names the same one.
           yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses >/dev/null || true

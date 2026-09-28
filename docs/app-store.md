@@ -67,48 +67,22 @@ That is the same position as any ebook reader.
 
 ## Privacy policy
 
-**Published:**
-https://gist.github.com/El-Guapo2024/4cc6c5daef50907725e8fe430ab94987
+**Published:** https://github.com/El-Guapo2024/mini_hub/blob/main/docs/privacy-policy.md
 
-A public Gist, because this repository is private and Apple only requires
-that the link resolve for anyone. The file it was made from is kept at
-`~/Documents/TheMiniHub App Store/privacy-policy.md`; edit that and
-`gh gist edit` to change it, so the two do not drift.
+The policy is `docs/privacy-policy.md` in this repository, and the one
+document covers both apps. Edit it there, in a commit like any other change;
+the link above always shows `main`, so a merged edit is published.
 
-The text, as published:
-
-> **TheMiniHub — Privacy Policy**
->
-> TheMiniHub does not collect, store or transmit any personal information to
-> its developer. There is no account, no analytics and no server operated by
-> this app.
->
-> Everything the app records — the books you open, where you are in them, the
-> flashcards you save and your practice history — is stored only on your own
-> device.
->
-> The app can connect to three outside services, each of which you must set up
-> yourself with your own credentials, and none of which is used unless you do:
->
-> - **Anthropic (Claude)** — if you add a Claude API key, the passage on screen
->   and the question you ask are sent to Anthropic to answer it.
-> - **Microsoft Azure Speech** — if you add an Azure key, the companion's answer
->   text is sent to Microsoft to be spoken aloud.
-> - **AnkiWeb** — if you connect an Anki account, the flashcards you save are
->   synced to AnkiWeb.
->
-> Your use of those services is governed by their own privacy policies. Your
-> API keys and your AnkiWeb sync key are held in the iOS Keychain on your
-> device and are never sent anywhere except to the service they belong to.
-> Your AnkiWeb password is never stored.
->
-> Speech recognition runs entirely on your device. Audio is never uploaded.
->
-> Removing a connector on the Connectors screen deletes its credentials from
-> your device. Deleting the app removes everything else.
->
-> Questions: antoniotwin_luera@hotmail.com
-
+It used to be a public Gist
+(https://gist.github.com/El-Guapo2024/4cc6c5daef50907725e8fe430ab94987),
+because the repository was private and Apple only requires that the link
+resolve for anyone. The repository went public with the AGPL decision, and a
+Gist beside it was a second copy to keep in step by hand. It has already
+drifted once: the Gist still says keys live only in the iOS Keychain.
+`tools/ci/app_store_metadata.py` now sends the repository link, which App
+Store Connect gets the next time the **App Store metadata** workflow runs in
+`apply` mode. Until then, the Gist is what Apple shows, and it stays accurate
+for the iOS app.
 
 ## Description
 
@@ -145,7 +119,8 @@ flashcards,learn chinese,study`
   simulator may be booted while it runs.
 - ~~A contact address~~ **done**: `antoniotwin_luera@hotmail.com`, the
   address the Apple Developer account holder already reads.
-- ~~A public home for the privacy policy~~ **done** — the Gist above.
+- ~~A public home for the privacy policy~~ **done** — `docs/privacy-policy.md`,
+  above.
 - ~~The licence question~~ **settled** (2026-09-21): the app is **AGPL-3**
   and the repository is public. Anki's core is statically linked, so the
   combined binary is AGPL either way; keeping AnkiWeb sync meant publishing

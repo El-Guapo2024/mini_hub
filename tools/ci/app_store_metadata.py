@@ -61,8 +61,10 @@ KEYWORDS = (
     "cedict,anki,flashcards,learn chinese,study"
 )
 
+# docs/privacy-policy.md, one policy for both apps. The link shows main, so a
+# merged edit is published with no second copy to update.
 PRIVACY_POLICY_URL = (
-    "https://gist.github.com/El-Guapo2024/4cc6c5daef50907725e8fe430ab94987"
+    "https://github.com/El-Guapo2024/mini_hub/blob/main/docs/privacy-policy.md"
 )
 
 DESCRIPTION = """\

@@ -117,8 +117,10 @@ class _ReaderScreenState extends State<ReaderScreen> {
   /// height instead of a guess after the keyboard has been up once.
   double _kbSeen = 0;
 
-  /// Real touches never make it into the WKWebView on iOS, so gestures are
-  /// recognized here from raw pointer events and replayed over the bridge.
+  /// Gestures are recognized here from raw pointer events and replayed over
+  /// the bridge, on every platform. Real touches never make it into the
+  /// WKWebView on iOS; on Android they would, so the WebView is kept from
+  /// hearing them (see build) and this stays the one reader of the finger.
   /// A quick horizontal flick turns the page; a slower hold-and-drag
   /// selects the characters between the two points; anything else is a tap.
   Offset? _down;
@@ -501,7 +503,7 @@ class _ReaderScreenState extends State<ReaderScreen> {
     _web.runJavaScript('goNext()');
   }
 
-  /// iOS returns the JS string JSON-quoted, hence the decode.
+  /// Both WebViews return the JS string JSON-quoted, hence the decode.
   Future<String> _visibleText() async {
     final raw = await _web.runJavaScriptReturningResult('visibleText()');
     var text = raw.toString();
@@ -594,9 +596,8 @@ class _ReaderScreenState extends State<ReaderScreen> {
         ),
       ),
       // Pages turn by tapping the screen edges or swiping — no button bar.
-      // The eager recognizer hands every gesture straight to the WKWebView;
-      // without it, taps died in Flutter's gesture arena and no touch ever
-      // reached the page (the JS side proved it: zero touchstarts).
+      // Flutter reads those gestures itself (see the Listener below) and
+      // replays them into the page; the WebView takes no touches of its own.
       //
       // Flutter must not resize this for the keyboard: epub.js lays the whole
       // chapter out again on any height change, and following the keyboard's
@@ -627,13 +628,25 @@ class _ReaderScreenState extends State<ReaderScreen> {
                   children: [
                     Expanded(
                       child: Listener(
+                        // Opaque, because the page beneath ignores pointers:
+                        // deferring to it, the listener would hear nothing.
+                        behavior: HitTestBehavior.opaque,
                         onPointerDown: (e) {
                           _down = e.localPosition;
                           _downAt = DateTime.now();
                         },
                         onPointerMove: _pointerMove,
                         onPointerUp: _pointerUp,
-                        child: WebViewWidget(controller: _web),
+                        // The WebView is display only; every gesture is read
+                        // above and replayed over the bridge. On iOS touches
+                        // never reached it anyway. Android's WebView does get
+                        // them, and the page's own handlers then answered each
+                        // one a second time: two word sheets per tap, two
+                        // pages per swipe, and the system's text selection on
+                        // top of ours.
+                        child: IgnorePointer(
+                          child: WebViewWidget(controller: _web),
+                        ),
                       ),
                     ),
                     // The page stops above the keyboard while the companion

@@ -1,0 +1,51 @@
+name: Google Play listing
+
+# Puts the Play Store listing where Google can see it: title, short and full
+# description, contact email and icon, from tools/ci/play_listing.py, whose
+# text is docs/play-store.md's. It releases nothing and submits nothing.
+#
+#     gh workflow run "Google Play listing" --ref main -f mode=inspect
+#     gh workflow run "Google Play listing" --ref main -f mode=apply
+#
+# Start with inspect: it prints what Play holds and what apply would change,
+# including the screenshots and feature graphic still to be added by hand.
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'inspect (read only) or apply (write)'
+        required: true
+        default: inspect
+        type: choice
+        options: [inspect, apply]
+
+jobs:
+  listing:
+    name: ${{ inputs.mode }}
+    # Linux: this is HTTP and nothing else.
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install the JWT library
+        run: pip install --quiet 'pyjwt[crypto]'
+
+      - name: ${{ inputs.mode == 'apply' && 'Write the listing' || 'Read the listing' }}
+        env:
+          SERVICE_ACCOUNT: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT }}
+          MODE: ${{ inputs.mode }}
+        run: |
+          set -euo pipefail
+          export PLAY_SERVICE_ACCOUNT="$RUNNER_TEMP/play-service-account.json"
+          printf '%s' "$SERVICE_ACCOUNT" > "$PLAY_SERVICE_ACCOUNT"
+          python3 tools/ci/play_listing.py
+
+      - name: Shred the key
+        if: always()
+        run: rm -f "$RUNNER_TEMP/play-service-account.json"

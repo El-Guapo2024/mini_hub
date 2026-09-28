@@ -8,10 +8,12 @@ import 'package:webview_flutter/webview_flutter.dart';
 
 import '../../chinese/anki_sync.dart';
 import '../../chinese/card.dart';
+import '../../chinese/claude.dart';
 import '../../chinese/keep_card.dart';
 import '../../chinese/dictionary.dart';
 import '../../chinese/entry.dart';
 import '../../chinese/library.dart';
+import '../../chinese/phrase.dart';
 import '../../chinese/reading.dart';
 import '../../chinese/reading_cache.dart';
 import '../../chinese/speech.dart';
@@ -46,17 +48,15 @@ class ReaderScreen extends StatefulWidget {
   /// A CJK ideograph, as opposed to the punctuation between them. The main
   /// block plus extension A covers everything a modern book uses.
   @visibleForTesting
-  static bool isHan(String char) {
-    if (char.isEmpty) return false;
-    final code = char.runes.first;
-    return (code >= 0x4E00 && code <= 0x9FFF) ||
-        (code >= 0x3400 && code <= 0x4DBF);
-  }
+  static bool isHan(String char) => Dictionary.isHan(char);
 
   /// The doc's finding: the prepared unit is the sentence. Expand from the
   /// tap to the nearest sentence-ending punctuation on each side.
+  ///
+  /// A selection passes where it ends as [until]: a run that crosses a 。 is
+  /// read against every sentence it touches, not just the one it began in.
   @visibleForTesting
-  static String sentenceAround(String text, int offset) {
+  static String sentenceAround(String text, int offset, [int? until]) {
     const enders = '。！？；!?;\n';
     var start = 0;
     for (var i = offset - 1; i >= 0; i--) {
@@ -66,7 +66,12 @@ class ReaderScreen extends StatefulWidget {
       }
     }
     var end = text.length;
-    for (var i = offset; i < text.length; i++) {
+    // The last character of the run, so a selection ending on its own 。
+    // stops there rather than taking the next sentence too.
+    final from = until == null
+        ? offset
+        : (until - 1).clamp(offset, text.length);
+    for (var i = from; i < text.length; i++) {
       if (enders.contains(text[i])) {
         end = i + 1;
         break;
@@ -117,8 +122,10 @@ class _ReaderScreenState extends State<ReaderScreen> {
   /// height instead of a guess after the keyboard has been up once.
   double _kbSeen = 0;
 
-  /// Real touches never make it into the WKWebView on iOS, so gestures are
-  /// recognized here from raw pointer events and replayed over the bridge.
+  /// Gestures are recognized here from raw pointer events and replayed over
+  /// the bridge, on every platform. Real touches never make it into the
+  /// WKWebView on iOS; on Android they would, so the WebView is kept from
+  /// hearing them (see build) and this stays the one reader of the finger.
   /// A quick horizontal flick turns the page; a slower hold-and-drag
   /// selects the characters between the two points; anything else is a tap.
   Offset? _down;
@@ -316,26 +323,25 @@ class _ReaderScreenState extends State<ReaderScreen> {
       );
     }
     final dictionary = await _dictionaryLoad!;
-    // A tap is exactly the character under the finger; drag to select more.
-    final char = text.substring(offset, offset + 1);
-    final matchEntries = dictionary.lookupSelection(char)?.entries;
-    final match = matchEntries == null
-        ? null
-        : (word: char, entries: matchEntries);
+    // The word the tap fell in, as its clause divides into words: not just
+    // the character under the finger, and not just the longest word that
+    // starts there. A drag still picks any run exactly.
+    final found = dictionary.wordAt(text, offset);
     assert(() {
       final at = offset < text.length ? text[offset] : '<end>';
       debugPrint(
         'tapped: offset=$offset at="$at" '
-        'match=${match?.word} words=${dictionary.wordCount}',
+        'word=${found?.word} words=${dictionary.wordCount}',
       );
       return true;
     }());
     if (!mounted) return;
-    if (match == null) {
+    if (found == null) {
       // Punctuation and spaces are meant to do nothing — a sheet for 。 is
       // noise. A character with no entry is different: the tap landed, the
       // dictionary simply has nothing, and silence there reads as a dead
       // app rather than a miss.
+      final char = text.substring(offset, offset + 1);
       if (ReaderScreen.isHan(char)) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
@@ -347,30 +353,51 @@ class _ReaderScreenState extends State<ReaderScreen> {
       return;
     }
 
-    final entry = match.entries.first;
+    // What else the character belongs to, longest first and once each, for
+    // when the division guessed wrong.
+    final also = <({int start, String word, List<DictEntry> entries})>[];
+    for (final w in dictionary.wordsCovering(text, offset)) {
+      if (w.word == found.word || also.any((a) => a.word == w.word)) continue;
+      also.add(w);
+      if (also.length == 4) break;
+    }
+    var chosen = found;
+    void mark() => _web
+        .runJavaScript(
+          'markRun(${chosen.start}, ${chosen.start + chosen.word.length})',
+        )
+        .ignore();
+    mark();
+
     final sentence = ReaderScreen.sentenceAround(text, offset);
     final (deck, loadDecks) = await _deckChoice();
     if (!mounted) return;
     await showWordPopup(
       context: context,
-      word: match.word,
-      entries: match.entries,
+      word: found.word,
+      entries: found.entries,
+      also: [for (final a in also) (word: a.word, entries: a.entries)],
+      onWordChanged: (word) {
+        chosen = also.firstWhere((a) => a.word == word, orElse: () => found);
+        mark();
+      },
       sentence: sentence,
-      onSpeakWord: () => _speech.speak(match.word),
+      onSpeakWord: () => _speech.speak(chosen.word),
       onSpeakSentence: () => _speech.speak(sentence),
       onExplain: () => _explain(sentence),
       deck: deck,
       loadDecks: loadDecks,
       onAddCard: (deck) => _keep(
         Card(
-          word: match.word,
-          pinyin: entry.pinyin,
-          gloss: entry.glosses.join('; '),
+          word: chosen.word,
+          pinyin: chosen.entries.first.pinyin,
+          gloss: chosen.entries.first.glosses.join('; '),
           sentence: sentence,
         ),
         deck: deck,
       ),
     );
+    unawaited(_web.runJavaScript('clearSelection()'));
   }
 
   /// The companion's card for [word], made exactly as tapping it would make
@@ -408,17 +435,32 @@ class _ReaderScreenState extends State<ReaderScreen> {
     ).showSnackBar(SnackBar(content: Text(warning)));
   }
 
-  /// A drag-selection: look the exact run up, or segment it word by word.
+  /// A drag-selection: the dictionary for its words, and — with a Claude key
+  /// saved — what the run means in this sentence, which is the answer a
+  /// selection over several words is really after.
   Future<void> _onSelected(String text, int start, int end) async {
     final dictionary = await _dictionaryLoad!;
-    final sel = text.substring(start, end);
+    final sel = text.substring(start, end).trim();
     final r = dictionary.lookupSelection(sel);
     if (!mounted) return;
     final entries =
         r?.entries ??
         [DictEntry(traditional: sel, simplified: sel, pinyin: '', glosses: [])];
     final entry = entries.first;
-    final sentence = ReaderScreen.sentenceAround(text, start);
+    final sentence = ReaderScreen.sentenceAround(text, start, end);
+    // Asked for now, while the sheet is still sliding up. Without a key
+    // nothing is asked and the sheet is the dictionary alone.
+    final inContext = !await _hasClaudeKey()
+        ? null
+        : (_phrasesLoad ??= _openPhrases()).then(
+            (phrases) => phrases.prepare(
+              sel,
+              sentence: sentence,
+              passage: PhraseService.passageAround(text, start, end),
+            ),
+          );
+    PhraseReading? here;
+    inContext?.then((r) => here = r).ignore();
     final (deck, loadDecks) = await _deckChoice();
     if (!mounted) return;
     await showWordPopup(
@@ -427,23 +469,50 @@ class _ReaderScreenState extends State<ReaderScreen> {
       pinyin: r?.pinyin ?? '',
       entries: entries,
       sentence: sentence,
+      inContext: inContext,
       onSpeakWord: () => _speech.speak(sel),
       onSpeakSentence: () => _speech.speak(sentence),
       onExplain: () => _explain(sentence),
       deck: deck,
       loadDecks: loadDecks,
-      onAddCard: (deck) => _keep(
-        Card(
-          word: sel,
-          pinyin: r?.pinyin ?? entry.pinyin,
-          gloss: entries.map((e) => e.glosses.join('; ')).join(' | '),
-          sentence: sentence,
-        ),
-        deck: deck,
-      ),
+      // The card carries what the run meant here once that has arrived;
+      // until then, and without a key, the dictionary's senses.
+      onAddCard: (deck) {
+        final read = here;
+        return _keep(
+          Card(
+            word: sel,
+            pinyin: read != null && read.pinyin.isNotEmpty
+                ? read.pinyin
+                : r?.pinyin ?? entry.pinyin,
+            gloss:
+                read?.translation ??
+                entries.map((e) => e.glosses.join('; ')).join(' | '),
+            sentence: sentence,
+          ),
+          deck: deck,
+        );
+      },
     );
     unawaited(_web.runJavaScript('clearSelection()'));
   }
+
+  /// Whether a Claude key is saved. An unreadable store is no key: the
+  /// selection still gets its dictionary answer.
+  static Future<bool> _hasClaudeKey() async {
+    try {
+      return await ApiKeyStore.read() != null;
+    } catch (_) {
+      return false;
+    }
+  }
+
+  /// Selections read in context. Opened once, with its cache, like
+  /// [_readingsLoad].
+  Future<PhraseService>? _phrasesLoad;
+
+  Future<PhraseService> _openPhrases() async =>
+      PhraseService(cache: await PhraseCache.open());
 
   /// Co-reading: speak exactly what the open page shows, sentence by
   /// sentence. Pressed while reading, it pauses; pressed again on the same
@@ -501,7 +570,7 @@ class _ReaderScreenState extends State<ReaderScreen> {
     _web.runJavaScript('goNext()');
   }
 
-  /// iOS returns the JS string JSON-quoted, hence the decode.
+  /// Both WebViews return the JS string JSON-quoted, hence the decode.
   Future<String> _visibleText() async {
     final raw = await _web.runJavaScriptReturningResult('visibleText()');
     var text = raw.toString();
@@ -594,9 +663,8 @@ class _ReaderScreenState extends State<ReaderScreen> {
         ),
       ),
       // Pages turn by tapping the screen edges or swiping — no button bar.
-      // The eager recognizer hands every gesture straight to the WKWebView;
-      // without it, taps died in Flutter's gesture arena and no touch ever
-      // reached the page (the JS side proved it: zero touchstarts).
+      // Flutter reads those gestures itself (see the Listener below) and
+      // replays them into the page; the WebView takes no touches of its own.
       //
       // Flutter must not resize this for the keyboard: epub.js lays the whole
       // chapter out again on any height change, and following the keyboard's
@@ -627,13 +695,25 @@ class _ReaderScreenState extends State<ReaderScreen> {
                   children: [
                     Expanded(
                       child: Listener(
+                        // Opaque, because the page beneath ignores pointers:
+                        // deferring to it, the listener would hear nothing.
+                        behavior: HitTestBehavior.opaque,
                         onPointerDown: (e) {
                           _down = e.localPosition;
                           _downAt = DateTime.now();
                         },
                         onPointerMove: _pointerMove,
                         onPointerUp: _pointerUp,
-                        child: WebViewWidget(controller: _web),
+                        // The WebView is display only; every gesture is read
+                        // above and replayed over the bridge. On iOS touches
+                        // never reached it anyway. Android's WebView does get
+                        // them, and the page's own handlers then answered each
+                        // one a second time: two word sheets per tap, two
+                        // pages per swipe, and the system's text selection on
+                        // top of ours.
+                        child: IgnorePointer(
+                          child: WebViewWidget(controller: _web),
+                        ),
                       ),
                     ),
                     // The page stops above the keyboard while the companion

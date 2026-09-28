@@ -36,8 +36,58 @@ function appendChunk(b64) { chunks.push(b64); }
 function handleTap(doc, x, y) {
   const r = doc.caretRangeFromPoint(x, y);
   if (!r || r.startContainer.nodeType !== Node.TEXT_NODE) return false;
-  send({ type: 'tapped', text: r.startContainer.textContent, offset: r.startOffset });
+  sendTap(r.startContainer, r.startOffset);
   return true;
+}
+
+// The block a tap or a selection is read in: its paragraph, or whatever
+// holds both ends when a selection spans several.
+const BLOCKS = 'p, li, blockquote, h1, h2, h3, h4, h5, h6, td, div, body';
+
+function blockOf(node) {
+  const el = node.nodeType === Node.ELEMENT_NODE ? node : node.parentElement;
+  return (el && el.closest(BLOCKS)) || node.ownerDocument.body;
+}
+
+// How far into [block] a position is, counted the way textContent counts,
+// so the offsets Dart gets index the text it gets.
+function offsetIn(block, node, offset) {
+  const r = block.ownerDocument.createRange();
+  r.setStart(block, 0);
+  r.setEnd(node, offset);
+  return r.toString().length;
+}
+
+// The reverse: the text node and offset [offset] characters into [block].
+function pointIn(block, offset) {
+  const walker = block.ownerDocument.createTreeWalker(block, NodeFilter.SHOW_TEXT);
+  let seen = 0, node;
+  while ((node = walker.nextNode())) {
+    const length = node.textContent.length;
+    if (offset <= seen + length) return { node, offset: offset - seen };
+    seen += length;
+  }
+  return null;
+}
+
+// A tap sends its whole block, not just the text node it landed in, so a
+// word or a sentence runs on through <em> and <span> the way the eye reads
+// it. The block is kept for markRun.
+let tappedBlock = null;
+function sendTap(node, offset) {
+  tappedBlock = blockOf(node);
+  send({ type: 'tapped', text: tappedBlock.textContent, offset: offsetIn(tappedBlock, node, offset) });
+}
+
+// Paints the word Dart settled on, [start, end) in the tapped block, the way
+// a pop-up dictionary marks the word under the pointer. clearSelection ends it.
+function markRun(start, end) {
+  if (!tappedBlock) return 'none';
+  const a = pointIn(tappedBlock, start), b = pointIn(tappedBlock, end);
+  if (!a || !b) return 'miss';
+  tappedBlock.ownerDocument.defaultView.getSelection()
+    .setBaseAndExtent(a.node, a.offset, b.node, b.offset);
+  return 'marked';
 }
 
 // Test hook: a tap at a fractional position of the visible page. Returns a
@@ -166,7 +216,7 @@ function tapAt(x, y) {
   // sits inside the edge zone, and readers tap it for the dictionary.
   const c = caretAt(x, y);
   if (c) {
-    send({ type: 'tapped', text: c.node.textContent, offset: c.offset });
+    sendTap(c.node, c.offset);
     return 'hit';
   }
   const w = window.innerWidth || 1;
@@ -192,19 +242,31 @@ function clearSelection() {
   if (f && f.contentWindow) f.contentWindow.getSelection().removeAllRanges();
 }
 
-// Hold-and-drag across a line selects the run between the two carets,
-// the way a press-drag selects on the phone.
+// Hold-and-drag selects the run between the two carets, the way a press-drag
+// selects on the phone — across a styled word, a line or a paragraph, not
+// only within one text node. Dart gets the block's text and where the run
+// sits in it, so it reads the selection against its own sentence.
 function selectRange(x1, y1, x2, y2) {
   const a = caretAt(x1, y1), b = caretAt(x2, y2);
-  if (!a || !b || a.node !== b.node) {
+  if (!a || !b) {
     send({ type: 'log', msg: 'selectRange miss' });
     return 'miss';
   }
-  const t = a.node.textContent;
-  const s = Math.min(a.offset, b.offset);
-  const e = Math.min(t.length, Math.max(a.offset, b.offset) + 1);
-  if (e <= s) return 'empty';
-  send({ type: 'selected', text: t, start: s, end: e });
+  // Whichever way the finger went, the run starts at the earlier glyph.
+  const ordered = a.node === b.node
+    ? a.offset <= b.offset
+    : !!(a.node.compareDocumentPosition(b.node) & Node.DOCUMENT_POSITION_FOLLOWING);
+  const s = ordered ? a : b, e = ordered ? b : a;
+  const d = s.node.ownerDocument;
+  const run = d.createRange();
+  run.setStart(s.node, s.offset);
+  run.setEnd(e.node, Math.min(e.node.textContent.length, e.offset + 1));
+  const picked = run.toString();
+  if (!picked.trim()) return 'empty';
+
+  const block = blockOf(run.commonAncestorContainer);
+  const start = offsetIn(block, s.node, s.offset);
+  send({ type: 'selected', text: block.textContent, start, end: start + picked.length });
   return 'sel';
 }
 

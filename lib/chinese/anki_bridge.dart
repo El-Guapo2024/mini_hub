@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:ffi';
+import 'dart:io';
 import 'dart:isolate';
 
 import 'package:ffi/ffi.dart';
@@ -28,8 +29,13 @@ class AnkiBridge {
   }
 
   static Map<String, dynamic> _callBlocking(String method, String args) {
-    // Statically linked into the app binary, so its symbols are in-process.
-    final lib = DynamicLibrary.process();
+    // On iOS it is statically linked into the app binary, so its symbols are
+    // already in-process. Android has no such thing for Dart to reach: there
+    // it ships as a shared library in the APK (tool/build_anki_bridge_android.sh)
+    // and is opened by name.
+    final lib = Platform.isAndroid
+        ? DynamicLibrary.open('libmini_hub_bridge.so')
+        : DynamicLibrary.process();
     final call = lib
         .lookupFunction<
           Pointer<Utf8> Function(Pointer<Utf8>, Pointer<Utf8>),

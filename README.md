@@ -100,13 +100,20 @@ first: a content directory missing from `pubspec.yaml` ships no files at all, a
 question that fails to parse breaks the practice tab, and a course absent from
 the index is invisible however finished it is.
 
+## Shipping
+
+`docs/shipping.md` covers how the iOS build reaches TestFlight and the Android
+build reaches Google Play; `docs/app-store.md` and `docs/play-store.md` hold
+each store's listing and the answers its review asks for.
+
 ## Licence
 
 **AGPL-3.0-or-later** — see `LICENSE`.
 
-The whole app is under AGPL because Anki's `rslib` is statically linked into
-the iOS binary to provide AnkiWeb sync, and AGPL has no linking exception: the
-combined work it produces is covered, so the source is published. Anyone who
+The whole app is under AGPL because Anki's `rslib` provides AnkiWeb sync:
+statically linked into the iOS binary, and shipped inside the Android app as a
+shared library the app loads. AGPL has no linking exception: the combined work
+it produces is covered, so the source is published. Anyone who
 receives a build is entitled to this source, which is why the repository is
 public.
 

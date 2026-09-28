@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Backup on Android 11 and earlier, which cannot tell a cloud backup from a
+     transfer between phones. The same rules as data_extraction_rules.xml's
+     cloud backup, for the same reasons; keep the two in step. -->
+<full-backup-content>
+    <exclude domain="sharedpref" path="." />
+    <exclude domain="file" path="asr" />
+    <exclude domain="file" path="anki" />
+    <exclude domain="root" path="app_flutter/chinese_books" />
+</full-backup-content>

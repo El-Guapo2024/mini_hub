@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Backup and phone-to-phone transfer, Android 12 and later. Android 11 and
+     earlier read backup_rules.xml instead; keep the two in step.
+
+     Kept: reading positions, prepared sentences and phrases, the practice log.
+     Left out, everywhere:
+       sharedpref  saved keys (flutter_secure_storage). Sealed by this phone's
+                   Keystore, so on another phone they fail to decrypt — and the
+                   plugin fails with them rather than starting empty.
+       file/asr    the speech model, copied out of the app on first use.
+       file/anki   the phone's copy of the AnkiWeb collection, downloaded again
+                   at the next sync. Useless without the sync key anyway.
+     Left out of the cloud only:
+       root/app_flutter/chinese_books   the books. Cloud backup stops altogether
+                   past 25 MB, and one EPUB with images gets there; a transfer
+                   between phones has no such cap, so there they go along. -->
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="sharedpref" path="." />
+        <exclude domain="file" path="asr" />
+        <exclude domain="file" path="anki" />
+        <exclude domain="root" path="app_flutter/chinese_books" />
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="sharedpref" path="." />
+        <exclude domain="file" path="asr" />
+        <exclude domain="file" path="anki" />
+    </device-transfer>
+</data-extraction-rules>

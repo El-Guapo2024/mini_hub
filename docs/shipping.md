@@ -1,14 +1,20 @@
 # Shipping
 
-Every merge to `main` signs an iOS build and uploads it to App Store Connect,
-where it appears in TestFlight. That build is the artifact that goes to the App
-Store — there is no separate release build to make later.
+`testflight.yml` signs an iOS build and uploads it to App Store Connect, where
+it appears in TestFlight; `google_play.yml` does the same for Android and a
+Google Play track. Each build is the artifact that goes to its store — there is
+no separate release build to make later. Every workflow is started by hand:
+shipping is a decision, and a macOS runner bills at ten times the Linux rate.
 
 | Workflow | Runs on | Does |
 | --- | --- | --- |
-| `pr.yml` | pull requests, and pushes to `main` | format, analyze, both test suites |
-| `build.yml` | pushes to `main`, or by hand | APK and unsigned iOS archive, attached to the run |
-| `testflight.yml` | pushes to `main`, or by hand | signs, uploads to TestFlight |
+| `pr.yml` | by hand | format, analyze, both test suites |
+| `build.yml` | by hand | APK and unsigned iOS archive, attached to the run |
+| `testflight.yml` | by hand | signs, uploads to TestFlight |
+| `google_play.yml` | by hand | signed app bundle, uploaded to a Google Play track |
+| `play_listing.yml` | by hand | the Play Store listing text and icon |
+
+Android has its own section at the end: [Google Play](#google-play).
 
 The gate runs a second time inside `testflight.yml`. That is deliberate: a
 direct push to `main` never opens a pull request, and this is the job that puts
@@ -211,3 +217,126 @@ for every upload rather than once each time.
 `testflight.yml` has `workflow_dispatch`, so a build can be re-cut without an
 empty commit — for an expired certificate, or an App Store Connect outage that
 ate an upload.
+
+## Google Play
+
+The Android build ships the same way, minus the Mac: `google_play.yml` runs
+the gate, builds an app bundle signed with the upload key, checks it, and
+uploads it to a Play track in one edit. Linux runs all of it, at a tenth of the
+macOS rate. `docs/play-store.md` has the listing, and the answers Play
+Console asks for.
+
+| | |
+| --- | --- |
+| Application id | `com.juanluera.minihub`, the same as the iOS bundle id |
+| Play name | TheMiniHub |
+| Default track | `internal`: up to 100 testers by email, no review, installable in minutes |
+| Upload key | alias `upload`, made once with `keytool` (below) |
+| App signing key | Google's (Play App Signing); never leaves Google |
+
+### What differs from iOS in the build
+
+- **Anki's core is a shared library, not a static one.**
+  `tool/build_anki_bridge_android.sh` cross-compiles the same bridge crate
+  with the NDK for arm64-v8a, armeabi-v7a and x86_64, into
+  `android/app/src/main/jniLibs/`, and `AnkiBridge` opens
+  `libmini_hub_bridge.so` by name. `anki_bridge_android.yml` publishes it as a
+  release (`anki-bridge-android-<key>`) exactly as `anki_bridge.yml` does for
+  iOS, and on Linux. The key hashes only the Android build script, so neither
+  platform's change rebuilds the other.
+- **Every native library must be aligned for 16 KB pages.** Play refuses
+  apps for Android 15 and later otherwise, and says so only after the upload.
+  The bridge is linked for it explicitly, and `tool/check_page_size.sh`
+  checks every `.so` in the bundle before it is sent.
+- **The page takes no touches of its own.** Android's WebView, unlike
+  WKWebView, does receive them, and answered each one a second time beside
+  Flutter's replay. `ReaderScreen` wraps it in `IgnorePointer`.
+- **Backups leave out the saved keys.** They are sealed by the phone's
+  Keystore and would not decrypt on another phone; `res/xml/` says what else
+  is left out and why.
+
+### Once, before the first run
+
+1. **Make the upload key.** Keep it with the Apple credentials, outside every
+   repository:
+
+   ```sh
+   mkdir -p ~/ws/secrets/android && cd ~/ws/secrets/android
+   keytool -genkeypair -v -keystore upload-keystore.jks -storetype PKCS12 \
+     -keyalg RSA -keysize 2048 -validity 10000 -alias upload
+   ```
+
+   PKCS12 has one password for the store and the key, which is why there is
+   one password secret. Write it in a `README.txt` beside the keystore.
+   Unlike Apple's `.p8`, a lost upload key is recoverable: Play support can
+   register a new one, because Google holds the key that signs the app.
+
+2. **Create the app in Play Console:** All apps → Create app → TheMiniHub,
+   App, Free. The API cannot create apps.
+
+3. **Make a service account for CI.** In Google Cloud, in any project: enable
+   the *Google Play Android Developer API*, create a service account, and
+   download a JSON key for it. In Play Console → Users and permissions,
+   invite the service account's email. For this app, grant *Release apps to
+   testing tracks*, *Manage store presence* for the listing, and *Release to
+   production* only when that day comes.
+
+4. **Set the secrets** (Settings → Secrets and variables → Actions):
+
+   | Secret | What it is |
+   | --- | --- |
+   | `ANDROID_UPLOAD_KEYSTORE` | `upload-keystore.jks`, base64 (`base64 -i upload-keystore.jks` on a Mac) |
+   | `ANDROID_UPLOAD_KEYSTORE_PASSWORD` | its password |
+   | `GOOGLE_PLAY_SERVICE_ACCOUNT` | the service account's JSON key, pasted as it is |
+
+   `AZURE_KEY` and `AZURE_REGION` are shared with the TestFlight build.
+
+### The first upload
+
+Play will not accept a bundle over the API for an app it has never seen a
+bundle for, and will only take draft releases until the first one is rolled
+out. So the first one goes up by hand, and it has to be one of this workflow's
+bundles, so that the version codes that follow keep going up:
+
+1. Run **Google Play** with `upload` unticked. It builds, signs and checks the
+   bundle, and attaches it to the run as `mini-hub-aab-<n>`.
+2. In Play Console → Testing → Internal testing, create a release, upload that
+   `.aab`, accept Play App Signing when asked, add yourself as a tester, and
+   roll it out.
+3. From then on, `gh workflow run "Google Play" --ref main` does the lot.
+
+If a run fails with *"Only releases with status draft may be created on draft
+app"*, the first release has not been rolled out yet. Either roll it out, or
+run with `status: draft` and roll that one out from the Console.
+
+### Before production
+
+Play requires more than the App Store before a first public release:
+
+- **A personal developer account has to run a closed test first:** at least
+  12 testers opted in for 14 days in a row, before Play Console will even
+  offer production. Organisation accounts are exempt. That is two weeks that
+  cannot be compressed, so start the closed track (`track: alpha`) early.
+- Everything in `docs/play-store.md` → *Still outstanding*.
+
+### Size
+
+Measured on a release bundle (`bundletool get-size total`): a phone downloads
+**~161 MB** (arm64-v8a; 159 to 163 MB across the three ABIs), because Play
+serves each phone only its own ABI's libraries from the 270 MB bundle. Most
+of it is the speech model, at ~165 MB on disk and ~130 MB compressed. The
+rest is the dictionary, Flutter, sherpa-onnx and one copy of Anki's core
+(~7 MB compressed).
+
+Play allows 500 MB compressed for the base module. Above 200 MB, a user on
+mobile data is warned about the size before installing, which is the number
+to stay under. A larger speech model would cross it, so check Play Console's
+app bundle explorer before swapping the model.
+
+### Dates that will break this
+
+| When | What | What to do |
+| --- | --- | --- |
+| every August | Play raises the minimum target API level for updates | `targetSdk` follows Flutter's `flutter.targetSdkVersion`; stay on a current Flutter |
+| when Flutter says | Flutter warns it will soon drop the Gradle 8.14 / AGP 8.11 / Kotlin 2.2 this project pins | bump `android/settings.gradle.kts` and the Gradle wrapper before the warning becomes an error |
+| ~2053 | the upload key's 10,000 days | not this project's problem |

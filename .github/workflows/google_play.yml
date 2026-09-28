@@ -1,0 +1,204 @@
+name: Google Play
+
+# A signed app bundle, uploaded to Google Play and released on a track --
+# internal testing by default, where it reaches the testers listed in Play
+# Console within minutes and no review stands in the way.
+#
+# Started by hand, like everything here: shipping is a decision.
+#
+#     gh workflow run "Google Play" --ref main
+#     gh workflow run "Google Play" --ref main -f track=beta
+#     gh workflow run "Google Play" --ref main -f upload=false   # the first one
+#
+# Linux, not a Mac: an Android build needs no Xcode, and a Linux runner bills
+# at a tenth of the macOS rate. docs/shipping.md has the secrets and the
+# once-only steps in Play Console that come before the first run.
+on:
+  workflow_dispatch:
+    inputs:
+      track:
+        description: 'Play track to release on'
+        required: true
+        default: internal
+        type: choice
+        options: [internal, alpha, beta, production]
+      status:
+        description: 'completed releases it; draft leaves it for Play Console (the only kind Play takes before the first release is out)'
+        required: true
+        default: completed
+        type: choice
+        options: [completed, draft]
+      upload:
+        description: 'Upload to Play. Off only builds the signed bundle -- the very first one has to go up by hand.'
+        required: true
+        default: true
+        type: boolean
+
+concurrency:
+  # Uploads must not race: two in flight can claim neighbouring version codes
+  # out of order, and Play refuses the lower one once the higher has landed.
+  group: google-play
+  cancel-in-progress: false
+
+jobs:
+  bridge:
+    # Anki's core for Android: reused when already published, built otherwise.
+    uses: ./.github/workflows/anki_bridge_android.yml
+    permissions:
+      contents: write
+
+  ship:
+    name: build and upload
+    needs: bridge
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Cache the speech model
+        uses: actions/cache@v4
+        with:
+          path: assets/chinese/asr
+          key: asr-${{ hashFiles('tool/fetch_asr_model.sh') }}
+
+      - name: Fetch the speech model
+        # ~170MB and gitignored; the mic's recognizer ships inside the app.
+        run: tool/fetch_asr_model.sh
+
+      - name: Fetch Anki's core
+        # Published by the bridge job this one needs; downloaded, not
+        # compiled, so an upload doesn't pay for a Rust build.
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: tool/fetch_anki_bridge_android.sh
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      # The gate again, as TestFlight runs it: nothing else checks what this
+      # job puts on someone's phone.
+      - name: Analyze
+        run: flutter analyze --fatal-infos --fatal-warnings
+
+      - name: Test
+        run: flutter test
+
+      - name: Set the version
+        # The version code is this workflow's run number: Play refuses one it
+        # has seen, and pubspec ships +1 forever. The marketing version in
+        # pubspec is left alone -- that is a human decision.
+        run: |
+          set -euo pipefail
+          version=$(grep -m1 '^version:' pubspec.yaml | sed 's/version: //; s/+.*//')
+          echo "shipping $version (${{ github.run_number }})"
+          echo "FLUTTER_VERSION=$version" >> "$GITHUB_ENV"
+
+      - name: Place the upload key
+        # The key Play knows uploads from this app by. Google holds the key
+        # that signs what phones install (Play App Signing); this one only
+        # proves an upload came from us, and can be reset through Play
+        # support if it is ever lost. android/app/build.gradle.kts reads
+        # key.properties; without it the build would be debug-signed and
+        # Play would refuse it, so its absence fails here instead.
+        env:
+          KEYSTORE: ${{ secrets.ANDROID_UPLOAD_KEYSTORE }}
+          PASSWORD: ${{ secrets.ANDROID_UPLOAD_KEYSTORE_PASSWORD }}
+        run: |
+          set -euo pipefail
+          if [[ -z "$KEYSTORE" || -z "$PASSWORD" ]]; then
+            echo "::error::ANDROID_UPLOAD_KEYSTORE and ANDROID_UPLOAD_KEYSTORE_PASSWORD" \
+                 "are not set. docs/shipping.md, 'Google Play', says how to make them."
+            exit 1
+          fi
+          echo "$KEYSTORE" | base64 --decode > android/app/upload-keystore.jks
+          {
+            echo "storeFile=upload-keystore.jks"
+            echo "storePassword=$PASSWORD"
+            echo "keyAlias=upload"
+            echo "keyPassword=$PASSWORD"
+          } > android/key.properties
+
+      - name: Build the app bundle
+        run: |
+          set -euo pipefail
+          # The companion's Azure voice, as the TestFlight build has it. The
+          # key is compiled into the bundle every tester receives, so it must
+          # be a free-tier (F0) one -- see ChineseConfig.azureKey. Unset
+          # secrets expand to empty, and then the device voice answers.
+          flutter build appbundle --release \
+            --build-name "$FLUTTER_VERSION" \
+            --build-number "${{ github.run_number }}" \
+            --dart-define=AZURE_KEY="${{ secrets.AZURE_KEY }}" \
+            --dart-define=AZURE_REGION="${{ secrets.AZURE_REGION }}"
+
+      - name: Check it is signed with the upload key
+        # A debug-signed bundle uploads and is then refused; this says so
+        # in seconds instead.
+        run: |
+          set -euo pipefail
+          aab=build/app/outputs/bundle/release/app-release.aab
+          owner=$(keytool -printcert -jarfile "$aab" | grep -m1 'Owner:' || true)
+          echo "signed by: $owner"
+          if [[ "$owner" == *"Android Debug"* || -z "$owner" ]]; then
+            echo "::error::The bundle is not signed with the upload key."
+            exit 1
+          fi
+
+      - name: Check native libraries for 16 KB pages
+        run: tool/check_page_size.sh build/app/outputs/bundle/release/app-release.aab
+
+      - name: Keep the bundle
+        # Attached whether or not the upload lands, so the first bundle can be
+        # uploaded by hand from here, and a refused one looked at.
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mini-hub-aab-${{ github.run_number }}
+          path: build/app/outputs/bundle/release/app-release.aab
+          if-no-files-found: warn
+          retention-days: 30
+
+      - uses: actions/setup-python@v5
+        if: inputs.upload
+        with:
+          python-version: '3.12'
+
+      - name: Install the JWT library
+        # Google's service-account tokens are RS256-signed, which needs
+        # cryptography underneath pyjwt.
+        if: inputs.upload
+        run: pip install --quiet 'pyjwt[crypto]'
+
+      - name: Upload to Google Play
+        if: inputs.upload
+        env:
+          SERVICE_ACCOUNT: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT }}
+          AAB_PATH: build/app/outputs/bundle/release/app-release.aab
+          PLAY_TRACK: ${{ inputs.track }}
+          PLAY_RELEASE_STATUS: ${{ inputs.status }}
+          PLAY_RELEASE_NAME: ${{ env.FLUTTER_VERSION }} (${{ github.run_number }})
+        run: |
+          set -euo pipefail
+          export PLAY_SERVICE_ACCOUNT="$RUNNER_TEMP/play-service-account.json"
+          printf '%s' "$SERVICE_ACCOUNT" > "$PLAY_SERVICE_ACCOUNT"
+          python3 tools/ci/play_upload.py
+
+      - name: Shred the keys
+        # always(), because a failed build is exactly when a key is left
+        # lying around. The runner is destroyed either way; this is so that
+        # being wrong about that is not interesting.
+        if: always()
+        run: |
+          rm -f android/app/upload-keystore.jks android/key.properties \
+            "$RUNNER_TEMP/play-service-account.json"

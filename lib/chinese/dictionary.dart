@@ -39,6 +39,131 @@ class Dictionary {
     return null;
   }
 
+  /// A CJK ideograph, as opposed to the punctuation between them. The main
+  /// block plus extension A covers everything a modern book uses.
+  static bool isHan(String char) {
+    if (char.isEmpty) return false;
+    final code = char.runes.first;
+    return (code >= 0x4E00 && code <= 0x9FFF) ||
+        (code >= 0x3400 && code <= 0x4DBF);
+  }
+
+  /// What can be part of a word: ideographs, and the Latin letters and digits
+  /// a few entries carry (卡拉OK, T恤). Punctuation and spaces end a clause.
+  static bool _inWord(String char) =>
+      isHan(char) || RegExp(r'^[A-Za-z0-9]$').hasMatch(char);
+
+  /// How far either side of a tap the clause is read. A word's boundaries
+  /// are settled by its neighbours, not by text a line away.
+  static const int _clauseReach = 32;
+
+  /// The word a tap at [offset] fell in, read the way the clause around it
+  /// divides into words.
+  ///
+  /// A pop-up dictionary such as Zhongwen looks forward from the finger
+  /// only, taking the longest entry that starts there. That answers 究 for a
+  /// tap on the 究 of 研究, and 研究生 ("graduate student") for a tap on the
+  /// 研 of 研究生命起源 ("researching the origin of life"). Here the clause
+  /// is cut into dictionary words first — fewest words, then fewest single
+  /// characters, and between equals the longer word later on, which is how
+  /// Chinese most often resolves — and the tap is answered with the word it
+  /// landed in: 研究 for either character, 生命 for 生 or 命.
+  ///
+  /// Null when the character is not part of a word (punctuation, a space),
+  /// or when the division leaves it on its own and the dictionary has no
+  /// entry for it.
+  ({int start, String word, List<DictEntry> entries})? wordAt(
+    String text,
+    int offset,
+  ) {
+    if (offset < 0 || offset >= text.length || !_inWord(text[offset])) {
+      return null;
+    }
+    var from = offset;
+    while (from > 0 &&
+        offset - from < _clauseReach &&
+        _inWord(text[from - 1])) {
+      from--;
+    }
+    var to = offset + 1;
+    while (to < text.length &&
+        to - offset < _clauseReach &&
+        _inWord(text[to])) {
+      to++;
+    }
+    final clause = text.substring(from, to);
+
+    // best[i]: the cheapest division of clause[0, i) as (words, singles);
+    // last[i]: how long its final word is.
+    final n = clause.length;
+    final words = List<int>.filled(n + 1, 0);
+    final singles = List<int>.filled(n + 1, 0);
+    final last = List<int>.filled(n + 1, 0);
+    for (var i = 1; i <= n; i++) {
+      words[i] = 1 << 30;
+      final longest = i < _maxWordLength ? i : _maxWordLength;
+      // Longest first, and only a strictly cheaper division replaces one
+      // already found: between equals, the longer final word stands.
+      for (var len = longest; len >= 1; len--) {
+        if (len > 1 && !_bySurface.containsKey(clause.substring(i - len, i))) {
+          continue;
+        }
+        final w = words[i - len] + 1;
+        final s = singles[i - len] + (len == 1 ? 1 : 0);
+        if (w < words[i] || (w == words[i] && s < singles[i])) {
+          words[i] = w;
+          singles[i] = s;
+          last[i] = len;
+        }
+      }
+    }
+
+    final at = offset - from;
+    for (var end = n; end > 0; end -= last[end]) {
+      final start = end - last[end];
+      if (start > at) continue;
+      final word = clause.substring(start, end);
+      final entries = _bySurface[word];
+      if (entries == null) return null;
+      return (start: from + start, word: word, entries: entries);
+    }
+    return null;
+  }
+
+  /// Every dictionary word the character at [offset] belongs to, longest
+  /// first, the character itself included: what else the tap could have
+  /// meant, for when the division in [wordAt] guessed wrong.
+  List<({int start, String word, List<DictEntry> entries})> wordsCovering(
+    String text,
+    int offset,
+  ) {
+    final found = <({int start, String word, List<DictEntry> entries})>[];
+    if (offset < 0 || offset >= text.length) return found;
+    final first = offset - _maxWordLength + 1 < 0
+        ? 0
+        : offset - _maxWordLength + 1;
+    for (var start = first; start <= offset; start++) {
+      for (var end = offset + 1; end <= text.length; end++) {
+        if (end - start > _maxWordLength) break;
+        final word = text.substring(start, end);
+        final entries = _bySurface[word];
+        if (entries != null) {
+          found.add((start: start, word: word, entries: entries));
+        }
+      }
+    }
+    found.sort((a, b) {
+      final byLength = b.word.length.compareTo(a.word.length);
+      return byLength != 0 ? byLength : a.start.compareTo(b.start);
+    });
+    return found;
+  }
+
+  /// The dictionary from CC-CEDICT text already in hand, for tests that want
+  /// a handful of entries rather than the shipped 124k.
+  @visibleForTesting
+  static Dictionary parse(String raw) => Dictionary._(_parse(raw));
+
   /// A user-drawn selection: the exact entry when the whole run is a word,
   /// otherwise a greedy left-to-right segmentation of it.
   ({String pinyin, List<DictEntry> entries})? lookupSelection(String sel) {

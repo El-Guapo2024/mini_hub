@@ -48,12 +48,7 @@ class ReaderScreen extends StatefulWidget {
   /// A CJK ideograph, as opposed to the punctuation between them. The main
   /// block plus extension A covers everything a modern book uses.
   @visibleForTesting
-  static bool isHan(String char) {
-    if (char.isEmpty) return false;
-    final code = char.runes.first;
-    return (code >= 0x4E00 && code <= 0x9FFF) ||
-        (code >= 0x3400 && code <= 0x4DBF);
-  }
+  static bool isHan(String char) => Dictionary.isHan(char);
 
   /// The doc's finding: the prepared unit is the sentence. Expand from the
   /// tap to the nearest sentence-ending punctuation on each side.
@@ -328,26 +323,25 @@ class _ReaderScreenState extends State<ReaderScreen> {
       );
     }
     final dictionary = await _dictionaryLoad!;
-    // A tap is exactly the character under the finger; drag to select more.
-    final char = text.substring(offset, offset + 1);
-    final matchEntries = dictionary.lookupSelection(char)?.entries;
-    final match = matchEntries == null
-        ? null
-        : (word: char, entries: matchEntries);
+    // The word the tap fell in, as its clause divides into words: not just
+    // the character under the finger, and not just the longest word that
+    // starts there. A drag still picks any run exactly.
+    final found = dictionary.wordAt(text, offset);
     assert(() {
       final at = offset < text.length ? text[offset] : '<end>';
       debugPrint(
         'tapped: offset=$offset at="$at" '
-        'match=${match?.word} words=${dictionary.wordCount}',
+        'word=${found?.word} words=${dictionary.wordCount}',
       );
       return true;
     }());
     if (!mounted) return;
-    if (match == null) {
+    if (found == null) {
       // Punctuation and spaces are meant to do nothing — a sheet for 。 is
       // noise. A character with no entry is different: the tap landed, the
       // dictionary simply has nothing, and silence there reads as a dead
       // app rather than a miss.
+      final char = text.substring(offset, offset + 1);
       if (ReaderScreen.isHan(char)) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
@@ -359,30 +353,51 @@ class _ReaderScreenState extends State<ReaderScreen> {
       return;
     }
 
-    final entry = match.entries.first;
+    // What else the character belongs to, longest first and once each, for
+    // when the division guessed wrong.
+    final also = <({int start, String word, List<DictEntry> entries})>[];
+    for (final w in dictionary.wordsCovering(text, offset)) {
+      if (w.word == found.word || also.any((a) => a.word == w.word)) continue;
+      also.add(w);
+      if (also.length == 4) break;
+    }
+    var chosen = found;
+    void mark() => _web
+        .runJavaScript(
+          'markRun(${chosen.start}, ${chosen.start + chosen.word.length})',
+        )
+        .ignore();
+    mark();
+
     final sentence = ReaderScreen.sentenceAround(text, offset);
     final (deck, loadDecks) = await _deckChoice();
     if (!mounted) return;
     await showWordPopup(
       context: context,
-      word: match.word,
-      entries: match.entries,
+      word: found.word,
+      entries: found.entries,
+      also: [for (final a in also) (word: a.word, entries: a.entries)],
+      onWordChanged: (word) {
+        chosen = also.firstWhere((a) => a.word == word, orElse: () => found);
+        mark();
+      },
       sentence: sentence,
-      onSpeakWord: () => _speech.speak(match.word),
+      onSpeakWord: () => _speech.speak(chosen.word),
       onSpeakSentence: () => _speech.speak(sentence),
       onExplain: () => _explain(sentence),
       deck: deck,
       loadDecks: loadDecks,
       onAddCard: (deck) => _keep(
         Card(
-          word: match.word,
-          pinyin: entry.pinyin,
-          gloss: entry.glosses.join('; '),
+          word: chosen.word,
+          pinyin: chosen.entries.first.pinyin,
+          gloss: chosen.entries.first.glosses.join('; '),
           sentence: sentence,
         ),
         deck: deck,
       ),
     );
+    unawaited(_web.runJavaScript('clearSelection()'));
   }
 
   /// The companion's card for [word], made exactly as tapping it would make

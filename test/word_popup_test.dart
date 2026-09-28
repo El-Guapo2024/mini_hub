@@ -93,6 +93,72 @@ void main() {
     expect(find.text('Reading it in this sentence…'), findsNothing);
   });
 
+  testWidgets('another reading of the tap can be taken, and given back', (
+    tester,
+  ) async {
+    final changes = <String>[];
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Builder(
+          builder: (context) => Scaffold(
+            body: ElevatedButton(
+              onPressed: () => showWordPopup(
+                context: context,
+                word: '从小',
+                entries: const [
+                  DictEntry(
+                    traditional: '從小',
+                    simplified: '从小',
+                    pinyin: 'cóng xiǎo',
+                    glosses: ['from childhood'],
+                  ),
+                ],
+                also: const [
+                  (
+                    word: '小学',
+                    entries: [
+                      DictEntry(
+                        traditional: '小學',
+                        simplified: '小学',
+                        pinyin: 'xiǎo xué',
+                        glosses: ['elementary school'],
+                      ),
+                    ],
+                  ),
+                ],
+                onWordChanged: changes.add,
+                sentence: '他从小学习中文',
+                onSpeakWord: () {},
+                onSpeakSentence: () {},
+                onAddCard: (_) async {},
+              ),
+              child: const Text('open'),
+            ),
+          ),
+        ),
+      ),
+    );
+    await tester.tap(find.text('open'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Also here'), findsOneWidget);
+    expect(find.text('• from childhood'), findsOneWidget);
+    expect(find.text('elementary school'), findsOneWidget);
+
+    await tester.tap(find.text('小学'));
+    await tester.pumpAndSettle();
+    expect(changes, ['小学']);
+    expect(find.text('• elementary school'), findsOneWidget);
+    expect(find.text('• from childhood'), findsNothing);
+    // The word it replaced is now the one on offer.
+    expect(find.text('from childhood'), findsOneWidget);
+
+    await tester.tap(find.text('从小'));
+    await tester.pumpAndSettle();
+    expect(changes, ['小学', '从小']);
+    expect(find.text('• from childhood'), findsOneWidget);
+  });
+
   testWidgets('a long selection fits on a phone', (tester) async {
     // Now that a drag can cross styled text and sentences, a run of a dozen
     // characters is ordinary; at display size it overflowed the sheet.

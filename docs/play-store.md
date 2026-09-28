@@ -140,9 +140,9 @@ together.
 
 > An interlinear reader for Chinese.
 >
-> Open a Chinese EPUB and read it the way you actually read: tap any character
-> for its pinyin and meaning, straight from the CC-CEDICT dictionary, offline
-> and without leaving the page. Drag across a phrase to look up the whole run.
+> Open a Chinese EPUB and read it the way you actually read: tap any word for
+> its pinyin and meaning, straight from the CC-CEDICT dictionary, offline and
+> without leaving the page. Drag across a phrase to look up the whole run.
 > Save the words worth keeping as flashcards as you go, with the sentence you
 > met them in.
 >

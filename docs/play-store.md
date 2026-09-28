@@ -68,19 +68,13 @@ but "no data collected" would be false the moment someone saves a key.
 
 ## Privacy policy
 
-Play requires a URL, entered under **App content → Privacy policy**. Use the
-same Gist as the App Store:
-https://gist.github.com/El-Guapo2024/4cc6c5daef50907725e8fe430ab94987
+Play requires a URL, entered under **App content → Privacy policy**:
 
-**It needs one edit before it is true of Android.** It says keys are "held in
-the iOS Keychain". Replace that sentence with:
+https://github.com/El-Guapo2024/mini_hub/blob/main/docs/privacy-policy.md
 
-> Your API keys and your AnkiWeb sync key are held in your phone's secure
-> storage (the iOS Keychain, or the Android Keystore) and are never sent
-> anywhere except to the service they belong to.
-
-Edit the kept copy in `~/Documents/TheMiniHub App Store/privacy-policy.md`
-and `gh gist edit`, as `docs/app-store.md` describes.
+This is `docs/privacy-policy.md`, one policy for both apps, which says keys are
+held in "the iOS Keychain, or the Android Keystore". `docs/app-store.md` says
+why it moved out of the Gist.
 
 ## Content rating
 
@@ -160,8 +154,8 @@ together.
 > recognition runs on the phone; audio never leaves it.
 
 **Contact email:** `antoniotwin_luera@hotmail.com`, the privacy policy's
-contact. If someone else holds the Play developer account, change it in both
-places.
+contact. If someone else holds the Play developer account, change it here, in
+`tools/ci/play_listing.py` and in `docs/privacy-policy.md`.
 
 **Category:** Education. **Tags:** language learning, reference.
 
@@ -177,7 +171,6 @@ places.
 ## Still outstanding
 
 - The feature graphic and phone screenshots (above).
-- The privacy policy's one-sentence edit (above).
 - The generative AI reporting decision, before production.
 - Everything above that is entered in Play Console: data safety, content
   rating, target audience, app access and the privacy policy URL.

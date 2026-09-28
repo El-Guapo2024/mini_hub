@@ -231,8 +231,9 @@ Console asks for.
 | Application id | `com.juanluera.minihub`, the same as the iOS bundle id |
 | Play name | TheMiniHub |
 | Default track | `internal`: up to 100 testers by email, no review, installable in minutes |
-| Upload key | alias `upload`, made once with `keytool` (below) |
+| Upload key | alias `upload`, in `~/ws/secrets/android/` with its password in the `README.txt` there |
 | App signing key | Google's (Play App Signing); never leaves Google |
+| Released | 1.0.0 (1) to internal testing on 2026-09-28, from Google Play run 1 |
 
 ### What differs from iOS in the build
 
@@ -255,39 +256,46 @@ Console asks for.
   Keystore and would not decrypt on another phone; `res/xml/` says what else
   is left out and why.
 
-### Once, before the first run
+### Setup, and where it stands
 
-1. **Make the upload key.** Keep it with the Apple credentials, outside every
-   repository:
+Done on 2026-09-28, apart from the service account:
+
+1. **The upload key** is in `~/ws/secrets/android/`, beside the Apple
+   credentials and outside every repository, with its password in the
+   `README.txt` there. It is PKCS12, so one password opens both the store and
+   the key, which is why there is one password secret. Keep a copy off the
+   machine. Unlike Apple's `.p8`, a lost upload key is recoverable: Play
+   support can register a new one, because Google holds the key that signs
+   the app.
+
+2. **The app exists in Play Console** as TheMiniHub, `com.juanluera.minihub`.
+   The API cannot create apps, which is why this step was by hand.
+
+3. **A service account for CI** is still to make. It is needed only for the
+   workflow to upload, and for `play_listing.yml`; until then, run
+   **Google Play** with `upload` unticked and upload its bundle by hand. In
+   Google Cloud, in any project: enable the *Google Play Android Developer
+   API*, create a service account, and download a JSON key for it. In Play
+   Console → Users and permissions, invite the service account's email. For
+   this app, grant *Release apps to testing tracks*, *Manage store presence*
+   for the listing, and *Release to production* only when that day comes.
+
+4. **The secrets** are set by `tool/play_setup.sh`, run on a machine signed
+   in with `gh` as anyone with write access to the repository. Repository
+   secrets on a personal account's repository are a collaborator's to set,
+   not only the owner's. The script finds the key in `~/ws/secrets/android/`
+   and reuses it, never replacing it. The two key secrets are set; run it
+   again with the JSON key's path to add the third:
 
    ```sh
-   mkdir -p ~/ws/secrets/android && cd ~/ws/secrets/android
-   keytool -genkeypair -v -keystore upload-keystore.jks -storetype PKCS12 \
-     -keyalg RSA -keysize 2048 -validity 10000 -alias upload
+   bash tool/play_setup.sh ~/Downloads/<service-account>.json
    ```
-
-   PKCS12 has one password for the store and the key, which is why there is
-   one password secret. Write it in a `README.txt` beside the keystore.
-   Unlike Apple's `.p8`, a lost upload key is recoverable: Play support can
-   register a new one, because Google holds the key that signs the app.
-
-2. **Create the app in Play Console:** All apps → Create app → TheMiniHub,
-   App, Free. The API cannot create apps.
-
-3. **Make a service account for CI.** In Google Cloud, in any project: enable
-   the *Google Play Android Developer API*, create a service account, and
-   download a JSON key for it. In Play Console → Users and permissions,
-   invite the service account's email. For this app, grant *Release apps to
-   testing tracks*, *Manage store presence* for the listing, and *Release to
-   production* only when that day comes.
-
-4. **Set the secrets** (Settings → Secrets and variables → Actions):
 
    | Secret | What it is |
    | --- | --- |
-   | `ANDROID_UPLOAD_KEYSTORE` | `upload-keystore.jks`, base64 (`base64 -i upload-keystore.jks` on a Mac) |
+   | `ANDROID_UPLOAD_KEYSTORE` | `upload-keystore.jks`, base64 |
    | `ANDROID_UPLOAD_KEYSTORE_PASSWORD` | its password |
-   | `GOOGLE_PLAY_SERVICE_ACCOUNT` | the service account's JSON key, pasted as it is |
+   | `GOOGLE_PLAY_SERVICE_ACCOUNT` | the service account's JSON key, as it is |
 
    `AZURE_KEY` and `AZURE_REGION` are shared with the TestFlight build.
 
@@ -295,19 +303,15 @@ Console asks for.
 
 Play will not accept a bundle over the API for an app it has never seen a
 bundle for, and will only take draft releases until the first one is rolled
-out. So the first one goes up by hand, and it has to be one of this workflow's
-bundles, so that the version codes that follow keep going up:
+out. So the first one went up by hand: **Google Play** run 1, with `upload`
+unticked, built 1.0.0 (1), and it was uploaded to internal testing in Play
+Console and rolled out on 2026-09-28. Version code 1 is therefore taken, and
+the workflow's run numbers are already past it.
 
-1. Run **Google Play** with `upload` unticked. It builds, signs and checks the
-   bundle, and attaches it to the run as `mini-hub-aab-<n>`.
-2. In Play Console → Testing → Internal testing, create a release, upload that
-   `.aab`, accept Play App Signing when asked, add yourself as a tester, and
-   roll it out.
-3. From then on, `gh workflow run "Google Play" --ref main` does the lot.
-
-If a run fails with *"Only releases with status draft may be created on draft
-app"*, the first release has not been rolled out yet. Either roll it out, or
-run with `status: draft` and roll that one out from the Console.
+With the service account in place, `gh workflow run "Google Play" --ref main`
+does the lot. If a run fails with *"Only releases with status draft may be
+created on draft app"*, run it with `status: draft` and roll that release out
+from the Console.
 
 ### Before production
 

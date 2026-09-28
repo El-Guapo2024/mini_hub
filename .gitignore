@@ -59,3 +59,6 @@ __pycache__/
 
 # Anki core for iOS: built by tool/build_anki_bridge.sh (large, AGPL)
 /ios/AnkiBridge/MiniHubAnkiBridge.xcframework/
+
+# Anki core for Android: built by tool/build_anki_bridge_android.sh (large, AGPL)
+/android/app/src/main/jniLibs/

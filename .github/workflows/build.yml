@@ -21,8 +21,16 @@ jobs:
   # `pr.yml` is manual now too. Run it yourself before trusting anything this
   # workflow produces — nothing else will.
 
+  android-bridge:
+    # Anki's core for Android: reused when already published, built otherwise.
+    # Linux, so this costs little even when it has to build.
+    uses: ./.github/workflows/anki_bridge_android.yml
+    permissions:
+      contents: write
+
   android:
     name: apk
+    needs: android-bridge
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
@@ -47,13 +55,20 @@ jobs:
       - name: Fetch the speech model
         run: tool/fetch_asr_model.sh
 
+      - name: Fetch Anki's core
+        # Without it the APK builds and runs, and fails at the first Anki call.
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: tool/fetch_anki_bridge_android.sh
+
       - run: flutter pub get
 
       - name: Build the APK
-        # A release build, but signed with the debug key that the Flutter
-        # template configures — which is why this needs no account and no
-        # secret. It installs on any phone that allows unknown sources. Play
-        # Store would refuse it; that is a later problem and a different key.
+        # A release build, but signed with the debug key — no upload key is
+        # placed here, so android/app/build.gradle.kts falls back to it, which
+        # is why this needs no account and no secret. It installs on any phone
+        # that allows unknown sources. Play refuses it; google_play.yml builds
+        # the bundle Play takes, signed with the upload key.
         run: |
           set -euo pipefail
           version=$(grep -m1 '^version:' pubspec.yaml | sed 's/version: //; s/+.*//')

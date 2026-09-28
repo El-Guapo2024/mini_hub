@@ -1,0 +1,80 @@
+name: Anki bridge (Android)
+
+# Anki's Rust core for Android, compiled once per version and kept as a
+# GitHub release asset, the same way anki_bridge.yml keeps the iOS one. App
+# builds call this first and then download the result
+# (tool/fetch_anki_bridge_android.sh) instead of spending a Rust build on
+# every Play upload.
+#
+# Its own workflow, not a second job in anki_bridge.yml: that one is called by
+# the iOS builds, and an Android job there would make every TestFlight run
+# wait on a build it does not ship. The release name is hashed from the
+# Android build script (tool/anki_bridge_key.sh android), so changing how
+# Android is built never invalidates the iOS release, or the reverse.
+#
+# Linux, not a Mac: the NDK cross-compiles from anywhere, and a Linux runner
+# bills at a tenth of the macOS rate.
+on:
+  workflow_call:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: build or reuse
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    permissions:
+      contents: write
+    concurrency:
+      group: anki-bridge-android
+      cancel-in-progress: false
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Is this version already published?
+        id: key
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          key=$(tool/anki_bridge_key.sh android)
+          echo "key=$key" >> "$GITHUB_OUTPUT"
+          if gh release view "anki-bridge-android-$key" >/dev/null 2>&1; then
+            echo "anki-bridge-android-$key is already published"
+            echo "built=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "anki-bridge-android-$key needs building"
+            echo "built=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Install protoc and the NDK
+        if: steps.key.outputs.built == 'false'
+        run: |
+          set -euo pipefail
+          sudo apt-get install -y -q protobuf-compiler
+          # The NDK Flutter builds with; the build script names the same one.
+          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses >/dev/null || true
+          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "ndk;28.2.13676358"
+
+      - name: Build Anki's core for Android
+        if: steps.key.outputs.built == 'false'
+        run: |
+          set -euo pipefail
+          ANKI_DIR="$RUNNER_TEMP/anki" \
+          PROFILE=release \
+          ZIP="$RUNNER_TEMP/MiniHubAnkiBridge-android.zip" \
+            tool/build_anki_bridge_android.sh
+
+      - name: Publish it
+        if: steps.key.outputs.built == 'false'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          tag="anki-bridge-android-${{ steps.key.outputs.key }}"
+          gh release create "$tag" \
+            "$RUNNER_TEMP/MiniHubAnkiBridge-android.zip" \
+            --title "$tag" \
+            --notes "Anki's core for Android (arm64-v8a, armeabi-v7a, x86_64), built from ankitects/anki $(cat native/anki_bridge/ANKI_COMMIT)." \
+            --prerelease

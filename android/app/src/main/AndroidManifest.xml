@@ -1,8 +1,24 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- The companion (Anthropic), its Azure voice and AnkiWeb sync, each only
+         once the reader has connected it. Flutter's debug and profile
+         manifests grant this on their own and the release one does not, so
+         without it here a build that works under `flutter run` is offline on
+         a phone. -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- Hold the mic to ask the companion by voice. Recognised on the phone;
+         the audio never leaves it. Asked for at the first tap, not at launch. -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+    <!-- Backups leave out what cannot come back: saved keys are sealed by
+         this phone's Keystore and do not decrypt on another, and the speech
+         model and the Anki copy are rebuilt from the app and from AnkiWeb.
+         See res/xml for which rule covers which. -->
     <application
-        android:label="mini_hub"
+        android:label="Mini Hub"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules">
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -40,6 +56,12 @@
         <intent>
             <action android:name="android.intent.action.PROCESS_TEXT"/>
             <data android:mimeType="text/plain"/>
+        </intent>
+        <!-- The device voice that reads the page aloud. From Android 11 an app
+             cannot see the phone's text-to-speech engines unless it says it
+             is looking for one, and flutter_tts then finds no voice at all. -->
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE"/>
         </intent>
     </queries>
 </manifest>
